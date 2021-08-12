@@ -1,10 +1,3 @@
----
-Exercise:
-    title: 'M06-Unit 9 Secure your virtual hub using Azure Firewall Manager'
-    module: 'Module - Design and implement network security'
----
-
-
 # M06-Unit 9 Secure your virtual hub using Azure Firewall Manager
 
 In this exercise, you will create the spoke virtual network and create a secured virtual hub, then you will connect the hub and spoke virtual networks and route traffic to your hub. Next you will deploy the workload servers, then create a firewall policy and secure your hub, and finally you will test the firewall.
@@ -32,20 +25,19 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, select **Create a resource**, then in the search box, type **virtual network** and select **Virtual Network** when it appears.
 2. Click **Create**.
-3. In **Resource group**, select **Create new**, and enter **fw-manager-rg** as the name and click **OK**.
-4. In **Name**, enter **Spoke-01**.
-5. In **Region**, select your region.
-6. Click **Next: IP Addresses**.
-7. In **IPv4 address space**, enter **10.0.0.0/16**. 
-8. **Delete** any other address spaces listed here, such as **10.1.0.0/16**.
-9. Under **Subnet name**, click the word **default**.
-10. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**.
-11. Change the **Subnet address range** to **10.0.1.0/24**.
-12. Click **Save**.
-13. Click **Review + create**.
-14. Click **Create**.
+3. In **Name**, enter **Spoke-01**.
+4. In **Region**, select your region.
+5. Click **Next: IP Addresses**.
+6. In **IPv4 address space**, enter **10.0.0.0/16**. 
+7. **Delete** any other address spaces listed here, such as **10.1.0.0/16**.
+8. Under **Subnet name**, click the word **default**.
+9. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**.
+10. Change the **Subnet address range** to **10.0.1.0/24**.
+11. Click **Save**.
+12. Click **Review + create**.
+13. Click **Create**.
 
-Repeat steps 1 to 14 above to create another similar virtual network and subnet but using the following information:
+Repeat steps 1 to 13 above to create another similar virtual network and subnet but using the following information:
 
 - Resource Group: **fw-manager-rg** (select existing)
 - Name: **Spoke-02**
