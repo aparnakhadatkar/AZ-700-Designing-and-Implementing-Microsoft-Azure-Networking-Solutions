@@ -1,8 +1,3 @@
----
-Exercise:
-    title: 'M03-Unit 4 Configure an ExpressRoute Gateway'
-    module: 'Module - Design and implement Azure ExpressRoute'
----
 # M03-Unit 4 Configure an ExpressRoute Gateway
 
 ## Deploy ExpressRoute gateways
@@ -30,75 +25,75 @@ In this exercise, you will:
 
 1. On any Azure Portal page, in **Search resources, services and docs**, enter virtual network, and then select **Virtual networks** from the results.
 
-2. On the Virtual networks page, select **+Create**.
+1. On the Virtual networks page, select **+Create**.
 
-3. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
+1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
-   | **Setting**          | **Value**                        |
-   | -------------------- | -------------------------------- |
-   | Virtual Network Name | CoreServicesVNet                 |
-   | Resource Group       | Resource Group provided by Learn |
-   | Location             | West US                          |
+   | **Setting**          | **Value**                                                    |
+   | -------------------- | --------------------------------                             |
+   | Subscription         | the name of the Azure subscription you are using in this lab |
+   | Resource Group       | Select the existing resource group az700-m03-rg01            |
+   | Virtual Network Name | CoreServicesVNet                                             |
+   | Location             | West US                                                      |
 
-4. Select **Next : IP addresses**.
+1. Select **Next : IP addresses**.
 
-5. On the **IP Addresses** tab, in **IPv4 address space**, enter 10.20.0.0/16, and then select **+ Add subnet**. 
+1. On the **IP Addresses** tab, in **IPv4 address space**, enter **10.20.0.0/16**, and then select **+ Add subnet**. 
 
-6. In the Add subnet pane, use the information in the following table to create the subnet:
+1. In the Add subnet pane, use the information in the following table to create the subnet:
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
    | Gateway Subnet name          | GatewaySubnet |
    | Gateway Subnet address space | 10.20.0.0/27  |
 
-7. And then select **Add**. 
+1. And then select **Add**.
 
-8. On the Create virtual network page, select **Review + Create**.
+1. On the Create virtual network page, select **Review + Create**.
 
-   ![Azure portal - add gateway subnet](../media/add-gateway-subnet.png)
+    ![Azure portal - add gateway subnet](../media/add-gateway-subnet.png)
 
-9. Confirm that the VNet passes the validation and then select **Create**.
+1. Confirm that the VNet passes the validation and then select **Create**.
 
-> [!Note]  
->
-> If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, click Add IP6 address space and input IPv6 address range values.
+    **Note:** If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, click Add IP6 address space and input IPv6 address range values.
 
 ## Task 2: Create the virtual network gateway
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter virtual network gateway, and then select **Virtual network gateways** from the results.
 
-2. On the **Create virtual network gateway** page, use the information in the following table to create the gateway:
+1. On the **Create virtual network gateway** page, click **+create** and use the information in the following table to create the gateway:
 
-   | **Setting**               | **Value**                  |
-   | ------------------------- | -------------------------- |
-   | **Project details**       |                            |
-   | Subscription              | Provided by Learn          |
-   | Resource Group            | Provided by Learn          |
-   | **Instance details**      |                            |
-   | Name                      | CoreServicesVnetGateway    |
-   | Region                    | West US                    |
-   | Gateway type              | ExpressRoute               |
-   | VPN type                  | Route-based                |
-   | SKU                       | VpnGw2                     |
-   | Generation                | Generation2                |
-   | Virtual network           | CoreServicesVNet           |
-   | **Public IP address**     |                            |
-   | Public IP address         | Create new                 |
-   | Public IP address name    | CoreServicesVnetGateway-IP |
-   | Public IP address SKU     | Basic                      |
-   | Assignment                | Not configurable           |
-   | Enable active-active mode | Disabled                   |
-   | Configure BGP             | Disabled                   |
+   | **Setting**               | **Value**                                                                      |
+   | ------------------------- | --------------------------                                                     |
+   | **Project details**       |                                                                                |
+   | Subscription              | the name of the Azure subscription you are using in this lab                   |
+   | Resource Group            | Automatically derived from virtual network’s resource group **az700-m03-rg01** |
+   
+    **Note:** After selecting the existed Virtual network, the value of resource group will be automatically derived from virtual network’s resource group name.
+    
+   ![image](../media/image1.png)
 
-3. Select **Review + Create**.
 
-4. Confirm that the Gateway configuration passes validation and then select **Create**.
+   | **Instance details**      |  **value**                                                                      |
+   | ------------------------- | --------------------------                                                      |
+   | Name                      | CoreServicesVnetGateway                                                         |
+   | Region                    | West US                                                                         |
+   | Gateway type              | ExpressRoute                                                                    |
+   | SKU                       | Standard                                                                        |
+   | Virtual network           | select the existed virtual network created in previous task **CoreServicesVNet**|
+   | subnet                    | GatewaySubnet(Existed)                                                          |
+   | **Public IP address**     |                                                                                 |
+   | Public IP address         | Create new                                                                      |
+   | Public IP address name    | CoreServicesVnetGateway-IP                                                      |
+   | Public IP address SKU     | Basic                                                                           |
 
-5. When the deployment is complete, select **Go to Resource**.
+1. Select **Review + Create**.
 
-> [!Note] 
->
-> it can take up to 45 minutes to deploy a Gateway.
+1. Confirm that the Gateway configuration passes validation and then select **Create**.
+
+1. When the deployment is complete, select **Go to Resource**.
+
+    **Note: **it can take up to 45 minutes to deploy a Gateway.
 
 Congratulations! You have successfully created a Virtual network, a gateway subnet, and an ExpressRoute Gateway.
 
