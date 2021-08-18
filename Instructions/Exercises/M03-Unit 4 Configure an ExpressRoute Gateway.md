@@ -23,7 +23,7 @@ In this exercise, you will:
 
 ## Task 1: Create the VNet and gateway subnet
 
-1. On any Azure Portal page, in **Search resources, services and docs**, enter virtual network, and then select **Virtual networks** from the results.
+1. On Azure Portal page, in **Search resources, services and docs**, enter virtual network, and then select **Virtual networks** from the results.
 
 1. On the Virtual networks page, select **+Create**.
 
