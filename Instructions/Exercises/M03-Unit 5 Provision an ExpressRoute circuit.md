@@ -62,11 +62,11 @@ In this exercise, you will:
 
 1. All ExpressRoute circuits created in the subscription will appear here. 
 
-    ![Azure portal - show existing Expressroute circuits](../media/expressroute-circuit-list.png)
+    ![Azure portal - show existing Expressroute circuits](../media/image3.png)
 
 1. The circuit page displays the properties of the circuit. The service key appears in the service key field. Your service provider will need the Service Key to complete the provisioning process. The service key is specific to your circuit. **You must send the service key to your connectivity provider for provisioning.**
 
-    ![Azure portal - ExpressRoute Circuit properties showing service key](../media/expressroute-circuit-overview.png)
+    ![Azure portal - ExpressRoute Circuit properties showing service key](../media/image.png)
 
 1. On this page, **Provider status** gives you the current state of provisioning on the service-provider side. **Circuit status** provides you the state on the Microsoft side. 
 
@@ -85,7 +85,7 @@ In this exercise, you will:
 
 1. You can view the properties of the circuit that you are interested in by selecting it. Check the **Provider status** and ensure that it has moved to **Provisioned** before you continue.
 
-    ![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/provisioned.png)
+    ![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/image4.png)
 
  
 1. Watch this demonstration of how to create and provision an ExpressRoute circuit: [Azure ExpressRoute - How to create an ExpressRoute circuit | Azure | Channel 9 (msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15). 
@@ -104,7 +104,7 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
 
 You can delete your ExpressRoute circuit by selecting the **Delete** icon. Ensure the provider status is Not provisioned before proceeding.
 
-![Azure portal - delete an ExpressRoute circuit](../media/expressroute-circuit-delete.png)
+![Azure portal - delete an ExpressRoute circuit](../media/image5.png)
 
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
