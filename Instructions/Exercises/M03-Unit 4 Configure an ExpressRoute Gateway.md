@@ -73,9 +73,9 @@ In this exercise, you will:
     
    ![image](../media/image1.png)
 
-
-   | **Instance details**      |  **value**                                                                      |
+   | **Setting**               | **Value**                                                                       |
    | ------------------------- | --------------------------                                                      |
+   | **Instance details**      |                                                                                 |
    | Name                      | CoreServicesVnetGateway                                                         |
    | Region                    | West US                                                                         |
    | Gateway type              | ExpressRoute                                                                    |
