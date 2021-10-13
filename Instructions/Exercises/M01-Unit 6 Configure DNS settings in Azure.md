@@ -24,11 +24,12 @@ In this exercise, you will:
 
 | **Tab**         | **Option**                             | **Value**            |
 | --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup |
+| Basics          | Resource group                         | ContosoResourceGroup-{Deployment ID} |
 |                 | Name                                   | Contoso.com          |
 | Tags            | No changes required                    |                      |
 | Review + create | Review your settings and select Create |                      |
 
+   ‎![](../media/vn9.png)
 
 5. Wait until the deployment is complete, and then select **Go to resource**.
 
@@ -36,7 +37,7 @@ In this exercise, you will:
 
 ## Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings**, select **Virtual network links**.
+1. On the Azure home page, in the search bar, type dns, and then select Private DNS zones then select newly created **Contoso.com**. In Contoso.com, under **Settings**, select **Virtual network links**.
 
 2. On Contoso.com | Virtual network links, select **+ Add**.
 
@@ -48,10 +49,11 @@ In this exercise, you will:
 | ----------------------------------- | --------------------------------------- |
 | Link name                           | CoreServicesVnetLink                    |
 | Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
+| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup-{Deployment ID}) |
 | Enable auto registration            | Selected                                |
 | Review your settings and select OK. |                                         |
 
+   ‎![](../media/vn10.png)
 
 4. Select **Refresh**.
 
@@ -63,7 +65,7 @@ In this exercise, you will:
 | ----------------------------------- | ---------------------------------------- |
 | Link name                           | ManufacturingVnetLink                    |
 | Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup) |
+| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup-{Deployment ID}) |
 | Enable auto registration            | Selected                                 |
 | Review your settings and select OK. |                                          |
 
@@ -78,7 +80,7 @@ In this exercise, you will:
 | ----------------------------------- | ----------------------------------- |
 | Link name                           | ResearchVnetLink                    |
 | Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup) |
+| Virtual Network                     | ResearchVnet (ContosoResourceGroup-{Deployment ID}) |
 | Enable auto registration            | Selected                            |
 | Review your settings and select OK. |                                     |
 
@@ -87,7 +89,7 @@ In this exercise, you will:
 
 11. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
 
- 
+   ‎![](../media/vn11.png) 
 
 ##  Task 3: Create Virtual Machines to test the configuration
 
@@ -105,23 +107,25 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 4. Under **Select a workload type**, select **General purpose (D-Series)**, and then select **Continue to create a VM**.
 
+   ‎![](../media/vn12.png)
+
 5. Use the information in the following table to create your first VM.
 
 | **Tab**         | **Option**                                                   | **Value**                             |
 | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup                  |
+| Basics          | Resource group                                               | ContosoResourceGroup-{Deployment ID}  |
 |                 | Virtual machine name                                         | TestVM1                               |
 |                 | Region                                                       | (US) West US                          |
 |                 | Availability options                                         | No infrastructure redundancy required |
-|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1  |
+|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2  |
 |                 | Azure Spot instance                                          | Not selected                          |
-|                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory  |
+|                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory  |
 |                 | Username                                                     | TestUser                              |
 |                 | Password                                                     | TestPa$$w0rd!                         |
 |                 | Public inbound ports                                         | Allow selected ports                  |
 |                 | Select inbound ports                                         | RDP (3389)                            |
 |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-| Disks           | No changes required                                          |                                       |
+| Disks           | OS disk type                                                 |  Standard SSD                         |
 | Networking      | Virtual network                                              | CoreServicesVnet                      |
 |                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)        |
 |                 | Public IP                                                    | (new) TestVM1-ip                      |
@@ -153,19 +157,19 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 | **Tab**         | **Option**                                                   | **Value**                             |
 | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup                  |
+| Basics          | Resource group                                               | ContosoResourceGroup-{Deployment ID}  |
 |                 | Virtual machine name                                         | TestVM2                               |
 |                 | Region                                                       | (US) West US                          |
 |                 | Availability options                                         | No infrastructure redundancy required |
-|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1  |
+|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2  |
 |                 | Azure Spot instance                                          | Not selected                          |
-|                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory  |
+|                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory  |
 |                 | Username                                                     | TestUser                              |
 |                 | Password                                                     | TestPa$$w0rd!                         |
 |                 | Public inbound ports                                         | Allow selected ports                  |
 |                 | Select inbound ports                                         | RDP (3389)                            |
 |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-| Disks           | No changes required                                          |                                       |
+| Disks           | OS disk type                                                 |  Standard SSD                         |
 | Networking      | Virtual network                                              | CoreServicesVnet                      |
 |                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)        |
 |                 | Public IP                                                    | (new) TestVM2-ip                      |
@@ -237,7 +241,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 16. Verify that the IP address is the same as the one you noted in the DNS zone.
 
-17. Enter the command ping TestVM2.contoso.com.
+17. On the start menu of TestVM1 type **Command Prompt** and click to open it then Enter the command ping TestVM2.contoso.com.
 
 18. Verify that you receive four replies from TestVM2.
 
