@@ -10,7 +10,6 @@ In this unit, you will:
 + Task 3: Test the connection between the VMs
 + Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 + Task 5: Test the connection between the VMs
-+ Task 6: Clean up resources
 
 ## Task 1: Create a Virtual Machine to test the configuration
 
@@ -30,19 +29,19 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 | **Tab**         | **Option**                                                   | **Value**                                |
 | --------------- | ------------------------------------------------------------ | -------------------------------------    |
-| Basics          | Resource group                                               | ContosoResourceGroup                     |
+| Basics          | Resource group                                               | ContosoResourceGroup-{Deployment ID}     |
 |                 | Virtual machine name                                         | ManufacturingVM                          |
 |                 | Region                                                       | (Europe) North Europe                    |
 |                 | Availability options                                         | No infrastructure redundancy required    |
-|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1     |
+|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2     |
 |                 | Azure Spot instance                                          | Not selected                             |
-|                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory     |
+|                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory     |
 |                 | Username                                                     | TestUser                                 |
 |                 | Password                                                     | TestPa$$w0rd!                            |
 |                 | Public inbound ports                                         | Allow selected ports                     |
 |                 | Select inbound ports                                         | RDP (3389)                               |
 |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-| Disks           | No changes required                                          |                                          |
+| Disks           | OS disk type                                                 |  Standard SSD                            |
 | Networking      | Virtual network                                              | ManufacturingVnet                        |
 |                 | Subnet                                                       | ManufacturingSystemSubnet(10.30.10.0/24)        |
 |                 | Public IP                                                    | (new) ManufacturingVM-ip                 |
@@ -86,9 +85,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 13. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
-14. On both VMs, in **Networks**, select **Yes**.
+14. On both VMs, in **Networks**, select **Yes** if prompted.
 
-15. On TestVM1, open a PowerShell prompt, and run the following command: ipconfig
+15. On the start menu of TestVM1 type **PowerShell** and click to open it then Enter the command: ipconfig
 
 16. Note the IPv4 address. 
 
@@ -132,7 +131,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 |                                      | Peering link name                             | ManufacturingVnet-to-CoreServicesVnet |
 |                                      | Virtual network deployment model              | Resource manager                      |
 |                                      | I know my resource ID                         | Not selected                          |
-|                                      | Subscription                                  | MOC Subscription-lodxxxxxxxx          |
+|                                      | Subscription                                  | Use default available                 |
 |                                      | Virtual network                               | ManufacturingVnet                     |
 |                                      | Traffic to remote virtual network             | Allow (default)                       |
 |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
@@ -164,17 +163,3 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
  
 
 Congratulations! You have successful configured connectivity between VNets by adding peerings. 
-
-## Task 6: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
