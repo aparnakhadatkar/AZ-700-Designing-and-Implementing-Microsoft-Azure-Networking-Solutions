@@ -57,16 +57,19 @@ In this exercise, you will:
    ‎![Azure Portal Create a resource page with Search services and marketplace box highlighted.](../media/create-resource-search-virtual-network-annotated.png)
 3. In Marketplace, in Virtual Network, select **Create &gt; Virtual network**.  
    ‎![Virtual Network tile with Create Virtual network highlighted.](../media/virtual-network-service-annotated.png)
-4. Use the information in the following table to create the CoreServicesVnet virtual network.  
-   ‎Remove or overwrite the default IP Address space![ip address configuration for azure virtual network deployment ](../media/default-vnet-ip-address-range-annotated.png)
-
+4. Use the information in the following table to create the CoreServicesVnet virtual network. Remove or overwrite the default IP Address space
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup |
+| Basics       | Resource Group     | ContosoResourceGroup-{Deployment ID} |
 |              | Name               | CoreServicesVnet     |
 |              | Region             | (US) West US         |
 | IP Addresses | IPv4 address space | 10.20.0.0/16         |
+   ‎
+   ![](../media/vn3.png)   
+   ![ip address configuration for azure virtual network deployment ](../media/default-vnet-ip-address-range-annotated.png)
+
+   **Note**: Deployment ID can be obtained from the environment details tab.
 
  5. Use the information in the following table to create the CoreServicesVnet subnets.
 
@@ -83,6 +86,8 @@ In this exercise, you will:
 | PublicWebServiceSubnet | Subnet name          | PublicWebServiceSubnet |
 |                        | Subnet address range | 10.20.30.0/24          |
 
+   ![](../media/vn1.png)
+
  7. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
  8. Verify your configuration passed validation, and then select **Create**.
@@ -94,12 +99,13 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**             |
 | ------------ | ------------------ | --------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup  |
+| Basics       | Resource Group     | ContosoResourceGroup-{Deployment ID}  |
 |              | Name               | ManufacturingVnet     |
 |              | Region             | (Europe) North Europe |
 | IP Addresses | IPv4 address space | 10.30.0.0/16          |
 
-
+   ![](../media/vn2.png)
+   ![](../media/vn5.png)
 
 | **Subnet**                | **Option**           | **Value**                 |
 | ------------------------- | -------------------- | ------------------------- |
@@ -112,22 +118,27 @@ In this exercise, you will:
 | SensorSubnet3             | Subnet name          | SensorSubnet3             |
 |                           | Subnet address range | 10.30.22.0/24             |
  
+   ![](../media/vn4.png)
 
 ## Task 3: Create the ResearchVnet virtual network and subnets
 
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup |
+| Basics       | Resource Group     | ContosoResourceGroup-{Deployment ID} |
 |              | Name               | ResearchVnet         |
 |              | Region             | West India           |
 | IP Addresses | IPv4 address space | 10.40.0.0/16         |
+
+   ![](../media/vn6.png)
+   ![](../media/vn7.png)   
 
 | **Subnet**           | **Option**           | **Value**            |
 | -------------------- | -------------------- | -------------------- |
 | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
 |                      | Subnet address range | 10.40.0.0/24         |
  
+   ![](../media/vn8.png)
 
 ## Task 4: Verify the creation of VNets and Subnets
 
