@@ -43,9 +43,11 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
    | Subscription   | Select your subscription                            |
-   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG** |
+   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG-{Deployment ID}** |
    | Name           | **IntLB-VNet**                                      |
    | Region         | **(US) West US**                                    |
+
+   **Note**: Deployment ID can be obtained from environment details tab.
 
 5. Click **Next : IP Addresses**.
 
@@ -94,15 +96,16 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | **Setting**           | **Value**                |
    | --------------------- | ------------------------ |
    | Subscription          | Select your subscription |
-   | Resource group        | **IntLB-RG**             |
+   | Resource group        | **IntLB-RG-{Deployment ID}**|
    | Name                  | **myIntLoadBalancer**    |
    | Region                | **(US) West US**         |
    | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
-   | Virtual network       | **IntLB-VNet**           |
+   | Select Next           |                          |
+   | Add a frontend ipconfiguration |                 |
    | Frontend Name         | **LoadBalancerFrontEnd** |
    | Subnet                | **myBackendSubnet**      |
-   | IP address assignment | **Dynamic**              |
+   | Assignment            | **Dynamic**              |
 
    ![Front End IP.](../media/load_balancer.png)
 
@@ -187,11 +190,15 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 
 In this section, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
 
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane. To do this click on Cloud shell icon right next to top search bar. Select powershell then click on **Show advanced settings** as shown in below image
 
-2. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
+   ![](../media/lb1.png)
 
-3. Navigate to the location specified here. AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M04 for uploading files.
+2. Enter a unique name for **storage account & file share** and click on create storage.
+
+   ![](../media/lb2.png)
+
+3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
 
 4. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
@@ -261,7 +268,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
    | Subscription         | Select your subscription                     |
-   | Resource group       | **IntLB-RG**                                 |
+   | Resource group       | **IntLB-RG-{Deployment ID}**                                 |
    | Virtual machine name | **myTestVM**                                 |
    | Region               | **(US) West US**                             |
    | Availability options | **No infrastructure redundancy required**    |
@@ -334,7 +341,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**    | **Value**                |
    | -------------- | ------------------------ |
    | Subscription   | Select your subscription |
-   | Resource group | **IntLB-RG**             |
+   | Resource group | **IntLB-RG-{Deployment ID}**             |
    | Name           | **myLAworkspace**        |
    | Region         | **West US**              |
 
@@ -420,7 +427,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ## Task 14: Configure diagnostic settings
 
-1. On the Azure portal home page, click **Resource groups**, then select the **IntLB-RG** resource group from the list.
+1. On the Azure portal home page, click **Resource groups**, then select the **IntLB-RG-{Deployment ID}** resource group from the list.
 
 2. On the **IntLB-RG** page, click the name of the **myIntLoadBalancer** load balancer resource in the list of resources.
 
@@ -438,20 +445,4 @@ In this section, you will create a test VM, and then test the load balancer.
 
    ![Diagnostic setting page for load balancer](../media/diagnostic-settings-2.png)
 
- 
 
- 
-
-## Task 15: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
