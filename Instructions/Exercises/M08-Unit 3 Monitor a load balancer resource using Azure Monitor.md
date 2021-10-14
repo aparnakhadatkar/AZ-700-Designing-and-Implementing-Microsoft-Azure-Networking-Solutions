@@ -128,7 +128,6 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | --------------- | -------------------- |
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
-   | Associated to   | **Virtual machines** |
 
 4. Click **Add**.
 
@@ -216,13 +215,11 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 2. Under **Settings**, select **Backend pools**., and then select **myBackendPool**.
 
-3. In the **Associated to** box, select **Virtual machines**.
+3. Under **Virtual machines**, click **Add**.
 
-4. Under **Virtual machines**, click **Add**.
+4. Select the checkboxes for all 3 VMs (**az700-vm1**, **az700-vm2**, and **az700-vm3**), then click **Add**.
 
-5. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then click **Add**.
-
-6. On the **myBackendPool** page, click **Save**.
+5. On the **myBackendPool** page, click **Save**.
 
    ![Show VMs added to backend pool in load balancer](../media/add-vms-backendpool.png)
 
@@ -230,7 +227,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 ## Task 8: Install IIS on the VMs
 
-1. On the Azure portal home page, click **All resources**, then click on **myVM1** from the resources list.
+1. On the Azure portal home page, click **All resources**, then click on **az700-vm1** from the resources list.
 
 2. On the **Overview** page, select **Connect**, then **Bastion**.
 
@@ -238,7 +235,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 4. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
 
-5. The **myVM1** window will open in another browser tab.
+5. The **az700-vm1** window will open in another browser tab.
 
 6. If a **Networks** pane appears, click **Yes**.
 
@@ -251,9 +248,9 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 10. To add a new default web home page and add content to it, run the following command in PowerShell: Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
 
-11. Close the Bastion session to **myVM1** by closing the browser tab.
+11. Close the Bastion session to **az700-vm1** by closing the browser tab.
 
-12. Repeat steps 1-11 above twice more to install IIS and the updated default home page on the **myVM2** and **myVM3** virtual machines.
+12. Repeat steps 1-11 above twice more to install IIS and the updated default home page on the **az700-vm2** and **az700-vm3** virtual machines.
 
 ## Task 9: Test the load balancer
 
@@ -272,7 +269,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Virtual machine name | **myTestVM**                                 |
    | Region               | **(US) West US**                             |
    | Availability options | **No infrastructure redundancy required**    |
-   | Image                | **Windows Server 2019 Datacenter - Gen 1**   |
+   | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS1_v2 - 1 vcpu, 3.5 GiB memory** |
    | Username             | **TestUser**                                 |
    | Password             | **TestPa$$w0rd!**                            |
@@ -301,7 +298,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, click **All resources**, then click on **myIntLoadBalancer** from the resources list.
 
-2. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard.
+2. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. Click on see more if you can't find it in the list
 
 3. Click **Home**, then on the Azure portal home page, click **All resources**, then click on the **myTestVM** virtual machine that you just created.
 
@@ -361,7 +358,9 @@ In this section, you will create a test VM, and then test the load balancer.
 
 3. In the top right corner of the page, click the **X** to close the **Metrics** pane for now. You will open it again shortly.
 
-4. This page view is known as Functional Dependency View, and in this view, you get a useful interactive diagram, which illustrates the topology of the selected network resource - in this case a load balancer. For Standard Load Balancers, your backend pool resources are color-coded with Health Probe status indicating the current availability of your backend pool to serve traffic.
+4. This page view is known as Functional Dependency View, and in this view, you get a useful interactive diagram, which illustrates the topology of the selected network resource - in this case a load balancer. For Standard Load Balancers, your backend pool resources are color-coded with Health Probe status indicating the current availability of your backend pool to serve traffic. 
+
+   **Note**: It takes few hours to load data in insights, do not wait and go through next steps and images to understand the functionality.
 
 5. Use the **Zoom In (+)** and **Zoom Out (-)** buttons in the bottom right corner of the page, to zoom in and out of the topology diagram (alternatively you can use your mouse wheel if you have one). You can also drag the topology diagram around the page to move it.
 
@@ -369,7 +368,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 7. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
-8. Hover over the **myVM3** virtual machine component. Note that you can open the resource blade for the virtual machine, and you can open the **VM Insights** page, or you can run the **Connection troubleshoot** tool from Network Watcher - all from this part of the topology diagram.
+8. Hover over the **az700-vm3** virtual machine component. Note that you can open the resource blade for the virtual machine, and you can open the **VM Insights** page, or you can run the **Connection troubleshoot** tool from Network Watcher - all from this part of the topology diagram.
    ![Azure Monitor Network Insights functional dependency view](../media/network-insights-functional-dependency-view-2.png)
 
 9. To download a .SVG file copy of the topology diagram, click **Download topology**, and save the file in your **Downloads** folder. 
