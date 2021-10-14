@@ -12,7 +12,7 @@ The diagram below illustrates the environment you will be deploying in this exer
 In this exercise, you will:
 
 + Task 1: Create the virtual network
-+ Task 2:  Create backend servers
++ Task 2: Create backend servers
 + Task 3: Create the load balancer
 + Task 4: Create load balancer resources
 + Task 5: Test the load balancer
@@ -42,15 +42,23 @@ In this section, you will create a virtual network and a subnet.
 
 5. Click **Next : IP Addresses**.
 
-6. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
+![virtual network](../media/mod4_1.png)
+
+6. On the **IP Addresses** tab, in the **IPv4 address space** box,  remove the default and type **10.1.0.0/16**.
+
+![virtual network](../media/mod4_2.png)
 
 7. Under **Subnet name**, select the word **default**.
 
 8. In the **Edit subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
+![virtual network](../media/mod4_3.png)
+
 9. Click **Save**.
 
 10. Click **Add Subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Click **Add**.
+
+![virtual network](../media/mod4_4.png)
 
 11. Click **Next : Security**.
 
@@ -62,6 +70,7 @@ In this section, you will create a virtual network and a subnet.
     | AzureBastionSubnet address  space | **10.1.1.0/24**                               |
     | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
 
+![virtual network](../media/mod4_5.png)
 
 13. Click **Review + create**.
 
