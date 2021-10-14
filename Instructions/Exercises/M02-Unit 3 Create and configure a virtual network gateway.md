@@ -244,7 +244,7 @@ In this exercise, you will:
    | Resource group                 | No changes required               |
    | Location                       | West US                           |
 
-5. To create the connection, select **Create**.
+5. To create the connection, select **OK**.
    
 
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
@@ -272,7 +272,7 @@ In this exercise, you will:
    | Location                       | North Europe                      |
    |                                |                                   |
 
-5. To create the connection, select **Create**.
+5. To create the connection, select **OK**.
 
 ## Task 10: Verify that the connections connect 
 
