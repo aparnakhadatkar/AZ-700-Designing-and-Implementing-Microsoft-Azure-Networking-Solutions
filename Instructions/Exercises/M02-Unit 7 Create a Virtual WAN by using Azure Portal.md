@@ -22,7 +22,7 @@ In this exercise, you will:
 
    - **Subscription:** Use the existing subscription
 
-   - **Resource group:** ContosoResourceGroup (Use existing)
+   - **Resource group:** ContosoResourceGroup-DeploymentID (Use existing)
 
    - **Resource group location:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create.
 
@@ -84,7 +84,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
    - **Subscription:** no changes
 
-   - **Resource Group:** ContosoResourceGroup
+   - **Resource Group:** ContosoResourceGroup-DeploymentID
 
    - **Virtual network:** ResearchVNet
 
