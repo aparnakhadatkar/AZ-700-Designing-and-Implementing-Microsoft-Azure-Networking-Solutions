@@ -12,9 +12,9 @@ The diagram below illustrates the environment you will be deploying in this exer
 In this exercise, you will:
 
 + Task 1: Create the virtual network
-+ Task 2: Create the load balancer
-+ Task 3: Create load balancer resources
-+ Task 4: Create backend servers
++ Task 2:  Create backend servers
++ Task 3: Create the load balancer
++ Task 4: Create load balancer resources
 + Task 5: Test the load balancer
 
 ## Task 1: Create the virtual network
@@ -133,9 +133,9 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Assignment      | **Dynamic**              |
 
 
-6. Click **Review + create**.
+9. Click **Review + create**.
 
-7. Click **Create**.
+10. Click **Create**.
 
 ## Task 4: Create load balancer resources
 
@@ -169,7 +169,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
 
-1. From the **Backend pools** page of your load balancer, under **Settings**, click **Health probes**, then click **Add**.
+1. Under **Settings**, click **Health probes**, then click **Add**.
 
 2. On the **Add health probe** page, enter the information from the table below.
 
