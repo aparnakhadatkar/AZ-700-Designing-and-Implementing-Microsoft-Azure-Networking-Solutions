@@ -92,7 +92,7 @@ In this exercise, you will:
     | **Setting**   | **Value**      |
     | ------------- | -------------- |
     | Target type   | Backend pool   |
-    | HTTP Settings | **Create new** |
+    | HTTP Settings | **Add new** |
 
 22. In **Add a HTTP setting**, enter or select the following information:
 
@@ -139,7 +139,7 @@ To do this, you'll:
    | Subscription         | Select the subscription provided by Learn.       |
    | Resource group       | Select the Resource Group provided by Learn.     |
    | Virtual machine name | BackendVM1                                       |
-   | Image                | Select **Windows Server 2016 Datacenter - Gen1** |
+   | Image                | Select **Windows Server 2016 Datacenter - Gen2** |
    | Username             | TestUser                                         |
    | Password             | TestPa$$w0rd                                     |
    | Public inbound ports | None                                             |
