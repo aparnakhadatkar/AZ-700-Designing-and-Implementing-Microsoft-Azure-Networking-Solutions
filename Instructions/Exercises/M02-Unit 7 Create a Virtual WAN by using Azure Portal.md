@@ -7,7 +7,6 @@ In this exercise, you will:
 + Task 1: Create a Virtual WAN
 + Task 2: Create a hub by using Azure Portal
 + Task 3: Connect a VNet to the Virtual Hub
-+ Task 4: Clean up resources
 
 ## Task 1: Create a Virtual WAN
 
