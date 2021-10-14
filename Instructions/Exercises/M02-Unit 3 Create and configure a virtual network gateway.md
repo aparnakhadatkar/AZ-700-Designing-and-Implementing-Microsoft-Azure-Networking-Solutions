@@ -208,7 +208,7 @@ In this exercise, you will:
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | ManufacturingVnet            |
-   |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
+   |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/24) |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
    |                 |                   | Public IP address SKU                       | Basic                        |
