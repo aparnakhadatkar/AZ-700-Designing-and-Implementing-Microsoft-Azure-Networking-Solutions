@@ -12,7 +12,6 @@ In this exercise, you will:
 + Task 1: Create and provision an ExpressRoute circuit
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
-+ Task 4: Clean up resources
 
 
 ## Task 1: Create and provision an ExpressRoute circuit
@@ -99,23 +98,4 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
    **Note:** You must unlink all virtual networks from the ExpressRoute circuit before deprovisioning. If this operation fails, check whether any virtual networks are linked to the circuit.
     
 > If the service provider has deprovisioned the circuit (the service provider provisioning state is set to Not provisioned), you can delete the circuit. This stops billing for the circuit.
-
-## Task 4: Clean up resources
-
-You can delete your ExpressRoute circuit by selecting the **Delete** icon. Ensure the provider status is Not provisioned before proceeding.
-
-![Azure portal - delete an ExpressRoute circuit](../media/image5.png)
-
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-   >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
 
