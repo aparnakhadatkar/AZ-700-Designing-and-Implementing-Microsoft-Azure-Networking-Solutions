@@ -294,8 +294,8 @@ In this section, you will create a test VM, and then test the load balancer.
 11. Enter (or paste) the **Private IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
 
 12. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
-    ![Picture 8](../media/load-balancer-web-test-1.png)
+    ![reaponse](../media/mod4_6.png)
 
 13. If you click the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
-    ![Picture 9](../media/load-balancer-web-test-2.png)
+    ![response](../media/mod4_8.png)
 
