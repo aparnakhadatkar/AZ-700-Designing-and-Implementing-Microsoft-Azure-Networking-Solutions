@@ -37,7 +37,7 @@ In this exercise, you will:
  >Note: Use the RGName as the existing resource group name which was already defined
 
    ```powershell
-   $RGName = "ContosoResourceGroup" (Use existing rgname)
+   $RGName = "ContosoResourceGroup-DeploymentID" (Use existing rgname)
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
@@ -57,7 +57,7 @@ In this exercise, you will:
 
    | **Tab**         | **Option**                                                   | **Value**                             |
    | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-   | Basics          | Resource group                                               | ContosoResourceGroup                  |
+   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID                  |
    |                 | Virtual machine name                                         | CoreServicesTestVM                    |
    |                 | Region                                                       | (US) West US                          |
    |                 | Availability options                                         | No infrastructure redundancy required |
@@ -99,7 +99,7 @@ In this exercise, you will:
 
    | **Tab**         | **Option**                                                   | **Value**                                 |
    | --------------- | ------------------------------------------------------------ | ----------------------------------------- |
-   | Basics          | Resource group                                               | ContosoResourceGroup                      |
+   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID                     |
    |                 | Virtual machine name                                         | ManufacturingTestVM                       |
    |                 | Region                                                       | (Europe) North Europe                     |
    |                 | Availability options                                         | No infrastructure redundancy required     |
@@ -168,10 +168,10 @@ In this exercise, you will:
 
 3. Use the information in the following table to create the virtual network gateway:
 
-   | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
+   | **Tab**         | **Section**       | **Option**                                  | **Value**                    
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
+   |                 |                   | ResourceGroup                               | ContosoResourceGroup-DeploymentID         |
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
    |                 |                   | Region                                      | West US                      |
    |                 |                   | Gateway type                                | VPN                          |
@@ -200,7 +200,7 @@ In this exercise, you will:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
+   |                 |                   | ResourceGroup                               | ContosoResourceGroup-DeploymentID        |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Region                                      | North Europe                 |
    |                 |                   | Gateway type                                | VPN                          |
