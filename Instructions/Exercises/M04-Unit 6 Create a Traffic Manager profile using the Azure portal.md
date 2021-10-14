@@ -1,9 +1,3 @@
----
-Exercise:
-    title: 'M04-Unit 6 Create a Traffic Manager profile using the Azure portal'
-    module: 'Module - Load balancing non-HTTP(S) traffic in Azure'
----
-
 # M04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
 In this exercise, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application. 
@@ -36,7 +30,7 @@ In this section, you will create two instances of a web application deployed in 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription                                     |
-   | Resource group   | Select **Create  new**  Name: **Contoso-RG-TM1**             |
+   | Resource group   | Select **Existing**  Name: **Contoso-RG-TM1-Deployment ID**  |
    | Name             | **ContosoWebAppEastUS**                                      |
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
@@ -58,11 +52,11 @@ In this section, you will create two instances of a web application deployed in 
 
 7. Repeat steps 1-6 above to create a second web app. Use the same settings as before except for the information in the table below. 
 
-   | **Setting**    | **Value**                                                    |
-   | -------------- | ------------------------------------------------------------ |
-   | Resource group | Select **Create  new**  Name: **Contoso-RG-TM2**             |
-   | Name           | **ContosoWebAppWestEurope**                                  |
-   | Region         | **West Europe**                                              |
+   | **Setting**    | **Value**                                                         |
+   | -------------- | ------------------------------------------------------------      |
+   | Resource group | Select **Existing**  Name: **Contoso-RG-TM2-Deployment ID**       |
+   | Name           | **ContosoWebAppWestEurope**                                       |
+   | Region         | **West Europe**                                                   |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
 
@@ -88,13 +82,13 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 4. On the **Create Traffic Manager profile** page, use the information in the table below to create the Traffic Manager profile.
 
-   | **Setting**             | **Value**                |
-   | ----------------------- | ------------------------ |
-   | Name                    | **Contoso-TMProfile**    |
-   | Routing method          | **Priority**             |
-   | Subscription            | Select your subscription |
-   | Resource group          | **Contoso-RG-TM1**       |
-   | Resource group location | **East US**              |
+   | **Setting**             | **Value**                        |
+   | ----------------------- | ------------------------         |
+   | Name                    | **Contoso-TMProfile**            |
+   | Routing method          | **Priority**                     |
+   | Subscription            | Select your subscription         |
+   | Resource group          | **Contoso-RG-TM1-Deployment ID** |
+   | Resource group location | **East US**                      |
 
 
 5. Click **Create**.
@@ -175,19 +169,6 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 12. Verify that the web app is still responding. As the primary endpoint was not available, the traffic was instead routed to the failover endpoint to allow the web site to still function.
 
- 
- ## Task 5: Clean up resources
 
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
  
 
