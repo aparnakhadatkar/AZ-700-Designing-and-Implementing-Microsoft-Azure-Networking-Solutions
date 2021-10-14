@@ -113,7 +113,7 @@ In this section, you will add the website in the East US as the primary endpoint
    | Name                 | **myPrimaryEndpoint**             |
    | Target resource type | **App Service**                   |
    | Target resource      | **ContosoWebAppEastUS (East US)** |
-   | Priority             | **1**                             |
+   | Weight               | **1**                             |
 
 
 4. Click **Add**.
@@ -124,7 +124,7 @@ In this section, you will add the website in the East US as the primary endpoint
    | --------------- | ----------------------------------------- |
    | Name            | **myFailoverEndpoint**                    |
    | Target resource | **ContosoWebAppWestEurope (West Europe)** |
-   | Priority        | **2**                                     |
+   | Weight          | **2**                                     |
 
 
 6. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
