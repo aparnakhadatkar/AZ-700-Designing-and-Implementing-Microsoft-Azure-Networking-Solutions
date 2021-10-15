@@ -78,8 +78,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | ----------------------- | -------------------------------------------- |
    | Subscription            | Select your subscription.                    |
    | Resource group          | Select the resource group provided by Learn. |
-   | Resource group location | Select **Central US**.                       |
-
+   
 4. Select **Next: Configuration**.
 
 5. On the Configuration tab, in **Frontends/domains**, select **+** to add a frontend host.
