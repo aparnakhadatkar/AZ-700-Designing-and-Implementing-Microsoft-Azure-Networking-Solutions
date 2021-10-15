@@ -139,7 +139,8 @@ To do this, you'll:
    | Subscription         | Select the subscription provided by Learn.       |
    | Resource group       | Select the Resource Group provided by Learn.     |
    | Virtual machine name | BackendVM1                                       |
-   | Image                | Select **Windows Server 2016 Datacenter - Gen2** |
+   | Image                | Select **Windows Server 2016 Datacenter - Gen1** |
+   | Size                 | Standard_D2_v3 (2 vcpus, 8 GiB memory)                                   |
    | Username             | TestUser                                         |
    | Password             | TestPa$$w0rd                                     |
    | Public inbound ports | None                                             |
