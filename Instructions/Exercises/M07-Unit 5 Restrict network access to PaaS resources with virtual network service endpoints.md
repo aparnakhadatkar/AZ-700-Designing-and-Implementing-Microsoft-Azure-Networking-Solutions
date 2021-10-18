@@ -202,8 +202,8 @@ The steps necessary to restrict network access to resources created through Azur
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select CreatePrivateEndpointQS-rg-{DeploymentID} |
-   | Name           | Enter a contosostoragewest                                |
+   | Resource group | Select CreatePrivateEndpointQS-rg-{DeploymentID}             |
+   | Name           | Enter contosostoragewest{DeploymentID}                       |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Location       | Select West US                                               |
    | Replication    | Locally-redundant storage (LRS)                              |
