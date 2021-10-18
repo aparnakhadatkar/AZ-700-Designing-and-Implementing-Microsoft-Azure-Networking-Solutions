@@ -11,7 +11,6 @@ In this exercise, you will:
 + Task 1: Create two instances of a web app
 + Task 2: Create a Front Door for your application
 + Task 3: View Azure Front Door in action
-+ Task 4: Clean up resources
 
 
 ## Task 1: Create two instances of a web app
@@ -33,7 +32,7 @@ This exercise requires two instances of a web application that run in different 
    | Resource group   | Select the resource group provided by Learn.                 |
    | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-1. |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET Core 2.1 (LTS)**.                              |
+   | Runtime stack    | Select **.NET Core 3.1 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **Central US**.                                       |
    | Windows Plan     | Select **Create new** and enter myAppServicePlanCentralUS in the text box. |
@@ -54,7 +53,7 @@ This exercise requires two instances of a web application that run in different 
    | Resource group   | Select the resource group provided by Learn.                 |
    | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-2. |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET Core 2.1 (LTS)**.                              |
+   | Runtime stack    | Select **.NET Core 3.1 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US**.                                          |
    | Windows Plan     | Select **Create new** and enter myAppServicePlanEastUS in the text box. |
@@ -79,8 +78,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | ----------------------- | -------------------------------------------- |
    | Subscription            | Select your subscription.                    |
    | Resource group          | Select the resource group provided by Learn. |
-   | Resource group location | Select **Central US**.                       |
-
+   
 4. Select **Next: Configuration**.
 
 5. On the Configuration tab, in **Frontends/domains**, select **+** to add a frontend host.
@@ -174,16 +172,3 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
    
   
    
-   ## Task 4: Clean up resources
-   
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
