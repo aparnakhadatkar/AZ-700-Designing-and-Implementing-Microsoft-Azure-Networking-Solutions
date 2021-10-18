@@ -216,7 +216,7 @@ The steps necessary to restrict network access to resources created through Azur
 2. Select **File shares**, as shown in the following picture: 
    ![Graphical user interface, application Description automatically generated](../media/fileshare.png)
 3. Select **+ File share**.
-4. Enter marketing under **Name**, and then select **Create**.
+4. Enter **market** under **Name**, and then select **Create**. Note down file share name in a notepad, you will needed it in next task of this lab.
 
 ## Task 8: Restrict network access to a subnet
 
@@ -234,7 +234,7 @@ By default, storage accounts accept network connections from clients in any netw
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
    | Subscription     | Select your subscription.    |
-   | Virtual networks | Select CoreServicesVNet**.** |
+   | Virtual networks | Select **CoreServicesVNet** |
    | Subnets          | Select **Private**.          |
 
 5. Select **Add**.
@@ -243,7 +243,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 7. Under **Security and Networking** for the storage account, select **Access keys**.
 
-8. Select **Show Keys**. Note the **Key** value, as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
+8. Select **Show Keys**. Note the **Key** value, and **Storage account** name as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
 
 ## Task 9: Create virtual machines
 
@@ -263,10 +263,9 @@ To test network access to a storage account, deploy a VM to each subnet.
    | Virtual machine name  | ContosoWestPublic                                            |
    | Region                | (US) West US                                                 |
    | Availability Options  | No infrastructure redundancy required                        |
-   | Image                 | Select **Windows Server 2019 Datacenter-Gen1**.                   |
+   | Image                 | Select **Windows Server 2019 Datacenter-Gen2**.                   |
    | Size                  | Standard_D2s_v3                                                 |
    | Administrator Account |                                                              |
-   | Authentication type   | SSH public key                                               |
    | Username              | Enter a user name of your choosing.                          |
    | Password              | Enter a password of your choosing.                           |
    | Confirm Password      | Re-enter the password.                                       |
@@ -341,7 +340,7 @@ You receive no replies because the network security group associated to the Priv
 
 6. Enter the name of the storage account you created in the **Search resources, services, and docs** box. When the name of your storage account appears in the search results, select it.
 
-7. Select **File shares** then select my-file-share.
+7. Select **File shares** then select file share you created in previous task.
 
 8. You receive the error shown in the following screenshot:
 
