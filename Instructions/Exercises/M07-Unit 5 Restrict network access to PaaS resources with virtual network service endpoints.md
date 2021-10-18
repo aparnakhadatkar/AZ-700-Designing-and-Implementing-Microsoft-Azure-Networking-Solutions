@@ -17,7 +17,6 @@ In this exercise, you will:
 + Task 8: Restrict network access to a subnet
 + Task 9: Create virtual machines
 + Task 10: Confirm access to storage account
-+ Task 11: Clean up resources
 
 ## Task 1: Create a virtual network
 
@@ -33,7 +32,7 @@ In this exercise, you will:
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
-   | Resource group | Select the provided resource group
+   | Resource group | Select CreatePrivateEndpointQS-rg-<DeploymentID> |
    | Name           | CoreServicesVNet                              |
    | Location       | Select **West US**                            |
 
@@ -96,7 +95,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select **Use existing** and select the provided resource group from Learn |
+   | Resource group | Select CreatePrivateEndpointQS-rg-<DeploymentID>             |
    | Name           | ContosoPrivateNSG                                            |
    | Location       | Select **West US**                                           |
 
@@ -203,7 +202,7 @@ The steps necessary to restrict network access to resources created through Azur
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select Use existing and select the resource group provided by Learn. |
+   | Resource group | Select CreatePrivateEndpointQS-rg-<DeploymentID> |
    | Name           | Enter a contosostoragewest                                |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Location       | Select West US                                               |
@@ -259,7 +258,7 @@ To test network access to a storage account, deploy a VM to each subnet.
    | --------------------- | ------------------------------------------------------------ |
    | Project Details       |                                                              |
    | Subscription          | Select your subscription.                                    |
-   | Resource group        | Select **Use existing** and select the resource group provided by Learn |
+   | Resource group        | Select CreatePrivateEndpointQS-rg-<DeploymentID> |
    | Instance Details      |                                                              |
    | Virtual machine name  | ContosoWestPublic                                            |
    | Region                | (US) West US                                                 |
@@ -356,16 +355,3 @@ You receive no replies because the network security group associated to the Priv
 
 Results: You have now completed this lab.
 
-## Task 11: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
