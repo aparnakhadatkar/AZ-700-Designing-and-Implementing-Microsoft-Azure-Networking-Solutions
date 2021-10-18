@@ -10,8 +10,6 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 **Prerequisites**
 
-- An Azure account with an active subscription. Create an account for free.
-
 - An Azure Web App with a PremiumV2-tier or higher app service plan deployed in your Azure subscription.
 
 1. Click on the Azure Portal icon on the VM desktop and login with the Azure credentials from the Lab Environment details page.
@@ -23,7 +21,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
    
 4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-5. Navigate to the location that is specified. Az-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M07
+5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**
 
 6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the files -template.json and        parameters.json into the Cloud Shell home directory.
    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/upload.png)
@@ -65,67 +63,69 @@ Create a virtual network and bastion host with:
 
  
 
-```Azure PowerShell
-## Create backend subnet config. ##
+  ```
+      Azure PowerShell
+      ## Create backend subnet config. ##
 
-$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name myBackendSubnet -AddressPrefix 10.0.0.0/24```
+      $subnetConfig = New-AzVirtualNetworkSubnetConfig -Name myBackendSubnet -AddressPrefix 10.0.0.0/24
 
-## Create Azure Bastion subnet. ##
+      ## Create Azure Bastion subnet. ##
 
-$bastsubnetConfig = New-AzVirtualNetworkSubnetConfig -Name AzureBastionSubnet -AddressPrefix 10.0.1.0/24
+      $bastsubnetConfig = New-AzVirtualNetworkSubnetConfig -Name AzureBastionSubnet -AddressPrefix 10.0.1.0/24
 
-## Create the virtual network. ##
+      ## Create the virtual network. ##
 
-$parameters1 = @{
+      $parameters1 = @{
 
- Name = 'MyVNet'
+      Name = 'MyVNet'
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+      ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
- Location = 'eastus'
+      Location = 'eastus'
 
- AddressPrefix = '10.0.0.0/16'
+      AddressPrefix = '10.0.0.0/16'
 
- Subnet = $subnetConfig, $bastsubnetConfig
+      Subnet = $subnetConfig, $bastsubnetConfig
 
-}
+      }
 
-$vnet = New-AzVirtualNetwork @parameters1
+      $vnet = New-AzVirtualNetwork @parameters1
 
-## Create public IP address for bastion host. ##
+      ## Create public IP address for bastion host. ##
 
-$parameters2 = @{
+      $parameters2 = @{
 
- Name = 'myBastionIP'
+      Name = 'myBastionIP'
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+      ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
- Location = 'eastus'
+      Location = 'eastus'
 
- Sku = 'Standard'
+      Sku = 'Standard'
 
- AllocationMethod = 'Static'
+      AllocationMethod = 'Static'
 
-}
+      }
 
-$publicip = New-AzPublicIpAddress @parameters2
+      $publicip = New-AzPublicIpAddress @parameters2
 
-## Create bastion host ##
+      ## Create bastion host ##
 
-$parameters3 = @{
+      $parameters3 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+      ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
- Name = 'myBastion'
+      Name = 'myBastion'
 
- PublicIpAddress = $publicip
+      PublicIpAddress = $publicip
 
- VirtualNetwork = $vnet
+      VirtualNetwork = $vnet
 
-}
+      }
 
-New-AzBastion @parameters3
-```
+      New-AzBastion @parameters3
+
+   ```
 
 
 
