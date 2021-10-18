@@ -28,16 +28,16 @@ In this exercise, you will:
 
 4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-5. Navigate to the location that is specified. Az-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M02
+5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
 
 6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json and azuredeploy.parameters.json into the Cloud Shell home directory.
 
 7. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
- >Note: Use the RGName as the existing resource group name which was already defined
+ >Note: Deployment ID can be obtained from environment details tab
 
    ```powershell
-   $RGName = "ContosoResourceGroup-DeploymentID" (Use existing rgname)
+   $RGName = "ContosoResourceGroup-DeploymentID" (Replace the Deployment ID value here)
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
@@ -61,9 +61,9 @@ In this exercise, you will:
    |                 | Virtual machine name                                         | CoreServicesTestVM                    |
    |                 | Region                                                       | (US) West US                          |
    |                 | Availability options                                         | No infrastructure redundancy required |
-   |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1  |
+   |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2  |
    |                 | Azure Spot instance                                          | Not selected                          |
-   |                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory  |
+   |                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory  |
    |                 | Username                                                     | TestUser                              |
    |                 | Password                                                     | TestPa$$w0rd!                         |
    |                 | Public inbound ports                                         | Allow selected ports                  |
@@ -105,7 +105,7 @@ In this exercise, you will:
    |                 | Availability options                                         | No infrastructure redundancy required     |
    |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1      |
    |                 | Azure Spot instance                                          | Not selected                              |
-   |                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory      |
+   |                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory      |
    |                 | Username                                                     | TestUser                                  |
    |                 | Password                                                     | TestPa$$w0rd!                             |
    |                 | Public inbound ports                                         | Allow selected ports                      |
