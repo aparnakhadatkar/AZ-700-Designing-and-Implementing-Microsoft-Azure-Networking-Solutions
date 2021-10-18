@@ -22,7 +22,6 @@ The diagram below illustrates the environment you will be deploying in this exer
 + Task 12: View detailed metrics
 + Task 13: View resource health
 + Task 14: Configure diagnostic settings
-+ Task 15: Clean up resources
 
 
 
