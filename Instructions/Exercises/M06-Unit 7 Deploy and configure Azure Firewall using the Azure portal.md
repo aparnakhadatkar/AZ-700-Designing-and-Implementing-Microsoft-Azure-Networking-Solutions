@@ -23,7 +23,9 @@ In this task, you will create a single virtual network with two subnets.
 
 2. Click **Create**.
 
-3. Select the **Test-FW-RG** resource group you created previously.
+3. Select the **Test-FW-RG-DeploymentID** resource group you created previously.
+
+ >Deployment ID can be found in environment tab.
 
 4. In the **Name** box, enter **Test-FW-VN**.
 
@@ -70,7 +72,7 @@ In this task, you will create the workload virtual machine and place it in the W
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG**                                               |
+   | Resource group       | **Test-FW-RG-DeploymentID**                                  |
    | Virtual machine name | **Srv-Work**                                                 |
    | Region               | Your region                                                  |
    | Availability options | **No infrastructure redundancy required**                    |
@@ -119,7 +121,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG**                                               |
+   | Resource group       | **Test-FW-RG-DeploymentID**                                  |
    | Virtual machine name | **Test-FW01**                                                |
    | Region               | Your region                                                  |
    | Firewall tier        | **Standard**                                                 |
@@ -164,13 +166,13 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 3. On the **Basics** tab, create a new route table using the information in the table below.
 
-   | **Setting**              | **Value**                |
-   | ------------------------ | ------------------------ |
-   | Subscription             | Select your subscription |
-   | Resource group           | **Test-FW-RG**           |
-   | Region                   | Your region              |
-   | Name                     | **Firewall-route**       |
-   | Propagate gateway routes | **Yes**                  |
+   | **Setting**              | **Value**                   |
+   | ------------------------ | ------------------------    |
+   | Subscription             | Select your subscription    |
+   | Resource group           | **Test-FW-RG-DeploymentID** |
+   | Region                   | Your region                 |
+   | Name                     | **Firewall-route**          |
+   | Propagate gateway routes | **Yes**                     |
 
 
 4. Click **Review + create**.
