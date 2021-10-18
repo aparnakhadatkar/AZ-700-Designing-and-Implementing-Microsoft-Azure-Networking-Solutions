@@ -20,7 +20,9 @@ In this exercise, you will:
 
 2. Click **Create**.
 
-3. On the **Basics** tab, in the **Resource group** list, select the resource group you just created.
+3. On the **Basics** tab, in the **Resource group** list, select the resource group **MyResourceGroup-DeploymentID**.
+
+>Note : Deployment ID can be found in environment tab
 
 4. In the **Instance name** box, type **MyDdoSProtectionPlan**, then click **Review + create**.
 
@@ -28,7 +30,7 @@ In this exercise, you will:
 
 5. Click **Create**.
 
-   >>Note: It will take 20 minutes to reflect DDoS protection plan in Resource Group.
+   >Note: It will take 20 minutes to reflect DDoS protection plan in Resource Group.
 
 ## Task 2: Enable DDoS Protection on a new virtual network
 
@@ -40,7 +42,7 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
 2. On the **Virtual Network** page, click **Create**.
 
-3. On the **Basics** tab, select the resource group you created previously.
+3. On the **Basics** tab, select the resource group **MyResourceGroup-DeploymentID**.
 
 4. In the **Name** box, type **MyVirtualNetwork**, then click the **Security** tab. 
 
@@ -72,7 +74,9 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 5. Under **IP address assignment**, select **Static**.
 
-6. In **DNS name label**, type **mypublicdns**.
+6. In **DNS name label**, type **mypublicdns-DeploymentID**.
+
+ >Note : DeploymentID can be found in the evnironment tab.
 
 7. Select your resource group from the list.
 
@@ -139,7 +143,7 @@ In this step you will create a virtual machine, assign a public IP address to it
    | **Setting**           | **Value**                                                    |
    | --------------------- | ------------------------------------------------------------ |
    | Subscription          | Select your subscription                                     |
-   | Resource group        | **MyResourceGroup**                                          |
+   | Resource group        | **MyResourceGroup-Deployment ID**                            |
    | Virtual machine name  | **MyVirtualMachine**                                         |
    | Region                | Your region                                                  |
    | Availability options  | **No infrastructure  redundancy required**                   |
