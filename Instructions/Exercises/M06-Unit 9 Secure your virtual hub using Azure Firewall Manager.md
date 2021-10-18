@@ -25,7 +25,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, select **Create a resource**, then in the search box, type **virtual network** and select **Virtual Network** when it appears.
 2. Click **Create**.
-3. In **Resource group**, select **Create new**, and enter **fw-manager-rg** as the name and click **OK**.
+3. In **Resource group**, select **Existing**, and enter **fw-manager-rg-DeploymentID** as the name and click **OK**.
 4. In **Name**, enter **Spoke-01**.
 5. In **Region**, select your region.
 6. Click **Next: IP Addresses**.
@@ -40,7 +40,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 Repeat steps 1 to 14 above to create another similar virtual network and subnet but using the following information:
 
-- Resource Group: **fw-manager-rg** (select existing)
+- Resource Group: **fw-manager-rg-DeploymentID** (select existing)
 - Name: **Spoke-02**
 - Address space: **10.1.0.0/16** - (delete any other listed address spaces)
 - Subnet name: **Workload-02-SN**
@@ -58,7 +58,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 4. On the **Virtual hubs** page, click **Create new secured virtual hub**.
 
-5. For **Resource group**, select **fw-manager-rg**.
+5. For **Resource group**, select **fw-manager-rg-DeploymentID**.
 
 6. For **Region**, select your region.
 
@@ -104,7 +104,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 In this task you will connect the hub and spoke virtual networks. This is commonly known as peering.
 
 1. From the Azure portal home page, click **Resource groups**.
-2. Select the **fw-manager-rg** resource group, then select the **Vwan-01** virtual WAN.
+2. Select the **fw-manager-rg-DeploymentID** resource group, then select the **Vwan-01** virtual WAN.
 3. Under **Connectivity**, click **Virtual network connections**.
 4. Click **Add connection**.
 5. For **Connection name**, enter **hub-spoke-01**.
@@ -129,16 +129,16 @@ In this task you will deploy the two workload servers.
 
 3. On the **Create a virtual machine** page, on the **Basics** tab, create a new VM using the information in the table below.
 
-   | **Setting**          | **Value**                |
-   | -------------------- | ------------------------ |
-   | Subscription         | Select your subscription |
-   | Resource group       | **fw-manager-rg**        |
-   | Virtual machine name | **Srv-workload-01**      |
-   | Region               | Your region              |
-   | Username             | **MyAdmin**              |
-   | Password             | **TestPa$$w0rd!**        |
-   | Confirm password     | **TestPa$$w0rd!**        |
-   | Public inbound ports | **None**                 |
+   | **Setting**          | **Value**                      |
+   | -------------------- | ------------------------       |
+   | Subscription         | Select your subscription       |
+   | Resource group       | **fw-manager-rg-DeploymentID** |
+   | Virtual machine name | **Srv-workload-01**            |
+   | Region               | Your region                    |
+   | Username             | **MyAdmin**                    |
+   | Password             | **TestPa$$w0rd!**              |
+   | Confirm password     | **TestPa$$w0rd!**              |
+   | Public inbound ports | **None**                       |
 
 4. Click **Next : Disks**.
 
@@ -191,7 +191,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 3. Click **Create Azure Firewall Policy**.
 
-4. In **Resource group**, select **fw-manager-rg**.
+4. In **Resource group**, select **fw-manager-rg-DeploymentID**.
 
 5. Under **Policy details**, for the **Name**, enter **Policy-01**.
 
