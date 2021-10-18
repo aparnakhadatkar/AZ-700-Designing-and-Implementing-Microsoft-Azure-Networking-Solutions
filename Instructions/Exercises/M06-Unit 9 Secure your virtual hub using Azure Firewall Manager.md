@@ -25,7 +25,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, select **Create a resource**, then in the search box, type **virtual network** and select **Virtual Network** when it appears.
 2. Click **Create**.
-3. In **Resource group**, select **Existing**, and enter **fw-manager-rg-DeploymentID** as the name and click **OK**.
+3. In **Resource group**, select **Existing**, and select **fw-manager-rg-DeploymentID** as the name and click **OK**.
 4. In **Name**, enter **Spoke-01**.
 5. In **Region**, select your region.
 6. Click **Next: IP Addresses**.
