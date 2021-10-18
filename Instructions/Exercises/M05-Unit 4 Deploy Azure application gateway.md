@@ -164,6 +164,8 @@ In this example, you install IIS on the virtual machines to verify Azure created
 
 2. Select **Cloud Shell** from the top navigation bar of the Azure portal and then select **PowerShell** from the drop-down list.
 
+3. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+
    ![Azure Portal and Azure PowerShell Install IIS on backends](../media/application-gateway-extension.png)
 
 3. Run the following command to install IIS on the virtual machine. Change the Location parameter if necessary:
