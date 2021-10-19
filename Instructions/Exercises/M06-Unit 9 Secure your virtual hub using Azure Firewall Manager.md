@@ -58,6 +58,8 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 4. On the **Virtual hubs** page, click **Create new secured virtual hub**.
 
+ ![virtual hub](../media/module6-hub.png)
+
 5. For **Resource group**, select **fw-manager-rg-DeploymentID**.
 
 6. For **Region**, select your region.
@@ -135,6 +137,7 @@ In this task you will deploy the two workload servers.
    | Resource group       | **fw-manager-rg-DeploymentID** |
    | Virtual machine name | **Srv-workload-01**            |
    | Region               | Your region                    |
+   | Size                 | B1s                            |
    | Username             | **MyAdmin**                    |
    | Password             | **TestPa$$w0rd!**              |
    | Confirm password     | **TestPa$$w0rd!**              |
@@ -191,6 +194,8 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 3. Click **Create Azure Firewall Policy**.
 
+ ![Firewall policy](../media/module6policy1.png)
+
 4. In **Resource group**, select **fw-manager-rg-DeploymentID**.
 
 5. Under **Policy details**, for the **Name**, enter **Policy-01**.
@@ -199,11 +204,19 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 7. Click **Next : DNS Settings**.
 
+ ![Firewall policy](../media/policy2.png)
+
 8. Click **Next : TLS Inspection (preview)**.
+
+ ![Firewall policy](../media/module6policy3.png)
 
 9. Click **Next : Rules**.
 
+ ![Firewall policy](../media/module6policy4.png)
+
 10. On the **Rules** tab, click **Add a rule collection**.
+
+ ![Firewall policy](../media/module6policy5.png)
 
 11. On the **Add a rule collection** page, in **Name**, enter **App-RC-01**.
 
@@ -318,8 +331,11 @@ In this task you will ensure that network traffic gets routed through your firew
 4. In **Internet traffic**, select **Azure Firewall**.
 5. In **Private traffic**, select **Send via Azure Firewall**.
 6. Click **Save**. 
-7. This will take a few minutes to complete.
-8. Once configuration has completed, ensure that under **INTERNET TRAFFIC** and **PRIVATE TRAFFIC**, it says **Secured by Azure Firewall** for both hub-spoke connections.
+
+![security configuration](../media/module6security.png)
+
+8. This will take a few minutes to complete.
+9. Once configuration has completed, ensure that under **INTERNET TRAFFIC** and **PRIVATE TRAFFIC**, it says **Secured by Azure Firewall** for both hub-spoke connections.
 
 
 ## Task 8: Test the application rule
