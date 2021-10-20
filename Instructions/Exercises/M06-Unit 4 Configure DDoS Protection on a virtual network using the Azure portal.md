@@ -20,9 +20,9 @@ In this exercise, you will:
 
 2. Click **Create**.
 
-3. On the **Basics** tab, in the **Resource group** list, select the resource group **MyResourceGroup-DeploymentID**.
+3. On the **Basics** tab, in the **Resource group** list, select the resource group **MyResourceGroup-{DeploymentID}**.
 
->Note : Deployment ID can be found in environment tab
+   >Note : Deployment ID can be found in the environment details tab
 
 4. In the **Instance name** box, type **MyDdoSProtectionPlan**, then click **Review + create**.
 
@@ -42,7 +42,7 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
 2. On the **Virtual Network** page, click **Create**.
 
-3. On the **Basics** tab, select the resource group **MyResourceGroup-DeploymentID**.
+3. On the **Basics** tab, select the resource group **MyResourceGroup-{DeploymentID}**.
 
 4. In the **Name** box, type **MyVirtualNetwork**, then click the **Security** tab. 
 
@@ -78,7 +78,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
  >Note : DeploymentID can be found in the evnironment tab.
 
-7. Select your resource group from the list.
+7. Select **MyResourceGroup-{DeploymentID}** resource group from the list.
 
    ![Create public IP address](../media/create-public-ip-address-for-ddos-telemetry.png)
 
@@ -96,7 +96,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 13. Click **Apply**.
 
-14. In the **Metrics** box, select **Inbound packets dropped DDoS**.
+14. In the **Metric** box, select **Inbound packets dropped DDoS**.
 
 15. In the **Aggregation** box, select **Max**.
 
@@ -116,15 +116,13 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 5. On the **Diagnostic setting** page, in the **Diagnostic setting name** box, type **MyDiagnosticSetting**. 
 
-6. Under **Category details**, select all 3 **log** checkboxes and the **AllMetrics** checkbox.
-
-7. Under **Destination details**, select the **Send to Log Analytics workspace** checkbox. Here, you could select a pre-existing Log Analytics workspace, but as you haven't set up a destination for the diagnostic logs yet, you will just enter the settings, but then discard them in the next step in this exercise.
+6. Under **Destination details**, select the **Send to Log Analytics workspace** checkbox. Here, you could select a pre-existing Log Analytics workspace, but as you haven't set up a destination for the diagnostic logs yet, you will just enter the settings, but then discard them in the next step in this exercise.
 
    ![Configure new Diagnostic settings for DDoS](../media/configure-ddos-diagnostic-settings-new.png)
 
-8. Normally you would now click **Save** to save your diagnostic settings. Note that this option is still grayed out as we cannot complete the setting configuration yet.
+7. Normally you would now click **Save** to save your diagnostic settings. Note that this option is still grayed out as we cannot complete the setting configuration yet.
 
-9. Click **Discard**, then click **Yes**.
+8. Click **Discard**, then click **Yes**.
 
  
 
