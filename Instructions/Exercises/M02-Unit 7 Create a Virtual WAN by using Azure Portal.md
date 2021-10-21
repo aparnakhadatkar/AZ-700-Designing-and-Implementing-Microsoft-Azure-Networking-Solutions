@@ -38,7 +38,7 @@ In this exercise, you will:
 
 A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functionality. It takes 30 minutes to create the site-to-site VPN gateway in the virtual hub. You must create a Virtual WAN before you can create a hub.
 
-1. Locate the Virtual WAN that you created. 
+1. In the portal, type Virtual WAN into the search box and select **Virtual WANs** from the results list locate and select the Virtual WAN that you created. 
 
 2. On the Virtual WAN page, under **Connectivity**, select **Hubs**.
 
@@ -68,7 +68,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 ## Task 3: Connect a VNet to the Virtual Hub
 
-1. Locate the Virtual WAN that you created. 
+1. In the portal, type Virtual WAN into the search box and select **Virtual WANs** from the results list locate and select the Virtual WAN that you created.  
 
 2. In ContosoVirtualWAN, under **Connectivity**, select **Virtual network connections**.
 

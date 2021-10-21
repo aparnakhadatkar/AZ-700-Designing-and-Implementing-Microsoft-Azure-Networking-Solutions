@@ -57,7 +57,7 @@ In this exercise, you will:
 
    | **Tab**         | **Option**                                                   | **Value**                             |
    | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID                  |
+   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID     |
    |                 | Virtual machine name                                         | CoreServicesTestVM                    |
    |                 | Region                                                       | (US) West US                          |
    |                 | Availability options                                         | No infrastructure redundancy required |
@@ -69,7 +69,7 @@ In this exercise, you will:
    |                 | Public inbound ports                                         | Allow selected ports                  |
    |                 | Select inbound ports                                         | RDP (3389)                            |
    |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-   | Disks           | No changes required                                          |                                       |
+   | Disks           | OS Disk Type                                                 | Standard SSD                          |
    | Networking      | Virtual network                                              | CoreServicesVnet                      |
    |                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)         |
    |                 | Public IP                                                    | (new) CoreServicesTestVM-ip           |
@@ -99,11 +99,11 @@ In this exercise, you will:
 
    | **Tab**         | **Option**                                                   | **Value**                                 |
    | --------------- | ------------------------------------------------------------ | ----------------------------------------- |
-   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID                     |
+   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID         |
    |                 | Virtual machine name                                         | ManufacturingTestVM                       |
    |                 | Region                                                       | (Europe) North Europe                     |
    |                 | Availability options                                         | No infrastructure redundancy required     |
-   |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1      |
+   |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2      |
    |                 | Azure Spot instance                                          | Not selected                              |
    |                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory      |
    |                 | Username                                                     | TestUser                                  |
@@ -111,7 +111,7 @@ In this exercise, you will:
    |                 | Public inbound ports                                         | Allow selected ports                      |
    |                 | Select inbound ports                                         | RDP (3389)                                |
    |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected             |                     
-   | Disks           | No changes required                                          |                                           |
+   | Disks           | OS Disk type                                                 | Standard SSD                              |
    | Networking      | Virtual network                                              | ManufacturingVnet                         |
    |                 | Subnet                                                       | ManufacturingSystemSubnet (10.30.10.0/24)  |
    |                 | Public IP                                                    | (new) ManufacturingTestVM-ip              |
@@ -187,7 +187,7 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
 
-   >Note : It can take upto 45 minutes to create a virtual network gateway
+   >Note : It can take upto 45 minutes to create a virtual network gateway, do not wait continue to next task
 
 ## Task 7: Create ManufacturingVnet Gateway
 
@@ -216,7 +216,7 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
    
-   > Note: It can take upto 45 minutes to create a virtual network gateway.
+   > Note: It can take upto 45 minutes to create a virtual network gateway. wait till both the Gateways created.
  
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
