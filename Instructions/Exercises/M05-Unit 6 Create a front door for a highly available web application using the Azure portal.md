@@ -28,15 +28,16 @@ This exercise requires two instances of a web application that run in different 
 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select the resource group provided by Learn.                 |
-   | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-1. |
+   | Resource group   | Select the existing resource group **az700-m05-{DeploymentID}**                |
+   | Name             | WebAppContoso-1-{DeploymentID} |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET Core 3.1 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **Central US**.                                       |
-   | Windows Plan     | Select **Create new** and enter myAppServicePlanCentralUS in the text box. |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS** in the text box. |
    | SKU and size     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+
+   **Note**: Replace Deployment ID with the value from environment details tab
 
 5. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take several minutes for the deployment to complete.
@@ -49,15 +50,16 @@ This exercise requires two instances of a web application that run in different 
 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select the resource group provided by Learn.                 |
-   | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-2. |
+   | Resource group   | Select the existing resource group **az700-m05-{DeploymentID}**                 |
+   | Name             | WebAppContoso-2-{DeploymentID} |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET Core 3.1 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US**.                                          |
-   | Windows Plan     | Select **Create new** and enter myAppServicePlanEastUS in the text box. |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanEastUS** in the text box. |
    | SKU and size     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+
+   **Note**: Replace Deployment ID with the value from environment details tab
 
 9. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take several minutes for the deployment to complete.
@@ -77,7 +79,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
    | Subscription            | Select your subscription.                    |
-   | Resource group          | Select the resource group provided by Learn. |
+   | Resource group          | Select the existing resource group **az700-m05-{DeploymentID}** |
    
 4. Select **Next: Configuration**.
 
@@ -85,14 +87,18 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
    ![Create a Front Door add Frontends/Domains](../media/add-frontends-domains.png)
 
-6. Enter a globally unique **host name**, like contoso-frontend, and then select **Add**.
+6. Enter a globally unique **host name**, like **contoso-frontend-{DeploymentID}**, and then select **Add**.
+
+   **Note**: Replace Deployment ID with the value from environment details tab
 
 7. Next, create a backend pool that contains your two web apps.  
    ‎In Create a Front Door, in **Backend** pools, select + to add a backend pool.
 
    ![Create a Front Door add a backend pool](../media/add-backends.png)
 
-8. Enter a globally unique **host name**, like BackendPool.
+8. Enter a globally unique **host name**, like **BackendPool-{DeploymentID}**.
+
+   **Note**: Replace Deployment ID with the value from environment details tab
 
 9. Under **BACKENDS**, select + **Add a backend**.
 
@@ -102,7 +108,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
     | ----------------- | ------------------------------------------------------------ |
     | Backend host type | Select **App service**.                                      |
     | Subscription      | Select your subscription.                                    |
-    | Backend host name | Select the first web app you created. In this example, the web app was **WebAppContoso-1**. |
+    | Backend host name | Select the first web app you created. In this example, the web app was **WebAppContoso-1-{Deployment ID}**. |
 
 11. Leave all other fields as default and then select **Add**.
 
@@ -112,7 +118,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
     | ----------------- | ------------------------------------------------------------ |
     | Backend host type | Select App service.                                          |
     | Subscription      | Select your subscription.                                    |
-    | Backend host name | Select the second web app you created. In this example, the web app was **WebAppContoso-2**. |
+    | Backend host name | Select the second web app you created. In this example, the web app was **WebAppContoso-2-{Deployment ID}**. |
 
 13. Leave all other fields as default and then select **Add**.
 
@@ -124,7 +130,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
     ![Create a Front Door add a routing rule](../media/add-routing-rules.png)
 
-17. In Add a rule, for **Name**, enter LocationRule. 
+17. In Add a rule, for **Name**, enter **LocationRule**. 
 
 18. Accept all the default values, then select **Add** to add the routing rule.
 
@@ -140,11 +146,11 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
 1. In the Azure Portal, navigate to your Front Door frontend. Select **Go to Resource**. Or in Search resources, services, and docs (G+/), enter **front door**, and select **Front Doors** from the results, and then select your Front Door.
 
-2. On the Front Door page, note the **Frontend host** URL. This exercise uses contoso-frontend.azurefd.net, but you may have altered it to ensure the name is unique.
+2. On the Front Door page, note the **Frontend host** URL.
 
    ![Azure portal Frontend page - Verify Frontend URL](../media/frontend-url.png)
 
-3. In a browser, go to your Frontend host URL (contoso-frontend.azurefd.net). Your request will automatically be routed to the nearest server to you from the specified servers in the backend pool.
+3. In a browser, go to your Frontend host URL. Your request will automatically be routed to the nearest server to you from the specified servers in the backend pool.
 
 4. You'll see the following information page:
 
