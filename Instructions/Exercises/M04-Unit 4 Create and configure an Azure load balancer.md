@@ -122,7 +122,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subscription          | Select your subscription    |
    | Resource group        | **IntLB-RG-Deployment ID**  |
    | Name                  | **myIntLoadBalancer**       |
-   | Region                | **(US) West US**            |
+   | Region                | **Default selected by Resource Group**            |
    | Type                  | **Internal**                |
    | SKU                   | **Standard**                |
    
@@ -130,7 +130,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 7. Click Add a frontend IP
 
-8. On the **Add frontend IP address** blade, enter the information from the table below.
+8. On the **Add frontend IP address** blade, enter the information from the table below then click on **Add**.
 
    | **Setting**     | **Value**                |
    | --------------- | ------------------------ |
@@ -176,9 +176,11 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
 
-1. Under **Settings**, click **Health probes**, then click **Add**.
+1. On the Azure portal home page, click All resources, then click on myIntLoadBalancer from the resources list.
 
-2. On the **Add health probe** page, enter the information from the table below.
+2. Under **Settings**, click **Health probes**, then click **Add**.
+
+3. On the **Add health probe** page, enter the information from the table below.
 
    | **Setting**         | **Value**         |
    | ------------------- | ----------------- |
@@ -190,7 +192,7 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Unhealthy threshold | **2**             |
 
 
-3. Click **Add**.
+4. Click **Add**.
    ![Picture 5](../media/create-healthprobe.png)
 
  
@@ -199,7 +201,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. From the **Backend pools** page of your load balancer, under **Settings**, click **Load balancing rules**, then click **Add**.
+1. On the Azure portal home page, click All resources, then click on myIntLoadBalancer from the resources list, under **Settings**, click **Load balancing rules**, then click **Add**.
 
 2. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -227,7 +229,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Create test VM
 
-1. On the Azure portal home page, click **Create a resource**, then **Compute**, then select **Virtual machine** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+1. On the Azure portal home page, click **Create a resource**, then **Compute**, then select **Virtual machine** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it). Click on **Create** then select **Virtual Machine**.
 
 2. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
@@ -238,7 +240,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subscription         | Select your subscription                     |
    | Resource group       | **IntLB-RG-Deployment ID**                                 |
    | Virtual machine name | **myTestVM**                                 |
-   | Region               | **(US) West US**                             |
+   | Region               | **Default selected by Resource Group**                             |
    | Availability options | **No infrastructure redundancy required**    |
    | Image                | **Windows Server 2019 Datacenter - Gen 1**   |
    | Size                 | **Standard_DS1_v2 - 1 vcpu, 3.5 GiB memory** |
@@ -271,7 +273,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, click **All resources**, then click on **myIntLoadBalancer** from the resources list.
 
-2. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard.
+2. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. If you can't find it click on **see more**.
 
 3. Click **Home**, then on the Azure portal home page, click **All resources**, then click on the **myTestVM** virtual machine that you just created.
 
@@ -280,6 +282,10 @@ In this section, you will create a test VM, and then test the load balancer.
 5. Click **Use Bastion**.
 
 6. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
+
+   **Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
+
+    ![reaponse](../media/popup.png)
 
 7. The **myTestVM** window will open in another browser tab.
 
