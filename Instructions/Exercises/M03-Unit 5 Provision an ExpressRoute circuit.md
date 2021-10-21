@@ -4,9 +4,6 @@ In this exercise, you will create an ExpressRoute circuit using the Azure portal
 
 ![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram.png)
 
-To watch a demonstration of how to create an ExpressRoute circuit, see [Azure ExpressRoute - How to create an ExpressRoute circuit | Azure | Channel 9 (msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15).
-
-
 In this exercise, you will:
 
 + Task 1: Create and provision an ExpressRoute circuit
@@ -21,15 +18,15 @@ In this exercise, you will:
 
     **Important:** Your ExpressRoute circuit is billed from the moment a service key is issued. Ensure that you perform this operation when the connectivity provider is ready to provision the circuit.
 
-1. On the Azure portal menu, select **+ Create a resource**. Select **Networking**, and then select **ExpressRoute circuit**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search resources, services and docs** to search for it:
-
-    ![Azure portal - create ExpressRoute circuit menu](../media/create-expressroute-circuit-menu.png)
+1. On the Azure portal menu, select **+ Create a resource**. Searach and then select **ExpressRoute circuit**.
    
 1. On the ExpressRoute circuits page, select **+Create**.
 
-1. On the **Create ExpressRoute** page, provide the **Resource Group**, **Region**, and **Name** for the circuit. Then select **Next: Configuration&gt;**.
+1. On the **Create ExpressRoute** page, select the existing resource group **az700-m03-rg01-{Deployment ID}**, leave the default **Region**, and Enter **Name** as **ExpressRoute-{DeploymentID}** for the circuit. Then select **Next: Configuration&gt;**.
 
     ![Azure portal - Create ExpressRoute basic tab](../media/image2.png)
+
+   **Note**: Deployment ID can be obtained from environment details page.
 
 1. When you are filling in the values on this page, make sure that you specify the correct SKU tier (Local, Standard, or Premium) and data metering billing model (Unlimited or Metered).
 
@@ -51,6 +48,8 @@ In this exercise, you will:
     **Important:** You cannot change the type from Unlimited to Metered.
 
 - **Allow classic operation** will allow classic virtual networks to be link to the circuit.
+
+2. Fill the sample data as shown in above image and Click on **Review + Create** then select **Create**.
 
 ## Task 2: Retrieve your Service key
  
@@ -85,9 +84,6 @@ In this exercise, you will:
 1. You can view the properties of the circuit that you are interested in by selecting it. Check the **Provider status** and ensure that it has moved to **Provisioned** before you continue.
 
     ![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/image4.png)
-
- 
-1. Watch this demonstration of how to create and provision an ExpressRoute circuit: [Azure ExpressRoute - How to create an ExpressRoute circuit | Azure | Channel 9 (msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15). 
 
 Congratulations! You have created an ExpressRoute circuit and located the Service key, which you would need to complete the provisioning of the circuit.
 

@@ -32,9 +32,11 @@ In this exercise, you will:
    | **Setting**          | **Value**                                                    |
    | -------------------- | --------------------------------                             |
    | Subscription         | the name of the Azure subscription you are using in this lab |
-   | Resource Group       | Select the existing resource group az700-m03-rg01            |
+   | Resource Group       | Select the existing resource group az700-m03-rg01-{Deployment ID}|
    | Virtual Network Name | CoreServicesVNet                                             |
    | Location             | West US                                                      |
+
+   **Note**: Deployment ID can be obtained from environment details tab
 
 1. Select **Next : IP addresses**.
 
@@ -67,7 +69,7 @@ In this exercise, you will:
    | ------------------------- | --------------------------                                                     |
    | **Project details**       |                                                                                |
    | Subscription              | the name of the Azure subscription you are using in this lab                   |
-   | Resource Group            | Automatically derived from virtual network’s resource group **az700-m03-rg01** |
+   | Resource Group            | Automatically derived from virtual network’s resource group **az700-m03-rg01-{Deployment ID}** |
    
     **Note:** After selecting the existed Virtual network, the value of resource group will be automatically derived from virtual network’s resource group name.
     
