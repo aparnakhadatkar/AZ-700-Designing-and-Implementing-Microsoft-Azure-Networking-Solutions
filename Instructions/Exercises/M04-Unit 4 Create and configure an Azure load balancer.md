@@ -36,7 +36,7 @@ In this section, you will create a virtual network and a subnet.
    | Subscription   | Select your subscription                                 |
    | Resource group | Select **Existing rg**  Name: **IntLB-RG-Deployment ID** |
    | Name           | **IntLB-VNet**                                           |
-   | Region         | **(US) West US**                                         |
+   | Region         | **Default selected by Resource Group**                                         |
 
  >Note : Deployment ID can be found in the Environment tab
 
@@ -48,13 +48,11 @@ In this section, you will create a virtual network and a subnet.
 
 ![virtual network](../media/mod4_2.png)
 
-7. Under **Subnet name**, select the word **default**.
+7. Under **Subnet name**, remove if **default** subnet is present.
 
-8. In the **Edit subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+8. Click on **Add Subnet**, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**, select **Add**.
 
 ![virtual network](../media/mod4_3.png)
-
-9. Click **Save**.
 
 10. Click **Add Subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Click **Add**.
 
@@ -88,13 +86,13 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 3. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
  
-4. Navigate to the location that is specified. Az-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M04
+4. In your lab VM Navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**.
 
 5. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
 
 6. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
->Note : Deployment ID can be found in the environment tab
+>Note : Replace Deployment ID in below command, It can be found in the environment tab
 
    ```powershell
    $RGName = "IntLB-RG-Deployment ID"
