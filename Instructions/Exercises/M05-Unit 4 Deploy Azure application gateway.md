@@ -28,8 +28,7 @@ In this exercise, you will:
 
    | **Setting**         | **Value**                                    |
    | ------------------- | -------------------------------------------- |
-   | Subscription        | Select your subscription.                    |
-   | Resource group      | Select the resource group provided by Learn. |
+   | Resource group      | Select the existing resource group **az700-m05-{DeploymentID}** |
    | Application Gateway | ContosoAppGateway                            |
    | Region              | Select **West US**                           |
    | Virtual Network     | Select **Create new**                        |
@@ -53,7 +52,7 @@ In this exercise, you will:
 
 8. On the **Frontends** tab, verify **Frontend IP address type** is set to **Public**.
 
-9. Select **Add new** for the **Public IP address** and enter AGPublicIPAddress for the public IP address name, and then select **OK**.
+9. Select **Add new** for the **Public IP address** and enter **AGPublicIPAddress** for the public IP address name, and then select **OK**.
 
 10. Select **Next: Backends**.
 
@@ -92,6 +91,7 @@ In this exercise, you will:
     | **Setting**   | **Value**      |
     | ------------- | -------------- |
     | Target type   | Backend pool   |
+    | Backend Target | BackendPool |
     | HTTP Settings | **Add new** |
 
 22. In **Add a HTTP setting**, enter or select the following information:
@@ -136,11 +136,10 @@ To do this, you'll:
    | **Setting**          | **Value**                                        |
    | -------------------- | ------------------------------------------------ |
    | **Basics** tab       |                                                  |
-   | Subscription         | Select the subscription provided by Learn.       |
-   | Resource group       | Select the Resource Group provided by Learn.     |
+   | Resource group       | Select the existing resource group **az700-m05-{DeploymentID}**     |
    | Virtual machine name | BackendVM1                                       |
-   | Image                | Select **Windows Server 2016 Datacenter - Gen1** |
-   | Size                 | Standard_D2_v3 (2 vcpus, 8 GiB memory)                                   |
+   | Image                | Select **Windows Server 2016 Datacenter - Gen2** |
+   | Size                 | Standard_D2s_v3 (2 vcpus, 8 GiB memory)                                   |
    | Username             | TestUser                                         |
    | Password             | TestPa$$w0rd                                     |
    | Public inbound ports | None                                             |
