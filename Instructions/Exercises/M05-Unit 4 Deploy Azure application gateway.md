@@ -138,11 +138,14 @@ To do this, you'll:
    | **Basics** tab       |                                                  |
    | Resource group       | Select the existing resource group **az700-m05-{DeploymentID}**     |
    | Virtual machine name | BackendVM1                                       |
+   | Region               | West US                                          |
    | Image                | Select **Windows Server 2016 Datacenter - Gen2** |
    | Size                 | Standard_D2s_v3 (2 vcpus, 8 GiB memory)                                   |
    | Username             | TestUser                                         |
    | Password             | TestPa$$w0rd                                     |
    | Public inbound ports | None                                             |
+   |**Disks**             |                                                  |
+   |OS Disk Type          | Standard SSD                                     | 
    | **Networking**       |                                                  |
    | Virtual network      | ContosoVnet                                      |
    | Subnet               | BackendSubnet (10.0.1.0/24)                      |
@@ -167,10 +170,10 @@ In this example, you install IIS on the virtual machines to verify Azure created
 
    ![Azure Portal and Azure PowerShell Install IIS on backends](../media/application-gateway-extension.png)
 
-3. Run the following command to install IIS on the virtual machine. Change the Location parameter if necessary:
+3. Run the following command to install IIS on the virtual machine. Replace Deployment ID with the value from environment details tab. Change the Location parameter if necessary:
 
 ```Azure PowerShell
-Set-AzVMExtension -ResourceGroupName ContosoResourceGroup -ExtensionName IIS -VMName BackendVM1 -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.4 -SettingString '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}' -Location WestUS
+Set-AzVMExtension -ResourceGroupName az700-m05-{DeploymentID} -ExtensionName IIS -VMName BackendVM1 -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.4 -SettingString '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}' -Location WestUS
 ```
 >> Note: Run all the command in single line.
 
