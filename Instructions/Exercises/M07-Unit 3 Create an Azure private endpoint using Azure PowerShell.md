@@ -35,8 +35,6 @@ Private Endpoints can be created for different kinds of Azure services, such as 
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
 
-If you choose to install and use PowerShell locally, this example requires the Azure PowerShell module version 5.4.1 or later. Run ```Get-Module -ListAvailable Az``` to find the installed version. If you need to upgrade, see [Install Azure PowerShell module](https://docs.microsoft.com/en-us/azure/app-service/quickstart-dotnetcore). If you're running PowerShell locally, you also need to run ```Connect-AzAccount``` to create a connection with Azure.
-
 In this exercise, you will:
 
 + Task 1: Create a virtual network and bastion host
@@ -53,7 +51,7 @@ You will create a virtual network, subnet, and bastion host.
 
 The bastion host will be used to connect securely to the virtual machine for testing the Private Endpoint.
 
-Create a virtual network and bastion host with:
+Create a virtual network and bastion host with: 
 
 - New-AzVirtualNetwork
 
@@ -61,10 +59,11 @@ Create a virtual network and bastion host with:
 
 - New-AzBastion
 
+   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.)
  
 
-  ```
-      Azure PowerShell
+  ``` Azure PowerShell
+      
       ## Create backend subnet config. ##
 
       $subnetConfig = New-AzVirtualNetworkSubnetConfig -Name myBackendSubnet -AddressPrefix 10.0.0.0/24
@@ -150,8 +149,10 @@ In this section, you'll create a virtual machine that will be used to test the P
 
 - Add-AzVMNetworkInterface
 
+   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.)
+
 ``` Azure PowerShell
-## Set credentials for server admin and password. ##
+## Set credentials for server admin and password and make a note of them you will use them in later task##
 
 $cred = Get-Credential
 
@@ -205,9 +206,7 @@ $parameters4 = @{
 
 }
 
-$vmConfig = 
-
-New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @parameters3 | Set-AzVMSourceImage @parameters4 | Add-AzVMNetworkInterface -Id $nicVM.Id
+$vmConfig = New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @parameters3 | Set-AzVMSourceImage @parameters4 | Add-AzVMNetworkInterface -Id $nicVM.Id
 
 ## Create the virtual machine ##
 
@@ -233,14 +232,13 @@ In this section, you'll create the Private Endpoint and connection using:
 
 - New-AzPrivateEndpoint
 
- 
+   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.) 
 
 ```Azure PowerShell
-## Place web app into variable. Replace <webapp-resource-group-name> with the resource group of your webapp. ##
 
-## Replace <your-webapp-name> with your webapp name ##
+## Replace <your-webapp-name> with your webapp name. Go to azure portal in new tab and click on all resources then click on web app you created in previous task and copy the name##
 
-$webapp = Get-AzWebApp -ResourceGroupName <webapp-resource-group-name> -Name <your-webapp-name>
+$webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg-<DeploymentID> -Name <your-webapp-name>
 
 ## Create Private Endpoint connection. ##
 
@@ -299,6 +297,8 @@ In this section you'll create and configure the private DNS zone using:
 - New-AzPrivateDnsZoneConfig
 
 - New-AzPrivateDnsZoneGroup
+
+   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.) 
 
 ```Azure PowerShell
 ## Place virtual network into variable. ##
