@@ -145,7 +145,7 @@ In this step you will create a virtual machine, assign a public IP address to it
    | Virtual machine name  | **MyVirtualMachine**                                         |
    | Region                | Your region                                                  |
    | Availability options  | **No infrastructure  redundancy required**                   |
-   | Image                 | **Ubuntu Server 18.04 LTS -  Gen 1**                         |
+   | Image                 | **Ubuntu Server 18.04 LTS -  Gen 2**                         |
    | Size                  | Select **See  all sizes**, then choose **B1ls** in the  list and choose **Select**  **(Standard_B1ls - 1 vcpu,  0.5 GiB memory (£3.21/month)** |
    | Authentication type   | **SSH public key**                                           |
    | Username              | **azureuser**                                                |
@@ -227,9 +227,11 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Create an account with [BreakingPoint Cloud](https://breakingpoint.cloud/)
 
-2. Set up your DDoS test as per the settings in the screenshot below, but specifying the IP address of your own **MyPublicIPAddress** resource in the **Target IP Address** box (e.g., **51.140.137.219**)
+2. Set up your DDoS test as per the settings in the screenshot below, but specifying the IP address of your own **MyPublicIPAddress** resource in the **Target IP Address** box (e.g., **51.140.137.219**). Click on start test.
 
    ![DDoS Test Setup](../media/ddos-test-setup.png)
+
+   ![DDoS Test Setup](../media/ddos-test-setup2.png)
 
 3. On the Azure portal home page, click **All resources**.
 
@@ -240,5 +242,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 6. And here you can see DDoS attack as it happened.
 
    ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
+
+   **Note**: it takes few minutes for the data to be get loaded.   
 
  
