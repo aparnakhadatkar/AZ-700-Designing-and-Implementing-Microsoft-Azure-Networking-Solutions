@@ -44,7 +44,7 @@ In this section, you will create a virtual network and a subnet.
    | Subscription   | Select your subscription                            |
    | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG-{Deployment ID}** |
    | Name           | **IntLB-VNet**                                      |
-   | Region         | **(US) West US**                                    |
+   | Region         | Default selected by Resource group                                   |
 
    **Note**: Deployment ID can be obtained from environment details tab.
 
@@ -97,14 +97,14 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subscription          | Select your subscription |
    | Resource group        | **IntLB-RG-{Deployment ID}**|
    | Name                  | **myIntLoadBalancer**    |
-   | Region                | **(US) West US**         |
+   | Region                | Default selected by Resource group         |
    | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
    | Select Next           |                          |
    | Add a frontend ipconfiguration |                 |
    | Frontend Name         | **LoadBalancerFrontEnd** |
    | Subnet                | **myBackendSubnet**      |
-   | Assignment            | **Dynamic**              |
+   | Assignment            | **Dynamic** then Click **Add**|
 
    ![Front End IP.](../media/load_balancer.png)
 
@@ -161,7 +161,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. From the **Backend pools** page of your load balancer, under **Settings**, click **Load balancing rules**, then click **Add**.
+1. From the **Health Probes** page of your load balancer, under **Settings**, click **Load balancing rules**, then click **Add**.
 
 2. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -198,10 +198,10 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
 
-4. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
+4. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:(Replace Deployment ID with its value from environment details tab)
 
    ```powershell
-   $RGName = "IntLB-RG"
+   $RGName = "IntLB-RG-{Deployment ID}"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
@@ -222,8 +222,6 @@ In this section, you will create three VMs, that will be in the same availabilit
 
    ![Show VMs added to backend pool in load balancer](../media/add-vms-backendpool.png)
 
- 
-
 ## Task 8: Install IIS on the VMs
 
 1. On the Azure portal home page, click **All resources**, then click on **az700-vm1** from the resources list.
@@ -239,7 +237,6 @@ In this section, you will create three VMs, that will be in the same availabilit
 6. If a **Networks** pane appears, click **Yes**.
 
 7. Click the **Windows Start icon** in the bottom left corner of the window, then click the **Windows PowerShell** tile.
-
 
 8. To install IIS, run the following command in PowerShell: Install-WindowsFeature -name Web-Server -IncludeManagementTools
 
@@ -266,7 +263,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subscription         | Select your subscription                     |
    | Resource group       | **IntLB-RG-{Deployment ID}**                                 |
    | Virtual machine name | **myTestVM**                                 |
-   | Region               | **(US) West US**                             |
+   | Region               | Default selected by Resource group                            |
    | Availability options | **No infrastructure redundancy required**    |
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS1_v2 - 1 vcpu, 3.5 GiB memory** |
@@ -339,7 +336,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subscription   | Select your subscription |
    | Resource group | **IntLB-RG-{Deployment ID}**             |
    | Name           | **myLAworkspace**        |
-   | Region         | **West US**              |
+   | Region         | Default selected by Resource group            |
 
 4. Click **Review + Create**, then click **Create**.
 
