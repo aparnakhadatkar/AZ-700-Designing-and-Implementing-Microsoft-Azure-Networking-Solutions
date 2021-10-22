@@ -17,7 +17,6 @@ In this exercise, you will:
 + Task 7: Route traffic to your hub
 + Task 8: Test the application rule
 + Task 9: Test the network rule
-+ Task 10: Clean up resources
 
 ## Task 1: Create two spoke virtual networks and subnets
 
@@ -31,10 +30,10 @@ In this task, you will create the two spoke virtual networks each containing a s
 6. Click **Next: IP Addresses**.
 7. In **IPv4 address space**, enter **10.0.0.0/16**. 
 8. **Delete** any other address spaces listed here, such as **10.1.0.0/16**.
-9. Under **Subnet name**, click the word **default**.
-10. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**.
-11. Change the **Subnet address range** to **10.0.1.0/24**.
-12. Click **Save**.
+9. Under **Subnet name**, remove if **default** is present then click **Add Subnet**.
+10. In the **Add subnet** dialog box, enter name **Workload-01-SN**.
+11. The **Subnet address range** to **10.0.1.0/24**.
+12. Click **Add**.
 13. Click **Review + create**.
 14. Click **Create**.
 
@@ -54,7 +53,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 2. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-3. On the **Firewall Manager** page, click **View secured virtual hubs**.
+3. On the **Firewall Manager** page, click **virtual hubs**.
 
 4. On the **Virtual hubs** page, click **Create new secured virtual hub**.
 
@@ -111,7 +110,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 4. Click **Add connection**.
 5. For **Connection name**, enter **hub-spoke-01**.
 6. For **Hubs**, select **Hub-01**.
-7. For **Resource group**, select **fw-manager-rg**.
+7. For **Resource group**, select **fw-manager-rg-{DepolymentID}**.
 8. For **Virtual network**, select **Spoke-01**.
 9. Click **Create**.
    ![Add hub and spoke connection to virtual WAN - Spoke 1](../media/connect-hub-spoke-vnet-1.png)
@@ -190,7 +189,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 1. From the Azure portal home page, click **Firewall Manager**.
    - If the Firewall Manager icon does not appear on the homepage, then click **All services**. Then in the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-2. From **Firewall Manager**, click **View Azure Firewall Policies**.
+2. From **Firewall Manager**, click **Azure Firewall Policies**.
 
 3. Click **Create Azure Firewall Policy**.
 
@@ -216,8 +215,6 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 10. On the **Rules** tab, click **Add a rule collection**.
 
- ![Firewall policy](../media/module6policy5.png)
-
 11. On the **Add a rule collection** page, in **Name**, enter **App-RC-01**.
 
 12. For **Rule collection type**, select **Application**.
@@ -230,7 +227,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 16. For the **Source type**, select **IP Address**.
 
-17. For **Source**, enter *****.
+17. For **Source**, enter *.
 
 18. For **Protocol**, enter **http,https**.
 
@@ -254,7 +251,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 27. For the **Source type**, select **IP Address**.
 
-28. For **Source**, enter *****.
+28. For **Source**, enter *.
 
 29. For **Protocol**, select **TCP**.
 
@@ -284,7 +281,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 42. For the **Source type**, select **IP Address**.
 
-43. For **Source**, enter *****.
+43. For **Source**, enter *.
 
 44. For **Protocol**, select **TCP**.
 
@@ -330,7 +327,7 @@ In this task you will ensure that network traffic gets routed through your firew
 3. Under **Settings**, click **Security configuration**.
 4. In **Internet traffic**, select **Azure Firewall**.
 5. In **Private traffic**, select **Send via Azure Firewall**.
-6. Click **Save**. 
+6. Click **Save**. If warning appears click **Ok**.
 
 ![security configuration](../media/module6security.png)
 
@@ -364,7 +361,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 9. Open Internet Explorer and click **OK** in the **Set up Internet Explorer 11** dialog box.
 
-10. Browse to **https://** **www.microsoft.com**.
+10. Browse to **https://www.microsoft.com**
 
 11. In the **Security Alert** dialog box, click **OK**.
 
@@ -374,7 +371,7 @@ In this task you will test the application rule to confirm that it works as expe
 
     ![RDP session browsing microsoft.com](../media/microsoft-home-page.png)
 
-14. Browse to **https://** **www.google.com**.
+14. Browse to **https://www.google.com**
 
 15. You should be blocked by the firewall.
 
@@ -402,17 +399,3 @@ In this task you will test the network rule to confirm that it works as expected
 
 7. Close both RDP sessions to disconnect them.
 
-
-## Task 10: Clean up resources 
-
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'NAME OF THE RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
