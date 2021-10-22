@@ -23,14 +23,14 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**
 
-6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the files -template.json and        parameters.json into the Cloud Shell home directory.
+6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the files template.json and parameters.json into the Cloud Shell home directory.
    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/upload.png)
 
 
-7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
+7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise: (Replace Deployment ID value from the environment details tab.)
 
    ```powershell
-   $RGName = "CreatePrivateEndpointQS-rg"
+   $RGName = "CreatePrivateEndpointQS-rg-{Deployment ID}"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
