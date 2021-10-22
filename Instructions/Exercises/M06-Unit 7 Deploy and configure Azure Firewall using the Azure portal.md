@@ -31,13 +31,13 @@ In this task, you will create a single virtual network with two subnets.
 
    ![Create a virtual network - Basics tab](../media/create-vnet-basics-for-azure-firewall.png)
 
-5. Click **Next: IP Addresses**.
+5. Click **Next: IP Addresses**. In the **IPv4 address space** section update the network to **10.0.0.0/16**
 
-6. Under **Subnet name**, click the word **default**.
+6. Under **Subnet name**, remove the **default** subnet if it is already present.
 
-7. In the **Edit subnet** dialog box, change the name to **AzureFirewallSubnet**.
+7. Click on **Add subnet** dialog box, name it **AzureFirewallSubnet**.
 
-8. Change the **Subnet address range** to **10.0.1.0/26**.
+8. In the **Subnet address range** enter **10.0.1.0/26**.
 
 9. Click **Save**.
 
@@ -153,8 +153,6 @@ In this task, you will deploy the firewall into the virtual network with a firew
 9. In the menu on the left, under **Settings**, click **Public IP configuration**.
 
 10. Take a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**).
-
- 
 
 ## Task 4: Create a default route
 
@@ -295,7 +293,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | **Rules Section**     |                                                              |
    | Name                  | **rdp-nat**                                                  |
    | Source type           | **IP Address**                                               |
-   | Source                | *****                                                        |
+   | Source                | *                                                        |
    | Protocol              | **TCP**                                                      |
    | Destination Ports     | **3389**                                                     |
    | Destination Type      | **IP Address**                                               |
@@ -316,7 +314,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. On the Azure portal home page, select **Resource groups**.
 
-2. In the list of resource groups, click your resource group, **Test-FW-RG**.
+2. In the list of resource groups, click your resource group, **Test-FW-RG-{DeploymentID}**.
 
 3. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work350**).
 
@@ -340,35 +338,29 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
-1. Open **Remote Desktop Connection** on your PC.
+1. Open **Remote Desktop Connection** on your Lab VM.
 
 2. In the **Computer** box, enter the firewall's public IP address (e.g., **20.90.136.51**) followed by **:3389** (e.g., **20.90.136.51:3389**).
 
-3. In the **Username** box, enter **MyAdmin**.
+3. In the **Username** box, enter **MyAdmin** and in the password enter **TestPa$$w0rd!**
 
 4. Click **Connect**.
 
-   ![RDP connection to firewall's public IP address](../media/remote-desktop-connection-1.png)
+5. Click **Yes** on the certificate message.
 
-5. In the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, by using the password, **TestPa$$w0rd!**.
+6. Open Internet Explorer and browse to **https://www.google.com**.
 
-6. Click **OK**.
+7. In the **Security Alert** dialog box, click **OK**.
 
-7. Click **Yes** on the certificate message.
+8. Click **Close** on the Internet Explorer security alerts that may pop-up.
 
-8. Open Internet Explorer and browse to **https://www.google.com**.
-
-9. In the **Security Alert** dialog box, click **OK**.
-
-10. Click **Close** on the Internet Explorer security alerts that may pop-up.
-
-11. You should see the Google home page.
+9. You should see the Google home page.
 
     ![RDP session on Srv-work server - browser on google.com](../media/remote-desktop-connection-2.png)
 
-12. Browse to **https://www.microsoft.com**.
+10. Browse to **https://www.microsoft.com**.
 
-13. You should be blocked by the firewall.
+11. You should be blocked by the firewall.
 
     ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/remote-desktop-connection-3.png)
 
