@@ -46,7 +46,7 @@ In this exercise, you will:
    | Subnet Address range | 10.0.0.0/24 |
 
 6. Select the **Security** tab and enter the following values:
-   ![Graphical user interface, text, application, email Description automatically generated](../media/ create-virtual-network-security.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-security.png)
 
    | **Setting**     | **Value** |
    | --------------- | --------- |
@@ -213,7 +213,7 @@ The steps necessary to restrict network access to resources created through Azur
 ## Task 7: Create a file share in the storage account
 
 1. After the storage account is created, enter the name of the storage account in the **Search resources, services, and docs** box, at the top of the portal. When the name of your storage account appears in the search results, select it.
-2. Select **File shares**, as shown in the following picture: 
+2. Select **File shares** under **Data Storage**, as shown in the following picture: 
    ![Graphical user interface, application Description automatically generated](../media/fileshare.png)
 3. Select **+ File share**.
 4. Enter **market** under **Name**, and then select **Create**. Note down file share name in a notepad, you will needed it in next task of this lab.
