@@ -18,7 +18,7 @@ In this exercise, you will:
 
     **Important:** Your ExpressRoute circuit is billed from the moment a service key is issued. Ensure that you perform this operation when the connectivity provider is ready to provision the circuit.
 
-1. On the Azure portal menu, select **+ Create a resource**. Searach and then select **ExpressRoute circuit**.
+1. On Azure Portal page, in Search resources, services and docs,  Searach and then select **ExpressRoute circuit**.
    
 1. On the ExpressRoute circuits page, select **+Create**.
 
