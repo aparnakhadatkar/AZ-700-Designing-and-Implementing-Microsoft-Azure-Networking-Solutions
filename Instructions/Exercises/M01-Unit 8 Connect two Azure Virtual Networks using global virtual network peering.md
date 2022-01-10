@@ -18,7 +18,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 ### Create ManufacturingVM
 
 1. On the Azure home page, select Virtual Machines.
-2. In Virtual Machines, select **+ Add &gt; + Start with a preset configuration**.
+2. In Virtual Machines, select **+ Add/Create &gt; + Start with a preset configuration**.
    ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
 
 3. In Choose recommended defaults that match your workload, under **Select a workload environment**, select **Dev/Test**.
