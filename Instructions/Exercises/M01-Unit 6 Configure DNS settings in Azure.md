@@ -99,7 +99,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure home page, select **Virtual Machines**.
 
-2. In Virtual Machines, select **+ Add &gt; + Start with a preset configuration**.
+2. In Virtual Machines, select **+ Add/Create &gt; + Start with a preset configuration**.
 
 ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
 
@@ -145,7 +145,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure home page, select **Virtual Machines**.
 
-2. In Virtual Machines, select **+ Add &gt; + Start with a preset configuration**.
+2. In Virtual Machines, select **+ Add/Create &gt; + Start with a preset configuration**.
 
 ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
 
