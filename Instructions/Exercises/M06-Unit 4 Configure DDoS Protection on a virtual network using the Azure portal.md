@@ -145,7 +145,7 @@ In this step you will create a virtual machine, assign a public IP address to it
    | Virtual machine name  | **MyVirtualMachine**                                         |
    | Region                | Your region                                                  |
    | Availability options  | **No infrastructure  redundancy required**                   |
-   | Image                 | **Ubuntu Server 18.04 LTS -  Gen 2**                         |
+   | Image                 | **Ubuntu Server 18.04 LTS -  Gen 1**                         |
    | Size                  | Select **See  all sizes**, then choose **B1ls** in the  list and choose **Select**  **(Standard_B1ls - 1 vcpu,  0.5 GiB memory (£3.21/month)** |
    | Authentication type   | **SSH public key**                                           |
    | Username              | **azureuser**                                                |
