@@ -1,4 +1,4 @@
-# M08-Unit 3 Secure your virtual hub using Azure Firewall Manager
+#  M08-Unit 3 Monitor a load balancer resource using Azure Monitor
 
 In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. Then you will create a Log Analytics workspace, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. Finally, you will configure the load balancer's diagnostic settings to send metrics to the Log Analytics workspace you created. 
 
@@ -52,13 +52,13 @@ In this section, you will create a virtual network and a subnet.
 
 6. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
 
-7. Under **Subnet name**, select the word **default**, if **default** is not showing then select **Add Subnet**.
+7. Above **Subnet name**, select **+ Add subnet**.
 
 8. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
    ![Add subnet](../media/virtual_network_1.png)
 
-9. Click **Save**.
+9. Click **Add**.
 
 10. Click **Next : Security**.
 
