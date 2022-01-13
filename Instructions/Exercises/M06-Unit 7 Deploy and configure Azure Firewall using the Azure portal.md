@@ -76,8 +76,8 @@ In this task, you will create the workload virtual machine and place it in the W
    | Virtual machine name | **Srv-Work**                                                 |
    | Region               | Your region                                                  |
    | Availability options | **No infrastructure redundancy required**                    |
-   | Image                | **Windows Server 2016 Datacenter - Gen 1**                   |
-   | Size                 | Select **See all sizes**, then choose **B1s** in the list and choose **Select** <br /><br />**(Standard_B1s - 1 vcpu, 1 GiB memory (£8.60/month)** |
+   | Image                | **Windows Server 2022 Datacenter- Gen1**                   |
+   | Size                 | Select **Standard_D2s_v3** - 2vcpus, 8GiB memory**, 
    | Username             | **MyAdmin**                                                  |
    | Password             | **TestPa$$w0rd!**                                            |
    | Confirm password     | **TestPa$$w0rd!**                                            |
