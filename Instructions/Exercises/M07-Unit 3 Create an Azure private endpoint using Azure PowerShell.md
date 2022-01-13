@@ -385,7 +385,7 @@ In this section, you'll use the virtual machine you created in the previous step
 
 - Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
-  ```| Azure PowerShell |
+  ```
   Server: UnKnown
   
   Address: 168.63.129.16
@@ -396,7 +396,8 @@ In this section, you'll use the virtual machine you created in the previous step
   
   Address: 10.0.0.5
   
-  Aliases: mywebapp8675.azurewebsites.net  
+  Aliases: mywebapp8675.azurewebsites.net 
+  ```  
 
 
 A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
