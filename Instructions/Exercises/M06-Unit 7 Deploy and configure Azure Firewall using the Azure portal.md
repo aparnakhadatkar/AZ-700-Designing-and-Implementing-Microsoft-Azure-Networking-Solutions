@@ -39,7 +39,7 @@ In this task, you will create a single virtual network with two subnets.
 
 8. In the **Subnet address range** enter **10.0.1.0/26**.
 
-9. Click **Save**.
+9. Click **Add**.
 
    ![Create a virtual network - edit subnet](../media/edit-default-subnet-for-firewall.png)
 
@@ -76,7 +76,7 @@ In this task, you will create the workload virtual machine and place it in the W
    | Virtual machine name | **Srv-Work**                                                 |
    | Region               | Your region                                                  |
    | Availability options | **No infrastructure redundancy required**                    |
-   | Image                | **Windows Server 2022 Datacenter- Gen1**                   |
+   | Image                | **Windows Server 2022 Datacenter- Gen2**                   |
    | Size                 | Select **Standard_D2s_v3** - 2vcpus, 8GiB memory**, 
    | Username             | **MyAdmin**                                                  |
    | Password             | **TestPa$$w0rd!**                                            |
