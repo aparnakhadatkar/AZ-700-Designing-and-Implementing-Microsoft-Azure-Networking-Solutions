@@ -383,7 +383,7 @@ In this section, you'll use the virtual machine you created in the previous step
 
 - Open Windows PowerShell on the server after you connect.
 
-- Enter nslookup <your-webapp-name>.azurewebsites.net  Replace <your-webapp-name> with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
+- Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
   ```| Azure PowerShell |
   Server: UnKnown
