@@ -158,7 +158,7 @@ $cred = Get-Credential
 
 ## Command to get virtual network configuration. ##
 
-$vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg-<DeploymentID>
+$vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg
 
 ## Command to create network interface for VM ##
 
@@ -238,7 +238,7 @@ In this section, you'll create the Private Endpoint and connection using:
 
 ## Replace <your-webapp-name> with your webapp name. Go to azure portal in new tab and click on all resources then click on web app you created in previous task and copy the name##
 
-$webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg-<DeploymentID> -Name <your-webapp-name>
+$webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg -Name <your-webapp-name>
 
 ## Create Private Endpoint connection. ##
 
@@ -298,7 +298,7 @@ In this section you'll create and configure the private DNS zone using:
 
 - New-AzPrivateDnsZoneGroup
 
-   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.) 
+   Run the below commands in power shell  
 
 ```Azure PowerShell
 ## Place virtual network into variable. ##
