@@ -30,7 +30,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise: (Replace Deployment ID value from the environment details tab.)
 
    ```powershell
-   $RGName = "CreatePrivateEndpointQS-rg-{Deployment ID}"
+   $RGName = "CreatePrivateEndpointQS-rg"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
@@ -78,7 +78,7 @@ Create a virtual network and bastion host with:
 
       Name = 'MyVNet'
 
-      ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+      ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
       Location = 'eastus'
 
@@ -96,7 +96,7 @@ Create a virtual network and bastion host with:
 
       Name = 'myBastionIP'
 
-      ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+      ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
       Location = 'eastus'
 
@@ -112,7 +112,7 @@ Create a virtual network and bastion host with:
 
       $parameters3 = @{
 
-      ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+      ResourceGroupName = 'CreatePrivateEndpointQS'
 
       Name = 'myBastion'
 
@@ -166,7 +166,7 @@ $parameters1 = @{
 
  Name = 'myNicVM'
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
  Location = 'eastus'
 
@@ -210,7 +210,7 @@ $vmConfig = New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @para
 
 ## Create the virtual machine ##
 
-New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg-<DeploymentID>' -Location 'eastus' -VM $vmConfig 
+New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM $vmConfig 
 
 
 ```
@@ -256,7 +256,7 @@ $privateEndpointConnection = New-AzPrivateLinkServiceConnection @parameters1
 
 ## Place virtual network into variable. ##
 
-$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg-<DeploymentID>' -Name 'myVNet'
+$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
 
 ## Disable private endpoint network policy ##
 
@@ -268,7 +268,7 @@ $vnet | Set-AzVirtualNetwork
 
 $parameters2 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
  Name = 'myPrivateEndpoint'
 
@@ -303,13 +303,13 @@ In this section you'll create and configure the private DNS zone using:
 ```Azure PowerShell
 ## Place virtual network into variable. ##
 
-$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg-<DeploymentID>' -Name 'myVNet'
+$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
 
 ## Create private dns zone. ##
 
 $parameters1 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
  Name = 'privatelink.azurewebsites.net'
 
@@ -321,7 +321,7 @@ $zone = New-AzPrivateDnsZone @parameters1
 
 $parameters2 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
  ZoneName = 'privatelink.azurewebsites.net'
 
@@ -349,7 +349,7 @@ $config = New-AzPrivateDnsZoneConfig @parameters3
 
 $parameters4 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
  PrivateEndpointName = 'myPrivateEndpoint'
 
@@ -371,7 +371,7 @@ In this section, you'll use the virtual machine you created in the previous step
 
 - Select **Resource groups** in the left-hand navigation pane.
 
-- Select **CreatePrivateEndpointQS-rg-DeploymentID**.
+- Select **CreatePrivateEndpointQS-rg**.
 
 - Select **myVM**.
 
