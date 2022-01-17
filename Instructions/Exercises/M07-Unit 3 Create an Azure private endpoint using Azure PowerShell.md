@@ -381,6 +381,10 @@ In this section, you'll use the virtual machine you created in the previous step
 
 - Enter the username and password that you entered during the virtual machine creation.
 
+**Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
+
+![reaponse](../media/popup.png)
+
 - Open Windows PowerShell on the server after you connect.
 
 - Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
