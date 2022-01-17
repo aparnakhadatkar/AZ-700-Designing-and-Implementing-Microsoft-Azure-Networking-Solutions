@@ -32,7 +32,7 @@ In this exercise, you will:
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
-   | Resource group | Select CreatePrivateEndpointQS-rg-{DeploymentID} |
+   | Resource group | Select CreatePrivateEndpointQS-rg |
    | Name           | CoreServicesVNet                              |
    | Location       | Select **East US**                            |
 
@@ -95,7 +95,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select CreatePrivateEndpointQS-rg-{DeploymentID}             |
+   | Resource group | Select CreatePrivateEndpointQS-rg             |
    | Name           | ContosoPrivateNSG                                            |
    | Location       | Select **East US**                                           |
 
@@ -202,7 +202,7 @@ The steps necessary to restrict network access to resources created through Azur
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select CreatePrivateEndpointQS-rg-{DeploymentID}             |
+   | Resource group | Select CreatePrivateEndpointQS-rg             |
    | Name           | Enter contosostoragewest{DeploymentID}                       |
    | Performance    | Standard (general purpose v2)                      |
    | Location       | Select East US                                               |
@@ -258,7 +258,7 @@ To test network access to a storage account, deploy a VM to each subnet.
    | --------------------- | ------------------------------------------------------------ |
    | Project Details       |                                                              |
    | Subscription          | Select your subscription.                                    |
-   | Resource group        | Select CreatePrivateEndpointQS-rg-{DeploymentID} |
+   | Resource group        | Select CreatePrivateEndpointQS-rg |
    | Instance Details      |                                                              |
    | Virtual machine name  | ContosoWestPublic                                            |
    | Region                | (US)East US                                                 |
