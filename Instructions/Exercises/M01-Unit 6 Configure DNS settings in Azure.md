@@ -1,9 +1,3 @@
----
-Exercise:
-    title: 'M01-Unit 6 Configure DNS settings in Azure'
-    module: 'Module - Introduction to Azure Virtual Networks'
----
-
 # M01 - Unit 6 Configure DNS settings in azure
 
 ## Exercise scenario 
@@ -30,7 +24,7 @@ In this exercise, you will:
 
 | **Tab**         | **Option**                             | **Value**            |
 | --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup |
+| Basics          | Resource group                         | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/> |
 |                 | Name                                   | Contoso.com          |
 | Tags            | No changes required                    |                      |
 | Review + create | Review your settings and select Create |                      |
@@ -54,7 +48,7 @@ In this exercise, you will:
 | ----------------------------------- | --------------------------------------- |
 | Link name                           | CoreServicesVnetLink                    |
 | Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
+| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                                |
 | Review your settings and select OK. |                                         |
 
@@ -63,13 +57,13 @@ In this exercise, you will:
 
 5. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
 
-6. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
+6. Repeat step 2, for the ManufacturingVnet, using the information in the following table: 
 
 | **Option**                          | **Value**                                |
 | ----------------------------------- | ---------------------------------------- |
 | Link name                           | ManufacturingVnetLink                    |
 | Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup) |
+| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                                 |
 | Review your settings and select OK. |                                          |
 
@@ -78,13 +72,13 @@ In this exercise, you will:
 
 8. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
 
-9. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
+9. Repeat step 2, for the ResearchVnet, using the information in the following table: 
 
 | **Option**                          | **Value**                           |
 | ----------------------------------- | ----------------------------------- |
 | Link name                           | ResearchVnetLink                    |
 | Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup) |
+| Virtual Network                     | ResearchVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                            |
 | Review your settings and select OK. |                                     |
 
@@ -103,7 +97,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure home page, select **Virtual Machines**.
 
-2. In Virtual Machines, select **+ Add &gt; + Start with a preset configuration**.
+2. In Virtual Machines, select **+ Create; + Start with a preset configuration**.
 
 ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
 
