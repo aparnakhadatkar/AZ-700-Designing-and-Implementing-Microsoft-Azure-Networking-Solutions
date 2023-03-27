@@ -32,9 +32,9 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                  |
    | -------------- | ------------------------------------------ |
    | Subscription   | Select your subscription                   |
-   | Resource group | Select **Create  new**  Name: **IntLB-RG<inject key="DeploymentID" enableCopy="false"/>** |
+   | Resource group | Select **IntLB-RG<inject key="DeploymentID" enableCopy="false"/>** |
    | Name           | **IntLB-VNet**                             |
-   | Region         | **(US) East US**                           |
+   | Region         | **default**                                |
 
 
 5. Click **Next : Security**.
@@ -103,7 +103,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subscription          | Select your subscription |
    | Resource group        | **IntLB-RG**             |
    | Name                  | **myIntLoadBalancer**    |
-   | Region                | **(US) West US**         |
+   | Region                | **(US) East US**         |
    | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
 
@@ -145,7 +145,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 4. Under **Virtual machines**, click **Add**.
 
-5. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then click **Add**.
+5. Select the checkboxes for all 3 VMs (**az700-vm1,az700-vm2** and **az700-vm3**), then click **Add**.
 
 6. Click **Add**.
    ![Picture 7](../media/add-vms-backendpool.png)
@@ -220,12 +220,12 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
    | Subscription         | Select your subscription                     |
-   | Resource group       | **IntLB-RG**                                 |
+   | Resource group       | **IntLB-RG<inject key="DeploymentID" enableCopy="false"/>**                                 |
    | Virtual machine name | **myTestVM**                                 |
-   | Region               | **(US) West US**                             |
+   | Region               | **default**                             |
    | Availability options | **No infrastructure redundancy required**    |
-   | Image                | **Windows Server 2019 Datacenter - Gen 1**   |
-   | Size                 | **Standard_DS1_v2 - 1 vcpu, 3.5 GiB memory** |
+   | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
+   | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
    | Password             | **TestPa$$w0rd!**                            |
    | Confirm password     | **TestPa$$w0rd!**                            |
