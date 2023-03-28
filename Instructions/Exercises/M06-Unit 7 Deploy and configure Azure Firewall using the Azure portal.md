@@ -26,7 +26,7 @@ In this task, you will create a new resource group.
 
 1. Select **Create**. 
 
-1. On the **Basics** tab, in **Resource group**, enter **Test-FW-RG**.
+1. On the **Basics** tab, in **Resource group**, enter **Test-FW-RG-DeploymentID**.
 
 1. On the **Region**, select **(Europe)UK South** region from the list.
 
