@@ -349,7 +349,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, click **All resources**, then in the resources list, select **myIntLoadBalancer**.
 
-   ![All resources list in the Azure portal](../media/network-insights-functional-dependency-view-1.png)
+   ![All resources list in the Azure portal](../media/network-insights-functional-dependency-view-001.png)
 
 2. Under **Monitoring**, select **Insights**.
 
@@ -366,38 +366,38 @@ In this section, you will create a test VM, and then test the load balancer.
 7. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
 8. Hover over the **az700-vm3** virtual machine component. Note that you can open the resource blade for the virtual machine, and you can open the **VM Insights** page, or you can run the **Connection troubleshoot** tool from Network Watcher - all from this part of the topology diagram.
-   ![Azure Monitor Network Insights functional dependency view](../media/network-insights-functional-dependency-view-2.png)
+   ![Azure Monitor Network Insights functional dependency view](../media/network-insights-functional-dependency-view1.png)
 
 9. To download a .SVG file copy of the topology diagram, click **Download topology**, and save the file in your **Downloads** folder. 
 
 10. In the top right corner, click **View metrics** to reopen the metrics pane on the right-hand side of the screen.
-    ![Azure Monitor Network Insights functional dependency view - View metrics button highlighted](../media/network-insights-functional-dependency-view-3.png)
+    ![Azure Monitor Network Insights functional dependency view - View metrics button highlighted](../media/viewmetrixs.png)
 
 11. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts.
 
-    ![Azure Monitor Network Insights - Basic metrics view](../media/network-insights-basicmetrics-view.png)
+    ![Azure Monitor Network Insights - Basic metrics view](../media/network-insights-basicmetrics-view-matrix-1.png)
 
  
 
 ## Task 12: View detailed metrics
 
 1. To view more comprehensive metrics for this network resource, click **View detailed metrics**.
-   ![Azure Monitor Network Insights - View detailed metrics button highlighted](../media/network-insights-detailedmetrics-1.png)
+   ![Azure Monitor Network Insights - View detailed metrics button highlighted](../media/detailedmetrix.png)
 
 2. This opens a large full **Metrics** page in the Azure Network Insights platform. The first tab you land on is the **Overview** tab, which shows the availability status of the load balancer and overall Data Throughput and Frontend and Backend Availability for each of the Frontend IPs attached to your Load Balancer. These metrics indicate whether the Frontend IP is responsive and the compute instances in your Backend Pool are individually responsive to inbound connections.
-   ![Azure Monitor Network Insights - Detailed metrics view - Overview tab](../media/network-insights-detailedmetrics-2.png)
+   ![Azure Monitor Network Insights - Detailed metrics view - Overview tab](../media/overview.png)
 
 3. Click the **Frontend &amp; Backend Availability** tab and scroll down the page to see the Health Probe Status charts. If you see **values that are lower than 100** for these items, it indicates an outage of some kind on those resources.
-   ![Azure Monitor Network Insights - Detailed metrics view - Health probe status charts highlighted](../media/network-insights-detailedmetrics-5.png)
+   ![Azure Monitor Network Insights - Detailed metrics view - Health probe status charts highlighted](../media/network-insights-detailedmetrics-1-1.png)
 
 4. Click the **Data Throughput** tab and scroll down the page to see the other data throughput charts.
 
 5. Hover over some of the data points in the charts, and you will see that the values change to show the exact value at that point in time.
-   ![Azure Monitor Network Insights - Detailed metrics view - Data Throughput tab](../media/network-insights-detailedmetrics-3.png)
+   ![Azure Monitor Network Insights - Detailed metrics view - Data Throughput tab](../media/network-insights-detailedmetrics-1-01.png)
 
 6. Click the **Flow Distribution** tab and scroll down the page to see the charts under the **VM Flow Creation and Network Traffic** section. 
 
-   ![Azure Monitor Network Insights - Detailed metrics view - VM Flow Creation and Network Traffic charts](../media/network-insights-detailedmetrics-4.png)
+   ![Azure Monitor Network Insights - Detailed metrics view - VM Flow Creation and Network Traffic charts](../media/network-insights-detailedmetrics-1-02.png)
 
  
 
@@ -411,13 +411,13 @@ In this section, you will create a test VM, and then test the load balancer.
 
 4. On the **Service Health&gt;Resource health** page, in the **Resource type** drop-down list, scroll down the list and select **Load balancer**.
 
-   ![Access Service Health>Resource Health for load balancer resource](../media/resource-health-1.png)
+   ![Access Service Health>Resource Health for load balancer resource](../media/resource-health-1-1.png)
 
 5. Then select the name of your load balancer from the list.
 
 6. The **Resource health** page will identify any major availability issues with your load balancer resource. If there are any events under the **Health History** section, you can expand the health event to see more detail about the event. You can even save the detail about the event as a PDF file for later review and for reporting.
 
-   ![Service Health>Resource health view](../media/resource-health-2.png)
+   ![Service Health>Resource health view](../media/resource-health-1-01.png)
 
  
 
@@ -429,7 +429,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 3. Under **Monitoring**, select **Diagnostic settings**, then click **Add diagnostic setting**.
 
-   ![Diagnostic settings>Add diagnostic setting button highlighted](../media/diagnostic-settings-1.png)
+   ![Diagnostic settings>Add diagnostic setting button highlighted](../media/az700diagnostic-settings1-1.png)
 
 4. On the **Diagnostic setting** page, in the name box, type **myLBDiagnostics**.
 
@@ -439,6 +439,6 @@ In this section, you will create a test VM, and then test the load balancer.
 
 7. Click **Save**.
 
-   ![Diagnostic setting page for load balancer](../media/diagnostic-settings-2.png)
+   ![Diagnostic setting page for load balancer](../media/az700diagnostic-settings-1-01.png)
 
 
