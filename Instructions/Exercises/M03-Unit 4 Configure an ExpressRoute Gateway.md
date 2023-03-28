@@ -29,18 +29,20 @@ In this exercise, you will:
 
 1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
-   | **Setting**          | **Value**                                                    |
-   | -------------------- | --------------------------------                             |
-   | Subscription         | the name of the Azure subscription you are using in this lab |
+   | **Setting**          | **Value**                                                                                        |
+   | -------------------- | ------------------------------------------------------------------------------------------------ |
+   | Subscription         | the name of the Azure subscription you are using in this lab                                     |
    | Resource Group       | Select the existing resource group az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>|
-   | Virtual Network Name | CoreServicesVNet                                             |
-   | Location             | West US                                                      |
+   | Virtual Network Name | CoreServicesVNet                                                                                 |
+   | Location             | West US                                                                                          |
 
    **Note**: Deployment ID can be obtained from environment details tab
 
 1. Select **Next : IP addresses**.
 
 1. On the **IP Addresses** tab, click on **Add an IP address space**.
+
+   ![Azure portal - add ip address space](../media/ipaddspace1.png)
 
 1. On **Add an IP address space**, use the information in the following table to create the IPv4 address space:
    
