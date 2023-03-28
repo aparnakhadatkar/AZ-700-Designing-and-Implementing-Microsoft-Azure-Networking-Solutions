@@ -128,7 +128,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
 
-4. Click **Add**.
+4. Click **Save**.
 
    ![Show backend pool created in load balancer](../media/create-backendpool.png)
 
@@ -151,7 +151,7 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Interval            | **15**            |
    | Unhealthy threshold | **2**             |
 
-3. Click **Add**.
+3. Click **Save**.
 
    ![Show health probe created in load balancer](../media/create-healthprobe.png)
 
@@ -179,7 +179,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Idle timeout (minutes) | **15**                   |
    | Floating IP            | **Disabled**             |
 
-3. Click **Add**.
+3. Click **Save**.
 
    ![Show load balancing rule created in load balancer](../media/create-loadbalancerrule.png)
 
@@ -207,7 +207,7 @@ In this section, you will create three VMs, that will be in the same availabilit
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
-
+   > **Note:** This will take several minutes to deploy. 
 ## Task 7: Add VMs to the backend pool
 
 1. On the Azure portal home page, click **All resources**, then click on **myIntLoadBalancer** from the resources list.
