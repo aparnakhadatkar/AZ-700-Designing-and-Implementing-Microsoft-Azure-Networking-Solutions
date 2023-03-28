@@ -22,7 +22,7 @@ In this exercise, you will:
    
 1. On the ExpressRoute circuits page, select **+Create**.
 
-1. On the **Create ExpressRoute** page, select the existing resource group **az700-m03-rg01-{Deployment ID}**, leave the default **Region**, and Enter **Name** as **ExpressRoute-{DeploymentID}** for the circuit. Then select **Next: Configuration&gt;**.
+1. On the **Create ExpressRoute** page, select the existing resource group **az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>**, leave the default **Region**, and Enter **Name** as **TestERCircuit-<inject key="DeploymentID" enableCopy="false"/>** for the circuit. Then select **Next: Configuration&gt;**.
 
     ![Azure portal - Create ExpressRoute basic tab](../media/image2.png)
 
