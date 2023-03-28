@@ -28,7 +28,7 @@ In this exercise, you will:
 
    | **Setting**         | **Value**                                    |
    | ------------------- | -------------------------------------------- |
-   | Resource group      | Select the existing resource group **az700-m05--<inject key="DeploymentID" enableCopy="false"/> |
+   | Resource group      | Select the existing resource group az700-m05-<inject key="DeploymentID" enableCopy="false"/> |
    | Application Gateway | ContosoAppGateway                            |
    | Region              | Select **West US**                           |
    | Virtual Network     | Select **Create new**                        |
