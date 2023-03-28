@@ -35,8 +35,6 @@ In this section, you will create a virtual network and a subnet.
 
 3. Click **Create**.
 
-   ![Create virtual network](../media/create-virtual-network-1.png)
-
 4. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                           |
@@ -87,8 +85,6 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 3. Scroll down to the bottom of the page and select **Load Balancer** (the one that says 'Microsoft' and 'Azure Service' under the name).
 
 4. Click **Create**.
-
-   ![Create Load Balancer](../media/create-load-balancer-4.png)
 
 5. On the **Basics** tab, use the information in the table below to create the load balancer.
 
