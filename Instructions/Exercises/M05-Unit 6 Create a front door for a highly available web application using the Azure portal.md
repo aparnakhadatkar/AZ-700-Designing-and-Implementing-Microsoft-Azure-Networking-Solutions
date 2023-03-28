@@ -28,10 +28,10 @@ This exercise requires two instances of a web application that run in different 
 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Resource group   | Select the existing resource group **az700-m05-{DeploymentID}**                |
+   | Resource group   | Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/>* |
    | Name             | WebAppContoso-1-{DeploymentID} |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET Core 3.1 (LTS)**.                              |
+   | Runtime stack    | Select **.NET 6 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **Central US**.                                       |
    | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS** in the text box. |
@@ -50,10 +50,10 @@ This exercise requires two instances of a web application that run in different 
 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Resource group   | Select the existing resource group **az700-m05-{DeploymentID}**                 |
+   | Resource group   | Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/>** |
    | Name             | WebAppContoso-2-{DeploymentID} |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET Core 3.1 (LTS)**.                              |
+   | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US**.                                          |
    | Windows Plan     | Select **Create new** and enter **myAppServicePlanEastUS** in the text box. |
@@ -79,7 +79,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
    | Subscription            | Select your subscription.                    |
-   | Resource group          | Select the existing resource group **az700-m05-{DeploymentID}** |
+   | Resource group          | Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/>*** |
    
 4. Select **Next: Configuration**.
 
