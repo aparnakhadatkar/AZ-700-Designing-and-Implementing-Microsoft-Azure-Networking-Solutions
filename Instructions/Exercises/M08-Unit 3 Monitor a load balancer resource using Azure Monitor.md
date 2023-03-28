@@ -42,7 +42,7 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
    | Subscription   | Select your subscription                            |
-   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG-{Deployment ID}** |
+   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG--<inject key="DeploymentID" enableCopy="false"/>** |
    | Name           | **IntLB-VNet**                                      |
    | Region         | Default selected by Resource group                                   |
 
@@ -95,11 +95,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | **Setting**           | **Value**                |
    | --------------------- | ------------------------ |
    | Subscription          | Select your subscription |
-   | Resource group        | **IntLB-RG-{Deployment ID}**|
+   | Resource group        | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**|
    | Name                  | **myIntLoadBalancer**    |
    | Region                | Default selected by Resource group         |
-   | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
+   | Type                  | **Internal**             |
    | Select Next           |                          |
    | Add a frontend ipconfiguration |                 |
    | Frontend Name         | **LoadBalancerFrontEnd** |
@@ -149,13 +149,10 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Port                | **80**            |
    | Path                | **/**             |
    | Interval            | **15**            |
-   | Unhealthy threshold | **2**             |
-
+  
 3. Click **Save**.
 
    ![Show health probe created in load balancer](../media/create-healthprobe.png)
-
-
 
 ## Task 5: Create a load balancer rule
 
@@ -177,7 +174,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Health probe           | **myHealthProbe**        |
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
-   | Floating IP            | **Disabled**             |
+   | Enable Floating IP     | **Disabled**             |
 
 3. Click **Save**.
 
@@ -265,7 +262,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
    | Subscription         | Select your subscription                     |
-   | Resource group       | **IntLB-RG-{Deployment ID}**                                 |
+   | Resource group       | **IntLB-RG--<inject key="DeploymentID" enableCopy="false"/>** |
    | Virtual machine name | **myTestVM**                                 |
    | Region               | Default selected by Resource group                            |
    | Availability options | **No infrastructure redundancy required**    |
@@ -286,7 +283,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Public IP                                                    | Change to **None**            |
    | NIC network security group                                   | **Advanced**                  |
    | Configure network security group                             | Select the existing **myNSG** |
-   | Place this virtual machine behind an existing load balancing solution? | **Off** (unchecked)           |
+   | Place this virtual machine behind an existing load balancing solution? | **None** (unchecked) |
 
 5. Click **Review + create**.
 
@@ -338,9 +335,9 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**    | **Value**                |
    | -------------- | ------------------------ |
    | Subscription   | Select your subscription |
-   | Resource group | **IntLB-RG-{Deployment ID}**             |
+   | Resource group | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**|
    | Name           | **myLAworkspace**        |
-   | Region         | Default selected by Resource group            |
+   | Region         | Default selected by Resource group|
 
 4. Click **Review + Create**, then click **Create**.
 
@@ -426,7 +423,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ## Task 14: Configure diagnostic settings
 
-1. On the Azure portal home page, click **Resource groups**, then select the **IntLB-RG-{Deployment ID}** resource group from the list.
+1. On the Azure portal home page, click **Resource groups**, then select the **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** resource group from the list.
 
 2. On the **IntLB-RG** page, click the name of the **myIntLoadBalancer** load balancer resource in the list of resources.
 
@@ -438,7 +435,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 5. Select the **AllMetrics** checkbox, then select the **Send to Log Analytics workspace** checkbox.
 
-6. Select your subscription from the list, then select **myLAworkspace (westus)** from the workspace drop-down list.
+6. Select your subscription from the list, then select **myLAworkspace (eastus)** from the workspace drop-down list.
 
 7. Click **Save**.
 
