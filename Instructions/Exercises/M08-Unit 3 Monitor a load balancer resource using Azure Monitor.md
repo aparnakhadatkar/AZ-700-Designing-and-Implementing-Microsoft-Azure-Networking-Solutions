@@ -56,7 +56,7 @@ In this section, you will create a virtual network and a subnet.
 
 8. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
-   ![Add subnet](../media/virtual_network_1.png)
+   ![Add subnet](../media/subnet8.png)
 
 9. Click **Add**.
 
@@ -70,7 +70,7 @@ In this section, you will create a virtual network and a subnet.
     | AzureBastionSubnet address space  | **10.1.1.0/24**                                        |
     | Public IP address                 | Select **Create new**<br /><br />Name: **myBastionIP** |
 
-  ![Bastion Host](../media/virtualnetwork.png)
+  ![Bastion Host](../media/bastion.png)
 
 12. Click **Review + create**.
 
@@ -106,7 +106,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subnet                | **myBackendSubnet**      |
    | Assignment            | **Dynamic** then Click **Add**|
 
-   ![Front End IP.](../media/load_balancer.png)
+   ![Front End IP.](../media/frontendip.png)
 
 6. Click **Review + create**.
 
@@ -217,7 +217,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 5. On the **myBackendPool** page, click **Save**.
 
-   ![Show VMs added to backend pool in load balancer](../media/add-vms-backendpool.png)
+   ![Show VMs added to backend pool in load balancer](../media/backend.png)
 
 ## Task 8: Install IIS on the VMs
 
@@ -316,17 +316,17 @@ In this section, you will create a test VM, and then test the load balancer.
 11. Enter (or paste) the **Private IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
 
 12. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
-    ![Browser window showing Hello World response from VM1](../media/load-balancer-web-test-1.png)
+    ![Browser window showing Hello World response from VM1](../media/VM-01.png)
 
 13. If you click the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
 
-    ![Browser window showing Hello World response from VM3](../media/load-balancer-web-test-2.png)
+    ![Browser window showing Hello World response from VM3](../media/VM-3.png)
 
 ## Task 10: Create a Log Analytics Workspace
 
 1. On the Azure portal home page, click **All services**, then in the search box at the top of the page type **Log Analytics**, and select **Log Analytics workspaces** from the filtered list.
 
-   ![Accessing Log Analytics workspaces from the Azure portal home page](../media/log-analytics-workspace-1.png)
+   ![Accessing Log Analytics workspaces from the Azure portal home page](../media/logana.png)
 
 2. Click **Create**. 
 
@@ -341,7 +341,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 4. Click **Review + Create**, then click **Create**.
 
-   ![Log Analytics workspaces list](../media/log-analytics-workspace-2.png)
+   ![Log Analytics workspaces list](../media/workspace.png)
 
 
 
