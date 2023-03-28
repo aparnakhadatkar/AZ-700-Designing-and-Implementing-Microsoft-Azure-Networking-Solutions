@@ -174,7 +174,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Health probe           | **myHealthProbe**        |
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
-   | Enable Floating IP     | **Disabled**             |
+   | Enable Floating IP     | **Unselect**             |
 
 3. Click **Save**.
 
