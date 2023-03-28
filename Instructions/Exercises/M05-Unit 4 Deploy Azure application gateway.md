@@ -137,7 +137,7 @@ To do this, you'll:
    | **Setting**          | **Value**                                        |
    | -------------------- | ------------------------------------------------ |
    | **Basics** tab       |                                                  |
-   | Resource group       | Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/> |
+   | Resource group       | Select the existing resource group az700-m05-<inject key="DeploymentID" enableCopy="false"/> |
    | Virtual machine name | BackendVM1                                       |
    | Region               | West US                                          |
    | Image                | Select **Windows Server 2016 Datacenter - Gen2** |
