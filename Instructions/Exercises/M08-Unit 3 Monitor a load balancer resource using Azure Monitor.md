@@ -130,7 +130,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 4. Click **Save**.
 
-   ![Show backend pool created in load balancer](../media/create-backendpool.png)
+   ![Show backend pool created in load balancer](../media/create-backendpool1.png)
 
    
 
@@ -152,7 +152,7 @@ The load balancer monitors the status of your app with a health probe. The healt
   
 3. Click **Save**.
 
-   ![Show health probe created in load balancer](../media/create-healthprobe.png)
+   ![Show health probe created in load balancer](../media/create-healthprobe1.png)
 
 ## Task 5: Create a load balancer rule
 
@@ -178,7 +178,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 
 3. Click **Save**.
 
-   ![Show load balancing rule created in load balancer](../media/create-loadbalancerrule.png)
+   ![Show load balancing rule created in load balancer](../media/create-loadbalancerrule1.png)
 
 ## Task 6: Create backend servers
 
@@ -187,11 +187,11 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane. To do this click on Cloud shell icon right next to top search bar. Select powershell then click on **Show advanced settings** as shown in below image
 
-   ![](../media/lb1.png)
+   ![](../media/lb1-1.png)
 
 2. Enter a unique name for **storage account & file share** and click on create storage.
 
-   ![](../media/lb2.png)
+   ![](../media/lb2-1.png)
 
 3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
 
@@ -229,9 +229,9 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 4. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
 
- **Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
+> **Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
 
-   ![reaponse](../media/popup.png)
+   ![reaponse](../media/popup-1.png)
 
 5. The **az700-vm1** window will open in another browser tab.
 
