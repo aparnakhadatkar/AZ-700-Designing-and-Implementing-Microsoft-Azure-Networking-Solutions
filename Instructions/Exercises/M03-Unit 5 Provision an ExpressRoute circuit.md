@@ -30,7 +30,7 @@ In this exercise, you will:
 
 1. When you are filling in the values on this page, make sure that you specify the correct SKU tier (Local, Standard, or Premium) and data metering billing model (Unlimited or Metered).
 
-    ![Azure portal - Create ExpressRoute configuration tab](../media/expressroute-create-configuration.png) 
+    ![Azure portal - Create ExpressRoute configuration tab](../media/expressroute-create-configuration(1).png) 
 
 - Port type determines if you are connecting to a service provider or directly into Microsoft's global network at a peering location.
 - Create new or import from classic determines if a new circuit is being created or if you are migrating a classic circuit to Azure Resource Manager.
@@ -56,15 +56,15 @@ In this exercise, you will:
 
 1. You can view all the circuits that you created by selecting **All services &gt; Networking &gt; ExpressRoute circuits**.
 
-    ![Azure portal - Create ExpressRoute resource menu](../media/expressroute-circuit-menu.png)
+    ![Azure portal - Create ExpressRoute resource menu](../media/expressroute-circuit-menu(1).png)
 
 1. All ExpressRoute circuits created in the subscription will appear here. 
 
-    ![Azure portal - show existing Expressroute circuits](../media/image3.png)
+    ![Azure portal - show existing Expressroute circuits](../media/image3(1).png)
 
 1. The circuit page displays the properties of the circuit. The service key appears in the service key field. Your service provider will need the Service Key to complete the provisioning process. The service key is specific to your circuit. **You must send the service key to your connectivity provider for provisioning.**
 
-    ![Azure portal - ExpressRoute Circuit properties showing service key](../media/image.png)
+    ![Azure portal - ExpressRoute Circuit properties showing service key](../media/image-(1).png)
 
 1. On this page, **Provider status** gives you the current state of provisioning on the service-provider side. **Circuit status** provides you the state on the Microsoft side. 
 
