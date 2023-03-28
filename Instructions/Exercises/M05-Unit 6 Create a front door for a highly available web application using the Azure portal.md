@@ -82,9 +82,9 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | Subscription            | Select your subscription.                    |
    | Resource group          | Select ContosoResourceGroup                  |
    | Resource group location | Accept default setting                       |
-   | Name                    | Enter FrontDoor-<inject key="DeploymentID" enableCopy="false"/>* |
+   | Name                    | Enter FrontDoor-<inject key="DeploymentID" enableCopy="false"/> |
    | Tier                    | Standard   |
-   | Endpoint Name           | FDendpoint-<inject key="DeploymentID" enableCopy="false"/>* |
+   | Endpoint Name           | FDendpoint-<inject key="DeploymentID" enableCopy="false"/> |
    | Origin Type             | App Service| 
    | Origin host name        | The name of the web app you previously deployed |
    
