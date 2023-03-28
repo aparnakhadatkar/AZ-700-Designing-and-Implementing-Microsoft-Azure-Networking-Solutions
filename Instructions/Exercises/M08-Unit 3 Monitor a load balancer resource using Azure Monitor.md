@@ -42,7 +42,7 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
    | Subscription   | Select your subscription                            |
-   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG--<inject key="DeploymentID" enableCopy="false"/>** |
+   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** |
    | Name           | **IntLB-VNet**                                      |
    | Region         | Default selected by Resource group                                   |
 
