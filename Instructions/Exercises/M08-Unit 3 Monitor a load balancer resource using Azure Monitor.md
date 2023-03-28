@@ -231,7 +231,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 > **Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
 
-   ![reaponse](../media/popup-1.png)
+   ![reaponse](../media/popup.png)
 
 5. The **az700-vm1** window will open in another browser tab.
 
