@@ -88,6 +88,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 4. Click **Create**.
 
+   ![Front End IP.](../media/loadbalancer.png)
+
 5. On the **Basics** tab, use the information in the table below to create the load balancer.
 
    | **Setting**           | **Value**                |
