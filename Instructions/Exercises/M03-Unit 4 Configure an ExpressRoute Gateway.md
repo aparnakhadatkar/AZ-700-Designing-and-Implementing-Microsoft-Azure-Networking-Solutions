@@ -52,6 +52,8 @@ In this exercise, you will:
    | Starting address     | 10.20.0.0                                                    |
    | Address space size   | /16                                                          |                                                  
 
+   ![Azure portal - add ipv4](../media/ipv4.png)
+   
 1. Select **Add**.
 
 1. On the **IP address** tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
@@ -63,11 +65,13 @@ In this exercise, you will:
    | Starting address             | 10.20.0.0               |
    | Subnet size                  | /27                     |
 
+   ![Azure portal - add ipv4](../media/subnet.png)
+
 1. And then select **Add**.
 
 1. On the Create virtual network page, select **Review + Create**.
 
-    ![Azure portal - add gateway subnet](../media/add-gateway-subnet.png)
+    ![Azure portal - add gateway subnet](../media/review-create.png)
 
 1. Confirm that the VNet passes the validation and then select **Create**.
 
@@ -87,7 +91,7 @@ In this exercise, you will:
    
     **Note:** After selecting the existed Virtual network, the value of resource group will be automatically derived from virtual network’s resource group name.
     
-   ![image](../media/image1.png)
+   ![image](../media/image1-1.png)
 
    | **Setting**               | **Value**                                                                       |
    | ------------------------- | --------------------------                                                      |
