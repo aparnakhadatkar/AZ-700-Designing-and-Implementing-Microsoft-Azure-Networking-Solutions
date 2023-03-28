@@ -32,7 +32,7 @@ In this exercise, you will:
    | **Setting**          | **Value**                                                    |
    | -------------------- | --------------------------------                             |
    | Subscription         | the name of the Azure subscription you are using in this lab |
-   | Resource Group       | Select the existing resource group az700-m03-rg01-{Deployment ID}|
+   | Resource Group       | Select the existing resource group az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>|
    | Virtual Network Name | CoreServicesVNet                                             |
    | Location             | West US                                                      |
 
@@ -40,14 +40,26 @@ In this exercise, you will:
 
 1. Select **Next : IP addresses**.
 
-1. On the **IP Addresses** tab, in **IPv4 address space**, enter **10.20.0.0/16**, and then select **+ Add subnet**. 
+1. On the **IP Addresses** tab, click on **Add an IP address space**.
 
-1. In the Add subnet pane, use the information in the following table to create the subnet:
+1. On **Add an IP address space**, use the information in the following table to create the IPv4 address space:
+   
+   | **Setting**          | **Value**                                                    |
+   | -------------------- | --------------------------------                             |
+   | Address space type   | the name of the Azure subscription you are using in this lab |
+   | Starting address     | 10.20.0.0                                                    |
+   | Address space size   | /16                                                          |                                                  
 
-   | **Setting**                  | **Value**     |
-   | ---------------------------- | ------------- |
-   | Gateway Subnet name          | GatewaySubnet |
-   | Gateway Subnet address space | 10.20.0.0/27  |
+1. Select **Add**.
+
+1. On the **IP address** tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
+
+   | **Setting**                  | **Value**               |
+   | ---------------------------- | ----------------------- |
+   | Subnet template              | Virtual Network Gateway |
+   | Name                         | GatewaySubnet           |
+   | Starting address             | 10.20.0.0               |
+   | Subnet size                  | /27                     |
 
 1. And then select **Add**.
 
