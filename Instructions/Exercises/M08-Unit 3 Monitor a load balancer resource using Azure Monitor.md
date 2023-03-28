@@ -35,6 +35,8 @@ In this section, you will create a virtual network and a subnet.
 
 3. Click **Create**.
 
+   ![Add subnet](../media/createVnet1.png)
+
 4. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                           |
