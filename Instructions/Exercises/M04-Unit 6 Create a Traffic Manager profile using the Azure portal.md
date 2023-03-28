@@ -30,7 +30,7 @@ In this section, you will create two instances of a web application deployed in 
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription                                     |
    | Resource group   | Select **Existing**  Name: **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**  |
-   | Name             | **ContosoWebAppEastUS-<inject key="DeploymentID" enableCopy="false"/>**                                      |
+   | Name             | **ContosoWebAppEastUS-<inject key="DeploymentID" enableCopy="false"/>** |
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
    | Operating system | **Windows**                                                  |
@@ -147,13 +147,13 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 4. The web app's default web site should be displayed.
 
-   ![Picture 24](../media/tm-webapp-test-1a.png)
+   ![Picture 24](../media/website-image.png)
 
 5. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
 6. To test the failover endpoint is working properly, you need to disable the primary site.
 
-7. On the **Contoso-TMProfile-{Deploymentid}** page, on the overview screen, select **myPrimaryEndpoint**.
+7. On the **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** page, on the overview screen, select **myPrimaryEndpoint**.
 
 8. On the **myPrimaryEndpoint** page, under **Status**, click **Disabled**, and then click **Save**.
 
@@ -161,7 +161,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 9. Close the **myPrimaryEndpoint** page (click the **X** in the top right corner of the page).
 
-10. On the **Contoso-TMProfile-{Deploymentid}** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
+10. On the **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
 
 11. Open a new web browser session, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
