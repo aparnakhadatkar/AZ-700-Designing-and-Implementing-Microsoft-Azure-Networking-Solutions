@@ -34,7 +34,7 @@ This exercise requires two instances of a web application that run in different 
    | Runtime stack    | Select **.NET 6 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **West US**.                                       |
-   | Windows Plan     | Select **Create new** and enter **myAppServicePlanwestUS** in the text box. |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanWestUS** in the text box. |
    | SKU and size     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
 
    **Note**: Replace Deployment ID with the value from environment details tab
