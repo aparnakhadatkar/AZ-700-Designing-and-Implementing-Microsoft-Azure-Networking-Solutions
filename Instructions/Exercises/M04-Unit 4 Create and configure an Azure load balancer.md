@@ -1,10 +1,3 @@
----
-Exercise:
-    title: 'M04-Unit 4 Create and configure an Azure load balancer'
-    module: 'Module - Load balancing non-HTTP(S) traffic in Azure'
----
-
-
 # M04-Unit 4 Create and configure an Azure load balancer
 
 In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. 
@@ -30,27 +23,26 @@ In this section, you will create a virtual network and a subnet.
 
 1. Log in to the Azure portal.
 
-2. On the Azure portal home page, click **Create a resource**, then **Networking**, then select **Virtual Network** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+2. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.
 
-3. Click **Create**.
-
-![Picture 2](../media/create-virtual-network-1.png)
+![Picture 2](../media/global-search-bar.png)
 
 4. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                  |
    | -------------- | ------------------------------------------ |
    | Subscription   | Select your subscription                   |
-   | Resource group | Select **Create  new**  Name: **IntLB-RG** |
+   | Resource group | Select **IntLB-RG<inject key="DeploymentID" enableCopy="false"/>** |
    | Name           | **IntLB-VNet**                             |
-   | Region         | **(US) West US**                           |
+   | Region         | **default**                                |
 
 
-5. Click **Next : IP Addresses**.
+5. Click **Next : Security**.
+6. Select **Next : IP Addresses.**
 
-6. On the **IP Addresses** tab, in the **IPv4 address space** box, remove the default and type **10.1.0.0/16**.
+6. On the **IP Addresses** tab, remove the default address space and select **Add and type **10.1.0.0/16**.
 
-7. Under **Subnet name**, select the word **default**.
+7. Select **Add a Subnet**.
 
 8. In the **Edit subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
@@ -111,7 +103,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subscription          | Select your subscription |
    | Resource group        | **IntLB-RG**             |
    | Name                  | **myIntLoadBalancer**    |
-   | Region                | **(US) West US**         |
+   | Region                | **(US) East US**         |
    | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
 
@@ -153,7 +145,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 4. Under **Virtual machines**, click **Add**.
 
-5. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then click **Add**.
+5. Select the checkboxes for all 3 VMs (**az700-vm1,az700-vm2** and **az700-vm3**), then click **Add**.
 
 6. Click **Add**.
    ![Picture 7](../media/add-vms-backendpool.png)
@@ -228,12 +220,12 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
    | Subscription         | Select your subscription                     |
-   | Resource group       | **IntLB-RG**                                 |
+   | Resource group       | **IntLB-RG<inject key="DeploymentID" enableCopy="false"/>**                                 |
    | Virtual machine name | **myTestVM**                                 |
-   | Region               | **(US) West US**                             |
+   | Region               | **default**                             |
    | Availability options | **No infrastructure redundancy required**    |
-   | Image                | **Windows Server 2019 Datacenter - Gen 1**   |
-   | Size                 | **Standard_DS1_v2 - 1 vcpu, 3.5 GiB memory** |
+   | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
+   | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
    | Password             | **TestPa$$w0rd!**                            |
    | Confirm password     | **TestPa$$w0rd!**                            |
