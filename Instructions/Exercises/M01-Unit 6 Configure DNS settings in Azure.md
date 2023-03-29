@@ -11,7 +11,71 @@ In this exercise, you will:
 + Task 4: Verify records are present in the DNS zone
 
 
-## Task 1: Create a private DNS Zone
+## Task 1: Create the CoreServicesVnet virtual network and subnet
+
+1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  ![Azure portal home page Global Search bar results for virtual network.](../media/global-search-bar.png)
+2. Select **Create** on the Virtual networks page.  ![Create a virtual network wizard.](../media/create-virtual-network.png)
+3. Use the information in the following table to create the CoreServicesVnet virtual network.  
+   ‎Remove or overwrite the default IP Address space![ip address configuration for azure virtual network deployment ](../media/default-vnet-ip-address-range-annotated.png)
+
+ 
+
+| **Tab**      | **Option**         | **Value**            |
+| ------------ | ------------------ | -------------------- |
+| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
+|              | Name               | CoreServicesVnet     |
+|              | Region             | (US) East US         |
+| IP Addresses | IPv4 address space | 10.20.0.0/16         |
+
+ 4. Use the information in the following table to create the CoreServicesVnet subnets.
+
+ 5. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
+
+| **Subnet**             | **Option**           | **Value**              |
+| ---------------------- | -------------------- | ---------------------- |
+| DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
+|                        | Subnet address range | 10.20.20.0/24          |
+
+6. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+
+7. Verify your configuration passed validation, and then select **Create**.
+ 
+8. Repeat steps 1 -8 for each VNet based on the tables below.
+
+## Task 2: Create the ManufacturingVnet virtual network and subnets
+
+
+| **Tab**      | **Option**         | **Value**             |
+| ------------ | ------------------ | --------------------- |
+| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
+|              | Name               | ManufacturingVnet     |
+|              | Region             | (Europe) West Europe  |
+| IP Addresses | IPv4 address space | 10.30.0.0/16          |
+
+
+
+| **Subnet**                | **Option**           | **Value**                 |
+| ------------------------- | -------------------- | ------------------------- |
+| ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
+|                           | Subnet address range | 10.30.10.0/24             |
+
+## Task 3: Create the ResearchVnet virtual network and subnets
+
+
+| **Tab**      | **Option**         | **Value**            |
+| ------------ | ------------------ | -------------------- |
+| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
+|              | Name               | ResearchVnet         |
+|              | Region             | Southeast Asia       |
+| IP Addresses | IPv4 address space | 10.40.0.0/16         |
+
+| **Subnet**           | **Option**           | **Value**            |
+| -------------------- | -------------------- | -------------------- |
+| ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
+|                      | Subnet address range | 10.40.0.0/24         |
+
+
+## Task 4: Create a private DNS Zone
 
 1. Go to [Azure Portal](https://portal.azure.com/).
 
@@ -24,7 +88,7 @@ In this exercise, you will:
 
 | **Tab**         | **Option**                             | **Value**            |
 | --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/> |
+| Basics          | Resource group                         | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
 |                 | Name                                   | Contoso.com          |
 | Tags            | No changes required                    |                      |
 | Review + create | Review your settings and select Create |                      |
@@ -35,7 +99,7 @@ In this exercise, you will:
 
 6. Verify that the zone has been created.
 
-## Task 2: Link subnet for auto registration
+## Task 5: Link subnet for auto registration
 
 1. On the Azure home page, in the search bar, type dns, and then select Private DNS zones then select newly created **Contoso.com**. In Contoso.com, under **Settings**, select **Virtual network links**.
 
@@ -49,7 +113,7 @@ In this exercise, you will:
 | ----------------------------------- | --------------------------------------- |
 | Link name                           | CoreServicesVnetLink                    |
 | Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
+| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                                |
 | Review your settings and select OK. |                                         |
 
@@ -65,7 +129,7 @@ In this exercise, you will:
 | ----------------------------------- | ---------------------------------------- |
 | Link name                           | ManufacturingVnetLink                    |
 | Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
+| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                                 |
 | Review your settings and select OK. |                                          |
 
@@ -80,7 +144,7 @@ In this exercise, you will:
 | ----------------------------------- | ----------------------------------- |
 | Link name                           | ResearchVnetLink                    |
 | Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
+| Virtual Network                     | ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                            |
 | Review your settings and select OK. |                                     |
 
@@ -91,105 +155,30 @@ In this exercise, you will:
 
    ‎![](../media/vn11.png) 
 
-##  Task 3: Create Virtual Machines to test the configuration
+##  Task 6: Create Virtual Machines to test the configuration
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
-### Create TestVM1
+1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+    
+    > **Note:** If this is the first time opening Cloud Shell, you might be prompted to create a storage account. Select **Show advanced settings** provide your details and then click on **Create storage**.
 
-1. On the Azure home page, select **Virtual Machines**.
+2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M01**.
 
-2. In Virtual Machines, select **+ Create > + Start with a preset configuration**.
+3. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
+   ```powershell
+   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
+   
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
+   ```
+  
+4. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-3. In Choose recommended defaults that match your workload, under **Select a workload environment**, select **Dev/Test**.
-
-4. Under **Select a workload type**, select **General purpose (D-Series)**, and then select **Continue to create a VM**.
-
-   ‎![](../media/vn12.png)
-
-5. Use the information in the following table to create your first VM.
-
-| **Tab**         | **Option**                                                   | **Value**                             |
-| --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>  |
-|                 | Virtual machine name                                         | TestVM1                               |
-|                 | Region                                                       | (US) West US                          |
-|                 | Availability options                                         | No infrastructure redundancy required |
-|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2  |
-|                 | Azure Spot instance                                          | Not selected                          |
-|                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory  |
-|                 | Username                                                     | TestUser                              |
-|                 | Password                                                     | TestPa$$w0rd!                         |
-|                 | Public inbound ports                                         | Allow selected ports                  |
-|                 | Select inbound ports                                         | RDP (3389)                            |
-|                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-| Disks           | OS disk type                                                 |  Standard SSD                         |
-| Networking      | Virtual network                                              | CoreServicesVnet                      |
-|                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)        |
-|                 | Public IP                                                    | (new) TestVM1-ip                      |
-|                 | NIC network security group                                   | Basic                                 |
-|                 | Public inbound ports                                         | Allow selected ports                  |
-|                 | Select inbound ports                                         | RDP (3389)                            |
-|                 | Load balancing                                               | Not selected                          |
-| Management      | No changes required                                          |                                       |
-| Advanced        | No changes required                                          |                                       |
-| Tags            | No changes required                                          |                                       |
-| Review + create | Review your settings and select Create                       |                                       |
-
-
-6. While the deployment is in progress, you can proceed with creating TestVM2.
-
-### Create TestVM2
-
-1. On the Azure home page, select **Virtual Machines**.
-
-2. In Virtual Machines, select **+ Create > + Start with a preset configuration**.
-
-![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
-
-3. In Choose recommended defaults that match your workload, under **Select a workload environment**, select **Dev/Test**.
-
-4. Under **Select a workload type**, select **General purpose (D-Series)**, and then select **Continue to create a VM**.
-
-5. Use the information in the following table to create your second VM.
-
-| **Tab**         | **Option**                                                   | **Value**                             |
-| --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>  |
-|                 | Virtual machine name                                         | TestVM2                               |
-|                 | Region                                                       | (US) West US                          |
-|                 | Availability options                                         | No infrastructure redundancy required |
-|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2  |
-|                 | Azure Spot instance                                          | Not selected                          |
-|                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory  |
-|                 | Username                                                     | TestUser                              |
-|                 | Password                                                     | TestPa$$w0rd!                         |
-|                 | Public inbound ports                                         | Allow selected ports                  |
-|                 | Select inbound ports                                         | RDP (3389)                            |
-|                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-| Disks           | OS disk type                                                 |  Standard SSD                         |
-| Networking      | Virtual network                                              | CoreServicesVnet                      |
-|                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)        |
-|                 | Public IP                                                    | (new) TestVM2-ip                      |
-|                 | NIC network security group                                   | Basic                                 |
-|                 | Public inbound ports                                         | Allow selected ports                  |
-|                 | Select inbound ports                                         | RDP (3389)                            |
-|                 | Load balancing                                               | Not selected                          |
-| Management      | No changes required                                          |                                       |
-| Advanced        | No changes required                                          |                                       |
-| Tags            | No changes required                                          |                                       |
-| Review + create | Review your settings and select **Create**                   |                                       |
-
-
-6. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
-
-7. Verify that both virtual machines have been created.
-
+5. Verify that both virtual machines have been created.
  
 
-## Task 4: Verify records are present in the DNS zone
+## Task 7: Verify records are present in the DNS zone
 
 1. On the Azure Portal home page, select **Private DNS zones**.
 
@@ -233,6 +222,11 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 12. Connect to TestVM2 using the RDP file, and the username and password you specified when you created the VM.
 
+| **Username**                        | **Password**                        |
+| ----------------------------------- | ----------------------------------- |
+| TestUser                            | TestPa$$w0rd!                       |
+
+
 13. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
 14. On both VMs, in **Networks**, select **Yes**.
@@ -241,10 +235,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 16. Verify that the IP address is the same as the one you noted in the DNS zone.
 
-17. On the start menu of TestVM1 type **Command Prompt** and click to open it then Enter the command ping TestVM2.contoso.com.
+17. On the start menu of TestVM1 type **Command Prompt** and click to open it then Enter the command nslookup <your-second-vm-name>.contoso.com.
+   >Note: <your-second-vm-name> for example: testvm2.
 
-18. Verify that you receive four replies from TestVM2.
 
- 
 
-Congratulations! You have created a private DNS Zone, added a name resolution and auto-registration link, and tested name resolution in your configuration. 
+ Congratulations! You have created a private DNS Zone, added a name resolution and auto-registration link, and tested name resolution in your configuration. 
