@@ -70,7 +70,7 @@ In this section, you will create a virtual network and a subnet.
     | AzureBastionSubnet address space  | **10.1.1.0/24**                                        |
     | Public IP address                 | Select **Create new**<br /><br />Name: **myBastionIP** |
 
-  ![Bastion Host](../media/bastion.png)
+    ![Bastion Host](../media/bastion.png)
 
 12. Click **Review + create**.
 
