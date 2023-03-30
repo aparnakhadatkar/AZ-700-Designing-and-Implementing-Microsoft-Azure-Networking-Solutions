@@ -223,7 +223,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 16. Click **ADD**.
 
-    ![Add firewall route](../media/add-firewall-route.png)
+    ![Add firewall route](../media/module6-unit7-task5-step16.png)
 
  
 
