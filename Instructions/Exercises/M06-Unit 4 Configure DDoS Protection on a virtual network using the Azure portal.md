@@ -23,7 +23,9 @@ In this task, you will create a new resource group.
 1. Select **Create**. 
 
 1. On the **Basics** tab, in **Resource group**, enter **MyResourceGroup-DeploymentID**.
-
+    
+   > **Note:** Deployment ID can be found in the environment details tab
+     
 1. On the **Region**, select **(Europe)UK South** region from the list.
 
 1. Select **Review + create**.
