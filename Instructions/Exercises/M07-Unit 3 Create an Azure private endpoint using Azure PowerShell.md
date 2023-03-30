@@ -21,9 +21,8 @@ Private Endpoints can be created for different kinds of Azure services, such as 
    
 4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group, i.e. **CreatePrivateEndpointQS-rg**. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **template.json** and **parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
-6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the files template.json and parameters.json into the Cloud Shell home directory.
    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/upload.png)
 
 
