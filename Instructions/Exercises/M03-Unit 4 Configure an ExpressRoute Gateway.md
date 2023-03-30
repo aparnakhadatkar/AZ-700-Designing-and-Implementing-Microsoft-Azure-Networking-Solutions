@@ -89,7 +89,7 @@ In this exercise, you will:
    
     **Note:** After selecting the existed Virtual network, the value of resource group will be automatically derived from virtual network’s resource group name.
     
-   ![image](../media/image1-1.png)
+   ![image](../media/rg-vnet1.png)
 
    | **Setting**               | **Value**                                                                       |
    | ------------------------- | --------------------------                                                      |
