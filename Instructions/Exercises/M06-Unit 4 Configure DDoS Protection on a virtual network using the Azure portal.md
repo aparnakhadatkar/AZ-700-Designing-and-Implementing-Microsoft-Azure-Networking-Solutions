@@ -220,35 +220,35 @@ In this step you will create a virtual machine, assign a public IP address to it
     
      ![New alert rule change scope to public IP address](../media/new-alert-rule-change-scope-to-public-ip-address-1.png)
     
-8. On the **Create alert rule** page, under **Condition**, for signal name select **Under DDoS attack or not** from the drop-down list.
+8. On the **Create alert rule** page, under **Condition** tab, for signal name select **Under DDoS attack or not** from the drop-down list.
 
    ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-1.png)
 
-10. In the **Operator** box select **Greater than or equal to**.
+1. In the **Operator** box select **Greater than or equal to**.
 
 11. In **Threshold value**, enter **1** (means under attack).
 
-12. Click **Done**.
+    ![Add condition to alert rule - configure signal logic](../media/upd-add-condition-to-alert-rule-2.png)
 
-    ![Add condition to alert rule - configure signal logic](../media/add-condition-to-alert-rule-2.png)
-
-13. Back on the **Create alert rule** page, scroll down to the **Alert rule details** section and in **Alert rule name**, enter **MyDdosAlert**.
+13. On the **details** tab, in **Alert rule name**, enter **MyDdosAlert**.
 
     ![End point of create new alert rule](../media/new-alert-rule-end.png)
 
-14. Click **Create alert rule**.
+14. Click Click **Review + create** and select **Create**.
 
  
 
 ## Task 7: Submit a DDoS service request to run a DDoS attack
 
-1. Create an account with [BreakingPoint Cloud](https://breakingpoint.cloud/)
+1. Create an account with [BreakingPoint Cloud](https://breakingpoint.cloud/) and after signing in, click on Start trial.
 
-2. Set up your DDoS test as per the settings in the screenshot below, but specifying the IP address of your own **MyPublicIPAddress** resource in the **Target IP Address** box (e.g., **51.140.137.219**). Click on start test.
+2. Set up your DDoS test as per the settings in the screenshot below, but specifying the IP address of your own **MyPublicIPAddress** resource in the **Target IP Address** box (e.g., **51.140.137.219**). Click on **start test**.
 
    ![DDoS Test Setup](../media/ddos-test-setup.png)
 
    ![DDoS Test Setup](../media/ddos-test-setup2.png)
+   
+    > **Note:** For Authentication purpose, you might be asked to enter your azure subscription ID and provide the Azure credentials inorder to start the test.
 
 3. On the Azure portal home page, click **All resources**.
 
@@ -260,6 +260,6 @@ In this step you will create a virtual machine, assign a public IP address to it
 
    ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
 
-   **Note**: it takes few minutes for the data to be get loaded.   
+   **Note**: It takes few minutes for the data to be get loaded.   
 
  
