@@ -251,6 +251,8 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 10. To add a new default web home page and add content to it, run the following command in PowerShell: Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
 
+    >**Note**: Plesae use >> icon to copy paste the commands into windows powershell.
+
 11. Close the Bastion session to **az700-vm1** by closing the browser tab.
 
 12. Repeat steps 1-11 above twice more to install IIS and the updated default home page on the **az700-vm2** and **az700-vm3** virtual machines.
