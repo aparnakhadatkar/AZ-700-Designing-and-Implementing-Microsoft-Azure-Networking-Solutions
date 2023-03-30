@@ -31,13 +31,9 @@ In this section, you will create a virtual network and a subnet.
 
 1. Log in to the Azure portal.
 
-2. On the Azure portal home page, click **Create a resource**, then **Networking**, then select **Virtual Network** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+2. On the Azure portal, use the Search resources, services, and docs text box at the top of the Azure portal page to search for and navigate to the Virtual network blade, then, on the Virtual network  blade, select + Create 
 
-3. Click **Create**.
-
-   ![create virtual network](../media/createVnet1.png)
-
-4. On the **Basics** tab, use the information in the table below to create the virtual network.
+3. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
@@ -48,21 +44,21 @@ In this section, you will create a virtual network and a subnet.
 
    **Note**: Deployment ID can be obtained from environment details tab.
 
-5. Click **Next : IP Addresses**.
+4. Click **Next : IP Addresses**.
 
-6. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
+5. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
 
-7. Above **Subnet name**, select **+ Add subnet**.
+6. Above **Subnet name**, select **+ Add subnet**.
 
-8. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+7. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
    ![Add subnet](../media/subnet8.png)
 
-9. Click **Add**.
+8. Click **Add**.
 
-10. Click **Next : Security**.
+9. Click **Next : Security**.
 
-11. Under **BastionHost** select **Enable**, then enter the information from the table below.
+10. Under **BastionHost** select **Enable**, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                              |
     | --------------------------------- | ------------------------------------------------------ |
@@ -72,9 +68,9 @@ In this section, you will create a virtual network and a subnet.
 
     ![Bastion Host](../media/bastion.png)
 
-12. Click **Review + create**.
+11. Click **Review + create**.
 
-13. Click **Create**.
+12. Click **Create**.
 
 ## Task 2: Create the load balancer
 
