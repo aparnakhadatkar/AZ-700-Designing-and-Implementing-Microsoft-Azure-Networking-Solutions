@@ -5,10 +5,11 @@ In this unit, you will configure DNS name resolution for Contoso Ltd. You will c
 
 In this exercise, you will:
 
-+ Task 1: Create a private DNS Zone
-+ Task 2: Link subnet for auto registration
-+ Task 3: Create Virtual Machines to test the configuration
-+ Task 4: Verify records are present in the DNS zone
++ Task 1: Create the Contoso resource group
++ Task 2: Create a private DNS Zone
++ Task 3: Link subnet for auto registration
++ Task 4: Create Virtual Machines to test the configuration
++ Task 5: Verify records are present in the DNS zone
 
 
 ## Task 1: Create the Contoso resource group
