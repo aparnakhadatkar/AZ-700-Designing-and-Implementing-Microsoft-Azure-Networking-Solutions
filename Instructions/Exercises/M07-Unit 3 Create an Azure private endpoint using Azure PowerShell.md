@@ -21,13 +21,12 @@ Private Endpoints can be created for different kinds of Azure services, such as 
    
 4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group, i.e. **CreatePrivateEndpointQS-rg**. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **template.json** and **parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
-6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the files template.json and parameters.json into the Cloud Shell home directory.
    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/upload.png)
 
 
-7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise: (Replace Deployment ID value from the environment details tab.)
+7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise: 
 
    ```powershell
    $RGName = "CreatePrivateEndpointQS-rg"
@@ -59,8 +58,7 @@ Create a virtual network and bastion host with:
 
 - New-AzBastion
 
-   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.)
- 
+ 1.  Run the below commands in power shell.
 
   ``` Azure PowerShell
       
@@ -112,7 +110,7 @@ Create a virtual network and bastion host with:
 
       $parameters3 = @{
 
-      ResourceGroupName = 'CreatePrivateEndpointQS'
+      ResourceGroupName = 'CreatePrivateEndpointQS-rg'
 
       Name = 'myBastion'
 
@@ -149,7 +147,7 @@ In this section, you'll create a virtual machine that will be used to test the P
 
 - Add-AzVMNetworkInterface
 
-   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.)
+1.   Run the below commands in power shell. 
 
 ``` Azure PowerShell
 ## Set credentials for server admin and password and make a note of them you will use them in later task##
@@ -232,7 +230,7 @@ In this section, you'll create the Private Endpoint and connection using:
 
 - New-AzPrivateEndpoint
 
-   Run the below commands in power shell (Replace Deployment ID value from the environment details tab.) 
+1.   Run the below commands in power shell.
 
 ```Azure PowerShell
 
@@ -298,7 +296,7 @@ In this section you'll create and configure the private DNS zone using:
 
 - New-AzPrivateDnsZoneGroup
 
-   Run the below commands in power shell  
+1.   Run the below commands in power shell.  
 
 ```Azure PowerShell
 ## Place virtual network into variable. ##
@@ -367,44 +365,44 @@ New-AzPrivateDnsZoneGroup @parameters4
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the SQL server across the Private Endpoint.
 
-- Sign in to the [Azure portal](https://portal.azure.com/)
+1. Sign in to the [Azure portal](https://portal.azure.com/)
 
-- Select **Resource groups** in the left-hand navigation pane.
+1. Select **Resource groups** in the left-hand navigation pane.
 
-- Select **CreatePrivateEndpointQS-rg**.
+1. Select **CreatePrivateEndpointQS-rg**.
 
-- Select **myVM**.
+1. Select **myVM**.
 
-- On the overview page for **myVM**, select **Connect** then **Bastion**.
+1. On the overview page for **myVM**, select **Connect** then **Bastion**.
 
-- Select the blue **Use Bastion** button.
+1. Select the blue **Use Bastion** button.
 
-- Enter the username and password that you entered during the virtual machine creation.
+1. Enter the username and password that you entered during the virtual machine creation.
 
-**Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
+    > **Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
 
-![reaponse](../media/popup.png)
+     ![reaponse](../media/popup.png)
 
-- Open Windows PowerShell on the server after you connect.
+1. Open Windows PowerShell on the server after you connect.
 
-- Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
+1. Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
-  ```
-  Server: UnKnown
+    ```
+    Server: UnKnown
   
-  Address: 168.63.129.16
+    Address: 168.63.129.16
   
-  Non-authoritative answer:
+    Non-authoritative answer:
   
-  Name: mywebapp8675.privatelink.azurewebsites.net
+    Name: mywebapp8675.privatelink.azurewebsites.net
   
-  Address: 10.0.0.5
+    Address: 10.0.0.5
   
-  Aliases: mywebapp8675.azurewebsites.net 
-  ```  
+    Aliases: mywebapp8675.azurewebsites.net 
+    ```  
 
 
-A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
+1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
 
 - In the bastion connection to **myVM**, open Internet Explorer.
 - Enter the url of your web app, **https://&lt;your-webapp-name&gt;.azurewebsites.net**.
