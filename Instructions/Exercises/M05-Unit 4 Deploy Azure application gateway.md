@@ -114,11 +114,13 @@ In this exercise, you will:
 
 28. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter Virtual networks, and then select **Virtual networks** from the results.
 
-29. On the Virtual networks page select **ContosoVNet**, and from left side menu select **Subnet** under settings blade.
+29. On the Virtual networks page select **ContosoVNet**. 
+ 
+30. On the ContosoVNet page from left side menu under Settings and click **Subnet**.
 
-30. On the ContosoVNet | Subnets page select **+ Subnet**. 
+31. On the ContosoVNet | Subnets page select **+ Subnet**. 
 
-31. On Add subnet page fill the follwing details(leave other field as default) and click on **save**.
+32. On Add subnet page fill the follwing details(leave other field as default) and click on **save**.
 
     | **Setting**           | **Value**   |
     | --------------------- | ----------- |
