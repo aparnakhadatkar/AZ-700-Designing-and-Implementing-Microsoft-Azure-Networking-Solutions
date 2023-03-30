@@ -23,7 +23,7 @@ In this exercise, you will:
 
 | **Tab**         | **Option**                                 | **Value**            |
 | --------------- | ------------------------------------------ | -------------------- |
-| Basics          | Resource group                             | ContosoResourceGroup-1|
+| Basics          | Resource group                             | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="true"/>|
 |                 | Region                                     | (US) East US         |
 | Tags            | No changes required                        |                      |
 | Review + create | Review your settings and select **Create** |                      |
