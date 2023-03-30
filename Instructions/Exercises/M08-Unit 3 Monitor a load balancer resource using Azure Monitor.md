@@ -100,9 +100,13 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Region                | Default selected by Resource group         |
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
-   | Select Next           |                          |
-   | Add a frontend ipconfiguration |                 |
-   | Frontend Name         | **LoadBalancerFrontEnd** |
+   | Select Next Add a frontend ipconfiguration | 
+   
+6. On the **Frontend IP Configuration** tab, click on **+ Add a frontend IP configuration** use the information in the table below to create the load balancer.
+
+   | **Setting**           | **Value**                |
+   | --------------------- | ------------------------ |
+   |Frontend Name          | **LoadBalancerFrontEnd** |
    | Subnet                | **myBackendSubnet**      |
    | Assignment            | **Dynamic** then Click **Add**|
 
@@ -150,7 +154,7 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Path                | **/**             |
    | Interval            | **15**            |
   
-3. Click **Save**.
+3. Click **Add**.
 
    ![Show health probe created in load balancer](../media/create-healthprobe1.png)
 
@@ -175,6 +179,8 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
    | Enable Floating IP     | **Unselect**             |
+   
+   >**Note**: If you dont't find **myHealthProbe** option in **Health probe** dropdown, please sign out and sign in, reperform the above step.
 
 3. Click **Save**.
 
@@ -189,11 +195,11 @@ In this section, you will create three VMs, that will be in the same availabilit
 
    ![](../media/lb1-1.png)
 
-2. Enter a unique name for **storage account & file share** and click on create storage.
+2. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share**, then click on Create Storage.
 
    ![](../media/lb2-1.png)
 
-3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
+3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json one by one into the Cloud Shell home directory.
 
 4. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:(Replace Deployment ID with its value from environment details tab)
 
