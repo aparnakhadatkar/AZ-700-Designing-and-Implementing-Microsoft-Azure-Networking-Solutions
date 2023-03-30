@@ -127,7 +127,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | Priority                | 100                       |
    | Name                    | Allow-Storage-All         |
 
-9. Select **Add**:
+9. Select **Add**.
 
 
 ## Task 4: Add additional outbound rules 
@@ -181,15 +181,15 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 4. And then select **Add**.
 
-   > [!Warning]
-   >
-   >  RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
+    > [!Warning]
+    >
+    >  RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
 5. Under **Settings**, select **Subnets**.
 
 6. Select **+ Associate.**
 
-7. Under **Associate subnet**, select **Virtual network** and then select **CoreServicesVNet** under **Choose a virtual network**.
+7. Under **Associate subnet**, select **CoreServicesVNet** under **Virtual network**.
 
 8. Under **Choose subnet**, select **Private**, and then select **OK**.
 
@@ -197,23 +197,23 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 The steps necessary to restrict network access to resources created through Azure services enabled for service endpoints varies across services. See the documentation for individual services for specific steps for each service. The remainder of this exercise includes steps to restrict network access for an Azure Storage account, as an example.
 
-1. In the Azure portal, select Storage accounts.
+1. In the Azure portal, select **Storage accounts**.
 
-2. Select +Create.
+2. Select **+Create**.
 
 3. Enter, or select, the following information and accept the remaining defaults:
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-a-storage-account-basics.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/upd-create-a-storage-account-basics.png)
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
    | Resource group | Select CreatePrivateEndpointQS-rg                            |
-   | Name           | Enter contosostoragewest<inject key="DeploymentID" enableCopy="true"/> |
+   | Name           | Enter contosostoragewest<inject key="DeploymentID" enableCopy="false"/> |
    | Performance    | Standard (general purpose v2)                                |
    | Location       | Select East US                                               |
    | Redundancy     | Locally-redundant storage (LRS)                              |
 
-4. select **Review**, then click **Create**.
+4. Select **Review**, then click **Create**.
 
 ## Task 7: Create a file share in the storage account
 
@@ -239,7 +239,7 @@ By default, storage accounts accept network connections from clients in any netw
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
    | Subscription     | Select your subscription.    |
-   | Virtual networks | Select CoreServicesVNet**.** |
+   | Virtual networks | Select **CoreServicesVNet** |
    | Subnets          | Select **Private**.          |
 
 1. Select **Add**.
@@ -248,7 +248,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Under **Security and Networking** for the storage account, select **Access keys**.
 
-1. Select **Show Keys**. Note the **Key** value, as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
+1. Select **Show** under Key1. Note the **Key** value, as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
 
 
 ## Task 9: Create virtual machines
@@ -257,7 +257,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane, select **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M07**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -272,10 +272,12 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 ## Task 10: Confirm access to storage account
 
-1. Once the ContosoWestPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button, then select RDP.
+1. Once the ContosoPrivate VM finishes creating, open the blade for the VM by searching the Virtual Machines and selecting **ContosoPrivate VM**. Select **Connect** under Settings, then select **RDP**.
    ![Graphical user interface, application Description automatically generated](../media/private-virtual-machine-connect.png)
-2. After selecting the Connect button and RDP, select the Download RDP File button. A Remote Desktop Protocol (.rdp) file is created and downloaded to your computer.
-3. Open the downloaded rdp file. If prompted, select Connect. Enter the user name and password you specified when creating the VM. You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM.
+   
+2. After selecting the Connect button and RDP, select the **Download RDP File button**. A Remote Desktop Protocol (.rdp) file is created and downloaded to your computer.
+
+3. **Open** the downloaded rdp file. If prompted, select **Connect**. Enter the user name and password.
 
    | **Username**     | **Password**                |
    | ---------------- | ----------------------------|
@@ -285,7 +287,9 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 
 4. Select **OK**.
-5. You may receive a certificate warning during the sign-in process. If you receive the warning, select Yes or Continue to proceed with the connection.
+
+5. You may receive a certificate warning during the sign-in process. If you receive the warning, select **Yes or Continue** to proceed with the connection.
+
 6. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace <storage-account-key> , <storage-account-name> (i.e. contosostoragexx) and my-file-share (i.e marketing) with values you supplied and retrieved in the Create a storage account task.
 
 
