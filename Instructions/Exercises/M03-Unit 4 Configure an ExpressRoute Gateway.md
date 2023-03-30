@@ -54,7 +54,7 @@ In this exercise, you will:
    
 1. Select **Add**.
 
-1. On the **IP address** tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
+1. On the **10.20.0.0/16 IP address space** of **IP Addresses**  tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
 
    | **Setting**                  | **Value**               |
    | ---------------------------- | ----------------------- |
