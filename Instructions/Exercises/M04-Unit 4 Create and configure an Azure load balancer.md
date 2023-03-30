@@ -19,17 +19,10 @@ In this exercise, you will:
 
 ## Task 1: Create the virtual network
 
-In this section, you will create a virtual network and a subnet.
+1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  ![Azure portal home page Global Search bar results for virtual network.](../media/global-search-bar.png)
+2. Select **Create** on the Virtual networks page.  ![Create a virtual network wizard.](../media/create-virtual-network.png)
 
-1. Log in to the Azure portal.
-
-2. On the Azure portal home page, click **Create a resource**, then **Networking**, then select **Virtual Network** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
-
-3. Click **Create**.
-
-![Picture 2](../media/create-virtual-network-1.png)
-
-4. On the **Basics** tab, use the information in the table below to create the virtual network.
+3. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                                |
    | -------------- | ------------------------------------------               |
@@ -40,27 +33,27 @@ In this section, you will create a virtual network and a subnet.
 
  
 
-5. Click **Next : IP Addresses**.
+4. Click **Next : IP Addresses**.
 
 ![virtual network](../media/mod4_1.png)
 
-6. On the **IP Addresses** tab, in the **IPv4 address space** box,  remove the default and type **10.1.0.0/16**.
+5. On the **IP Addresses** tab, in the **IPv4 address space** box,  remove the default and type **10.1.0.0/16**.
 
 ![virtual network](../media/mod4_2.png)
 
-7. Under **Subnet name**, remove if **default** subnet is present.
+6. Under **Subnet name**, remove if **default** subnet is present.
 
-8. Click on **Add Subnet**, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**, select **Add**.
+7. Click on **Add Subnet**, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**, select **Add**.
 
 ![virtual network](../media/mod4_3.png)
 
-10. Click **Add Subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Click **Add**.
+8. Click **Add Subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Click **Add**.
 
 ![virtual network](../media/mod4_4.png)
 
-11. Click **Next : Security**.
+9. Click **Next : Security**.
 
-12. Under **BastionHost** select **Enable**, then enter the information from the table below.
+10. Under **BastionHost** select **Enable**, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
@@ -70,9 +63,9 @@ In this section, you will create a virtual network and a subnet.
 
 ![virtual network](../media/mod4_5.png)
 
-13. Click **Review + create**.
+11. Click **Review + create**.
 
-13. Click **Create**.
+12. Click **Create**.
 
 ## Task 2: Create backend servers
 
@@ -84,7 +77,13 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 2. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-3. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+3. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then fill the details against Storage account as well as File Share and provide a unique value present in the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+
+| **Name**                          | **Value**                                     |
+| --------------------------------- | --------------------------------------------- |
+| storage account                   | Select **Create new** Name: **blob<inject key="DeploymentID" enableCopy="true"/>** |
+| file share                        | Select **Create new** Name: **fs<inject key="DeploymentID" enableCopy="true"/>** |
+    
  
 4. In your lab VM Navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**.
 
@@ -122,7 +121,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subscription          | Select your subscription    |
    | Resource group        | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**  |
    | Name                  | **myIntLoadBalancer**       |
-   | Region                | **Default selected by Resource Group**            |
+   | Region                | **Default selected by Resource Group** |
    | Type                  | **Internal**                |
    | SKU                   | **Standard**                |
    
@@ -154,7 +153,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 1. On the Azure portal home page, click **All resources**, then click on **myIntLoadBalancer** from the resources list.
 
-2. Under **Settings**, select **Backend pools**, and then click **Add**.
+2. Under **Settings**, select **Backend pools**, and then click **+ Add**.
 
 3. On the **Add backend pool** page, enter the information from the table below.
 
@@ -165,7 +164,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    
 4. Under **IP configurations**, click **+ Add**.
 
-5. Select the checkboxes for all 3 VMs(**az700-vm1**,**az700-vm2** and **az700-vm3**) and then click **Save**.
+5. Select the checkboxes for all 3 VMs(**az700-vm1**,**az700-vm2** and **az700-vm3**) and then click **Add** then click **Save**.
 
    ![Picture 7](../media/add-vms-backendpool.png)
 
@@ -228,7 +227,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Create test VM
 
-1. On the Azure portal home page, click **Create a resource**, then **Compute**, then select **Virtual machine** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it). Click on **Create** then select **Virtual Machine**.
+1. On the Azure portal home page, click **Create a resource**, then **Compute**, then select **Virtual machine** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it). Click on **Create** then select **Azure Virtual Machine**.
 
 2. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
@@ -259,7 +258,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Public IP                                                    | Change to **None**            |
    | NIC network security group                                   | **Advanced**                  |
    | Configure network security group                             | Select the existing **myNSG** |
-   | Place this virtual machine behind an existing load balancing solution? | **Off** (unchecked)           |
+   | Load Balancing                                               | **None**                      |
 
 
 5. Click **Review + create**.
