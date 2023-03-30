@@ -28,7 +28,7 @@ In this task, you will create a new resource group.
 
 1. Select **Create**. 
 
-1. On the **Basics** tab, in **Resource group**, enter **fw-manager-rg-DeploymentID**.
+1. On the **Basics** tab, in **Resource group**, enter **fw-manager-rg-<inject key="DeploymentID" enableCopy="true"/>**.
 
 1. On the **Region**, select **(Europe)UK South** region from the list.
 
@@ -42,7 +42,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, select **Create a resource**, then in the search box, type **virtual network** and select **Virtual Network** when it appears.
 2. Click **Create**.
-3. In **Resource group**, select **Existing**, and select **fw-manager-rg-DeploymentID** as the name and click **OK**.
+3. In **Resource group**, select **Existing**, and select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** as the name and click **OK**.
 4. In **Name**, enter **Spoke-01**.
 5. In **Region**, select your region.
 6. Click **Next: IP Addresses**.
@@ -57,7 +57,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 Repeat steps 1 to 14 above to create another similar virtual network and subnet but using the following information:
 
-- Resource Group: **fw-manager-rg-DeploymentID** (select existing)
+- Resource Group: **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** (select existing)
 - Name: **Spoke-02**
 - Address space: **10.1.0.0/16** - (delete any other listed address spaces)
 - Subnet name: **Workload-02-SN**
@@ -77,7 +77,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
  ![virtual hub](../media/module6-hub.png)
 
-5. For **Resource group**, select **fw-manager-rg-DeploymentID**.
+5. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
 6. For **Region**, select your region.
 
@@ -123,12 +123,12 @@ In this task you will create your secured virtual hub using Firewall Manager.
 In this task you will connect the hub and spoke virtual networks. This is commonly known as peering.
 
 1. From the Azure portal home page, click **Resource groups**.
-2. Select the **fw-manager-rg-DeploymentID** resource group, then select the **Vwan-01** virtual WAN.
+2. Select the **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group, then select the **Vwan-01** virtual WAN.
 3. Under **Connectivity**, click **Virtual network connections**.
 4. Click **Add connection**.
 5. For **Connection name**, enter **hub-spoke-01**.
 6. For **Hubs**, select **Hub-01**.
-7. For **Resource group**, select **fw-manager-rg-{DepolymentID}**.
+7. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 8. For **Virtual network**, select **Spoke-01**.
 9. Click **Create**.
    ![Add hub and spoke connection to virtual WAN - Spoke 1](../media/connect-hub-spoke-vnet-1.png)
@@ -147,7 +147,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
    ```powershell
-   $RGName = "fw-manager-rg-DeploymentID"  (Replace with deployment ID)
+   $RGName = "fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>"  
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
@@ -172,7 +172,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
  ![Firewall policy](../media/module6policy1.png)
 
-4. In **Resource group**, select **fw-manager-rg-DeploymentID**.
+4. In **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
 5. Under **Policy details**, for the **Name**, enter **Policy-01**.
 
