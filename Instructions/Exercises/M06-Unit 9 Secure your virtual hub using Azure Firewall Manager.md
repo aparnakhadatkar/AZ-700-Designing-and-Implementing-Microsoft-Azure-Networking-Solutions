@@ -28,7 +28,7 @@ In this task, you will create a new resource group.
 
 1. Select **Create**. 
 
-1. On the **Basics** tab, in **Resource group**, enter **fw-manager-rg-DeploymentID**.
+1. On the **Basics** tab, in **Resource group**, enter **fw-manager-rg-<inject key="DeploymentID" enableCopy="true"/>**.
 
 1. On the **Region**, select **(Europe)UK South** region from the list.
 
@@ -42,9 +42,9 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, select **Create a resource**, then in the search box, type **virtual network** and select **Virtual Network** when it appears.
 2. Click **Create**.
-3. In **Resource group**, select **Existing**, and select **fw-manager-rg-DeploymentID** as the name and click **OK**.
+3. In **Resource group**, select **Existing**, and select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** as the name and click **OK**.
 4. In **Name**, enter **Spoke-01**.
-5. In **Region**, select your region.
+5. In **Region**, select your region which you given in the rg (For ex: **(Europe) UK south**).
 6. Click **Next: IP Addresses**.
 7. In **IPv4 address space**, enter **10.0.0.0/16**. 
 8. **Delete** any other address spaces listed here, such as **10.1.0.0/16**.
@@ -57,7 +57,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 Repeat steps 1 to 14 above to create another similar virtual network and subnet but using the following information:
 
-- Resource Group: **fw-manager-rg-DeploymentID** (select existing)
+- Resource Group: **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** (select existing)
 - Name: **Spoke-02**
 - Address space: **10.1.0.0/16** - (delete any other listed address spaces)
 - Subnet name: **Workload-02-SN**
@@ -71,15 +71,15 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 2. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-3. On the **Firewall Manager** page, click **virtual hubs**.
+3. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
 
 4. On the **Virtual hubs** page, click **Create new secured virtual hub**.
 
  ![virtual hub](../media/module6-hub.png)
 
-5. For **Resource group**, select **fw-manager-rg-DeploymentID**.
+5. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-6. For **Region**, select your region.
+6. For **Region**, select your region which you given in the rg (For ex: **UK south**)..
 
 7. For the **Secured virtual hub name**, enter **Hub-01**.
 
@@ -110,11 +110,11 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 16. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-17. On the **Firewall Manager** page, click **Virtual hubs**.
+17. On the **Firewall Manager** page, click **Virtual hubs** on left pane in **Deployments** section.
 
 18. Click **Hub-01**.
 
-19. Click **Public IP configuration**.
+19. Click **Public IP configuration** on left pane in **Azure Firewall** section.
 
 20. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
 
@@ -123,12 +123,12 @@ In this task you will create your secured virtual hub using Firewall Manager.
 In this task you will connect the hub and spoke virtual networks. This is commonly known as peering.
 
 1. From the Azure portal home page, click **Resource groups**.
-2. Select the **fw-manager-rg-DeploymentID** resource group, then select the **Vwan-01** virtual WAN.
-3. Under **Connectivity**, click **Virtual network connections**.
-4. Click **Add connection**.
+2. Select the **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group, then select the **Vwan-01** virtual WAN.
+3. On left pane under **Connectivity**, click **Virtual network connections**.
+4. Click **+ Add connection**.
 5. For **Connection name**, enter **hub-spoke-01**.
 6. For **Hubs**, select **Hub-01**.
-7. For **Resource group**, select **fw-manager-rg-{DepolymentID}**.
+7. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 8. For **Virtual network**, select **Spoke-01**.
 9. Click **Create**.
    ![Add hub and spoke connection to virtual WAN - Spoke 1](../media/connect-hub-spoke-vnet-1.png)
@@ -140,23 +140,23 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 ## Task 5: Deploy the servers
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane, click on **create storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **FirewallManager.json** and **FirewallManager.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M06**.
 
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
    ```powershell
-   $RGName = "fw-manager-rg-DeploymentID"  (Replace with deployment ID)
+   $RGName = "fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>"  
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-1. On the **Overview** page of **Srv-workload-01**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.0.1.4**).
+1. On the **Overview** page of **Srv-workload-01**, in the left-hand pane, in **settings** select **Networking**, then note down the **Private IP address** (e.g., **10.0.1.4**).
 
-1. On the **Overview** page of **Srv-workload-02**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.1.1.4**).
+1. On the **Overview** page of **Srv-workload-02**, in the left-hand pane, in **settings** select **Networking**, then note down the **Private IP address** (e.g., **10.1.1.4**).
 
 
 ## Task 6: Create a firewall policy and secure your hub
@@ -166,23 +166,23 @@ In this task you will first create your firewall policy, then secure your hub. T
 1. From the Azure portal home page, click **Firewall Manager**.
    - If the Firewall Manager icon does not appear on the homepage, then click **All services**. Then in the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-2. From **Firewall Manager**, click **Azure Firewall Policies**.
+2. From **Firewall Manager**, in left pane under **Security** click **Azure Firewall Policies**.
 
-3. Click **Create Azure Firewall Policy**.
+3. Click **+ Create Azure Firewall Policy**.
 
  ![Firewall policy](../media/module6policy1.png)
 
-4. In **Resource group**, select **fw-manager-rg-DeploymentID**.
+4. In **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-5. Under **Policy details**, for the **Name**, enter **Policy-01**.
+5. Under **Policy details**, for the **Name**, enter **Policy-01**, **Policy tier** choose **standard**.
 
-6. In **Region** select your region.
+6. In **Region** select your region which you provided while creating rg. (For example: (**UK south**))
 
 7. Click **Next : DNS Settings**.
 
  ![Firewall policy](../media/policy2.png)
 
-8. Click **Next : TLS Inspection (preview)**.
+8. Click **Next : TLS Inspection**.
 
  ![Firewall policy](../media/module6policy3.png)
 
@@ -190,7 +190,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
  ![Firewall policy](../media/module6policy4.png)
 
-10. On the **Rules** tab, click **Add a rule collection**.
+10. On the **Rules** tab, click **+ Add a rule collection**.
 
 11. On the **Add a rule collection** page, in **Name**, enter **App-RC-01**.
 
@@ -216,7 +216,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
     ![Add application rule collection to firewall policy](../media/add-rule-collection-firewall-policy-1.png)
 
-22. To add a DNAT rule so you can connect a remote desktop to the Srv-workload-01 VM, click **Add a rule collection**.
+22. To add a DNAT rule so you can connect a remote desktop to the Srv-workload-01 VM, click **+ Add a rule collection**.
 
 23. For **Name**, enter **dnat-rdp**.
 
@@ -244,7 +244,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 35. Click **Add**.
 
-36. To add a Network rule so you can connect a remote desktop from Srv-workload-01 to Srv-workload-02 VM, click **Add a rule collection**.
+36. To add a Network rule so you can connect a remote desktop from Srv-workload-01 to Srv-workload-02 VM, click **+ Add a rule collection**.
 
 37. For **Name**, enter **vnet-rdp**.
 
@@ -284,7 +284,7 @@ In this task you will associate the firewall policy with the virtual hub.
 
 1. From the Azure portal home page, click **Firewall Manager**.
    - If the Firewall Manager icon does not appear on the homepage, then click **All services**. Then in the search box, type **firewall manager** and select **Firewall Manager** when it appears.
-2. In **Firewall Manager**, under **Security**, click **Azure Firewall Policies**.
+2. In **Firewall Manager**, in left pane under **Security**, click **Azure Firewall Policies**.
 3. Select the checkbox for **Policy-01**.
 4. Select **Manage associations&gt;Associate hubs**.
 5. Select the checkbox for **Hub-01**.
@@ -299,9 +299,9 @@ In this task you will associate the firewall policy with the virtual hub.
 
 In this task you will ensure that network traffic gets routed through your firewall.
 
-1. In **Firewall Manager**, click **Virtual hubs**.
+1. In **Firewall Manager**, in left pane under **Deployments** select **Virtual hubs**.
 2. Click **Hub-01**.
-3. Under **Settings**, click **Security configuration**.
+3. In left pane under **Settings**, click **Security configuration**.
 4. In **Internet traffic**, select **Azure Firewall**.
 5. In **Private traffic**, select **Send via Azure Firewall**.
 6. Click **Save**. If warning appears click **Ok**.
@@ -318,7 +318,7 @@ In this part of the exercise, you will connect a remote desktop to the firewall 
 
 In this task you will test the application rule to confirm that it works as expected.
 
-1. Open **Remote Desktop Connection** on your PC.
+1. Open **Remote Desktop Connection** on your VM.
 
 2. In the **Computer** box, enter the **firewall's public IP address** (e.g., **51.143.226.18**).
 
@@ -334,7 +334,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 7. Click **OK**.
 
-8. Click **Yes** on the certificate message.
+8. Click **Yes** when the network page appears.
 
 9. Open Internet Explorer and click **OK** in the **Set up Internet Explorer 11** dialog box.
 
@@ -364,7 +364,7 @@ In this task you will test the network rule to confirm that it works as expected
 
 2. In the **Computer** box, enter the **private IP address** of **Srv-workload-02** (e.g., **10.1.1.4**).
 
-3. In the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **MyAdmin**, and a password of **TestPa$$w0rd!**.
+3. In the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **TestUser**, and a password of **TestPa$$w0rd!**.
 
 4. Click **OK**.
 
