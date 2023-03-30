@@ -29,7 +29,7 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Resource group   | Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/>* |
-   | Name             | WebAppContoso-1-{DeploymentID} |
+   | Name             | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
@@ -51,7 +51,7 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Resource group   | Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/>** |
-   | Name             | WebAppContoso-2-{DeploymentID} |
+   | Name             | WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
@@ -72,27 +72,34 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
    ![Azure Portal Search for Front Door](../media/frontdoor1.png)
 
-1. Select **Create front door and CDN profiles**. On the Compare offerings page, select **Quick create**. Then select **Continue to create a Front Door**.
+1. Select **Create front door and CDN profiles**. On the Compare offerings page, select **+ create**. Then select **Continue to create a Front Door**.
 
 1. On the Basics tab, enter or select the following information.
 
-
-   | **Setting**             | **Value**                                    |
-   | ----------------------- | -------------------------------------------- |
-   | Subscription            | Select your subscription.                    |
-   | Resource group          | Select ContosoResourceGroup                  |
-   | Resource group location | Accept default setting                       |
-   | Name                    | Enter FrontDoor-<inject key="DeploymentID" enableCopy="false"/> |
-   | Tier                    | Standard   |
-   | Endpoint Name           | FDendpoint-<inject key="DeploymentID" enableCopy="false"/> |
-   | Origin Type             | App Service| 
-   | Origin host name        | The name of the web app you previously deployed |
+    | **Setting**             | **Value**                                    |
+    | ----------------------- | -------------------------------------------- |
+    | Subscription            | Select your subscription.                    |
+    | Resource group          | Select Select the existing resource group **az700-m05-<inject key="DeploymentID" enableCopy="false"/>** |  
+    | Resource group location | Accept default setting                       |
+    | Name                    | Enter FrontDoor-<inject key="DeploymentID" enableCopy="false"/> |
+    | Tier                    | Standard   |
+    | Endpoint Name           | FDendpoint-<inject key="DeploymentID" enableCopy="false"/> |
+    | Origin Type             | App Service| 
+    | Origin host name        | The name of the web app you previously deployed WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
    
 1. Select **Review and Create**, and then select **Create**.
 
 1. Wait for the resource to deploy, and then select **Go to resource**.
+
 1. On the Front Door resource in the Overview blade, locate the **Origin Groups**, select the origin group created
-1. To update the origin group select the name **default-origin-group** from the list. Select **Add an origin** and add the second Web App. Select Add and then select Update. 
+
+1. To update the origin group select the name **default-origin-group** from the list. Select **Add an origin** and add the second Web App. Select Add and then select Update.
+
+    | **Setting**             | **Value**                                    |
+    | ----------------------- | -------------------------------------------- |
+    | Name                    | FDendpoint1-<inject key="DeploymentID" enableCopy="false"/> |
+    | Origin Type             | App Service| 
+    | Origin host name        | The name of the web app you previously deployed WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
    
 ## Task 3: View Azure Front Door in action
 
@@ -101,7 +108,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 1. On the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
 
 1. In a new browser tab, navigate to the Front Door endpoint FQDN. The default App Service page will be displayed.
-   ![Browser showing App Service information page](../media/defaultpage1.png)
+   ![Browser showing App Service information page](../media/defaultpage2.png)
 
 1. To test instant global failover in action, try the following steps:
 
