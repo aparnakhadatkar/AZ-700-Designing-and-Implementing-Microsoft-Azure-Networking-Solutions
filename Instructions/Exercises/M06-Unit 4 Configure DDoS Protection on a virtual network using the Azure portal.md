@@ -43,7 +43,7 @@ In this task, you will create a new resource group.
 
 3. On the **Basics** tab, in the **Resource group** list, select the resource group **MyResourceGroup-DeploymentID**.
 
-   >Note : Deployment ID can be found in the environment details tab
+   > **Note:** Deployment ID can be found in the environment details tab
 
 4. In the **Instance name** box, type **MyDdoSProtectionPlan**, then click **Review + create**.
 
@@ -73,7 +73,7 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
 6. In the **DDoS protection plan** drop-down list, select **MyDdosProtectionPlan**.
 
-   ![Create virtual network - Security tab](../media/create-virtual-network-security-for-ddos-protection.png)
+   ![Create virtual network - Security tab](../media/upd-create-virtual-network-security-for-ddos-protection.png)
 
 7. Click **Review + create**.
 
@@ -89,21 +89,21 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 2. On the **Public IP address** page, click **Create**.
 
-3. On the **Create public IP address** page, under **SKU**, select **Basic**.
+3.  On the **Create public IP address** page under the Basics tab, select **MyResourceGroup-{DeploymentID}** resource group from the list.
 
-4. In the **Name** box, type **MyPublicIPAddress**.
+4. In the **Name** box, type **MyPublicIPAddress**. 
 
-5. Under **IP address assignment**, select **Static**.
+5. For **SKU**, select **Standard**.
 
-6. In **DNS name label**, type **mypublicdns-DeploymentID**.
+6. For **IP address assignment**, select **Static**.
 
- >Note : DeploymentID can be found in the evnironment tab.
+7. In **DNS name label**, type **mypublicdns-DeploymentID**.
 
-7. Select **MyResourceGroup-{DeploymentID}** resource group from the list.
+    > **Note:** DeploymentID can be found in the evnironment tab.
 
-   ![Create public IP address](../media/create-public-ip-address-for-ddos-telemetry.png)
+    ![Create public IP address](../media/updt-create-public-ip-address-for-ddos-telemetry.png)
 
-8. Click **Create**.
+8. Click **Review + Create** and select **Create**.
 
 9. On the Azure home page, click **All resources**.
 
@@ -173,14 +173,12 @@ In this step you will create a virtual machine, assign a public IP address to it
    | SSH public key source | **Generate new key pair**                                    |
    | Key pair name         | **myvirtualmachine-ssh-key**                                 |
 
-
+    ![Create virtual machine page](../media/create-virtual-machine-to-test-ddos.png)
 
 
 4. Click **Review + create**.
 
 5. Click **Create**.
-
-   ![Create virtual machine page](../media/create-virtual-machine-to-test-ddos.png)
 
 6. In the **Generate new key pair** dialog box, click **Download private key and create resource**.
 
@@ -212,19 +210,17 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 3. Under **Monitoring**, select **Alerts**.
 
-4. Click **New alert rule**.
+4. Click on **+Create** and select **alert rule** from the drop down list.
 
-5. On the **Create alert rule** page, under **Scope**, click **Edit resource**.
+5. On the **Create alert rule** page, under **Scope**, click **+select a scope**.
 
 6. In the **Select a resource** pane, in the **Filter by resource type** box, scroll down the list and select **Public IP addresses**.
 
-   ![New alert rule change scope to public IP address](../media/new-alert-rule-change-scope-to-public-ip-address-1.png)
-
-7. In the **Resource** list, select **MyPublicIPAddress**, then click **Done**.
-
-8. On the **Create alert rule** page, under **Condition**, click **Add condition**.
-
-9. Select **Under DDoS attack or not**.
+7. In the **Resource** list, select **MyPublicIPAddress**, then click **Apply**.
+    
+     ![New alert rule change scope to public IP address](../media/new-alert-rule-change-scope-to-public-ip-address-1.png)
+    
+8. On the **Create alert rule** page, under **Condition**, for signal name select **Under DDoS attack or not** from the drop-down list.
 
    ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-1.png)
 
