@@ -54,17 +54,15 @@ In this exercise, you will:
 ## Task 2: Retrieve your Service key
  
 
-1. You can view all the circuits that you created by selecting **All services &gt; Networking &gt; ExpressRoute circuits**.
-
-    ![Azure portal - Create ExpressRoute resource menu](../media/expressroute-circuit-menu(1).png)
+1. On Azure Portal page, in Search resources, services and docs,  Searach and then select **ExpressRoute circuit**.
 
 1. All ExpressRoute circuits created in the subscription will appear here. 
 
-    ![Azure portal - show existing Expressroute circuits](../media/image3(1).png)
+    ![Azure portal - show existing Expressroute circuits](../media/expressRoute1.png)
 
 1. The circuit page displays the properties of the circuit. The service key appears in the service key field. Your service provider will need the Service Key to complete the provisioning process. The service key is specific to your circuit. **You must send the service key to your connectivity provider for provisioning.**
 
-    ![Azure portal - ExpressRoute Circuit properties showing service key](../media/image-(1).png)
+    ![Azure portal - ExpressRoute Circuit properties showing service key](../media/securitykey.png)
 
 1. On this page, **Provider status** gives you the current state of provisioning on the service-provider side. **Circuit status** provides you the state on the Microsoft side. 
 
