@@ -20,6 +20,8 @@ In this exercise, you will:
 
 ## Task 1: Create a virtual network
 
+1. Click on the Azure Portal icon on the VM desktop and login with the Azure credentials from the Lab Environment details page.
+
 1. On the Azure Portal home page, select **+ Create a resource**.
 
 2. Search for virtual network and then select **Virtual network** from the results.
@@ -27,7 +29,7 @@ In this exercise, you will:
 3. Select **+** **Create**.
 
 4. Enter, or select, the following information
-   ![Graphical user interface, text, application Description automatically generated](../media/create-virtual-network.png)
+   ![Graphical user interface, text, application Description automatically generated](../media/az700-unit5.png)
 
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
@@ -90,7 +92,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 2. In Network security groups, select **+ Create**. 
 
 3. Enter or select, the following information: 
-   ![Graphical user interface, text, application Description automatically generated](../media/create-network-security-group.png)
+   ![Graphical user interface, text, application Description automatically generated](../media/az700-nsg.png)
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
@@ -99,7 +101,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | Name           | ContosoPrivateNSG                                            |
    | Location       | Select **East US**                                           |
 
-4. select **Review + create**, then click **Create**:
+4. Select **Review + create**, then click **Create**:
 
 5. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
    ![Graphical user interface, text, application, email Description automatically generated](../media/nsg-deployment-complete.png)
