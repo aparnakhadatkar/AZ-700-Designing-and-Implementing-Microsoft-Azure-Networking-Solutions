@@ -22,11 +22,16 @@ In this exercise, you will:
    
 1. On the ExpressRoute circuits page, select **+Create**.
 
-1. On the **Create ExpressRoute** page, select the existing resource group **az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>**, **Region** select the resouces group region , and Enter **Name** as **TestERCircuit-<inject key="DeploymentID" enableCopy="false"/>** for the circuit. Then select **Next: Configuration&gt;**.
+1. On the **Create ExpressRoute** page, 
+ 
+   | **Setting**    | **Value**                                           |
+   | -------------- | --------------------------------------------------- |
+   | Resource group | Select **existing**<br /><br />Name: **az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Region         | Select the same region where your resource group was created |                 |
+   | Name           | Enter **TestERCircuit-<inject key="DeploymentID" enableCopy="false"/>** for the circuit |
+   |Select **Next: Configuration&gt;**|
 
     ![Azure portal - Create ExpressRoute basic tab](../media/image2.png)
-
-   **Note**: Deployment ID can be obtained from environment details page.
 
 1. When you are filling in the values on this page, make sure that you specify the correct SKU tier (Local, Standard, or Premium) and data metering billing model (Unlimited or Metered).
 
