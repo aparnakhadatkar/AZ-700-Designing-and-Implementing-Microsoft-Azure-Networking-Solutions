@@ -43,8 +43,6 @@ In this exercise, you will:
    | **SUBNETS**       |                                    |
    | Subnet name       | Change **default** to **AGSubnet** |
    | Address range     | 10.0.0.0/24                        |
-   | Subnet name       | BackendSubnet                      |
-   | Address range     | 10.0.1.0/24                        |
 
 6. Select **OK** to return to the Create application gateway Basics tab.
 
@@ -112,6 +110,23 @@ In this exercise, you will:
 
 27. Select **Create** to create the virtual network, the public IP address, and the application gateway. 
 
+    > **Note**: Please wait for 2 min.
+
+28. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter Virtual networks, and then select **Virtual networks** from the results.
+
+29. On the Virtual networks page select **ContosoVNet**. 
+ 
+30. On the ContosoVNet page from left side menu under Settings and click **Subnet**.
+
+31. On the ContosoVNet | Subnets page select **+ Subnet**. 
+
+32. On Add subnet page fill the follwing details(leave other field as default) and click on **save**.
+
+    | **Setting**           | **Value**   |
+    | --------------------- | ----------- |
+    | Name                  | BackendSubnet                      |
+    | Subnet address range  | 10.0.1.0/24                        |
+
 It may take several minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
 
 ## Task 2: Add backend targets
@@ -130,7 +145,7 @@ To do this, you'll:
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter virtual machine, and then select **Virtual machines** from the results. 
 
-2. On the Virtual machines page, select **+ Create** > **+ Virtual machine**.
+2. On the Virtual machines page, select **+ Create** > **Azure Virtual machine**.
 
 3. In **Create a virtual machine**, enter, or select the following information (If the setting is not listed, use the default value):
 
@@ -150,7 +165,7 @@ To do this, you'll:
    | **Networking**       |                                                  |
    | Virtual network      | ContosoVnet                                      |
    | Subnet               | BackendSubnet (10.0.1.0/24)                      |
-   | **Management**       |                                                  |
+   | **Monitoring**       |                                                  |
    | Boot diagnostics     | Disable                                          |
 
 4. Accept the other defaults and then select **Review + create**.
@@ -176,9 +191,9 @@ In this example, you install IIS on the virtual machines to verify Azure created
 ```Azure PowerShell
 Set-AzVMExtension -ResourceGroupName az700-m05-{DeploymentID} -ExtensionName IIS -VMName BackendVM1 -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.4 -SettingString '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}' -Location WestUS
 ```
->> Note: Run all the command in single line.
+   >> Note: Run all the command in single line.
 
-4. Create a second virtual machine and install IIS by using the Create virtual machines and Install IIS for testing steps that you previously completed. Use BackendVM2 for the virtual machine name and for the **VMName** setting of the **Set-AzVMExtension** cmdlet.
+5. Create a second virtual machine and install IIS by using the Create virtual machines and Install IIS for testing steps that you previously completed. Use BackendVM2 for the virtual machine name and for the **VMName** setting of the **Set-AzVMExtension** cmdlet.
 
 ## Task 3: Add backend servers to backend pool
 

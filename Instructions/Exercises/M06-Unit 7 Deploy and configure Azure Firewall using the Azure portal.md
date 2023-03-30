@@ -26,7 +26,7 @@ In this task, you will create a new resource group.
 
 1. Select **Create**. 
 
-1. On the **Basics** tab, in **Resource group**, enter **Test-FW-RG-DeploymentID**.
+1. On the **Basics** tab, in **Resource group**, enter **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. On the **Region**, select **(Europe)UK South** region from the list.
 
@@ -42,7 +42,7 @@ In this task, you will create a single virtual network with two subnets.
 
 2. Click **Create**.
 
-3. Select the **Test-FW-RG-DeploymentID** resource group you created previously.
+3. Select the **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** resource group you created previously.
 
  >Deployment ID can be found in environment tab.
 
@@ -91,16 +91,18 @@ In this task, you will create the workload virtual machine and place it in the W
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG-DeploymentID**                                  |
+   | Resource group       | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**                                  |
    | Virtual machine name | **Srv-Work**                                                 |
    | Region               | Your region                                                  |
    | Availability options | **No infrastructure redundancy required**                    |
-   | Image                | **Windows Server 2022 Datacenter- Gen2**                   |
-   | Size                 | Select **Standard_D2s_v3** - 2vcpus, 8GiB memory**, 
+   | Image                | **Windows Server 2022 Datacenter- Gen2**                     |
+   | Size                 | Select **Standard_D2s_v3** - 2vcpus, 8GiB memory**           |
    | Username             | **MyAdmin**                                                  |
    | Password             | **TestPa$$w0rd!**                                            |
    | Confirm password     | **TestPa$$w0rd!**                                            |
    | Public inbound ports | Select **None**                                              |
+   
+   
 
 
    ![Create a virtual machine - Basics tab](../media/create-vm-for-azure-firewall-test-basics.png)
@@ -113,7 +115,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 7. For **Public IP**, select **None**.
 
-8. Click **Next : Management**.
+8. Click **Next : Management** and click **Next : Monitoring**.
 
 9. Under **Monitoring**, set **Boot diagnostics** to **Disable**.
 
@@ -139,7 +141,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG-DeploymentID**                                  |
+   | Resource group       | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**                                  |
    | Virtual machine name | **Test-FW01**                                                |
    | Region               | Your region                                                  |
    | Firewall tier        | **Standard**                                                 |
@@ -185,7 +187,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    | **Setting**              | **Value**                   |
    | ------------------------ | ------------------------    |
    | Subscription             | Select your subscription    |
-   | Resource group           | **Test-FW-RG-DeploymentID** |
+   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** |
    | Region                   | Your region                 |
    | Name                     | **Firewall-route**          |
    | Propagate gateway routes | **Yes**                     |
@@ -211,15 +213,17 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 12. In **Route name**, enter **fw-dg**.
 
-13. In **Address prefix**, enter **0.0.0.0/0**.
+13. In **Destination address prefix** , select **IP Addresses**
+
+13. In **Destination IP addresses/CIDR ranges**, enter **0.0.0.0/0**.
 
 14. In **Next hop type**, select **Virtual appliance**.
 
 15. In **Next hop address**, type the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**)
 
-16. Click **OK**.
+16. Click **ADD**.
 
-    ![Add firewall route](../media/add-firewall-route.png)
+    ![Add firewall route](../media/module6-unit7-task5-step16.png)
 
  
 
@@ -332,7 +336,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. On the Azure portal home page, select **Resource groups**.
 
-2. In the list of resource groups, click your resource group, **Test-FW-RG-{DeploymentID}**.
+2. In the list of resource groups, click your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
 3. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work350**).
 
