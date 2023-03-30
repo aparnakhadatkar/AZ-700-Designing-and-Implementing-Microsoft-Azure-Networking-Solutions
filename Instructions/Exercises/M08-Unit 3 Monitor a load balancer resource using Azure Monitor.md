@@ -31,7 +31,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. Log in to the Azure portal.
 
-2. On the Azure portal, use the Search resources, services, and docs text box at the top of the Azure portal page to search for and navigate to the Virtual network blade, then, on the Virtual network  blade, select + Create 
+2. On the Azure portal, use the Search resources, services, and docs text box at the top of the Azure portal page to search for and navigate to the Virtual networks blade, then, on the Virtual networks  blade, select + Create 
 
 3. On the **Basics** tab, use the information in the table below to create the virtual network.
 
