@@ -35,7 +35,7 @@ In this section, you will create two instances of a web application deployed in 
    | Runtime stack    | **ASP.NET V4.8**                                             |
    | Operating system | **Windows**                                                  |
    | Region           | **East US**                                                  |
-   | Windows Plan     | Select **Name: **ContosoAppServicePlanEastUS**               |
+   | Windows Plan     | Select **Create new** **Name: **ContosoAppServicePlanEastUS** |
    | Sku and size     | **Standard S1 100 total ACU, 1.75-GB  memory**               |
 
    
@@ -54,14 +54,14 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                         |
    | -------------- | ------------------------------------------------------------      |
-   | Resource group | Select **Existing**  Name: **Contoso-RG-TM2-<inject key="DeploymentID" enableCopy="false"/>**       |
-   | Name           | **ContosoWebAppWestEurope-<inject key="DeploymentID" enableCopy="false"/>**                                       |
+   | Resource group | Select **Existing**  Name: **Contoso-RG-TM2-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Name           | **ContosoWebAppWestEurope-<inject key="DeploymentID" enableCopy="false"/>** |
    | Region         | **West Europe**                                                   |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
    
 
-8. On the Azure home page, click **All services**, in the left navigation menu, select **Web**, and then click **App Services**.
+8. On the Azure home page, click **All services**, in the left navigation menu, search **App Services**, and then click **App Services**.
 
 9. You should see the two new web apps listed.
 
@@ -99,7 +99,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. On the Azure portal home page, click **All resources**, then click on **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
 
-2. Under **Settings**, select **Endpoints**, and then click **Add**.
+2. Under **Settings**, select **Endpoints**, and then click **+ Add**.
 
    ![Picture 21](../media/create-tmendpoints-1.png)
 
@@ -127,7 +127,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 6. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
-7. on the left pane in settings select **Configuration**, then change *protocol* **HTTP** to **HTTPS**.
+7. on the left pane in settings select **Configuration**, then change *protocol* **HTTP** to **HTTPS**, *port* **443** then **Save** it.
 
    ![Picture 26](../media/protocol.png)
 
@@ -141,7 +141,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 In this section, you will check the DNS name of your Traffic Manager profile, and then you will configure the primary endpoint so that it is unavailable. You will then verify that the web app is still available, to test that the Traffic Manager profile is successfully sending traffic to the failover endpoint.
 
-1. On the **Contoso-TMProfile-{Deploymentid}** page, click **Overview**.
+1. On the **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** page, click **Overview**.
 
 2. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
