@@ -31,13 +31,9 @@ In this section, you will create a virtual network and a subnet.
 
 1. Log in to the Azure portal.
 
-2. On the Azure portal home page, click **Create a resource**, then **Networking**, then select **Virtual Network** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+2. On the Azure portal, use the Search resources, services, and docs text box at the top of the Azure portal page to search for and navigate to the Virtual networks blade, then, on the Virtual networks  blade, select + Create 
 
-3. Click **Create**.
-
-   ![create virtual network](../media/createVnet1.png)
-
-4. On the **Basics** tab, use the information in the table below to create the virtual network.
+3. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
@@ -48,21 +44,21 @@ In this section, you will create a virtual network and a subnet.
 
    **Note**: Deployment ID can be obtained from environment details tab.
 
-5. Click **Next : IP Addresses**.
+4. Click **Next : IP Addresses**.
 
-6. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
+5. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
 
-7. Above **Subnet name**, select **+ Add subnet**.
+6. Above **Subnet name**, select **+ Add subnet**.
 
-8. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+7. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
    ![Add subnet](../media/subnet8.png)
 
-9. Click **Add**.
+8. Click **Add**.
 
-10. Click **Next : Security**.
+9. Click **Next : Security**.
 
-11. Under **BastionHost** select **Enable**, then enter the information from the table below.
+10. Under **BastionHost** select **Enable**, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                              |
     | --------------------------------- | ------------------------------------------------------ |
@@ -72,9 +68,9 @@ In this section, you will create a virtual network and a subnet.
 
     ![Bastion Host](../media/bastion.png)
 
-12. Click **Review + create**.
+11. Click **Review + create**.
 
-13. Click **Create**.
+12. Click **Create**.
 
 ## Task 2: Create the load balancer
 
@@ -100,9 +96,13 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Region                | Default selected by Resource group         |
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
-   | Select Next           |                          |
-   | Add a frontend ipconfiguration |                 |
-   | Frontend Name         | **LoadBalancerFrontEnd** |
+   | Select Next Add a frontend ipconfiguration | 
+   
+6. On the **Frontend IP Configuration** tab, click on **+ Add a frontend IP configuration** use the information in the table below to create the load balancer.
+
+   | **Setting**           | **Value**                |
+   | --------------------- | ------------------------ |
+   |Frontend Name          | **LoadBalancerFrontEnd** |
    | Subnet                | **myBackendSubnet**      |
    | Assignment            | **Dynamic** then Click **Add**|
 
@@ -150,7 +150,7 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Path                | **/**             |
    | Interval            | **15**            |
   
-3. Click **Save**.
+3. Click **Add**.
 
    ![Show health probe created in load balancer](../media/create-healthprobe1.png)
 
@@ -175,6 +175,8 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
    | Enable Floating IP     | **Unselect**             |
+   
+   >**Note**: If you dont't find **myHealthProbe** option in **Health probe** dropdown, please sign out and sign in, reperform the above step.
 
 3. Click **Save**.
 
@@ -189,11 +191,11 @@ In this section, you will create three VMs, that will be in the same availabilit
 
    ![](../media/lb1-1.png)
 
-2. Enter a unique name for **storage account & file share** and click on create storage.
+2. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share**, then click on Create Storage.
 
    ![](../media/lb2-1.png)
 
-3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
+3. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and navigate to the location **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**. Upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json one by one into the Cloud Shell home directory.
 
 4. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:(Replace Deployment ID with its value from environment details tab)
 
@@ -213,7 +215,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 3. Under **IP Configuration**, click **Add**.
 
-4. Select the checkboxes for all 3 VMs (**az700-vm1**, **az700-vm2**, and **az700-vm3**), then click **Add**.
+4. Under Virtual machine, select the checkboxes for all 3 VMs (**az700-vm1**, **az700-vm2**, and **az700-vm3**), then click **Add**.
 
 5. On the **myBackendPool** page, click **Save**.
 
@@ -244,6 +246,8 @@ In this section, you will create three VMs, that will be in the same availabilit
 9. To remove the existing default web home page, run the following command in PowerShell: Remove-Item C:\inetpub\wwwroot\iisstart.htm
 
 10. To add a new default web home page and add content to it, run the following command in PowerShell: Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
+
+    >**Note**: Plesae use >> icon to copy paste the commands into windows powershell.
 
 11. Close the Bastion session to **az700-vm1** by closing the browser tab.
 

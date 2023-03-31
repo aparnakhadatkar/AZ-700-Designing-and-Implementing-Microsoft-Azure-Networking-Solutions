@@ -36,8 +36,6 @@ In this exercise, you will:
    | Virtual Network Name | CoreServicesVNet                                                                                 |
    | Location             | West US                                                                                          |
 
-   **Note**: Deployment ID can be obtained from environment details tab
-
 1. Select **Next : IP addresses**.
 
 1. On the **IP Addresses** tab, click on **Add an IP address space**.
@@ -48,7 +46,7 @@ In this exercise, you will:
    
    | **Setting**          | **Value**                                                    |
    | -------------------- | --------------------------------                             |
-   | Address space type   | the name of the Azure subscription you are using in this lab |
+   | Address space type   | IPv4 |
    | Starting address     | 10.20.0.0                                                    |
    | Address space size   | /16                                                          |                                                  
 
@@ -56,7 +54,7 @@ In this exercise, you will:
    
 1. Select **Add**.
 
-1. On the **IP address** tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
+1. On the **10.20.0.0/16 IP address space** of **IP Addresses**  tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
 
    | **Setting**                  | **Value**               |
    | ---------------------------- | ----------------------- |
@@ -87,11 +85,11 @@ In this exercise, you will:
    | ------------------------- | --------------------------                                                     |
    | **Project details**       |                                                                                |
    | Subscription              | the name of the Azure subscription you are using in this lab                   |
-   | Resource Group            | Automatically derived from virtual network’s resource group **az700-m03-rg01-{Deployment ID}** |
+   | Resource Group            | Automatically derived from virtual network’s resource group **az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>** |
    
     **Note:** After selecting the existed Virtual network, the value of resource group will be automatically derived from virtual network’s resource group name.
     
-   ![image](../media/image1-1.png)
+   ![image](../media/rg-vnet1.png)
 
    | **Setting**               | **Value**                                                                       |
    | ------------------------- | --------------------------                                                      |
