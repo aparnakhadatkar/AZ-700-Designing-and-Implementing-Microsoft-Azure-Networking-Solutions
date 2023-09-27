@@ -16,35 +16,33 @@ In this exercise, you will:
 
 ## Task 1: Create a private DNS Zone
 
-1. Go to [Azure Portal](https://portal.azure.com/).
+1. On the Azure portal locate the search bar at the top of the page. Search for **Private DNS zones** and select **Private DNS zones** under services that appears in the results under **Services**.
+  ‎![](../media/create-private-dns-zone.png)
 
-2. On the Azure home page, in the search bar, enter dns, and then select **Private DNS zones**.  
-   ‎![Azure Portal home page with dns search.](../media/create-private-dns-zone.png)
+1. In Private DNS zones, select **+ Create**.
 
-3. In Private DNS zones, select **+ Create**.
-
-4. Use the information in the following table to create the private DNS zone.
+1. Use the information in the following table to create the private DNS zone.
 
    | **Tab**         | **Option**                             | **Value**            |
    | --------------- | -------------------------------------- | -------------------- |
    | Basics          | Resource group                         | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
    |                 | Name                                   | Contoso.com          | 
-   | Review + create | Review your settings and select Create |                      |
 
+1. Select **Review + create** and **create**
 
-5. Wait until the deployment is complete, and then select **Go to resource**.
+   **Note**: Please Wait until the deployment is completed, and then select **Go to resource**.
 
-6. Verify that the zone has been created.
+1. Verify that the zone has been created.
 
 ## Task 2: Link subnet for auto registration
 
 1. In Contoso.com, under **Settings**, select **Virtual network links**.
 
-2. On Contoso.com | Virtual network links, select **+ Add**.
+1. On Contoso.com | Virtual network links, select **+ Add**.
 
-![contoso.com | Virtual links with + Add highlighted.](../media/add-network-link-dns.png)
+   ![](../media/add-network-link-dns.png)
 
-3. Use the information in the following table to add the virtual network link.
+1. Use the information in the following table to add the virtual network link.
 
    | **Option**                          | **Value**                               |
    | ----------------------------------- | --------------------------------------- |
@@ -54,13 +52,13 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                |
    | Review your settings and select OK. |                                         |
 
-4. Wait for 2 mins Successfully created virtual network link
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link
    
-4. Select **Refresh**.
+1. Select **Refresh**.
 
-5. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
+1. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
 
-6. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
+1. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
 
    | **Option**                          | **Value**                                |
    | ----------------------------------- | ---------------------------------------- |
@@ -70,25 +68,27 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                 |
    | Review your settings and select OK. |                                          |
 
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link
 
-7. Select **Refresh**.
+1. Select **Refresh**.
 
-8. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
+1. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
 
-9. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
+1. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
 
-| **Option**                          | **Value**                           |
-| ----------------------------------- | ----------------------------------- |
-| Link name                           | ResearchVnetLink                    |
-| Subscription                        | No changes required                 |
-| Virtual Network                     | select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
-| Enable auto registration            | Selected                            |
-| Review your settings and select OK. |                                     |
+   | **Option**                          | **Value**                           |
+   | ----------------------------------- | ----------------------------------- |
+   | Link name                           | ResearchVnetLink                    |
+   | Subscription                        | No changes required                 |
+   | Virtual Network                     | select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
+   | Enable auto registration            | Selected                            |
+   | Review your settings and select OK. |                                     |
+  
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link
 
+1. Select **Refresh**.
 
-10. Select **Refresh**.
-
-11. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
+1. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
 
  ##  Task 3: Create Virtual Machines to test the configuration
 
