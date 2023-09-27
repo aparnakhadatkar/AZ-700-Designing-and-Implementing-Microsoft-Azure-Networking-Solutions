@@ -55,79 +55,91 @@ In this exercise, you will:
 
 ## Task 1: Create the CoreServicesVnet virtual network and subnets
 
-1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  ![Azure portal home page Global Search bar results for virtual network.](../media/global-search-bar.PNG)
-2. Select **Create** on the Virtual networks page.  ![Create a virtual network wizard.](../media/create-virtual-network.png)
-3. Use the information in the following table to create the CoreServicesVnet virtual network.  
-   ‎Remove or overwrite the default IP Address space![ip address configuration for azure virtual network deployment ](../media/default-vnet-ip-address-range-annotated.png)
-
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services. that appears in the results under **Services**.
+   
+  ![](../media/unit4-image.png)
+1. Select **+ Create** on the Virtual networks page. 
+   
+1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **CoreServicesVnet** virtual network and select **IP Address** tab.
+ 
+   | **Tab**      | **Option**         | **Value**            |
+   | ------------ | ------------------ | -------------------- |
+   | Basics       | Subscription       | Leave default        |
+   | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
+   |              | Name               | CoreServicesVnet     |
+   |              | Region             | (US) East US         |
  
 
-| **Tab**      | **Option**         | **Value**            |
-| ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
-|              | Name               | CoreServicesVnet     |
-|              | Region             | (US) East US         |
-| IP Addresses | IPv4 address space | 10.20.0.0/16         |
+1. On the **IP Address** tab of **Create virtual network** use the information in the following table.
 
- 4. Use the information in the following table to create the CoreServicesVnet subnets.
+   -  Remove the default IP Address space by clicking on **Delete the address space**
+      ![](../media/unit4-image2.png)
 
- 5. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
+   -  After deleting **address space**, select **Add IPV4 Address space** and specify the following :
+      ![](../media/unit4-image3.png)
+      
+         |   **Tab**      | **Option**         | **Value**             |
+         | IP Addresses  | IPv4 address space | 10.20.0.0              |
+         |               | IPv4 address Size  | /16                    |
 
-| **Subnet**             | **Option**           | **Value**              |
-| ---------------------- | -------------------- | ---------------------- |
-| GatewaySubnet          | Subnet name          | GatewaySubnet          |
-|                        | Subnet address range | 10.20.0.0/27           |
-| SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
-|                        | Subnet address range | 10.20.10.0/24          |
-| DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
-|                        | Subnet address range | 10.20.20.0/24          |
-| PublicWebServiceSubnet | Subnet name          | PublicWebServiceSubnet |
-|                        | Subnet address range | 10.20.30.0/24          |
+ 1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
- 6. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+    | **Subnet**             | **Option**           | **Value**              |
+    | ---------------------- | -------------------- | ---------------------- |
+    | GatewaySubnet          | Subnet name          | GatewaySubnet          |
+    |                        | Subnet Template      | Select **Virtual Network Gateway** |
+    |                        | Subnet address range | 10.20.0.0/27           |
+    | SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
+    |                        | Subnet address range | 10.20.10.0/24          |
+    | DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
+    |                        | Subnet address range | 10.20.20.0/24          |
+    | PublicWebServiceSubnet | Subnet name          | PublicWebServiceSubnet |
+    |                        | Subnet address range | 10.20.30.0/24          |
 
- 7. Verify your configuration passed validation, and then select **Create**.
+ 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+
+ 1. Verify your configuration passed validation, and then select **Create**.
  
- 8. Repeat steps 1 -8 for each VNet based on the tables below  
+ 1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2**.
 
 ## Task 2: Create the ManufacturingVnet virtual network and subnets
 
 
-| **Tab**      | **Option**         | **Value**             |
-| ------------ | ------------------ | --------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
-|              | Name               | ManufacturingVnet     |
-|              | Region             | (Europe) West Europe  |
-| IP Addresses | IPv4 address space | 10.30.0.0/16          |
+   | **Tab**      | **Option**         | **Value**             |
+   | ------------ | ------------------ | --------------------- |
+   | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
+   |              | Name               | ManufacturingVnet     |
+   |              | Region             | (Europe) West Europe  |
+   | IP Addresses | IPv4 address space | 10.30.0.0/16          |
 
 
 
-| **Subnet**                | **Option**           | **Value**                 |
-| ------------------------- | -------------------- | ------------------------- |
-| ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
-|                           | Subnet address range | 10.30.10.0/24             |
-| SensorSubnet1             | Subnet name          | SensorSubnet1             |
-|                           | Subnet address range | 10.30.20.0/24             |
-| SensorSubnet2             | Subnet name          | SensorSubnet2             |
-|                           | Subnet address range | 10.30.21.0/24             |
-| SensorSubnet3             | Subnet name          | SensorSubnet3             |
-|                           | Subnet address range | 10.30.22.0/24             |
- 
+   | **Subnet**                | **Option**           | **Value**                 |
+   | ------------------------- | -------------------- | ------------------------- |
+   | ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
+   |                           | Subnet address range | 10.30.10.0/24             |
+   | SensorSubnet1             | Subnet name          | SensorSubnet1             |
+   |                           | Subnet address range | 10.30.20.0/24             |
+   | SensorSubnet2             | Subnet name          | SensorSubnet2             |
+   |                           | Subnet address range | 10.30.21.0/24             |
+   | SensorSubnet3             | Subnet name          | SensorSubnet3             |
+   |                           | Subnet address range | 10.30.22.0/24             |
+    
 
 ## Task 3: Create the ResearchVnet virtual network and subnets
 
 
-| **Tab**      | **Option**         | **Value**            |
-| ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
-|              | Name               | ResearchVnet         |
-|              | Region             | Southeast Asia       |
-| IP Addresses | IPv4 address space | 10.40.0.0/16         |
+   | **Tab**      | **Option**         | **Value**            |
+   | ------------ | ------------------ | -------------------- |
+   | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
+   |              | Name               | ResearchVnet         |
+   |              | Region             | Southeast Asia       |
+   | IP Addresses | IPv4 address space | 10.40.0.0/16         |
 
-| **Subnet**           | **Option**           | **Value**            |
-| -------------------- | -------------------- | -------------------- |
-| ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
-|                      | Subnet address range | 10.40.0.0/24         |
+   | **Subnet**           | **Option**           | **Value**            |
+   | -------------------- | -------------------- | -------------------- |
+   | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
+   |                      | Subnet address range | 10.40.0.0/24         |
  
 
 ## Task 4: Verify the creation of VNets and Subnets
