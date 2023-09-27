@@ -72,15 +72,15 @@ In this exercise, you will:
 
 1. On the **IP Address** tab of **Create virtual network** use the information in the following table.
 
-   -  Remove the default IP Address space by clicking on **Delete the address space**
+   - Remove the default IP Address space by clicking on **Delete the address space**
       ![](../media/unit4-image2.png)
 
-   -  After deleting **address space**, select **Add IPV4 Address space** and specify the following :
+   - After deleting **address space**, select **Add IPV4 Address space** and specify the following :
       ![](../media/unit4-image3.png)
-      
-         |   **Tab**      | **Option**         | **Value**             |
-         | IP Addresses  | IPv4 address space | 10.20.0.0              |
-         |               | IPv4 address Size  | /16                    |
+
+    |    **Tab**      | **Option**         | **Value**             |
+    | IP Addresses  | IPv4 address space | 10.20.0.0              |
+    |               | IPv4 address Size  | /16                    |
 
  1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
