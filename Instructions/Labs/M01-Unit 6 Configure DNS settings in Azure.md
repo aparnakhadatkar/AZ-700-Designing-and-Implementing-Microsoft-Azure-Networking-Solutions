@@ -25,12 +25,11 @@ In this exercise, you will:
 
 4. Use the information in the following table to create the private DNS zone.
 
-| **Tab**         | **Option**                             | **Value**            |
-| --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup |
-|                 | Name                                   | Contoso.com          |
-| Tags            | No changes required                    |                      |
-| Review + create | Review your settings and select Create |                      |
+   | **Tab**         | **Option**                             | **Value**            |
+   | --------------- | -------------------------------------- | -------------------- |
+   | Basics          | Resource group                         | ContosoResourceGroup |
+   |                 | Name                                   | Contoso.com          | 
+   | Review + create | Review your settings and select Create |                      |
 
 
 5. Wait until the deployment is complete, and then select **Go to resource**.
@@ -47,28 +46,29 @@ In this exercise, you will:
 
 3. Use the information in the following table to add the virtual network link.
 
-| **Option**                          | **Value**                               |
-| ----------------------------------- | --------------------------------------- |
-| Link name                           | CoreServicesVnetLink                    |
-| Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
-| Enable auto registration            | Selected                                |
-| Review your settings and select OK. |                                         |
+   | **Option**                          | **Value**                               |
+   | ----------------------------------- | --------------------------------------- |
+   | Link name                           | CoreServicesVnetLink                    |
+   | Subscription                        | No changes required                     |
+   | Virtual Network                     | Select CoreServicesVnet (ContosoResourceGroup) |
+   | Enable auto registration            | Selected                                |
+   | Review your settings and select OK. |                                         |
 
-
+4. Wait for 2 mins Successfully created virtual network link
+   
 4. Select **Refresh**.
 
 5. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
 
 6. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
 
-| **Option**                          | **Value**                                |
-| ----------------------------------- | ---------------------------------------- |
-| Link name                           | ManufacturingVnetLink                    |
-| Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup) |
-| Enable auto registration            | Selected                                 |
-| Review your settings and select OK. |                                          |
+   | **Option**                          | **Value**                                |
+   | ----------------------------------- | ---------------------------------------- |
+   | Link name                           | ManufacturingVnetLink                    |
+   | Subscription                        | No changes required                      |
+   | Virtual Network                     | select ManufacturingVnet (ContosoResourceGroup) |
+   | Enable auto registration            | Selected                                 |
+   | Review your settings and select OK. |                                          |
 
 
 7. Select **Refresh**.
@@ -81,7 +81,7 @@ In this exercise, you will:
 | ----------------------------------- | ----------------------------------- |
 | Link name                           | ResearchVnetLink                    |
 | Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup) |
+| Virtual Network                     | select ResearchVnet (ContosoResourceGroup) |
 | Enable auto registration            | Selected                            |
 | Review your settings and select OK. |                                     |
 
@@ -90,9 +90,7 @@ In this exercise, you will:
 
 11. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
 
- 
-
-##  Task 3: Create Virtual Machines to test the configuration
+ ##  Task 3: Create Virtual Machines to test the configuration
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
