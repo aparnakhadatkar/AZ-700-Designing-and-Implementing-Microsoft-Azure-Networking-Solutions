@@ -78,7 +78,7 @@ In this exercise, you will:
    - After deleting **address space**, select **Add IPV4 Address space** and specify the following :
       ![](../media/unit4-image3.png)
 
-    |    **Tab**      | **Option**         | **Value**             |
+    |    **Tab**      | **Option**         | **Value**            |
     | IP Addresses  | IPv4 address space | 10.20.0.0              |
     |               | IPv4 address Size  | /16                    |
 
@@ -100,7 +100,7 @@ In this exercise, you will:
 
  1. Verify your configuration passed validation, and then select **Create**.
  
- 1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2**.
+ 1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2** and **Task3**.
 
 ## Task 2: Create the ManufacturingVnet virtual network and subnets
 
@@ -146,15 +146,17 @@ In this exercise, you will:
 
 1. On the Azure portal home page, select **All resources**.
 
-2. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
+    ![](../media/unit4-image5.png)
+
+3. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
 
 3 Select **CoreServicesVnet**. 
 
-4. In CoreServicesVnet, under **Settings**, select **Subnets**.
+4. In CoreServicesVnet, from the left navigation pane, under **Settings**, select **Subnets**.
 
 5. In CoreServicesVnet | Subnets, verify that the subnets you created are listed, and that the IP address ranges are correct.
 
-   ![List of subnets in CoreServicesVnet.](../media/verify-subnets-annotated.png)
+   ![](../media/unit4-image6.png))
 
 6. Repeat steps 3 - 5 for each VNet.
 
