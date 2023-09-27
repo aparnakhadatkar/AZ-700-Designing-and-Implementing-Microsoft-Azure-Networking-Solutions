@@ -70,17 +70,21 @@ In this exercise, you will:
    |              | Region             | (US) East US         |
  
 
-1. On the **IP Address** tab of **Create virtual network** use the information in the following table.
+1. On the **IP Address** tab of **Create virtual network** use the information:
 
    - Remove the default IP Address space by clicking on **Delete the address space**
       ![](../media/unit4-image2.png)
 
-   - After deleting **address space**, select **Add IPV4 Address space** and specify the following :
+   - After deleting **address space**, select **Add IPV4 Address space** use the information in the following table. 
       ![](../media/unit4-image3.png)
 
-    |    **Tab**      | **Option**         | **Value**            |
-    | IP Addresses  | IPv4 address space | 10.20.0.0              |
-    |               | IPv4 address Size  | /16                    |
+      |    **Tab**      | **Option**         | **Value**            |
+      | --------------  | -------------------- | -------------------|
+      | IP Addresses    | IPv4 address space | 10.20.0.0            |
+      |                 | IPv4 address Size  | /16                  |
+
+
+      ![](../media/unit4-image4.png)
 
  1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
@@ -148,16 +152,15 @@ In this exercise, you will:
 
     ![](../media/unit4-image5.png)
 
-3. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
+1. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
 
-3 Select **CoreServicesVnet**. 
+1 Select **CoreServicesVnet**. 
 
-4. In CoreServicesVnet, from the left navigation pane, under **Settings**, select **Subnets**.
+1. In CoreServicesVnet, from the left navigation pane, under **Settings**, select **Subnets**.
 
-5. In CoreServicesVnet | Subnets, verify that the subnets you created are listed, and that the IP address ranges are correct.
+1. In CoreServicesVnet | Subnets, verify that the subnets you created are listed, and that the IP address ranges are correct.
 
-   ![](../media/unit4-image6.png))
+   ![](../media/unit4-image6.png)
 
-6. Repeat steps 3 - 5 for each VNet.
+1. Repeat steps 3 - 5 for each VNet.
 
-Congratulations! You have successfully created a resource group, three VNets, and their associated subnets. 
