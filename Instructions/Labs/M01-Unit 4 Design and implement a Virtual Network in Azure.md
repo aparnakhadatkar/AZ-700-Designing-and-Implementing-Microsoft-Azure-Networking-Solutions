@@ -55,7 +55,7 @@ In this exercise, you will:
 
 ## Task 1: Create the CoreServicesVnet virtual network and subnets
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services. that appears in the results under **Services**.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the results under **Services**.
    
   ![](../media/unit4-image.png)
 1. Select **+ Create** on the Virtual networks page. 
