@@ -64,7 +64,7 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup |
+| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
 |              | Name               | CoreServicesVnet     |
 |              | Region             | (US) East US         |
 | IP Addresses | IPv4 address space | 10.20.0.0/16         |
@@ -95,7 +95,7 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**             |
 | ------------ | ------------------ | --------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup  |
+| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
 |              | Name               | ManufacturingVnet     |
 |              | Region             | (Europe) West Europe  |
 | IP Addresses | IPv4 address space | 10.30.0.0/16          |
@@ -119,7 +119,7 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup |
+| Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
 |              | Name               | ResearchVnet         |
 |              | Region             | Southeast Asia       |
 | IP Addresses | IPv4 address space | 10.40.0.0/16         |
