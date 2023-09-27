@@ -1,4 +1,4 @@
-# M01-Unit 4 Design and implement a Virtual Network in Azure
+# Module-01-Unit 4 Design and implement a Virtual Network in Azure
 
 ## Exercise scenario 
 
