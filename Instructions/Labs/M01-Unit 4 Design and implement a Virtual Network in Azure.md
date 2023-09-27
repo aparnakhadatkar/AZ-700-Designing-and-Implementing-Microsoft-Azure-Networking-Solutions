@@ -65,7 +65,7 @@ In this exercise, you will:
    | **Tab**      | **Option**         | **Value**            |
    | ------------ | ------------------ | -------------------- |
    | Basics       | Subscription       | Leave default        |
-   | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
+   |              | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
    |              | Name               | CoreServicesVnet     |
    |              | Region             | (US) East US         |
  
