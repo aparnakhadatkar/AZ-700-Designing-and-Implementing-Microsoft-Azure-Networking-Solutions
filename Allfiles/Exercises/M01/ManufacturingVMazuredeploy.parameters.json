@@ -10,6 +10,12 @@
         "nicName1": {
             "value": "ManufacturingVM-nic"
         },
+     "vmName2": {
+            "value": "testvm1"
+        },
+        "nicName2": {
+            "value": "testvm1-nic"
+        },
         "vmSize": {
             "value": "Standard_D2as_V5"
         },
