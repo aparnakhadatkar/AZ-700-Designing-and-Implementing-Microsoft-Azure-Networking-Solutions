@@ -1,10 +1,4 @@
----
-Exercise:
-    title: 'M01 - Unit 6 Configure DNS settings in Azure'
-    module: 'Module 01 - Introduction to Azure Virtual Networks'
----
-
-# M01 - Unit 6 Configure DNS settings in Azure
+# Module01 - Unit 6 Configure DNS settings in Azure
 
 ## Exercise scenario 
 In this unit, you will configure DNS name resolution for Contoso Ltd. You will create a private DNS zone named contoso.com, link the VNets for registration and resolution, and then create two virtual machines and test the configuration.
