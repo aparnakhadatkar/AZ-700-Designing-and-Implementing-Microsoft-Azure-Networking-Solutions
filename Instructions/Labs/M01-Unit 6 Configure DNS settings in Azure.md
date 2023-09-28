@@ -56,7 +56,7 @@ In this exercise, you will:
 
 1. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
 
-1. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
+1. Repeat steps 1 - 5 for the ManufacturingVnet, using the information in the following table: 
 
    | **Option**                          | **Value**                                |
    | ----------------------------------- | ---------------------------------------- |
@@ -72,7 +72,7 @@ In this exercise, you will:
 
 1. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
 
-1. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
+1. Repeat steps 1 - 5 for the ResearchVnet, using the information in the following table: 
 
    | **Option**                          | **Value**                           |
    | ----------------------------------- | ----------------------------------- |
