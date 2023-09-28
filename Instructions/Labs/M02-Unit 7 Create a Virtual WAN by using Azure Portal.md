@@ -26,9 +26,7 @@ In this exercise, you will:
 
 1. In the portal, enter Virtual WAN into the search box and select **Virtual WANs** from the results list.
 
-   ![Search for Virtual WAN in Azure Portal.](../media/search-for-virtual-wan.png)
-
- 
+   ![](../media/lab2-unit7-image1.png)
 
 1. On the Virtual WAN page, select + **Create**. 
 
@@ -44,6 +42,9 @@ In this exercise, you will:
 
    - **Type:** Standard 
 
+     ![](../media/lab2-unit7-image2.png)
+
+
 1. When you have finished filling out the fields, select **Review +Create**.
 
 1. Once validation passes, select **Create** to create the Virtual WAN.
@@ -55,20 +56,26 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 1. Locate the Virtual WAN that you created. 
 1. On the Virtual WAN page, under **Connectivity**, select **Hubs**.
 1. On the Hubs page, select **+New Hub** to open the Create virtual hub page.
-   ![Create Virtual Hub, Basics tab.](../media/create-vwan-hub.png)
+  
 1. On the Create virtual hub page **Basics** tab, complete the following fields:
    - **Region:** West US
    - **Name:** ContosoVirtualWANHub-WestUS
    - **Hub private address space:** 10.60.0.0/24
    - **Virtual hub capacity:** 2 Routing infrastructure units
    - **Hub routing preference:** leave the default
+
+     ![](../media/lab2-unit7-image3.png)
+
 1. Select **Next: Site-to-site**.
 1. On the **Site-to-site** tab, complete the following fields:
    - **Do you want to create a Site to site (VPN gateway)?:** Yes
    - The **AS Number** field cannot be edited.
    - **Gateway scale units:** 1 scale unit = 500 Mbps x 2
    - **Routing preference:** leave the default 
-1. Select **Review + Create** to validate.
+   - **Review + Create** to validate.
+
+      ![](../media/lab2-unit7-image(4).png)
+
 1. Select **Create** to create the hub. 
 1. After 30 minutes, **Refresh** to view the hub on the Hubs page. 
 
