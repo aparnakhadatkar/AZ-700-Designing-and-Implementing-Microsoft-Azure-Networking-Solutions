@@ -34,7 +34,7 @@ In this exercise, you will:
 
    - **Subscription:** Use the existing subscription
 
-   - **Resource group:** ContosoResourceGroup
+   - **Resource group:** **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
 
    - **Resource group location:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create.
 
