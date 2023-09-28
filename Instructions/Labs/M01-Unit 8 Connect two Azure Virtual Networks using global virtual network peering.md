@@ -51,15 +51,22 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Verify that the virtual machine has been created.
 
+   ![](../media/AZ-700vmcreate.png)
+
+
 ## Task 2: Connect to the Test VMs using RDP
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
 1. Select **ManufacturingVM**.
 
-1. On ManufacturingVM, select **Connect &gt; RDP**.
+1. On ManufacturingVM, select **Connect** .
+
+      ![](../media/az-700u08.2.png)
 
 1. On ManufacturingVM | Connect, select **Download RDP file**.
+
+     ![](../media/az-700u08.3.png)
 
 1. Save the RDP file to your desktop.
 
@@ -69,9 +76,13 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect &gt; RDP**.
+1. On TestVM1, select **Connect** 
 
-1. On TestVM1 | Connect, select **Download RDP file**.
+     ![](../media/unit6-image4.png)
+
+1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+
+   ![](../media/unit6-image(6).png)
 
 1. Save the RDP file to your desktop.
 
