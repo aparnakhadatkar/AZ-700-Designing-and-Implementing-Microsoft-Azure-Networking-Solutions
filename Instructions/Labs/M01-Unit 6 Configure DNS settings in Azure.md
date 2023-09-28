@@ -21,7 +21,7 @@ In this exercise, you will:
 
 1. In Private DNS zones, select **+ Create**.
 
-1. Use the information in the following table to create the private DNS zone.
+1. On **Basics** tab, use the information in the following table to create the private DNS zone.
 
    | **Tab**         | **Option**                             | **Value**            |
    | --------------- | -------------------------------------- | -------------------- |
@@ -50,13 +50,13 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                |
    | Review your settings and select OK. |                                         |
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
    
 1. Select **Refresh**.
 
 1. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
 
-1. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
+1. Repeat steps 1 - 5 for the ManufacturingVnet, using the information in the following table: 
 
    | **Option**                          | **Value**                                |
    | ----------------------------------- | ---------------------------------------- |
@@ -66,13 +66,13 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                 |
    | Review your settings and select OK. |                                          |
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
 
 1. Select **Refresh**.
 
 1. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
 
-1. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
+1. Repeat steps 1 - 5 for the ResearchVnet, using the information in the following table: 
 
    | **Option**                          | **Value**                           |
    | ----------------------------------- | ----------------------------------- |
@@ -82,7 +82,7 @@ In this exercise, you will:
    | Enable auto registration            | Selected                            |
    | Review your settings and select OK. |                                     |
   
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
 
 1. Select **Refresh**.
 
@@ -92,7 +92,7 @@ In this exercise, you will:
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
-1. Switch back to the browser tab containing the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
    ![](../media/unit6-image1.png)
 

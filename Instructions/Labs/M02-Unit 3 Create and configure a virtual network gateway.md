@@ -29,24 +29,35 @@ In this exercise, you will:
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**
+   ![](../media/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+
+   ![](../media/unit6-image3.png)
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
    ```powershell
    $RGName = "ContosoResourceGroup"
-   #create resource group if it doesnt exist
-   New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
+    
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+
 
 ## Task 2: Create CoreServicesVM
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**.
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -57,6 +68,9 @@ In this exercise, you will:
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
    ```
+ 
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -66,7 +80,7 @@ In this exercise, you will:
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M02**.
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -78,6 +92,8 @@ In this exercise, you will:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
   
+    **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+  
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
@@ -87,24 +103,24 @@ In this exercise, you will:
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **ManufacturingVM**.
-1. On **ManufacturingVM**, select **Connect &gt; RDP**.
-1. On **ManufacturingVM | Connect**, select **Download RDP file**.
+1. On **ManufacturingVM**, select **Connect**.
+1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+
+   ![](../media/unit6-image(6).png)
+   
 1. Save the RDP file to your desktop.
 1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment. After connecting, minimize the RDP session.
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **CoreServicesVM**.
-1. On **CoreServicesVM**, select **Connect &gt; RDP**.
-1. On **CoreServicesVM | Connect**, select **Download RDP file**.
+1. On **CoreServicesVM**, select **Connect**.
+1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 1. Save the RDP file to your desktop.
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment.
-1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 1. On both VMs, in **Networks**, select **Yes**.
 1. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
 1. Note the IPv4 address. 
 
- 
-
-## Task 5: Test the connection between the VMs
+ ## Task 5: Test the connection between the VMs
 
 1. On the **ManufacturingVM**, open PowerShell.
 
@@ -116,14 +132,12 @@ In this exercise, you will:
 
 1. The test connection should fail, and you will see a result similar to the following:
 
-   ![Test-NetConnection failed.](../media/test-netconnection-fail.png)
-
- 
-
+   ![](../media/false.png)
+   
 ##  Task 6: Create CoreServicesVnet Gateway
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
-   ![Search for virtual network gateway on Azure Portal.](../media/virtual-network-gateway-search.png)
+   ![](../media/mod2-unit3-image1.png)
 
 1. In Virtual network gateways, select **+ Create**.
 
@@ -132,14 +146,14 @@ In this exercise, you will:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
+   |                 |                   | Virtual network                             | CoreServicesVnet             |
+   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
    |                 |                   | Region                                      | East US                      |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
-   |                 |                   | Virtual network                             | CoreServicesVnet             |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
    |                 |                   | Public IP address type                      | Standard                     |
    |                 | Public IP address | Public IP address                           | Create new                   |
@@ -160,12 +174,14 @@ In this exercise, you will:
 
 1. Use the information in the following table to create the virtual network gateway:
 
+   **Important**: First select **Region** on the basics tab and specify the following.
+
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
-   |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Region                                      | West Europe                  |
+   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
+   |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
@@ -179,12 +195,10 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
    
-   > [!NOTE]
-   >
-   > It can take up to 45 minutes to create a virtual network gateway. 
+
+   **Note**: It can take up to 45 minutes to create a virtual network gateway. 
 
  
-
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -193,9 +207,7 @@ In this exercise, you will:
 
 1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
 
-   > [!NOTE]
-   >
-   >  You will not be able to complete this configuration until the virtual network gateways are fully deployed.
+   **Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
 1. Use the information in the following table to create the connection:
 
@@ -215,7 +227,6 @@ In this exercise, you will:
 
 1. To create the connection, select **OK**.
    
-
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -248,9 +259,7 @@ In this exercise, you will:
 
 1. Wait until the status of both connections is **Connected**. You may need to refresh your screen. 
 
-   ![VPN Gateway connections successfully created.](../media/connections-status-connected.png)
-
- 
+    ![](../media/mod2-unit3-image2.png)
 
 ## Task 11: Test the connection between the VMs
 
@@ -264,7 +273,8 @@ In this exercise, you will:
 
 1. The test connection should succeed, and you will see a result similar to the following:
 
-   ![Test-NetConnection succeeded.](../media/test-connection-succeeded.png)
+   ![](../media/true.png)
+
 
 1. Close the Remote Desktop connection windows.
 
