@@ -1,19 +1,14 @@
----
-Exercise:
-    title: 'M03 - Unit 5 Provision an ExpressRoute circuit'
-    module: 'Module 03 - Design and implement Azure ExpressRoute'
----
-# M03-Unit 5 Provision an ExpressRoute circuit
+# Module-03-Unit 4 Provision an ExpressRoute circuit
+
+## Exercise scenario 
 
 In this exercise, you will create an ExpressRoute circuit using the Azure portal and the Azure Resource Manager deployment model. 
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+ > **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 #### Estimated time: 15 minutes
 
 ![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram.png)
-
-
 
 In this exercise, you will:
 
@@ -25,28 +20,44 @@ In this exercise, you will:
 
 ## Task 1: Create and provision an ExpressRoute circuit
 
- 
-
 1. From a browser, navigate to the [Azure portal](https://portal.azure.com/) and sign in with your Azure account.
 
-   > [!Important] 
-   >
-   > Your ExpressRoute circuit is billed from the moment a service key is issued. Ensure that you perform this operation when the connectivity provider is ready to provision the circuit.
+   
+    > **Note:** Your ExpressRoute circuit is billed from the moment a service key is issued. Ensure that you perform this operation when the connectivity provider is ready to provision the circuit.
 
-1. On the Azure portal menu, select **+ Create a resource**. Select **Networking**, and then select **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
+2. On the Azure portal menu, select **+ Create a resource**. Select **Networking**, and then select **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
 
-   ![Azure portal - create ExpressRoute circuit menu](../media/create-expressroute-circuit-menu.png)
+   ![Azure portal - create ExpressRoute circuit menu](../media/task1.png)
 
-1. On the **Create ExpressRoute** page, provide the **Resource Group**, **Region**, and **Name** for the circuit with the following: ExpressRouteResourceGroup, East US 2, TestERCircuit. Then select **Next: Configuration &gt;**.
+3. On the **Create ExpressRoute** blade, specify the following settings and select **Next: Configuration**:
 
-1. When you are filling in the values on this page, for this example, make sure that you specify the correct SKU tier (**Standard**) data metering billing model (**Metered**) Provider (**Equinix**) Peering location (**Seattle**) and Bandwidth (**50Mbps**).
+   |Setting|Value|
+   |---|---|
+   |Resource group|**ExpressRouteResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**|
+   |Region|**The same Azure region to which you deployed the resources**|
+   |Name|**TestERCircuit**|
 
-1. Select **Review + Create**.
+  ![Azure portal - create ExpressRoute circuit menu](../media/task2.png)
 
-1. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
+4. On the **Configuration** tab of the **Create ExpressRoute** blade, specify the following settings and select **Review + create**:
+
+   |Setting|Value|
+   |---|---|
+   |Port Type|**Provider**|
+   |Provider|**Equinix**|
+   |Peering location|**Seattle**|
+   |Bandwidth|**50Mbps**|
+   |SKU|**Standard**|
+   |Billing model|**Metered**|
+   |Bandwidth|**50Mbps**|
 
 
-![Azure portal - Create ExpressRoute configuration tab](../media/expressroute-create-configuration2.png)
+  ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
+
+5. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
+
+
+![Azure portal - Create ExpressRoute configuration tab](../media/task4.png)
 
  
 
@@ -55,15 +66,13 @@ In this exercise, you will:
 - Provider is the internet service provider who you will be requesting your service from.
 - Peering Location is the physical location where you are peering with Microsoft.
 
-> [!Important]
->
-> The Peering Location indicates the [physical location](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations) where you are peering with Microsoft. This is not linked to "Location" property, which refers to the geography where the Azure Network Resource Provider is located. While they are not related, it is a good practice to choose a Network Resource Provider geographically close to the Peering Location of the circuit.
+
+ > **Note:** The Peering Location indicates the [physical location](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations) where you are peering with Microsoft. This is not linked to "Location" property, which refers to the geography where the Azure Network Resource Provider is located. While they are not related, it is a good practice to choose a Network Resource Provider geographically close to the Peering Location of the circuit.
 
 - **SKU** determines whether an ExpressRoute local, ExpressRoute standard, or an ExpressRoute premium add-on is enabled. You can specify **Local** to get the local SKU, **Standard** to get the standard SKU or **Premium** for the premium add-on. You can change the SKU to enable the premium add-on.
 
-> [!Important]
->
-> You cannot change the SKU from Standard/Premium to Local.
+
+ > **Note:** You cannot change the SKU from Standard/Premium to Local.
 
 - **Billing model** determines the billing type. You can specify **Metered** for a metered data plan and **Unlimited** for an unlimited data plan. You can change the billing type from **Metered** to **Unlimited**.
 
@@ -78,15 +87,15 @@ In this exercise, you will:
 
 1. You can view all the circuits that you created by selecting **All services &gt; Networking &gt; ExpressRoute circuits**.
 
-   ![Azure portal - Create ExpressRoute resource menu](../media/expressroute-circuit-menu.png)
+   ![Azure portal - Create ExpressRoute resource menu](../media/task5.png)
 
 1. All ExpressRoute circuits created in the subscription will appear here. 
 
-   ![Azure portal - show existing Expressroute circuits](../media/expressroute-circuit-list.png)
+   ![Azure portal - show existing Expressroute circuits](../media/task6.png)
 
 1. The circuit page displays the properties of the circuit. The service key appears in the service key field. Your service provider will need the Service Key to complete the provisioning process. The service key is specific to your circuit. **You must send the service key to your connectivity provider for provisioning.**
 
-   ![Azure portal - ExpressRoute Circuit properties showing service key](../media/expressroute-circuit-overview.png)
+   ![Azure portal - ExpressRoute Circuit properties showing service key](../media/task7.png)
 
 1. On this page, **Provider status** gives you the current state of provisioning on the service-provider side. **Circuit status** provides you the state on the Microsoft side. 
 
@@ -94,9 +103,6 @@ In this exercise, you will:
 
    - Provider status: Not provisioned
    - Circuit status: Enabled
-
-
-
    - The circuit changes to the following state when the connectivity provider is currently enabling it for you:
      - Provider status: Provisioning
      - Circuit status: Enabled
@@ -105,7 +111,7 @@ In this exercise, you will:
      - Circuit status: Enabled
    - You should periodically check the provisioning status and the state of the circuit status.
 
-![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/provisioned.png)
+![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/task7-1.png)
 
  
 
