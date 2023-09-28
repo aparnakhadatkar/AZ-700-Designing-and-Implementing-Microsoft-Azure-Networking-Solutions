@@ -41,7 +41,7 @@ In this exercise, you will:
    | **Setting**          | **Value**                        |
    | -------------------- | -------------------------------- |
    | Virtual Network Name | CoreServicesVNet                 |
-   | Resource Group       | ContosoResourceGroup             |
+   | Resource Group       | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**|
    | Location             | East US                          |
 
 1. Select **Next : IP addresses**.
@@ -78,7 +78,7 @@ In this exercise, you will:
    | **Setting**               | **Value**                  |
    | ------------------------- | -------------------------- |
    | **Project details**       |                            |
-   | Resource Group            | ContosoResourceGroup       |
+   | Resource Group            | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**       |
    | **Instance details**      |                            |
    | Name                      | CoreServicesVnetGateway    |
    | Region                    | East US                    |
