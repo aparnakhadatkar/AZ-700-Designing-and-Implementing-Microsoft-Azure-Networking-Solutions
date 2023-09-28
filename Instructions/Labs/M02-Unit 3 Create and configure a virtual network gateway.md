@@ -132,12 +132,12 @@ In this exercise, you will:
 
 1. The test connection should fail, and you will see a result similar to the following:
 
-   ![Test-NetConnection failed.](../media/test-netconnection-fail.png)
-
+   ![](../media/false.png)
+   
 ##  Task 6: Create CoreServicesVnet Gateway
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
-   ![Search for virtual network gateway on Azure Portal.](../media/virtual-network-gateway-search.png)
+   ![](../media/mod2-unit3-image1.png)
 
 1. In Virtual network gateways, select **+ Create**.
 
@@ -199,7 +199,6 @@ In this exercise, you will:
    **Note**: It can take up to 45 minutes to create a virtual network gateway. 
 
  
-
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -208,9 +207,7 @@ In this exercise, you will:
 
 1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
 
-   > [!NOTE]
-   >
-   >  You will not be able to complete this configuration until the virtual network gateways are fully deployed.
+   **Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
 1. Use the information in the following table to create the connection:
 
@@ -230,7 +227,6 @@ In this exercise, you will:
 
 1. To create the connection, select **OK**.
    
-
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -263,9 +259,7 @@ In this exercise, you will:
 
 1. Wait until the status of both connections is **Connected**. You may need to refresh your screen. 
 
-   ![VPN Gateway connections successfully created.](../media/connections-status-connected.png)
-
- 
+    ![](../media/mod2-unit3-image2.png)
 
 ## Task 11: Test the connection between the VMs
 
@@ -279,7 +273,8 @@ In this exercise, you will:
 
 1. The test connection should succeed, and you will see a result similar to the following:
 
-   ![Test-NetConnection succeeded.](../media/test-connection-succeeded.png)
+   ![](../media/true.png)
+
 
 1. Close the Remote Desktop connection windows.
 
