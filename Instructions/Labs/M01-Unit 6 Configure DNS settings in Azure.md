@@ -94,15 +94,19 @@ In this exercise, you will:
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-    
-    > **Note:** If this is the first time opening Cloud Shell, you might be prompted to create a storage account. Select **Create storage**.
+1. Switch back to the browser tab containing the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+    ![Screenshot of the cloud shell in the Azure portal.](media/create-image-classification-system/powershell-portal-guide-01.png)
 
-3. Deploy the following ARM templates to create the VMs needed for this exercise:
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
-    >**Note**: You will be prompted to provide an Admin password.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+
+1. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+    >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -110,23 +114,21 @@ In this section, you will create two test VMs to test the Private DNS zone confi
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
   
-4. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-5. Verify that both virtual machines have been created.
+1. Verify that both virtual machines have been created.
 
  ## Task 4: Verify records are present in the DNS zone
 
 1. On the Azure Portal home page, select **Private DNS zones**.
 
-2. On Private DNS zones, select **contoso.com**.
+1. On Private DNS zones, select **contoso.com**.
 
-3. Verify that host (A) records are listed for both VMs, as shown:
+1. Verify that host (A) records are listed for both VMs, as shown:
 
-![Contoso.com DNS zone showing auto-registered host A records.](../media/contoso_com-dns-zone.png)
+   ![](../media/contoso_com-dns-zone.png)
 
- 
-
-4. Make a note of the names and IP addresses of the VMs.
+1. Make a note of the names and IP addresses of the VMs.
 
  ### Connect to the Test VMs using RDP
 
@@ -142,9 +144,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Follow the same steps for **TestVM2**
 
-1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
 
-1. Connect to TestVM2 using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to TestVM2 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
 
 1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
