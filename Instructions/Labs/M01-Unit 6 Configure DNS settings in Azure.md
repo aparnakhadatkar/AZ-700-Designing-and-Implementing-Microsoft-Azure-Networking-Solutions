@@ -21,7 +21,7 @@ In this exercise, you will:
 
 1. In Private DNS zones, select **+ Create**.
 
-1. Use the information in the following table to create the private DNS zone.
+1. On **Basics** tab, use the information in the following table to create the private DNS zone.
 
    | **Tab**         | **Option**                             | **Value**            |
    | --------------- | -------------------------------------- | -------------------- |
