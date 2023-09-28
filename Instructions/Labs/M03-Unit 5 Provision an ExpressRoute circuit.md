@@ -36,7 +36,7 @@ In this exercise, you will:
    |Region|**<inject key="Region" enableCopy="false"/>**|
    |Name|**TestERCircuit**|
 
-  ![Azure portal - create ExpressRoute circuit menu](../media/task2.png)
+   ![Azure portal - create ExpressRoute circuit menu](../media/task2.png)
 
 4. On the **Configuration** tab of the **Create ExpressRoute** blade, specify the following settings and select **Review + create**:
 
@@ -51,12 +51,12 @@ In this exercise, you will:
    |Bandwidth|**50Mbps**|
 
 
-  ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
+    ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
 
 5. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
 
 
-![Azure portal - Create ExpressRoute configuration tab](../media/task4.png)
+   ![Azure portal - Create ExpressRoute configuration tab](../media/task4.png)
 
  
 
@@ -110,7 +110,7 @@ In this exercise, you will:
      - Circuit status: Enabled
    - You should periodically check the provisioning status and the state of the circuit status.
 
-![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/task7-1.png)
+   ![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/task7-1.png)
 
  
 
