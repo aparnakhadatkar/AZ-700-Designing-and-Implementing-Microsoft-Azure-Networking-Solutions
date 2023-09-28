@@ -15,7 +15,6 @@ In this exercise, you will:
 + Task 1: Create and provision an ExpressRoute circuit
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
-+ Task 4: Clean up resources
 
 
 ## Task 1: Create and provision an ExpressRoute circuit
@@ -34,7 +33,7 @@ In this exercise, you will:
    |Setting|Value|
    |---|---|
    |Resource group|**ExpressRouteResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**|
-   |Region|**The same Azure region to which you deployed the resources**|
+   |Region|**<inject key="Region" enableCopy="false"/>**|
    |Name|**TestERCircuit**|
 
   ![Azure portal - create ExpressRoute circuit menu](../media/task2.png)
