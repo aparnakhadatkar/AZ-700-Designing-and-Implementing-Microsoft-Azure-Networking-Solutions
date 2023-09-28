@@ -17,7 +17,7 @@ In this exercise, you will:
 ## Task 1: Create a private DNS Zone
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Private DNS zones** and select **Private DNS zones** under services that appears in the results under **Services**.
-  ‎![](../media/create-private-dns-zone.png)
+  ‎![](../media/unit6-image(1).png)
 
 1. In Private DNS zones, select **+ Create**.
 
@@ -36,11 +36,9 @@ In this exercise, you will:
 
 ## Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings**, select **Virtual network links**.
+1. In Contoso.com, under **Settings**, select **Virtual network links** and on Contoso.com | Virtual network links page, select **+ Add**.
 
-1. On Contoso.com | Virtual network links, select **+ Add**.
-
-   ![](../media/add-network-link-dns.png)
+   ![](../media/unit6-links.png)
 
 1. Use the information in the following table to add the virtual network link.
 
@@ -52,7 +50,7 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                |
    | Review your settings and select OK. |                                         |
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link
+   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
    
 1. Select **Refresh**.
 
@@ -68,7 +66,7 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                 |
    | Review your settings and select OK. |                                          |
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link
+   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
 
 1. Select **Refresh**.
 
@@ -96,13 +94,17 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Switch back to the browser tab containing the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-    ![Screenshot of the cloud shell in the Azure portal.](media/create-image-classification-system/powershell-portal-guide-01.png)
+   ![](../media/unit6-image1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
 
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+
+   ![](../media/unit6-image3.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -128,7 +130,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Verify that host (A) records are listed for both VMs, as shown:
 
-   ![](../media/contoso_com-dns-zone.png)
+   ![](../media/unit6-image-5.png)
 
 1. Make a note of the names and IP addresses of the VMs.
 
@@ -138,9 +140,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect &gt; RDP** and download the RDP file.
+1. On TestVM1, select **Connect** 
 
-    ![TestVM1 with Connect and RDP highlighted.](../media/connect-to-am.png)
+    ![](../media/unit6-image4.png)
+
+1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+
+   ![](../media/unit6-image(6).png)
 
 1. Save the RDP file to your desktop.
 
