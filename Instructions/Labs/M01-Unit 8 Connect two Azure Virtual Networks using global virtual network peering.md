@@ -10,7 +10,6 @@ In this unit, you will:
 + Task 3: Test the connection between the VMs
 + Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 + Task 5: Test the connection between the VMs
-+ Task 6: Clean up resources
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -22,20 +21,32 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 ### Create ManufacturingVM
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M01**.
+   ![](../media/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+   
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+
+    ![](../media/unit6-image3.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
    >**Note**: You will be prompted to provide an Admin password.
 
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup-(DID)"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
-  
+
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
@@ -122,13 +133,11 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 | Review your settings and select Add. |                                               |                                       |
 |                                      |                                               |                                       |
 
- >**Note**: If you don't have a "MOC Subscription", use the subscription you've been using previously. It's just a name.
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
 
 1. Under Virtual networks, select **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed.
 
- 
 
 ## Task 5: Test the connection between the VMs
 
@@ -146,18 +155,5 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-Congratulations! You have successful configured connectivity between VNets by adding peerings. 
+## Congratulations! You have successful configured connectivity between VNets by adding peerings. 
 
-## Task 6: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane. (Create Cloud Shell storage if needed, using default settings.)
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
