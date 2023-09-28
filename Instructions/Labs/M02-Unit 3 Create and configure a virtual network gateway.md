@@ -147,7 +147,7 @@ In this exercise, you will:
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
    |                 |                   | Virtual network                             | CoreServicesVnet             |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
+   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
    |                 |                   | Region                                      | East US                      |
    |                 |                   | Gateway type                                | VPN                          |
@@ -180,7 +180,7 @@ In this exercise, you will:
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
    |                 |                   | Region                                      | West Europe                  |
-   |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
+   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | VPN type                                    | Route-based                  |
