@@ -1,10 +1,4 @@
----
-Exercise:
-    title: 'M01 - Unit 6 Configure DNS settings in Azure'
-    module: 'Module 01 - Introduction to Azure Virtual Networks'
----
-
-# M01 - Unit 6 Configure DNS settings in Azure
+# Module01 - Unit 6 Configure DNS settings in Azure
 
 ## Exercise scenario 
 In this unit, you will configure DNS name resolution for Contoso Ltd. You will create a private DNS zone named contoso.com, link the VNets for registration and resolution, and then create two virtual machines and test the configuration.
@@ -22,141 +16,145 @@ In this exercise, you will:
 
 ## Task 1: Create a private DNS Zone
 
-1. Go to [Azure Portal](https://portal.azure.com/).
+1. On the Azure portal locate the search bar at the top of the page. Search for **Private DNS zones** and select **Private DNS zones** under services that appears in the results under **Services**.
+  ‎![](../media/unit6-image(1).png)
 
-2. On the Azure home page, in the search bar, enter dns, and then select **Private DNS zones**.  
-   ‎![Azure Portal home page with dns search.](../media/create-private-dns-zone.png)
+1. In Private DNS zones, select **+ Create**.
 
-3. In Private DNS zones, select **+ Create**.
+1. Use the information in the following table to create the private DNS zone.
 
-4. Use the information in the following table to create the private DNS zone.
+   | **Tab**         | **Option**                             | **Value**            |
+   | --------------- | -------------------------------------- | -------------------- |
+   | Basics          | Resource group                         | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
+   |                 | Name                                   | Contoso.com          | 
 
-| **Tab**         | **Option**                             | **Value**            |
-| --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup |
-|                 | Name                                   | Contoso.com          |
-| Tags            | No changes required                    |                      |
-| Review + create | Review your settings and select Create |                      |
+1. Select **Review + create** and **create**
 
+   **Note**: Please Wait until the deployment is completed, and then select **Go to resource**.
 
-5. Wait until the deployment is complete, and then select **Go to resource**.
-
-6. Verify that the zone has been created.
+1. Verify that the zone has been created.
 
 ## Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings**, select **Virtual network links**.
+1. In Contoso.com, under **Settings**, select **Virtual network links** and on Contoso.com | Virtual network links page, select **+ Add**.
 
-2. On Contoso.com | Virtual network links, select **+ Add**.
+   ![](../media/unit6-links.png)
 
-![contoso.com | Virtual links with + Add highlighted.](../media/add-network-link-dns.png)
+1. Use the information in the following table to add the virtual network link.
 
-3. Use the information in the following table to add the virtual network link.
+   | **Option**                          | **Value**                               |
+   | ----------------------------------- | --------------------------------------- |
+   | Link name                           | CoreServicesVnetLink                    |
+   | Subscription                        | No changes required                     |
+   | Virtual Network                     | Select CoreServicesVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
+   | Enable auto registration            | Selected                                |
+   | Review your settings and select OK. |                                         |
 
-| **Option**                          | **Value**                               |
-| ----------------------------------- | --------------------------------------- |
-| Link name                           | CoreServicesVnetLink                    |
-| Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
-| Enable auto registration            | Selected                                |
-| Review your settings and select OK. |                                         |
+   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
+   
+1. Select **Refresh**.
 
+1. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
 
-4. Select **Refresh**.
+1. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
 
-5. Verify that the CoreServicesVnetLink has been created, and that auto-registration is enabled.
+   | **Option**                          | **Value**                                |
+   | ----------------------------------- | ---------------------------------------- |
+   | Link name                           | ManufacturingVnetLink                    |
+   | Subscription                        | No changes required                      |
+   | Virtual Network                     | select ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
+   | Enable auto registration            | Selected                                 |
+   | Review your settings and select OK. |                                          |
 
-6. Repeat steps 2 - 5 for the ManufacturingVnet, using the information in the following table: 
+   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
 
-| **Option**                          | **Value**                                |
-| ----------------------------------- | ---------------------------------------- |
-| Link name                           | ManufacturingVnetLink                    |
-| Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup) |
-| Enable auto registration            | Selected                                 |
-| Review your settings and select OK. |                                          |
+1. Select **Refresh**.
 
+1. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
 
-7. Select **Refresh**.
+1. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
 
-8. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
+   | **Option**                          | **Value**                           |
+   | ----------------------------------- | ----------------------------------- |
+   | Link name                           | ResearchVnetLink                    |
+   | Subscription                        | No changes required                 |
+   | Virtual Network                     | select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
+   | Enable auto registration            | Selected                            |
+   | Review your settings and select OK. |                                     |
+  
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link
 
-9. Repeat steps 2 - 5 for the ResearchVnet, using the information in the following table: 
+1. Select **Refresh**.
 
-| **Option**                          | **Value**                           |
-| ----------------------------------- | ----------------------------------- |
-| Link name                           | ResearchVnetLink                    |
-| Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup) |
-| Enable auto registration            | Selected                            |
-| Review your settings and select OK. |                                     |
+1. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
 
-
-10. Select **Refresh**.
-
-11. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
-
- 
-
-##  Task 3: Create Virtual Machines to test the configuration
+ ##  Task 3: Create Virtual Machines to test the configuration
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-    
-    > **Note:** If this is the first time opening Cloud Shell, you might be prompted to create a storage account. Select **Create storage**.
+1. Switch back to the browser tab containing the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M01**.
+   ![](../media/unit6-image1.png)
 
-3. Deploy the following ARM templates to create the VMs needed for this exercise:
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
-    >**Note**: You will be prompted to provide an Admin password.
+   ![](../media/unit6-image2.png)
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+
+   ![](../media/unit6-image3.png)
+
+1. Deploy the following ARM templates to create the VMs needed for this exercise:
+
+   **Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
 
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup-(DID)"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
   
-4. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+  
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-5. Verify that both virtual machines have been created.
+1. Verify that both virtual machines have been created.
 
- 
-
-## Task 4: Verify records are present in the DNS zone
+ ## Task 4: Verify records are present in the DNS zone
 
 1. On the Azure Portal home page, select **Private DNS zones**.
 
-2. On Private DNS zones, select **contoso.com**.
+1. On Private DNS zones, select **contoso.com**.
 
-3. Verify that host (A) records are listed for both VMs, as shown:
+1. Verify that host (A) records are listed for both VMs, as shown:
 
-![Contoso.com DNS zone showing auto-registered host A records.](../media/contoso_com-dns-zone.png)
+   ![](../media/unit6-image-5.png)
 
- 
+1. Make a note of the names and IP addresses of the VMs.
 
-4. Make a note of the names and IP addresses of the VMs.
-
- 
-
-### Connect to the Test VMs using RDP
+ ### Connect to the Test VMs using RDP
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect &gt; RDP** and download the RDP file.
+1. On TestVM1, select **Connect** 
 
-    ![TestVM1 with Connect and RDP highlighted.](../media/connect-to-am.png)
+    ![](../media/unit6-image4.png)
+
+1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+
+   ![](../media/unit6-image(6).png)
 
 1. Save the RDP file to your desktop.
 
 1. Follow the same steps for **TestVM2**
 
-1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
 
-1. Connect to TestVM2 using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to TestVM2 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
 
 1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
