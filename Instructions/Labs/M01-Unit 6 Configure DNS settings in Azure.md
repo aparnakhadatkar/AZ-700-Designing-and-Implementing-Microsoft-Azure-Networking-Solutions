@@ -92,7 +92,7 @@ In this exercise, you will:
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
-1. Switch back to the browser tab containing the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
    ![](../media/unit6-image1.png)
 
