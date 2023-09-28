@@ -50,7 +50,7 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                |
    | Review your settings and select OK. |                                         |
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
    
 1. Select **Refresh**.
 
@@ -66,7 +66,7 @@ In this exercise, you will:
    | Enable auto registration            | Selected                                 |
    | Review your settings and select OK. |                                          |
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network links.
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
 
 1. Select **Refresh**.
 
@@ -82,7 +82,7 @@ In this exercise, you will:
    | Enable auto registration            | Selected                            |
    | Review your settings and select OK. |                                     |
   
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link
+   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
 
 1. Select **Refresh**.
 
