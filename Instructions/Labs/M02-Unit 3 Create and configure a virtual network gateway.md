@@ -103,24 +103,24 @@ In this exercise, you will:
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **ManufacturingVM**.
-1. On **ManufacturingVM**, select **Connect &gt; RDP**.
-1. On **ManufacturingVM | Connect**, select **Download RDP file**.
+1. On **ManufacturingVM**, select **Connect**.
+1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+
+   ![](../media/unit6-image(6).png)
+   
 1. Save the RDP file to your desktop.
 1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment. After connecting, minimize the RDP session.
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **CoreServicesVM**.
-1. On **CoreServicesVM**, select **Connect &gt; RDP**.
-1. On **CoreServicesVM | Connect**, select **Download RDP file**.
+1. On **CoreServicesVM**, select **Connect**.
+1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 1. Save the RDP file to your desktop.
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment.
-1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 1. On both VMs, in **Networks**, select **Yes**.
 1. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
 1. Note the IPv4 address. 
 
- 
-
-## Task 5: Test the connection between the VMs
+ ## Task 5: Test the connection between the VMs
 
 1. On the **ManufacturingVM**, open PowerShell.
 
@@ -133,8 +133,6 @@ In this exercise, you will:
 1. The test connection should fail, and you will see a result similar to the following:
 
    ![Test-NetConnection failed.](../media/test-netconnection-fail.png)
-
- 
 
 ##  Task 6: Create CoreServicesVnet Gateway
 
@@ -176,12 +174,14 @@ In this exercise, you will:
 
 1. Use the information in the following table to create the virtual network gateway:
 
+   **Important**: First select **Region** on the basics tab and specify the following.
+
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
+   |                 |                   | Region                                      | West Europe                  |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
-   |                 |                   | Region                                      | West Europe                  |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
@@ -195,9 +195,8 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
    
-   > [!NOTE]
-   >
-   > It can take up to 45 minutes to create a virtual network gateway. 
+
+   **Note**: It can take up to 45 minutes to create a virtual network gateway. 
 
  
 
