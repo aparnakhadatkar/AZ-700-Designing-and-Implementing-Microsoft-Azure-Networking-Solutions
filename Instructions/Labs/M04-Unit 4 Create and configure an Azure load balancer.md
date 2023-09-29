@@ -157,7 +157,8 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
 
-1. Select **Add**.
+1. Select **Save**.
+
    ![Picture 7](../media/add-vms-backendpool.png)
    
 
