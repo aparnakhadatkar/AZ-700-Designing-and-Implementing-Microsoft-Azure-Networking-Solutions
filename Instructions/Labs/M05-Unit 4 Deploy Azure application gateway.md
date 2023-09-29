@@ -1,12 +1,5 @@
----
-Exercise:
-    title: 'M05 - Unit 4 Deploy Azure Application Gateway'
-    module: 'Module 05 - Load balancing HTTP(S) traffic in Azure'
----
-
-# M05-Unit 4 Deploy Azure Application Gateway
+# Module 05: Unit 4 - Deploy Azure Application Gateway
  
-
 In this exercise, you use the Azure portal to create an application gateway. Then you test it to make sure it works correctly.
 
 >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
@@ -39,9 +32,9 @@ In this exercise, you will:
    | **Setting**         | **Value**                                    |
    | ------------------- | -------------------------------------------- |
    | Subscription        | Select your subscription.                    |
-   | Resource group      | Select Create new ContosoResourceGroup       |
+   | Resource group      | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>       |
    | Application Gateway | ContosoAppGateway                            |
-   | Region              | Select **East US**                           |
+   | Region              | **<inject key="Region" enableCopy="false"/>**                           |
    | Virtual Network     | Select **Create new**                        |
 
 1. In Create virtual network, enter, or select the following information:
