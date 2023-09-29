@@ -116,9 +116,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Resource group        | **IntLB-RG**             |
    | Name                  | **myIntLoadBalancer**    |
    | Region                | **(US) East US**         |
-   | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
-
+   | Type                  | **Internal**             |
 
 1. Select **Next: Frontend IP configurations**.
 1. Select Add a frontend IP
