@@ -1,11 +1,4 @@
----
-Exercise:
-    title: 'M04 - Unit 4 Create and configure an Azure load balancer'
-    module: 'Module 04 - Load balancing non-HTTP(S) traffic in Azure'
----
-
-
-# M04-Unit 4 Create and configure an Azure load balancer
+# Module04-Unit 4 Create and configure an Azure load balancer
 
 In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. 
 
@@ -42,31 +35,40 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                  |
    | -------------- | ------------------------------------------ |
    | Subscription   | Select your subscription                   |
-   | Resource group | Select **Create  new**  Name: **IntLB-RG** |
-   | Name           | **IntLB-VNet**                             |
-   | Region         | **(US) East US**                           |
+   | Resource group | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Name           | **IntLB-VNet**                                                      |
+   | Region         | **<inject key="Region" enableCopy="false"/>**                   |
 
 
-1. Select **Next** on the **Security** tab, under **BastionHost** select **Enable**, then enter the information from the table below.
+1. Select **Next** on the **Security** tab, under **BastionHost** select **Enable Azure Bastion**, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
     | Bastion name                      | **myBastionHost**                             |
-    | AzureBastionSubnet address  space | **10.1.1.0/24**                               |
     | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
 
 
 1. Select **Next : IP Addresses**.
    
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default and click on **Add IPV4 address space** and enter **10.1.0.0** in address space and **/16** in size field.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space** and enter **10.1.0.0** in address space and **/16** in size field and select **+ Add subnet**.
 
-1. On the **IP Addresses** tab, select **+ Add subnet**.
+1. Select **Add subnet**, specify the following and select **Add**.
 
-1. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+   | **Setting**                  | **Value**     |
+   | ---------------------------- | ------------- |
+   | Name                         | **myBackendSubnet** |
+   | Starting address             | **10.1.0.0**        |
+   | Subnet size                  | **/24**             |
+   |||
 
-1. Select **Add**.
+1. On the Create virtual network of **IP address** tab select **Add subnet**, specify the following and select **Add**.
 
-1. Select **Add subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Select **Add**
+   | **Setting**                  | **Value**     |
+   | ---------------------------- | ------------- |
+   | Name                         | **myFrontEndSubnet** |
+   | Starting address             | **10.1.2.0**        |
+   | Subnet size                  | **/24**             |
+   |||
 
 1. Select **Review + create**.
 
