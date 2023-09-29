@@ -9,7 +9,6 @@ In this exercise, you will:
 + Task 1: Create two instances of a web app
 + Task 2: Create a Front Door for your application
 + Task 3: View Azure Front Door in action
-+ Task 4: Clean up resources
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -107,7 +106,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 1. On the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
 
 1. In a new browser tab, navigate to the Front Door endpoint FQDN. The default App Service page will be displayed.
-   ![Browser showing App Service information page](../media/app-service-info-page.png)
+   ![Browser showing App Service information page](../media/mo5u64.png)
 
 1. To test instant global failover in action, try the following steps:
 
