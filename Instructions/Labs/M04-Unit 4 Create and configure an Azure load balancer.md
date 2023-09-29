@@ -120,7 +120,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Type                  | **Internal**             |
 
 1. Select **Next: Frontend IP configurations**.
-1. Select Add a frontend IP
+1. Select **Add frontend IP configuration**.
 1. On the **Add frontend IP address** blade, enter the information from the table below and select **Add**.
  
    | **Setting**     | **Value**                |
@@ -212,14 +212,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 1. Select **Add**.
    ![Picture 6](../media/create-loadbalancerrule.png)
 
- 
-
-
- 
-
- 
-
-## Task 5: Test the load balancer
+ ## Task 5: Test the load balancer
 
 In this section, you will create a test VM, and then test the load balancer.
 
