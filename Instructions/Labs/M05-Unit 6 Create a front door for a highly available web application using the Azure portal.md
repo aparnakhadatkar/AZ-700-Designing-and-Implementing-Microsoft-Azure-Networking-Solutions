@@ -31,8 +31,8 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select the resource group ContosoResourceGroup               |
-   | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-1. |
+   | Resource group   | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                |
+   | Name             | WebAppContoso-<inject key="DeploymentID" enableCopy="false"/> . |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
