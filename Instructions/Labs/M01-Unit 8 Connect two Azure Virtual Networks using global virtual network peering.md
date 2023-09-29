@@ -37,7 +37,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
    $RGName = "ContosoResourceGroup-(DID)"
@@ -45,7 +45,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+1. You will be prompted to provide an Admin password. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>.   
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
