@@ -86,7 +86,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Save the RDP file to your desktop.
 
-1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password **Pa$$w0rd1234** .
 
 1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
