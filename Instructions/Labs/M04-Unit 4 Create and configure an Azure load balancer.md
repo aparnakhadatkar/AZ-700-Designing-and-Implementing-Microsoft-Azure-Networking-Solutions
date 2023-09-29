@@ -34,11 +34,10 @@ In this section, you will create a virtual network and a subnet.
    
 1. Log in to the Azure portal.
 
-2. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  ![Azure portal home page Global Search bar results for virtual network.](../media/global-search-bar.PNG)
+1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  ![Azure portal home page Global Search bar results for virtual network.](../media/global-search-bar.PNG)
 
-3. Select **Create** on the Virtual networks page.  ![Create a virtual network wizard.](../media/create-virtual-network.png)
-
-4. On the **Basics** tab, use the information in the table below to create the virtual network.
+1. Select **Create** on the Virtual networks page.  
+1. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                  |
    | -------------- | ------------------------------------------ |
@@ -48,21 +47,21 @@ In this section, you will create a virtual network and a subnet.
    | Region         | **(US) East US**                           |
 
 
-5. Select **Next : IP Addresses**.
+1. Select **Next : IP Addresses**.
 
-6. On the **IP Addresses** tab, in the **IPv4 address space** box, remove the default and enter **10.1.0.0/16**.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, remove the default and enter **10.1.0.0/16**.
 
-7. On the **IP Addresses** tab, select **+ Add subnet**.
+1. On the **IP Addresses** tab, select **+ Add subnet**.
 
-8. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+1. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
-9. Select **Add**.
+1. Select **Add**.
 
-10. Select **Add subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Select **Add**
+1. Select **Add subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Select **Add**
 
-11. Select **Next : Security**.
+1. Select **Next : Security**.
 
-12. Under **BastionHost** select **Enable**, then enter the information from the table below.
+1. Under **BastionHost** select **Enable**, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
@@ -71,9 +70,9 @@ In this section, you will create a virtual network and a subnet.
     | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
 
 
-13. Select **Review + create**.
+1. Select **Review + create**.
 
-14. Select **Create**.
+1. Select **Create**.
 
 ## Task 2: Create backend servers
 
