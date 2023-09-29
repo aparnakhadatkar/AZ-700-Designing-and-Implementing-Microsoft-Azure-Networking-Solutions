@@ -47,11 +47,7 @@ In this exercise, you will:
    | **SUBNETS**       |                                    |
    | Subnet name       | Change **default** to **AGSubnet** |
    | Address range     | 10.0.0.0/24                        |
-   | Subnet name       | BackendSubnet                      |
-   | Address range     | 10.0.1.0/24                        |
-
-
->**Note**: If the UI does not have the option to add additional subnets, complete the steps and add the backend subnet after creating the gateway. 
+   
 
 1. Select **OK** to return to the Create application gateway Basics tab.
 
@@ -92,7 +88,7 @@ In this exercise, you will:
 
 1. Accept the default values for the other settings on the **Listener** tab.
 
-    ![Azure Portal add an Application Gateway routing rule](../media/Routing-rule-listener-tab.png)
+    ![Azure Portal add an Application Gateway routing rule](../media/mo5u41.png)
 
 1. Select the **Backend targets** tab to configure the rest of the routing rule.
 
@@ -118,25 +114,57 @@ In this exercise, you will:
 
 1. Review the settings on the **Review + create** tab
 
-1. Select **Create** to create the virtual network, the public IP address, and the application gateway. 
+1. Select **Create** to create the virtual network, the public IP address, and the application gateway.
 
-It may take several minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
+    > **Note**:  It may take 2 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
+   
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter Virtual networks, and then select **Virtual networks** from the results.
+
+1. On the Virtual networks page select **ContosoVNet**. 
+ 
+1. On the ContosoVNet page from left side menu under Settings and click **Subnet**.
+
+1. On the ContosoVNet | Subnets page select **+ Subnet**. 
+
+1. On Add subnet page fill the follwing details(leave other field as default) and click on **save**.
+
+    | **Setting**           | **Value**   |
+    | --------------------- | ----------- |
+    | Name                  | BackendSubnet |
+    | Subnet address range  | 10.0.1.0/24 |
+
 
 ## Task 2: Create virtual machines
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **backend.json** and **backend.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M05**.
+   ![](../media/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **backend.json** and **backend.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M05**.
+
+      ![](../media/unit6-image3.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
->**Note**: You will be prompted to provide an Admin password.
+     **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+   
 
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup-DID"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
+   
+1. You will be prompted to provide an Admin password.
+   
+1. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -152,11 +180,11 @@ It may take several minutes for Azure to create the application gateway. Wait un
 
 1. On the Edit backend pool page, under **Backend targets**, in **Target type**, select **Virtual machine**.
 
-1. Under **Target**, select **BackendVM1.** 
+1. Under **Target**, select **BackendVM1.nic.** 
 
 1. On **Target type**, select **Virtual machine**.
 
-1. Under **Target**, select **BackendVM2.** 
+1. Under **Target**, select **BackendVM2.nic.** 
 
    ![Azure Portal add target backends to backend pool](../media/edit-backend-pool.png)
 
