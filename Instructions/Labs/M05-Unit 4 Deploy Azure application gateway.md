@@ -161,10 +161,7 @@ In this exercise, you will:
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
-   
-1. You will be prompted to provide an Admin password.
-   
-1. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>
+1. You will be prompted to provide an Admin password. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>.   
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
