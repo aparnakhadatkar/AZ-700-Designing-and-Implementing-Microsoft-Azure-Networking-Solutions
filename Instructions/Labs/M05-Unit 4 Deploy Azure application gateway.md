@@ -184,11 +184,12 @@ In this exercise, you will:
 
 1. On **Target type**, select **Virtual machine**.
 
-1. Under **Target**, select **BackendVM2.nic.** 
+1. Under **Target**, select **BackendVM2.nic.**
+   
+1. Select **Save**.
 
    ![Azure Portal add target backends to backend pool](../media/edit-backend-pool.png)
 
-1. Select **Save**.
 
 Wait for the deployment to complete before proceeding to the next step.
 
