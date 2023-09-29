@@ -32,7 +32,7 @@ This exercise requires two instances of a web application that run in different 
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription.                                    |
    | Resource group   | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                |
-   | Name             | WebAppContoso-<inject key="DeploymentID" enableCopy="false"/> . |
+   | Name             | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
@@ -52,8 +52,8 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select the resource group ContosoResourceGroup               |
-   | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-2. |
+   | Resource group   | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>               |
+   | Name             | WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
@@ -78,20 +78,27 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
    | Subscription            | Select your subscription.                    |
-   | Resource group          | Select ContosoResourceGroup                  |
+   | Resource group          | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                  |
    | Resource group location | Accept default setting                       |
-   | Name                    | Enter a unique name in this subscription like FrontDoor(yourinitials)   |
+   | Name                    |FrontDoor<inject key="DeploymentID" enableCopy="false"/>   |
    | Tier                    | Standard   |
    | Endpoint Name           | FDendpoint   |
    | Origin Type             | App Service| 
-   | Origin host name        | The name of the web app you previously deployed |
+   | Origin host name        | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
    
 
 1. Select **Review and Create**, and then select **Create**.
 
 1. Wait for the resource to deploy, and then select **Go to resource**.
 1. On the Front Door resource in the Overview blade, locate the **Origin Groups**, select the origin group created
-1. To update the origin group select the name **default-origin-group** from the list. Select **Add an origin** and add the second Web App. Select Add and then select Update. 
+1. To update the origin group select the name **default-origin-group** from the list. Select **Add an origin** and add the following information and select **Add** and then select **Update**.
+
+   
+   | **Setting**             | **Value**                                    |
+   | ----------------------- | -------------------------------------------- |
+   | Name                    | default-origin-group                    |
+   | Origin host header      | Select WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
+   
 
 ## Task 3: View Azure Front Door in action
 
@@ -112,7 +119,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
 1. Switch back to your browser and select Refresh. You should see the same information page.
 
-**There may be a delay while the web app stops. If you get an error page in your browser, refresh the page**.
+  **There may be a delay while the web app stops. If you get an error page in your browser, refresh the page**.
 
 1. Switch back to the Azure Portal, locate the other web app, and stop it.
 
@@ -120,21 +127,6 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
    ![Browser showing App Service error page](../media/web-apps-both-stopped.png)
 
-   Congratulations! You have configured and tested an Azure Front Door.
+  ### Congratulations! You have configured and tested an Azure Front Door.
    
 
-## Task 4: Clean up resources
-   
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-
-   Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
-
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
