@@ -54,6 +54,7 @@ In this exercise, you will:
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
    | Subnet template              | Select **Virtual Network Gateway** |
+   | Name                         |GatewaySubnet  |
    | Starting address             | 10.20.0.0     |
    | Subnet size                  | /27           |
 
