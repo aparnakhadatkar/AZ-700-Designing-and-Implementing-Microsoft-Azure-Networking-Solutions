@@ -47,9 +47,18 @@ In this section, you will create a virtual network and a subnet.
    | Region         | **(US) East US**                           |
 
 
-1. Select **Next : IP Addresses**.
+1. Select **Next** on the **Security** tab, under **BastionHost** select **Enable**, then enter the information from the table below.
 
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, remove the default and enter **10.1.0.0/16**.
+    | **Setting**                       | **Value**                                     |
+    | --------------------------------- | --------------------------------------------- |
+    | Bastion name                      | **myBastionHost**                             |
+    | AzureBastionSubnet address  space | **10.1.1.0/24**                               |
+    | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
+
+
+1. Select **Next : IP Addresses**.
+   
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default and click on **Add IPV4 address space** and enter **10.1.0.0** in address space and **/16** in size field.
 
 1. On the **IP Addresses** tab, select **+ Add subnet**.
 
@@ -58,17 +67,6 @@ In this section, you will create a virtual network and a subnet.
 1. Select **Add**.
 
 1. Select **Add subnet**, provide a subnet name of **myFrontEndSubnet**, and a subnet address range of **10.1.2.0/24**. Select **Add**
-
-1. Select **Next : Security**.
-
-1. Under **BastionHost** select **Enable**, then enter the information from the table below.
-
-    | **Setting**                       | **Value**                                     |
-    | --------------------------------- | --------------------------------------------- |
-    | Bastion name                      | **myBastionHost**                             |
-    | AzureBastionSubnet address  space | **10.1.1.0/24**                               |
-    | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
-
 
 1. Select **Review + create**.
 
