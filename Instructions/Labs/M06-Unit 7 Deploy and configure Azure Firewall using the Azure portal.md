@@ -58,9 +58,7 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **Create**.
 
- 
-
-## Task 3: Create a virtual machine
+ ## Task 3: Create a virtual machine
 
 In this task, you will create the workload virtual machine and place it in the Workload-SN subnet created previously.
 
@@ -100,9 +98,8 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | **Setting**          | **Value**                                                    |
    | -------------------- | ------------------------------------------------------------ |
    | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG**                                               |
+   | Resource group       | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
    | Firewall name        | **Test-FW01**                                                |
-   | Region               | Your region                                                  |
    | Firewall SKU        | **Standard**                                                 |
    | Firewall management  | **Use a Firewall Policy to manage this firewall**            |
    | Firewall policy      | Select **Add new**<br />Name: **fw-test-pol**<br />Region: **your region** |
@@ -148,11 +145,9 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
    | Subscription             | Select your subscription |
-   | Resource group           | **Test-FW-RG**           |
-   | Region                   | Your region              |
+   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**  |
    | Name                     | **Firewall-route**       |
    | Propagate gateway routes | **Yes**                  |
-
 
 1. Select **Review + create**.
 
@@ -162,7 +157,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **Associate**.
+1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**.
 
 1. On **Virtual network**, select **Test-FW-VN**.
 
