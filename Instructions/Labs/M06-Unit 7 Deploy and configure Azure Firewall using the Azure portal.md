@@ -31,15 +31,18 @@ In this task, you will create a single virtual network with two subnets.
 
 1. In the **Name** box, enter **Test-FW-VN**.
 
-   ![Create a virtual network - Basics tab](../media/create-vnet-basics-for-azure-firewall.png)
-
 1. Select **Next: IP Addresses**. Enter IPv4 address space 10.0.0.0/16 if not already there by default. 
 
 1. Under **Subnet name**, select the word **default**.
 
-1. In the **Edit subnet** dialog box, change the name to **AzureFirewallSubnet**.
+1. In the **Edit subnet** dialog box, specify the following :
 
-1. Change the **Subnet address range** to **10.0.1.0/26**.
+    |  **Setting**     | **Value**            |
+    | ---------------- | ------------------   | 
+    | Subnet template  | Select **Azure Firewall**|
+    | Name             | **AzureFirewallSubnet**|
+    | Starting address | **10.0.1.0** |
+    | Subnet size      | **/26** |
 
 1. Select **Save**.
 
@@ -48,9 +51,13 @@ In this task, you will create a single virtual network with two subnets.
 
     ![Add subnet](../media/add-workload-subnet.png)
     
-1. In the **Edit subnet** dialog box, change the name to **Workload-SN**.
+1. In the **Edit subnet** dialog box, specify the following :
 
-1. Change the **Subnet address range** to **10.0.2.0/24**.
+    | **Setting**      | **Value**            |
+    | ---------------- | ------------------   | 
+    | Name             | **Workload-SN**      |
+    | Starting address | **10.0.2.0**         |
+    | Subnet size      | **/24**              |
 
 1. Select **Add**.
 
@@ -100,7 +107,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | Subscription         | Select your subscription                                     |
    | Resource group       | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
    | Firewall name        | **Test-FW01**                                                |
-   | Firewall SKU        | **Standard**                                                 |
+   | Firewall SKU         | **Standard**                                                 |
    | Firewall management  | **Use a Firewall Policy to manage this firewall**            |
    | Firewall policy      | Select **Add new**<br />Name: **fw-test-pol**<br /> |
 
