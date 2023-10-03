@@ -1,4 +1,4 @@
-# Module03-Unit 4 Configure an ExpressRoute Gateway
+# Module 03-Unit 4 Configure an ExpressRoute Gateway
 
 ## Deploy ExpressRoute gateways
 
