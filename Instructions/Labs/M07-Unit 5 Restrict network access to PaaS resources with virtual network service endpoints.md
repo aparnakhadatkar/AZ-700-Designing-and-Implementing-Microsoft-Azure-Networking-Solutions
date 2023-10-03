@@ -100,7 +100,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | myResourceGroup                                              |
+   | Resource group | myResourceGroup-<inject key="DeploymentID" enableCopy="false"/>   |
    | Name           | ContosoPrivateNSG                                            |
    | Location       | Select **East US**                                           |
 
