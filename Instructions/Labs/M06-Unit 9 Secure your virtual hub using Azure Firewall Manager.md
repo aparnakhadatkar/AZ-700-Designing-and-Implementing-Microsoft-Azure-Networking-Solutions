@@ -29,7 +29,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, in the search box, enter **virtual network** and select **Virtual Network** when it appears.
 2. Select **Create**.
-3. In **Resource group**, Select fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> .
+3. In **Resource group** select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** .
 4. In **Virtual network name**, enter **Spoke-01**.
 5. In **Region**, select your region.
 6. Select **Next: IP Addresses**.
@@ -58,32 +58,34 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. From the Azure portal home page, select **All services**.
 
-2. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+2. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-3. On the **Firewall Manager** page, from the Overview page, select **View secured virtual hubs**.
+3. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
 
 4. On the **Virtual hubs** page, select **Create new secured virtual hub**.
 
-5. For **Resource group**, select **fw-manager-rg**.
+    ![virtual hub](../media/module6.9.1-hub.png)
 
-6. For **Region**, select your region.
+6. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-7. For the **Secured virtual hub name**, enter **Hub-01**.
+7. For **Region**, select your region.
 
-8. For **Hub address space**, enter **10.2.0.0/16**.
+8. For the **Secured virtual hub name**, enter **Hub-01**.
 
-9. Choose **New vWAN**.
+9. For **Hub address space**, enter **10.2.0.0/16**.
 
-10. In **Virtual WAN Name**, enter **Vwan-01**.
+10. Choose **New vWAN**.
 
-11. Select **Next: Azure Firewall**.
+11. In **Virtual WAN Name**, enter **Vwan-01**.
+
+12. Select **Next: Azure Firewall**.
     ![Create new secured virtual hub - Basics tab](../media/create-new-secured-virtual-hub-1.png)
 
-12. Select **Next: Security Partner Provider**.
+13. Select **Next: Security Partner Provider**.
 
-13. Select **Next: Review + create.**
+14. Select **Next: Review + create.**
 
-14. Select **Create**.
+15. Select **Create**.
 
     > **[!NOTE]** 
     >
@@ -93,17 +95,17 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
     ![Create new secured virtual hub - Review + create tab](../media/create-new-secured-virtual-hub-2.png)
 
-15. When the deployment completes, from the Azure portal home page, select **All services**.
+16. When the deployment completes, from the Azure portal home page, select **All services**.
 
-16. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+17. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
-17. On the **Firewall Manager** page, select **Virtual hubs**.
+18. On the **Firewall Manager** page, select **Virtual hubs**.
 
-18. Select **Hub-01**.
+19. Select **Hub-01**.
 
-19. Select **Public IP configuration**.
+20. Select **Public IP configuration**.
 
-20. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
+21. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
 
 ## Task 3: Connect the hub and spoke virtual networks
 
