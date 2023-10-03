@@ -1,4 +1,4 @@
-# Module04-Unit 6 Create a Traffic Manager profile using the Azure portal
+# Module 04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
 In this exercise, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application. 
 
