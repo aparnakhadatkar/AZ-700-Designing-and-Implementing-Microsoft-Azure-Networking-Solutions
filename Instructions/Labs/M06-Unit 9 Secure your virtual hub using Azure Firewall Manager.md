@@ -1,11 +1,4 @@
----
-Exercise:
-    title: 'M06 - Unit 9 Secure your virtual hub using Azure Firewall Manager'
-    module: 'Module 06 - Design and implement network security'
----
-
-
-# M06-Unit 9 Secure your virtual hub using Azure Firewall Manager
+# Module 06-Unit 9 Secure your virtual hub using Azure Firewall Manager
 
 In this exercise, you will create the spoke virtual network and create a secured virtual hub, then you will connect the hub and spoke virtual networks and route traffic to your hub. Next you will deploy the workload servers, then create a firewall policy and secure your hub, and finally you will test the firewall.
 
@@ -361,17 +354,3 @@ In this task you will test the network rule to confirm that it works as expected
 
 1. Close both RDP sessions to disconnect them.
 
-
-## Task 10: Clean up resources 
-
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'fw-manager-rg' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
