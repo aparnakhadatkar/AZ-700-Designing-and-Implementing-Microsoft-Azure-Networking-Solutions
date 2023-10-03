@@ -128,17 +128,18 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **FirewallManager.json** and **FirewallManager.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M06**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **FirewallManager.json** and **FirewallManager.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
 
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
    >**Note**: You will be prompted to provide an Admin password.
 
    ```powershell
-   $RGName = "fw-manager-rg-<inject key="DeploymentID" />"
+   $RGName = "fw-manager-rg-DID"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
+1. You will be prompted to provide an Admin password. provide
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
