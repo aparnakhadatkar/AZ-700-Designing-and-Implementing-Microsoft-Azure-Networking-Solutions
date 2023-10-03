@@ -270,3 +270,5 @@ In this exercise, you will:
 1. Close the Remote Desktop connection windows.
 
 Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
+
+## You have successfully completed the lab.
