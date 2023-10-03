@@ -35,7 +35,7 @@ In this exercise, you will:
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
-   | Resource group | myResourceGroup-<inject key="DeploymentID" enableCopy="false"/>    |
+   | Resource group | myResourceGroup                               |
    | Name           | CoreServicesVNet                              |
    | Location       | Select **East US**                            |
 
@@ -100,7 +100,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | myResourceGroup-<inject key="DeploymentID" enableCopy="false"/>   |
+   | Resource group | myResourceGroup                                              |
    | Name           | ContosoPrivateNSG                                            |
    | Location       | Select **East US**                                           |
 
@@ -206,7 +206,7 @@ The steps necessary to restrict network access to resources created through Azur
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
    | Resource group | myResourceGroup                                              |
-   | Name           | Enter contosostoragexx (where xx are your initials to make it unique) |
+   | Name           | Enter contosostorage-<inject key="DeploymentID" enableCopy="false"/> |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Location       | Select East US                                               |
    | Replication    | Locally-redundant storage (LRS)                              |
@@ -254,7 +254,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M07**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
