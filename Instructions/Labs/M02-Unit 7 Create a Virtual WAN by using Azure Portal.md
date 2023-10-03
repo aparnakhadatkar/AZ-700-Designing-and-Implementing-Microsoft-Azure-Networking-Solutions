@@ -1,4 +1,4 @@
-# Module02-Unit 7 Create a Virtual WAN by using Azure Portal
+# Module 02-Unit 7 Create a Virtual WAN by using Azure Portal
 
 
 In this exercise, you will create a Virtual WAN for Contoso.
