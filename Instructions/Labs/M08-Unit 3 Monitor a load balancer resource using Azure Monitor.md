@@ -1,10 +1,4 @@
----
-Exercise:
-    title: 'M08 - Unit 3 Monitor a load balancer resource using Azure Monitor'
-    module: 'Module 08 - Design and implement network monitoring'
----
-
-# M08-Unit 3 Monitor a load balancer resource using Azure Monitor
+#Module 08-Unit 3 Monitor a load balancer resource using Azure Monitor
 
 
 In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. Then you will create a Log Analytics workspace, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. Finally, you will configure the load balancer's diagnostic settings to send metrics to the Log Analytics workspace you created. 
@@ -29,7 +23,6 @@ The diagram below illustrates the environment you will be deploying in this exer
 + Task 12: View detailed metrics
 + Task 13: View resource health
 + Task 14: Configure diagnostic settings
-+ Task 15: Clean up resources
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -192,7 +185,7 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M08**.
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M08**.
 
 1. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
@@ -432,21 +425,3 @@ In this section, you will create a test VM, and then test the load balancer.
 1. Select **Save**.
 
    ![Diagnostic setting page for load balancer](../media/diagnostic-settings-2.png)
-
- 
-
- 
-
-## Task 15: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'IntLB-RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
