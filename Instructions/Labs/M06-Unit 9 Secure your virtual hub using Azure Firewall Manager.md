@@ -30,25 +30,27 @@ In this task, you will create the two spoke virtual networks each containing a s
 1. On the Azure portal home page, in the search box, enter **virtual network** and select **Virtual Network** when it appears.
 2. Select **Create**.
 3. In **Resource group**, Select fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> .
-4. In **Name**, enter **Spoke-01**.
+4. In **Virtual network name**, enter **Spoke-01**.
 5. In **Region**, select your region.
 6. Select **Next: IP Addresses**.
 7. In **IPv4 address space**, enter **10.0.0.0/16**. 
-8. **Delete** any other address spaces listed here, such as **10.1.0.0/16**.
-9. Under **Subnet name**, select the word **default**.
-10. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**.
-11. Change the **Subnet address range** to **10.0.1.0/24**.
-12. Select **Save**.
-13. Select **Review + create**.
-14. Select **Create**.
+8. Delete any other address spaces listed here, such as 10.1.0.0/16.
+9. Under Subnet name, select the word default.
+10.In the Edit subnet dialog box, change the name to **Workload-01-SN**.
+11. Change the **Starting address** to **10.0.1.0**.
+12. Select Subnet size : **/24(256 addresses)**.
+13. Select **Add**.
+14. Select **Review + create**.
+15. Select **Create**.
 
 Repeat steps 1 to 14 above to create another similar virtual network and subnet but using the following information:
 
-- Resource Group: **fw-manager-rg** (select existing)
+- Resource Group: Select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**
 - Name: **Spoke-02**
 - Address space: **10.1.0.0/16** - (delete any other listed address spaces)
 - Subnet name: **Workload-02-SN**
-- Subnet address range: **10.1.1.0/24**
+- **Starting address**: **10.1.1.0**
+- **Select Subnet size** : **/24(256 addresses)**.
 
 ## Task 2: Create the secured virtual hub
 
