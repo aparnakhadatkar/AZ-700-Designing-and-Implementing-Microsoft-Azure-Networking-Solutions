@@ -189,9 +189,9 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 1. Select **+ Associate.**
 
-1. Under **Associate subnet**, select **Virtual network** and then select **CoreServicesVNet** under **Choose a virtual network**.
+1. Under **Associate subnet**, select **Virtual network** and then select **CoreServicesVNet** under **Virtual Network**.
 
-1. Under **Choose subnet**, select **Private**, and then select **OK**.
+1. Under **Subnet**, select **Private**, and then select **OK**.
 
 ## Task 6: Restrict network access to a resource
 
