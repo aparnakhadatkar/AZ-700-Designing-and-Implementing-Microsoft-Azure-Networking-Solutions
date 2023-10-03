@@ -31,9 +31,9 @@ In this task, you will create the two spoke virtual networks each containing a s
 2. Select **Create**.
 3. In **Resource group** select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** .
 4. In **Virtual network name**, enter **Spoke-01**.
-5. In **Region**, select your region.
+5. In **Region**, select **<inject key="Region" enableCopy="false"/>**.
 6. Select **Next: IP Addresses**.
-7. In **IPv4 address space**, enter **10.0.0.0/16**. 
+7. In **IPv4 address space**, enter **10.0.0.0/16**
 8. Delete any other address spaces listed here, such as 10.1.0.0/16.
 9. Under Subnet name, select the word default.
 10.In the Edit subnet dialog box, change the name to **Workload-01-SN**.
@@ -68,7 +68,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 6. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-7. For **Region**, select your region.
+7. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
 
 8. For the **Secured virtual hub name**, enter **Hub-01**.
 
@@ -87,12 +87,9 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 15. Select **Create**.
 
-    > **[!NOTE]** 
-    >
-    > This can take up to 30 minutes to deploy.
+    > **!NOTE** : This can take up to 30 minutes to deploy.
 
-    ​
-
+    
     ![Create new secured virtual hub - Review + create tab](../media/create-new-secured-virtual-hub-2.png)
 
 16. When the deployment completes, from the Azure portal home page, select **All services**.
