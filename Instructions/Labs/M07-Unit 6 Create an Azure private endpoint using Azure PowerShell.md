@@ -417,9 +417,4 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. Close the connection to **myVM**. 
 
-
-
-
-
-
-
+## You have successfully completed the lab.
