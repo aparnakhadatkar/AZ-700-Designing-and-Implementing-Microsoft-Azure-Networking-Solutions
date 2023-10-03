@@ -10,7 +10,7 @@ You'll create a Private Endpoint for an Azure web app and deploy a virtual machi
 
 Private Endpoints can be created for different kinds of Azure services, such as Azure SQL and Azure Storage.
 
-## Prerequisites
+## Prerequisites (Perform the below steps before proceeding to task 1)
 
 - An Azure Web App with a PremiumV2-tier or higher app service plan deployed in your Azure subscription.
 
@@ -35,14 +35,15 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 In this exercise, you will:
 
++ Task 1: Deploy the prerequisite web app
 + Task 2: Create a virtual network and bastion host
 + Task 3: Create a test virtual machine
 + Task 4: Create a Private Endpoint
 + Task 5: Configure the private DNS zone
 + Task 6: Test connectivity to the Private Endpoint
-+ Task 7: Clean up resources
 
-## Task 1: Create a resource group and deploy the prerequisite web app
+
+## Task 1: Deploy the prerequisite web app
 
 An Azure resource group is a logical container into which Azure resources are deployed and managed.
 
@@ -366,7 +367,6 @@ $parameters4 = @{
 New-AzPrivateDnsZoneGroup @parameters4 
 ```
 
-
 ## Task 6: Test connectivity to the Private Endpoint
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
@@ -389,19 +389,19 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
-  ```
-  Server: UnKnown
-  
-  Address: 168.63.129.16
-  
-  Non-authoritative answer:
-  
-  Name: mywebapp8675.privatelink.azurewebsites.net
-  
-  Address: 10.0.0.5
-  
-  Aliases: mywebapp8675.azurewebsites.net 
-  ```  
+     ```
+     Server: UnKnown
+     
+     Address: 168.63.129.16
+     
+     Non-authoritative answer:
+     
+     Name: mywebapp8675.privatelink.azurewebsites.net
+     
+     Address: 10.0.0.5
+     
+     Aliases: mywebapp8675.azurewebsites.net 
+     ```  
 
   ![](../media/L7U7-1.png)
 
