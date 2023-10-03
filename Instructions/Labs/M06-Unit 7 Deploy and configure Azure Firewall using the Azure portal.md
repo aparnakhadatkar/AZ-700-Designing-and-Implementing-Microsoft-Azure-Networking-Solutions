@@ -25,9 +25,9 @@ In this task, you will create a single virtual network with two subnets.
 
 1. On the Azure portal home page, in the search box, enter **virtual network** and select **Virtual Network** when it appears.
 
-1. Select **Create**.
+1. Select **+ Create**.
 
-1. Select the **Test-FW-RG** resource group you created previously.
+1. Select the **Test-FW-RG--<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
 1. In the **Name** box, enter **Test-FW-VN**.
 
@@ -66,7 +66,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M06**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
 
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
