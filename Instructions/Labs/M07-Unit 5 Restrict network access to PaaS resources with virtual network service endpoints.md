@@ -29,9 +29,8 @@ In this exercise, you will:
 
 1. Select **+** **Create**.
 
-1. Enter, or select, the following information:
-   ![Graphical user interface, text, application Description automatically generated](../media/create-virtual-network.png)
-
+1. On the **Create virtual network** blade specify the following information:
+ 
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
@@ -39,8 +38,7 @@ In this exercise, you will:
    | Name           | CoreServicesVNet                              |
    | Location       | Select **East US**                            |
 
-1. Select the **Security** tab and enter the following values:
-   ![Graphical user interface, text, application, email Description automatically generated](../media/ create-virtual-network-security.png)
+1. Select **Next Security** tab, and specify the following values:
 
    | **Setting**             | **Value** |
    | ----------------------- | --------- |
@@ -48,8 +46,7 @@ In this exercise, you will:
    | DDoS Network Protection | Disabled  |
    | Firewall                | Disabled  |
 
-1. Select the **IP Addresses** tab and enter the following values (select **default** to change the subnet name):
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-ip.png)
+1. Select **Next IP Addresses** tab and specify the following values (select **default** to change the subnet name):
 
    | **Setting**          | **Value**   |
    | -------------------- | ----------- |
@@ -67,8 +64,9 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select it.
 
-1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture: 
-   ![Graphical user interface, application Description automatically generated](../media/create-subnet.png)
+1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture:
+   
+    ![](../media/L7U5-1.png)
 
 1. Under **Add subnet**, select or enter the following information:
 
@@ -80,11 +78,9 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 1. Select **Save**.
 
-You should now have two subnets configured:
+1. You should now have two subnets configured:
 
-![Graphical user interface, text, application, email Description automatically generated](../media/configured-subnets.png)
-
- 
+   ![](../media/L7U5-2.png)
 
 ## Task 3: Restrict network access for a subnet
 
@@ -102,7 +98,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | Subscription   | Select your subscription                                     |
    | Resource group | myResourceGroup                                              |
    | Name           | ContosoPrivateNSG                                            |
-   | Location       | Select **East US**                                           |
+   | Location       | Select **<inject key="Region" enableCopy="false"/>**                                           |
 
 1. select **Review + create**, then select **Create**:
 
@@ -197,9 +193,9 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 The steps necessary to restrict network access to resources created through Azure services enabled for service endpoints varies across services. See the documentation for individual services for specific steps for each service. The remainder of this exercise includes steps to restrict network access for an Azure Storage account, as an example.
 
-1. On the Azure portal, select Storage accounts.
+1. On the Azure portal, in the **Search resources, services, and docs** box at the top of the portal, search and select **Storage Account**.
 
-1. Select +Create.
+1. Select **+ Create**.
 
 1. Enter, or select, the following information and accept the remaining defaults:
 
@@ -210,7 +206,7 @@ The steps necessary to restrict network access to resources created through Azur
    | Resource group | myResourceGroup                                              |
    | Name           | Enter contosostorage-<inject key="DeploymentID" enableCopy="false"/> |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
-   | Location       | Select East US                                               |
+   | Location       | **<inject key="Region" enableCopy="false"/>**                                               |
    | Replication    | Locally-redundant storage (LRS)                              |
 
 1. select **Review**, then select **Create**.
@@ -218,23 +214,33 @@ The steps necessary to restrict network access to resources created through Azur
 ## Task 7: Create a file share in the storage account
 
 1. After the storage account is created, enter the name of the storage account in the **Search resources, services, and docs** box, at the top of the portal. When the name of your storage account appears in the search results, select it.
+
 1. Select **File shares**, as shown in the following picture: 
-   ![Graphical user interface, application Description automatically generated](../media/new-file-share.png)
+   
 1. Select **+ File share**.
-1. Enter marketing under **Name**, and then select **Create**.
+
+1. Enter **marketing**, under **Name**.
+
+1. Select **Next: Backup>** and unselect the **Enable backup**.
+   
+1. Select **Review + Create** and **Create**.
 
 ## Task 8: Restrict network access to a subnet
 
 By default, storage accounts accept network connections from clients in any network, including the internet. Deny network access from the internet, and all other subnets in all virtual networks, except for the Private subnet in the CoreServicesVNet virtual network.
 
-1. Under **Security + networking** for the storage account, select **Networking**.
+1. On the Azure portal, in the **Search resources, services, and docs** box at the top of the portal, search and select **Storage Account**. 
+
+1. Select contosostorage-<inject key="DeploymentID" enableCopy="false"/> storage account from the list.
+
+1. On the storage account blade from the left navigation pane, under **Security + networking** section, select **Networking**.
 
 1. Select **Enabled from selected virtual networks and IP addresses**.
 
-1. Select **+Add existing virtual network**.
+1. Select **+ Add existing virtual network**.
 
 1. Under **Add networks**, select the following values:
-   ![Graphical user interface, application Description automatically generated](../media/add-network-access.png)
+   ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
 
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
@@ -248,16 +254,26 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Under **Security and Networking** for the storage account, select **Access keys**.
 
-1. Select **Show Keys**. Note the **Key** value, as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
+1. Select **Show Keys**. make a note the **Key** value, as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
 
 ## Task 9: Create virtual machines
 
 To test network access to a storage account, deploy a VM to each subnet.
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
+
+   ![](../media/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click Create Storage Account.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
+   ![](../media/unit6-image3.png)
+   
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
    >**Note**: You will be prompted to provide an Admin password.
@@ -273,32 +289,40 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 ## Task 10: Confirm access to storage account
 
-1. Once the ContosoPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button, then select RDP.
-   ![Graphical user interface, application Description automatically generated](../media/private-virtual-machine-connect.png)
-1. After selecting the Connect button and RDP, select the Download RDP File button. A Remote Desktop Protocol (.rdp) file is created and downloaded to your computer.
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name and password you specified when creating the VM. You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM.
+1. Once the ContosoPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button.
+
+1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+
+   ![](../media/unit6-image(6).png)
+   
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password you specified when creating the VM.
+
 1. Select **OK**.
+
 1. You may receive a certificate warning during the sign-in process. If you receive the warning, select Yes or Continue to proceed with the connection.
-1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace <storage-account-key> , <storage-account-name> (i.e. contosostoragexx) and my-file-share (i.e marketing) with values you supplied and retrieved in the Create a storage account task.
+
+1. On the **ContosoPrivate** VM, from the start menu open the **windows powershell**.
+
+1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task and **[storage-account-name]** (i.e. contosostoragexx)  with values you supplied and retrieved in the Create a storage account task.
 
 
-```azurecli
-$acctKey = ConvertTo-SecureString -String "<storage-account-key>" -AsPlainText -Force
+   ```azurecli
+   $acctKey = ConvertTo-SecureString -String "[storage-account-key]" -AsPlainText -Force
+   
+   $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\<storage-account-name>", $acctKey
+   
+   New-PSDrive -Name Z -PSProvider FileSystem -Root "\\[storage-account-name].file.core.windows.net\marketing" -Credential $credential
+   
+   ```
 
-$credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\<storage-account-name>", $acctKey
-
-New-PSDrive -Name Z -PSProvider FileSystem -Root "\\<storage-account-name>.file.core.windows.net\marketing" -Credential $credential
-
-```
-
-The Azure file share successfully mapped to the Z drive.
+   The Azure file share successfully mapped to the Z drive.
 
 1. Confirm that the VM has no outbound connectivity to the internet from a command prompt:
 
- ping bing.com
+   ping bing.com
 
 
-You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
+   **Note**: You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
 
 1. Close the remote desktop session to the ContosoPrivate VM.
 
@@ -310,11 +334,13 @@ You receive no replies because the network security group associated to the Priv
 
 1. Complete steps 1-6 in the Confirm access to storage account task for the ContosoPublic VM.  
      
-   ‎After a short wait, you receive a New-PSDrive : Access is denied error. Access is denied because the ContosoPublic VM is deployed in the Public subnet. The Public subnet does not have a service endpoint enabled for Azure Storage. The storage account only allows network access from the Private subnet, not the Public subnet.
+1. ‎After a short wait, you receive a New-PSDrive : Access is denied error. Access is denied because the ContosoPublic VM is deployed in the Public subnet. The Public subnet does not have a service endpoint enabled for Azure Storage. The storage account only allows network access from the Private subnet, not the Public subnet.
+
+   ![](../media/L7U5-4.png)
 
 1. Confirm that the public VM does have outbound connectivity to the internet from a command prompt:
 
- ping bing.com    
+    ping bing.com    
 
 1. Close the remote desktop session to the ContosoPublic VM.
 
@@ -324,12 +350,14 @@ You receive no replies because the network security group associated to the Priv
 
 1. Select **File shares** then select the **marketing** file share.
 
+1. On the **marketing** blade, click on **Browse**
+
 1. You receive the error shown in the following screenshot:
 
-    ![Graphical user interface, text, application, email Description automatically generated](../media/no-access.png)
+   ![](../media/L7U5-5.png)
 
- Access is denied, because your computer is not in the Private subnet of the CoreServicesVNet virtual network.
+   **Note**:  Access is denied, because your computer is not in the Private subnet of the CoreServicesVNet virtual network.
 
-> **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
+   **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
 
-Results: You have now completed this lab.
+
