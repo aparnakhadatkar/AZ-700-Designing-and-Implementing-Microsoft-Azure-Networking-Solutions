@@ -35,18 +35,9 @@ In this exercise, you will:
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
-   | Resource group | (New) myResourceGroup                         |
+   | Resource group | myResourceGroup-<inject key="DeploymentID" enableCopy="false"/>    |
    | Name           | CoreServicesVNet                              |
    | Location       | Select **East US**                            |
-
-1. Select the **IP Addresses** tab and enter the following values (select **default** to change the subnet name):
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-ip.png)
-
-   | **Setting**          | **Value**   |
-   | -------------------- | ----------- |
-   | Address space        | 10.0.0.0/16 |
-   | Subnet Name          | Public      |
-   | Subnet Address range | 10.0.0.0/24 |
 
 1. Select the **Security** tab and enter the following values:
    ![Graphical user interface, text, application, email Description automatically generated](../media/ create-virtual-network-security.png)
@@ -57,6 +48,17 @@ In this exercise, you will:
    | DDoS Network Protection | Disabled  |
    | Firewall                | Disabled  |
 
+1. Select the **IP Addresses** tab and enter the following values (select **default** to change the subnet name):
+   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-ip.png)
+
+   | **Setting**          | **Value**   |
+   | -------------------- | ----------- |
+   | Subnet Name          | Public      |
+   | Starting address     | 10.0.0.0    |
+   | Subnet size          | /24 |
+
+1. Select **Save**.
+   
 1. Select **Review + Create**. Once the resource is validated select **Create**. 
 
 ## Task 2: Enable a service endpoint
@@ -73,7 +75,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
    | **Setting**                 | **Value**                    |
    | --------------------------- | ---------------------------- |
    | Name                        | Private                      |
-   | Address range               | 10.0.1.0/24                  |
+   | Subnet address range        | 10.0.1.0/24                  |
    | Service endpoints: Services | Select **Microsoft.Storage** |
 
 1. Select **Save**.
