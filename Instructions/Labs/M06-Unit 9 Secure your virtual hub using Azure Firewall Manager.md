@@ -19,8 +19,7 @@ In this exercise, you will:
 + Task 7: Route traffic to your hub
 + Task 8: Test the application rule
 + Task 9: Test the network rule
-+ Task 10: Clean up resources
-
+  
 #### Estimated time: 35 minutes
 
 ## Task 1: Create two spoke virtual networks and subnets
@@ -117,13 +116,14 @@ In this task you will connect the hub and spoke virtual networks. This is common
 7. For **Resource group**, select **fw-manager-rg**.
 8. For **Virtual network**, select **Spoke-01**.
 9. Select **Create**.
+    
    ![Add hub and spoke connection to virtual WAN - Spoke 1](../media/connect-hub-spoke-vnet-1.png)
-10. Repeat steps 4 to 9 above to create another similar connection but using the connection name of **hub-spoke-02** to connect the **Spoke-02** virtual network.
+   
+11. Repeat steps 4 to 9 above to create another similar connection but using the connection name of **hub-spoke-02** to connect the **Spoke-02** virtual network.
 
-![Add hub and spoke connection to virtual WAN - Spoke 2](../media/connect-hub-spoke-vnet-2.png)
+   ![Add hub and spoke connection to virtual WAN - Spoke 2](../media/connect-hub-spoke-vnet-2.png)
 
  
-
 ## Task 4: Deploy the servers
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
@@ -193,7 +193,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 1. Ensure **Destination type** is **FQDN**.
 
-1. For **Destination**, enter ***.microsoft.com**.
+1. For **Destination**, enter *.microsoft.com .
 
 1. Select **Add**.
 
