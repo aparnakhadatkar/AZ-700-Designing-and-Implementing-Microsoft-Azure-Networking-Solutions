@@ -108,3 +108,5 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 1. Select **Create**.
 
  Congratulations! You have created a Virtual WAN and a Virtual WAN Hub and connected the ResearchVNet to the hub.
+
+## You have successfully completed the lab.
