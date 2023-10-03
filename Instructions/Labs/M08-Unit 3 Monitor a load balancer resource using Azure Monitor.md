@@ -26,7 +26,7 @@ The diagram below illustrates the environment you will be deploying in this exer
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 
-> [!Note]  
+**Note:**  
 > You may find slight differences between the instructions and the Azure portal interface, but the core concept is the same. 
 
 #### Estimated time: 55 minutes
@@ -48,19 +48,9 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
    | Subscription   | Select your subscription                            |
-   | Resource group | Select **Create new**<br /><br />Name: **IntLB-RG** |
+   | Resource group | Select IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>   |
    | Name           | **IntLB-VNet**                                      |
-   | Region         | **(US) West US**                                    |
-
-1. Select **Next : IP Addresses**.
-
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, enter **10.1.0.0/16**.
-
-1. Above **Subnet name**, select **+ Add subnet**.
-
-1. On the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
-
-1. Select **Add**.
+   | Region         | **<inject key="Region" enableCopy="false"/>**                                   |
 
 1. Select **Next : Security**.
 
@@ -69,8 +59,17 @@ In this section, you will create a virtual network and a subnet.
     | **Setting**                       | **Value**                                              |
     | --------------------------------- | ------------------------------------------------------ |
     | Bastion name                      | **myBastionHost**                                      |
-    | AzureBastionSubnet address space  | **10.1.1.0/24**                                        |
     | Public IP address                 | Select **Create new**<br /><br />Name: **myBastionIP** |
+   
+1. Select **Next : IP Addresses**.
+
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, enter **10.1.0.0/16**.
+
+1. Above **Subnet name**, select **+ Add subnet**.
+
+1. On the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+
+1. Select **Save**.
 
 1. Select **Review + create**.
 
@@ -89,9 +88,9 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | --------------------- | ------------------------ |
    | Basics tab            |                          | 
    | Subscription          | Select your subscription |
-   | Resource group        | **IntLB-RG**             |
+   | Resource group        | Select IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>              |
    | Name                  | **myIntLoadBalancer**    |
-   | Region                | **(US) West US**         |
+   | Region                | **<inject key="Region" enableCopy="false"/>**         |
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
    | Frontend IP configuration tab | + Add a frontend IP configuration |
@@ -102,10 +101,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 
 1. Select **Review + create**.
-
-
+   
 1. Select **Create**.
-
 
 ## Task 3: Create a backend pool
 
@@ -123,12 +120,11 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | Virtual network | **IntLB-VNet**       |
    | Backend Pool Configuration   | **NIC** |
 
-1. Select **Add**.
+1. Select **Save**.
 
    ![Show backend pool created in load balancer](../media/create-backendpool.png)
 
    
-
 ## Task 4: Create a health probe
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
@@ -145,7 +141,7 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Path                | **/**             |
    | Interval            | **15**            |
 
-1. Select **Add**.
+1. Select **Save**.
 
    ![Show health probe created in load balancer](../media/create-healthprobe.png)
 
@@ -164,16 +160,16 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Name                   | **myHTTPRule**           |
    | IP Version             | **IPv4**                 |
    | Frontend IP address    | **LoadBalancerFrontEnd** |
+   | Backend pool           | **myBackendPool**        |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
    | Backend port           | **80**                   |
-   | Backend pool           | **myBackendPool**        |
    | Health probe           | **myHealthProbe**        |
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
    | Floating IP            | **Disabled**             |
 
-1. Select **Add**.
+1. Select **Save**.
 
    ![Show load balancing rule created in load balancer](../media/create-loadbalancerrule.png)
 
@@ -188,17 +184,19 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
+    **Important**: Please replace IntLB-RG-DID with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
-   $RGName = "IntLB-RG"
+   $RGName = "IntLB-RG-DID"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
   
-    > **Note:** This will take several minutes to deploy. 
+1. You will be prompted to provide an Admin password. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>.
+     
+  > **Note:** This will take several minutes to deploy. 
 
 ## Task 7: Add VMs to the backend pool
 
