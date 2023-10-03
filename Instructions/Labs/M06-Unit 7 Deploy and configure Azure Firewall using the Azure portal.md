@@ -327,3 +327,4 @@ by using the password you provided during deployment.
     ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/L6U7-3.png)
 
  
+## You have successfully completed the lab.
