@@ -29,7 +29,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. On the Azure portal home page, in the search box, enter **virtual network** and select **Virtual Network** when it appears.
 2. Select **Create**.
-3. In **Resource group**, select **Create new**, and enter **fw-manager-rg** as the name and select **OK**.
+3. In **Resource group**, Select fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> .
 4. In **Name**, enter **Spoke-01**.
 5. In **Region**, select your region.
 6. Select **Next: IP Addresses**.
