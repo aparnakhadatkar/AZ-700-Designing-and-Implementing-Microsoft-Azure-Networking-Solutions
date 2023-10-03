@@ -135,7 +135,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
    >**Note**: You will be prompted to provide an Admin password.
 
    ```powershell
-   $RGName = "fw-manager-rg-DID"
+   $RGName = "fw-manager-rg-<inject key="DeploymentID" />"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
