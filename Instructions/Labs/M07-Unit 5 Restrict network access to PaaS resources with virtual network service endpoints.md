@@ -172,7 +172,8 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
    | ----------------------- | ------------------------- |
    | Source                  | Any                       |
    | Source port ranges      | *                         |
-   | Destination             | Select **VirtualNetwork** |
+   | Destination             | Select **Service Tag**    |
+   | Destination service tag | Select **VirtualNetwork** |
    | Service                 | Custom                    |
    | Destination port ranges | 3389                      |
    | Protocol                | Any                       |
