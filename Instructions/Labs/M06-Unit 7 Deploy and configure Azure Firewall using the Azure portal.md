@@ -1,53 +1,23 @@
----
-Exercise:
-    title: 'M06 - Unit 7 Deploy and configure Azure Firewall using the Azure portal'
-    module: 'Module 06 - Design and implement network security '
----
-
-# M06-Unit 7 Deploy and configure Azure Firewall using the Azure portal
+# Module06-Unit 7 Deploy and configure Azure Firewall using the Azure portal
 
 Being part of the Network Security team at Contoso, your next task is to create firewall rules to allow/deny access to certain websites. The following steps walk you through creating a resource group, a virtual network and subnets, and a virtual machine as environment preparation tasks, and then deploying a firewall and firewall policy, configuring default routes and application, network and DNAT rules, and finally testing the firewall.
 
 In this exercise, you will:
 
-+ Task 1: Create a resource group
-+ Task 2: Create a virtual network and subnets
-+ Task 3: Create a virtual machine
-+ Task 4: Deploy the firewall and firewall policy
-+ Task 5: Create a default route
-+ Task 6: Configure an application rule
-+ Task 7: Configure a network rule
-+ Task 8: Configure a Destination NAT (DNAT) rule
-+ Task 9: Change the primary and secondary DNS address for the server's network interface
-+ Task 10: Test the firewall
-+ Task 11: Clean up resources
++ Task 1: Create a virtual network and subnets
++ Task 2: Create a virtual machine
++ Task 3: Deploy the firewall and firewall policy
++ Task 4: Create a default route
++ Task 5: Configure an application rule
++ Task 6: Configure a network rule
++ Task 7: Configure a Destination NAT (DNAT) rule
++ Task 8: Change the primary and secondary DNS address for the server's network interface
++ Task 9: Test the firewall
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 
 #### Estimated time: 60 minutes
-
-## Task 1: Create a resource group
-
-In this task, you will create a new resource group.
-
-1. Log in to your Azure account.
-
-1. On the Azure portal home page, select **Resource groups**.
-
-1. Select **Create**. 
-
-1. On the **Basics** tab, in **Resource group**, enter **Test-FW-RG**.
-
-1. On the **Region**, select your region from the list.
-
-   ![Create a resource group for Azure firewall](../media/create-resource-group-for-azure-firewall.png)
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
- 
 
 ## Task 2: Create a virtual network and subnets
 
@@ -382,16 +352,3 @@ In this final task, you will test the firewall to verify that the rules are conf
     ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/remote-desktop-connection-3.png)
 
  
-## Task 11: Clean up resources 
-
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'Test-FW-RG' -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
