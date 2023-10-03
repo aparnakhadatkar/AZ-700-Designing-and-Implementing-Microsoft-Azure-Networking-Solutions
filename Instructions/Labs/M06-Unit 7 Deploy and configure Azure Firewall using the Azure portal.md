@@ -47,9 +47,6 @@ In this task, you will create a single virtual network with two subnets.
 1. Select **Save**.
 
 1. Select **Add subnet**, to create another subnet, which will host the workload server that you will create shortly.
-
-
-    ![Add subnet](../media/add-workload-subnet.png)
     
 1. In the **Edit subnet** dialog box, specify the following :
 
@@ -171,7 +168,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. On **Route name**, enter **fw-dg**.
 
-1. Select **Destination type** as **IP address** and on **Address prefix destination**, enter **0.0.0.0/0**.
+1. Select **Destination type** as **IP address** and on **Destination IP addresses/CIDR ranges**, enter **0.0.0.0/0**.
 
 1. On **Next hop type**, select **Virtual appliance**.
 
