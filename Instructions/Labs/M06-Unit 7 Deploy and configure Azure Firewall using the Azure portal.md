@@ -27,7 +27,7 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **+ Create**.
 
-1. Select the **Test-FW-RG--<inject key="DeploymentID" enableCopy="false"/>** resource group.
+1. Select the **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
 1. In the **Name** box, enter **Test-FW-VN**.
 
@@ -69,6 +69,7 @@ In this task, you will create the workload virtual machine and place it in the W
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
    >**Note**: You will be prompted to provide an Admin password.
+   >**Important**: please replace "Test-FW-RG" with **"Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>"**
 
    ```powershell
    $RGName = "Test-FW-RG"
@@ -82,9 +83,8 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. When deployment of the VM completes, select **Go to resource**.
 
-1. On the **Overview** page of **Srv-Work**, on the right of the page under **Networking**, take a note of the **Private IP address** for this VM (e.g., **10.0.2.4**).
+1. On the **Overview** page of **Srv-Work**, on the right of the page under **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
  
-
 ## Task 4: Deploy the firewall and firewall policy
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
@@ -102,17 +102,14 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | Firewall name        | **Test-FW01**                                                |
    | Firewall SKU        | **Standard**                                                 |
    | Firewall management  | **Use a Firewall Policy to manage this firewall**            |
-   | Firewall policy      | Select **Add new**<br />Name: **fw-test-pol**<br />Region: **your region** |
+   | Firewall policy      | Select **Add new**<br />Name: **fw-test-pol**<br /> |
 
-   ![Create a new firewall policy](../media/create-firewall-policy.png)
 
    | Choose a virtual network | **Use existing**                         |
    | ------------------------ | ---------------------------------------- |
    | Virtual network          | **Test-FW-VN**                           |
    | Public IP address        | Select **Add new**<br />Name: **fw-pip** |
 
-
-   ![Add public IP address to firewall](../media/assign-public-ip-to-firewall.png)
 
 1. Review all the settings to ensure they match the screenshot below.
 
@@ -124,13 +121,11 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 1. When deployment of the firewall is completed, select **Go to resource**.
 
-1. On the **Overview** page of **Test-FW01**, on the right of the page, take a note of the **Firewall private IP** for this firewall (e.g., **10.0.1.4**).
+1. On the **Overview** page of **Test-FW01**, on the right of the page, make a note of the **Firewall private IP** for this firewall (e.g., **10.0.1.4**) you may need this in coming tasks.
 
 1. In the menu on the left, under **Settings**, select **Public IP configuration**.
 
-1. Take a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**).
-
- 
+1. Make a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**) you may need this in coming tasks.
 
 ## Task 5: Create a default route
 
@@ -169,7 +164,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. On **Route name**, enter **fw-dg**.
 
-1. On **Address prefix destination**, enter **0.0.0.0/0**.
+1. Select **Destination type** as **IP address** and on **Address prefix destination**, enter **0.0.0.0/0**.
 
 1. On **Next hop type**, select **Virtual appliance**.
 
@@ -180,7 +175,6 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
     ![Add firewall route](../media/add-firewall-route.png)
 
  
-
 ## Task 6: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
@@ -215,9 +209,7 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. Select **Add**.
 
- 
-
-## Task 7: Configure a network rule
+ ## Task 7: Configure a network rule
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
@@ -247,8 +239,6 @@ In this task, you will add a network rule that allows outbound access to two IP 
    ​	![Add a network rule collection](../media/add-a-network-rule-for-firewall.png)
 
 1. Select **Add**.
-
- 
 
 ## Task 8: Configure a Destination NAT (DNAT) rule
 
@@ -281,19 +271,15 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. Select **Add**.
 
- 
-
-## Task 9: Change the primary and secondary DNS address for the server's network interface
+ ## Task 9: Change the primary and secondary DNS address for the server's network interface
 
 For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
-1. On the Azure portal home page, select **Resource groups**.
+1. On the Azure portal locate the search bar at the top of the page. Search and select **Resource groups**.
 
-1. In the list of resource groups, select your resource group, **Test-FW-RG**.
+1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work350**).
-
-   ![Select NIC in resource group](../media/change-dns-servers-srv-work-nic-1.png)
 
 1. Under **Settings**, select **DNS servers**.
 
@@ -307,9 +293,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Restart the **Srv-Work** virtual machine.
 
- 
-
-## Task 10: Test the firewall
+ ## Task 10: Test the firewall
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
@@ -317,13 +301,12 @@ In this final task, you will test the firewall to verify that the rules are conf
 
 1. On the **Computer** box, enter the firewall's public IP address (e.g., **20.90.136.51**) followed by **:3389** (e.g., **20.90.136.51:3389**).
 
-1. On the **Username** box, enter **TestUser**.
-
 1. Select **Connect**.
 
-   ![RDP connection to firewall's public IP address](../media/remote-desktop-connection-1.png)
+1. On the **Username** box, enter **.\TestUser**.
 
-1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, by using the password you provided during deployment.
+1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **.\TestUser**
+by using the password you provided during deployment.
 
 1. Select **OK**.
 
