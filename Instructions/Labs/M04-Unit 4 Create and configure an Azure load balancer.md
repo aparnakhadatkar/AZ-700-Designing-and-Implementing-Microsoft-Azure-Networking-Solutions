@@ -84,7 +84,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 3. Deploy the following ARM templates to create the VMs needed for this exercise:
 
->**Note**: You will be prompted to provide an Admin password.
+   >**Note**: You will be prompted to provide an Admin password.
 
    ```powershell
    $RGName = "IntLB-RG"
@@ -94,7 +94,7 @@ In this section, you will create three VMs, that will be in the same availabilit
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
 
-It may take 5-10 min to create these three VMs. You do not have to wait until this job completes, you can continue with the next task already.
+   **Note**: It may take 5-10 min to create these three VMs. You do not have to wait until this job completes, you can continue with the next task already.
 
 ## Task 3: Create the load balancer
 
@@ -113,9 +113,9 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | **Setting**           | **Value**                |
    | --------------------- | ------------------------ |
    | Subscription          | Select your subscription |
-   | Resource group        | **IntLB-RG**             |
+   | Resource group        | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**             |
    | Name                  | **myIntLoadBalancer**    |
-   | Region                | **(US) East US**         |
+   | Region                | **<inject key="Region" enableCopy="false"/>**         |
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
 
