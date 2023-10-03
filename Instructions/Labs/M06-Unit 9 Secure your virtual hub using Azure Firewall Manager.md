@@ -375,3 +375,5 @@ In this task you will test the network rule to confirm that it works as expected
    ```
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+## You have successfully completed the lab.
