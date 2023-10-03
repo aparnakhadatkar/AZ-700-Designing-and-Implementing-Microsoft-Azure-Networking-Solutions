@@ -354,3 +354,4 @@ In this task you will test the network rule to confirm that it works as expected
 
 1. Close both RDP sessions to disconnect them.
 
+## Congratulations! You have successful secure your virtual hub using Azure Firewall Manager.
