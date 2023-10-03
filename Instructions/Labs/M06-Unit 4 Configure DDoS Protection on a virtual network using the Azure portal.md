@@ -222,3 +222,5 @@ In this step you will create a virtual machine, assign a public IP address to it
    ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+## You have successfully completed the lab.
