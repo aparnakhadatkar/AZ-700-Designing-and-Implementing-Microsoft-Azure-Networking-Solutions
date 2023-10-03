@@ -4,36 +4,18 @@ Being responsible for Contoso's Network Security team, you are going to run a mo
 
 In this exercise, you will:
 
-+ Task 1: Create a resource group
-+ Task 2: Create a DDoS Protection plan
-+ Task 3: Enable DDoS Protection on a new virtual network
-+ Task 4: Configure DDoS telemetry
-+ Task 5: Configure DDoS diagnostic logs
-+ Task 6: Configure DDoS alerts
-+ Task 7: Test with simulation partners
-+ Task 8: Clean up resources
++ Task 1: Create a DDoS Protection plan
++ Task 2: Enable DDoS Protection on a new virtual network
++ Task 3: Configure DDoS telemetry
++ Task 4: Configure DDoS diagnostic logs
++ Task 5: Configure DDoS alerts
++ Task 6: Test with simulation partners
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20Azure%20DDoS%20Protection%20on%20a%20virtual%20network)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 #### Estimated time: 40 minutes
 
-## Task 1: Create a resource group
-
-1. Log in to your Azure account.
-
-1. On the Azure portal home page, select **Resource groups**.
-
-1. Select **Create**. 
-
-1. On the **Basics** tab, in **Resource group**, enter **MyResourceGroup**.
-
-1. On **Region**, select East US.
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
-## Task 2: Create a DDoS Protection plan
+## Task 1: Create a DDoS Protection plan
 
 1. On the Azure portal home page, in the search box enter **DDoS** and select **DDoS protection plan** when it appears.
 
@@ -45,7 +27,7 @@ In this exercise, you will:
 
 1. Select **Create**.
 
-## Task 3: Enable DDoS Protection on a new virtual network
+## Task 2: Enable DDoS Protection on a new virtual network
 
 Here you will enable DDoS on a new virtual network rather than on an existing one, so first you need to create the new virtual network, then enable DDoS protection on it using the plan you created previously.
 
@@ -67,7 +49,7 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
 1. Select **Create**.
 
-## Task 4: Configure DDoS telemetry
+## Task 3: Configure DDoS telemetry
 
 You create a Public IP address, and then set up telemetry in the next steps.
 
@@ -108,7 +90,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
     ![Metrics created for DDoS telemetry](../media/metrics-created-for-ddos-telemetry.png)
 
- ## Task 5: Configure DDoS diagnostic logs
+ ## Task 4: Configure DDoS diagnostic logs
 
 1. On the Azure home page, select **All resources**.
 
@@ -130,7 +112,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Select **Discard**, then select **Yes**.
 
-## Task 6: Configure DDoS alerts
+## Task 5: Configure DDoS alerts
 
 In this step you will create a virtual machine, assign a public IP address to it, and then configure DDoS alerts.
 
@@ -222,7 +204,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Create alert rule**.
 
-## Task 7: Test with simulation partners
+## Task 6: Test with simulation partners
 
 1. Review [Azure DDoS simulation testing policy](https://learn.microsoft.com/azure/ddos-protection/test-through-simulations#azure-ddos-simulation-testing-policy)
 
