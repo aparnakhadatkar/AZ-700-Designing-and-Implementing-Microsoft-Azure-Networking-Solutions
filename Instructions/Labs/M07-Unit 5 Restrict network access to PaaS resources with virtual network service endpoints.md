@@ -135,8 +135,7 @@ Create another outbound security rule that denies communication to the internet.
 1. Select **+Add** under **Outbound security rules**.
 
 1. Enter, or select, the following information:
-   ![Graphical user interface, application, email Description automatically generated](../media/add-outbound-security-rule-deny.png)
-
+ 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
    | Source                  | Select **Service Tag**    |
@@ -162,7 +161,6 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 1. Select **+ Add**.
 
 1. In Add inbound security rule, enter the following values::
-   ![Graphical user interface, application Description automatically generated](../media/add-inbound-security-rule.png)
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
