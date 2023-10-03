@@ -164,3 +164,4 @@ In this exercise, you will:
 
 1. Repeat steps 3 - 5 for each VNet.
 
+## You have successfully completed the lab.
