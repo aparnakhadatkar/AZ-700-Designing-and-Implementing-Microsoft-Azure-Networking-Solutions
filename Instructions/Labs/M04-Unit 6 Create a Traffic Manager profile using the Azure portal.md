@@ -1,10 +1,4 @@
----
-Exercise:
-    title: 'M04 - Unit 6 Create a Traffic Manager profile using the Azure portal'
-    module: 'Module 04 - Load balancing non-HTTP(S) traffic in Azure'
----
-
-# M04-Unit 6 Create a Traffic Manager profile using the Azure portal
+# Module 04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
 In this exercise, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application. 
 
@@ -40,8 +34,8 @@ In this section, you will create two instances of a web application deployed in 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription                                     |
-   | Resource group   | Select **Create  new**  Name: **Contoso-RG-TM1**             |
-   | Name             | **ContosoWebAppEastUSxx** (where xx are your initials to make the name unique) |
+   | Resource group   | Select **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**             |
+   | Name             | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/>**  |
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
    | Operating system | **Windows**                                                  |
@@ -64,8 +58,8 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
-   | Resource group | Select **Create  new**  Name: **Contoso-RG-TM2**             |
-   | Name           | **ContosoWebAppWestEuropexx** (where xx are your initials to make the name unique)  |
+   | Resource group | Select **Contoso-RG-TM2--<inject key="DeploymentID" enableCopy="false"/>**             |
+   | Name           | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/>**   |
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
@@ -94,10 +88,10 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
    | **Setting**             | **Value**                |
    | ----------------------- | ------------------------ |
-   | Name                    | **Contoso-TMProfilexx** (where xx are your initials to make the name unique) |
+   | Name                    | **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** |
    | Routing method          | **Priority**             |
    | Subscription            | Select your subscription |
-   | Resource group          | **Contoso-RG-TM1**       |
+   | Resource group          | **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**   |
    | Resource group location | **East US**              |
 
 
@@ -159,7 +153,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
-1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfilexx** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
+1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
 
    ![Picture 24](../media/tm-webapp-test-1a.png)
 
@@ -181,22 +175,6 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. Verify that the web app is still responding. As the primary endpoint was not available, the traffic was instead routed to the failover endpoint to allow the web site to still function.
 
- 
- ## Task 5: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-
-   Remove-AzResourceGroup -Name 'Contoso-RG-TM1' -Force -AsJob
-   Remove-AzResourceGroup -Name 'Contoso-RG-TM2' -Force -AsJob
-
-   ```
-
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
  
-
+## You have successfully completed the lab.

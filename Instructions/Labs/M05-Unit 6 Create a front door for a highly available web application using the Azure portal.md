@@ -129,6 +129,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
    ![Browser showing App Service error page](../media/web-apps-both-stopped.png)
 
-  ### Congratulations! You have configured and tested an Azure Front Door.
+   Congratulations! You have configured and tested an Azure Front Door.
    
+## You have successfully completed the lab.
 

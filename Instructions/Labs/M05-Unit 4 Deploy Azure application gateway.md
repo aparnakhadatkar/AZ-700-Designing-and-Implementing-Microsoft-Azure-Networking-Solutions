@@ -208,4 +208,7 @@ Although IIS isn't required to create the application gateway, you installed it 
 
 1. Refresh the browser multiple times and you should see connections to both BackendVM1 and BackendVM2.
 
-### Congratulations! You have configured and tested an Azure Application Gateway.
+Congratulations! You have configured and tested an Azure Application Gateway.
+
+## You have successfully completed the lab.
+

@@ -1,62 +1,33 @@
----
-Exercise:
-    title: 'M06 - Unit 4 Configure DDoS Protection on a virtual network using the Azure portal'
-    module: 'Module 06 - Design and implement network security'
----
-
-# M06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal
+# Module 06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal
 
 Being responsible for Contoso's Network Security team, you are going to run a mock DDoS attack on the virtual network. The following steps walk you through creating a virtual network, configuring DDoS Protection, and creating an attack which you can observe and monitor with the help of telemetry and metrics.
 
 In this exercise, you will:
 
-+ Task 1: Create a resource group
-+ Task 2: Create a DDoS Protection plan
-+ Task 3: Enable DDoS Protection on a new virtual network
-+ Task 4: Configure DDoS telemetry
-+ Task 5: Configure DDoS diagnostic logs
-+ Task 6: Configure DDoS alerts
-+ Task 7: Test with simulation partners
-+ Task 8: Clean up resources
++ Task 1: Create a DDoS Protection plan
++ Task 2: Enable DDoS Protection on a new virtual network
++ Task 3: Configure DDoS telemetry
++ Task 4: Configure DDoS diagnostic logs
++ Task 5: Configure DDoS alerts
++ Task 6: Test with simulation partners
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20Azure%20DDoS%20Protection%20on%20a%20virtual%20network)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-
 #### Estimated time: 40 minutes
 
-## Task 1: Create a resource group
-
-1. Log in to your Azure account.
-
-1. On the Azure portal home page, select **Resource groups**.
-
-1. Select **Create**. 
-
-1. On the **Basics** tab, in **Resource group**, enter **MyResourceGroup**.
-
-1. On **Region**, select East US.
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
-
-
-## Task 2: Create a DDoS Protection plan
+## Task 1: Create a DDoS Protection plan
 
 1. On the Azure portal home page, in the search box enter **DDoS** and select **DDoS protection plan** when it appears.
 
 1. Select **+ Create**.
 
-1. On the **Basics** tab, in the **Resource group** list, select the resource group you just created.
+1. On the **Basics** tab, in the **Resource group** list, select  **MyResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**       
 
 1. On the **Instance name** box, enter **MyDdoSProtectionPlan**, then select **Review + create**.
 
 1. Select **Create**.
 
- 
-
-## Task 3: Enable DDoS Protection on a new virtual network
+## Task 2: Enable DDoS Protection on a new virtual network
 
 Here you will enable DDoS on a new virtual network rather than on an existing one, so first you need to create the new virtual network, then enable DDoS protection on it using the plan you created previously.
 
@@ -78,9 +49,7 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
 1. Select **Create**.
 
- 
-
-## Task 4: Configure DDoS telemetry
+## Task 3: Configure DDoS telemetry
 
 You create a Public IP address, and then set up telemetry in the next steps.
 
@@ -121,9 +90,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
     ![Metrics created for DDoS telemetry](../media/metrics-created-for-ddos-telemetry.png)
 
- 
-
-## Task 5: Configure DDoS diagnostic logs
+ ## Task 4: Configure DDoS diagnostic logs
 
 1. On the Azure home page, select **All resources**.
 
@@ -145,9 +112,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Select **Discard**, then select **Yes**.
 
- 
-
-## Task 6: Configure DDoS alerts
+## Task 5: Configure DDoS alerts
 
 In this step you will create a virtual machine, assign a public IP address to it, and then configure DDoS alerts.
 
@@ -162,7 +127,7 @@ In this step you will create a virtual machine, assign a public IP address to it
    | **Setting**           | **Value**                                                    |
    | --------------------- | ------------------------------------------------------------ |
    | Subscription          | Select your subscription                                     |
-   | Resource group        | **MyResourceGroup**                                          |
+   | Resource group        | **MyResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**     |
    | Virtual machine name  | **MyVirtualMachine**                                         |
    | Region                | Your region                                                  |
    | Availability options  | **No infrastructure  redundancy required**                   |
@@ -173,7 +138,6 @@ In this step you will create a virtual machine, assign a public IP address to it
    | SSH public key source | **Generate new key pair**                                    |
    | Key pair name         | **myvirtualmachine-ssh-key**                                 |
    | Public inbound ports  | Select None                                                  |
-
 
 
 1. Select **Review + create**.
@@ -240,10 +204,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Create alert rule**.
 
- 
-
-## Task 7: Test with simulation partners
-
+## Task 6: Test with simulation partners
 
 1. Review [Azure DDoS simulation testing policy](https://learn.microsoft.com/azure/ddos-protection/test-through-simulations#azure-ddos-simulation-testing-policy)
 
@@ -260,17 +221,6 @@ In this step you will create a virtual machine, assign a public IP address to it
 
    ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
 
- 
-## Task 8: Clean up resources
-
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Remove-AzResourceGroup -Name 'MyResourceGroup' -Force -AsJob
-   ```
-
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+## You have successfully completed the lab.

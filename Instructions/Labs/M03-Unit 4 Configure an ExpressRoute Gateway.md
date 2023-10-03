@@ -1,9 +1,4 @@
----
-Exercise:
-    title: 'M03 - Unit 4 Configure an ExpressRoute Gateway'
-    module: 'Module 03 - Design and implement Azure ExpressRoute'
----
-# M03-Unit 4 Configure an ExpressRoute Gateway
+# Module 03-Unit 4 Configure an ExpressRoute Gateway
 
 ## Deploy ExpressRoute gateways
 
@@ -28,8 +23,6 @@ In this exercise, you will:
 + Task 1: Create the VNet and gateway subnet
 + Task 2: Create the virtual network gateway
 
-
-
 ## Task 1: Create the VNet and gateway subnet
 
 1. On any Azure Portal page, in **Search resources, services and docs**, enter virtual network, and then select **Virtual networks** from the results.
@@ -46,32 +39,35 @@ In this exercise, you will:
 
 1. Select **Next : IP addresses**.
 
-1. On the **IP Addresses** tab, in **IPv4 address space**, enter 10.20.0.0/16, and then select **+ Add subnet**. 
+1. On the **IP Addresses** tab, click on **Add IPv4 address space** **(1)**, enter 10.20.0.0  **(2)** in address space field and enter /16 **(3)** size, then select **+ Add subnet** **(4)**. 
+
+   ![Azure portal - add gateway subnet](../media/image-01.png)
+
 
 1. In the Add subnet pane, use the information in the following table to create the subnet:
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
-   | Gateway Subnet name          | GatewaySubnet |
-   | Gateway Subnet address space | 10.20.0.0/27  |
+   | Subnet template              | Select **Virtual Network Gateway** |
+   | Name                         |GatewaySubnet  |
+   | Starting address             | 10.20.0.0     |
+   | Subnet size                  | /27           |
 
-1. And then select **Add**. 
+1. And then select **Add**.
+
+   ![Azure portal - add gateway subnet](../media/image-02.png)
 
 1. On the Create virtual network page, select **Review + Create**.
 
-   ![Azure portal - add gateway subnet](../media/add-gateway-subnet.png)
-
 1. Confirm that the VNet passes the validation and then select **Create**.
 
-> [!Note]  
->
-> If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
+   **Note**: If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
 
 ## Task 2: Create the virtual network gateway
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter virtual network gateway, and then select **Virtual network gateways** from the results.
 
-1. On the Virtual network gateways page, select **+Create**.
+1. On the Virtual network gateways page, select **+ Create**.
 
 1. On the **Create virtual network gateway** page, use the information in the following table to create the gateway:
 
@@ -97,9 +93,8 @@ In this exercise, you will:
 
 1. When the deployment is complete, select **Go to Resource**.
 
-> [!Note] 
->
-> it can take up to 45 minutes to deploy a Gateway.
+   **Note**: it can take up to 45 minutes to deploy a Gateway.
 
-Congratulations! You have successfully created a Virtual network, a gateway subnet, and an ExpressRoute Gateway.
+   Congratulations! You have successfully created a Virtual network, a gateway subnet, and an ExpressRoute Gateway.
 
+## You have successfully completed the lab.

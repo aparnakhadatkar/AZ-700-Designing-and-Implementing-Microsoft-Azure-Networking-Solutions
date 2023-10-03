@@ -1,4 +1,4 @@
-# Module-01-Unit 4 Design and implement a Virtual Network in Azure
+# Module 01-Unit 4 Design and implement a Virtual Network in Azure
 
 ## Exercise scenario 
 
@@ -164,3 +164,4 @@ In this exercise, you will:
 
 1. Repeat steps 3 - 5 for each VNet.
 
+## You have successfully completed the lab.

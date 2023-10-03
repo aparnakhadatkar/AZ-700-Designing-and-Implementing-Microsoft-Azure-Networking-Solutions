@@ -1,4 +1,4 @@
-# Module01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
+# Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
 
 ## Exercise scenario 
 In this unit, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow. 
@@ -167,4 +167,6 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
  
 
 ## Congratulations! You have successful configured connectivity between VNets by adding peerings. 
+
+## You have successfully completed the lab.
 

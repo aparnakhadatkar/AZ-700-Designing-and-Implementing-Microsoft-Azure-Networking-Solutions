@@ -1,4 +1,4 @@
-# Module-03-Unit 4 Provision an ExpressRoute circuit
+# Module 03-Unit 4 Provision an ExpressRoute circuit
 
 ## Exercise scenario 
 
@@ -127,3 +127,4 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
 > If the service provider has deprovisioned the circuit (the service provider provisioning state is set to Not provisioned), you can delete the circuit. This stops billing for the circuit.
 
 
+## You have successfully completed the lab.

@@ -1,10 +1,4 @@
----
-Exercise:
-    title: 'M02 - Unit 7 Create a Virtual WAN by using Azure Portal'
-    module: 'Module 02 - Design and implement hybrid networking'
----
-
-# M02-Unit 7 Create a Virtual WAN by using Azure Portal
+# Module 02-Unit 7 Create a Virtual WAN by using Azure Portal
 
 
 In this exercise, you will create a Virtual WAN for Contoso.
@@ -85,7 +79,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 1. In ContosoVirtualWAN, under **Connectivity**, select **Virtual network connections**.
 
-   ![Virtual WAN configuration page with Virtual network connections highlighted.](../media/connect-vnet-to-virtual-hub.png)
+   ![Virtual WAN configuration page with Virtual network connections highlighted.](../media/connect-vnet-to-virtual-hub1.png)
 
 1. On ContosoVirtualWAN | Virtual network connections, select **+ Add connection**.
 
@@ -108,3 +102,5 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 1. Select **Create**.
 
  Congratulations! You have created a Virtual WAN and a Virtual WAN Hub and connected the ResearchVNet to the hub.
+
+## You have successfully completed the lab.

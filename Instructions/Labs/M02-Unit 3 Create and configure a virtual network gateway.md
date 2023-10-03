@@ -1,11 +1,4 @@
----
-Exercise:
-    title: 'M02 - Unit 3 Create and configure a virtual network gateway'
-    module: 'Module 02 - Design and implement hybrid networking'
----
-
-
-# M02-Unit 3 Create and configure a virtual network gateway
+# Module 02-Unit 3 Create and configure a virtual network gateway
 
 In this exercise you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
 
@@ -162,9 +155,7 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
 
-   > [!NOTE] 
-   >
-   > It can take up to 45 minutes to create a virtual network gateway. 
+   **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
 ## Task 7: Create ManufacturingVnet Gateway
 
@@ -196,7 +187,7 @@ In this exercise, you will:
    | Review + create |                   | Review your settings and select **Create**. |                              |
    
 
-   **Note**: It can take up to 45 minutes to create a virtual network gateway. 
+   **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
  
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
@@ -279,3 +270,5 @@ In this exercise, you will:
 1. Close the Remote Desktop connection windows.
 
 Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
+
+## You have successfully completed the lab.
