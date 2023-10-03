@@ -207,10 +207,8 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. Under **Settings**, select **Backend pools**., and then select **myBackendPool**.
 
-1. On the **Associated to** box, select **Virtual machines**.
-
-1. Under **Virtual machines**, select **Add**.
-
+1. Under IP Configuration, click **Add**.
+  
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
 
 1. On the **myBackendPool** page, select **Save**.
