@@ -21,7 +21,7 @@ In this exercise, you will:
 
 1. Select **+ Create**.
 
-1. On the **Basics** tab, in the **Resource group** list, select the resource group you just created.
+1. On the **Basics** tab, in the **Resource group** list, select  **MyResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**       
 
 1. On the **Instance name** box, enter **MyDdoSProtectionPlan**, then select **Review + create**.
 
@@ -127,7 +127,7 @@ In this step you will create a virtual machine, assign a public IP address to it
    | **Setting**           | **Value**                                                    |
    | --------------------- | ------------------------------------------------------------ |
    | Subscription          | Select your subscription                                     |
-   | Resource group        | **MyResourceGroup**                                          |
+   | Resource group        | **MyResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**     |
    | Virtual machine name  | **MyVirtualMachine**                                         |
    | Region                | Your region                                                  |
    | Availability options  | **No infrastructure  redundancy required**                   |
