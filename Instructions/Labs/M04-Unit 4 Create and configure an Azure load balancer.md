@@ -288,3 +288,5 @@ In this section, you will create a test VM, and then test the load balancer.
     ![Picture 9](../media/load-balancer-web-test-2.png)
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+## You have successfully completed the lab.
