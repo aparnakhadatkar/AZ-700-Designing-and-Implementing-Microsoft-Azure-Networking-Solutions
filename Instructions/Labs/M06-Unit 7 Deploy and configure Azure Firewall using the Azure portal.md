@@ -272,7 +272,6 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Source                | *                                                            |
    | Protocol              | **TCP**                                                      |
    | Destination Ports     | **3389**                                                     |
-   | Destination Type      | **IP Address**                                               |
    | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
    | Translated address    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
    | Translated port       | **3389**                                                     |
