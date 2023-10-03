@@ -1,10 +1,4 @@
----
-Exercise:
-    title: 'M07 - Unit 6 Create an Azure private endpoint using Azure PowerShell'
-    module: 'Module 07 - Design and implement private access to Azure Services'
----
-
-# M07-Unit 6 Create an Azure private endpoint using Azure PowerShell
+# Module07-Unit 6 Create an Azure private endpoint using Azure PowerShell
 
 Get started with Azure Private Link by using a Private Endpoint to connect securely to an Azure web app. There are many ways to create Endpoints including Portal, CLI, PowerShell etc. 
 
@@ -413,13 +407,7 @@ A private IP address of **10.0.0.5** is returned for the web app name. This addr
   ![screen shot of page in Azure indicating an app service is up and running](../media/web-app-default-page.png)
 1. Close the connection to **myVM**. 
 
-## Task 7: Clean up resources
 
-When you're done using the Private Endpoint and the VM, use [Remove-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup) to remove the resource group and all the resources it has:
-
-```PowerShell
-Remove-AzResourceGroup -Name CreatePrivateEndpointQS-rg -Force -AsJob
-```
 
 
 
