@@ -117,8 +117,6 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 1. Review all the settings to ensure they match the screenshot below.
 
-   ![Create a firewall - review settings](../media/review-all-configurations-for-firewall.png)
-
 1. Select **Review + create**.
 
 1. Select **Create** and wait for the firewall deployment to complete.
@@ -152,8 +150,6 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. Select **Create**.
 
-   ![Create a route table](../media/create-route-table.png)
-
 1. After deployment completes, select **Go to resource**.
 
 1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**.
@@ -175,8 +171,6 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 1. On **Next hop address**, enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**)
 
 1. Select **Add**.
-
-    ![Add firewall route](../media/add-firewall-route.png)
 
  
 ## Task 6: Configure an application rule
@@ -293,7 +287,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Select **Save**.
 
-   ![Change DNS servers on NIC](../media/change-dns-servers-srv-work-nic-2.png)
+   ![Change DNS servers on NIC](..//media/L6U7-1.png)
 
 1. Restart the **Srv-Work** virtual machine.
 
@@ -324,12 +318,12 @@ by using the password you provided during deployment.
 
 1. You should see the Google home page.
 
-    ![RDP session on Srv-work server - browser on google.com](../media/remote-desktop-connection-2.png)
+    ![RDP session on Srv-work server - browser on google.com](../media/L6U7-2.png)
 
 1. Browse to **https://www.microsoft.com**.
 
 1. You should be blocked by the firewall.
 
-    ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/remote-desktop-connection-3.png)
+    ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/L6U7-3.png)
 
  
