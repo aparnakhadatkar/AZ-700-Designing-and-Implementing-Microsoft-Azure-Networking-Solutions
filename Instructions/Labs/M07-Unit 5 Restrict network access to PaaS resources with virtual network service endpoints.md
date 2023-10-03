@@ -358,4 +358,4 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
 
-
+## You have successfully completed the lab.
