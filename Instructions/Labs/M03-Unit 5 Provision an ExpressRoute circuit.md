@@ -1,4 +1,4 @@
-# Module03-Unit 4 Provision an ExpressRoute circuit
+# Module 03-Unit 4 Provision an ExpressRoute circuit
 
 ## Exercise scenario 
 
