@@ -1,4 +1,4 @@
-# Module02-Unit 3 Create and configure a virtual network gateway
+# Module 02-Unit 3 Create and configure a virtual network gateway
 
 In this exercise you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
 
