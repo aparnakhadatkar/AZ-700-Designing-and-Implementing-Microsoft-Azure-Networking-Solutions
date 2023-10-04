@@ -158,7 +158,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Make a note of the names and IP addresses of the VMs.
 
- ### Connect to the Test VMs using RDP
+ ### Task 05: Connect to the Test VMs using RDP
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
