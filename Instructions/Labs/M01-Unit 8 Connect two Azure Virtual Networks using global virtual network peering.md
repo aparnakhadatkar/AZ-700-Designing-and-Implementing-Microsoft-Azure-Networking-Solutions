@@ -1,9 +1,11 @@
 # Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
 
-## Exercise scenario 
+## Lab scenario 
 In this unit, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow. 
 
-In this unit, you will:
+## Lab Objective
+
+In this Lab, you  Perform:
 
 + Task 1: Create a Virtual Machine to test the configuration
 + Task 2: Connect to the Test VMs using RDP
@@ -13,13 +15,13 @@ In this unit, you will:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 20 minutes
+### Estimated time: 20 minutes
 
-## Task 1: Create a Virtual Machine to test the configuration
+### Task 1: Create a Virtual Machine to test the configuration
 
 In this section, you will create a test VM on the Manufacturing VNet to test if you can access resources inside another Azure virtual network from your ManufacturingVnet.
 
-### Create ManufacturingVM
+#### Create ManufacturingVM
 
 1. On the Azure portal select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
@@ -29,11 +31,19 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![](../media/unit6-image2.png)
    
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
-    ![](../media/unit6-image3.png)
+1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account**.
+
+1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
+
+1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+
+   ![](../media/unit6-image3.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -62,11 +72,11 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On ManufacturingVM, select **Connect** .
 
-      ![](../media/az-700u08.2.png)
+   ![](../media/az-700u08.2.png)
 
 1. On ManufacturingVM | Connect, select **Download RDP file**.
 
-     ![](../media/az-700u08.3.png)
+   ![](../media/az-700u08.3.png)
 
 1. Save the RDP file to your desktop.
 
@@ -78,7 +88,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On TestVM1, select **Connect** 
 
-     ![](../media/unit6-image4.png)
+   ![](../media/unit6-image4.png)
 
 1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
@@ -110,6 +120,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 
 1. The test connection should fail, and you will see a result similar to the following:
+
    ![PowerShell window with Test-NetConnection 10.20.20.4 -port 3389 showing failed ](../media/test-netconnection-fail.png)
 
  
@@ -119,6 +130,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
+
    ![screen shot of core services VNet Peering settings ](../media/create-peering-on-coreservicesvnet.png)
 
 1. On CoreServicesVnet | Peerings, select **+ Add**.
@@ -141,14 +153,12 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 |                                      | Traffic to remote virtual network             | Allow (default)                       |
 |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
 |                                      | Virtual network gateway or Route Server       | None (default)                        |
-| Review your settings and select Add. |                                               |                                       |
-|                                      |                                               |                                       |
 
+1. Review your settings and select **Add**. 
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
 
 1. Under Virtual networks, select **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed.
-
 
 ## Task 5: Test the connection between the VMs
 
@@ -160,13 +170,19 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
     Test-NetConnection 10.20.20.4 -port 3389
     ```
 
-
 1. The test connection should succeed, and you will see a result similar to the following:
+
    ![Powershell window with Test-NetConnection 10.20.20.4 -port 3389 showing TCP test succeeded: true](../media/test-connection-succeeded.png)
 
- 
+## Review
 
-## Congratulations! You have successful configured connectivity between VNets by adding peerings. 
+In this Lab, you  Performed:
+
++ Creating a Virtual Machine to test the configuration
++ Connecting to the Test VMs using RDP
++ Testing the connection between the VMs
++ Creating VNet peerings between CoreServicesVnet and ManufacturingVnet
++ Testing the connection between the VMs
 
 ## You have successfully completed the lab.
 
