@@ -62,17 +62,16 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
-
+   **Note**: You will be prompted to provide an Admin password.
+   
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+   
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
-   ```
- 
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-
-  
+   ``` 
+     
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
@@ -82,8 +81,6 @@ In this lab, you will complete the following tasks:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 
 
 ## Task 3: Create ManufacturingVM
