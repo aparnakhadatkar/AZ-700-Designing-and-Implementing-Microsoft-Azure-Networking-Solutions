@@ -318,8 +318,7 @@ In this lab, you will complete the following tasks:
 
 1. The test connection should succeed, and you will see a result similar to the following:
 
-   ![](../media/true.png)
-
+    ![](../media/true.png)
 
 1. Close the Remote Desktop connection windows.
 
