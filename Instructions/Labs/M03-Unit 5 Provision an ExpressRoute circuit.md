@@ -1,4 +1,4 @@
-# Module 03-Unit 4 Provision an ExpressRoute circuit
+# Module 03: Unit 5 Provision an ExpressRoute circuit
 
 ## Lab scenario 
 
