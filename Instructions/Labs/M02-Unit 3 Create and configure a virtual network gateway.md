@@ -179,8 +179,8 @@ In this lab, you will complete the following tasks:
    |                 |                   | Virtual network                             | ManufacturingVnet            |
    |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
    |                 | Public IP address | Public IP address                           | Create new                   |
-   |                 |                   | Public IP Address Type                      | Standard                     |
    |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
+   |                 |                   | Public IP Address Type                      | Standard                     |
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
