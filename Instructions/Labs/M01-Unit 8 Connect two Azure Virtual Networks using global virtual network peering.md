@@ -55,7 +55,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
-1. You will be prompted to provide an Admin password. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>.   
+1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa55w.rd!!**.   
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -63,6 +63,12 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![](../media/AZ-700vmcreate.png)
 
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 2: Connect to the Test VMs using RDP
 
@@ -78,7 +84,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![](../media/az-700u08.3.png)
 
-1. Save the RDP file to your desktop.
+1. Save the RDP file to your desktop. If any arning pops-up in "edge downloads" select **keep**
 
 1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password you provided during deployment.
 
@@ -102,15 +108,13 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On both VMs, in **Networks**, select **Yes**.
 
-1. On TestVM1, open a PowerShell prompt, and run the following command: ipconfig
+1. On TestVM1, Right click on start and select windows PowerShell, and run the following command: **ipconfig**
 
 1. Note the IPv4 address. 
 
- 
-
 ## Task 3: Test the connection between the VMs
 
-1. On the ManufacturingVM, open a PowerShell prompt.
+1. On the ManufacturingVM, Right click on start and select windows PowerShell.
 
 1. Use the following command to verify that there is no connection to TestVM1 on CoreServicesVnet. Be sure to use the IPv4 address for TestVM1.
 
@@ -118,12 +122,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
     Test-NetConnection 10.20.20.4 -port 3389
     ```
 
-
 1. The test connection should fail, and you will see a result similar to the following:
 
    ![PowerShell window with Test-NetConnection 10.20.20.4 -port 3389 showing failed ](../media/test-netconnection-fail.png)
-
- 
 
 ## Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 
@@ -137,28 +138,34 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Use the information in the following table to create the peering.
 
-| **Section**                          | **Option**                                    | **Value**                             |
-| ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-| This virtual network                 |                                               |                                       |
-|                                      | Peering link name                             | CoreServicesVnet-to-ManufacturingVnet |
-|                                      | Traffic to remote virtual network             | Allow (default)                       |
-|                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
-|                                      | Virtual network gateway or Route Server       | None (default)                        |
-| Remote virtual network               |                                               |                                       |
-|                                      | Peering link name                             | ManufacturingVnet-to-CoreServicesVnet |
-|                                      | Virtual network deployment model              | Resource manager                      |
-|                                      | I know my resource ID                         | Not selected                          |
-|                                      | Subscription                                  | Select the Subscription provided      |
-|                                      | Virtual network                               | ManufacturingVnet                     |
-|                                      | Traffic to remote virtual network             | Allow (default)                       |
-|                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
-|                                      | Virtual network gateway or Route Server       | None (default)                        |
+   | **Section**                          | **Option**                                    | **Value**                             |
+   | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
+   | This virtual network                 |                                               |                                       |
+   |                                      | Peering link name                             | CoreServicesVnet-to-ManufacturingVnet |
+   |                                      | Traffic to remote virtual network             | Allow (default)                       |
+   |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
+   |                                      | Virtual network gateway or Route Server       | None (default)                        |
+   | Remote virtual network               |                                               |                                       |
+   |                                      | Peering link name                             | ManufacturingVnet-to-CoreServicesVnet |
+   |                                      | Virtual network deployment model              | Resource manager                      |
+   |                                      | I know my resource ID                         | Not selected                          |
+   |                                      | Subscription                                  | Select the Subscription provided      |
+   |                                      | Virtual network                               | ManufacturingVnet                     |
+   |                                      | Traffic to remote virtual network             | Allow (default)                       |
+   |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
+   |                                      | Virtual network gateway or Route Server       | None (default)                        |
 
 1. Review your settings and select **Add**. 
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
 
 1. Under Virtual networks, select **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Test the connection between the VMs
 
