@@ -195,7 +195,7 @@ In this lab, you will complete the following tasks:
 
 1. In Virtual network gateways, select **CoreServicesVnetGateway**.
 
-1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
+1. on CoreServicesVnetGateway, under **Settings** section select **Connections**, and then select **+ Add**.
 
    **Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
