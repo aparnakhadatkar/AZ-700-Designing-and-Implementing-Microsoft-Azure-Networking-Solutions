@@ -2,11 +2,11 @@
 
 ## Deploy ExpressRoute gateways
 
+## Lab scenario 
+
 To connect your Azure virtual network and your on-premises network via ExpressRoute, you must create a virtual network gateway first. A virtual network gateway serves two purposes: to exchange IP routes between the networks and to route network traffic. 
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20an%20ExpressRoute%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
-#### Estimated time: 60 minutes (includes ~45 minutes deployment waiting time)
 
 **Gateway types**
 
@@ -18,10 +18,13 @@ When you create a virtual network gateway, you need to specify several settings.
 Each virtual network can have only one virtual network gateway per gateway type. For example, you can have one virtual network gateway that uses -GatewayType VPN, and one that uses -GatewayType ExpressRoute.
 
 
-In this exercise, you will:
+## Lab Objectives
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the VNet and gateway subnet
 + Task 2: Create the virtual network gateway
+
+## Estimated time: 60 minutes (includes ~45 minutes deployment waiting time)
 
 ## Task 1: Create the VNet and gateway subnet
 
@@ -64,6 +67,12 @@ In this exercise, you will:
 
    **Note**: If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 2: Create the virtual network gateway
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter virtual network gateway, and then select **Virtual network gateways** from the results.
@@ -98,6 +107,16 @@ In this exercise, you will:
 
    **Note**: it can take up to 45 minutes to deploy a Gateway.
 
-   Congratulations! You have successfully created a Virtual network, a gateway subnet, and an ExpressRoute Gateway.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+### Review
+In this lab, you have completed:
+
+- Create the VNet and gateway subnet
+- Create the virtual network gateway
+  
 ## You have successfully completed the lab.
