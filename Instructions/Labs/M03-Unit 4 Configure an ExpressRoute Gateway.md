@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 + Task 1: Create the VNet and gateway subnet
 + Task 2: Create the virtual network gateway
 
-## Estimated time: 60 minutes (includes ~45 minutes deployment waiting time)
+## Estimated time: 60 minutes
 
 ## Task 1: Create the VNet and gateway subnet
 
