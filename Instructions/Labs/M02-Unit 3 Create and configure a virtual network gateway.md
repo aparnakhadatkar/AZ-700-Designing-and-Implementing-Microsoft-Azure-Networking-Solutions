@@ -78,16 +78,16 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+
+   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
 
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
-  
-    **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-  
+
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
