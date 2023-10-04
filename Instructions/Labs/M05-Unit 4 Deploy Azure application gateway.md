@@ -191,7 +191,7 @@ In this lab, you will complete the following tasks:
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
-1. You will be prompted to provide an Admin password. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>.   
+1. You will be prompted to provide an Admin password. Provide Admin password Password: Pa55w.rd!!
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -215,7 +215,7 @@ In this lab, you will complete the following tasks:
    
 1. Select **Save**.
 
-    ![Azure Portal search for application gateway](../media/l5u4-5.png)  
+    ![Azure Portal search for application gateway](../media/l5u4-(5).png)  
 
     **Note**: Wait for the deployment to complete before proceeding to the next step.
 
