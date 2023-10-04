@@ -115,7 +115,9 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
-   | Name                    | default-origin-group                    |
+   | Name                    | default-origin-group                         |
+   | Origin type             | App service                                  |
+   | Host name               | Select WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
    | Origin host header      | Select WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
    |||
    
@@ -124,10 +126,9 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    
 1. Select **Update**.
 
-   ![Web App](../media/l5u6-10.png)
+   ![Web App](../media/l5u6-(10).png)
 
- 
-## Task 3: View Azure Front Door in action
+ ## Task 3: View Azure Front Door in action
 
 Once you create a Front Door, it takes a few minutes for the configuration to be deployed globally. Once complete, access the frontend host you created. 
 
