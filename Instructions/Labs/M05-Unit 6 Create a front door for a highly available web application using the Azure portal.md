@@ -69,7 +69,9 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, Search for Front Door and CDN profiles, and then select **Front Door and CDN profiles**.
 
-1. Select **Create front door and CDN profiles**. On the Compare offerings page, select **Quick create**. Then select **Continue to create a Front Door**.
+1. On the **Front Door and CDN profiles** page, select **+ Create**.
+
+1. On the Compare offerings page, select **Quick create**. Then select **Continue to create a Front Door**.
 
 1. On the Basics tab, enter or select the following information.
 
@@ -103,7 +105,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
 Once you create a Front Door, it takes a few minutes for the configuration to be deployed globally. Once complete, access the frontend host you created. 
 
-1. On the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
+1. Navigate back to **Front Door and CDN profiles** page, on the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
 
     ![Fdendpoint](../media/M05u57.png)
 
