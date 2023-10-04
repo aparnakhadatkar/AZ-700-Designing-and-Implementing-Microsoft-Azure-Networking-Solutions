@@ -33,8 +33,9 @@ In this exercise, you will:
 
    | **Setting**          | **Value**                        |
    | -------------------- | -------------------------------- |
-   | Virtual Network Name | CoreServicesVNet                 |
+   | Subscription         | Leave default                    |
    | Resource Group       | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**|
+   | Virtual Network Name | CoreServicesVNet                 |
    | Location             | East US                          |
 
 1. Select **Next : IP addresses**.
