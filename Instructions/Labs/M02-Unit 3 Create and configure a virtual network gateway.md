@@ -295,9 +295,13 @@ In this lab, you will complete the following tasks:
 
 1. In **Search resources, services, and docs (G+/)**, enter **connections**, and then select **connections** from the results.
 
+1. Select each connection and check the status. 
+
 1. Wait until the status of both connections is **Connected**. You may need to refresh your screen. 
 
-    ![](../media/mod2-unit3-image2.png)
+    ![](../media/L2U3-1.png)
+   
+    ![](../media/L2U3-2.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
