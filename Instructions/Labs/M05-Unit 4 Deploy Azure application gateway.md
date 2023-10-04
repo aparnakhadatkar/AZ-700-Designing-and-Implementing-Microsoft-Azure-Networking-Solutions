@@ -17,11 +17,10 @@ In this exercise, you will:
 + Task 3: Add backend servers to backend pool
 + Task 4: Test the application gateway
 
-
 ## Task 1: Create an application gateway
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter application gateway, and then select **Application gateways** from the results.
-    ![Azure Portal search for application gateway](../media/search-application-gateway.png)    
+    ![Azure Portal search for application gateway](../media/l5u4-1.png)    
 
 1. On the Application gateways page, select **+ Create**.
 
@@ -34,7 +33,11 @@ In this exercise, you will:
    | Application Gateway | ContosoAppGateway                            |
    | Region              | **<inject key="Region" enableCopy="false"/>**                           |
    | Virtual Network     | Select **Create new**                        |
+   |||
 
+   ![Azure Portal search for application gateway](../media/l5u4-2.png)
+
+   
 1. In Create virtual network, enter, or select the following information:
 
    | **Setting**       | **Value**                          |
@@ -45,8 +48,10 @@ In this exercise, you will:
    | **SUBNETS**       |                                    |
    | Subnet name       | Change **default** to **AGSubnet** |
    | Address range     | 10.0.0.0/24                        |
-   
+   |||
 
+     ![Azure Portal search for application gateway](../media/l5u4-2-1.png)
+   
 1. Select **OK** to return to the Create application gateway Basics tab.
 
 1. Accept the default values for the other settings and then select **Next: Frontends**.
@@ -54,6 +59,8 @@ In this exercise, you will:
 1. On the **Frontends** tab, verify **Frontend IP address type** is set to **Public**.
 
 1. Select **Add new** for the **Public IP address** and enter **AGPublicIPAddress** for the public IP address name, and then select **OK**.
+
+   ![Azure Portal search for application gateway](../media/l5u4-2-2.png)
 
 1. Select **Next: Backends**.
 
@@ -65,7 +72,11 @@ In this exercise, you will:
     | -------------------------------- | ----------- |
     | Name                             | BackendPool |
     | Add backend pool without targets | Yes         |
+    |||
 
+    ![Azure Portal search for application gateway](../media/l5u4-2-3.png)
+
+ 
 1. On the **Add a backend pool** window, select **Add** to save the backend pool configuration and return to the **Backends** tab.
 
 1. On the **Backends** tab, select **Next: Configuration**.
@@ -80,18 +91,22 @@ In this exercise, you will:
     | ------------- | ----------------- |
     | **Rule name** | **RoutingRule**   |
     | **Priority**  | **100**           |
-  
+    |||
+
+    ![Azure Portal search for application gateway](../media/l5u4-2-4.png)
+
+    
 1. On the **Listener** tab, enter or select the following information:
 
     | **Setting**   | **Value**         |
     | ------------- | ----------------- |
     | Listener name | Listener          |
-    | Priority      | **100**           |
     | Frontend IP   | Select **Public** |
+    |||
+    ![Azure Portal search for application gateway](../media/l5u4-2-5.png)
+
 
 1. Accept the default values for the other settings on the **Listener** tab.
-
-    ![Azure Portal add an Application Gateway routing rule](../media/mo5u41.png)
 
 1. Select the **Backend targets** tab to configure the rest of the routing rule.
 
@@ -101,6 +116,9 @@ In this exercise, you will:
     | -------------    | -------------- |
     | Target type      | Backend pool   |
     | Backend Settings | **Add new** |
+    |||
+
+    ![Azure Portal search for application gateway](../media/l5u4-2-6.png)  
 
 1. In **Add a Backend Setting**, enter or select the following information:
 
@@ -108,6 +126,8 @@ In this exercise, you will:
     | ------------------   | ----------- |
     | Backend setting name | HTTPSetting |
     | Backend port         | 80          |
+
+     ![Azure Portal search for application gateway](../media/l5u4-2-7.png)  
 
 1. Accept the default values for the other settings in the **Add a Backend Setting** window, then select **Add** to return to **Add a routing rule**.
 
@@ -135,6 +155,8 @@ In this exercise, you will:
     | --------------------- | ----------- |
     | Name                  | BackendSubnet |
     | Subnet address range  | 10.0.1.0/24 |
+    |||
+    ![Azure Portal search for application gateway](../media/l5u4-3.png)  
 
 
 ## Task 2: Create virtual machines
@@ -188,10 +210,9 @@ In this exercise, you will:
    
 1. Select **Save**.
 
-   ![Azure Portal add target backends to backend pool](../media/edit-backend-pool.png)
+    ![Azure Portal search for application gateway](../media/l5u4-5.png)  
 
-
-Wait for the deployment to complete before proceeding to the next step.
+    **Note**: Wait for the deployment to complete before proceeding to the next step.
 
 ## Task 4: Test the application gateway
 
@@ -201,7 +222,7 @@ Although IIS isn't required to create the application gateway, you installed it 
 
 1. On the application gateway navigate to **Overview** page and find the public IP address. 
 
-   ![Azure Portal look up Frontend Public IP address ](../media/app-gw-public-ip.png)
+    ![Azure Portal search for application gateway](../media/l5u4-4.png)  
 
 1. Copy the public IP address, and then paste it into the address bar of your browser to browse that IP address.
 
@@ -211,7 +232,7 @@ Although IIS isn't required to create the application gateway, you installed it 
 
 1. Refresh the browser multiple times and you should see connections to both BackendVM1 and BackendVM2.
 
-Congratulations! You have configured and tested an Azure Application Gateway.
+   Congratulations! You have configured and tested an Azure Application Gateway.
 
 ## You have successfully completed the lab.
 
