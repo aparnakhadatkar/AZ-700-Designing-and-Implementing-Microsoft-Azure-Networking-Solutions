@@ -105,7 +105,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
    - **Subscription:** no changes
 
-   - **Resource Group:** ContosoResourceGroup
+   - **Resource Group:** ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>
 
    - **Virtual network:** ResearchVNet
 
