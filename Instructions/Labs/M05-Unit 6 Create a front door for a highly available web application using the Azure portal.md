@@ -90,20 +90,19 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
 1. On the Basics tab, enter or select the following information.
 
+      | **Setting**             | **Value**                                    |
+      | ----------------------- | -------------------------------------------- |
+      | Subscription            | Select your subscription.                    |
+      | Resource group          | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                  |
+      | Resource group location | Accept default setting                       |
+      | Name                    |FrontDoor<inject key="DeploymentID" enableCopy="false"/>   |
+      | Tier                    | Standard   |
+      | Endpoint Name           | FDendpoint   |
+      | Origin Type             | App Service| 
+      | Origin host name        | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
+      |||
 
-   | **Setting**             | **Value**                                    |
-   | ----------------------- | -------------------------------------------- |
-   | Subscription            | Select your subscription.                    |
-   | Resource group          | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                  |
-   | Resource group location | Accept default setting                       |
-   | Name                    |FrontDoor<inject key="DeploymentID" enableCopy="false"/>   |
-   | Tier                    | Standard   |
-   | Endpoint Name           | FDendpoint   |
-   | Origin Type             | App Service| 
-   | Origin host name        | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
-   |||
-
-   ![Web App](../media/l5u6-7.png)
+      ![Web App](../media/l5u6-7.png)
 
 1. Select **Review and Create**, and then select **Create**.
 
@@ -153,7 +152,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
 1. Switch back to your browser and select Refresh. You should see the same information page.
 
-  **There may be a delay while the web app stops. If you get an error page in your browser, refresh the page**.
+    **Note**: There may be a delay while the web app stops. If you get an error page in your browser, refresh the page.
 
 1. Switch back to the Azure Portal, locate the other web app, and stop it.
 

@@ -1,8 +1,10 @@
 # Module 02-Unit 3 Create and configure a virtual network gateway
 
+## Lab scenario 
 In this exercise you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
 
-In this exercise, you will:
+## Lab Objectives
+In this lab, you will complete the following tasks:
 
 + Task 1: Create CoreServicesVnet and ManufacturingVnet
 + Task 2: Create CoreServicesVM
@@ -18,7 +20,7 @@ In this exercise, you will:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
+## Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
@@ -38,13 +40,19 @@ In this exercise, you will:
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+
    ```powershell
    $RGName = "ContosoResourceGroup"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
-    
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
 
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
 
 ## Task 2: Create CoreServicesVM
 
@@ -69,6 +77,15 @@ In this exercise, you will:
 
 1. Verify that the virtual machine has been created.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+
+
 ## Task 3: Create ManufacturingVM
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
@@ -77,20 +94,25 @@ In this exercise, you will:
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+
+   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
 
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
-  
-    **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-  
+
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 4: Connect to the Test VMs using RDP
 
@@ -144,18 +166,23 @@ In this exercise, you will:
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
    |                 |                   | Region                                      | East US                      |
    |                 |                   | Gateway type                                | VPN                          |
-   |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
-   |                 |                   | Public IP address type                      | Standard                     |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | CoreServicesVnetGateway-ip   |
+   |                 |                   | Public IP address type                      | Standard                     |
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
 
    **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 7: Create ManufacturingVnet Gateway
 
@@ -174,14 +201,13 @@ In this exercise, you will:
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Gateway type                                | VPN                          |
-   |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | ManufacturingVnet            |
    |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
-   |                 |                   | Public IP Address Type                      | Standard                     |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
+   |                 |                   | Public IP Address Type                      | Standard                     |
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
@@ -189,34 +215,47 @@ In this exercise, you will:
 
    **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
- 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
 1. In Virtual network gateways, select **CoreServicesVnetGateway**.
 
-1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
+1. On CoreServicesVnetGateway, under **Settings** section select **Connections**, and then select **+ Add**.
 
    **Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
-1. Use the information in the following table to create the connection:
+1. On **Create connection** page of **Basics** tab, use the information in the following table to create the connection:
 
-   | **Option**                     | **Value**                         |
-   | ------------------------------ | --------------------------------- |
-   | Name                           | CoreServicesGW-to-ManufacturingGW |
-   | Connection type                | VNet-to-VNet                      |
-   | First virtual network gateway  | CoreServicesVnetGateway           |
-   | Second virtual network gateway | ManufacturingVnetGateway          |
-   | Shared key (PSK)               | abc123                            |
-   | Use Azure Private IP Address   | Not selected                      |
-   | Enable BGP                     | Not selected                      |
-   | IKE Protocol                   | IKEv2                             |
-   | Subscription                   | No changes required               |
-   | Resource group                 | No changes required               |
-   | Location                       | East US                           |
+      | **Option**                     | **Value**                         |
+      | ------------------------------ | --------------------------------- |
+      | Subscription                   | Leave default                     |
+      | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
+      | Connection type                | VNet-to-VNet                      |
+      | Name                           | CoreServicesGW-to-ManufacturingGW |
+      | Location                       | East US                           |
 
-1. To create the connection, select **OK**.
+
+1. Select **Next: Settings >**
+   
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
+
+      | **Option**                     | **Value**                         |
+      | ------------------------------ | --------------------------------- |
+      | First virtual network gateway  | CoreServicesVnetGateway           |
+      | Second virtual network gateway | ManufacturingVnetGateway          |
+      | Shared key (PSK)               | abc123                            |
+      | IKE Protocol                   | IKEv2                             |
+      | Use Azure Private IP Address   | Not selected                      |
+      | Enable BGP                     | Not selected                      |
+      
+1. To create the connection, select **Review + Create** and **Create**.
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
@@ -224,33 +263,51 @@ In this exercise, you will:
 
 1. In Virtual network gateways, select **ManufacturingVnetGateway**.
 
-1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
+1. on ManufacturingVnetGateway, under **Settings** section select **Connections**, and then select **+ Add**.
 
 1. Use the information in the following table to create the connection:
 
-   | **Option**                     | **Value**                         |
-   | ------------------------------ | --------------------------------- |
-   | Name                           | ManufacturingGW-to-CoreServicesGW |
-   | Connection type                | VNet-to-VNet                      |
-   | First virtual network gateway  | ManufacturingVnetGateway          |
-   | Second virtual network gateway | CoreServicesVnetGateway           |
-   | Shared key (PSK)               | abc123                            |
-   | Use Azure Private IP Address   | Not selected                      |
-   | Enable BGP                     | Not selected                      |
-   | IKE Protocol                   | IKEv2                             |
-   | Subscription                   | No changes required               |
-   | Resource group                 | No changes required               |
-   | Location                       | West Europe                       |
+      | **Option**                     | **Value**                         |
+      | ------------------------------ | --------------------------------- |
+      | Subscription                   | Leave default                     |
+      | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
+      | Connection type                | VNet-to-VNet                      |
+      | Name                           | ManufacturingGW-to-CoreServicesGW |
+      | Location                       | West Europe                       |
 
-1. To create the connection, select **OK**.
+
+1. Select **Next: Settings >**
+   
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
+
+      | **Option**                     | **Value**                         |
+      | ------------------------------ | --------------------------------- |
+      | First virtual network gateway  | ManufacturingVnetGateway          |
+      | Second virtual network gateway | CoreServicesVnetGateway           |
+      | Shared key (PSK)               | abc123                            |
+      | IKE Protocol                   | IKEv2                             |
+      | Use Azure Private IP Address   | Not selected                      |
+      | Enable BGP                     | Not selected                      |
+  
+1. To create the connection, select **Review + Create** and **Create**.
 
 ## Task 10: Verify that the connections connect 
 
 1. In **Search resources, services, and docs (G+/)**, enter **connections**, and then select **connections** from the results.
 
+1. Select each connection and check the status. 
+
 1. Wait until the status of both connections is **Connected**. You may need to refresh your screen. 
 
-    ![](../media/mod2-unit3-image2.png)
+    ![](../media/L2U3-1.png)
+   
+    ![](../media/L2U3-2.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 11: Test the connection between the VMs
 
@@ -269,6 +326,15 @@ In this exercise, you will:
 
 1. Close the Remote Desktop connection windows.
 
-Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
+   Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
+
+## Review
+In this lab, you have completed:
+
+- Create Virtual Networks and Virtual machine
+- Connect to VM's using RDP and Test the connection
+- Create Application gateway
+- CoreServicesVnet to ManufacturingVnet 
+- Test the connection between the VMs
 
 ## You have successfully completed the lab.
