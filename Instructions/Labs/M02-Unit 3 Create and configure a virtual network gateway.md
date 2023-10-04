@@ -2,7 +2,9 @@
 
 In this exercise you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
 
-In this exercise, you will:
+
+## Lab Objectives
+In this lab, you will complete the following tasks:
 
 + Task 1: Create CoreServicesVnet and ManufacturingVnet
 + Task 2: Create CoreServicesVM
@@ -18,7 +20,7 @@ In this exercise, you will:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
+## Estimated time: 70 minutes (including ~45 minutes deployment waiting time)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
@@ -270,5 +272,14 @@ In this exercise, you will:
 1. Close the Remote Desktop connection windows.
 
 Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
+
+## Review
+In this lab, you have completed:
+
+- Create Virtual Networks and Virtual machine
+- Connect to VM's using RDP and Test the connection
+- Create Application gateway
+- CoreServicesVnet to ManufacturingVnet 
+- Test the connection between the VMs
 
 ## You have successfully completed the lab.
