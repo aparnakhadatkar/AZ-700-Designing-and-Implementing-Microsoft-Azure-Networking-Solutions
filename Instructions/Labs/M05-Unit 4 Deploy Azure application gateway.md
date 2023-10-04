@@ -50,7 +50,7 @@ In this exercise, you will:
    | Address range     | 10.0.0.0/24                        |
    |||
 
-     ![Azure Portal search for application gateway](../media/l5u4-2-1.png)
+   ![Azure Portal search for application gateway](../media/l5u4-2-1.png)
    
 1. Select **OK** to return to the Create application gateway Basics tab.
 
@@ -103,6 +103,7 @@ In this exercise, you will:
     | Listener name | Listener          |
     | Frontend IP   | Select **Public** |
     |||
+
     ![Azure Portal search for application gateway](../media/l5u4-2-5.png)
 
 
@@ -126,8 +127,9 @@ In this exercise, you will:
     | ------------------   | ----------- |
     | Backend setting name | HTTPSetting |
     | Backend port         | 80          |
+    |||
 
-     ![Azure Portal search for application gateway](../media/l5u4-2-7.png)  
+    ![Azure Portal search for application gateway](../media/l5u4-2-7.png)  
 
 1. Accept the default values for the other settings in the **Add a Backend Setting** window, then select **Add** to return to **Add a routing rule**.
 
@@ -156,8 +158,8 @@ In this exercise, you will:
     | Name                  | BackendSubnet |
     | Subnet address range  | 10.0.1.0/24 |
     |||
-    ![Azure Portal search for application gateway](../media/l5u4-3.png)  
 
+    ![Azure Portal search for application gateway](../media/l5u4-3.png)  
 
 ## Task 2: Create virtual machines
 
@@ -228,7 +230,7 @@ Although IIS isn't required to create the application gateway, you installed it 
 
 1. Check the response. A valid response verifies that the application gateway was successfully created and can successfully connect with the backend.
 
-   ![Broswer - display BackendVM1 or BackendVM2 depending which backend server reponds to request.](../media/browse-to-backend.png)
+   ![Broswer - display BackendVM1 or BackendVM2 depending which backend server reponds to request.](../media/browse-to-backend1.png)
 
 1. Refresh the browser multiple times and you should see connections to both BackendVM1 and BackendVM2.
 
