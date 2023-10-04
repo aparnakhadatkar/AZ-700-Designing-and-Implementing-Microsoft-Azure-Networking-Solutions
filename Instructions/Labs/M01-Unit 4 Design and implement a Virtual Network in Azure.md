@@ -1,6 +1,6 @@
 # Module 01-Unit 4 Design and implement a Virtual Network in Azure
 
-## Exercise scenario 
+## Lab scenario 
 
 Now you're ready to deploy virtual networks in the Azure portal.
 
@@ -8,7 +8,16 @@ Consider the fictional organization Contoso Ltd, which is in the process of migr
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 20 minutes
+## Lab Objectives
+
+In this exercise, you will:
+
++ Task 1: Create the CoreServicesVnet virtual network and subnets
++ Task 2: Create the ManufacturingVnet virtual network and subnets
++ Task 3: Create the ResearchVnet virtual network and subnets
++ Task 4: Verify the creation of VNets and Subnets
+
+### Estimated time: 20 minutes
 
 The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network will have the largest number of resources. It will have connectivity to on-premises networks through a VPN connection. This network will have web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS also will be located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
 
@@ -45,15 +54,7 @@ You will create the following resources:
 
 These virtual networks and subnets are structured in a way that accommodates existing resources yet allows for projected growth. Let's create these virtual networks and subnets to lay the foundation for our networking infrastructure.
 
-In this exercise, you will:
-
-+ Task 1: Create the CoreServicesVnet virtual network and subnets
-+ Task 2: Create the ManufacturingVnet virtual network and subnets
-+ Task 3: Create the ResearchVnet virtual network and subnets
-+ Task 4: Verify the creation of VNets and Subnets
-
-
-## Task 1: Create the CoreServicesVnet virtual network and subnets
+### Task 1: Create the CoreServicesVnet virtual network and subnets
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the results under **Services**.
    
@@ -84,7 +85,7 @@ In this exercise, you will:
       |                 | IPv4 address Size  | /16                  |
 
 
-      ![](../media/unit4-image4.png)
+   ![](../media/unit4-image4.png)
 
  1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
@@ -92,7 +93,7 @@ In this exercise, you will:
     | ---------------------- | -------------------- | ---------------------- |
     | GatewaySubnet          | Subnet name          | GatewaySubnet          |
     |                        | Subnet Template      | Select **Virtual Network Gateway** |
-    |                        | Subnet address range | 10.20.0.0/27           |
+    |                        | Subnet address range | 10.20.0.0/27            |
     | SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
     |                        | Subnet address range | 10.20.10.0/24          |
     | DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
@@ -102,24 +103,24 @@ In this exercise, you will:
 
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
- 1. Verify your configuration passed validation, and then select **Create**.
+ 1. Verify your configuration passed validation, Go back to virtual network and then again select **Create**.
  
  1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2** and **Task3**.
 
-## Task 2: Create the ManufacturingVnet virtual network and subnets
-
+### Task 2: Create the ManufacturingVnet virtual network and subnets
 
    | **Tab**      | **Option**         | **Value**             |
    | ------------ | ------------------ | --------------------- |
    | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
    |              | Name               | ManufacturingVnet     |
-   |              | Region             | (Europe) West Europe  |
-   | IP Addresses | IPv4 address space | 10.30.0.0/16          |
+   |              | Region             | (Europe) West Europe **Go to ip address tab**  |
 
 
+1. **Go to ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.   
 
-   | **Subnet**                | **Option**           | **Value**                 |
+   | **IP/Subnet**                | **Option**           | **Value**                 |
    | ------------------------- | -------------------- | ------------------------- |
+   | IP Addresses              | IPv4 address space   | 10.30.0.0/16              |
    | ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
    |                           | Subnet address range | 10.30.10.0/24             |
    | SensorSubnet1             | Subnet name          | SensorSubnet1             |
@@ -130,23 +131,24 @@ In this exercise, you will:
    |                           | Subnet address range | 10.30.22.0/24             |
     
 
-## Task 3: Create the ResearchVnet virtual network and subnets
-
+### Task 3: Create the ResearchVnet virtual network and subnets
 
    | **Tab**      | **Option**         | **Value**            |
    | ------------ | ------------------ | -------------------- |
    | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
    |              | Name               | ResearchVnet         |
    |              | Region             | Southeast Asia       |
-   | IP Addresses | IPv4 address space | 10.40.0.0/16         |
 
-   | **Subnet**           | **Option**           | **Value**            |
+1. **Go to ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.    
+
+   | **IP/Subnet**           | **Option**           | **Value**            |
    | -------------------- | -------------------- | -------------------- |
+   | IP Addresses         | IPv4 address space   | 10.40.0.0/16         |
    | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
    |                      | Subnet address range | 10.40.0.0/24         |
  
 
-## Task 4: Verify the creation of VNets and Subnets
+### Task 4: Verify the creation of VNets and Subnets
 
 1. On the Azure portal home page, select **All resources**.
 
@@ -163,5 +165,14 @@ In this exercise, you will:
    ![](../media/unit4-image6.png)
 
 1. Repeat steps 3 - 5 for each VNet.
+
+## Review
+
+In this Lab you performed:
+
++ Creating the CoreServicesVnet virtual network and subnets
++ Creating the ManufacturingVnet virtual network and subnets
++ Creating the ResearchVnet virtual network and subnets
++ Verifying the creation of VNets and Subnets
 
 ## You have successfully completed the lab.
