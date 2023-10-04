@@ -42,7 +42,7 @@ This exercise requires two instances of a web application that run in different 
 1. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take several minutes for the deployment to complete.
 
-1. Create a second web app. On the Azure Portal home page, search  **WebApp**.
+1. Create a second web app, on the Azure Portal home page, search  **WebApp**.
 
 1. Select **+ Create** to create a Web App.
 
