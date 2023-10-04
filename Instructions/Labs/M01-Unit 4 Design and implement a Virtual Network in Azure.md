@@ -111,6 +111,12 @@ These virtual networks and subnets are structured in a way that accommodates exi
  
  1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2** and **Task3**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 2: Create the ManufacturingVnet virtual network and subnets
 
    | **Tab**      | **Option**         | **Value**             |
@@ -134,6 +140,11 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | SensorSubnet3             | Subnet name          | SensorSubnet3             |
    |                           | Subnet address range | 10.30.22.0/24             |
     
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Create the ResearchVnet virtual network and subnets
 
@@ -151,6 +162,11 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
    |                      | Subnet address range | 10.40.0.0/24         |
  
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Verify the creation of VNets and Subnets
 
