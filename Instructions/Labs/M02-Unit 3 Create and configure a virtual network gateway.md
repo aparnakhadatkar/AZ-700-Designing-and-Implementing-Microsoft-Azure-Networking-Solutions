@@ -40,14 +40,13 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
+   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+
    ```powershell
    $RGName = "ContosoResourceGroup"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
     
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-
-
 ## Task 2: Create CoreServicesVM
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
