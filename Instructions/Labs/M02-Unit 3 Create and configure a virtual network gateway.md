@@ -61,8 +61,6 @@ In this lab, you will complete the following tasks:
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
-
-   **Note**: You will be prompted to provide an Admin password.
    
    **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
    
@@ -71,7 +69,9 @@ In this lab, you will complete the following tasks:
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
    ``` 
-     
+
+   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!!
+   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
@@ -93,13 +93,13 @@ In this lab, you will complete the following tasks:
 
    **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
 
-   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
-
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
+
+   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -118,7 +118,7 @@ In this lab, you will complete the following tasks:
 1. On **ManufacturingVM**, select **Connect**.
 1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
-   ![](../media/unit6-image(6).png)
+   ![](../media/MFVM.png)
    
 1. Save the RDP file to your desktop.
 1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment. After connecting, minimize the RDP session.
@@ -171,7 +171,9 @@ In this lab, you will complete the following tasks:
    |                 |                   | Public IP address type                      | Standard                     |
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
-   | Review + create |                   | Review your settings and select **Create**. |                              |
+
+
+1.  Select **Review + Create** and **Create**.
 
    **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
@@ -207,8 +209,9 @@ In this lab, you will complete the following tasks:
    |                 |                   | Public IP Address Type                      | Standard                     |
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
-   | Review + create |                   | Review your settings and select **Create**. |                              |
-   
+  
+
+1.  Select **Review + Create** and **Create**.
 
    **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
