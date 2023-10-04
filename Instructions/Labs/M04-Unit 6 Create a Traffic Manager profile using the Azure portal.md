@@ -50,8 +50,6 @@ In this section, you will create two instances of a web application deployed in 
 
 1. Select **Review + create**.
 
-   ![Picture 18](../media/create-web-app-1.png)
-
 1. Select **Create**. When the Web App successfully deploys, it creates a default web site.
 
 1. Repeat steps 1-6 above to create a second web app. Use the same settings as before except for the information in the table below. 
@@ -63,7 +61,6 @@ In this section, you will create two instances of a web application deployed in 
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
-
 1. On the Azure home page, select **All services**, in the left navigation menu, select **Web**, and then select **App Services**.
 
 1. You should see the two new web apps listed.
@@ -71,7 +68,6 @@ In this section, you will create two instances of a web application deployed in 
    ![Picture 19](../media/create-web-app-2.png)
 
  
-
 ## Task 2: Create a Traffic Manager profile
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
