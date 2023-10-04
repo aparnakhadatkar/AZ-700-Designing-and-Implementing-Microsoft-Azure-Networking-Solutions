@@ -88,7 +88,6 @@ Now you will create a Traffic Manager profile that directs user traffic based on
    | Routing method          | **Priority**             |
    | Subscription            | Select your subscription |
    | Resource group          | **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**   |
-   | Resource group location | **East US**              |
 
 
 1. Select **Create**.
