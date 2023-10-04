@@ -30,7 +30,7 @@ On-premises 10.10.0.0/16
 ResearchVNet Southeast Asia 10.40.40.0/24
 CoreServicesVNet East US 10.20.0.0/16
 ManufacturingVNet West Europe 10.30.0.0/16
-](../media/design-implement-vnet-peering.png)
+](../media/design-implement-vnet-peering01.png)
 
 
 You will create the following resources:
@@ -104,6 +104,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
  1. Verify your configuration passed validation, Go back to virtual network and then again select **Create**.
+
+    ![](../media/0001.png)
  
  1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2** and **Task3**.
 
