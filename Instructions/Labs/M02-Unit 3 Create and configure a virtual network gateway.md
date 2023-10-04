@@ -199,23 +199,31 @@ In this lab, you will complete the following tasks:
 
    **Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
-1. Use the information in the following table to create the connection:
+1.  On **Create connection** page of **Basics** tab, use the information in the following table to create the connection:
 
    | **Option**                     | **Value**                         |
    | ------------------------------ | --------------------------------- |
-   | Name                           | CoreServicesGW-to-ManufacturingGW |
+   | Subscription                   | Leave default                     |
+   | Resource Group                 |  **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
    | Connection type                | VNet-to-VNet                      |
+   | Name                           | CoreServicesGW-to-ManufacturingGW |
+   | Location                       | East US                           |
+
+
+1. Select **Next: Settings >**
+   
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
+
+   | **Option**                     | **Value**                         |
+   | ------------------------------ | --------------------------------- |
    | First virtual network gateway  | CoreServicesVnetGateway           |
    | Second virtual network gateway | ManufacturingVnetGateway          |
    | Shared key (PSK)               | abc123                            |
+   | IKE Protocol                   | IKEv2                             |
    | Use Azure Private IP Address   | Not selected                      |
    | Enable BGP                     | Not selected                      |
-   | IKE Protocol                   | IKEv2                             |
-   | Subscription                   | No changes required               |
-   | Resource group                 | No changes required               |
-   | Location                       | East US                           |
-
-1. To create the connection, select **OK**.
+   
+1. To create the connection, select **Review + Create** and **Create**.
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
@@ -223,25 +231,33 @@ In this lab, you will complete the following tasks:
 
 1. In Virtual network gateways, select **ManufacturingVnetGateway**.
 
-1. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
+1. on ManufacturingVnetGateway, under **Settings** section select **Connections**, and then select **+ Add**.
 
 1. Use the information in the following table to create the connection:
 
    | **Option**                     | **Value**                         |
    | ------------------------------ | --------------------------------- |
-   | Name                           | ManufacturingGW-to-CoreServicesGW |
+   | Subscription                   | Leave default                     |
+   | Resource Group                 |  **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
    | Connection type                | VNet-to-VNet                      |
+   | Name                           | ManufacturingGW-to-CoreServicesGW |
+   | Location                       | West Europe                       |
+
+
+1. Select **Next: Settings >**
+   
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
+
+   | **Option**                     | **Value**                         |
+   | ------------------------------ | --------------------------------- |
    | First virtual network gateway  | ManufacturingVnetGateway          |
    | Second virtual network gateway | CoreServicesVnetGateway           |
    | Shared key (PSK)               | abc123                            |
+   | IKE Protocol                   | IKEv2                             |
    | Use Azure Private IP Address   | Not selected                      |
    | Enable BGP                     | Not selected                      |
-   | IKE Protocol                   | IKEv2                             |
-   | Subscription                   | No changes required               |
-   | Resource group                 | No changes required               |
-   | Location                       | West Europe                       |
-
-1. To create the connection, select **OK**.
+  
+1. To create the connection, select **Review + Create** and **Create**.
 
 ## Task 10: Verify that the connections connect 
 
