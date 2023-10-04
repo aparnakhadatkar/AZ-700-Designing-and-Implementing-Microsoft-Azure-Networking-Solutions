@@ -53,7 +53,7 @@ In this exercise, you will:
 
 1. On the **Frontends** tab, verify **Frontend IP address type** is set to **Public**.
 
-1. Select **Add new** for the **Public IP address** and enter AGPublicIPAddress for the public IP address name, and then select **OK**.
+1. Select **Add new** for the **Public IP address** and enter **AGPublicIPAddress** for the public IP address name, and then select **OK**.
 
 1. Select **Next: Backends**.
 
@@ -72,10 +72,15 @@ In this exercise, you will:
 
 1. On the **Configuration** tab, you'll connect the frontend and backend pool you created using a routing rule.
 
-1. On the **Routing rules** column, select **Add a routing rule**.
+1. On the **Routing rules** column, select **+ Add a routing rule**.
 
-1. On the **Rule name** box, enter **RoutingRule**.
+1. On **Add a routing rule** window, enter or select the following information:
 
+    | **Setting**   | **Value**         |
+    | ------------- | ----------------- |
+    | **Rule name** | **RoutingRule**   |
+    | **Priority**  | **100**           |
+  
 1. On the **Listener** tab, enter or select the following information:
 
     | **Setting**   | **Value**         |
