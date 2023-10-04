@@ -72,6 +72,8 @@ In this exercise, you will:
 
 1. On the **Create virtual network gateway** page, use the information in the following table to create the gateway:
 
+   **Note**: First try to select **Region** to get virtual network option to choose.
+
    | **Setting**               | **Value**                  |
    | ------------------------- | -------------------------- |
    | **Project details**       |                            |
