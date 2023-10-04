@@ -22,16 +22,11 @@ In this exercise, you will perform:
 
 ## Task 1: Create and provision an ExpressRoute circuit
 
-1. From a browser, navigate to the [Azure portal](https://portal.azure.com/) and sign in with your Azure account.
-
-   
-    > **Note:** Your ExpressRoute circuit is billed from the moment a service key is issued. Ensure that you perform this operation when the connectivity provider is ready to provision the circuit.
-
-2. On the Azure portal menu, select **+ Create a resource**. Select **Networking**, and then select **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
+1. On the Azure portal menu, select **+ Create a resource**. Select **Networking**, and then select **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
 
    ![Azure portal - create ExpressRoute circuit menu](../media/task1.png)
 
-3. On the **Create ExpressRoute** blade, specify the following settings and select **Next: Configuration**:
+1. On the **Create ExpressRoute** blade, specify the following settings and select **Next: Configuration**:
 
    |Setting|Value|
    |---|---|
@@ -41,7 +36,7 @@ In this exercise, you will perform:
 
    ![Azure portal - create ExpressRoute circuit menu](../media/task2.png)
 
-4. On the **Configuration** tab of the **Create ExpressRoute** blade, specify the following settings and select **Review + create**:
+1. On the **Configuration** tab of the **Create ExpressRoute** blade, specify the following settings and select **Review + create**:
 
    |Setting|Value|
    |---|---|
@@ -54,17 +49,14 @@ In this exercise, you will perform:
 
    ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
 
-5. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
-
+1. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
 
    ![Azure portal - Create ExpressRoute configuration tab](../media/task4.png)
 
- 
-
-- Port type determines if you are connecting to a service provider or directly into Microsoft's global network at a peering location.
-- Create new or import from classic determines if a new circuit is being created or if you are migrating a classic circuit to Azure Resource Manager.
-- Provider is the internet service provider who you will be requesting your service from.
-- Peering Location is the physical location where you are peering with Microsoft.
+   - Port type determines if you are connecting to a service provider or directly into Microsoft's global network at a peering location.
+   - Create new or import from classic determines if a new circuit is being created or if you are migrating a classic circuit to Azure Resource Manager.
+   - Provider is the internet service provider who you will be requesting your service from.
+   - Peering Location is the physical location where you are peering with Microsoft.
 
 
  > **Note:** The Peering Location indicates the [physical location](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations) where you are peering with Microsoft. This is not linked to "Location" property, which refers to the geography where the Azure Network Resource Provider is located. While they are not related, it is a good practice to choose a Network Resource Provider geographically close to the Peering Location of the circuit.
@@ -76,7 +68,7 @@ In this exercise, you will perform:
 
 - **Billing model** determines the billing type. You can specify **Metered** for a metered data plan and **Unlimited** for an unlimited data plan. You can change the billing type from **Metered** to **Unlimited**.
 
-> [!Important]
+> **Important**
 >
 > You cannot change the type from Unlimited to Metered.
 
@@ -117,7 +109,7 @@ In this exercise, you will perform:
 
 If the ExpressRoute circuit service provider provisioning state is **Provisioning** or **Provisioned,** you must work with your service provider to deprovision the circuit on their side. Microsoft can continue to reserve resources and bill you until the service provider completes deprovisioning the circuit and notifies us.
 
-> [!Note]
+> **Note**
 >
 > You must unlink all virtual networks from the ExpressRoute circuit before deprovisioning. If this operation fails, check whether any virtual networks are linked to the circuit.
 >
