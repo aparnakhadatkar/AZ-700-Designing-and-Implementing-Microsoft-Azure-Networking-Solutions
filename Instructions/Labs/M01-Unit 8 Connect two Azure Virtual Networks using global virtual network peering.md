@@ -21,7 +21,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 ### Create ManufacturingVM
 
-1. On the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
+1. On the Azure portal select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
    ![](../media/unit6-image1.png)
 
