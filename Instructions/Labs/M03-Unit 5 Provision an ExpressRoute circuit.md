@@ -17,7 +17,7 @@ In this exercise, you will perform:
 
 #### Estimated time: 15 minutes
 
-![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram.png)
+![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram01.png)
 
 
 ## Task 1: Create and provision an ExpressRoute circuit
