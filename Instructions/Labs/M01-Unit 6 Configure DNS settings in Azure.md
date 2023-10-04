@@ -52,7 +52,8 @@ In this exercise, you will:
    | Subscription                        | No changes required                     |
    | Virtual Network                     | Select CoreServicesVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
    | Enable auto registration            | Selected                                |
-   | Review your settings and select OK. |                                         |
+
+1. Review your settings and select **OK**.
 
    **Note**: Please Wait for 2 mins to Successfully create virtual network link.
    
@@ -68,7 +69,8 @@ In this exercise, you will:
    | Subscription                        | No changes required                      |
    | Virtual Network                     | select ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
    | Enable auto registration            | Selected                                 |
-   | Review your settings and select OK. |                                          |
+
+1. Review your settings and select OK.
 
    **Note**: Please Wait for 2 mins to Successfully create virtual network link.
 
@@ -84,7 +86,8 @@ In this exercise, you will:
    | Subscription                        | No changes required                 |
    | Virtual Network                     | select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
    | Enable auto registration            | Selected                            |
-   | Review your settings and select OK. |                                     |
+
+1. Review your settings and select OK.
   
    **Note**: Please Wait for 2 mins to Successfully create virtual network link.
 
@@ -129,7 +132,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
    **Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
 
    ```powershell
-   $RGName = "ContosoResourceGroup-[DID] "
+   $RGName = "ContosoResourceGroup-[DID]"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
