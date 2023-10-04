@@ -92,8 +92,6 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 1. Select **Create**.
 
- 
-
 ## Task 3: Add Traffic Manager endpoints
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
