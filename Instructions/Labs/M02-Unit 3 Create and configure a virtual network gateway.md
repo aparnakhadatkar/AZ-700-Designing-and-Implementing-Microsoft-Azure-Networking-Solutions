@@ -174,13 +174,12 @@ In this lab, you will complete the following tasks:
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Gateway type                                | VPN                          |
-   |                 |                   | VPN type                                    | Route-based                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | ManufacturingVnet            |
    |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
-   |                 |                   | Public IP Address Type                      | Standard                     |
    |                 | Public IP address | Public IP address                           | Create new                   |
+   |                 |                   | Public IP Address Type                      | Standard                     |
    |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
