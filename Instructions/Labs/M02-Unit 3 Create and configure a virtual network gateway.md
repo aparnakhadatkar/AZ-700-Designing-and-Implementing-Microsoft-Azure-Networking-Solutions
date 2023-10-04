@@ -46,7 +46,14 @@ In this lab, you will complete the following tasks:
    $RGName = "ContosoResourceGroup"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
-    
+
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out. 
+
 ## Task 2: Create CoreServicesVM
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
@@ -70,6 +77,15 @@ In this lab, you will complete the following tasks:
 
 1. Verify that the virtual machine has been created.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+
+
 ## Task 3: Create ManufacturingVM
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
@@ -92,6 +108,11 @@ In this lab, you will complete the following tasks:
 
 1. Verify that the virtual machine has been created.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 4: Connect to the Test VMs using RDP
 
@@ -157,6 +178,12 @@ In this lab, you will complete the following tasks:
 
    **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 7: Create ManufacturingVnet Gateway
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -188,7 +215,12 @@ In this lab, you will complete the following tasks:
 
    **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
- 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -266,6 +298,12 @@ In this lab, you will complete the following tasks:
 1. Wait until the status of both connections is **Connected**. You may need to refresh your screen. 
 
     ![](../media/mod2-unit3-image2.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 11: Test the connection between the VMs
 
