@@ -195,16 +195,15 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Port                | **80**            |
    | Path                | **/**             |
    | Interval            | **15**            |
-   | Unhealthy threshold | **2**             |
+   
 
-
-1. Select **Add**.
+1. Select **Save**.
  
 ### Create a load balancer rule
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. From the **Backend pools** page of your load balancer, under **Settings**, select **Load balancing rules**, then select **Add**.
+1. From the **Backend pools** page of your load balancer, under **Settings**, select **Load balancing rules**, then Click on **+Add**.
 
 1. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -213,17 +212,17 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Name                   | **myHTTPRule**           |
    | IP Version             | **IPv4**                 |
    | Frontend IP address    | **LoadBalancerFrontEnd** |
-   | Backend pool          | **myBackendPool**       |
+   | Backend pool           | **myBackendPool**       |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
    | Backend port           | **80**                   |
    | Health probe           | **myHealthProbe**        |
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
-   | Floating IP            | **Disabled**             |
+   | Enable Floating IP     | **Disabled**             |
 
 
-1. Select **Add**.
+1. Select **Save**.
  
 
 ## Task 5: Test the load balancer
@@ -241,7 +240,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subscription         | Select your subscription                     |
    | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**        |
    | Virtual machine name | **myTestVM**                                 |
-   | Region               | **(US) East US**                             |
+   | Region               |  **<inject key="Region" enableCopy="false"/>**                              |
    | Availability options | **No infrastructure redundancy required**    |
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory**   |
