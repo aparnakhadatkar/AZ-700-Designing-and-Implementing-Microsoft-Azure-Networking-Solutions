@@ -129,7 +129,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
    **Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
 
    ```powershell
-   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" />"
+   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" /> "
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
