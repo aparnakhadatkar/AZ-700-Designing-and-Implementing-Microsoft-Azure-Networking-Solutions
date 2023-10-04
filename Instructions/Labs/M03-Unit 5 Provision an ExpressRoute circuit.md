@@ -1,20 +1,23 @@
 # Module 03-Unit 4 Provision an ExpressRoute circuit
 
-## Exercise scenario 
+## Lab scenario 
 
 In this exercise, you will create an ExpressRoute circuit using the Azure portal and the Azure Resource Manager deployment model. 
 
  > **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 15 minutes
 
-![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram.png)
+## Lab Objectives
 
-In this exercise, you will:
+In this exercise, you will perform:
 
 + Task 1: Create and provision an ExpressRoute circuit
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
+
+#### Estimated time: 15 minutes
+
+![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram01.png)
 
 
 ## Task 1: Create and provision an ExpressRoute circuit
@@ -48,10 +51,8 @@ In this exercise, you will:
    |Bandwidth|**50Mbps**|
    |SKU|**Standard**|
    |Billing model|**Metered**|
-   |Bandwidth|**50Mbps**|
 
-
-    ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
+   ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
 
 5. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
 
@@ -84,7 +85,7 @@ In this exercise, you will:
 ## Task 2: Retrieve your Service key
  
 
-1. You can view all the circuits that you created by selecting **All services &gt; Networking &gt; ExpressRoute circuits**.
+1. You can view all the circuits that you created by selecting **More services &gt; Networking &gt; ExpressRoute circuits**.
 
    ![Azure portal - Create ExpressRoute resource menu](../media/task5.png)
 
@@ -98,7 +99,7 @@ In this exercise, you will:
 
 1. On this page, **Provider status** gives you the current state of provisioning on the service-provider side. **Circuit status** provides you the state on the Microsoft side. 
 
-1. When you create a new ExpressRoute circuit, the circuit is in the following state:
+1. When you create a new ExpressRoute circuit, make sure the circuit is in the following state:
 
    - Provider status: Not provisioned
    - Circuit status: Enabled
@@ -110,11 +111,7 @@ In this exercise, you will:
      - Circuit status: Enabled
    - You should periodically check the provisioning status and the state of the circuit status.
 
-   ![Azure portal - ExpressRoute circuit properties showing status is now provisioned](../media/task7-1.png)
-
- 
-
-Congratulations! You have created an ExpressRoute circuit and located the Service key, which you would need to complete the provisioning of the circuit.
+#### Congratulations! You have created an ExpressRoute circuit and located the Service key, which you would need to complete the provisioning of the circuit.
 
 ## Task 3: Deprovisioning an ExpressRoute circuit
 
@@ -125,6 +122,20 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
 > You must unlink all virtual networks from the ExpressRoute circuit before deprovisioning. If this operation fails, check whether any virtual networks are linked to the circuit.
 >
 > If the service provider has deprovisioned the circuit (the service provider provisioning state is set to Not provisioned), you can delete the circuit. This stops billing for the circuit.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+## Review
+
+In this exercise, you have performed:
+
++ Creating and provision an ExpressRoute circuit
++ Retrieving your Service key
++ Deprovisioning an ExpressRoute circuit
 
 
 ## You have successfully completed the lab.
