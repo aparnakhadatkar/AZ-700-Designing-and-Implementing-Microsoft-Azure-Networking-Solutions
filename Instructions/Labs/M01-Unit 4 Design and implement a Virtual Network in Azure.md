@@ -87,10 +87,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
       | IP Addresses    | IPv4 address space | 10.20.0.0            |
       |                 | IPv4 address Size  | /16                  |
 
+   ![](../media/unit4-image4.png)
 
-    ![](../media/unit4-image4.png)
-
- 1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
+1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
