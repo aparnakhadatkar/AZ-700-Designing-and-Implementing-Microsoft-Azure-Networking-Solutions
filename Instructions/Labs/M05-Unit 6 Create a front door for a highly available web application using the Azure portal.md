@@ -1,10 +1,12 @@
 # Module 05: Unit 6 Create a Front Door for a highly available web application using the Azure portal
 
+## Lab scenario
 In this exercise, you will set up an Azure Front Door configuration that pools two instances of a web application that runs in different Azure regions. This configuration directs traffic to the nearest site that runs the application. Azure Front Door continuously monitors the web application. You will demonstrate automatic failover to the next available site when the nearest site is unavailable. The network configuration is shown in the following diagram:
 
 ![Network configuration for Azure Front Door.](../media/front-door-environment-diagram.png)
 
-In this exercise, you will:
+## Lab objectives
+In this lab, you will complete the following tasks:
 
 + Task 1: Create two instances of a web app
 + Task 2: Create a Front Door for your application
@@ -12,8 +14,11 @@ In this exercise, you will:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
+## Estimated time: 30 minutes
 
-#### Estimated time: 30 minutes
+## Architecture diagram
+
+![Network configuration for Azure Front Door.](../media/front-door-environment-diagram.png)
 
 ## Task 1: Create two instances of a web app
 
@@ -159,6 +164,13 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
     ![Web App](../media/l5u6-14.png)
 
    Congratulations! You have configured and tested an Azure Front Door.
-   
+
+### Review
+In this lab, you have completed:
+
+- Create two instances of a web app
+- Create a Front Door for your application
+- View Azure Front Door in action
+  
 ## You have successfully completed the lab.
 
