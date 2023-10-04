@@ -199,7 +199,7 @@ Although IIS isn't required to create the application gateway, you installed it 
 
 ### Use IIS to test the application gateway:
 
-1. Find the public IP address for the application gateway on its **Overview** page. 
+1. On the application gateway navigate to **Overview** page and find the public IP address. 
 
    ![Azure Portal look up Frontend Public IP address ](../media/app-gw-public-ip.png)
 
