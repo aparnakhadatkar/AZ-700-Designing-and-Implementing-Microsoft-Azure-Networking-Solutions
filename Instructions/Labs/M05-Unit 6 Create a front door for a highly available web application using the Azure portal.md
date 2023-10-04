@@ -21,9 +21,11 @@ This exercise requires two instances of a web application that run in different 
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **WebApp**, and then select **App Services** under services.
 
+   ![Web App](../media/l5u6-1.png)
+
 1. Select **+ Create**  and then select **Web App** to create a Web App.
 
-     ![Web App](../media/m05u52.png)
+     ![Web App](../media/l5u6-2.png)
 
 1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
 
@@ -38,7 +40,10 @@ This exercise requires two instances of a web application that run in different 
    | Region           | Select **Central US**.                                       |
    | Windows Plan     | Select **Create new** and enter myAppServicePlanCentralUS in the text box. |
    | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+   |||
 
+   ![Web App](../media/l5u6-3.png)
+   
 1. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take several minutes for the deployment to complete.
 
@@ -59,7 +64,10 @@ This exercise requires two instances of a web application that run in different 
    | Region           | Select **East US**.                                          |
    | Windows Plan     | Select **Create new** and enter myAppServicePlanEastUS in the text box. |
    | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+   |||
 
+   ![Web App](../media/l5u6-4.png)
+   
 1. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take several minutes for the deployment to complete.
 
@@ -69,9 +77,13 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, Search for Front Door and CDN profiles, and then select **Front Door and CDN profiles**.
 
+   ![Web App](../media/l5u6-5.png)
+   
 1. On the **Front Door and CDN profiles** page, select **+ Create**.
 
 1. On the Compare offerings page, select **Quick create**. Then select **Continue to create a Front Door**.
+
+    ![Web App](../media/l5u6-6.png)
 
 1. On the Basics tab, enter or select the following information.
 
@@ -86,32 +98,46 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    | Endpoint Name           | FDendpoint   |
    | Origin Type             | App Service| 
    | Origin host name        | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
-   
+   |||
+
+   ![Web App](../media/l5u6-7.png)
 
 1. Select **Review and Create**, and then select **Create**.
 
 1. Wait for the resource to deploy, and then select **Go to resource**.
-1. On the Front Door resource in the Overview blade, locate the **Origin Groups**, select the origin group created
-1. To update the origin group select the name **default-origin-group** from the list. Select **Add an origin** and add the following information and select **Add** and then select **Update**.
+
+1. On the Front Door resource in the Overview blade, locate the **Origin Groups**, to update select the origin group **default-origin-group** from the list and click on **Add an origin**
+
+   ![Web App](../media/l5u6-8.png)
+
+1. On the **Add on Origin** window, add the following information and select **Add**.
 
    
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
    | Name                    | default-origin-group                    |
    | Origin host header      | Select WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
+   |||
    
+   ![Web App](../media/l5u6-9.png)
 
+   
+1. Select **Update**.
+
+   ![Web App](../media/l5u6-10.png)
+
+ 
 ## Task 3: View Azure Front Door in action
 
 Once you create a Front Door, it takes a few minutes for the configuration to be deployed globally. Once complete, access the frontend host you created. 
 
 1. Navigate back to **Front Door and CDN profiles** page, on the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
 
-    ![Fdendpoint](../media/M05u57.png)
+   ![Web App](../media/l5u6-11.png)
 
 1. In a new browser tab, navigate to the Front Door endpoint FQDN. The default App Service page will be displayed.
    
-   ![Browser showing App Service information page](../media/mo5u64.png)
+    ![Web App](../media/l5u6-12.png)
 
 1. To test instant global failover in action, try the following steps:
 
@@ -119,7 +145,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
 1. Select one of your web apps, then select **Stop**, and then select **Yes** to verify.
 
-   ![Azure Portal showing stopped Web App](../media/stop-web-app.png)
+    ![Web App](../media/l5u6-13.png)
 
 1. Switch back to your browser and select Refresh. You should see the same information page.
 
@@ -129,7 +155,7 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
 1. Switch back to your browser and select Refresh. This time, you should see an error message.
 
-   ![Browser showing App Service error page](../media/web-apps-both-stopped.png)
+    ![Web App](../media/l5u6-14.png)
 
    Congratulations! You have configured and tested an Azure Front Door.
    
