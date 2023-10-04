@@ -1,7 +1,9 @@
 # Module 01 - Unit 6 Configure DNS settings in Azure
 
-## Exercise scenario 
+## Lab scenario 
 In this unit, you will configure DNS name resolution for Contoso Ltd. You will create a private DNS zone named contoso.com, link the VNets for registration and resolution, and then create two virtual machines and test the configuration.
+
+## Lab Objectives
 
 In this exercise, you will:
 
@@ -12,9 +14,9 @@ In this exercise, you will:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 25 minutes
+### Estimated time: 25 minutes
 
-## Task 1: Create a private DNS Zone
+### Task 1: Create a private DNS Zone
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Private DNS zones** and select **Private DNS zones** under services that appears in the results under **Services**.
   ‎![](../media/unit6-image(1).png)
@@ -34,7 +36,9 @@ In this exercise, you will:
 
 1. Verify that the zone has been created.
 
-## Task 2: Link subnet for auto registration
+1. Click on **Go-to Resource** 
+
+### Task 2: Link subnet for auto registration
 
 1. In Contoso.com, under **Settings**, select **Virtual network links** and on Contoso.com | Virtual network links page, select **+ Add**.
 
@@ -88,7 +92,13 @@ In this exercise, you will:
 
 1. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
 
- ##  Task 3: Create Virtual Machines to test the configuration
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+###  Task 3: Create Virtual Machines to test the configuration
 
 In this section, you will create two test VMs to test the Private DNS zone configuration.
 
@@ -100,9 +110,17 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
    ![](../media/unit6-image2.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
+
+1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** For the **Storage account**.
+
+1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the  **File share** , then click on **Create Storage**.
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
+
+1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
 
    ![](../media/unit6-image3.png)
 
@@ -122,7 +140,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Verify that both virtual machines have been created.
 
- ## Task 4: Verify records are present in the DNS zone
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### Task 4: Verify records are present in the DNS zone
 
 1. On the Azure Portal home page, select **Private DNS zones**.
 
@@ -142,13 +166,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On TestVM1, select **Connect** 
 
-    ![](../media/unit6-image4.png)
+   ![](../media/unit6-image4.png)
 
 1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
    ![](../media/unit6-image(6).png)
 
-1. Save the RDP file to your desktop.
+1. Save the RDP file to your desktop. If any warning pops up in "edge downloads" select **Keep**.
 
 1. Follow the same steps for **TestVM2**
 
@@ -170,7 +194,19 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Alternatively, you can enter the command nslookup TestVM2.contoso.com and verify that you receive a successful name resolution record for VM2
  
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-Congratulations! You have created a private DNS Zone, added a name resolution and auto-registration link, and tested name resolution in your configuration. 
+## Review
+
+In this Lab you have performed:
+
++ Creating a private DNS Zone
++ Linking subnet for auto registration
++ Creating Virtual Machines to test the configuration
++ Verifying records are present in the DNS zone
 
 ## You have successfully completed the lab.
