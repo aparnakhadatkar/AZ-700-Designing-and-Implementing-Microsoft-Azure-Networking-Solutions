@@ -4,7 +4,7 @@ In this exercise, you will create an internal load balancer for the fictional Co
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 60 minutes (includes ~45 minutes deployment waiting time)
+#### Estimated time: 60 minutes
 
 The steps to create an internal load balancer, are very similar to those you have already learned about in this module, to create a public load balancer. The key difference is that with a public load balancer the front end is accessed via a public IP address, and you test connectivity from a host which is located outside your virtual network; whereas, with an internal load balancer, the front end is a private IP address inside your virtual network, and you test connectivity from a host inside the same network.
 
@@ -49,6 +49,7 @@ In this section, you will create a virtual network and a subnet.
     | Bastion name                      | **myBastionHost**                             |
     | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
 
+1. Select **ok**.
 
 1. Select **Next : IP Addresses**.
    
@@ -86,11 +87,22 @@ In this section, you will create a virtual network and a subnet.
 
 In this section, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-2. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04** folder into the Cloud Shell home directory one by one.
+   ![](../media/unit6-image1.png)
 
-3. Deploy the following ARM templates to create the VMs needed for this exercise:
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+   
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+
+
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04** folder into the Cloud Shell home directory one by one.
+
+     ![](../media/unit6-image3.png)
+
+1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
    >**Note**: You will be prompted to provide an Admin password.
    >**Important**: Please replace IntLB-RG with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
