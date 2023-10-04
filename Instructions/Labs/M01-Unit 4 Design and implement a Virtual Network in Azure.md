@@ -105,7 +105,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
  1. Verify your configuration passed validation, Go back to virtual network and then again select **Create**.
 
-    ![](../media/0001.png)
+    ![](../media/000001.png)
  
  1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2** and **Task3**.
 
