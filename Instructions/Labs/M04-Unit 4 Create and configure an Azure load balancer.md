@@ -104,7 +104,6 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
    >**Important**: Please replace IntLB-RG with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
@@ -114,6 +113,8 @@ In this section, you will create three VMs, that will be in the same availabilit
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
+
+ 1.  You will be prompted to provide an admin password. provide adminPassword: <inject key="AzureAdUserPassword"></inject>.
 
    **Note**: It may take 5-10 min to create these three VMs. You do not have to wait until this job completes, you can continue with the next task.
 
