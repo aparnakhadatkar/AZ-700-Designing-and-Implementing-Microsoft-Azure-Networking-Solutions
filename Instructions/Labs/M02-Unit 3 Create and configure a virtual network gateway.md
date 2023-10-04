@@ -238,7 +238,6 @@ In this lab, you will complete the following tasks:
       | Name                           | CoreServicesGW-to-ManufacturingGW |
       | Location                       | East US                           |
 
-
 1. Select **Next: Settings >**
    
 1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
@@ -271,7 +270,6 @@ In this lab, you will complete the following tasks:
       | Connection type                | VNet-to-VNet                      |
       | Name                           | ManufacturingGW-to-CoreServicesGW |
       | Location                       | West Europe                       |
-
 
 1. Select **Next: Settings >**
    
