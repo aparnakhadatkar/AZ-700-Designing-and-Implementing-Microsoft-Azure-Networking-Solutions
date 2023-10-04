@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 + Task 1: Create the VNet and gateway subnet
 + Task 2: Create the virtual network gateway
 
-## Estimated time: 60 minutes (includes ~45 minutes deployment waiting time)
+## Estimated time: 60 minutes
 
 ## Task 1: Create the VNet and gateway subnet
 
@@ -43,10 +43,10 @@ In this lab, you will complete the following tasks:
 
 1. Select **Next : IP addresses**.
 
-1. On the **IP Addresses** tab, click on **Add IPv4 address space** **(1)**, enter 10.20.0.0  **(2)** in address space field and enter /16 **(3)** size, then select **+ Add subnet** **(4)**. 
+1. On the **IP Addresses** tab, click on **Add IPv4 address space** **(1)**, enter 10.20.0.0  **(2)** in address space field and enter /16 **(3)** size, then select 
+   **+ Add subnet** **(4)**. 
 
-   ![Azure portal - add gateway subnet](../media/image-01.png)
-
+    ![Azure portal - add gateway subnet](../media/image-01.png)
 
 1. In the Add subnet pane, use the information in the following table to create the subnet:
 
