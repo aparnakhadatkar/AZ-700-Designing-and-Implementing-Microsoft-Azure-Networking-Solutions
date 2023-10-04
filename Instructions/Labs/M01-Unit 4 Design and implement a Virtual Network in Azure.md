@@ -58,7 +58,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the results under **Services**.
    
-  ![](../media/unit4-image.png)
+   ![](../media/unit4-image.png)
+
 1. Select **+ Create** on the Virtual networks page. 
    
 1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **CoreServicesVnet** virtual network and select **IP Address** tab.
@@ -74,10 +75,12 @@ These virtual networks and subnets are structured in a way that accommodates exi
 1. On the **IP Address** tab of **Create virtual network** use the information:
 
    - Remove the default IP Address space by clicking on **Delete the address space**
-      ![](../media/unit4-image2.png)
+
+   ![](../media/unit4-image2.png)
 
    - After deleting **address space**, select **Add IPV4 Address space** use the information in the following table. 
-      ![](../media/unit4-image3.png)
+
+   ![](../media/unit4-image3.png)
 
       |    **Tab**      | **Option**         | **Value**            |
       | --------------  | -------------------- | -------------------|
@@ -85,7 +88,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
       |                 | IPv4 address Size  | /16                  |
 
 
-   ![](../media/unit4-image4.png)
+    ![](../media/unit4-image4.png)
 
  1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
@@ -154,7 +157,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. On the Azure portal home page, select **All resources**.
 
-    ![](../media/unit4-image5.png)
+   ![](../media/unit4-image5.png)
 
 1. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
 
