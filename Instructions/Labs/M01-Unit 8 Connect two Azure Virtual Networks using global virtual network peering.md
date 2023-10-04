@@ -55,7 +55,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
-1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa55w.rd!!**.   
+1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa$$w0rd1234**.   
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -86,7 +86,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Save the RDP file to your desktop. If any arning pops-up in "edge downloads" select **keep**
 
-1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password **Pa$$w0rd1234** you provided during deployment.
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
