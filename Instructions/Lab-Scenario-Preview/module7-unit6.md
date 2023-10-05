@@ -4,7 +4,7 @@
 
 ### Lab overview
 
-In this lab, you will learn how to secure Your organization is migrating its applications to a Platform-as-a-Service (PaaS) environment in Azure. You need to ensure that access to PaaS resources, such as Azure SQL databases and Azure Storage accounts, is restricted to only the virtual network where your applications are hosted. To achieve this, you plan to implement virtual network service endpoints for the PaaS services, creating a secure and isolated network environment for your applications.
+In this lab, you will learn how to deploy a new web application in Azure, and you need to ensure that it is accessible privately within your Azure virtual network to enhance security. To achieve this, you will create an Azure private endpoint for the web application using Azure PowerShell.
 
 ### Objectives
   
