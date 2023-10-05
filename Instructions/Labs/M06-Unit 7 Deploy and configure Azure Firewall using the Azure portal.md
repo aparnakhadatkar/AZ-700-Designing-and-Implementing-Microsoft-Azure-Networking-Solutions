@@ -47,7 +47,7 @@ In this task, you will create a single virtual network with two subnets.
     | Name             | **AzureFirewallSubnet**|
     | Starting address | **10.0.1.0** |
     | Subnet size      | **/26** |
-
+    |||
 
     ![](../media/l6u7-1.png)
 
