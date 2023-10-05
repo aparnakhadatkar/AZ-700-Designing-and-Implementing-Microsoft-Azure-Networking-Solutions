@@ -28,7 +28,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create the VNet and gateway subnet
 
-1. On any Azure Portal page, in **Search resources, services and docs**, enter virtual network, and then select **Virtual networks** from the results.
+1. On any Azure Portal page, in **Search resources, services and docs**, enter **Virtual networks**, and then select **Virtual networks** from the results.
 
 1. On the Virtual networks page, select **+Create**.
 
@@ -43,8 +43,8 @@ In this lab, you will complete the following tasks:
 
 1. Select **Next : IP addresses**.
 
-1. On the **IP Addresses** tab, click on **Add IPv4 address space** **(1)**, enter 10.20.0.0  **(2)** in address space field and enter /16 **(3)** size, then select 
-   **+ Add subnet** **(4)**. 
+1. On the **IP Addresses** tab, click on **Add IPv4 address space** in new address space box, enter 10.20.0.0  in address space field and enter /16 in size, then 
+   select  **+ Add subnet** **(4)**. 
 
     ![Azure portal - add gateway subnet](../media/image-01.png)
 
