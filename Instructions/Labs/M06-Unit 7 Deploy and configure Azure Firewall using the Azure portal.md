@@ -51,21 +51,18 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
-1. In the **Edit subnet** dialog box, specify the following :
+1. In the **Edit subnet** dialog box, specify the following and select **Add**.
 
     | **Setting**      | **Value**            |
     | ---------------- | ------------------   | 
     | Name             | **Workload-SN**      |
     | Starting address | **10.0.2.0**         |
     | Subnet size      | **/24**              |
+    |||
+   
+1. Select **Review + create** and  **Create**.
 
-1. Select **Add**.
-
-1. Select **Review + create**.
-
-1. Select **Create**.
-
- ## Task 3: Create a virtual machine
+## Task 3: Create a virtual machine
 
 In this task, you will create the workload virtual machine and place it in the Workload-SN subnet created previously.
 
