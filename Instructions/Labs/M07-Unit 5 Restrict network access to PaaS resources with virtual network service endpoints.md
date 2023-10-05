@@ -226,11 +226,9 @@ The steps necessary to restrict network access to resources created through Azur
 
 By default, storage accounts accept network connections from clients in any network, including the internet. Deny network access from the internet, and all other subnets in all virtual networks, except for the Private subnet in the CoreServicesVNet virtual network.
 
-1. On the Azure portal, in the **Search resources, services, and docs** box at the top of the portal, search and select **Storage Account**. 
+1. On contosostorage<inject key="DeploymentID" enableCopy="false"/> storage account blade.
 
-1. Select contosostorage<inject key="DeploymentID" enableCopy="false"/> storage account from the list.
-
-1. On the storage account blade from the left navigation pane, under **Security + networking** section, select **Networking**.
+1. From the left navigation pane, under **Security + networking** section, select **Networking**.
 
 1. Select **Enabled from selected virtual networks and IP addresses**.
 
