@@ -35,7 +35,7 @@ In this lab, you will:
    | Subscription   | Select your subscription                      |
    | Resource group | myResourceGroup                               |
    | Name           | CoreServicesVNet                              |
-   | Location       | Select **East US**                            |
+   | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
 
 1. Select **Next Security** tab, and specify the following values:
 
