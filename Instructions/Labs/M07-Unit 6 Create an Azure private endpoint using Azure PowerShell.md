@@ -368,11 +368,9 @@ New-AzPrivateDnsZoneGroup @parameters4
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/)
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Resource groups**, and then select **Resource groups** under services.
 
-1. Select **Resource groups** in the left-hand navigation pane.
-
-1. Select **CreatePrivateEndpointQS-rg**.
+1. Select **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Select **myVM**.
 
