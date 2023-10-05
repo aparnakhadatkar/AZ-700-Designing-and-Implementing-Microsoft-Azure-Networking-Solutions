@@ -1,6 +1,7 @@
 # Module 04-Unit 4 Create and configure an Azure load balancer
 
-In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. 
+## Lab scenario 
+In this lab, you will create an internal load balancer for the fictional Contoso Ltd organization. 
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -13,7 +14,9 @@ The diagram below illustrates the environment you will be deploying in this exer
 ![internal standard loadbalancer diagram](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
 
  
-In this exercise, you will:
+## Lab Objectives
+
+In this lab, you will:
 
 + Task 1: Create the virtual network
 + Task 2: Create backend servers
@@ -300,5 +303,15 @@ In this section, you will create a test VM, and then test the load balancer.
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
     ![](../media/L4U4-4.png)
+
+## Review
+
+In this Lab you performed:
++ Create the virtual network
++ Create backend servers
++ Create the load balancer
++ Create load balancer resources
++ Test the load balancer
+
    
 ## You have successfully completed the lab.
