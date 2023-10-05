@@ -24,8 +24,6 @@ In this lab, you will:
 
 ## Task 1: Create a virtual network
 
-1. Login to the Azure Portal.
-
 1. On the Azure Portal home page, search for virtual network and then select **Virtual network** from the results.
 
 1. Select **+** **Create**.
