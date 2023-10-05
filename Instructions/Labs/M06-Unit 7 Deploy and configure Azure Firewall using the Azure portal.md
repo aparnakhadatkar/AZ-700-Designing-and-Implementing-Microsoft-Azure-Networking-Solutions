@@ -63,7 +63,7 @@ In this task, you will create a single virtual network with two subnets.
    
 1. Select **Review + create** and  **Create**.
 
-## Task 3: Create a virtual machine
+## Task 2: Create a virtual machine
 
 In this task, you will create the workload virtual machine and place it in the Workload-SN subnet created previously.
 
@@ -101,7 +101,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the **Overview** page of **Srv-Work**, on the right of the page under **Settings** section, select **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
  
-## Task 4: Deploy the firewall and firewall policy
+## Task 3: Deploy the firewall and firewall policy
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
@@ -139,7 +139,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 1. Make a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**) you may need this in coming tasks.
 
-## Task 5: Create a default route
+## Task 4: Create a default route
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
@@ -185,7 +185,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. Select **Add**.
 
- ## Task 6: Configure an application rule
+ ## Task 5: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
@@ -219,7 +219,7 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. Select **Add**.
 
- ## Task 7: Configure a network rule
+ ## Task 6: Configure a network rule
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
@@ -250,7 +250,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 1. Select **Add**.
 
-## Task 8: Configure a Destination NAT (DNAT) rule
+## Task 7: Configure a Destination NAT (DNAT) rule
 
 In this task, you will add a DNAT rule that allows you to connect a remote desktop to the Srv-Work virtual machine through the firewall.
 
@@ -281,7 +281,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. Select **Add**.
 
- ## Task 9: Change the primary and secondary DNS address for the server's network interface
+ ## Task 8: Change the primary and secondary DNS address for the server's network interface
 
 For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
@@ -303,7 +303,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Restart the **Srv-Work** virtual machine.
 
- ## Task 10: Test the firewall
+## Task 9: Test the firewall
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
