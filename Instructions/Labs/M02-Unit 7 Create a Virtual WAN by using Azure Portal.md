@@ -2,11 +2,11 @@
 
 ## Lab Scenario
 
-In this exercise, you will create a Virtual WAN for Contoso.
+In this lab, you will create a Virtual WAN for Contoso.
 
 ## Lab Objectives
 
-In this Lab, you will Perform:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a Virtual WAN
 + Task 2: Create a hub by using Azure Portal
@@ -117,7 +117,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 ## Review
 
-In this Lab, you have Performed:
+In this lab, you have completed:
 
 + Creating a Virtual WAN
 + Creating a hub by using Azure Portal
