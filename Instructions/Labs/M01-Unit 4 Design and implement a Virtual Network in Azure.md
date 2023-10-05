@@ -10,7 +10,7 @@ Consider the fictional organization Contoso Ltd, which is in the process of migr
 
 ## Lab Objectives
 
-In this exercise, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the CoreServicesVnet virtual network and subnets
 + Task 2: Create the ManufacturingVnet virtual network and subnets
