@@ -56,7 +56,7 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
-   | Resource group | Select **Contoso-RG-TM2--<inject key="DeploymentID" enableCopy="false"/>**             |
+   | Resource group | Select **Contoso-RG-TM2-<inject key="DeploymentID" enableCopy="false"/>**             |
    | Name           | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/>**   |
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
