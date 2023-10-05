@@ -403,7 +403,7 @@ In this section, you'll use the virtual machine you created in the previous step
      Aliases: mywebapp8675.azurewebsites.net 
      ```  
 
-  ![](../media/L7U7-1.png)
+     ![](../media/L7U7-1.png)
 
 1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
 
