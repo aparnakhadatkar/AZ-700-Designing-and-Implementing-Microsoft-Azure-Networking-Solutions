@@ -1,4 +1,4 @@
-# Lab Scenario Preview: oad balancing non-HTTP(S) traffic in Azure
+# Lab Scenario Preview: Load balancing non-HTTP(S) traffic in Azure
 
 ## Module 04-Unit 4 Create and configure an Azure load balancer
 
