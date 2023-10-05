@@ -1,1 +1,12 @@
-
+[
+   {
+    "Name": "Lab Scenario Preview - Module 06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal",
+    "Language": "English",
+    "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Lab-Scenario-Preview/module6-unit4.md",
+          "Order": 1
+        }
+     ]  
+   } 
+]
