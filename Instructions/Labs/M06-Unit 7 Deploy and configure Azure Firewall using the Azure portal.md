@@ -27,9 +27,12 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **+ Create**.
 
-1. Select the **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** resource group.
+1. On the Create virtual network of **Basic** tab specify the following information to create Virtual Network.
 
-1. In the **Name** box, enter **Test-FW-VN**.
+     |  **Setting**     | **Value**            |
+     | ---------------- | ------------------   |
+     | Resource group   |  **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** |
+     | **Name**         | **Test-FW-VN**       |
 
 1. Select **Next: IP Addresses**. Enter IPv4 address space 10.0.0.0/16 if not already there by default. 
 
@@ -46,7 +49,7 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **Save**.
 
-1. Select **Add subnet**, to create another subnet, which will host the workload server that you will create shortly.
+1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
 1. In the **Edit subnet** dialog box, specify the following :
 
