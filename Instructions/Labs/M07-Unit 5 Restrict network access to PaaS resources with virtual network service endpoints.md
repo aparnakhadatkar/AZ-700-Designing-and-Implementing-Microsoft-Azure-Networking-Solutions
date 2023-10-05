@@ -35,7 +35,7 @@ In this lab, you will:
    | Subscription   | Select your subscription                      |
    | Resource group | myResourceGroup                               |
    | Name           | CoreServicesVNet                              |
-   | Location       | Select **East US**                            |
+   | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
 
 1. Select **Next Security** tab, and specify the following values:
 
@@ -174,9 +174,9 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
    | Priority                | 120                       |
    | Name                    | Allow-RDP-All             |
 
-1. And then select **Add**.
+1. Select **Add**.
 
-> **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
+   > **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
 1. Under **Settings**, select **Subnets**.
 
@@ -201,7 +201,7 @@ The steps necessary to restrict network access to resources created through Azur
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
    | Resource group | myResourceGroup                                              |
-   | Name           | Enter contosostorage-<inject key="DeploymentID" enableCopy="false"/> |
+   | Name           | Enter contosostorage<inject key="DeploymentID" enableCopy="false"/> |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Location       | **<inject key="Region" enableCopy="false"/>**                                               |
    | Replication    | Locally-redundant storage (LRS)                              |
@@ -210,9 +210,11 @@ The steps necessary to restrict network access to resources created through Azur
 
 ## Task 7: Create a file share in the storage account
 
-1. After the storage account is created, enter the name of the storage account in the **Search resources, services, and docs** box, at the top of the portal. When the name of your storage account appears in the search results, select it.
+1. On the Azure Portal in the **Search resources, services, and docs** box, at the top of the portal, search and select **Storage account**.
 
-1. Select **File shares**, as shown in the following picture: 
+1. From the list select **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account.
+
+1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
    
 1. Select **+ File share**.
 
@@ -226,26 +228,24 @@ The steps necessary to restrict network access to resources created through Azur
 
 By default, storage accounts accept network connections from clients in any network, including the internet. Deny network access from the internet, and all other subnets in all virtual networks, except for the Private subnet in the CoreServicesVNet virtual network.
 
-1. On the Azure portal, in the **Search resources, services, and docs** box at the top of the portal, search and select **Storage Account**. 
+1. On contosostorage<inject key="DeploymentID" enableCopy="false"/> storage account blade.
 
-1. Select contosostorage-<inject key="DeploymentID" enableCopy="false"/> storage account from the list.
-
-1. On the storage account blade from the left navigation pane, under **Security + networking** section, select **Networking**.
+1. From the left navigation pane, under **Security + networking** section, select **Networking**.
 
 1. Select **Enabled from selected virtual networks and IP addresses**.
 
 1. Select **+ Add existing virtual network**.
 
-1. Under **Add networks**, select the following values:
-   ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
-
+1. Under **Add networks**, select the following values and select **Add**.
+   
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
    | Subscription     | Select your subscription.    |
-   | Virtual networks | Select CoreServicesVNet**.** |
+   | Virtual networks | Select **CoreServicesVNet**  |
    | Subnets          | Select **Private**.          |
-
-1. Select **Add**.
+   |||
+   
+   ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
 
 1. Select **Save**.
 
@@ -265,7 +265,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    ![](../media/unit6-image2.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click Create Storage Account.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **myResourceGroup** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
@@ -273,26 +273,25 @@ To test network access to a storage account, deploy a VM to each subnet.
    
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
-
    ```powershell
    $RGName = "myResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
-  
-1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
+   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 ## Task 10: Confirm access to storage account
 
-1. Once the ContosoPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button.
+1. On the **Virtual Machine** blade, select **ContosoPrivate** VM and click on **Connect**.
 
 1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
    ![](../media/unit6-image(6).png)
    
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password you specified when creating the VM.
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
 
 1. Select **OK**.
 
@@ -303,14 +302,14 @@ To test network access to a storage account, deploy a VM to each subnet.
 1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task and **[storage-account-name]** (i.e. contosostoragexx)  with values you supplied and retrieved in the Create a storage account task.
 
 
-   ```azurecli
-   $acctKey = ConvertTo-SecureString -String "[storage-account-key]" -AsPlainText -Force
-   
-   $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\<storage-account-name>", $acctKey
-   
-   New-PSDrive -Name Z -PSProvider FileSystem -Root "\\[storage-account-name].file.core.windows.net\marketing" -Credential $credential
-   
-   ```
+     ```azurecli
+     $acctKey = ConvertTo-SecureString -String "[storage-account-key]" -AsPlainText -Force
+     
+     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\[storage-account-name]", $acctKey
+     
+     New-PSDrive -Name Z -PSProvider FileSystem -Root "\\[storage-account-name].file.core.windows.net\marketing" -Credential $credential
+     
+     ```
 
    The Azure file share successfully mapped to the Z drive.
 
@@ -343,7 +342,9 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. From your computer, browse to the Azure portal.
 
-1. Enter the name of the storage account you created in the **Search resources, services, and docs** box. When the name of your storage account appears in the search results, select it.
+1. On the Azure Portal in **Search resources, services, and docs** box. Search and select **Storage account** appears in the search results.
+
+1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
 
 1. Select **File shares** then select the **marketing** file share.
 
