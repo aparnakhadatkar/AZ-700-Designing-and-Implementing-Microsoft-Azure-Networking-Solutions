@@ -188,7 +188,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ## Review
 
-In this lab you performed:
+In this lab, you have completed:
 
 + Creating the CoreServicesVnet virtual network and subnets
 + Creating the ManufacturingVnet virtual network and subnets
