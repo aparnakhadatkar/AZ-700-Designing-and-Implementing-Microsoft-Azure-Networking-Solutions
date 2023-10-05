@@ -230,8 +230,8 @@ In this task, you will add an application rule that allows outbound access to ww
    | Protocol               | **http,https**                            |
    | Destination type       | **FQDN**                                  |
    | Destination            | **www.google.com**                        |
-
-
+   |||
+   
    ![Add an application rule collection](../media/l6u7-(10).png)
 
 1. Select **Add**.
@@ -261,9 +261,9 @@ In this task, you will add a network rule that allows outbound access to two IP 
    | Destination Ports      | **53**                                                       |
    | Destination Type       | **IP Address**                                               |
    | Destination            | **209.244.0.3, 209.244.0.4**<br />These are public DNS servers operated by Century Link |
+   |||
 
-
-   ​	![Add a network rule collection](../media/l6u7-11.png)
+   ​![Add a network rule collection](../media/l6u7-11.png)
 
 1. Select **Add**.
 
@@ -292,9 +292,9 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
    | Translated address    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
    | Translated port       | **3389**                                                     |
+   |||
 
-
-​    ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
+​   ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
 
