@@ -205,7 +205,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 ## Review
 
-In this lab you have performed:
+In this lab, you have completed:
 
 + Creating a private DNS Zone
 + Linking subnet for auto registration
