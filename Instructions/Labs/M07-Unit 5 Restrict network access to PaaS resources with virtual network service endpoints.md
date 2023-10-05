@@ -272,14 +272,14 @@ To test network access to a storage account, deploy a VM to each subnet.
    
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
-
    ```powershell
    $RGName = "myResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
-  
+
+   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 
