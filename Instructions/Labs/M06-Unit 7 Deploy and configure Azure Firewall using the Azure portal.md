@@ -163,28 +163,29 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**.
+1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate** and **OK**.
 
-1. On **Virtual network**, select **Test-FW-VN**.
+   | **Setting**              | **Value**                |
+   | ------------------------ | ------------------------ |
+   | Subscription             | Select your subscription |
+   | Virtual Network          | select **Test-FW-VN**    |
+   | Subnet                   | **Workload-SN**          |
 
-1. On **Subnet**, select **Workload-SN**. Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.
-
-1. Select **OK**.
+   **Note**:  Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.
 
 1. Under **Settings**, select **Routes** and then select **Add**.
 
-1. On **Route name**, enter **fw-dg**.
-
-1. Select **Destination type** as **IP address** and on **Destination IP addresses/CIDR ranges**, enter **0.0.0.0/0**.
-
-1. On **Next hop type**, select **Virtual appliance**.
-
-1. On **Next hop address**, enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**)
+   | **Setting**                              | **Value**                |
+   | ------------------------                 | ------------------------ |
+   | **Route name**                           | **fw-dg**                |
+   | **Destination type**                     | **IP address**           |
+   | **Destination IP addresses/CIDR ranges** |  **0.0.0.0/0**           |
+   | **Next hop type**                        | **Virtual appliance**    |
+   | **Next hop address**                     | enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**) |
 
 1. Select **Add**.
 
- 
-## Task 6: Configure an application rule
+ ## Task 6: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
@@ -194,7 +195,7 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. Under **Settings**, select **Application Rules**.
 
-1. Select **Add a rule collection**.
+1. Select **+ Add a rule collection**.
 
 1. On the **Add a rule collection** page, create a new application rule using the information in the table below.
 
@@ -224,7 +225,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 1. On the **fw-test-pol** page, under **Settings**, select **Network Rules**.
 
-1. Select **Add a rule collection**.
+1. Select **+ Add a rule collection**.
 
 1. On the **Add a rule collection** page, create a new network rule using the information in the table below.
 
@@ -255,7 +256,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. On the **fw-test-pol** page, under **Settings**, select **DNAT Rules**.
 
-1. Select **Add a rule collection**.
+1. Select **+ Add a rule collection**.
 
 1. On the **Add a rule collection** page, create a new DNAT rule using the information in the table below.
 
@@ -276,7 +277,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Translated port       | **3389**                                                     |
 
 
-​		![Add a DNAT rule collection](../media/add-a-dnat-rule.png)
+​    ![Add a DNAT rule collection](../media/add-a-dnat-rule.png)
 
 1. Select **Add**.
 
@@ -306,16 +307,14 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
-1. Open **Remote Desktop Connection** on your PC.
+1. Withinh LabVm from start menu, open **Remote Desktop Connection**.
 
-1. On the **Computer** box, enter the firewall's public IP address (e.g., **20.90.136.51**) followed by **:3389** (e.g., **20.90.136.51:3389**).
+1. On the **Computer** box, enter the firewall's public IP address followed by **:3389** (e.g., **20.90.136.51:3389**).
 
 1. Select **Connect**.
 
-1. On the **Username** box, enter **.\TestUser**.
-
-1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **.\TestUser**
-by using the password you provided during deployment.
+1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **TestUser** and Password  
+   **Pa55w.rd!!** .
 
 1. Select **OK**.
 
