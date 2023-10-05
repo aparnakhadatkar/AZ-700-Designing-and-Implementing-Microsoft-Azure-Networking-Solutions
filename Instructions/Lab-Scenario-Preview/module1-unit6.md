@@ -1,6 +1,6 @@
 # Lab Scenario Preview: Introduction to Azure Virtual Networks
 
-## Module 01-Unit 4 Design and implement a Virtual Network in Azure
+## Module 01 - Unit 6 Configure DNS settings in Azure
 
 ### Lab overview
 
