@@ -39,7 +39,7 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Under **Subnet name**, select the word **default**.
 
-1. In the **Edit subnet** dialog box, specify the following :
+1. In the **Edit subnet** dialog box, specify the following and  select **Save**.
 
     |  **Setting**     | **Value**            |
     | ---------------- | ------------------   | 
@@ -48,7 +48,8 @@ In this task, you will create a single virtual network with two subnets.
     | Starting address | **10.0.1.0** |
     | Subnet size      | **/26** |
 
-1. Select **Save**.
+
+    ![](../media/l6u7-1.png)
 
 1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
@@ -60,6 +61,8 @@ In this task, you will create a single virtual network with two subnets.
     | Starting address | **10.0.2.0**         |
     | Subnet size      | **/24**              |
     |||
+
+   ![](../media/l6u7-2.png)
    
 1. Select **Review + create** and  **Create**.
 
@@ -105,8 +108,10 @@ In this task, you will create the workload virtual machine and place it in the W
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
-1. 1. On the Azure portal home page, in the search box, enter **Firewall** and select **Firewall** when it appears.
+1. On the Azure portal home page, in the search box, enter **Firewall** and select **Firewall** when it appears.
 
+   ![](../media/l6u7-3.png)
+  
 1. On the **Firewall** page, select **Create**.
 
 1. On the **Basics** tab, create a firewall using the information in the table below.
@@ -123,7 +128,9 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | Choose a virtual network | **Use existing**                                             |
    | Virtual network          | **Test-FW-VN**                                               |
    | Public IP address        | Select **Add new**<br /> Name: **fw-pip**                    |
+   |||
 
+   ![](../media/l6u7-4.png)
 
 1. Review all the settings to ensure they match the screenshot below.
 
@@ -139,12 +146,16 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 1. Make a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**) you may need this in coming tasks.
 
+    ![](../media/l6u7-5.png)
+   
 ## Task 4: Create a default route
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
 1. On the Azure portal home page, in the search box, enter **Route tables** and select **Route tables** when it appears.
 
+     ![](../media/l6u7-6.png)
+   
 1. On the **Route table** page, select **+ Create**.
 
 1. On the **Basics** tab, create a new route table using the information in the table below.
@@ -173,23 +184,29 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
    **Note**:  Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.
 
+    ![](../media/l6u7-7.png)
+
+   
 1. Under **Settings**, select **Routes** and then select **Add**.
 
    | **Setting**                              | **Value**                |
-   | ------------------------                 | ------------------------ |
+   | --------------------------------------   | ------------------------ |
    | **Route name**                           | **fw-dg**                |
    | **Destination type**                     | **IP address**           |
    | **Destination IP addresses/CIDR ranges** |  **0.0.0.0/0**           |
    | **Next hop type**                        | **Virtual appliance**    |
    | **Next hop address**                     | enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**) |
-
-1. Select **Add**.
+   |||
+   
+    ![](../media/l6u7-8.png)
 
  ## Task 5: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
 1. On the Azure portal home page, select **All resources**.
+
+    ![](../media/l6u7-9.png)
 
 1. In the list of resources, select your firewall policy, **fw-test-pol**.
 
@@ -215,7 +232,7 @@ In this task, you will add an application rule that allows outbound access to ww
    | Destination            | **www.google.com**                        |
 
 
-   ![Add an application rule collection](../media/add-an-application-rule-for-firewall.png)
+   ![Add an application rule collection](../media/l6u7-(10).png)
 
 1. Select **Add**.
 
@@ -246,7 +263,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
    | Destination            | **209.244.0.3, 209.244.0.4**<br />These are public DNS servers operated by Century Link |
 
 
-   ​	![Add a network rule collection](../media/add-a-network-rule-for-firewall.png)
+   ​	![Add a network rule collection](../media/l6u7-11.png)
 
 1. Select **Add**.
 
@@ -309,10 +326,10 @@ In this final task, you will test the firewall to verify that the rules are conf
 
 1. Withinh LabVm from start menu, open **Remote Desktop Connection**.
 
-1. On the **Computer** box, enter the firewall's public IP address followed by **:3389** (e.g., **20.90.136.51:3389**).
+1. On the **Computer** box, enter the firewall's public IP address followed by **:3389** (e.g., **20.90.136.51:3389**) and select **Connect**.
 
-1. Select **Connect**.
-
+    ![Add a network rule collection](../media/l6u7-12.png)
+ 
 1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **TestUser** and Password  
    **Pa55w.rd!!** .
 
