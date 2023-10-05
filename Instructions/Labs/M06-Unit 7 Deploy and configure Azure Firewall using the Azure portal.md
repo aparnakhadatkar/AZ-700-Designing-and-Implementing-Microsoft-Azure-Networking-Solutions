@@ -32,7 +32,8 @@ In this task, you will create a single virtual network with two subnets.
      |  **Setting**     | **Value**            |
      | ---------------- | ------------------   |
      | Resource group   |  **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** |
-     | **Name**         | **Test-FW-VN**       |
+     | Name             |  **Test-FW-VN**       |
+     | Region           |  **<inject key="Region" enableCopy="false"/>**  |
 
 1. Select **Next: IP Addresses**. Enter IPv4 address space 10.0.0.0/16 if not already there by default. 
 
@@ -66,13 +67,22 @@ In this task, you will create a single virtual network with two subnets.
 
 In this task, you will create the workload virtual machine and place it in the Workload-SN subnet created previously.
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
+
+   ![](../media/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
 
+     ![](../media/unit6-image3.png)
+
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
    >**Important**: please replace "Test-FW-RG" with **"Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>"**
 
    ```powershell
@@ -80,14 +90,16 @@ In this task, you will create the workload virtual machine and place it in the W
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
-  
-1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+
+   >**Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!!
+
+1. When the deployment is complete, go to the Azure portal home page, then search and select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
 
-1. When deployment of the VM completes, select **Go to resource**.
+1. Select **Srv-Work** virtual machine.
 
-1. On the **Overview** page of **Srv-Work**, on the right of the page under **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
+1. On the **Overview** page of **Srv-Work**, on the right of the page under **Settings** section, select **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
  
 ## Task 4: Deploy the firewall and firewall policy
 
