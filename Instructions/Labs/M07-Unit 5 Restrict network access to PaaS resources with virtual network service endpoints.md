@@ -1,9 +1,10 @@
 # Module 07-Unit 5 Restrict network access to PaaS resources with virtual network service endpoints
 
-
+## Lab scenario 
 Virtual network service endpoints enable you to limit network access to some Azure service resources to a virtual network subnet. You can also remove internet access to the resources. Service endpoints provide direct connection from your virtual network to supported Azure services, allowing you to use your virtual network's private address space to access the Azure services. Traffic destined to Azure resources through service endpoints always stays on the Microsoft Azure backbone network.
 
-In this exercise, you will:
+## Lab Objectives
+In this lab, you will:
 
 + Task 1: Create a virtual network
 + Task 2: Enable a service endpoint
@@ -15,7 +16,7 @@ In this exercise, you will:
 + Task 8: Restrict network access to a subnet
 + Task 9: Create virtual machines
 + Task 10: Confirm access to storage account
-+ Task 11: Clean up resources
+
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -358,4 +359,17 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
 
+## Review
+
+In this Lab you performed:
++ Create a virtual network
++ Enable a service endpoint
++ Restrict network access for a subnet
++ Add additional outbound rules 
++ Allow access for RDP connections
++ Restrict network access to a resource
++ Create a file share in the storage account
++ Restrict network access to a subnet
++ Create virtual machines
++ Confirm access to storage account
 ## You have successfully completed the lab.
