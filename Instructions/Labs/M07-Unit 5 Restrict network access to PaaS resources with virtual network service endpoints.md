@@ -176,7 +176,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 1. And then select **Add**.
 
-> **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
+   > **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
 1. Under **Settings**, select **Subnets**.
 
@@ -212,7 +212,7 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. After the storage account is created, enter the name of the storage account in the **Search resources, services, and docs** box, at the top of the portal. When the name of your storage account appears in the search results, select it.
 
-1. Select **File shares**, as shown in the following picture: 
+1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
    
 1. Select **+ File share**.
 
@@ -242,7 +242,7 @@ By default, storage accounts accept network connections from clients in any netw
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
    | Subscription     | Select your subscription.    |
-   | Virtual networks | Select CoreServicesVNet**.** |
+   | Virtual networks | Select **CoreServicesVNet**  |
    | Subnets          | Select **Private**.          |
 
 1. Select **Add**.
