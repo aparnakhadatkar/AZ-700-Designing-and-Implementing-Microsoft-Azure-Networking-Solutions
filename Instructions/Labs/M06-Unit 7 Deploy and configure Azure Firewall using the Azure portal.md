@@ -294,7 +294,8 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Translated port       | **3389**                                                     |
    |||
 
-​   ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
+​   
+   ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
 
