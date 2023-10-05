@@ -137,9 +137,6 @@ $parameters3 = @{
 New-AzBastion @parameters3
 ```
 
-
-
-
 ## Task 3: Create a test virtual machine
 
 In this section, you'll create a virtual machine that will be used to test the Private Endpoint.
@@ -225,7 +222,7 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 
 ```
-
+**Note**: You will be prompted to provide UserName enter **TestUser** and Admin password enter **Pa55w.rd!!**
 
 **Note**: Azure provides an ephemeral IP for Azure Virtual Machines which aren't assigned a public IP address, or are in the backend pool of an internal Basic Azure Load Balancer. The ephemeral IP mechanism provides an outbound IP address that isn't configurable.
 
