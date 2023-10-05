@@ -19,7 +19,7 @@ In this exercise, you will:
 
 #### Estimated time: 60 minutes
 
-## Task 2: Create a virtual network and subnets
+## Task 1: Create a virtual network and subnets
 
 In this task, you will create a single virtual network with two subnets.
 
@@ -27,15 +27,19 @@ In this task, you will create a single virtual network with two subnets.
 
 1. Select **+ Create**.
 
-1. Select the **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** resource group.
+1. On the Create virtual network of **Basic** tab specify the following information to create Virtual Network.
 
-1. In the **Name** box, enter **Test-FW-VN**.
+     |  **Setting**     | **Value**            |
+     | ---------------- | ------------------   |
+     | Resource group   |  **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** |
+     | Name             |  **Test-FW-VN**       |
+     | Region           |  **<inject key="Region" enableCopy="false"/>**  |
 
 1. Select **Next: IP Addresses**. Enter IPv4 address space 10.0.0.0/16 if not already there by default. 
 
 1. Under **Subnet name**, select the word **default**.
 
-1. In the **Edit subnet** dialog box, specify the following :
+1. In the **Edit subnet** dialog box, specify the following and  select **Save**.
 
     |  **Setting**     | **Value**            |
     | ---------------- | ------------------   | 
@@ -44,35 +48,44 @@ In this task, you will create a single virtual network with two subnets.
     | Starting address | **10.0.1.0** |
     | Subnet size      | **/26** |
 
-1. Select **Save**.
 
-1. Select **Add subnet**, to create another subnet, which will host the workload server that you will create shortly.
+    ![](../media/l6u7-1.png)
+
+1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
-1. In the **Edit subnet** dialog box, specify the following :
+1. In the **Edit subnet** dialog box, specify the following and select **Add**.
 
     | **Setting**      | **Value**            |
     | ---------------- | ------------------   | 
     | Name             | **Workload-SN**      |
     | Starting address | **10.0.2.0**         |
     | Subnet size      | **/24**              |
+    |||
 
-1. Select **Add**.
+   ![](../media/l6u7-2.png)
+   
+1. Select **Review + create** and  **Create**.
 
-1. Select **Review + create**.
-
-1. Select **Create**.
-
- ## Task 3: Create a virtual machine
+## Task 2: Create a virtual machine
 
 In this task, you will create the workload virtual machine and place it in the Workload-SN subnet created previously.
 
-1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
+
+   ![](../media/unit6-image1.png)
+
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+
+   ![](../media/unit6-image2.png)
+
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
 
+     ![](../media/unit6-image3.png)
+
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
-   >**Note**: You will be prompted to provide an Admin password.
    >**Important**: please replace "Test-FW-RG" with **"Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>"**
 
    ```powershell
@@ -80,40 +93,44 @@ In this task, you will create the workload virtual machine and place it in the W
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
-  
-1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+
+   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+
+1. When the deployment is complete, go to the Azure portal home page, then search and select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
 
-1. When deployment of the VM completes, select **Go to resource**.
+1. Select **Srv-Work** virtual machine.
 
-1. On the **Overview** page of **Srv-Work**, on the right of the page under **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
+1. On the **Overview** page of **Srv-Work**, on the right of the page under **Settings** section, select **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
  
-## Task 4: Deploy the firewall and firewall policy
+## Task 3: Deploy the firewall and firewall policy
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
-1. On the Azure portal home page, select **Create a resource**, then in the search box, enter **firewall** and select **Firewall** when it appears.
+1. On the Azure portal home page, in the search box, enter **Firewall** and select **Firewall** when it appears.
 
+   ![](../media/l6u7-3.png)
+  
 1. On the **Firewall** page, select **Create**.
 
 1. On the **Basics** tab, create a firewall using the information in the table below.
 
-   | **Setting**          | **Value**                                                    |
-   | -------------------- | ------------------------------------------------------------ |
-   | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
-   | Firewall name        | **Test-FW01**                                                |
-   | Firewall SKU         | **Standard**                                                 |
-   | Firewall management  | **Use a Firewall Policy to manage this firewall**            |
-   | Firewall policy      | Select **Add new**<br />Name: **fw-test-pol**<br /> |
+   | **Setting**              | **Value**                                                    |
+   | --------------------     | ------------------------------------------------------------ |
+   | Subscription             | Select your subscription                                     |
+   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
+   | Firewall name            | **Test-FW01**                                                |
+   | Region                   | **<inject key="Region" enableCopy="false"/>**               |
+   | Firewall SKU             | **Standard**                                                 |
+   | Firewall management      | **Use a Firewall Policy to manage this firewall**            |
+   | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol**<br />         |
+   | Choose a virtual network | **Use existing**                                             |
+   | Virtual network          | **Test-FW-VN**                                               |
+   | Public IP address        | Select **Add new**<br /> Name: **fw-pip**                    |
+   |||
 
-
-   | Choose a virtual network | **Use existing**                         |
-   | ------------------------ | ---------------------------------------- |
-   | Virtual network          | **Test-FW-VN**                           |
-   | Public IP address        | Select **Add new**<br />Name: **fw-pip** |
-
+   ![](../media/l6u7-4.png)
 
 1. Review all the settings to ensure they match the screenshot below.
 
@@ -129,13 +146,17 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 1. Make a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**) you may need this in coming tasks.
 
-## Task 5: Create a default route
+    ![](../media/l6u7-5.png)
+   
+## Task 4: Create a default route
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
-1. On the Azure portal home page, select **Create a resource**, then in the search box, enter **route** and select **Route table** when it appears.
+1. On the Azure portal home page, in the search box, enter **Route tables** and select **Route tables** when it appears.
 
-1. On the **Route table** page, select **Create**.
+     ![](../media/l6u7-6.png)
+   
+1. On the **Route table** page, select **+ Create**.
 
 1. On the **Basics** tab, create a new route table using the information in the table below.
 
@@ -143,6 +164,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    | ------------------------ | ------------------------ |
    | Subscription             | Select your subscription |
    | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | Region                   | **<inject key="Region" enableCopy="false"/>** |
    | Name                     | **Firewall-route**       |
    | Propagate gateway routes | **Yes**                  |
 
@@ -152,38 +174,45 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**.
+1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate** and **OK**.
 
-1. On **Virtual network**, select **Test-FW-VN**.
+   | **Setting**              | **Value**                |
+   | ------------------------ | ------------------------ |
+   | Subscription             | Select your subscription |
+   | Virtual Network          | select **Test-FW-VN**    |
+   | Subnet                   | **Workload-SN**          |
 
-1. On **Subnet**, select **Workload-SN**. Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.
+   **Note**:  Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.
 
-1. Select **OK**.
+    ![](../media/l6u7-7.png)
 
+   
 1. Under **Settings**, select **Routes** and then select **Add**.
 
-1. On **Route name**, enter **fw-dg**.
+   | **Setting**                              | **Value**                |
+   | --------------------------------------   | ------------------------ |
+   | **Route name**                           | **fw-dg**                |
+   | **Destination type**                     | **IP address**           |
+   | **Destination IP addresses/CIDR ranges** |  **0.0.0.0/0**           |
+   | **Next hop type**                        | **Virtual appliance**    |
+   | **Next hop address**                     | enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**) |
+   |||
+   
+    ![](../media/l6u7-8.png)
 
-1. Select **Destination type** as **IP address** and on **Destination IP addresses/CIDR ranges**, enter **0.0.0.0/0**.
-
-1. On **Next hop type**, select **Virtual appliance**.
-
-1. On **Next hop address**, enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**)
-
-1. Select **Add**.
-
- 
-## Task 6: Configure an application rule
+ ## Task 5: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
 1. On the Azure portal home page, select **All resources**.
 
+    ![](../media/l6u7-9.png)
+
 1. In the list of resources, select your firewall policy, **fw-test-pol**.
 
 1. Under **Settings**, select **Application Rules**.
 
-1. Select **Add a rule collection**.
+1. Select **+ Add a rule collection**.
 
 1. On the **Add a rule collection** page, create a new application rule using the information in the table below.
 
@@ -203,17 +232,17 @@ In this task, you will add an application rule that allows outbound access to ww
    | Destination            | **www.google.com**                        |
 
 
-   ![Add an application rule collection](../media/add-an-application-rule-for-firewall.png)
+   ![Add an application rule collection](../media/l6u7-(10).png)
 
 1. Select **Add**.
 
- ## Task 7: Configure a network rule
+ ## Task 6: Configure a network rule
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
 1. On the **fw-test-pol** page, under **Settings**, select **Network Rules**.
 
-1. Select **Add a rule collection**.
+1. Select **+ Add a rule collection**.
 
 1. On the **Add a rule collection** page, create a new network rule using the information in the table below.
 
@@ -234,17 +263,17 @@ In this task, you will add a network rule that allows outbound access to two IP 
    | Destination            | **209.244.0.3, 209.244.0.4**<br />These are public DNS servers operated by Century Link |
 
 
-   ​	![Add a network rule collection](../media/add-a-network-rule-for-firewall.png)
+   ​	![Add a network rule collection](../media/l6u7-11.png)
 
 1. Select **Add**.
 
-## Task 8: Configure a Destination NAT (DNAT) rule
+## Task 7: Configure a Destination NAT (DNAT) rule
 
 In this task, you will add a DNAT rule that allows you to connect a remote desktop to the Srv-Work virtual machine through the firewall.
 
 1. On the **fw-test-pol** page, under **Settings**, select **DNAT Rules**.
 
-1. Select **Add a rule collection**.
+1. Select **+ Add a rule collection**.
 
 1. On the **Add a rule collection** page, create a new DNAT rule using the information in the table below.
 
@@ -265,11 +294,11 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Translated port       | **3389**                                                     |
 
 
-​		![Add a DNAT rule collection](../media/add-a-dnat-rule.png)
+​    ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
 
- ## Task 9: Change the primary and secondary DNS address for the server's network interface
+ ## Task 8: Change the primary and secondary DNS address for the server's network interface
 
 For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
@@ -277,7 +306,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work350**).
+1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
 
 1. Under **Settings**, select **DNS servers**.
 
@@ -291,20 +320,18 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Restart the **Srv-Work** virtual machine.
 
- ## Task 10: Test the firewall
+## Task 9: Test the firewall
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
-1. Open **Remote Desktop Connection** on your PC.
+1. Withinh LabVm from start menu, open **Remote Desktop Connection**.
 
-1. On the **Computer** box, enter the firewall's public IP address (e.g., **20.90.136.51**) followed by **:3389** (e.g., **20.90.136.51:3389**).
+1. On the **Computer** box, enter the firewall's public IP address followed by **:3389** (e.g., **20.90.136.51:3389**) and select **Connect**.
 
-1. Select **Connect**.
-
-1. On the **Username** box, enter **.\TestUser**.
-
-1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **.\TestUser**
-by using the password you provided during deployment.
+    ![Add a network rule collection](../media/l6u7-12.png)
+ 
+1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **TestUser** and Password  
+   **Pa55w.rd!!** .
 
 1. Select **OK**.
 
