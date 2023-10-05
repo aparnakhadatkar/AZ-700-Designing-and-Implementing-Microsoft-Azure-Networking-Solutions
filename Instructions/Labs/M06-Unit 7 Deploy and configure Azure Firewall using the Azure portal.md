@@ -116,7 +116,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | Subscription             | Select your subscription                                     |
    | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
    | Firewall name            | **Test-FW01**                                                |
-   | Region                   |  **<inject key="Region" enableCopy="false"/>**               |
+   | Region                   | **<inject key="Region" enableCopy="false"/>**               |
    | Firewall SKU             | **Standard**                                                 |
    | Firewall management      | **Use a Firewall Policy to manage this firewall**            |
    | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol**<br />         |
@@ -143,9 +143,9 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
-1. On the Azure portal home page, select **Create a resource**, then in the search box, enter **route** and select **Route table** when it appears.
+1. On the Azure portal home page, in the search box, enter **Route tables** and select **Route tables** when it appears.
 
-1. On the **Route table** page, select **Create**.
+1. On the **Route table** page, select **+ Create**.
 
 1. On the **Basics** tab, create a new route table using the information in the table below.
 
@@ -153,6 +153,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    | ------------------------ | ------------------------ |
    | Subscription             | Select your subscription |
    | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | Region                   | **<inject key="Region" enableCopy="false"/>** |
    | Name                     | **Firewall-route**       |
    | Propagate gateway routes | **Yes**                  |
 
