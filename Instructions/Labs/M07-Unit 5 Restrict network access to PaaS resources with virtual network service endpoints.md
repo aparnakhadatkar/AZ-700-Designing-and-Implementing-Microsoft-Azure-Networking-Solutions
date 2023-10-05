@@ -201,7 +201,7 @@ The steps necessary to restrict network access to resources created through Azur
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
    | Resource group | myResourceGroup                                              |
-   | Name           | Enter contosostorage-<inject key="DeploymentID" enableCopy="false"/> |
+   | Name           | Enter contosostorage<inject key="DeploymentID" enableCopy="false"/> |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Location       | **<inject key="Region" enableCopy="false"/>**                                               |
    | Replication    | Locally-redundant storage (LRS)                              |
@@ -228,7 +228,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. On the Azure portal, in the **Search resources, services, and docs** box at the top of the portal, search and select **Storage Account**. 
 
-1. Select contosostorage-<inject key="DeploymentID" enableCopy="false"/> storage account from the list.
+1. Select contosostorage<inject key="DeploymentID" enableCopy="false"/> storage account from the list.
 
 1. On the storage account blade from the left navigation pane, under **Security + networking** section, select **Networking**.
 
