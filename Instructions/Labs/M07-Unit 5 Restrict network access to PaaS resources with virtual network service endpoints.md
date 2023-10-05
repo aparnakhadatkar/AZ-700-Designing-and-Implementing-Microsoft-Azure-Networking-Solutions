@@ -174,7 +174,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
    | Priority                | 120                       |
    | Name                    | Allow-RDP-All             |
 
-1. And then select **Add**.
+1. Select **Add**.
 
    > **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
@@ -210,7 +210,9 @@ The steps necessary to restrict network access to resources created through Azur
 
 ## Task 7: Create a file share in the storage account
 
-1. After the storage account is created, enter the name of the storage account in the **Search resources, services, and docs** box, at the top of the portal. When the name of your storage account appears in the search results, select it.
+1. On the Azure Portal in the **Search resources, services, and docs** box, at the top of the portal, search and select **Storage account**.
+
+1. From the list select **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account.
 
 1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
    
@@ -245,7 +247,6 @@ By default, storage accounts accept network connections from clients in any netw
    
    ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
 
-  
 1. Select **Save**.
 
 1. Under **Security and Networking** for the storage account, select **Access keys**.
@@ -282,16 +283,15 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-
 ## Task 10: Confirm access to storage account
 
-1. Once the ContosoPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button.
+1. On the **Virtual Machine** blade, select **ContosoPrivate** VM and click on **Connect**.
 
 1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
    ![](../media/unit6-image(6).png)
    
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password you specified when creating the VM.
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
 
 1. Select **OK**.
 
@@ -305,7 +305,7 @@ To test network access to a storage account, deploy a VM to each subnet.
      ```azurecli
      $acctKey = ConvertTo-SecureString -String "[storage-account-key]" -AsPlainText -Force
      
-     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\<storage-account-name>", $acctKey
+     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\[storage-account-name]", $acctKey
      
      New-PSDrive -Name Z -PSProvider FileSystem -Root "\\[storage-account-name].file.core.windows.net\marketing" -Credential $credential
      
@@ -342,7 +342,9 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. From your computer, browse to the Azure portal.
 
-1. Enter the name of the storage account you created in the **Search resources, services, and docs** box. When the name of your storage account appears in the search results, select it.
+1. On the Azure Portal in **Search resources, services, and docs** box. Search and select **Storage account** appears in the search results.
+
+1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
 
 1. Select **File shares** then select the **marketing** file share.
 
