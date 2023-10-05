@@ -183,7 +183,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 ## Review
 
-In this Lab, you  performed:
+In this lab, you have completed:
 
 + Creating a Virtual Machine to test the configuration
 + Connecting to the Test VMs using RDP
