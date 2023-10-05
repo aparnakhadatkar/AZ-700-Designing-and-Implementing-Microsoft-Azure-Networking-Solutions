@@ -376,11 +376,11 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. On the overview page for **myVM**, select **Connect**.
 
-1. Select the blue **Use Bastion** button.
+1. Select the blue **Go to Bastion** button.
 
-1. Enter the username and password that you entered during the virtual machine creation.
+1. Enter the username **TestUser** and password **Pa55w.rd!!** that you entered during the virtual machine creation, If popup blocker is preventing the new window, select allow popup blocker and Connect again.
 
-1. Open Windows PowerShell on the server after you connect.
+1. Within **myVM** open Windows PowerShell on the server after you connect.
 
 1. Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
