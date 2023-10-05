@@ -289,7 +289,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work350**).
+1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
 
 1. Under **Settings**, select **DNS servers**.
 
