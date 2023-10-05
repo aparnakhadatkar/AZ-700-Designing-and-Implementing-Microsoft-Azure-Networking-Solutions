@@ -1,6 +1,6 @@
 # Module 06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal(Read only)
 
-  **Note**: This lab we provided as Read only beacuse **DDoS Protection plan** monthly fix cost is $2,944.
+  **Note**: This lab we provided as Read only beacause **DDoS Protection plan** monthly fix cost is $2,944.
  
 Being responsible for Contoso's Network Security team, you are going to run a mock DDoS attack on the virtual network. The following steps walk you through creating a virtual network, configuring DDoS Protection, and creating an attack which you can observe and monitor with the help of telemetry and metrics.
 
