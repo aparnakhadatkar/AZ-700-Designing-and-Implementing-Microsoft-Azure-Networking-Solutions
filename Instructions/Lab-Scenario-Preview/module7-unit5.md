@@ -4,7 +4,7 @@
 
 ### Lab overview
 
-In this lab, you will learn how to Secure your Azure Virtual Hub using Azure Firewall Manager. Configure centralized security policies, threat intelligence, and application rules to protect network traffic effectively, ensuring compliance and security for your organization's virtual network infrastructure.
+In this lab, you will learn how to secure Your organization is migrating its applications to a Platform-as-a-Service (PaaS) environment in Azure. You need to ensure that access to PaaS resources, such as Azure SQL databases and Azure Storage accounts, is restricted to only the virtual network where your applications are hosted. To achieve this, you plan to implement virtual network service endpoints for the PaaS services, creating a secure and isolated network environment for your applications.
 
 ### Objectives
   
