@@ -99,7 +99,7 @@ In this lab, you will complete the following tasks:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
-   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
+    **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -175,13 +175,13 @@ In this lab, you will complete the following tasks:
 
 1.  Select **Review + Create** and **Create**.
 
-   **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
+    **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 7: Create ManufacturingVnet Gateway
 
@@ -213,13 +213,13 @@ In this lab, you will complete the following tasks:
 
 1.  Select **Review + Create** and **Create**.
 
-   **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
+    **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
