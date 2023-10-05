@@ -1,4 +1,4 @@
-# Lab Scenario Preview: Module 02-Unit 3 Create and configure a virtual network gateway
+# Lab Scenario Preview: Design and implement hybrid networking
 
 ## Module 02-Unit 3 Create and configure a virtual network gateway
 
