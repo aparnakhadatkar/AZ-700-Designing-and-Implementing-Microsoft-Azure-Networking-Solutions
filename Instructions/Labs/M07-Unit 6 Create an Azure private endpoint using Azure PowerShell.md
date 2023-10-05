@@ -4,13 +4,24 @@ Get started with Azure Private Link by using a Private Endpoint to connect secur
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 45 minutes
+
+In this exercise, you will:
+
++ Task 1: Deploy the prerequisite web app
++ Task 2: Create a virtual network and bastion host
++ Task 3: Create a test virtual machine
++ Task 4: Create a Private Endpoint
++ Task 5: Configure the private DNS zone
++ Task 6: Test connectivity to the Private Endpoint
+
+
+## Estimated time: 45 minutes
+
+## Task 1: Deploy the prerequisite web app
 
 You'll create a Private Endpoint for an Azure web app and deploy a virtual machine to test the private connection.
 
 Private Endpoints can be created for different kinds of Azure services, such as Azure SQL and Azure Storage.
-
-## Prerequisites (Perform the below steps before proceeding to task 1)
 
 - An Azure Web App with a PremiumV2-tier or higher app service plan deployed in your Azure subscription.
 
@@ -26,30 +37,16 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
    ![](../media/unit6-image2.png)
 
-
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **template.json** and **parameters.json** from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07** into the Cloud Shell home directory one by one.
 
    **Note**: If you choose to install and use PowerShell locally, this example requires the Azure PowerShell module version 5.4.1 or later. Run ```Get-Module -ListAvailable Az``` to find the installed version. If you need to upgrade, see [Install Azure PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps). If you're running PowerShell locally, you also need to run ```Connect-AzAccount``` to create a connection with Azure.
 
-In this exercise, you will:
 
-+ Task 1: Deploy the prerequisite web app
-+ Task 2: Create a virtual network and bastion host
-+ Task 3: Create a test virtual machine
-+ Task 4: Create a Private Endpoint
-+ Task 5: Configure the private DNS zone
-+ Task 6: Test connectivity to the Private Endpoint
+1. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
 
-
-## Task 1: Deploy the prerequisite web app
-
-An Azure resource group is a logical container into which Azure resources are deployed and managed.
-
-Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
-
-**Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
+   **Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
    $RGName = "CreatePrivateEndpointQS-rg"
@@ -57,7 +54,7 @@ Deploy the following ARM templates to create the PremiumV2-tier Azure Web App ne
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
 
-   **Note**: If you receive an error (for example while looking into the Deployment status in the Portal) like "Website with given name GEN-UNIQUE already exists." please make sure to go to the Prerequisites mentioned above regarding editing the template.
+   **Note**: If you receive an error (for example while looking into the Deployment status in the Portal) like "Website with given name GEN-UNIQUE already exists." please make sure to go to the step 1 mentioned above regarding editing the template.
 
 ## Task 2: Create a virtual network and bastion host
 
