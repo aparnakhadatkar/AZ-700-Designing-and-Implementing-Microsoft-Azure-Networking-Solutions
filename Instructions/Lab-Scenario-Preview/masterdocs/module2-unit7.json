@@ -1,10 +1,10 @@
 [
    {
-    "Name": "Lab Scenario Preview - Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering",
+    "Name": "Lab Scenario Preview - Module 02-Unit 7 Create a Virtual WAN by using Azure Portal",
     "Language": "English",
     "Files": [
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Lab-Scenario-Preview/module1-unit8.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Lab-Scenario-Preview/module2-unit7.md",
           "Order": 1
         }
      ]  
