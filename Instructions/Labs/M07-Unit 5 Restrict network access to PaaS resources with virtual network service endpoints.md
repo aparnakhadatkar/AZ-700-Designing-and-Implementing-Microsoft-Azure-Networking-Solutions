@@ -236,17 +236,18 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Select **+ Add existing virtual network**.
 
-1. Under **Add networks**, select the following values:
-   ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
-
+1. Under **Add networks**, select the following values and select **Add**.
+   
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
    | Subscription     | Select your subscription.    |
    | Virtual networks | Select **CoreServicesVNet**  |
    | Subnets          | Select **Private**.          |
+   |||
+   
+   ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
 
-1. Select **Add**.
-
+  
 1. Select **Save**.
 
 1. Under **Security and Networking** for the storage account, select **Access keys**.
