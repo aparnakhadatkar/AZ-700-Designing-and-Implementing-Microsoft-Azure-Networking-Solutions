@@ -16,7 +16,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 - Below steps will guide you through creating the required resource group and web app.
 
-1. Find and open **parameters.json** in **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07** folder. Open it in Notepad and find the line "value": "GEN-UNIQUE". Replace the placeholder GEN-UNIQUE string with a unique value for your webapp name. Save this change.
+1. Find and open **parameters.json** from File explorer in **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07** folder, open it in VS and find the line "value": "GEN-UNIQUE". Replace the placeholder GEN-UNIQUE string with a unique value for your webapp name and Save this change.
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
@@ -137,9 +137,6 @@ $parameters3 = @{
 New-AzBastion @parameters3
 ```
 
-
-
-
 ## Task 3: Create a test virtual machine
 
 In this section, you'll create a virtual machine that will be used to test the Private Endpoint.
@@ -225,7 +222,7 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 
 ```
-
+**Note**: You will be prompted to provide UserName enter **TestUser** and Admin password enter **Pa55w.rd!!**
 
 **Note**: Azure provides an ephemeral IP for Azure Virtual Machines which aren't assigned a public IP address, or are in the backend pool of an internal Basic Azure Load Balancer. The ephemeral IP mechanism provides an outbound IP address that isn't configurable.
 
@@ -371,21 +368,19 @@ New-AzPrivateDnsZoneGroup @parameters4
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/)
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Resource groups**, and then select **Resource groups** under services.
 
-1. Select **Resource groups** in the left-hand navigation pane.
-
-1. Select **CreatePrivateEndpointQS-rg**.
+1. Select **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Select **myVM**.
 
 1. On the overview page for **myVM**, select **Connect**.
 
-1. Select the blue **Use Bastion** button.
+1. Select the blue **Go to Bastion** button.
 
-1. Enter the username and password that you entered during the virtual machine creation.
+1. Enter the username **TestUser** and password **Pa55w.rd!!** that you entered during the virtual machine creation, If popup blocker is preventing the new window, select allow popup blocker and Connect again.
 
-1. Open Windows PowerShell on the server after you connect.
+1. Within **myVM** open Windows PowerShell on the server after you connect.
 
 1. Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
@@ -403,7 +398,7 @@ In this section, you'll use the virtual machine you created in the previous step
      Aliases: mywebapp8675.azurewebsites.net 
      ```  
 
-  ![](../media/L7U7-1.png)
+     ![](../media/L7U7-1.png)
 
 1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
 

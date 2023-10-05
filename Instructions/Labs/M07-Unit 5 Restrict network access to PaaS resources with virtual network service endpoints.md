@@ -16,6 +16,7 @@ In this lab, you will:
 + Task 8: Restrict network access to a subnet
 + Task 9: Create virtual machines
 + Task 10: Confirm access to storage account
++ Task 11: Confirm access is denied to storage account
 
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
@@ -91,13 +92,12 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 
 1. Enter or select, the following information: 
 
-
-   | **Setting**    | **Value**                                                    |
-   | -------------- | ------------------------------------------------------------ |
-   | Subscription   | Select your subscription                                     |
-   | Resource group | myResourceGroup                                              |
-   | Name           | ContosoPrivateNSG                                            |
-   | Location       | Select **<inject key="Region" enableCopy="false"/>**                                           |
+    | **Setting**    | **Value**                                                    |
+    | -------------- | ------------------------------------------------------------ |
+    | Subscription   | Select your subscription                                     |
+    | Resource group | myResourceGroup                                              |
+    | Name           | ContosoPrivateNSG                                            |
+    | Location       | Select **<inject key="Region" enableCopy="false"/>**                                           |
 
 1. select **Review + create**, then select **Create**:
 
@@ -108,24 +108,22 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 1. Select **+ Add**.
 
 1. Create a rule that allows outbound communication to the Azure Storage service. Enter, or select, the following information:
-   ![Graphical user interface, application Description automatically generated](../media/add-outbound-security-rule.png)
-
-   | **Setting**             | **Value**                 |
-   | ----------------------- | ------------------------- |
-   | Source                  | Select **Service Tag**    |
-   | Source service tag      | Select **VirtualNetwork** |
-   | Source port ranges      | *                         |
-   | Destination             | Select **Service Tag**    |
-   | Destination service tag | Select **Storage**        |
-   | Service                 | Custom                    |
-   | Destination port ranges | *                         |
-   | Protocol                | Any                       |
-   | Action                  | Allow                     |
-   | Priority                | 100                       |
-   | Name                    | Allow-Storage-All         |
+  
+    | **Setting**             | **Value**                 |
+    | ----------------------- | ------------------------- |
+    | Source                  | Select **Service Tag**    |
+    | Source service tag      | Select **VirtualNetwork** |
+    | Source port ranges      | *                         |
+    | Destination             | Select **Service Tag**    |
+    | Destination service tag | Select **Storage**        |
+    | Service                 | Custom                    |
+    | Destination port ranges | *                         |
+    | Protocol                | Any                       |
+    | Action                  | Allow                     |
+    | Priority                | 100                       |
+    | Name                    | Allow-Storage-All         |
 
 1. Select **Add**:
-
 
 ## Task 4: Add additional outbound rules 
 
@@ -196,15 +194,14 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. Enter, or select, the following information and accept the remaining defaults:
 
-
-   | **Setting**    | **Value**                                                    |
-   | -------------- | ------------------------------------------------------------ |
-   | Subscription   | Select your subscription                                     |
-   | Resource group | myResourceGroup                                              |
-   | Name           | Enter contosostorage<inject key="DeploymentID" enableCopy="false"/> |
-   | Performance    | Standard StorageV2 (general purpose v2)                      |
-   | Location       | **<inject key="Region" enableCopy="false"/>**                                               |
-   | Replication    | Locally-redundant storage (LRS)                              |
+    | **Setting**    | **Value**                                                    |
+    | -------------- | ------------------------------------------------------------ |
+    | Subscription   | Select your subscription                                     |
+    | Resource group | myResourceGroup                                              |
+    | Name           | Enter contosostorage<inject key="DeploymentID" enableCopy="false"/> |
+    | Performance    | Standard StorageV2 (general purpose v2)                      |
+    | Location       | **<inject key="Region" enableCopy="false"/>**                                               |
+    | Replication    | Locally-redundant storage (LRS)                              |
 
 1. select **Review**, then select **Create**.
 
@@ -289,7 +286,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
-   ![](../media/unit6-image(6).png)
+   ![](../media/l7u4-(1).png)
    
 1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
 
@@ -301,7 +298,6 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task and **[storage-account-name]** (i.e. contosostoragexx)  with values you supplied and retrieved in the Create a storage account task.
 
-
      ```azurecli
      $acctKey = ConvertTo-SecureString -String "[storage-account-key]" -AsPlainText -Force
      
@@ -311,7 +307,7 @@ To test network access to a storage account, deploy a VM to each subnet.
      
      ```
 
-   The Azure file share successfully mapped to the Z drive.
+   **Note**: The Azure file share successfully mapped to the Z drive.
 
 1. Confirm that the VM has no outbound connectivity to the internet from a command prompt:
 
@@ -322,13 +318,13 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. Close the remote desktop session to the ContosoPrivate VM.
 
-### Confirm access is denied to storage account
+## Task 11: Confirm access is denied to storage account
 
 1. Enter ContosoPublic In the **Search resources, services, and docs** box at the top of the portal.
 
 1. When **ContosoPublic** appears in the search results, select it.
 
-1. Complete steps 1-6 in the Confirm access to storage account task for the ContosoPublic VM.  
+1. Complete steps 1-7 of previous task to get Confirm access to storage account task for the ContosoPublic VM.  
      
 1. ‎After a short wait, you receive a New-PSDrive : Access is denied error. Access is denied because the ContosoPublic VM is deployed in the Public subnet. The Public subnet does not have a service endpoint enabled for Azure Storage. The storage account only allows network access from the Private subnet, not the Public subnet.
 
@@ -371,4 +367,5 @@ In this Lab you performed:
 + Restrict network access to a subnet
 + Create virtual machines
 + Confirm access to storage account
++ Confirm access is denied to storage account
 ## You have successfully completed the lab.
