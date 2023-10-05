@@ -19,7 +19,7 @@ In this exercise, you will:
 
 #### Estimated time: 60 minutes
 
-## Task 2: Create a virtual network and subnets
+## Task 1: Create a virtual network and subnets
 
 In this task, you will create a single virtual network with two subnets.
 
@@ -91,7 +91,7 @@ In this task, you will create the workload virtual machine and place it in the W
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
 
-   >**Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!!
+   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
 
 1. When the deployment is complete, go to the Azure portal home page, then search and select **Virtual Machines**.
 
@@ -105,26 +105,24 @@ In this task, you will create the workload virtual machine and place it in the W
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
-1. On the Azure portal home page, select **Create a resource**, then in the search box, enter **firewall** and select **Firewall** when it appears.
+1. 1. On the Azure portal home page, in the search box, enter **Firewall** and select **Firewall** when it appears.
 
 1. On the **Firewall** page, select **Create**.
 
 1. On the **Basics** tab, create a firewall using the information in the table below.
 
-   | **Setting**          | **Value**                                                    |
-   | -------------------- | ------------------------------------------------------------ |
-   | Subscription         | Select your subscription                                     |
-   | Resource group       | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
-   | Firewall name        | **Test-FW01**                                                |
-   | Firewall SKU         | **Standard**                                                 |
-   | Firewall management  | **Use a Firewall Policy to manage this firewall**            |
-   | Firewall policy      | Select **Add new**<br />Name: **fw-test-pol**<br /> |
-
-
-   | Choose a virtual network | **Use existing**                         |
-   | ------------------------ | ---------------------------------------- |
-   | Virtual network          | **Test-FW-VN**                           |
-   | Public IP address        | Select **Add new**<br />Name: **fw-pip** |
+   | **Setting**              | **Value**                                                    |
+   | --------------------     | ------------------------------------------------------------ |
+   | Subscription             | Select your subscription                                     |
+   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
+   | Firewall name            | **Test-FW01**                                                |
+   | Region                   |  **<inject key="Region" enableCopy="false"/>**               |
+   | Firewall SKU             | **Standard**                                                 |
+   | Firewall management      | **Use a Firewall Policy to manage this firewall**            |
+   | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol**<br />         |
+   | Choose a virtual network | **Use existing**                                             |
+   | Virtual network          | **Test-FW-VN**                                               |
+   | Public IP address        | Select **Add new**<br /> Name: **fw-pip**                    |
 
 
 1. Review all the settings to ensure they match the screenshot below.
