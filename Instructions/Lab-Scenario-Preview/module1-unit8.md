@@ -1,4 +1,4 @@
-# Lab Scenario Preview: Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
+# Lab Scenario Preview: Introduction to Azure Virtual Networks
 
 ## Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
 
