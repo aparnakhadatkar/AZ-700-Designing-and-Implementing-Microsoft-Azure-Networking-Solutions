@@ -183,7 +183,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Under DDoS attack or not**.
 
-   ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-1.png)
+   ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-(1).png)
 
 1. On the **Operator** box select **Greater than or equal to**.
 
@@ -191,11 +191,11 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Done**.
 
-    ![Add condition to alert rule - configure signal logic](../media/add-condition-to-alert-rule-2.png)
+    ![Add condition to alert rule - configure signal logic](../media/add-condition-to-alert-rule-(2).png)
 
 1. Back on the **Create alert rule** page, under the **Alert rule details** section and in **Alert rule name**, enter **MyDdosAlert**.
 
-    ![End point of create new alert rule](../media/new-alert-rule-end.png)
+    ![End point of create new alert rule](../media/new-alert-rule-end(1).png)
 
 1. Select **Create alert rule**.
 
@@ -214,7 +214,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Now you can see the DDoS attack as it happened. Note it may take the full 10 minutes before you see the results.
 
-   ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
+   ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack(1).png)
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
