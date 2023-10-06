@@ -26,6 +26,10 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 60 minutes
 
+## Architecture diagram
+
+  ![](../Lab-Scenario-Preview/media/M3-U4.png)
+
 ## Task 1: Create the VNet and gateway subnet
 
 1. On any Azure Portal page, in **Search resources, services and docs**, enter **Virtual networks**, and then select **Virtual networks** from the results.
