@@ -1,8 +1,14 @@
 # Module 06-Unit 7 Deploy and configure Azure Firewall using the Azure portal
 
+## Lab scenario 
+
 Being part of the Network Security team at Contoso, your next task is to create firewall rules to allow/deny access to certain websites. The following steps walk you through creating a resource group, a virtual network and subnets, and a virtual machine as environment preparation tasks, and then deploying a firewall and firewall policy, configuring default routes and application, network and DNAT rules, and finally testing the firewall.
 
-In this exercise, you will:
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
+## Lab Objectives
+
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a virtual network and subnets
 + Task 2: Create a virtual machine
@@ -14,11 +20,12 @@ In this exercise, you will:
 + Task 8: Change the primary and secondary DNS address for the server's network interface
 + Task 9: Test the firewall
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+## Estimated time: 60 minutes
 
+## Architecture diagram
 
-#### Estimated time: 60 minutes
-
+ ![](../Lab-Scenario-Preview/media/m6-u7-1.png)
+   
 ## Task 1: Create a virtual network and subnets
 
 In this task, you will create a single virtual network with two subnets.
@@ -354,5 +361,19 @@ In this final task, you will test the firewall to verify that the rules are conf
 
     ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/L6U7-3.png)
 
+
+## Review
+
+In this lab, you have completed:
+
++  Create a virtual network and subnets
++  Create a virtual machine
++  Deploy the firewall and firewall policy
++  Create a default route
++  Configure an application rule
++  Configure a network rule
++  Configure a Destination NAT (DNAT) rule
++  Change the primary and secondary DNS address for the server's network interface
++  Test the firewall
  
 ## You have successfully completed the lab.
