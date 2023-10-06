@@ -10,8 +10,8 @@ In this lab, you will learn how to Configure an ExpressRoute Gateway in Azure to
   
 After completing this lab, you will be able to:
 
-- Create the VNet and gateway subnet
-- Create the virtual network gateway
++ Task 1: Create the VNet and gateway subnet
++ Task 2: Create the virtual network gateway
 
 ### Architecture Diagram
 
