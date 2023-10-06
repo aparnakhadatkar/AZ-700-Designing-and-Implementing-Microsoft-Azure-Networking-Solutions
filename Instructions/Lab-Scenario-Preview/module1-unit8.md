@@ -6,15 +6,15 @@
 
 In this unit, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow.
 
-### Objectives
+### Lab objectives
   
 After completing this lab, you will be able to:
 
-- Create a Virtual Machine to test the configuration
-- Connect to the Test VMs using RDP
-- Test the connection between the VMs
-- Create VNet peerings between CoreServicesVnet and ManufacturingVnet
-- Test the connection between the VMs
++ Task 1: Create a Virtual Machine to test the configuration
++ Task 2: Connect to the Test VMs using RDP
++ Task 3: Test the connection between the VMs
++ Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
++ Task 5: Test the connection between the VMs
 
 ### Architecture Diagram
 
