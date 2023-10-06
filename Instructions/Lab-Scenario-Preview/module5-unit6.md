@@ -6,13 +6,12 @@
 
 In this lab, you will learn how to configure Azure Front Door for a resilient web application. Using the Azure portal, create a Front Door service , backend pools, to ensure high availability, load balancing, and security for the web application.
 
-### Objectives
-  
-After completing this lab, you will be able to:
+### Lab objectives
+In this lab, you will complete the following tasks:
 
--  Create two instances of a web app
--  Create a Front Door for your application
--  View Azure Front Door in action
++ Task 1: Create two instances of a web app
++ Task 2: Create a Front Door for your application
++ Task 3: View Azure Front Door in action
 
 ### Architecture Diagram
 ![](media/M5-U6.png) 

@@ -6,21 +6,21 @@
 
 In this lab, you will learn how to secure Your organization is migrating its applications to a Platform-as-a-Service (PaaS) environment in Azure. You need to ensure that access to PaaS resources, such as Azure SQL databases and Azure Storage accounts, is restricted to only the virtual network where your applications are hosted. To achieve this, you plan to implement virtual network service endpoints for the PaaS services, creating a secure and isolated network environment for your applications.
 
-### Objectives
+### Lab Objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
-- Create a virtual network
-- Enable a service endpoint
-- Restrict network access for a subnet
-- Add additional outbound rules
-- Allow access for RDP connections
-- Restrict network access to a resource
-- Create a file share in the storage account
-- Restrict network access to a subnet
-- Create virtual machines
-- Confirm access to storage account
-- Confirm access is denied to storage account
++ Task 1: Create a virtual network
++ Task 2: Enable a service endpoint
++ Task 3: Restrict network access for a subnet
++ Task 4: Add additional outbound rules 
++ Task 5: Allow access for RDP connections
++ Task 6: Restrict network access to a resource
++ Task 7: Create a file share in the storage account
++ Task 8: Restrict network access to a subnet
++ Task 9: Create virtual machines
++ Task 10: Confirm access to storage account
++ Task 11: Confirm access is denied to storage account
 
 ### Architecture Diagram
 ![](media/M7-U5.png) 

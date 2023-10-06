@@ -5,24 +5,25 @@
 ### Lab overview
 
 In this lab, you will learn how to deploy Load Balancer hosted on Azure, set up Azure Monitor to continuously monitor the performance and health of the Azure Load Balancer, capturing key metrics and generating alerts for potential issues, ensuring optimal application availability and responsiveness.
-### Objectives
-  
-After completing this lab, you will be able to:
 
-- Create the virtual network
-- Create the load balancer
-- Create a backend pool
-- Create a health probe
-- Create a load balancer rule
-- Create backend servers
-- Add VMs to the backend pool
-- Install IIS on the VMs
-- Test the load balancer
-- Create a Log Analytics Workspace
-- Use Functional Dependency View
-- View detailed metrics
-- View resource health
-- Configure diagnostic settings
+### Lab objectives
+  
+In this lab, you will complete the following tasks:
+
++ Task 1: Create the virtual network
++ Task 2: Create the load balancer
++ Task 3: Create a backend pool
++ Task 4: Create a health probe
++ Task 5: Create a load balancer rule
++ Task 6: Create backend servers
++ Task 7: Add VMs to the backend pool
++ Task 8: Install IIS on the VMs
++ Task 9: Test the load balancer
++ Task 10: Create a Log Analytics Workspace
++ Task 11: Use Functional Dependency View
++ Task 12: View detailed metrics
++ Task 13: View resource health
++ Task 14: Configure diagnostic settings
 
 ### Architecture Diagram
 ![](media/M8-U3.png) 

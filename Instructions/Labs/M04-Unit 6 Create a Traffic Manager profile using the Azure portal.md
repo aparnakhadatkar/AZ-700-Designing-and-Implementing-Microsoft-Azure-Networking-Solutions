@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 #### Estimated time: 35 minutes
 ## Architecture diagram
 
-​	![Picture 14](../media/exercise-traffic-manager-environment-diagram.png)
+![Picture 14](../media/exercise-traffic-manager-environment-diagram.png)
 
 ## Task 1: Create the web apps
 

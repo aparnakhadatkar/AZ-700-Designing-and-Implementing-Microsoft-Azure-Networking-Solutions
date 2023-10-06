@@ -6,16 +6,17 @@
 
 In this lab, you will learn how to deploy a new web application in Azure, and you need to ensure that it is accessible privately within your Azure virtual network to enhance security. To achieve this, you will create an Azure private endpoint for the web application using Azure PowerShell.
 
-### Objectives
+### Lab Objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
--  Deploy the prerequisite web app
--  Create a virtual network and bastion host
--  Create a test virtual machine
--  Create a Private Endpoint
--  Configure the private DNS zone
--  Test connectivity to the Private Endpoint
++ Task 1: Deploy the prerequisite web app
++ Task 2: Create a virtual network and bastion host
++ Task 3: Create a test virtual machine
++ Task 4: Create a Private Endpoint
++ Task 5: Configure the private DNS zone
++ Task 6: Test connectivity to the Private Endpoint
+
 
 ### Architecture Diagram
 ![](media/M7-U6.png) 

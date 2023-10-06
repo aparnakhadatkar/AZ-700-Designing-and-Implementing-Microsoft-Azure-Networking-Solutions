@@ -6,15 +6,14 @@
 
 In this lab, you will learn how to configure a Traffic Manager profile in the Azure portal to distribute traffic across multiple Azure web app instances for high availability and load balancing.
 
-### Objectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
--  Create the web apps
--  Create a Traffic Manager profile
--  Add Traffic Manager endpoints
--  Test the Traffic Manager profile
-
++ Task 1: Create the web apps
++ Task 2: Create a Traffic Manager profile
++ Task 3: Add Traffic Manager endpoints
++ Task 4: Test the Traffic Manager profile
 
 ### Architecture Diagram
 ![](media/M4-U6.png) 

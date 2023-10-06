@@ -6,12 +6,13 @@
 
 In this lab, you will learn how to  provision an ExpressRoute circuit in Azure to establish a dedicated, high-speed connection between your organization's on-premises datacenter and Azure cloud. Configure the ExpressRoute circuit with redundancy and routing settings for reliable and secure network connectivity.
 
-### Objectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
-- Create and provision an ExpressRoute circuit
-- Retrieve your Service key
++ Task 1: Create and provision an ExpressRoute circuit
++ Task 2: Retrieve your Service key
++ Task 3: Deprovisioning an ExpressRoute circuit
 
 ### Architecture Diagram
 ![](media/M3-U5.png) 

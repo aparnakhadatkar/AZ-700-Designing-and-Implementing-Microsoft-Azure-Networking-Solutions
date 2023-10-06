@@ -6,15 +6,13 @@
 
 In this lab, you will learn how to deploy Azure Application Gateway for a web application. Configure backend pools, listener rules, and backend tragets, and test load balancing and application delivery for enhanced performance and security.
 
-### Objectives
-  
-After completing this lab, you will be able to:
+###  Lab Objectives
+In this lab, you will complete the following tasks:
 
--  Create an application gateway
--  Create virtual machines
--  Add backend servers to backend pool
--  Test the application gateway
-
++ Task 1: Create an application gateway
++ Task 2: Create virtual machines
++ Task 3: Add backend servers to backend pool
++ Task 4: Test the application gateway
 
 ### Architecture Diagram
 
