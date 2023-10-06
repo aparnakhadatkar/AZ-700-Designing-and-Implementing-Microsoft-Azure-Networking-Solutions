@@ -1,9 +1,14 @@
 # Module 06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal(Read only)
 
   **Note**: This lab we provided as Read only beacause **DDoS Protection plan** monthly fix cost is $2,944.
- 
+  
+## Lab scenario 
+
 Being responsible for Contoso's Network Security team, you are going to run a mock DDoS attack on the virtual network. The following steps walk you through creating a virtual network, configuring DDoS Protection, and creating an attack which you can observe and monitor with the help of telemetry and metrics.
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20Azure%20DDoS%20Protection%20on%20a%20virtual%20network)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 + Task 1: Create a DDoS Protection plan
@@ -12,8 +17,6 @@ In this lab, you will complete the following tasks:
 + Task 4: Configure DDoS diagnostic logs
 + Task 5: Configure DDoS alerts
 + Task 6: Test with simulation partners
-
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20Azure%20DDoS%20Protection%20on%20a%20virtual%20network)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 ## Estimated time: 40 minutes
 
