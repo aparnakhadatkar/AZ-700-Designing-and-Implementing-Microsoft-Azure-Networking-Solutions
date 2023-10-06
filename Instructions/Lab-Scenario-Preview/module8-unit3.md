@@ -25,5 +25,6 @@ After completing this lab, you will be able to:
 - Configure diagnostic settings
 
 ### Architecture Diagram
+![](media/M8-U3.png) 
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/3f42b859-8516-4cac-98be-dedab951e3c4) if you want to go through detailed guide prior to launching lab environment.
