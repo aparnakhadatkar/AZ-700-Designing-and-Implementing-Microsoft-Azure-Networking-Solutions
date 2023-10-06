@@ -10,8 +10,9 @@ In this lab, you will learn how to  provision an ExpressRoute circuit in Azure t
   
 After completing this lab, you will be able to:
 
-- Create and provision an ExpressRoute circuit
-- Retrieve your Service key
++ Task 1: Create and provision an ExpressRoute circuit
++ Task 2: Retrieve your Service key
++ Task 3: Deprovisioning an ExpressRoute circuit
 
 ### Architecture Diagram
 ![](media/M3-U5.png) 
