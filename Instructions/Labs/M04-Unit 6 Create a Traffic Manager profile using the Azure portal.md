@@ -20,8 +20,6 @@ The diagram below approximately illustrates the environment you will be deployin
 + Task 2: Create a Traffic Manager profile
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
-+ Task 5: Clean up resources
-
 
 ## Task 1: Create the web apps
 
