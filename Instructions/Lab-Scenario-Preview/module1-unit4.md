@@ -6,14 +6,14 @@
 
 In this lab, you will learn how to create Virtual Networks and subnet in single resource group and verify the creation of multiple Virtual networks and subnets.
 
-### Objectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
-- Create the CoreServicesVnet virtual network and subnets
-- Create the ManufacturingVnet virtual network and subnets
-- Create the ResearchVnet virtual network and subnets
-- Verify the creation of VNets and Subnets
++ Task 1: Create the CoreServicesVnet virtual network and subnets
++ Task 2: Create the ManufacturingVnet virtual network and subnets
++ Task 3: Create the ResearchVnet virtual network and subnets
++ Task 4: Verify the creation of VNets and Subnets
 
 ### Architecture Diagram
 
