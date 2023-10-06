@@ -10,11 +10,10 @@ In this lab, you will learn how to configure a Traffic Manager profile in the Az
   
 After completing this lab, you will be able to:
 
--  Create the web apps
--  Create a Traffic Manager profile
--  Add Traffic Manager endpoints
--  Test the Traffic Manager profile
-
++ Task 1: Create the web apps
++ Task 2: Create a Traffic Manager profile
++ Task 3: Add Traffic Manager endpoints
++ Task 4: Test the Traffic Manager profile
 
 ### Architecture Diagram
 ![](media/M4-U6.png) 
