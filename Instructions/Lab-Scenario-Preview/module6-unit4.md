@@ -6,17 +6,17 @@
 
 In this lab, you will learn how to configure Distributed Denial of Service (DDoS) protection for a virtual network in Azure using the Azure portal. You will enable DDoS Standard protection, define alerting thresholds, and verify the protection's effectiveness by monitoring traffic and mitigating potential DDoS attacks, ensuring the security and availability of your network resources.
 
-### Objectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
-- Create a DDoS Protection plan
-- Enable DDoS Protection on a new virtual network
-- Configure DDoS telemetry
-- Configure DDoS diagnostic logs
-- Configure DDoS alerts
-- Test with simulation partners
-
++ Task 1: Create a DDoS Protection plan
++ Task 2: Enable DDoS Protection on a new virtual network
++ Task 3: Configure DDoS telemetry
++ Task 4: Configure DDoS diagnostic logs
++ Task 5: Configure DDoS alerts
++ Task 6: Test with simulation partners
+  
 ### Architecture Diagram
 
 ![](media/M6-U4.png) 
