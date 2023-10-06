@@ -8,17 +8,17 @@ In this lab, you will learn how to Secure your Azure Virtual Hub using Azure Fir
 
 ### Objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
-- Create two spoke virtual networks and subnets
-- Create the secured virtual hub
-- Connect the hub and spoke virtual networks
-- Deploy the servers
-- Create a firewall policy and secure your hub
-- Associate the firewall policy
-- Route traffic to your hub
-- Test the application rule
-- Test the network rule
++ Task 1: Create two spoke virtual networks and subnets
++ Task 2: Create the secured virtual hub
++ Task 3: Connect the hub and spoke virtual networks
++ Task 4: Deploy the servers
++ Task 5: Create a firewall policy and secure your hub
++ Task 6: Associate the firewall policy
++ Task 7: Route traffic to your hub
++ Task 8: Test the application rule
++ Task 9: Test the network rule
 
 ### Architecture Diagram
 ![](media/m6-u9-1.png) 
