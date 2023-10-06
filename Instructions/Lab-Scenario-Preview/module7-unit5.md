@@ -23,6 +23,7 @@ After completing this lab, you will be able to:
 - Confirm access is denied to storage account
 
 ### Architecture Diagram
+![](media/M7-U5.png) 
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/b17ef699-9704-4a0d-be14-7d2ab94469f1) if you want to go through detailed guide prior to launching lab environment.
 
