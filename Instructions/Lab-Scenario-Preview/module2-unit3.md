@@ -6,7 +6,7 @@
 
 In this exercise you will create Virtual Networks and Virtual Machine and configure a virtual network gateway to connect the Core Services VNet and Manufacturing VNet. 
 
-### Objectives
+### Lab objectives
   
 In this lab, you will complete the following tasks:
 
