@@ -1,6 +1,6 @@
 # Module 06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal(Read only)
 
-  **Note**: This lab we provided as Read only beacause **DDoS Protection plan** monthly fix cost is $2,944.
+  **Note**: This lab we provided as Read only because  **DDoS Protection plan** monthly fix cost is $2,944.
   
 ## Lab scenario 
 
