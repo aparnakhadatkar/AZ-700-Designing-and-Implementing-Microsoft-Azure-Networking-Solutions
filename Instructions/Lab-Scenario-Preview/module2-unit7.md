@@ -10,9 +10,9 @@ In this lab, you will learn how to create a Virtual WAN in Azure Portal to estab
   
 After completing this lab, you will be able to:
 
-- Create a Virtual WAN
-- Create a hub by using Azure Portal
-- Connect a VNet to the Virtual Hub
++ Task 1: Create a Virtual WAN
++ Task 2: Create a hub by using Azure Portal
++ Task 3: Connect a VNet to the Virtual Hub
 
 ### Architecture Diagram
 
