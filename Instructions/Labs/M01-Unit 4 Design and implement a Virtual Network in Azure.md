@@ -177,7 +177,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
 
-1 Select **CoreServicesVnet**. 
+1. Select **CoreServicesVnet**. 
 
 1. In CoreServicesVnet, from the left navigation pane, under **Settings**, select **Subnets**.
 
