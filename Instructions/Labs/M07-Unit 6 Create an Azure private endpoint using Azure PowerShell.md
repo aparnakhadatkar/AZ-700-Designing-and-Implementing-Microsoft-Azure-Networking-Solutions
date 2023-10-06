@@ -17,7 +17,7 @@ In this exercise, you will:
 
 ## Estimated time: 45 minutes
 
-## Task 1: Deploy the prerequisite web app
+## Task 1: Deploy the web app
 
 You'll create a Private Endpoint for an Azure web app and deploy a virtual machine to test the private connection.
 
@@ -25,9 +25,8 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 - An Azure Web App with a PremiumV2-tier or higher app service plan deployed in your Azure subscription.
 
-- Below steps will guide you through creating the required resource group and web app.
 
-1. Find and open **parameters.json** from File explorer in **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07** folder, open it in VS and find the line "value": "GEN-UNIQUE". Replace the placeholder GEN-UNIQUE string with a unique value for your webapp name and Save this change.
+1. Open **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07\parameters.json** in Visual Studio, find `"value": "GEN-UNIQUE"`, replace it with a unique web app name **webapp<inject key="DeploymentID" enableCopy="false"/>** and save the file.
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
