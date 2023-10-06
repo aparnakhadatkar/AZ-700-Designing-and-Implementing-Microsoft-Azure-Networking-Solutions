@@ -3,8 +3,12 @@
 ## Lab scenario 
 Virtual network service endpoints enable you to limit network access to some Azure service resources to a virtual network subnet. You can also remove internet access to the resources. Service endpoints provide direct connection from your virtual network to supported Azure services, allowing you to use your virtual network's private address space to access the Azure services. Traffic destined to Azure resources through service endpoints always stays on the Microsoft Azure backbone network.
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+
+
 ## Lab Objectives
-In this lab, you will:
+  
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a virtual network
 + Task 2: Enable a service endpoint
@@ -18,10 +22,11 @@ In this lab, you will:
 + Task 10: Confirm access to storage account
 + Task 11: Confirm access is denied to storage account
 
+## Estimated time: 35 minutes
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+## Architecture Diagram
 
-#### Estimated time: 35 minutes
+ ![](../Lab-Scenario-Preview/media/M7-U5.png) 
 
 ## Task 1: Create a virtual network
 
@@ -355,8 +360,8 @@ To test network access to a storage account, deploy a VM to each subnet.
    **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
 
 ## Review
+In this lab, you have completed:
 
-In this Lab you performed:
 + Create a virtual network
 + Enable a service endpoint
 + Restrict network access for a subnet
