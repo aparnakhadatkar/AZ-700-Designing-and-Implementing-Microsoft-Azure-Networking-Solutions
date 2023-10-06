@@ -4,7 +4,7 @@
  
 Being responsible for Contoso's Network Security team, you are going to run a mock DDoS attack on the virtual network. The following steps walk you through creating a virtual network, configuring DDoS Protection, and creating an attack which you can observe and monitor with the help of telemetry and metrics.
 
-In this exercise, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a DDoS Protection plan
 + Task 2: Enable DDoS Protection on a new virtual network
@@ -16,6 +16,10 @@ In this exercise, you will:
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20Azure%20DDoS%20Protection%20on%20a%20virtual%20network)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 ## Estimated time: 40 minutes
+
+## Architecture diagram
+
+ ![Create virtual network - Security tab](../Lab-Scenario-Preview/media/M6-U4.png)
 
 ## Task 1: Create a DDoS Protection plan
 
@@ -224,5 +228,15 @@ In this step you will create a virtual machine, assign a public IP address to it
    ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+## Review
+
+In this lab, you have completed:
++ Create a DDoS Protection plan
++ Enable DDoS Protection on a new virtual network
++ Configure DDoS telemetry
++ Configure DDoS diagnostic logs
++ Configure DDoS alerts
++ Test with simulation partners
 
 ## You have successfully completed the lab.
