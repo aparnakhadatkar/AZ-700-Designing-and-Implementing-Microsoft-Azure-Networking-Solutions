@@ -8,7 +8,7 @@ In this lab, you will learn how to deploy a new web application in Azure, and yo
 
 ### Lab Objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
 + Task 1: Deploy the prerequisite web app
 + Task 2: Create a virtual network and bastion host
