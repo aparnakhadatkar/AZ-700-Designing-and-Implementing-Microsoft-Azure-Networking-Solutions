@@ -6,14 +6,14 @@
 
 In this lab, you will configure DNS name resolution and you will create a private DNS zone named contoso.com, link the VNets for registration and resolution, and then create two virtual machines and test the configuration.
 
-### Objectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
-- Create a private DNS Zone
-- Link subnet for auto registration
-- Create Virtual Machines to test the configuration
-- Verify records are present in the DNS zone
++ Task 1: Create a private DNS Zone
++ Task 2: Link subnet for auto registration
++ Task 3: Create Virtual Machines to test the configuration
++ Task 4: Verify records are present in the DNS zone
 
 ### Architecture Diagram
 
