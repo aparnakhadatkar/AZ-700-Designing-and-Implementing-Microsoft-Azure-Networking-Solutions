@@ -17,7 +17,8 @@ In this lab, you will complete the following tasks:
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
 
-#### Estimated time: 35 minutes
+## Estimated time: 35 minutes
+
 ## Architecture diagram
 
 ![Picture 14](../media/exercise-traffic-manager-environment-diagram.png)
