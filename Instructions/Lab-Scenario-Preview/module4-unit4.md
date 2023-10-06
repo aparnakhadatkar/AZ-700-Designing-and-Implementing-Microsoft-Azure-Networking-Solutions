@@ -17,6 +17,7 @@ After completing this lab, you will be able to:
 -  Test the load balancer
 
 ### Architecture Diagram
+![](media/M4-U4.png) 
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/7a377cf5-d012-47bc-ae89-086c23f86b94) if you want to go through detailed guide prior to launching lab environment.
 
