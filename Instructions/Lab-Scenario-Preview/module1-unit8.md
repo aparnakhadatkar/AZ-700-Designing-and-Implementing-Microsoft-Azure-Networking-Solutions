@@ -8,7 +8,7 @@ In this unit, you will configure connectivity between the CoreServicesVnet and t
 
 ### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a Virtual Machine to test the configuration
 + Task 2: Connect to the Test VMs using RDP
