@@ -8,7 +8,7 @@ In this lab, you will learn how to deploy Load Balancer hosted on Azure, set up 
 
 ### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the virtual network
 + Task 2: Create the load balancer
