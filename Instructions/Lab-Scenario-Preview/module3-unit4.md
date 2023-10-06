@@ -6,7 +6,7 @@
 
 In this lab, you will learn how to Configure an ExpressRoute Gateway in Azure to establish a high-speed, private connection between your on-premises datacenter and Azure. Enable seamless data transfer, increased network reliability, and enhanced security for your organization's critical workloads.
 
-### Objectives
+### Lab objectives
   
 After completing this lab, you will be able to:
 
