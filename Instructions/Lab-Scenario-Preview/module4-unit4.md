@@ -6,9 +6,9 @@
 
 In this lab, you will learn how Configure an Azure Load Balancer to distribute traffic among virtual machines in a multi-tier web application. Implement backend pools, health probes, performance while ensuring high availability and fault tolerance.
 
-### Objectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the virtual network
 + Task 2: Create backend servers
