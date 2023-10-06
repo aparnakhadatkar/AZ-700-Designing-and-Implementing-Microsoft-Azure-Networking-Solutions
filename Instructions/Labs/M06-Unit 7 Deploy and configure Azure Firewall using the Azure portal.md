@@ -294,7 +294,8 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Translated port       | **3389**                                                     |
    |||
 
-​   ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
+​   
+   ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
 
@@ -324,7 +325,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
-1. Withinh LabVm from start menu, open **Remote Desktop Connection**.
+1. Within Labvm from start menu, open **Remote Desktop Connection**.
 
 1. On the **Computer** box, enter the firewall's public IP address followed by **:3389** (e.g., **20.90.136.51:3389**) and select **Connect**.
 
