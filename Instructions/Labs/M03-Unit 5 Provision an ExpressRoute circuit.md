@@ -15,9 +15,11 @@ In this lab, you will complete the following tasks:
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
 
-#### Estimated time: 15 minutes
+## Estimated time: 15 minutes
 
-![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram01.png)
+## Architecture diagram
+
+  ![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram01.png)
 
 
 ## Task 1: Create and provision an ExpressRoute circuit
