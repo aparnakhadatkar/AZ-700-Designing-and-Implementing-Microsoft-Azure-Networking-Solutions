@@ -1,11 +1,15 @@
 # Module 07-Unit 6 Create an Azure private endpoint using Azure PowerShell
 
+## Lab scenario 
+
 Get started with Azure Private Link by using a Private Endpoint to connect securely to an Azure web app. There are many ways to create Endpoints including Portal, CLI, PowerShell etc. 
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 
-In this exercise, you will:
+## Lab Objectives
+
+In this lab, you will complete the following tasks:
 
 + Task 1: Deploy the prerequisite web app
 + Task 2: Create a virtual network and bastion host
@@ -16,6 +20,10 @@ In this exercise, you will:
 
 
 ## Estimated time: 45 minutes
+
+## Architecture diagram
+   
+   ![](../Lab-Scenario-Preview/media/M7-U6.png)
 
 ## Task 1: Deploy the web app
 
@@ -410,6 +418,16 @@ In this section, you'll use the virtual machine you created in the previous step
  
    ![](../media/L7U7-2.png)
 
-1. Close the connection to **myVM**. 
+1. Close the connection to **myVM**.
+
+## Review
+
+In this lab, you have completed:
++ Deploy the prerequisite web app
++ Create a virtual network and bastion host
++ Create a test virtual machine
++ Create a Private Endpoint
++ Configure the private DNS zone
++ Test connectivity to the Private Endpoint
 
 ## You have successfully completed the lab.
