@@ -6,9 +6,9 @@
 
 In this lab, you will learn how to create a Virtual WAN in Azure Portal to establish a global network infrastructure. Add Azure regions, configure site-to-site VPN connections and configure Virtual Network to the Virtual Hub connection. 
 
-### Lab bjectives
+### Lab objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a Virtual WAN
 + Task 2: Create a hub by using Azure Portal
