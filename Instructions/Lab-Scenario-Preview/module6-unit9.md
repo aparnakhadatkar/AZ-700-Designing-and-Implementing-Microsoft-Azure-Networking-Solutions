@@ -6,7 +6,7 @@
 
 In this lab, you will learn how to Secure your Azure Virtual Hub using Azure Firewall Manager. Configure centralized security policies, threat intelligence, and application rules to protect network traffic effectively, ensuring compliance and security for your organization's virtual network infrastructure.
 
-### Objectives
+### Lab objectives
   
 In this lab, you will complete the following tasks:
 
