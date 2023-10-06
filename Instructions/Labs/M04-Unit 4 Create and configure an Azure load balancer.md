@@ -16,7 +16,7 @@ The diagram below illustrates the environment you will be deploying in this exer
  
 ## Lab Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the virtual network
 + Task 2: Create backend servers
@@ -306,7 +306,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ## Review
 
-In this Lab you performed:
+In this lab, you have completed:
 + Create the virtual network
 + Create backend servers
 + Create the load balancer

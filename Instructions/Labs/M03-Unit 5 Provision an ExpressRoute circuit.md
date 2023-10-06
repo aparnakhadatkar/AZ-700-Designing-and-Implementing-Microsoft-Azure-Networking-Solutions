@@ -2,14 +2,14 @@
 
 ## Lab scenario 
 
-In this exercise, you will create an ExpressRoute circuit using the Azure portal and the Azure Resource Manager deployment model. 
+In this lab, you will create an ExpressRoute circuit using the Azure portal and the Azure Resource Manager deployment model. 
 
  > **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 
 ## Lab Objectives
 
-In this exercise, you will perform:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create and provision an ExpressRoute circuit
 + Task 2: Retrieve your Service key
@@ -123,7 +123,7 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
 
 ## Review
 
-In this exercise, you have performed:
+In this lab, you have completed:
 
 + Creating and provision an ExpressRoute circuit
 + Retrieving your Service key

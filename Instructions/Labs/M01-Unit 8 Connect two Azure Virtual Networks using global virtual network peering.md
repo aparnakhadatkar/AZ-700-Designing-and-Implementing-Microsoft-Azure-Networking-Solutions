@@ -1,11 +1,11 @@
 # Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
 
 ## Lab scenario 
-In this unit, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow. 
+In this lab, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow. 
 
 ## Lab Objective
 
-In this Lab, you  Perform:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create a Virtual Machine to test the configuration
 + Task 2: Connect to the Test VMs using RDP
@@ -183,7 +183,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 ## Review
 
-In this Lab, you  Performed:
+In this lab, you have completed:
 
 + Creating a Virtual Machine to test the configuration
 + Connecting to the Test VMs using RDP

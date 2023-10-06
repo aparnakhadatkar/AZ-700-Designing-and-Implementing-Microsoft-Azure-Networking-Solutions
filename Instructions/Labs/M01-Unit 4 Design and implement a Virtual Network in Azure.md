@@ -10,7 +10,7 @@ Consider the fictional organization Contoso Ltd, which is in the process of migr
 
 ## Lab Objectives
 
-In this exercise, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the CoreServicesVnet virtual network and subnets
 + Task 2: Create the ManufacturingVnet virtual network and subnets
@@ -19,11 +19,7 @@ In this exercise, you will:
 
 ### Estimated time: 20 minutes
 
-The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network will have the largest number of resources. It will have connectivity to on-premises networks through a VPN connection. This network will have web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS also will be located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
-
-The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network will contain systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and will need an IP address space that it can expand into.
-
-The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
+## Architecture diagram
 
 ![Network layout for Contoso. 
 On-premises 10.10.0.0/16
@@ -32,6 +28,11 @@ CoreServicesVNet East US 10.20.0.0/16
 ManufacturingVNet West Europe 10.30.0.0/16
 ](../media/design-implement-vnet-peering01.png)
 
+The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network will have the largest number of resources. It will have connectivity to on-premises networks through a VPN connection. This network will have web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS also will be located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
+
+The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network will contain systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and will need an IP address space that it can expand into.
+
+The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
 
 You will create the following resources:
  
@@ -188,7 +189,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ## Review
 
-In this Lab you performed:
+In this lab, you have completed:
 
 + Creating the CoreServicesVnet virtual network and subnets
 + Creating the ManufacturingVnet virtual network and subnets

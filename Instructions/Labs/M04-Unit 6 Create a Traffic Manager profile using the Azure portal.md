@@ -1,25 +1,26 @@
 # Module 04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
-In this exercise, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application. 
+## Lab scenario 
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
-#### Estimated time: 35 minutes
-
+In this lab, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application.
 You will create two instances of a web application deployed in two different regions (East US and West Europe). The East US region will act as a primary endpoint for Traffic Manager, and the West Europe region will act as a failover endpoint.
 
 You will then create a Traffic Manager profile based on endpoint priority. This profile will direct user traffic to the primary site running the web application. Traffic Manager will continuously monitor the web application, and if the primary site in East US is unavailable, it will provide automatic failover to the backup site in West Europe.
 
-The diagram below approximately illustrates the environment you will be deploying in this exercise.
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-​	![Picture 14](../media/exercise-traffic-manager-environment-diagram.png)
-
- In this exercise, you will:
+## Lab Objectives
+In this lab, you will complete the following tasks:
 
 + Task 1: Create the web apps
 + Task 2: Create a Traffic Manager profile
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
+
+#### Estimated time: 35 minutes
+## Architecture diagram
+
+![Picture 14](../media/exercise-traffic-manager-environment-diagram.png)
 
 ## Task 1: Create the web apps
 
@@ -63,7 +64,7 @@ In this section, you will create two instances of a web application deployed in 
 
 1. You should see the two new web apps listed.
 
-   ![Picture 19](../media/create-web-app-2.png)
+   ![Picture 19](../media/M0406.1.png)
 
  
 ## Task 2: Create a Traffic Manager profile
@@ -74,9 +75,9 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 1. In the search box at the top of the page, enter **Traffic Manager profile**, and then select it from the pop-up list.
 
-   ![Picture 20](../media/create-tmprofile-1.png)
-
 1. Select **Create**.
+
+   ![Picture 20](../media/M0406.3.png)
 
 1. On the **Create Traffic Manager profile** page, use the information in the table below to create the Traffic Manager profile.
 
@@ -128,7 +129,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
 
-   ![Picture 22](../media/create-tmendpoints-2.png)
+   ![Picture 22](../media/M04u06.4.png)
 
  
 
@@ -144,9 +145,17 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
+1. If you encounter **your coneection isn't private**. click on **advanced** and then click on link provide.
+
+   ![Picture 24](../media/M0406.7.png)
+
+  
 1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
 
-   ![Picture 24](../media/tm-webapp-test-1a.png)
+
+
+   ![Picture 24](../media/M0406.5.png)
+   
 
 1. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
@@ -156,7 +165,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled**, and then select **Save**.
 
-   ![Picture 25](../media/disable-primary-endpoint-1.png)
+   ![Picture 25](../media/M0406.8.png)
 
 1. Close the **myPrimaryEndpoint** page (select the **X** in the top right corner of the page).
 
@@ -167,5 +176,12 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 1. Verify that the web app is still responding. As the primary endpoint was not available, the traffic was instead routed to the failover endpoint to allow the web site to still function.
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+## Review
+In this lab, you have completed:
++ Create the web apps
++ Create a Traffic Manager profile
++ Add Traffic Manager endpoints
++ Test the Traffic Manager profile
  
 ## You have successfully completed the lab.
