@@ -10,11 +10,11 @@ In this lab, you will learn how Configure an Azure Load Balancer to distribute t
   
 After completing this lab, you will be able to:
 
--  Create the virtual network
--  Create backend servers
--  Create the load balancer
--  Create load balancer resources
--  Test the load balancer
++ Task 1: Create the virtual network
++ Task 2: Create backend servers
++ Task 3: Create the load balancer
++ Task 4: Create load balancer resources
++ Task 5: Test the load balancer
 
 ### Architecture Diagram
 ![](media/M4-U4.png) 
