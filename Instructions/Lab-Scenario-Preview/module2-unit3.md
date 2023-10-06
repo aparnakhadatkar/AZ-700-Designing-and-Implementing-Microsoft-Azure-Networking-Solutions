@@ -8,7 +8,7 @@ In this exercise you will create Virtual Networks and Virtual Machine and config
 
 ### Objectives
   
-After completing this lab, you will be able to:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create CoreServicesVnet and ManufacturingVnet
 + Task 2: Create CoreServicesVM
