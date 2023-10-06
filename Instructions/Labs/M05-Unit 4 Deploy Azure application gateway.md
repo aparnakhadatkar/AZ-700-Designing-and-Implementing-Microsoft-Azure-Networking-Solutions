@@ -2,7 +2,7 @@
 
 ## Lab scenario 
 
-In this exercise, you use the Azure portal to create an application gateway. Then you test it to make sure it works correctly.
+In this lab, you use the Azure portal to create an application gateway. Then you test it to make sure it works correctly.
 
 >**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -18,7 +18,11 @@ In this lab, you will complete the following tasks:
 + Task 3: Add backend servers to backend pool
 + Task 4: Test the application gateway
 
-#### Estimated time: 25 minutes
+## Estimated time: 25 minutes
+
+## Architecture diagram
+
+  ![](../Lab-Scenario-Preview/media/M5-U4.png)    
 
 ## Task 1: Create an application gateway
 
