@@ -348,7 +348,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
    >**Note:** you may have to select **See more** to see the **Private IP address**.
 
-1. Select **Home**, then on the Azure portal home page, under **Resources**, select **myTestVM** virtual machine that you just created.
+1. Select **Home**, then on the Azure portal home page, select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
 
 1. On the **Overview** page, select **Connect**, under **Configured connection** section, select **Go to Bastion**.
 
