@@ -122,11 +122,11 @@ In this lab, you will complete the following tasks:
 
     | **Setting**      | **Value**      |
     | -------------    | -------------- |
-    | Target type      | Backend pool   |
+    | Target type      | Select Backend pool in drop down  |
     | Backend Settings | **Add new** |
     |||
 
-    ![Azure Portal search for application gateway](../media/l5u4-2-6.png)  
+    ![Azure Portal search for application gateway](../media/lab5-1.png)  
 
 1. In **Add a Backend Setting**, enter or select the following information:
 
