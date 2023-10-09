@@ -161,8 +161,6 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. Select **Review + create** and  **Create**.
 
-   **Note**: Before proceeding with next task, please ensure that deployment of VM's is successfull in cloudshell
-
 ## Task 4: Create load balancer resources
 
 In this section, you will configure load balancer settings for a backend address pool, then create a health probe and a load balancer rule.
