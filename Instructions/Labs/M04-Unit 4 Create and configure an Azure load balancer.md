@@ -127,6 +127,13 @@ In this section, you will create three VMs, that will be in the same availabilit
 
    **Note**: It may take 15-20 min to create these three VMs. Please wait until this job completes, and you will be prompted to provide password for three times for 
     each VM deployment.
+    
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Create the load balancer
 
@@ -161,11 +168,17 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. Select **Review + create** and  **Create**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 4: Create load balancer resources
 
 In this section, you will configure load balancer settings for a backend address pool, then create a health probe and a load balancer rule.
 
-### Create a backend pool and add VMs to the backend pool
+### Task 4.1: Create a backend pool and add VMs to the backend pool
 
 The backend address pool contains the IP addresses of the virtual NICs connected to the load balancer.
 
@@ -189,8 +202,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
    ![Picture 7](../media/add-vms-backendpool.png)
    
-
-### Create a health probe
+### Task 4.2: Create a health probe
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
 
@@ -209,7 +221,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 1. Select **Save**.
  
-### Create a load balancer rule
+### Task 4.3: Create a load balancer rule
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
@@ -234,13 +246,17 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 
 1. Select **Save**.
  
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Test the load balancer
 
 In this section, you will create a test VM, and then test the load balancer.
 
-### Create test VM
-
+### Task 5.1: Create test VM
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual machine** and select **Virtual machine** under services that appears in the results under **Services**.
 
@@ -280,7 +296,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Wait for this last VM to be deployed before moving forward with the next task.
 
-### Connect to the test VM to test the load balancer
+### Task 5.2: Connect to the test VM to test the load balancer
 
 1. On the Azure portal home page, select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
@@ -311,6 +327,12 @@ In this section, you will create a test VM, and then test the load balancer.
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
     ![](../media/L4U4-4.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 
