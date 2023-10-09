@@ -238,7 +238,8 @@ In this section, you will create three VMs for the backend pool of the load bala
   
 1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa55w.rd!!**
      
-   > **Note:** This will take several minutes to deploy. When deployment completed, close the powershell.
+   > **Note:** This will take several minutes to deploy and and you will be prompted to provide password for three times for 
+    each VM deployment. When deployment completed, close the powershell.
 
 ### Task 7: Add VMs to the backend pool
 
