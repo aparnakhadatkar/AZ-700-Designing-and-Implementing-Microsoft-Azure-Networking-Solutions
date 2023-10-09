@@ -140,8 +140,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 4. Select **+ Add connection**.
 
-5. For **Connection name**, enter 
-**hub-spoke-01**.
+5. For **Connection name**, enter **hub-spoke-01**.
 
 6. For **Hubs**, select **Hub-01**.
 
@@ -151,7 +150,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 9. Select **Create**.
    
-10. Repeat steps 4 to 9 above to create another similar connection but using the connection name of **hub-spoke-02** to connect the **Spoke-02** virtual network.
+10. Repeat steps 4 to 9 above to create another similar connection but using the **Connection name** of **hub-spoke-02** to connect the **Virtual network** of **Spoke-02**
 
 ### Task 4: Deploy the servers
 
