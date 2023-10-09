@@ -72,13 +72,10 @@ In this section, you will create two instances of a web application deployed in 
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On the Azure portal home page, select **Create a resource**.
 
-1. In the search box at the top of the page, enter **Traffic Manager profile**, and then select it from the pop-up list.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Traffic Manager profile** and select **Traffic Manager profile** under services that appears in the results under **Services**.
 
-1. Select **Create**.
-
-   ![Picture 20](../media/M0406.3.png)
+1. On **Load balancing | Traffic Manager** page, select **Create**.
 
 1. On the **Create Traffic Manager profile** page, use the information in the table below to create the Traffic Manager profile.
 
@@ -100,7 +97,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. Under **Settings**, select **Endpoints**, and then select **Add**.
 
-   ![Picture 21](../media/create-tmendpoints-1.png)
+    ![Picture 21](../media/create-tmendpoints-1.png)
 
 1. On the **Add endpoint** page, enter the information from the table below.
 
@@ -132,13 +129,11 @@ In this section, you will add the website in the East US as the primary endpoint
 
    ![Picture 22](../media/M04u06.4.png)
 
- 
-
 ## Task 4: Test the Traffic Manager profile
 
 In this section, you will check the DNS name of your Traffic Manager profile, and then you will configure the primary endpoint so that it is unavailable. You will then verify that the web app is still available, to test that the Traffic Manager profile is successfully sending traffic to the failover endpoint.
 
-1. On the **Contoso-TMProfile** page, select **Overview**.
+1. On the ****Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**page, select **Overview**.
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
@@ -158,7 +153,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. To test the failover endpoint is working properly, you need to disable the primary site.
 
-1. On the **Contoso-TMProfile** page, on the overview screen, select **myPrimaryEndpoint**.
+1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, on the overview screen, select **myPrimaryEndpoint**.
 
 1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled**, and then select **Save**.
 
@@ -166,7 +161,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. Close the **myPrimaryEndpoint** page (select the **X** in the top right corner of the page).
 
-1. On the **Contoso-TMProfile** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
+1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
 
 1. Open a new web browser session, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
