@@ -118,7 +118,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 The backend address pool contains the IP addresses of the virtual NICs connected to the load balancer.
 
-1. On the Azure portal home page, under **resources** section, select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, select **All resources**, under **resources** section, select **myIntLoadBalancer** from the resources list.
 
 1. From left-hand navigation pane, under **Settings**, select **Backend pools**, and then select **+ Add**.
 
