@@ -226,7 +226,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
  
- ## Task 5: Configure an application rule
+## Task 5: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
@@ -269,7 +269,7 @@ In this task, you will add an application rule that allows outbound access to ww
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
- ## Task 6: Configure a network rule
+## Task 6: Configure a network rule
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
@@ -333,7 +333,6 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Translated port       | **3389**                                                     |
    |||
 
-​   
    ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
