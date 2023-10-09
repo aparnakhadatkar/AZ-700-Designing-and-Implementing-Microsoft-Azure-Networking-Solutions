@@ -188,7 +188,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-1. Select **Srv-workload-01** VM. On the **Overview** page of **Srv-workload-01**, in the right-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.0.1.4**), after this close it.
+1. Select **Srv-workload-01** VM. On the **Overview** page of **Srv-workload-01**, in the left-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.0.1.4**), after this close it.
 
     ![](../media/AZ-700-VM-01.png)
 
