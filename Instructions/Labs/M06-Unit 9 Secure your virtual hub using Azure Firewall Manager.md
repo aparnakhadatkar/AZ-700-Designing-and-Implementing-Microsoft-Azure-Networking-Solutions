@@ -192,7 +192,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
     ![](../media/AZ-700-VM-01.png)
 
-1. Now, select **Srv-workload-02** VM. On the **Overview** page of **Srv-workload-02**, in the right-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.1.1.4**).
+1. Now, select **Srv-workload-02** VM. On the **Overview** page of **Srv-workload-02**, in the left-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.1.1.4**).
 
 ### Task 5: Create a firewall policy and secure your hub
 
