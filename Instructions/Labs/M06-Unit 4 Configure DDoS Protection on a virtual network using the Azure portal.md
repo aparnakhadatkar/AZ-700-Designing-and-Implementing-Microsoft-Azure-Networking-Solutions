@@ -52,8 +52,6 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
 1. On the **DDoS protection plan** drop-down list, select **MyDdosProtectionPlan**.
 
-   ![Create virtual network - Security tab](../media/create-virtual-network-security-for-ddos-protection.png)
-
 1. Select **Review + create**.
 
 1. Select **Create**.
@@ -76,10 +74,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Select your resource group from the list.
 
-   ![Create public IP address](../media/create-public-ip-address-for-ddos-telemetry.png)
-
 1. Select **Create**.
-
 
 1. On the Azure home page, select **All resources**.
 
@@ -89,17 +84,14 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Select the **Scope** box, then select the checkbox next to **MyPublicIPAddress**.
 
-    ![Create metrics scope for DDoS telemetry](../media/create-metrics-scope-for-ddos-telemetry.png)
-
 1. Select **Apply**.
 
 1. On the **Metrics** box, select **Inbound packets dropped DDoS**.
 
 1. On the **Aggregation** box, select **Max**.
 
-    ![Metrics created for DDoS telemetry](../media/metrics-created-for-ddos-telemetry.png)
 
- ## Task 4: Configure DDoS diagnostic logs
+## Task 4: Configure DDoS diagnostic logs
 
 1. On the Azure home page, select **All resources**.
 
@@ -114,8 +106,6 @@ You create a Public IP address, and then set up telemetry in the next steps.
 1. Under **Category details**, select all 3 **log** checkboxes and the **AllMetrics** checkbox.
 
 1. Under **Destination details**, select the **Send to Log Analytics workspace** checkbox. Here, you could select a pre-existing Log Analytics workspace, but as you haven't set up a destination for the diagnostic logs yet, you will just enter the settings, but then discard them in the next step in this exercise.
-
-   ![Configure new Diagnostic settings for DDoS](../media/configure-ddos-diagnostic-settings-new.png)
 
 1. Normally you would now select **Save** to save your diagnostic settings. Note that this option is still grayed out as we cannot complete the setting configuration yet.
 
@@ -173,8 +163,6 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Save**.
 
-   ![Change public IP address for DDoS VM](../media/change-public-ip-config-for-ddos-vm-new.png)
-
 ### Configure DDoS alerts
 
 1. On the Azure home page, select **All resources**.
@@ -189,15 +177,13 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. On the **Select a resource** pane, in the **Filter by resource type** box, scroll down the list and select **Public IP addresses**.
 
-   ![New alert rule change scope to public IP address](../media/new-alert-rule-change-scope-to-public-ip-address-1.png)
-
 1. On the **Resource** list, select **MyPublicIPAddress**, then select **Done**.
 
 1. On the **Create alert rule** page, under **Condition**, select **Add condition**.
 
 1. Select **Under DDoS attack or not**.
 
-   ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-1.png)
+   ![Add condition to alert rule - select a signal](../media/add-condition-to-alert-rule-(1).png)
 
 1. On the **Operator** box select **Greater than or equal to**.
 
@@ -205,11 +191,11 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **Done**.
 
-    ![Add condition to alert rule - configure signal logic](../media/add-condition-to-alert-rule-2.png)
+    ![Add condition to alert rule - configure signal logic](../media/add-condition-to-alert-rule-(2).png)
 
 1. Back on the **Create alert rule** page, under the **Alert rule details** section and in **Alert rule name**, enter **MyDdosAlert**.
 
-    ![End point of create new alert rule](../media/new-alert-rule-end.png)
+    ![End point of create new alert rule](../media/new-alert-rule-end(1).png)
 
 1. Select **Create alert rule**.
 
@@ -228,7 +214,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Now you can see the DDoS attack as it happened. Note it may take the full 10 minutes before you see the results.
 
-   ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack.png)
+   ![Metrics showing resource under DDoS attack](../media/metrics-showing-resource-under-attack(1).png)
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
