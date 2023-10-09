@@ -181,11 +181,10 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate** and **OK**.
+1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK**.
 
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
-   | Subscription             | Select your subscription |
    | Virtual Network          | select **Test-FW-VN**    |
    | Subnet                   | **Workload-SN**          |
 
