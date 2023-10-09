@@ -29,7 +29,7 @@ In this lab, you will complete the following tasks:
 1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter application gateway, and then select **Application gateways** from the results.
     ![Azure Portal search for application gateway](../media/l5u4-1.png)    
 
-1. On the Application gateways page, select **+ Create**.
+1. On the **Load balancing | Application Gateway** page, select **+ Create**.
 
 1. On the Create application gateway **Basics** tab, enter, or select the following information:
 
