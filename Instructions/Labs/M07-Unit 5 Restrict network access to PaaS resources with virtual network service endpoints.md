@@ -112,7 +112,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
     | Subscription   | Select your subscription                                     |
-    | Resource group | myResourceGroup                                              |
+    | Resource group | Select myResourceGroup                                              |
     | Name           | ContosoPrivateNSG                                            |
     | Location       | Select **<inject key="Region" enableCopy="false"/>**                                           |
 
@@ -421,4 +421,5 @@ In this lab, you have completed:
 + Create virtual machines
 + Confirm access to storage account
 + Confirm access is denied to storage account
+
 ## You have successfully completed the lab.
