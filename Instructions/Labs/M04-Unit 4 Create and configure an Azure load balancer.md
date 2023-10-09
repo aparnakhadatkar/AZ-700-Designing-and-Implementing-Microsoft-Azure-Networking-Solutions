@@ -27,10 +27,9 @@ In this lab, you will complete the following tasks:
 ## Task 1: Create the virtual network
 
 In this section, you will create a virtual network and a subnet.
-   
-1. Log in to the Azure portal.
 
-1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the 
+    results under **Services**.
 
     ![](../media/VN.png)
 
@@ -56,7 +55,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. Select **Next : IP Addresses**.
    
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space** and enter **10.1.0.0** in address space and **/16** in size field and select **+ Add subnet**.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add subnet**.
 
    ![](../media/L4U4-1.png)
 
@@ -113,21 +112,20 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Important**: Please replace IntLB-RG with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   >**Important**: Please replace IntLB-RG-DID with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
-   $RGName = "IntLB-RG"
+   $RGName = "IntLB-RG-DID"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
 
- 1.  You will be prompted to provide an admin password. provide adminPassword: Pa55w.rd!!
+ 1.  You will be prompted to provide an admin password, provide adminPassword: Pa55w.rd!!
 
    **Note**: It may take 15-20 min to create these three VMs. Please wait until this job completes, and you will be prompted to provide password for three times for 
     each VM deployment.
-    
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -139,11 +137,9 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
 
-1. On the Azure portal home page, select **Create a resource**.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Load Balancer** and select **Load Balancer** under services that appears in the results under **Services**.
 
-1. On the search box at the top of the page, enter **Load Balancer**, then press **Enter** (**Note:** do not select one from the list).
-
-1. Select **+ Create**.
+1. Select **+ Create** on **Load balancing | Load Balancer** page.
 
 1. On the **Basics** tab, use the information in the table below to create the load balancer.
 
