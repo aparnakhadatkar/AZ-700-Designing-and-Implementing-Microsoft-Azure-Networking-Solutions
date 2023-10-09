@@ -344,7 +344,7 @@ In this final task, you will test the firewall to verify that the rules are conf
 
 1. Select **Yes** on the certificate message.
 
-1. Open Internet Explorer and browse to **https://www.google.com**.
+1. Open Internet Explorer and browse to **https://www.google.com**
 
 1. On the **Security Alert** dialog box, select **OK**.
 
@@ -354,7 +354,7 @@ In this final task, you will test the firewall to verify that the rules are conf
 
     ![RDP session on Srv-work server - browser on google.com](../media/L6U7-2.png)
 
-1. Browse to **https://www.microsoft.com**.
+1. Browse to **https://www.microsoft.com**
 
 1. You should be blocked by the firewall.
 
