@@ -166,7 +166,15 @@ In this lab, you will complete the following tasks:
     | Subnet address range  | 10.0.1.0/24 |
     |||
 
-    ![Azure Portal search for application gateway](../media/l5u4-3.png)  
+    ![Azure Portal search for application gateway](../media/l5u4-3.png)
+
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Task 2: Create virtual machines
 
@@ -201,6 +209,12 @@ In this lab, you will complete the following tasks:
 
 1. Verify that both virtual machines have been created.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 3: Add backend servers to backend pool
 
 1. On the Azure portal menu, select **All resources** or search for and select All resources. Then select **ContosoAppGateway**.
@@ -222,6 +236,13 @@ In this lab, you will complete the following tasks:
     ![Azure Portal search for application gateway](../media/l5u4-(5).png)  
 
     **Note**: Wait for the deployment to complete before proceeding to the next step.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Task 4: Test the application gateway
 
