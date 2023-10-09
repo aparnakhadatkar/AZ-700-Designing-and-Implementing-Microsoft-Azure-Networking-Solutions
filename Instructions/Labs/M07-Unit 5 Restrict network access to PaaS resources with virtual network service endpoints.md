@@ -39,7 +39,7 @@ In this lab, you will complete the following tasks:
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
-   | Resource group | myResourceGroup                               |
+   | Resource group | Select myResourceGroup                               |
    | Name           | CoreServicesVNet                              |
    | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
 
@@ -61,7 +61,13 @@ In this lab, you will complete the following tasks:
 
 1. Select **Save**.
    
-1. Select **Review + Create**. Once the resource is validated select **Create**. 
+1. Select **Review + Create**. Once the resource is validated select **Create**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 2: Enable a service endpoint
 
@@ -86,6 +92,12 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 1. You should now have two subnets configured:
 
    ![](../media/L7U5-2.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Restrict network access for a subnet
 
@@ -128,7 +140,13 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
     | Priority                | 100                       |
     | Name                    | Allow-Storage-All         |
 
-1. Select **Add**:
+1. Select **Add**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 4: Add additional outbound rules 
 
@@ -153,6 +171,12 @@ Create another outbound security rule that denies communication to the internet.
    | Name                    | Deny-Internet-All         |
 
 1. Select **Add**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Allow access for RDP connections
 
@@ -189,6 +213,12 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 1. Under **Subnet**, select **Private**, and then select **OK**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 6: Restrict network access to a resource
 
 The steps necessary to restrict network access to resources created through Azure services enabled for service endpoints varies across services. See the documentation for individual services for specific steps for each service. The remainder of this exercise includes steps to restrict network access for an Azure Storage account, as an example.
@@ -210,6 +240,12 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. select **Review**, then select **Create**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 7: Create a file share in the storage account
 
 1. On the Azure Portal in the **Search resources, services, and docs** box, at the top of the portal, search and select **Storage account**.
@@ -225,6 +261,12 @@ The steps necessary to restrict network access to resources created through Azur
 1. Select **Next: Backup>** and unselect the **Enable backup**.
    
 1. Select **Review + Create** and **Create**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 8: Restrict network access to a subnet
 
@@ -281,9 +323,15 @@ To test network access to a storage account, deploy a VM to each subnet.
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
 
-   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 10: Confirm access to storage account
 
