@@ -164,6 +164,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. Select **Review + create** and  **Create**.
 
+   **Note**: Wait for deployment to complete successfully.
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
