@@ -184,7 +184,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
-1.  You will be prompted to provide an admin password. provide adminPassword: <inject key="AzureAdUserPassword"></inject>.
+1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
