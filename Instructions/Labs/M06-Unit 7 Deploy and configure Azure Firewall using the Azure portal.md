@@ -119,7 +119,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
    ![](../media/l6u7-3.png)
   
-1. On the **Firewall** page, select **Create**.
+1. On the **Firewall** page, select **+ Create**.
 
 1. On the **Basics** tab, create a firewall using the information in the table below.
 
