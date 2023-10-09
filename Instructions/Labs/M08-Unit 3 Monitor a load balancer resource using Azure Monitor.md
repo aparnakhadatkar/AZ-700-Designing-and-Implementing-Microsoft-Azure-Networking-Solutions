@@ -76,6 +76,14 @@ In this section, you will create a virtual network and a subnet.
 
    >**Note:** The deployment will take time.
 
+   
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 2: Create the load balancer
 
 In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
@@ -114,6 +122,12 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    
 1. Select **Create**.
 
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 3: Create a backend pool
 
 The backend address pool contains the IP addresses of the virtual NICs connected to the load balancer.
@@ -133,6 +147,12 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 1. Select **Save**.
 
    
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 4: Create a health probe
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
@@ -153,6 +173,12 @@ The load balancer monitors the status of your app with a health probe. The healt
 
    ![Show health probe created in load balancer](../media/create-healthprobe.png)
 
+   
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 5: Create a load balancer rule
