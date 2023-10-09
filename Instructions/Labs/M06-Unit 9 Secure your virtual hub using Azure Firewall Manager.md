@@ -60,14 +60,14 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. Select **Create**.
 
-Repeat steps 1 to 12 above to create another similar virtual network and subnet but using the following information:
+1. Repeat steps 1 to 12 above to create another similar virtual network and subnet but using the following information:
 
-- Resource Group: Select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**
-- Name: **Spoke-02**
-- Address space: **10.1.0.0/16** - (delete any other listed address spaces)
-- Subnet name: **Workload-02-SN**
-- **Starting address**: **10.1.1.0**
-- **Select Subnet size** : **/24(256 addresses)**.
+    - Resource Group: Select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Virtual network name**: **Spoke-02**
+    - Address space: **10.1.0.0/16** - (delete any other listed address spaces)
+    - Subnet name: **Workload-02-SN**
+    - **Starting address**: **10.1.1.0**
+    - **Select Subnet size** : **/24(256 addresses)**.
 
 ### Task 2: Create the secured virtual hub
 
