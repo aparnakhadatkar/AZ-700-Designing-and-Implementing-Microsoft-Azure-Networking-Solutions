@@ -122,7 +122,7 @@ In this lab, you will complete the following tasks:
 
     | **Setting**      | **Value**      |
     | -------------    | -------------- |
-    | Target type      | Select Backend pool in drop down  |
+    | Target type      | Select Backendpool in drop down  |
     | Backend Settings | **Add new** |
     |||
 
