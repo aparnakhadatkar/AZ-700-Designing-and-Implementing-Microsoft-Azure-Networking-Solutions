@@ -148,7 +148,7 @@ In this lab, you will complete the following tasks:
 
 1. Select **Create** to create the virtual network, the public IP address, and the application gateway.
 
-    > **Note**:  It may take 2 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
+    > **Note**:  It may take 5 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
    
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter Virtual networks, and then select **Virtual networks** from the results.
 
