@@ -316,9 +316,9 @@ In this task you will associate the firewall policy with the virtual hub.
 
 1. On **Firewall Manager**, under **Security**, select **Azure Firewall Policies**.
 
-1. Select the checkbox for **Policy-01**.
+1. Select the checkbox for **Policy-01** and  Select **Manage associations&gt;Associate hubs**.
 
-1. Select **Manage associations&gt;Associate hubs**.
+   ![](../media/lab6-2.png)
 
 1. Select the checkbox for **Hub-01**.
 
@@ -364,9 +364,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 1. Select **Connect**.
 
-   ![RDP connection to srv-workload-01](../media/rdp-srv-workload-01.png)
-
-1. On the **Enter your credentials** dialog box, log into the **Srv-workload-01** server virtual machine, by using the password you provided during deployment.
+1. On the **Enter your credentials** dialog box, log into the **Srv-workload-01** server virtual machine, by using the password **Pa55w.rd!!** provided during deployment.
 
 1. Select **OK**.
 
@@ -384,7 +382,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 1. You should see the Microsoft home page.
 
-    ![RDP session browsing microsoft.com](../media/microsoft-home-page.png)
+    ![RDP session browsing microsoft.com](../media/lab6-2.png)
 
 1. Browse to **https://www.google.com**.
 
