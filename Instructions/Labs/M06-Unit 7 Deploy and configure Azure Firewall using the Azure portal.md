@@ -56,7 +56,7 @@ In this task, you will create a single virtual network with two subnets.
     | Subnet size      | **/26** |
     |||
 
-    ![](../media/l6u7-1.png)
+    ![](../media/lab6-1.png)
 
 1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
