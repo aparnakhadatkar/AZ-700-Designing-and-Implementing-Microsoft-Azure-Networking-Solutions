@@ -110,7 +110,7 @@ In this section, you will create three VMs, that will be in the same availabilit
    >**Important**: Please replace IntLB-RG with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
-   $RGName = "IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>"
+   $RGName = "IntLB-RG"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
