@@ -210,7 +210,7 @@ In this section, you will create three VMs for the backend pool of the load bala
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
   
-1. You will be prompted to provide an Admin password. Provide Admin password Password: <inject key="AzureAdUserPassword"></inject>.
+1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa55w.rd!!**
      
    > **Note:** This will take several minutes to deploy. When deployment completed, close the powershell.
 
