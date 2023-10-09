@@ -241,7 +241,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Create test VM
 
-1. On the Azure portal home page, select **Create a resource**, then **virtual**, then select **Virtual machine** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual machine** and select **Virtual machine** under services that appears in the results under **Services**.
 
 1. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
@@ -283,15 +284,15 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
-1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. Note: you may need to select **See more** in order to see the **Private IP address** field.
+1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard.
+
+   **Note**: you may need to select **See more** in order to see the **Private IP address** field.
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select on the **myTestVM** virtual machine that you just created.
 
-1. On the **Overview** page, select **Connect**, then **Bastion**.
+1. On the **Overview** page, select **Connect**, then **Go to bastion**.
 
-1. Select **Use Bastion**.
-
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created, then select **Connect**. If popup blocker is preventing the new window, allow popup blocker and **Connect** again.
+1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created, then select **Connect**. If popup blocker is preventing the new window, select **Always allow pop-ups and redirects from hhtps://portal.azure.com**  and **Connect** again.
 
 1. The **myTestVM** window will open in another browser tab.
 
