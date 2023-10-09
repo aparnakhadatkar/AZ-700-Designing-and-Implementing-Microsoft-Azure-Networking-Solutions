@@ -62,9 +62,9 @@ In this section, you will create a virtual network and a subnet.
    
 1. Select **Next**.
 
-1. On the **IP addresses** tab, in the **IPv4 address space** box, enter **10.1.0.0/16**.
+1. On the **IP addresses** tab, click on  **Add IPv4 address space** box, and in new **IPV4 address space**, enter **10.1.0.0/16**.
 
-1. Delete the **default** subnet. Select **+ Add a subnet**.
+1. Select **+ Add a subnet**.
 
 1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
