@@ -243,7 +243,7 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 ### Task 7: Add VMs to the backend pool
 
-1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer** from the resources list.
 
 1. From the left-hand navigation pane, under **Settings**, select **Backend pools**, and then select **myBackendPool**.
 
@@ -342,7 +342,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 #### Task 9.2: Connect to the test VM to test the load balancer
 
-1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer** from the resources list.
 
 1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. 
 
