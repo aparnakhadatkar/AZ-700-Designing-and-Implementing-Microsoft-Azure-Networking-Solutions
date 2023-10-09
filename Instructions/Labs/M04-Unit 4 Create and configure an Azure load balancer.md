@@ -125,7 +125,8 @@ In this section, you will create three VMs, that will be in the same availabilit
 
  1.  You will be prompted to provide an admin password. provide adminPassword: Pa55w.rd!!
 
-   **Note**: It may take 5-10 min to create these three VMs. You do not have to wait until this job completes, you can continue with the next task.
+   **Note**: It may take 15-20 min to create these three VMs. Please wait until this job completes, and you will be prompted to provide password for three times for 
+    each VM deployment.
 
 ## Task 3: Create the load balancer
 
