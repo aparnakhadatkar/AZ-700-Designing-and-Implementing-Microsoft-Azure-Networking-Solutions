@@ -28,7 +28,8 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ![](../Lab-Scenario-Preview/media/M3-U4.png)
+   ![](../Lab-Scenario-Preview/media/new3-4.png) 
+
 
 ## Task 1: Create the VNet and gateway subnet
 

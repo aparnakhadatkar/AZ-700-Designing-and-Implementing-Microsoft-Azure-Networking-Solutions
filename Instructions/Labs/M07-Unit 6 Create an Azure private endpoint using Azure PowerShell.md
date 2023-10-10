@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
    
-   ![](../Lab-Scenario-Preview/media/M7-U6.png)
+   ![](../Lab-Scenario-Preview/media/new7-6.png) 
 
 ## Task 1: Deploy the web app
 

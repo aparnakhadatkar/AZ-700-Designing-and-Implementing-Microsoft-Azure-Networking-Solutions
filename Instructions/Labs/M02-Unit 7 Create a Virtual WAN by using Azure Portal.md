@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-   ![](../Lab-Scenario-Preview/media/M2-U7.png)
+   ![](../Lab-Scenario-Preview/media/new2-7.png) 
 
 ### Task 1: Create a Virtual WAN
 
