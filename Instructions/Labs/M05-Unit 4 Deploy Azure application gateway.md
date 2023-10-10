@@ -40,8 +40,7 @@ In this lab, you will complete the following tasks:
    | Application Gateway | ContosoAppGateway                            |
    | Region              | **<inject key="Region" enableCopy="false"/>**                           |
    | Virtual Network     | Select **Create new**                        |
-   |||
-
+   
    ![Azure Portal search for application gateway](../media/l5u4-2.png)
 
 1. In Create virtual network, enter, or select the following information:
@@ -54,7 +53,6 @@ In this lab, you will complete the following tasks:
    | **SUBNETS**       |                                    |
    | Subnet name       | Change **default** to **AGSubnet** |
    | Address range     | 10.0.0.0/24                        |
-   |||
 
    ![Azure Portal search for application gateway](../media/l5u4-2-1.png)
    
@@ -78,8 +76,7 @@ In this lab, you will complete the following tasks:
     | -------------------------------- | ----------- |
     | Name                             | BackendPool |
     | Add backend pool without targets | Yes         |
-    |||
-
+    
     ![Azure Portal search for application gateway](../media/l5u4-2-3.png)
 
 1. On the **Add a backend pool** window, select **Add** to save the backend pool configuration and return to the **Backends** tab.
@@ -96,7 +93,6 @@ In this lab, you will complete the following tasks:
     | ------------- | ----------------- |
     | **Rule name** | **RoutingRule**   |
     | **Priority**  | **100**           |
-    |||
 
     ![Azure Portal search for application gateway](../media/l5u4-2-4.png)
 
@@ -106,7 +102,6 @@ In this lab, you will complete the following tasks:
     | ------------- | ----------------- |
     | Listener name | Listener          |
     | Frontend IP   | Select **Public** |
-    |||
 
     ![Azure Portal search for application gateway](../media/l5u4-2-5.png)
 
@@ -120,7 +115,6 @@ In this lab, you will complete the following tasks:
     | -------------    | -------------- |
     | Target type      | Select Backendpool in drop down  |
     | Backend Settings | **Add new** |
-    |||
 
     ![Azure Portal search for application gateway](../media/lab5-1.png)  
 
@@ -130,7 +124,6 @@ In this lab, you will complete the following tasks:
     | ------------------   | ----------- |
     | Backend setting name | HTTPSetting |
     | Backend port         | 80          |
-    |||
 
     ![Azure Portal search for application gateway](../media/l5u4-2-7.png)  
 
@@ -160,17 +153,14 @@ In this lab, you will complete the following tasks:
     | --------------------- | ----------- |
     | Name                  | BackendSubnet |
     | Subnet address range  | 10.0.1.0/24 |
-    |||
 
     ![Azure Portal search for application gateway](../media/l5u4-3.png)
-
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 
 ## Task 2: Create virtual machines
 
