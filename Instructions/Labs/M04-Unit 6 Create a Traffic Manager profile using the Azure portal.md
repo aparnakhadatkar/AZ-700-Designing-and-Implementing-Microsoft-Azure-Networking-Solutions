@@ -27,7 +27,7 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create two instances of a web application deployed in the two different Azure regions.
 
-1. On the Azure portal home page, select **Create a resource**, then select **Web App** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+1. On the Azure portal home page, select **+ Create a resource**, then select **Web App** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
 
 1. On the **Create Web App** page, on the **Basics** tab, use the information in the table below to create the first web application.
 
