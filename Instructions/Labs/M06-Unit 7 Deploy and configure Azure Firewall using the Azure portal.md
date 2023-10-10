@@ -94,7 +94,9 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files 
+   **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and- 
+   Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
 
      ![](../media/unit6-image3.png)
 
@@ -383,7 +385,7 @@ In this final task, you will test the firewall to verify that the rules are conf
     ![Add a network rule collection](../media/l6u7-12.png)
  
 1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **TestUser** and Password  
-   **Pa55w.rd!!** .
+   **Pa55w.rd!!**
 
 1. Select **OK**.
 
