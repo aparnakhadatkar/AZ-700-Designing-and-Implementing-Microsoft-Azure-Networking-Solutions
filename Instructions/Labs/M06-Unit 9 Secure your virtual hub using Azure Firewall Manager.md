@@ -52,7 +52,8 @@ In this task, you will create the two spoke virtual networks each containing a s
 
     >**Note:** Delete any other address spaces listed here, such as 10.1.0.0/16.
 
-1. Under Subnet name, select the word default. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**. Change the **Starting address** to **10.0.1.0**. Select Subnet size : **/24(256 addresses)**.
+1. Under Subnet name, select the word default. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**. Change the **Starting address** to 
+   **10.0.1.0**. Select Subnet size : **/24(256 addresses)**.
 
 1. Select **Save**.
 
@@ -84,49 +85,49 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
     ![All services](../media/AZ-700-allservices.png)
 
-2. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
+1. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-3. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
+1. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
 
-4. On the **Virtual hubs** page, select **+ Create new secured virtual hub**.
+1. On the **Virtual hubs** page, select **+ Create new secured virtual hub**.
 
     ![virtual hub](../media/AZ-700-virtualhubs.png)
 
-6. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
+1. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-7. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
+1. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
 
-8. For the **Secured virtual hub name**, enter **Hub-01**.
+1. For the **Secured virtual hub name**, enter **Hub-01**.
 
-9. For **Hub address space**, enter **10.2.0.0/16**.
+1. For **Hub address space**, enter **10.2.0.0/16**.
 
-10. Choose **New vWAN**.
+1. Choose **New vWAN**.
 
-11. In **Virtual WAN Name**, enter **Vwan-01**.
+1. In **Virtual WAN Name**, enter **Vwan-01**.
 
-12. Select **Next : Azure Firewall >**.
+1. Select **Next : Azure Firewall >**.
     
     ![Create new secured virtual hub - Basics tab](../media/AZ-700-firewall.png)
 
-13. Select **Next : Security Partner Provider >**.
+1. Select **Next : Security Partner Provider >**.
 
-14. Select **Next : Review + create >**
+1. Select **Next : Review + create >**
 
-15. Select **Create**.
+1. Select **Create**.
 
     >**NOTE** : This can take up to 30 minutes to deploy.
 
-16. When the deployment completes, from the Azure portal home page, select **All services**.
+1. When the deployment completes, from the Azure portal home page, select **All services**.
 
-17. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+1. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
-18. On the **Firewall Manager** page, select **Virtual hubs**.
+1. On the **Firewall Manager** page, select **Virtual hubs**.
 
-19. Select **Hub-01**.
+1. Select **Hub-01**.
 
-20. Select **Public IP configuration** under **Azure Firewall**, from the left-hand navigation pane.
+1. Select **Public IP configuration** under **Azure Firewall**, from the left-hand navigation pane.
 
-21. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
+1. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -156,7 +157,8 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 9. Select **Create**.
    
-10. Repeat steps 4 to 9 above to create another similar connection but using the **Connection name** of **hub-spoke-02** to connect the **Virtual network** of **Spoke-02**
+10. Repeat steps 4 to 9 above to create another similar connection but using the **Connection name** of **hub-spoke-02** to connect the **Virtual network** of 
+    **Spoke-02**
 
 ### Task 4: Deploy the servers
 
@@ -216,7 +218,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 1. On **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-5. Under **Policy details**, for the **Name**, enter **Policy-01**.
+1. Under **Policy details**, for the **Name**, enter **Policy-01**.
 
 1. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
 
