@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 
 ### Architecture Diagram
 
-![](media/M5-U4.png) 
+![](media/new5-4.png) 
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/5fa4ae69-5f06-4d10-878b-2696cba5c94c) if you want to go through detailed guide prior to launching lab environment.
 
