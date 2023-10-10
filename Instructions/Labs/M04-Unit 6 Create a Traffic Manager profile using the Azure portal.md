@@ -78,7 +78,7 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Traffic Manager profile** and select **Traffic Manager profile** under services that appears in the results under **Services**.
 
-1. On **Load balancing | Traffic Manager** page, select **Create**.
+1. On **Load balancing | Traffic Manager** page, select **+ Create**.
 
 1. On the **Create Traffic Manager profile** page, use the information in the table below to create the Traffic Manager profile.
 
