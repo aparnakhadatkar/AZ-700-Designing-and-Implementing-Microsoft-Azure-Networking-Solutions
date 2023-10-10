@@ -44,7 +44,6 @@ In this lab, you will complete the following tasks:
 
    ![Azure Portal search for application gateway](../media/l5u4-2.png)
 
-   
 1. In Create virtual network, enter, or select the following information:
 
    | **Setting**       | **Value**                          |
@@ -83,7 +82,6 @@ In this lab, you will complete the following tasks:
 
     ![Azure Portal search for application gateway](../media/l5u4-2-3.png)
 
- 
 1. On the **Add a backend pool** window, select **Add** to save the backend pool configuration and return to the **Backends** tab.
 
 1. On the **Backends** tab, select **Next: Configuration**.
@@ -102,7 +100,6 @@ In this lab, you will complete the following tasks:
 
     ![Azure Portal search for application gateway](../media/l5u4-2-4.png)
 
-    
 1. On the **Listener** tab, enter or select the following information:
 
     | **Setting**   | **Value**         |
@@ -112,7 +109,6 @@ In this lab, you will complete the following tasks:
     |||
 
     ![Azure Portal search for application gateway](../media/l5u4-2-5.png)
-
 
 1. Accept the default values for the other settings on the **Listener** tab.
 
@@ -187,7 +183,6 @@ In this lab, you will complete the following tasks:
    ![](../media/unit6-image2.png)
 
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
-
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **backend.json** and **backend.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M05**.
 
