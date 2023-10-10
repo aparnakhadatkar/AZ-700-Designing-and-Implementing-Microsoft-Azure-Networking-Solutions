@@ -22,7 +22,8 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ![](../Lab-Scenario-Preview/media/M5-U4.png)    
+  ![](../Lab-Scenario-Preview/media/new5-4.png) 
+
 
 ## Task 1: Create an application gateway
 
