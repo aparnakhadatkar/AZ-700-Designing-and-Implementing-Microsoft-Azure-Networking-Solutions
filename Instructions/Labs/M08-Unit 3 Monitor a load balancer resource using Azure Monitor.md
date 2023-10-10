@@ -408,7 +408,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 11: Use Functional Dependency View
 
-1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer**.
 
 1. From the left-hand navigation pane, under **Monitoring**, select **Insights**.
 
