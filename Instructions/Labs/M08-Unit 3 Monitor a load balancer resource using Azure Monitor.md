@@ -76,13 +76,11 @@ In this section, you will create a virtual network and a subnet.
 
    >**Note:** The deployment will take time.
 
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Create the load balancer
 
@@ -97,7 +95,6 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
       | **Setting**           | **Value**                |
       | --------------------- | ------------------------ |
-      |          |             | 
       | Subscription          | Select your subscription |
       | Resource group        | Select IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>              |
       | Name                  | **myIntLoadBalancer**    |
@@ -122,11 +119,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    
 1. Select **Create**.
 
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Create a backend pool
 
@@ -146,12 +143,11 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 1. Select **Save**.
 
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 4: Create a health probe
 
@@ -172,13 +168,12 @@ The load balancer monitors the status of your app with a health probe. The healt
 1. Select **Save**.
 
    ![Show health probe created in load balancer](../media/create-healthprobe.png)
-
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+ 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 5: Create a load balancer rule
@@ -206,7 +201,6 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 1. Select **Save**.
 
 ### Task 6: Create backend servers
-
 
 In this section, you will create three VMs for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
 
@@ -241,6 +235,12 @@ In this section, you will create three VMs for the backend pool of the load bala
    > **Note:** This will take several minutes to deploy and and you will be prompted to provide password for three times for 
     each VM deployment. When deployment completed, close the powershell.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 7: Add VMs to the backend pool
 
 1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer** from the resources list.
@@ -253,7 +253,6 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. On the **myBackendPool** page, select **Save**.
  
-
 ### Task 8: Install IIS on the VMs
 
 1. On the Azure portal home page, search for **Virtual machines**, select **Virtual machines**, select **myVM1**.
@@ -271,6 +270,8 @@ In this section, you will create three VMs for the backend pool of the load bala
 1. If a **Networks** pane appears, select **Yes**. Minimize the **Server Manager** page.
 
 1. Select the **Windows Start icon** in the bottom left corner of the window, then select the **Windows PowerShell** tile.
+
+    **Note** : Kindly use **>>** icon clipboard within bastion session to copy and paste the commands into poweeshell.
 
 1. To install IIS, run the following command in PowerShell: 
 
@@ -340,6 +341,12 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Wait for this last VM to be deployed before moving forward with the next task.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Task 9.2: Connect to the test VM to test the load balancer
 
 1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer** from the resources list.
@@ -393,6 +400,12 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select **Review + Create**, then select **Create**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 11: Use Functional Dependency View
 
 1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer**.
@@ -407,11 +420,11 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
-<!-- 1. To download a .SVG file copy of the topology diagram, select **Download topology**, and save the file in your **Downloads** folder. 
+1. To download a .SVG file copy of the topology diagram, select **Download topology**, and save the file in your **Downloads** folder. 
 
 1. In the top right corner, select **View metrics** to reopen the metrics pane on the right-hand side of the screen.
 
-1. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts. -->
+1. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts. 
 
 ### Task 12: View detailed metrics
 
