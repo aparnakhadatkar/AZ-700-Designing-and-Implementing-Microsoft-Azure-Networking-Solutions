@@ -60,7 +60,7 @@ In this section, you will create two instances of a web application deployed in 
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
-1. On the Azure home page, select **All services**, in the left navigation menu, select **Web**, and then select **App Services**.
+1. On the Azure home page, locate the search bar at the top of the page. Search for **App Services** and select **App Services** under services that appears in the results under **Services**.
 
 1. You should see the two new web apps listed.
 
