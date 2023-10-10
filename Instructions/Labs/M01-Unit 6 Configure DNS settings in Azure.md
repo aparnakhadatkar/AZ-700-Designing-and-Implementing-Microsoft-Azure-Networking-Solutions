@@ -133,7 +133,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   **Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
+   **Important**: Please replace ContosoResourceGroup-[DID] with the deployment **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
    $RGName = "ContosoResourceGroup-[DID]"
@@ -141,7 +141,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
-   **Important**: Please replace [DID] with the deployment ID i.e **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
+    **Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
