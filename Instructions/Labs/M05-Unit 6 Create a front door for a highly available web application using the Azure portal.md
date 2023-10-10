@@ -72,7 +72,8 @@ This exercise requires two instances of a web application that run in different 
    ![Web App](../media/l5u6-4.png)
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
-   ‎It might take several minutes for the deployment to complete.
+
+   **Note**: ‎It might take several minutes for the deployment to complete.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
