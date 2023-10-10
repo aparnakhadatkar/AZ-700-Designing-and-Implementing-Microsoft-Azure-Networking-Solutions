@@ -73,7 +73,7 @@ In this lab, you will complete the following tasks:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
    ``` 
 
-   **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!!
+   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -102,7 +102,7 @@ In this lab, you will complete the following tasks:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
-    **Note**: You will be prompted to provide an Admin password, enter Pa55w.rd!! 
+    **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -130,7 +130,7 @@ In this lab, you will complete the following tasks:
 1. On **CoreServicesVM**, select **Connect**.
 1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 1. Save the RDP file to your desktop.
-1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment.
+1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and Admin password, enter **Pa55w.rd!!**
 1. On both VMs, in **Networks**, select **Yes**.
 1. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
 1. Note the IPv4 address. 

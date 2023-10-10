@@ -34,6 +34,7 @@ In this section, you will create a virtual network and a subnet.
     ![](../media/VN.png)
 
 1. Select **Create** on the Virtual networks page.  
+
 1. On the **Basics** tab, use the information in the table below to create the virtual network.
 
    | **Setting**    | **Value**                                  |
@@ -42,7 +43,6 @@ In this section, you will create a virtual network and a subnet.
    | Resource group | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** |
    | Name           | **IntLB-VNet**                                                      |
    | Region         | **<inject key="Region" enableCopy="false"/>**                   |
-
 
 1. Select **Next** on the **Security** tab, under **BastionHost** select **Enable Azure Bastion**, then enter the information from the table below.
 
@@ -104,7 +104,6 @@ In this section, you will create three VMs, that will be in the same availabilit
    ![](../media/unit6-image2.png)
    
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
-
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04** folder into the Cloud Shell home directory one by one.
 
@@ -191,7 +190,6 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
 
-
 1. Under **IP configuration**, select **Add**.
 
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
@@ -216,7 +214,6 @@ The load balancer monitors the status of your app with a health probe. The healt
    | Path                | **/**             |
    | Interval            | **15**            |
    
-
 1. Select **Save**.
  
 ### Task 4.3: Create a load balancer rule
@@ -240,7 +237,6 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
    | Enable Floating IP     | **Disabled**             |
-
 
 1. Select **Save**.
  
@@ -273,7 +269,6 @@ In this section, you will create a test VM, and then test the load balancer.
    | Password             | **Provide a secure password**                |
    | Confirm password     | **Provide a secure password**                |
 
-
 1. Select **Next : Disks**, then select **Next : Networking**. 
 
 1. On the **Networking** tab, use the information in the table below to configure networking settings.
@@ -286,7 +281,6 @@ In this section, you will create a test VM, and then test the load balancer.
    | NIC network security group                                   | **Advanced**                  |
    | Configure network security group                             | Select the existing **myNSG** |
    | Load balancing options                                       | **None**                      |
-
 
 1. Select **Review + create**.
 

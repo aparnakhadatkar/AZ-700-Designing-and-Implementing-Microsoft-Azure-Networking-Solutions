@@ -44,8 +44,7 @@ In this lab, you will complete the following tasks:
 
 1. When you have finished filling out the fields, select **Review +Create**.
 
-
-   ![](../media/lab2-unit7-image2.png)
+     ![](../media/lab2-unit7-image2.png)
 
 1. Once validation passes, select **Create** to create the Virtual WAN.
 
