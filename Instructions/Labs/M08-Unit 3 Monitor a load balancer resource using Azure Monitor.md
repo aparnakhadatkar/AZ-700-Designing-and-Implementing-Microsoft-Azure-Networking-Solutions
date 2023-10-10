@@ -131,6 +131,8 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 1. On the Azure portal home page, select **All resources**, under **resources** section, select **myIntLoadBalancer** from the resources list.
 
+   ![](../media/unit4-image5.png)
+
 1. From left-hand navigation pane, under **Settings**, select **Backend pools**, and then select **+ Add**.
 
 1. On the **Add backend pool** page, enter the information from the table below.
