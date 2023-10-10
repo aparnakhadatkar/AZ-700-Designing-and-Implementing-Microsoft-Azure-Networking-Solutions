@@ -67,11 +67,9 @@ In this section, you will create two instances of a web application deployed in 
 
    ![Picture 19](../media/M0406.1.png)
 
- 
 ## Task 2: Create a Traffic Manager profile
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
-
 
 1. On the Azure portal locate the search bar at the top of the page. Search for **Traffic Manager profile** and select **Traffic Manager profile** under services that appears in the results under **Services**.
 
@@ -85,7 +83,6 @@ Now you will create a Traffic Manager profile that directs user traffic based on
    | Routing method          | **Priority**             |
    | Subscription            | Select your subscription |
    | Resource group          | **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**   |
-
 
 1. Select **Create**.
 
@@ -120,7 +117,6 @@ In this section, you will add the website in the East US as the primary endpoint
    | Target resource | **ContosoWebAppWestEurope (West Europe)** |
    | Priority        | **2**                                     |
 
-
 1. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
 1. Under **Settings**, select **Configuration**, and then update the Endpoint monitor settings **Protocol** to HTTPS and **Port** to 443 and select **Save**.
@@ -133,7 +129,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 In this section, you will check the DNS name of your Traffic Manager profile, and then you will configure the primary endpoint so that it is unavailable. You will then verify that the web app is still available, to test that the Traffic Manager profile is successfully sending traffic to the failover endpoint.
 
-1. On the ****Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**page, select **Overview**.
+1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, select **Overview**.
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
@@ -145,7 +141,8 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
      ![Picture 24](../media/M0406.7.png)
 
-1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
+1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from
+    **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
 
     ![Picture 24](../media/M0406.5.png)
    
