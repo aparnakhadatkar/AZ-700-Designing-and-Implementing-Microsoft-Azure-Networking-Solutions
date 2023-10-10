@@ -103,6 +103,8 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. On the Azure portal home page, select **All resources**, then select on **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
 
+   **Note**: Kindly refresh the page to find **Traffic manger**.
+
 1. Under **Settings**, select **Endpoints**, and then select **Add**.
 
     ![Picture 21](../media/create-tmendpoints-1.png)
