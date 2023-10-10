@@ -27,10 +27,9 @@ In this lab, you will complete the following tasks:
 ## Task 1: Create the virtual network
 
 In this section, you will create a virtual network and a subnet.
-   
-1. Log in to the Azure portal.
 
-1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the 
+    results under **Services**.
 
     ![](../media/VN.png)
 
@@ -50,13 +49,13 @@ In this section, you will create a virtual network and a subnet.
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
     | Bastion name                      | **myBastionHost**                             |
-    | Public IP address                 | Select **Create  new**  Name: **myBastionIP** |
+    | Public IP address                 | Select **Create a public IP address**  Name: **myBastionIP** |
 
 1. Select **ok**.
 
 1. Select **Next : IP Addresses**.
    
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space** and enter **10.1.0.0** in address space and **/16** in size field and select **+ Add subnet**.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add subnet**.
 
    ![](../media/L4U4-1.png)
 
@@ -86,6 +85,12 @@ In this section, you will create a virtual network and a subnet.
 
 1. Select **Create**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 2: Create backend servers
 
 In this section, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
@@ -98,38 +103,43 @@ In this section, you will create three VMs, that will be in the same availabilit
 
    ![](../media/unit6-image2.png)
    
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04** folder into the Cloud Shell home directory one by one.
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04** folder into the Cloud Shell home directory one by one.
 
      ![](../media/unit6-image3.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Important**: Please replace IntLB-RG with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
+   >**Important**: Please replace IntLB-RG-DID with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
 
    ```powershell
-   $RGName = "IntLB-RG"
+   $RGName = "IntLB-RG-DID"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
 
- 1.  You will be prompted to provide an admin password. provide adminPassword: <inject key="AzureAdUserPassword"></inject>.
+ 1.  You will be prompted to provide an admin password, provide adminPassword: Pa55w.rd!!
 
-   **Note**: It may take 5-10 min to create these three VMs. You do not have to wait until this job completes, you can continue with the next task.
+   **Note**: It may take 15-20 min to create these three VMs. Please wait until this job completes, and you will be prompted to provide password for three times for 
+    each VM deployment.
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Create the load balancer
 
 In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
 
-1. On the Azure portal home page, select **Create a resource**.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Load Balancer** and select **Load Balancer** under services that appears in the results under **Services**.
 
-1. On the search box at the top of the page, enter **Load Balancer**, then press **Enter** (**Note:** do not select one from the list).
-
-1. Select **+ Create**.
+1. Select **+ Create** on **Load balancing | Load Balancer** page.
 
 1. On the **Basics** tab, use the information in the table below to create the load balancer.
 
@@ -154,11 +164,19 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. Select **Review + create** and  **Create**.
 
+   **Note**: Wait for deployment to complete successfully.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 4: Create load balancer resources
 
 In this section, you will configure load balancer settings for a backend address pool, then create a health probe and a load balancer rule.
 
-### Create a backend pool and add VMs to the backend pool
+### Task 4.1: Create a backend pool and add VMs to the backend pool
 
 The backend address pool contains the IP addresses of the virtual NICs connected to the load balancer.
 
@@ -182,8 +200,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
    ![Picture 7](../media/add-vms-backendpool.png)
    
-
-### Create a health probe
+### Task 4.2: Create a health probe
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
 
@@ -202,11 +219,11 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 1. Select **Save**.
  
-### Create a load balancer rule
+### Task 4.3: Create a load balancer rule
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. From the **Backend pools** page of your load balancer, under **Settings**, select **Load balancing rules**, then Click on **+Add**.
+1. From the **myIntLoadBalancer | Health probes** page of your load balancer, under **Settings**, select **Load balancing rules**, then Click on **+Add**.
 
 1. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -227,14 +244,19 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 
 1. Select **Save**.
  
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Test the load balancer
 
 In this section, you will create a test VM, and then test the load balancer.
 
-### Create test VM
+### Task 5.1: Create test VM
 
-1. On the Azure portal home page, select **Create a resource**, then **virtual**, then select **Virtual machine** (if this resource type is not listed on the page, use the search box at the top of the page to search for it and select it).
+1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual machine** and select **Virtual machine** under services that appears in the results under **Services**.
 
 1. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
@@ -272,19 +294,19 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Wait for this last VM to be deployed before moving forward with the next task.
 
-### Connect to the test VM to test the load balancer
+### Task 5.2: Connect to the test VM to test the load balancer
 
 1. On the Azure portal home page, select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
-1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. Note: you may need to select **See more** in order to see the **Private IP address** field.
+1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard.
+
+   **Note**: you may need to select **See more** in order to see the **Private IP address** field.
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select on the **myTestVM** virtual machine that you just created.
 
-1. On the **Overview** page, select **Connect**, then **Bastion**.
+1. On the **Overview** page, select **Connect**, then **Go to bastion**.
 
-1. Select **Use Bastion**.
-
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created, then select **Connect**. If popup blocker is preventing the new window, allow popup blocker and **Connect** again.
+1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created, then select **Connect**. If popup blocker is preventing the new window, select **Always allow pop-ups and redirects from hhtps://portal.azure.com**  and **Connect** again.
 
 1. The **myTestVM** window will open in another browser tab.
 
@@ -303,6 +325,12 @@ In this section, you will create a test VM, and then test the load balancer.
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
     ![](../media/L4U4-4.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 

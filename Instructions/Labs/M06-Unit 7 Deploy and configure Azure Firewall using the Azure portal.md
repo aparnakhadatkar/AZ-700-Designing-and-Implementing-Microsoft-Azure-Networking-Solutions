@@ -56,7 +56,7 @@ In this task, you will create a single virtual network with two subnets.
     | Subnet size      | **/26** |
     |||
 
-    ![](../media/l6u7-1.png)
+    ![](../media/lab6-1.png)
 
 1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
@@ -73,6 +73,13 @@ In this task, you will create a single virtual network with two subnets.
    
 1. Select **Review + create** and  **Create**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ## Task 2: Create a virtual machine
 
 In this task, you will create the workload virtual machine and place it in the Workload-SN subnet created previously.
@@ -87,7 +94,9 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
 
-1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files 
+   **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and- 
+   Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06**.
 
      ![](../media/unit6-image3.png)
 
@@ -119,7 +128,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
    ![](../media/l6u7-3.png)
   
-1. On the **Firewall** page, select **Create**.
+1. On the **Firewall** page, select **+ Create**.
 
 1. On the **Basics** tab, create a firewall using the information in the table below.
 
@@ -154,7 +163,13 @@ In this task, you will deploy the firewall into the virtual network with a firew
 1. Make a note of the address under **IP Address** for the **fw-pip** public IP configuration (e.g., **20.90.136.51**) you may need this in coming tasks.
 
     ![](../media/l6u7-5.png)
-   
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 4: Create a default route
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
@@ -181,11 +196,10 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate** and **OK**.
+1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK**.
 
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
-   | Subscription             | Select your subscription |
    | Virtual Network          | select **Test-FW-VN**    |
    | Subnet                   | **Workload-SN**          |
 
@@ -207,7 +221,14 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    
     ![](../media/l6u7-8.png)
 
- ## Task 5: Configure an application rule
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+ 
+## Task 5: Configure an application rule
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
@@ -243,7 +264,14 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. Select **Add**.
 
- ## Task 6: Configure a network rule
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
+## Task 6: Configure a network rule
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
@@ -274,6 +302,12 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 1. Select **Add**.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 7: Configure a Destination NAT (DNAT) rule
 
 In this task, you will add a DNAT rule that allows you to connect a remote desktop to the Srv-Work virtual machine through the firewall.
@@ -301,10 +335,15 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Translated port       | **3389**                                                     |
    |||
 
-​   
    ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
  ## Task 8: Change the primary and secondary DNS address for the server's network interface
 
@@ -328,6 +367,13 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Restart the **Srv-Work** virtual machine.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ## Task 9: Test the firewall
 
 In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
@@ -339,13 +385,13 @@ In this final task, you will test the firewall to verify that the rules are conf
     ![Add a network rule collection](../media/l6u7-12.png)
  
 1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **TestUser** and Password  
-   **Pa55w.rd!!** .
+   **Pa55w.rd!!**
 
 1. Select **OK**.
 
 1. Select **Yes** on the certificate message.
 
-1. Open Internet Explorer and browse to **https://www.google.com**.
+1. Open Internet Explorer and browse to **https://www.google.com**
 
 1. On the **Security Alert** dialog box, select **OK**.
 
@@ -355,7 +401,7 @@ In this final task, you will test the firewall to verify that the rules are conf
 
     ![RDP session on Srv-work server - browser on google.com](../media/L6U7-2.png)
 
-1. Browse to **https://www.microsoft.com**.
+1. Browse to **https://www.microsoft.com**
 
 1. You should be blocked by the firewall.
 

@@ -52,7 +52,8 @@ In this task, you will create the two spoke virtual networks each containing a s
 
     >**Note:** Delete any other address spaces listed here, such as 10.1.0.0/16.
 
-1. Under Subnet name, select the word default. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**. Change the **Starting address** to **10.0.1.0**. Select Subnet size : **/24(256 addresses)**.
+1. Under Subnet name, select the word default. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**. Change the **Starting address** to 
+   **10.0.1.0**. Select Subnet size : **/24(256 addresses)**.
 
 1. Select **Save**.
 
@@ -60,14 +61,21 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. Select **Create**.
 
-Repeat steps 1 to 12 above to create another similar virtual network and subnet but using the following information:
+1. Repeat steps 1 to 12 above to create another similar virtual network and subnet but using the following information:
 
-- Resource Group: Select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**
-- Name: **Spoke-02**
-- Address space: **10.1.0.0/16** - (delete any other listed address spaces)
-- Subnet name: **Workload-02-SN**
-- **Starting address**: **10.1.1.0**
-- **Select Subnet size** : **/24(256 addresses)**.
+    - Resource Group: Select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Virtual network name**: **Spoke-02**
+    - Address space: **10.1.0.0/16** - (delete any other listed address spaces)
+    - Subnet name: **Workload-02-SN**
+    - **Starting address**: **10.1.1.0**
+    - **Select Subnet size** : **/24(256 addresses)**.
+
+
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Create the secured virtual hub
 
@@ -77,49 +85,55 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
     ![All services](../media/AZ-700-allservices.png)
 
-2. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
+1. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-3. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
+1. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
 
-4. On the **Virtual hubs** page, select **+ Create new secured virtual hub**.
+1. On the **Virtual hubs** page, select **+ Create new secured virtual hub**.
 
     ![virtual hub](../media/AZ-700-virtualhubs.png)
 
-6. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
+1. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-7. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
+1. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
 
-8. For the **Secured virtual hub name**, enter **Hub-01**.
+1. For the **Secured virtual hub name**, enter **Hub-01**.
 
-9. For **Hub address space**, enter **10.2.0.0/16**.
+1. For **Hub address space**, enter **10.2.0.0/16**.
 
-10. Choose **New vWAN**.
+1. Choose **New vWAN**.
 
-11. In **Virtual WAN Name**, enter **Vwan-01**.
+1. In **Virtual WAN Name**, enter **Vwan-01**.
 
-12. Select **Next : Azure Firewall >**.
+1. Select **Next : Azure Firewall >**.
     
     ![Create new secured virtual hub - Basics tab](../media/AZ-700-firewall.png)
 
-13. Select **Next : Security Partner Provider >**.
+1. Select **Next : Security Partner Provider >**.
 
-14. Select **Next : Review + create >**
+1. Select **Next : Review + create >**
 
-15. Select **Create**.
+1. Select **Create**.
 
     >**NOTE** : This can take up to 30 minutes to deploy.
 
-16. When the deployment completes, from the Azure portal home page, select **All services**.
+1. When the deployment completes, from the Azure portal home page, select **All services**.
 
-17. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+1. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
-18. On the **Firewall Manager** page, select **Virtual hubs**.
+1. On the **Firewall Manager** page, select **Virtual hubs**.
 
-19. Select **Hub-01**.
+1. Select **Hub-01**.
 
-20. Select **Public IP configuration** under **Azure Firewall**, from the left-hand navigation pane.
+1. Select **Public IP configuration** under **Azure Firewall**, from the left-hand navigation pane.
 
-21. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
+1. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Connect the hub and spoke virtual networks
 
@@ -133,8 +147,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 4. Select **+ Add connection**.
 
-5. For **Connection name**, enter 
-**hub-spoke-01**.
+5. For **Connection name**, enter **hub-spoke-01**.
 
 6. For **Hubs**, select **Hub-01**.
 
@@ -144,7 +157,8 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 9. Select **Create**.
    
-10. Repeat steps 4 to 9 above to create another similar connection but using the connection name of **hub-spoke-02** to connect the **Spoke-02** virtual network.
+10. Repeat steps 4 to 9 above to create another similar connection but using the **Connection name** of **hub-spoke-02** to connect the **Virtual network** of 
+    **Spoke-02**
 
 ### Task 4: Deploy the servers
 
@@ -173,22 +187,30 @@ In this task you will connect the hub and spoke virtual networks. This is common
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
-1.  You will be prompted to provide an admin password. provide adminPassword: <inject key="AzureAdUserPassword"></inject>.
+1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-1. Select **Srv-workload-01** VM. On the **Overview** page of **Srv-workload-01**, in the right-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.0.1.4**), after this close it.
+1. Select **Srv-workload-01** VM. On the **Overview** page of **Srv-workload-01**, in the left-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.0.1.4**), after this close it.
 
     ![](../media/AZ-700-VM-01.png)
 
-1. Now, select **Srv-workload-02** VM. On the **Overview** page of **Srv-workload-02**, in the right-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.1.1.4**).
+1. Now, select **Srv-workload-02** VM. On the **Overview** page of **Srv-workload-02**, in the left-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.1.1.4**).
+
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 5: Create a firewall policy and secure your hub
 
 In this task you will first create your firewall policy, then secure your hub. The firewall policy will define collections of rules to direct traffic on one or more Secured virtual hubs.
 
 1. From the Azure portal home page, select **Firewall Manager**.
-   - If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+
+   **Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
 1. On **Firewall Manager** page, from the left-hand navigation pane, under security, select **Azure Firewall Policies**.
 
@@ -196,7 +218,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 1. On **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-5. Under **Policy details**, for the **Name**, enter **Policy-01**.
+1. Under **Policy details**, for the **Name**, enter **Policy-01**.
 
 1. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
 
@@ -299,13 +321,14 @@ In this task you will first create your firewall policy, then secure your hub. T
 In this task you will associate the firewall policy with the virtual hub.
 
 1. From the Azure portal home page, select **Firewall Manager**.
-   - If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+
+   **Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
 1. On **Firewall Manager**, under **Security**, select **Azure Firewall Policies**.
 
-1. Select the checkbox for **Policy-01**.
+1. Select the checkbox for **Policy-01** and  Select **Manage associations&gt;Associate hubs**.
 
-1. Select **Manage associations&gt;Associate hubs**.
+   ![](../media/lab6-2.png)
 
 1. Select the checkbox for **Hub-01**.
 
@@ -351,9 +374,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 1. Select **Connect**.
 
-   ![RDP connection to srv-workload-01](../media/rdp-srv-workload-01.png)
-
-1. On the **Enter your credentials** dialog box, log into the **Srv-workload-01** server virtual machine, by using the password you provided during deployment.
+1. On the **Enter your credentials** dialog box, log into the **Srv-workload-01** server virtual machine, by using the password **Pa55w.rd!!** provided during deployment.
 
 1. Select **OK**.
 
@@ -371,7 +392,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 1. You should see the Microsoft home page.
 
-    ![RDP session browsing microsoft.com](../media/microsoft-home-page.png)
+    ![RDP session browsing microsoft.com](../media/lab6-2.png)
 
 1. Browse to **https://www.google.com**.
 
@@ -391,7 +412,7 @@ In this task you will test the network rule to confirm that it works as expected
 
 1. On the **Computer** box, enter the **private IP address** of **Srv-workload-02** (e.g., **10.1.1.4**).
 
-1. On the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **TestUser**, and the password you provided during deployment.
+1. On the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **TestUser**, and the password **Pa55w.rd!!**
 
 1. Select **OK**.
 

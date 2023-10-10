@@ -35,20 +35,20 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                |
-   | Name             | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
+   | Resource group   | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**                |
+   | Name             | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/>** |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **Central US**.                                       |
-   | Windows Plan     | Select **Create new** and enter myAppServicePlanCentralUS in the text box. |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS** in the text box. |
    | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
    |||
 
    ![Web App](../media/l5u6-3.png)
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
-   ‎It might take several minutes for the deployment to complete.
+   ‎It might take 2 minutes for the deployment to complete.
 
 1. Create a second web app, on the Azure Portal home page, search  **WebApp**.
 
@@ -59,13 +59,13 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>               |
-   | Name             | WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
+   | Resource group   | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**               |
+   | Name             | **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/>** |
    | Publish          | Select **Code**.                                             |
    | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US**.                                          |
-   | Windows Plan     | Select **Create new** and enter myAppServicePlanEastUS in the text box. |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanEastUS** in the text box. |
    | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
    |||
 
@@ -73,6 +73,13 @@ This exercise requires two instances of a web application that run in different 
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take several minutes for the deployment to complete.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ## Task 2: Create a Front Door for your application
 
@@ -93,13 +100,13 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
       | **Setting**             | **Value**                                    |
       | ----------------------- | -------------------------------------------- |
       | Subscription            | Select your subscription.                    |
-      | Resource group          | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>                  |
+      | Resource group          | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**                  |
       | Resource group location | Accept default setting                       |
-      | Name                    |FrontDoor<inject key="DeploymentID" enableCopy="false"/>   |
+      | Name                    | **FrontDoor<inject key="DeploymentID" enableCopy="false"/>**   |
       | Tier                    | Standard   |
       | Endpoint Name           | FDendpoint   |
-      | Origin Type             | App Service| 
-      | Origin host name        | WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> |
+      | Origin Type             | App Service | 
+      | Origin host name        | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/>** |
       |||
 
       ![Web App](../media/l5u6-7.png)
@@ -117,10 +124,10 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
    
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
-   | Name                    | default-origin-group                         |
-   | Origin type             | App service                                  |
-   | Host name               | Select WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
-   | Origin host header      | Select WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> |
+   | Name                    | **default-origin-group**                         |
+   | Origin type             | **App service**                                  |
+   | Host name               | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Origin host header      | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/>** |
    |||
    
    ![Web App](../media/l5u6-9.png)
@@ -129,6 +136,13 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 1. Select **Update**.
 
    ![Web App](../media/l5u6-(10).png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
  ## Task 3: View Azure Front Door in action
 

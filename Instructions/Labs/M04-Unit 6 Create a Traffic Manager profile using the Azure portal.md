@@ -67,18 +67,19 @@ In this section, you will create two instances of a web application deployed in 
 
    ![Picture 19](../media/M0406.1.png)
 
- 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ## Task 2: Create a Traffic Manager profile
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On the Azure portal home page, select **Create a resource**.
+1. On the Azure portal locate the search bar at the top of the page. Search for **Traffic Manager profile** and select **Traffic Manager profile** under services that appears in the results under **Services**.
 
-1. In the search box at the top of the page, enter **Traffic Manager profile**, and then select it from the pop-up list.
-
-1. Select **Create**.
-
-   ![Picture 20](../media/M0406.3.png)
+1. On **Load balancing | Traffic Manager** page, select **Create**.
 
 1. On the **Create Traffic Manager profile** page, use the information in the table below to create the Traffic Manager profile.
 
@@ -89,18 +90,23 @@ Now you will create a Traffic Manager profile that directs user traffic based on
    | Subscription            | Select your subscription |
    | Resource group          | **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**   |
 
-
 1. Select **Create**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Add Traffic Manager endpoints
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On the Azure portal home page, select **All resources**, then select on **Contoso-TMProfile** in the resources list.
+1. On the Azure portal home page, select **All resources**, then select on **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
 
 1. Under **Settings**, select **Endpoints**, and then select **Add**.
 
-   ![Picture 21](../media/create-tmendpoints-1.png)
+    ![Picture 21](../media/create-tmendpoints-1.png)
 
 1. On the **Add endpoint** page, enter the information from the table below.
 
@@ -123,7 +129,6 @@ In this section, you will add the website in the East US as the primary endpoint
    | Target resource | **ContosoWebAppWestEurope (West Europe)** |
    | Priority        | **2**                                     |
 
-
 1. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
 1. Under **Settings**, select **Configuration**, and then update the Endpoint monitor settings **Protocol** to HTTPS and **Port** to 443 and select **Save**.
@@ -132,51 +137,58 @@ In this section, you will add the website in the East US as the primary endpoint
 
    ![Picture 22](../media/M04u06.4.png)
 
- 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 4: Test the Traffic Manager profile
 
 In this section, you will check the DNS name of your Traffic Manager profile, and then you will configure the primary endpoint so that it is unavailable. You will then verify that the web app is still available, to test that the Traffic Manager profile is successfully sending traffic to the failover endpoint.
 
-1. On the **Contoso-TMProfile** page, select **Overview**.
+1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, select **Overview**.
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
-   ![Picture 23](../media/check-dnsname-1.png)
+    ![Picture 23](../media/check-dnsname-1.png)
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
 1. If you encounter **your coneection isn't private**. click on **advanced** and then click on link provide.
 
-   ![Picture 24](../media/M0406.7.png)
+     ![Picture 24](../media/M0406.7.png)
 
-  
-1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
+1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from
+    **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
 
-
-
-   ![Picture 24](../media/M0406.5.png)
+    ![Picture 24](../media/M0406.5.png)
    
-
 1. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
 1. To test the failover endpoint is working properly, you need to disable the primary site.
 
-1. On the **Contoso-TMProfile** page, on the overview screen, select **myPrimaryEndpoint**.
+1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, on the overview screen, select **myPrimaryEndpoint**.
 
 1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled**, and then select **Save**.
 
-   ![Picture 25](../media/M0406.8.png)
+    ![Picture 25](../media/M0406.8.png)
 
 1. Close the **myPrimaryEndpoint** page (select the **X** in the top right corner of the page).
 
-1. On the **Contoso-TMProfile** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
+1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
 
 1. Open a new web browser session, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
 1. Verify that the web app is still responding. As the primary endpoint was not available, the traffic was instead routed to the failover endpoint to allow the web site to still function.
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
 In this lab, you have completed:
