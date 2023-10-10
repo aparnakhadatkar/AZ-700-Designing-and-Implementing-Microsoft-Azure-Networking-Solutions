@@ -24,7 +24,8 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
- ![](../Lab-Scenario-Preview/media/m6-u7-1.png)
+ ![](../Lab-Scenario-Preview/media/new6-7.png) 
+
    
 ## Task 1: Create a virtual network and subnets
 
