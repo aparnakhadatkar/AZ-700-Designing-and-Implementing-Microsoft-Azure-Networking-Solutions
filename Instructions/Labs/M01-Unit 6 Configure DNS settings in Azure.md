@@ -40,11 +40,9 @@ In this lab, you will complete the following tasks:
 
 1. Verify that the zone has been created.
 
-1. Click on **Go-to Resource** 
-
 ### Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings**, select **Virtual network links** and on Contoso.com | Virtual network links page, select **+ Add**.
+1. In Contoso.com, under **Settings** section, select **Virtual network links** and on **Contoso.com | Virtual network links** page, select **+ Add**.
 
    ![](../media/unit6-links.png)
 
@@ -59,7 +57,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select **OK**.
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
+   **Note**: Please Wait for 2 mins to successfully create virtual network link.
    
 1. Select **Refresh**.
 
@@ -76,7 +74,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select OK.
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
+   **Note**: Please Wait for 2 mins to successfully create virtual network link.
 
 1. Select **Refresh**.
 
@@ -93,7 +91,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select OK.
   
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
+   **Note**: Please Wait for 2 mins to successfully create virtual network link.
 
 1. Select **Refresh**.
 
