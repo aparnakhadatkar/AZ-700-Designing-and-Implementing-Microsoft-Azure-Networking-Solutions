@@ -30,7 +30,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create a virtual network
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network**, and then select **Virtual network** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network**, and then select **Virtual 
+   network** under services.
 
 1. Select **+ Create**.
 
@@ -67,7 +68,8 @@ In this lab, you will complete the following tasks:
 
 Service endpoints are enabled per service, per subnet. Create a subnet and enable a service endpoint for the subnet.
 
-1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select it.
+1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select 
+   it.
 
 1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture:
    
@@ -91,7 +93,8 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 By default, all VMs in a subnet can communicate with all resources. You can limit communication to and from all resources in a subnet by creating a network security group and associating it to the subnet.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **security group**. When **Network Security groups** appears in the search results, select it.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **security group**. When **Network Security groups** 
+   appears in the search results, select it.
 
 1. In Network security groups, select **+ Create**. 
 
@@ -239,7 +242,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Select **+ Add existing virtual network**.
 
-1. Under **Add networks**, select the following values and select **Add**.
+1. Under **Add networks**, select the following values and select **Add**. 
    
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
