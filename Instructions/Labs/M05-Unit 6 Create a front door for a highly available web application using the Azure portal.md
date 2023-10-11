@@ -28,7 +28,7 @@ This exercise requires two instances of a web application that run in different 
 
 1. Select **+ Create**  and then select **Web App** to create a Web App.
 
-     ![Web App](../media/l5u6-2.png)
+     ![Web App](../media/create.png)
 
 1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
 
