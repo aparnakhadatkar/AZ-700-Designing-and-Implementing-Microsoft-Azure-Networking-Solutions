@@ -233,13 +233,13 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
-1. On the Azure portal home page, select **All resources**.
+1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**.
 
     ![](../media/l6u7-9.png)
 
 1. In the list of resources, select your firewall policy, **fw-test-pol**.
 
-1. Under **Settings**, select **Application Rules**.
+1. Under **Settings** section, select **Application Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -276,7 +276,7 @@ In this task, you will add an application rule that allows outbound access to ww
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
-1. On the **fw-test-pol** page, under **Settings**, select **Network Rules**.
+1. On the **fw-test-pol** page, under **Settings** section, select **Network Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -313,7 +313,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 In this task, you will add a DNAT rule that allows you to connect a remote desktop to the Srv-Work virtual machine through the firewall.
 
-1. On the **fw-test-pol** page, under **Settings**, select **DNAT Rules**.
+1. On the **fw-test-pol** page, under **Settings** section, select **DNAT Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -350,11 +350,11 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
-1. On the Azure portal locate the search bar at the top of the page. Search and select **Resource groups**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Resource groups**, and then select **Resource groups** under services.
 
 1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
+1. In the list of resources in this resource group, select the **Network interface** for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
 
 1. Under **Settings**, select **DNS servers**.
 
