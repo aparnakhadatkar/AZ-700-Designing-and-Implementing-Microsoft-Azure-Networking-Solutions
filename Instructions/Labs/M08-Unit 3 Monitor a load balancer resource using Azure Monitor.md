@@ -357,7 +357,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 #### Task 9.2: Connect to the test VM to test the load balancer
 
-1. On the Azure portal home page, from top left corner of page **click Show portal** menu and select **All resources**, under **Resources**, select 
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**, select 
    **myIntLoadBalancer** from the resources list.
 
 1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. 
@@ -397,7 +397,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 10: Create a Log Analytics Workspace
 
-1. On the Azure home page, in **Search resources, services, and docs**, enter **Log Analytics**, and select **Log Analytics workspaces** from the filtered list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Log Analytics**, and then select **Log Analytics workspaces** under services.
 
 1. Select **+ Create**. 
 
@@ -420,7 +420,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 11: Use Functional Dependency View
 
-1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**, select 
+   **myIntLoadBalancer**.
 
 1. From the left-hand navigation pane, under **Monitoring**, select **Insights**.
 
@@ -469,7 +470,7 @@ In this section, you will create a test VM, and then test the load balancer.
  
 ### Task 14: Configure diagnostic settings
 
-1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and under **Resources**, select **myIntLoadBalancer**.
 
 1. From left-hand navigation menu, under **Monitoring**, select **Diagnostic settings**, then select **+ Add diagnostic setting**.
 
