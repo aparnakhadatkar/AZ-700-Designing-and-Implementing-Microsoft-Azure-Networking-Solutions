@@ -408,7 +408,8 @@ In this task you will test the application rule to confirm that it works as expe
 
 In this task you will test the network rule to confirm that it works as expected.
 
-1. While still logged in to the **Srv-workload-01** RDP session, from this remote computer, open **Remote Desktop Connection**.
+1. While still logged in to the **Srv-workload-01** RDP session, from this **Srv-workload-01** remote session, from start menu search and open **Remote Desktop 
+   Connection**.
 
 1. On the **Computer** box, enter the **private IP address** of **Srv-workload-02** (e.g., **10.1.1.4**).
 
