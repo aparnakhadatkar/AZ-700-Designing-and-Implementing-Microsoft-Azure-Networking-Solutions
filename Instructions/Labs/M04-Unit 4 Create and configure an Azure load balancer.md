@@ -28,8 +28,7 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create a virtual network and a subnet.
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the 
-    results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
 
     ![](../media/VN.png)
 
@@ -136,7 +135,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Load Balancer** and select **Load Balancer** under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancer**, and then select **Load Balancer** under services.
 
 1. Select **+ Create** on **Load balancing | Load Balancer** page.
 
@@ -254,7 +253,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 5.1: Create test VM
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual machine** and select **Virtual machine** under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machine**, and then select **Virtual 
+   machine** under services.
 
 1. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
