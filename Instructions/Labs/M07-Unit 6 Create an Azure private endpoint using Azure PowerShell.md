@@ -376,7 +376,8 @@ In this section you'll create and configure the private DNS zone using:
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Resource groups**, and then select **Resource groups** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
+   groups** under services.
 
 1. Select **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
