@@ -31,7 +31,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a single virtual network with two subnets.
 
-1. On the Azure portal home page, in the search box, enter **Virtual network** and select **Virtual Network** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network**, and then select **Virtual network** under services.
 
 1. Select **+ Create**.
 
