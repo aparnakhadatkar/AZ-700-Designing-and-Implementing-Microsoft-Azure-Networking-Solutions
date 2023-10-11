@@ -70,7 +70,7 @@ In this section, you will create a virtual network and a subnet.
 
     ![](../media/L4U4-2.png)
    
-1. On the Create virtual network of **IP address** tab select **Add subnet**, specify the following and select **Add**.
+1. On the Create virtual network of **IP address** tab select **+ Add subnet**, on **Add a subnet** blade specify the following and select **Add**.
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
@@ -179,9 +179,11 @@ In this section, you will configure load balancer settings for a backend address
 
 The backend address pool contains the IP addresses of the virtual NICs connected to the load balancer.
 
-1. On the Azure portal home page, select **All resources**, then select on **myIntLoadBalancer** from the resources list.
+1. On the Azure portal, from top left corner of page click **Show portal menu** and select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
-1. Under **Settings**, select **Backend pools**, and then select **Add**.
+    ![](../media/unit4-image5.png)
+
+1. On **myIntLoadBalancer** blade, Under **Settings** section, select **Backend pools**, and then select **Add**.
 
 1. On the **Add backend pool** page, enter the information from the table below.
 
@@ -202,7 +204,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
 
-1. Under **Settings**, select **Health probes**, then select **Add**.
+1. From **myIntLoadBalancer | Backend pools** blade, under **Settings** section, select **Health probes**, then select **Add**.
 
 1. On the **Add health probe** page, enter the information from the table below.
 
@@ -220,7 +222,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. From the **myIntLoadBalancer | Health probes** page of your load balancer, under **Settings**, select **Load balancing rules**, then Click on **+Add**.
+1. From the **myIntLoadBalancer | Health probes** page of your load balancer, under **Settings** section, select **Load balancing rules**, then click on **+ Add**.
 
 1. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -290,7 +292,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 5.2: Connect to the test VM to test the load balancer
 
-1. On the Azure portal home page, select **All resources**, then select on **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
 1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard.
 
@@ -300,7 +302,10 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the **Overview** page, select **Connect**, then **Go to bastion**.
 
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created, then select **Connect**. If popup blocker is preventing the new window, select **Always allow pop-ups and redirects from hhtps://portal.azure.com**  and **Connect** again.
+1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment, then select **Connect**.
+  
+   **Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
+   **Done**, repeat step-5.
 
 1. The **myTestVM** window will open in another browser tab.
 
