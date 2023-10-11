@@ -32,7 +32,7 @@ In this part of the lab, you will create the spoke virtual networks and subnets 
 
 In this task, you will create the two spoke virtual networks each containing a subnet that will host your workload servers. 
 
-1. On the Azure portal home page, in the search box, enter **virtual network** and select **Virtual Network** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **virtual network**, and then select **virtual network** under services.
 
 1. Select **+ Create**.
 
@@ -81,7 +81,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 In this task you will create your secured virtual hub using Firewall Manager.
 
-1. From the Azure portal home page, select **All services**.
+1. From the Azure portal home page, from top left corner of page click **Show portal menu**, select **All services**.
 
     ![All services](../media/AZ-700-allservices.png)
 
@@ -139,7 +139,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 In this task you will connect the hub and spoke virtual networks. This is commonly known as peering.
 
-1. From the Azure portal home page, select **Resource groups**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Resource groups**, and then select **Resource groups** under services.
 
 2. Select the **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group, then select the **Vwan-01** virtual WAN under **Resources** section.
 
@@ -208,7 +208,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 In this task you will first create your firewall policy, then secure your hub. The firewall policy will define collections of rules to direct traffic on one or more Secured virtual hubs.
 
-1. From the Azure portal home page, select **Firewall Manager**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Firewall Manager**, and then select **Firewall Manager** under services.
 
    **Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
@@ -320,7 +320,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 In this task you will associate the firewall policy with the virtual hub.
 
-1. From the Azure portal home page, select **Firewall Manager**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Firewall Manager**, and then select **Firewall Manager** under services.
 
    **Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
@@ -364,7 +364,7 @@ In this part of the exercise, you will connect a remote desktop to the firewall 
 
 In this task you will test the application rule to confirm that it works as expected.
 
-1. On your Lab-VM, in the windows search bar, search and open **Remote Desktop Connection**.
+1. Within LabVM, from the start menu search and open **Remote Desktop Connection**.
 
 1. On the **Computer** box, enter the **firewall's public IP address** (e.g., **51.143.226.18**).
 
