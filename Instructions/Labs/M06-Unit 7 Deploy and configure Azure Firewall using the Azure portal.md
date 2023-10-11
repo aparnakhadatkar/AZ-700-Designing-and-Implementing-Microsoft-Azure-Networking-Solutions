@@ -31,7 +31,8 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a single virtual network with two subnets.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network**, and then select **Virtual network** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network**, and then select **Virtual 
+   network** under services.
 
 1. Select **+ Create**.
 
@@ -125,7 +126,8 @@ In this task, you will create the workload virtual machine and place it in the W
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
-1. On the Azure portal home page, in the search box, enter **Firewall** and select **Firewall** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Firewall**, and then select **Firewall** under 
+   services.
 
    ![](../media/l6u7-3.png)
   
@@ -175,7 +177,8 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
-1. On the Azure portal home page, in the search box, enter **Route tables** and select **Route tables** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Route tables**, and then select **Route tables** 
+   under services.
 
      ![](../media/l6u7-6.png)
    
@@ -350,7 +353,8 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Resource groups**, and then select **Resource groups** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
+   groups** under services.
 
 1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
