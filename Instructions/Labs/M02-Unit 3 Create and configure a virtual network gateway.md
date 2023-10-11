@@ -152,7 +152,8 @@ In this lab, you will complete the following tasks:
 ##  Task 6: Create CoreServicesVnet Gateway
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
-   ![](../media/mod2-unit3-image1.png)
+
+    ![](../media/mod2-unit3-image1.png)
 
 1. In Virtual network gateways, select **+ Create**.
 
