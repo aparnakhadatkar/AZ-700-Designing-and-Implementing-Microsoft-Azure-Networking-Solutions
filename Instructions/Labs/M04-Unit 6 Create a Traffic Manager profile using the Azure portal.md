@@ -27,7 +27,7 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create two instances of a web application deployed in the two different Azure regions.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **WebApp**, and then select **App Services** under services.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under services.
 
    ![Web App](../media/l5u6-1.png)
 
@@ -66,7 +66,8 @@ In this section, you will create two instances of a web application deployed in 
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
-1. On the Azure home page, locate the search bar at the top of the page. Search for **App Services** and select **App Services** under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **App Services**, and then select **App Services** 
+   under services.
 
 1. You should see the two new web apps listed.
 
@@ -82,7 +83,8 @@ In this section, you will create two instances of a web application deployed in 
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Traffic Manager profile** and select **Traffic Manager profile** under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profile**, and then select **Traffic 
+   Manager profile** under services.
 
 1. On **Load balancing | Traffic Manager** page, select **+ Create**.
 
@@ -107,7 +109,7 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On the Azure portal home page, select **All resources**, then select on **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, then select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
 
    **Note**: Kindly refresh the page to find **Traffic manger**.
 
