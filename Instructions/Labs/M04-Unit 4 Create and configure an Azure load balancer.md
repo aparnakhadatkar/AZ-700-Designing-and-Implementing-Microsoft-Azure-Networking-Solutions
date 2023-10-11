@@ -294,15 +294,15 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
-1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard.
+1. On the **Overview** page, make a note in notepad of the **Private IP address**, or copy it to the clipboard.
 
    **Note**: you may need to select **See more** in order to see the **Private IP address** field.
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select on the **myTestVM** virtual machine that you just created.
 
-1. On the **Overview** page, select **Connect**, then **Go to bastion**.
+1. On the **Overview** page, select **Connect**, under Configured connection section, select **Go to Bastion**.
 
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment, then select **Connect**.
+1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment in task: 5.1, then select **Connect**.
   
    **Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
    **Done**, repeat step-5.
