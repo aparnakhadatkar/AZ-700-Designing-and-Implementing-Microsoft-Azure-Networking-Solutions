@@ -175,7 +175,6 @@ In this lab, you will complete the following tasks:
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
 
-
 1.  Select **Review + Create** and **Create**.
 
     **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 

@@ -138,7 +138,6 @@ In this step you will create a virtual machine, assign a public IP address to it
    | Key pair name         | **myvirtualmachine-ssh-key**                                 |
    | Public inbound ports  | Select None                                                  |
 
-
 1. Select **Review + create**.
 
 1. Select **Create**.

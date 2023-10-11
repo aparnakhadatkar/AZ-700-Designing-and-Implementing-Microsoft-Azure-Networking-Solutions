@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ‎![](../Lab-Scenario-Preview/media/M1-U6.png)
+  ‎![](../Lab-Scenario-Preview/media/new1-6.png)
 
 ### Task 1: Create a private DNS Zone
 
