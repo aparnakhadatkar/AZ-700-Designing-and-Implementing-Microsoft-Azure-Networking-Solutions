@@ -116,20 +116,20 @@ In this lab, you will complete the following tasks:
 
 ## Task 4: Connect to the Test VMs using RDP
 
-1. On the Azure Portal home page, select **Virtual Machines**.
+1. On the Azure Portal home page, search and select **Virtual Machines**.
 1. Select **ManufacturingVM**.
 1. On **ManufacturingVM**, select **Connect**.
 1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
    ![](../media/MFVM.png)
    
-1. Save the RDP file to your desktop.
-1. Connect to ManufacturingTestVM using the RDP file, and the username **TestUser** and the password you provided during deployment. After connecting, minimize the RDP session.
+1. Open the downloaded RDP file.
+1. Connect to ManufacturingTestVM using the RDP file, and enter the username **TestUser** and Admin password **Pa55w.rd!!** provided during deployment. After connecting, minimize the RDP session.
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **CoreServicesVM**.
 1. On **CoreServicesVM**, select **Connect**.
 1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
-1. Save the RDP file to your desktop.
+1. Open the downloaded RDP file.
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and Admin password, enter **Pa55w.rd!!**
 1. On both VMs, in **Networks**, select **Yes**.
 1. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
