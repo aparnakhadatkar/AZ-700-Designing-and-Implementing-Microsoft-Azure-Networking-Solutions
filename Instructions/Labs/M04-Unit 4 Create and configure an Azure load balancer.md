@@ -183,7 +183,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
     ![](../media/unit4-image5.png)
 
-1. On **myIntLoadBalancer** blade, Under **Settings** section, select **Backend pools**, and then select **Add**.
+1. On **myIntLoadBalancer** blade, under **Settings** section, select **Backend pools**, and then select **Add**.
 
 1. On the **Add backend pool** page, enter the information from the table below.
 
