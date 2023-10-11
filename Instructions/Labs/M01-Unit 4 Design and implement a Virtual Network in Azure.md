@@ -57,7 +57,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 1: Create the CoreServicesVnet virtual network and subnets
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
    
    ![](../media/VN.png)
 
