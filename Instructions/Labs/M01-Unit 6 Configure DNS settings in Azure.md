@@ -22,7 +22,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create a private DNS Zone
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Private DNS zones** and select **Private DNS zones** under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Private DNS zones**, and then select **Private DNS zones** under services.
+
   ‎![](../media/unit6-image(1).png)
 
 1. In Private DNS zones, select **+ Create**.
