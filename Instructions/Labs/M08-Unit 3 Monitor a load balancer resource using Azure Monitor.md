@@ -357,13 +357,14 @@ In this section, you will create a test VM, and then test the load balancer.
 
    >**Note:** you may have to select **See more** to see the **Private IP address**.
 
-1. Select **Home**, then on the Azure portal home page, select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
+1. Select **Home**, then on the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
 
 1. On the **Overview** page, select **Connect**, under **Configured connection** section, select **Go to Bastion**.
 
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you provided during deployment, then select **Connect**.
+1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment, then 
+   select **Connect**.
 
-   >**Note:** If an error appears, which says **A popup blocker is preventing new window from opening. Please allow popups and retry.** TOn the top of the page, select the box, which says **Always allows pop-ups and redirects from https://portal.azure.com**, and select **Done**. Repeat step-5.
+   >**Note:** If an error appears, which says **A popup blocker is preventing new window from opening. Please allow popups and retry.** On the top of the page, select the box, which says **Always allows pop-ups and redirects from https://portal.azure.com**, and select **Done**. Repeat step-5.
 
 1. The **myTestVM** window will open in another browser tab.
 
