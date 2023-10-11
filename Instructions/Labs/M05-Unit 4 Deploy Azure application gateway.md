@@ -27,7 +27,9 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create an application gateway
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Application gateway**, and then select **Application gateways** from the results.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Application gateway**, and then select **Application 
+   gateways** from the results.
+
     ![Azure Portal search for application gateway](../media/l5u4-1.png)    
 
 1. On the **Load balancing | Application Gateway** page, select **+ Create**.
@@ -147,7 +149,8 @@ In this lab, you will complete the following tasks:
 
     > **Note**:  It may take 5 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
    
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual networks**, and then select **Virtual networks** from the results.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual 
+   networks** from the results.
 
 1. On the Virtual networks page select **ContosoVNet**. 
  
