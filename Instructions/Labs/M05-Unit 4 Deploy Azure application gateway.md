@@ -216,7 +216,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 3: Add backend servers to backend pool
 
-1. On the Azure portal menu, from top left corner of page click **Show portal menu** and select **All resources**, then select **ContosoAppGateway**.
+1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**, then select **ContosoAppGateway**.
 
    ![](../media/unit4-image5.png)
    
