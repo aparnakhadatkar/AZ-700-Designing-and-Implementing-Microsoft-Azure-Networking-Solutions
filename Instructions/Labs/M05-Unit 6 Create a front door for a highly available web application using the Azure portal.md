@@ -54,7 +54,7 @@ This exercise requires two instances of a web application that run in different 
 1. Create a second web app,  in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under 
    services.
 
-1. 1. Select **+ Create**  and then select **Web App** to create a Web App.
+1. Select **+ Create**  and then select **Web App** to create a Web App.
 
 1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
 
@@ -75,7 +75,7 @@ This exercise requires two instances of a web application that run in different 
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
 
-   **Note**: ‎It might take several minutes for the deployment to complete.
+   **Note**: ‎Wait for deployment to complete it might take several minutes.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
