@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create and provision an ExpressRoute circuit
 
-1. On the Azure portal, select **+ Create a resource**, from left navigation pane select **Networking**, and on the **Marketplace** page in **ExpressRoute** pane select **Create** and **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
+1. On the Azure portal, select **+ Create a resource**, from left navigation pane select **Networking**, search for **ExpressRoute** and on the **Marketplace** page in **ExpressRoute** pane select **Create** and **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
 
    ![Azure portal - create ExpressRoute circuit menu](../media/express1.png)
 
