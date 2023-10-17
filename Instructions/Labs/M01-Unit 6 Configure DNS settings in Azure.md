@@ -22,8 +22,9 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create a private DNS Zone
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Private DNS zones** and select **Private DNS zones** under services that appears in the results under **Services**.
-  ‎![](../media/unit6-image(1).png)
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Private DNS zones**, and then select **Private DNS zones** under services.
+
+    ‎![](../media/unit6-image(1).png)
 
 1. In Private DNS zones, select **+ Create**.
 
@@ -40,11 +41,9 @@ In this lab, you will complete the following tasks:
 
 1. Verify that the zone has been created.
 
-1. Click on **Go-to Resource** 
-
 ### Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings**, select **Virtual network links** and on Contoso.com | Virtual network links page, select **+ Add**.
+1. In Contoso.com, under **Settings** section, select **Virtual network links** and on **Contoso.com | Virtual network links** page, select **+ Add**.
 
    ![](../media/unit6-links.png)
 
@@ -59,7 +58,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select **OK**.
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
+   **Note**: Please Wait for 2 mins to successfully create virtual network link.
    
 1. Select **Refresh**.
 
@@ -76,7 +75,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select OK.
 
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
+   **Note**: Please Wait for 2 mins to successfully create virtual network link.
 
 1. Select **Refresh**.
 
@@ -93,7 +92,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select OK.
   
-   **Note**: Please Wait for 2 mins to Successfully create virtual network link.
+   **Note**: Please Wait for 2 mins to successfully create virtual network link.
 
 1. Select **Refresh**.
 

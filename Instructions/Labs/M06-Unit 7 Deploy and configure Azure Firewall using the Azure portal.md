@@ -31,7 +31,8 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a single virtual network with two subnets.
 
-1. On the Azure portal home page, in the search box, enter **virtual network** and select **Virtual Network** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network**, and then select **Virtual 
+   network** under services.
 
 1. Select **+ Create**.
 
@@ -125,7 +126,8 @@ In this task, you will create the workload virtual machine and place it in the W
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
-1. On the Azure portal home page, in the search box, enter **Firewall** and select **Firewall** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Firewall**, and then select **Firewall** under 
+   services.
 
    ![](../media/l6u7-3.png)
   
@@ -175,7 +177,8 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
-1. On the Azure portal home page, in the search box, enter **Route tables** and select **Route tables** when it appears.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Route tables**, and then select **Route tables** 
+   under services.
 
      ![](../media/l6u7-6.png)
    
@@ -233,13 +236,13 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
-1. On the Azure portal home page, select **All resources**.
+1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**.
 
     ![](../media/l6u7-9.png)
 
 1. In the list of resources, select your firewall policy, **fw-test-pol**.
 
-1. Under **Settings**, select **Application Rules**.
+1. Under **Settings** section, select **Application Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -276,7 +279,7 @@ In this task, you will add an application rule that allows outbound access to ww
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
-1. On the **fw-test-pol** page, under **Settings**, select **Network Rules**.
+1. On the **fw-test-pol** page, under **Settings** section, select **Network Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -313,7 +316,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 In this task, you will add a DNAT rule that allows you to connect a remote desktop to the Srv-Work virtual machine through the firewall.
 
-1. On the **fw-test-pol** page, under **Settings**, select **DNAT Rules**.
+1. On the **fw-test-pol** page, under **Settings** section, select **DNAT Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -350,11 +353,12 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
-1. On the Azure portal locate the search bar at the top of the page. Search and select **Resource groups**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
+   groups** under services.
 
 1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In the list of resources in this resource group, select the network interface for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
+1. In the list of resources in this resource group, select the **Network interface** for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
 
 1. Under **Settings**, select **DNS servers**.
 

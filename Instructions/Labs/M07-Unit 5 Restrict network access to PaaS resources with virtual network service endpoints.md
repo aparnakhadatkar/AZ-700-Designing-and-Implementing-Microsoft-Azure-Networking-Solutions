@@ -30,9 +30,10 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create a virtual network
 
-1. On the Azure Portal home page, search for virtual network and then select **Virtual network** from the results.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network**, and then select **Virtual 
+   network** under services.
 
-1. Select **+** **Create**.
+1. Select **+ Create**.
 
 1. On the **Create virtual network** blade specify the following information:
  
@@ -51,7 +52,7 @@ In this lab, you will complete the following tasks:
    | DDoS Network Protection | Disabled  |
    | Firewall                | Disabled  |
 
-1. Select **Next IP Addresses** tab and specify the following values (select **default** to change the subnet name):
+1. Select **Next IP Addresses** tab and select **default** to change the subnet name, specify the following values:
 
    | **Setting**          | **Value**   |
    | -------------------- | ----------- |
@@ -73,7 +74,8 @@ In this lab, you will complete the following tasks:
 
 Service endpoints are enabled per service, per subnet. Create a subnet and enable a service endpoint for the subnet.
 
-1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select it.
+1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select 
+   it.
 
 1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture:
    
@@ -103,7 +105,8 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 By default, all VMs in a subnet can communicate with all resources. You can limit communication to and from all resources in a subnet by creating a network security group and associating it to the subnet.
 
-1. In the **Search resources, services, and docs** box at the top of the portal, enter **security group**. When **Network Security groups** appears in the search results, select it.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **security group**. When **Network Security groups** 
+   appears in the search results, select it.
 
 1. In Network security groups, select **+ Create**. 
 
@@ -120,7 +123,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 
 1. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
 
-1. Under **Settings**, select **Outbound security rules**.
+1. On the **ContosoPrivateNSG** page, under **Settings** section, select **Outbound security rules**.
 
 1. Select **+ Add**.
 
@@ -152,7 +155,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 
 Create another outbound security rule that denies communication to the internet. This rule overrides a default rule in all network security groups that allows outbound internet communication. 
 
-1. Select **+Add** under **Outbound security rules**.
+1. Select **+ Add** under **Outbound security rules**.
 
 1. Enter, or select, the following information:
  
@@ -223,7 +226,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 The steps necessary to restrict network access to resources created through Azure services enabled for service endpoints varies across services. See the documentation for individual services for specific steps for each service. The remainder of this exercise includes steps to restrict network access for an Azure Storage account, as an example.
 
-1. On the Azure portal, in the **Search resources, services, and docs** box at the top of the portal, search and select **Storage Account**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account**, and then select **Storage Account** under services.
 
 1. Select **+ Create**.
 
@@ -248,7 +251,8 @@ The steps necessary to restrict network access to resources created through Azur
 
 ## Task 7: Create a file share in the storage account
 
-1. On the Azure Portal in the **Search resources, services, and docs** box, at the top of the portal, search and select **Storage account**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account**, and then select **Storage 
+   Account** under services.
 
 1. From the list select **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account.
 
@@ -280,7 +284,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. Select **+ Add existing virtual network**.
 
-1. Under **Add networks**, select the following values and select **Add**.
+1. Under **Add networks**, select the following values and select **Add**. 
    
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
@@ -372,7 +376,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 ## Task 11: Confirm access is denied to storage account
 
-1. Enter ContosoPublic In the **Search resources, services, and docs** box at the top of the portal.
+1. Enter ContosoPublic in **Search resources, services and docs (G+/)**, box at the top of the portal.
 
 1. When **ContosoPublic** appears in the search results, select it.
 
@@ -390,7 +394,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. From your computer, browse to the Azure portal.
 
-1. On the Azure Portal in **Search resources, services, and docs** box. Search and select **Storage account** appears in the search results.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Storage account**, and then select **Storage account** under services.
 
 1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
 

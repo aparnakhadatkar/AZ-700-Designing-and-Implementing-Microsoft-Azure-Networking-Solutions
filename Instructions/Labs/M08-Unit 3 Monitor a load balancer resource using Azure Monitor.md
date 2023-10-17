@@ -38,7 +38,7 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create a virtual network and a subnet.
 
-1. On the Azure portal home page, in **Search resources, services and docs** search for **Virtual Networks** and select virtual networks.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
 
 1. Select **+ Create**.
 
@@ -86,7 +86,8 @@ In this section, you will create a virtual network and a subnet.
 
 In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
 
-1.  On the Azure home page, in the search bar, enter **Load Balancer** and select **Load Balancer**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancer**, and then select **Load Balancer** 
+   under services.
 
 1.  Select **+ Create** on the **Load Balancer** page.
 
@@ -129,11 +130,12 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 The backend address pool contains the IP addresses of the virtual NICs connected to the load balancer.
 
-1. On the Azure portal home page, select **All resources**, under **resources** section, select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, from top left corner of page **click Show portal** menu, select **All resources** under **resources** section, select 
+   **myIntLoadBalancer** from the resources list.
 
    ![](../media/unit4-image5.png)
 
-1. From left-hand navigation pane, under **Settings**, select **Backend pools**, and then select **+ Add**.
+1. On **myIntLoadBalancer** from left-hand navigation pane, under **Settings** section, select **Backend pools**, and then select **+ Add**.
 
 1. On the **Add backend pool** page, enter the information from the table below.
 
@@ -245,11 +247,13 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 ### Task 7: Add VMs to the backend pool
 
-1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, from top left corner of page click Show portal menu, select **All resources** and under **Resources**, select **myIntLoadBalancer** 
+   from the resources list.
 
-1. From the left-hand navigation pane, under **Settings**, select **Backend pools**, and then select **myBackendPool**.
+1. On the **myIntLoadBalancer** Load balancer page, from the left-hand navigation pane, under **Settings**, select **Backend pools** and then select 
+   **myBackendPool**.
 
-1. Under IP Configuration, click **+ Add**.
+1. Under **IP Configuration**, click **+ Add**.
   
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
 
@@ -257,7 +261,9 @@ In this section, you will create three VMs for the backend pool of the load bala
  
 ### Task 8: Install IIS on the VMs
 
-1. On the Azure portal home page, search for **Virtual machines**, select **Virtual machines**, select **myVM1**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machines**, and then select **Virtual machines** under services.
+
+1. select **myVM1**.
 
 1. On the **Overview** page, select **Connect**, under **Configured connection** section, select **Go to Bastion**.
 
@@ -307,7 +313,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 > **Note:** You may find slight differences between the instructions and the Azure portal interface, but the core concept is the same. 
 
-1. On the Azure home page, in **Search resources, services, and docs**, enter **Virtual Machines** and select virtual machines. 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machines**, and then select **Virtual machines** under services.
 
 1. Select **+ Create > Azure virtual machine**, on the **Basics** tab, use the information in the table below to create the first VM.
 
@@ -351,19 +357,21 @@ In this section, you will create a test VM, and then test the load balancer.
 
 #### Task 9.2: Connect to the test VM to test the load balancer
 
-1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**, select 
+   **myIntLoadBalancer** from the resources list.
 
 1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. 
 
    >**Note:** you may have to select **See more** to see the **Private IP address**.
 
-1. Select **Home**, then on the Azure portal home page, select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
+1. Select **Home**, then on the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
 
 1. On the **Overview** page, select **Connect**, under **Configured connection** section, select **Go to Bastion**.
 
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you provided during deployment, then select **Connect**.
+1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment, then 
+   select **Connect**.
 
-   >**Note:** If an error appears, which says **A popup blocker is preventing new window from opening. Please allow popups and retry.** TOn the top of the page, select the box, which says **Always allows pop-ups and redirects from https://portal.azure.com**, and select **Done**. Repeat step-5.
+   >**Note:** If an error appears, which says **A popup blocker is preventing new window from opening. Please allow popups and retry.** On the top of the page, select the box, which says **Always allows pop-ups and redirects from https://portal.azure.com**, and select **Done**. Repeat step-5.
 
 1. The **myTestVM** window will open in another browser tab.
 
@@ -372,6 +380,8 @@ In this section, you will create a test VM, and then test the load balancer.
 1. Select the **Internet Explorer** icon in the task bar to open the web browser.
 
 1. Select **OK** on the **Set up Internet Explorer 11** dialog box.
+
+1. Select **Close** on the Internet Explorer security alerts that may pop-up. 
 
 1. Enter (or paste) the **Private IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
 
@@ -387,7 +397,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 10: Create a Log Analytics Workspace
 
-1. On the Azure home page, in **Search resources, services, and docs**, enter **Log Analytics**, and select **Log Analytics workspaces** from the filtered list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Log Analytics**, and then select **Log Analytics workspaces** under services.
 
 1. Select **+ Create**. 
 
@@ -410,7 +420,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 11: Use Functional Dependency View
 
-1. On the Azure portal home page, select **All resources**, under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**, select 
+   **myIntLoadBalancer**.
 
 1. From the left-hand navigation pane, under **Monitoring**, select **Insights**.
 
@@ -459,7 +470,7 @@ In this section, you will create a test VM, and then test the load balancer.
  
 ### Task 14: Configure diagnostic settings
 
-1. On the Azure portal home page, under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and under **Resources**, select **myIntLoadBalancer**.
 
 1. From left-hand navigation menu, under **Monitoring**, select **Diagnostic settings**, then select **+ Add diagnostic setting**.
 

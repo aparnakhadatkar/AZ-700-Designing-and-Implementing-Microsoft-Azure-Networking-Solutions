@@ -57,9 +57,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 1: Create the CoreServicesVnet virtual network and subnets
 
-1. On the Azure portal locate the search bar at the top of the page. Search for **Virtual Networks** and select virtual networks under services that appears in the results under **Services**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
    
-   ![](../media/unit4-image.png)
+   ![](../media/VN.png)
 
 1. Select **+ Create** on the Virtual networks page. 
    
@@ -106,7 +106,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
- 1. Verify your configuration passed validation, Go back to virtual network and then again select **Create**.
+ 1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
 
     ![](../media/000001.png)
  
@@ -120,6 +120,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 2: Create the ManufacturingVnet virtual network and subnets
 
+1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ManufacturingVnet** virtual network and select **IP 
+   Address** tab.
+
    | **Tab**      | **Option**         | **Value**             |
    | ------------ | ------------------ | --------------------- |
    | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
@@ -127,27 +130,30 @@ These virtual networks and subnets are structured in a way that accommodates exi
    |              | Region             | (Europe) West Europe **Go to ip address tab**  |
 
 
-1. **Go to ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.   
+1. **Go to Ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.   
 
-   | **IP/Subnet**                | **Option**           | **Value**                 |
-   | ------------------------- | -------------------- | ------------------------- |
-   | IP Addresses              | IPv4 address space   | 10.30.0.0/16              |
-   | ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
-   |                           | Subnet address range | 10.30.10.0/24             |
-   | SensorSubnet1             | Subnet name          | SensorSubnet1             |
-   |                           | Subnet address range | 10.30.20.0/24             |
-   | SensorSubnet2             | Subnet name          | SensorSubnet2             |
-   |                           | Subnet address range | 10.30.21.0/24             |
-   | SensorSubnet3             | Subnet name          | SensorSubnet3             |
-   |                           | Subnet address range | 10.30.22.0/24             |
+    | **IP/Subnet**                | **Option**           | **Value**                 |
+    | ------------------------- | -------------------- | ------------------------- |
+    | IP Addresses              | IPv4 address space   | 10.30.0.0/16              |
+    | ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
+    |                           | Subnet address range | 10.30.10.0/24             |
+    | SensorSubnet1             | Subnet name          | SensorSubnet1             |
+    |                           | Subnet address range | 10.30.20.0/24             |
+    | SensorSubnet2             | Subnet name          | SensorSubnet2             |
+    |                           | Subnet address range | 10.30.21.0/24             |
+    | SensorSubnet3             | Subnet name          | SensorSubnet3             |
+    |                           | Subnet address range | 10.30.22.0/24             |
     
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Create the ResearchVnet virtual network and subnets
+
+1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ResearchVnet** virtual network and select **IP 
+   Address** tab.
 
    | **Tab**      | **Option**         | **Value**            |
    | ------------ | ------------------ | -------------------- |
@@ -155,9 +161,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
    |              | Name               | ResearchVnet         |
    |              | Region             | Southeast Asia       |
 
-1. **Go to ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.    
+1. **Go to Ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.    
 
-   | **IP/Subnet**           | **Option**           | **Value**            |
+   | **IP/Subnet**        | **Option**           | **Value**            |
    | -------------------- | -------------------- | -------------------- |
    | IP Addresses         | IPv4 address space   | 10.40.0.0/16         |
    | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
@@ -171,7 +177,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 4: Verify the creation of VNets and Subnets
 
-1. On the Azure portal home page, select **All resources**.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**.
 
    ![](../media/unit4-image5.png)
 
@@ -185,7 +191,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
    ![](../media/unit4-image6.png)
 
-1. Repeat steps 3 - 5 for each VNet.
+1. Repeat steps 3 - 5 and select **ManufacturingVnet**, and **ResearchVnet** Virtual Network to verify the subnets.
 
 ## Review
 

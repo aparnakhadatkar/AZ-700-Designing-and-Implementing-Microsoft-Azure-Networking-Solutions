@@ -88,7 +88,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![](../media/az-700u08.3.png)
 
-1. Save the RDP file to your desktop. If any arning pops-up in "edge downloads" select **keep**
+1. Save the RDP file to your desktop. If any warning pops-up in "edge downloads" select **keep**
 
 1. Connect to ManufacturingVM using the RDP file, and the username **TestUser** and the password **Pa$$w0rd1234** you provided during deployment.
 

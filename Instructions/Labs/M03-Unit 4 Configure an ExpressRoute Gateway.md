@@ -33,11 +33,14 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create the VNet and gateway subnet
 
-1. On any Azure Portal page, in **Search resources, services and docs**, enter **Virtual networks**, and then select **Virtual networks** from the results.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual 
+   networks** under services.
 
-1. On the Virtual networks page, select **+Create**.
+    ![](../media/VN.png)
+   
+1. On the Virtual networks page, select **+ Create**.
 
-1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
+1. On the **Create virtual networks** blade, on the **Basics** tab, use the information in the following table to create the VNet:
 
    | **Setting**          | **Value**                        |
    | -------------------- | -------------------------------- |
@@ -80,7 +83,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Create the virtual network gateway
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter virtual network gateway, and then select **Virtual network gateways** from the results.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
 1. On the Virtual network gateways page, select **+ Create**.
 

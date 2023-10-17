@@ -22,13 +22,14 @@ In this lab, you will complete the following tasks:
 
 This exercise requires two instances of a web application that run in different Azure regions. Both the web application instances run in Active/Active mode, so either one can take traffic. This configuration differs from an Active/Stand-By configuration, where one acts as a failover.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **WebApp**, and then select **App Services** under services.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under 
+   services.
 
    ![Web App](../media/l5u6-1.png)
 
 1. Select **+ Create**  and then select **Web App** to create a Web App.
 
-     ![Web App](../media/l5u6-2.png)
+     ![Web App](../media/create.png)
 
 1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
 
@@ -50,9 +51,10 @@ This exercise requires two instances of a web application that run in different 
 1. Select **Review + create**, review the Summary, and then select **Create**.   
    ‎It might take 2 minutes for the deployment to complete.
 
-1. Create a second web app, on the Azure Portal home page, search  **WebApp**.
+1. Create a second web app,  in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under 
+   services.
 
-1. Select **+ Create** to create a Web App.
+1. Select **+ Create**  and then select **Web App** to create a Web App.
 
 1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
 
@@ -73,7 +75,7 @@ This exercise requires two instances of a web application that run in different 
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
 
-   **Note**: ‎It might take several minutes for the deployment to complete.
+   **Note**: ‎Wait for deployment to complete it might take several minutes.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -86,7 +88,8 @@ This exercise requires two instances of a web application that run in different 
 
 Configure Azure Front Door to direct user traffic based on lowest latency between the two web apps servers. To begin, add a frontend host for Azure Front Door.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, Search for Front Door and CDN profiles, and then select **Front Door and CDN profiles**.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, Search for Front Door and CDN profiles, and then select 
+   **Front Door and CDN profiles**.
 
    ![Web App](../media/l5u6-5.png)
    

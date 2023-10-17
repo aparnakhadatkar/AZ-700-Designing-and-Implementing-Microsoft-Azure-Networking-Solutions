@@ -22,9 +22,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create a Virtual WAN
 
-1. From a browser, navigate to the Azure portal and sign in with your Azure account.
-
-1. In the portal, enter Virtual WAN into the search box and select **Virtual WANs** from the results list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual WANs**, and then select **Virtual WANs** under services.
 
    ![](../media/lab2-unit7-image1.png)
 

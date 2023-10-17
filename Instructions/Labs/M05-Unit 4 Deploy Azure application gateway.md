@@ -27,7 +27,9 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create an application gateway
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter application gateway, and then select **Application gateways** from the results.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Application gateway**, and then select **Application 
+   gateways** from the results.
+
     ![Azure Portal search for application gateway](../media/l5u4-1.png)    
 
 1. On the **Load balancing | Application Gateway** page, select **+ Create**.
@@ -44,7 +46,7 @@ In this lab, you will complete the following tasks:
    
    ![Azure Portal search for application gateway](../media/l5u4-2.png)
 
-1. In Create virtual network, enter, or select the following information:
+1. On Create virtual network, enter, or select the following information:
 
    | **Setting**       | **Value**                          |
    | ----------------- | ---------------------------------- |
@@ -140,13 +142,14 @@ In this lab, you will complete the following tasks:
 
     > **Note**:  It may take 5 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
    
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter Virtual networks, and then select **Virtual networks** from the results.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual 
+   networks** from the results.
 
 1. On the Virtual networks page select **ContosoVNet**. 
  
 1. On the ContosoVNet page from left side menu under Settings and click **Subnet**.
 
-1. On the ContosoVNet | Subnets page select **+ Subnet**. 
+1. On the **ContosoVNet | Subnets** page select **+ Subnet**. 
 
 1. On Add subnet page fill the follwing details(leave other field as default) and click on **save**.
 
@@ -189,7 +192,7 @@ In this lab, you will complete the following tasks:
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
-1. You will be prompted to provide an Admin password. Provide Admin password Password: Pa55w.rd!!
+1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa55w.rd!!**
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -203,13 +206,15 @@ In this lab, you will complete the following tasks:
 
 ## Task 3: Add backend servers to backend pool
 
-1. On the Azure portal menu, select **All resources** or search for and select All resources. Then select **ContosoAppGateway**.
+1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**, then select **ContosoAppGateway**.
 
-1. Under **Settings**, select **Backend pools**.
+   ![](../media/unit4-image5.png)
+   
+1. On the **ContosoAppGateway** blade, under **Settings** section, select **Backend pools**.
 
 1. Select **BackendPool**.
 
-1. On the Edit backend pool page, under **Backend targets**, in **Target type**, select **Virtual machine**.
+1. On the **Edit backend pool** page, under **Backend targets**, in **Target type**, select **Virtual machine**.
 
 1. Under **Target**, select **BackendVM1.nic.** 
 
