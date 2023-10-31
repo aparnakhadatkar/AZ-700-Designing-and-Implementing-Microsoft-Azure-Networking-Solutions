@@ -1,6 +1,6 @@
-# **Getting Started with Your SC-900: Microsoft Security, Compliance, and Identity Fundamentals Workshop**
+# **Getting Started with Your AZ-700: Designing and Implementing Microsoft Azure Networking Solutions Workshop**
  
-Welcome to your SC-900: Microsoft Security, Compliance, and Identity Fundamentals workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your AZ-700: Designing and Implementing Microsoft Azure Networking Solutions workshop! We've prepared a seamless environment for you to explore and learn about planning, implementing, and managing Azure networking solutions. Let's begin by making the most of this experience:
  
 ## **Accessing Your Lab Environment**
  
