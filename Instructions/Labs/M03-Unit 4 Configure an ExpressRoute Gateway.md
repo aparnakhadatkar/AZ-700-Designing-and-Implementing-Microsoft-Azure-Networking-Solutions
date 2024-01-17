@@ -28,7 +28,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-   ![](../Lab-Scenario-Preview/media/new3-4.png) 
+   ‎![](../media/az700-m3-unit4.png)
 
 
 ## Task 1: Create the VNet and gateway subnet
