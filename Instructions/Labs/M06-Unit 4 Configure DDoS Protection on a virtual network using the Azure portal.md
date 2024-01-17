@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
- ![Create virtual network - Security tab](../Lab-Scenario-Preview/media/M6-U4.png)
+ ‎![](../media/az700-m6-unit4.png)
 
 ## Task 1: Create a DDoS Protection plan
 
