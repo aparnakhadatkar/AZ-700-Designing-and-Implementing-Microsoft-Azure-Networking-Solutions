@@ -26,7 +26,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture Diagram
 
-  ![](../Lab-Scenario-Preview/media/new(7-5).png) 
+  ‎![](../media/az700-m7-unit5.png)
 
 ## Task 1: Create a virtual network
 

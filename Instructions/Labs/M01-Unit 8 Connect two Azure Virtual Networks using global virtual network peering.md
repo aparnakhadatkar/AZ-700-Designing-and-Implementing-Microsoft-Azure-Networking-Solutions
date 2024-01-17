@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-   ![](../Lab-Scenario-Preview/media/m1-u8-1.png)
+   ‎![](../media/az700-m1-unit8.png)
 
 ### Task 1: Create a Virtual Machine to test the configuration
 

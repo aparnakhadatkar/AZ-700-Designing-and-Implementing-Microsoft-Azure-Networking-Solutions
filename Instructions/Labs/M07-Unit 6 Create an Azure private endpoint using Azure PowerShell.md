@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
    
-   ![](../Lab-Scenario-Preview/media/new7-6.png) 
+   ‎![](../media/az700-m7-unit6.png)
 
 ## Task 1: Deploy the web app
 
