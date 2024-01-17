@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture Diagram
 
-  ![](../Lab-Scenario-Preview/media/m6-u9-1.png)
+  ‎![](../media/az700-m6-unit9.png)
 
 ## Exercise 1: Create a hub and spoke architecture
 
