@@ -19,8 +19,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ![Diagram ExpressRoute circuit layout for exercise](../media/environment-diagram01.png)
-
+  ‎![](../media/az700-m3-unit5.png)
 
 ## Task 1: Create and provision an ExpressRoute circuit
 
