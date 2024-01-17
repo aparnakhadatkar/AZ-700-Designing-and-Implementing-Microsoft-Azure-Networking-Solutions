@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 ## Estimated time: 70 minutes
 
 ## Architecture diagram
- ![](../Lab-Scenario-Preview/media/new2-3.png) 
+ !‎![](../media/az700-m2-unit3.png)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
