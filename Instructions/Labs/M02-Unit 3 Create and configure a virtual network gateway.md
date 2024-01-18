@@ -275,7 +275,7 @@ In this lab, you will complete the following tasks:
       | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
       | Connection type                | VNet-to-VNet                      |
       | Name                           | ManufacturingGW-to-CoreServicesGW |
-      | Location                       | West Europe                       |
+      | Location                       | North Europe                      |
 
 1. Select **Next: Settings >**
    
