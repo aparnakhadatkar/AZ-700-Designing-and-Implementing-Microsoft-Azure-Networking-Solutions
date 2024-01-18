@@ -302,7 +302,7 @@ In this lab, you will complete the following tasks:
 
     ![](../media/L2U3-1.png)
    
-    ![](../media/L2U3-2.png)
+    ![](../media/EM-1.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
