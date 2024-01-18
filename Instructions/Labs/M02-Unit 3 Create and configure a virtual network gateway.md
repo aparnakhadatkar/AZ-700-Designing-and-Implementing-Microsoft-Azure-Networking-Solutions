@@ -199,7 +199,7 @@ In this lab, you will complete the following tasks:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | Region                                      | West Europe                  |
+   |                 |                   | Region                                      | North Europe                 |
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | Gateway type                                | VPN                          |
