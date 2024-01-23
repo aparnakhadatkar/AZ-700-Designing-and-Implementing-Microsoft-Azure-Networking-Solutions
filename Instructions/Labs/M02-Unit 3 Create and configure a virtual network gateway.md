@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 ## Estimated time: 70 minutes
 
 ## Architecture diagram
- !‎![](../media/az700-m2-unit3.png)
+ ![](../media/az700-m2-unit3.png)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
@@ -216,7 +216,7 @@ In this lab, you will complete the following tasks:
 
 1.  Select **Review + Create** and **Create**.
 
-    **Note**: Please wait unitil deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
+    **Note**: Please wait until deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
