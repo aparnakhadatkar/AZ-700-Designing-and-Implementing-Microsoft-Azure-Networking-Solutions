@@ -110,6 +110,8 @@ In this task you will create your secured virtual hub using Firewall Manager.
     
     ![Create new secured virtual hub - Basics tab](../media/AZ-700-firewall.png)
 
+1. On **Azure Firewall** tab enter 2 for **Specify number of the Public IP addresses**.
+
 1. Select **Next : Security Partner Provider >**.
 
 1. Select **Next : Review + create >**
