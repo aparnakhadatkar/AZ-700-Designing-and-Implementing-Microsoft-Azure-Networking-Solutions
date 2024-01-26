@@ -408,7 +408,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Subscription   | Select your subscription |
    | Resource group | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**             |
    | Name           | **myLAworkspace**        |
-   | Region         | **West US**              |
+   | Region         | **<inject key="Region" enableCopy="false"/>**              |
 
 1. Select **Review + Create**, then select **Create**.
 
