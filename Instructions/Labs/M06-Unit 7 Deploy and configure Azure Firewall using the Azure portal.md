@@ -43,25 +43,25 @@ In this task, you will create a single virtual network with two subnets.
      | Name             |  **Test-FW-VN**       |
      | Region           |  **<inject key="Region" enableCopy="false"/>**  |
 
-1. Select **Next: IP Addresses**. Enter IPv4 address space 10.0.0.0/16 if not already there by default. 
+1. Navigate to the **IP Addresses** tab and enter IPv4 address space **10.0.0.0/16** if not already there by default. 
 
 1. Under **Subnet name**, select the word **default**.
 
-1. In the **Edit subnet** dialog box, specify the following and  select **Save**.
+1. In the **Edit a subnet** pane, specify the following and then click on **Save (6)**.
 
     |  **Setting**     | **Value**            |
     | ---------------- | ------------------   | 
-    | Subnet template  | Select **Azure Firewall**|
-    | Name             | **AzureFirewallSubnet**|
-    | Starting address | **10.0.1.0** |
-    | Subnet size      | **/26** |
-    |||
+    | Subnet purpose  | Select **Azure Firewall (1)**|
+    | Name             | (Pre-populated) **AzureFirewallSubnet (2)**|
+    | Starting address | **10.0.1.0 (3)** |
+    | IPv4 address range | Select **10.0.0.0/16 (4)** |
+    | Size      | **/26 (5)** |
 
-    ![](../media/lab6-1.png)
+    ![](../media/m6-u7-t1-s6.png)
 
 1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
-1. In the **Edit subnet** dialog box, specify the following and select **Add**.
+1. In the **Edit a subnet** dialog box, specify the following and select **Add**.
 
     | **Setting**      | **Value**            |
     | ---------------- | ------------------   | 
