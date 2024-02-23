@@ -147,6 +147,10 @@ These virtual networks and subnets are structured in a way that accommodates exi
     |                           | Subnet address range | 10.30.21.0/24             |
     | SensorSubnet3             | Subnet name          | SensorSubnet3             |
     |                           | Subnet address range | 10.30.22.0/24             |
+
+ 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+
+ 1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
     
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
