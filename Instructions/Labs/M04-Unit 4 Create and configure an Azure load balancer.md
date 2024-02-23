@@ -54,7 +54,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. Select **Next : IP Addresses**.
    
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add a subnet**.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add a subnet** in the new IPv4 address space.
 
    ![](../media/L4U4-1.png)
 
@@ -69,7 +69,7 @@ In this section, you will create a virtual network and a subnet.
 
     ![](../media/mod4-u4-2.png)
    
-1. On the Create virtual network of **IP address** tab select **+ Add a subnet**. On **Add a subnet** blade specify the following and select **Add**.
+1. On the Create virtual network of **IP address** tab select **+ Add a subnet** in the new IPv4 address space. On **Add a subnet** blade specify the following and select **Add**.
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
