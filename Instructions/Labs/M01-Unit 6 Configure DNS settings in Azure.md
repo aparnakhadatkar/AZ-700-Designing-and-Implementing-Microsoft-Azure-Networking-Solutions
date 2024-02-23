@@ -32,8 +32,8 @@ In this lab, you will complete the following tasks:
 
    | **Tab**         | **Option**                             | **Value**            |
    | --------------- | -------------------------------------- | -------------------- |
-   | Basics          | Resource group                         | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
-   |                 | Name                                   | Contoso.com          | 
+   | Basics          | Resource group                         | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
+   |                 | Name                                   | **Contoso.com**          | 
 
 1. Select **Review + create** and **create**
 
@@ -51,10 +51,10 @@ In this lab, you will complete the following tasks:
 
    | **Option**                          | **Value**                               |
    | ----------------------------------- | --------------------------------------- |
-   | Link name                           | CoreServicesVnetLink                    |
-   | Subscription                        | No changes required                     |
-   | Virtual Network                     | Select CoreServicesVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
-   | Enable auto registration            | Selected                                |
+   | Link name                           | **CoreServicesVnetLink**                    |
+   | Subscription                        | **No changes required**                     |
+   | Virtual Network                     | Select **CoreServicesVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
+   | Enable auto registration            | **Selected**                                |
 
 1. Review your settings and select **OK**.
 
@@ -68,10 +68,10 @@ In this lab, you will complete the following tasks:
 
    | **Option**                          | **Value**                                |
    | ----------------------------------- | ---------------------------------------- |
-   | Link name                           | ManufacturingVnetLink                    |
-   | Subscription                        | No changes required                      |
-   | Virtual Network                     | select ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
-   | Enable auto registration            | Selected                                 |
+   | Link name                           | **ManufacturingVnetLink**                |
+   | Subscription                        | **No changes required**                  |
+   | Virtual Network                     | **select ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
+   | Enable auto registration            | **Selected**                             |
 
 1. Review your settings and select OK.
 
@@ -79,16 +79,16 @@ In this lab, you will complete the following tasks:
 
 1. Select **Refresh**.
 
-1. Verify that the ManufacturingVnetLink has been created, and that auto-registration is enabled.
+1. Verify that the **ManufacturingVnetLink** has been created, and that auto-registration is enabled.
 
 1. Repeat steps 1 - 5 for the ResearchVnet, using the information in the following table: 
 
    | **Option**                          | **Value**                           |
    | ----------------------------------- | ----------------------------------- |
-   | Link name                           | ResearchVnetLink                    |
-   | Subscription                        | No changes required                 |
-   | Virtual Network                     | select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>) |
-   | Enable auto registration            | Selected                            |
+   | Link name                           | **ResearchVnetLink**                |
+   | Subscription                        | **No changes required**             |
+   | Virtual Network                     | **select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
+   | Enable auto registration            | **Selected**                        |
 
 1. Review your settings and select OK.
   
@@ -96,7 +96,7 @@ In this lab, you will complete the following tasks:
 
 1. Select **Refresh**.
 
-1. Verify that the ResearchVnetLink has been created, and that auto-registration is enabled.
+1. Verify that the **ResearchVnetLink** has been created, and that auto-registration is enabled.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -126,9 +126,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
 
-1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
-
    ![](../media/unit6-image3.png)
+
+1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -144,7 +144,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-1. Verify that both virtual machines have been created.
+1. Verify that both **virtual machines** have been created.
+
+      ![](../media/lab2-image1.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -170,13 +172,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect** 
+1. On TestVM1, select **Connect** then select **Connect** from the drop-down. 
 
-   ![](../media/unit6-image4.png)
+   ![](../media/connect.png)
 
-1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+1. On **TestVM1 | Connect** page, under **Native RDP** window select and **Download RDP file**. 
 
-   ![](../media/unit6-image(6).png)
+   ![](../media/download.png)
 
 1. Save the RDP file to your desktop. If any warning pops up in "edge downloads" select **Keep**.
 
@@ -190,11 +192,11 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On both VMs, if prompted, in **Networks**, select **Yes**.
 
-1. On TestVM1, open a command prompt and enter the command ipconfig /all.
+1. On TestVM1, open a command prompt and enter the command **ipconfig /all**.
 
 1. Verify that the IP address is the same as the one you noted in the DNS zone.
 
-1. Enter the command ping TestVM2.contoso.com.
+1. Enter the command **ping TestVM2.contoso.com**.
 
 1. Verify that the FQDN resolves to the IP address that you noted in the Private DNS zone. The ping itself will timeout because of the Windows Firewall that is enabled on the VMs.
 

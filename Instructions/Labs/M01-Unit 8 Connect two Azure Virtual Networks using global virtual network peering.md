@@ -45,9 +45,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
 
-1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
-
    ![](../media/unit6-image3.png)
+   
+1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -65,8 +65,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Verify that the virtual machine has been created.
 
-   ![](../media/AZ-700vmcreate.png)
-
+   ![](../media/virtualmachine.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -80,13 +79,13 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Select **ManufacturingVM**.
 
-1. On ManufacturingVM, select **Connect** .
+1. On ManufacturingVM, select **Connect** from the drop-down click on **Connect**.
 
-   ![](../media/az-700u08.2.png)
+   ![](../media/connect1.png)
 
 1. On ManufacturingVM | Connect, select **Download RDP file**.
 
-   ![](../media/az-700u08.3.png)
+   ![](../media/download1.png)
 
 1. Save the RDP file to your desktop. If any warning pops-up in "edge downloads" select **keep**
 
@@ -96,13 +95,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect** 
-
-   ![](../media/unit6-image4.png)
+1. On TestVM1, select **Connect** then from the drop-dwon click **Connect**. 
 
 1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
-
-   ![](../media/unit6-image(6).png)
 
 1. Save the RDP file to your desktop.
 
@@ -146,19 +141,13 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
    | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
    | This virtual network                 |                                               |                                       |
    |                                      | Peering link name                             | CoreServicesVnet-to-ManufacturingVnet |
-   |                                      | Traffic to remote virtual network             | Allow (default)                       |
-   |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
-   |                                      | Virtual network gateway or Route Server       | None (default)                        |
    | Remote virtual network               |                                               |                                       |
    |                                      | Peering link name                             | ManufacturingVnet-to-CoreServicesVnet |
    |                                      | Virtual network deployment model              | Resource manager                      |
    |                                      | I know my resource ID                         | Not selected                          |
    |                                      | Subscription                                  | Select the Subscription provided      |
    |                                      | Virtual network                               | ManufacturingVnet                     |
-   |                                      | Traffic to remote virtual network             | Allow (default)                       |
-   |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
-   |                                      | Virtual network gateway or Route Server       | None (default)                        |
-
+   
 1. Review your settings and select **Add**. 
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
