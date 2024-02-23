@@ -170,13 +170,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect** 
+1. On TestVM1, select **Connect** then select **Connect** from the drop-down. 
 
-   ![](../media/unit6-image4.png)
+   ![](../media/connect.png)
 
-1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+1. On **TestVM1 | Connect** page, under **Native RDP** window select and **Download RDP file**. 
 
-   ![](../media/unit6-image(6).png)
+   ![](../media/download.png)
 
 1. Save the RDP file to your desktop. If any warning pops up in "edge downloads" select **Keep**.
 
