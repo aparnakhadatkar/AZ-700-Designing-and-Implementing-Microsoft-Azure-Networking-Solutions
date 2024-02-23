@@ -96,14 +96,17 @@ These virtual networks and subnets are structured in a way that accommodates exi
     | ---------------------- | -------------------- | ---------------------- |
     | GatewaySubnet          | Subnet purpose       | Select **Virtual Network Gateway** |
     |                        | Name                 | GatewaySubnet          |
-  
-    |                        | Subnet address range | 10.20.0.0/27            |
+    |                        | Starting address     | 10.20.0.0              |
+    |                        | Size                 | /27                    |
     | SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
-    |                        | Subnet address range | 10.20.10.0/24          |
+    |                        | Starting address     | 10.20.10.0             |
+    |                        | Size                 | /24                    |
     | DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
-    |                        | Subnet address range | 10.20.20.0/24          |
+    |                        | Starting address     | 10.20.20.0             |
+    |                        | Size                 | /24                    |
     | PublicWebServiceSubnet | Subnet name          | PublicWebServiceSubnet |
-    |                        | Subnet address range | 10.20.30.0/24          |
+    |                        | Starting address     | 10.20.30.0             |
+    |                        | Size                 | /24                    |
 
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
