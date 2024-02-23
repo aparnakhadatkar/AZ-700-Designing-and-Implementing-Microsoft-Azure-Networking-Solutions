@@ -69,7 +69,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | ------------ | ------------------ | -------------------- |
    | Basics       | Subscription       | Leave default        |
    |              | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
-   |              | Name               | CoreServicesVnet     |
+   |              | Name               | CoreServicesVNet     |
    |              | Region             | (US) East US         |
  
 
@@ -94,15 +94,19 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
-    | GatewaySubnet          | Subnet name          | GatewaySubnet          |
-    |                        | Subnet Template      | Select **Virtual Network Gateway** |
-    |                        | Subnet address range | 10.20.0.0/27            |
+    | GatewaySubnet          | Subnet purpose       | Select **Virtual Network Gateway** |
+    |                        | Name                 | GatewaySubnet          |
+    |                        | Starting address     | 10.20.0.0              |
+    |                        | Size                 | /27                    |
     | SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
-    |                        | Subnet address range | 10.20.10.0/24          |
+    |                        | Starting address     | 10.20.10.0             |
+    |                        | Size                 | /24                    |
     | DatabaseSubnet         | Subnet name          | DatabaseSubnet         |
-    |                        | Subnet address range | 10.20.20.0/24          |
+    |                        | Starting address     | 10.20.20.0             |
+    |                        | Size                 | /24                    |
     | PublicWebServiceSubnet | Subnet name          | PublicWebServiceSubnet |
-    |                        | Subnet address range | 10.20.30.0/24          |
+    |                        | Starting address     | 10.20.30.0             |
+    |                        | Size                 | /24                    |
 
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
@@ -127,7 +131,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | ------------ | ------------------ | --------------------- |
    | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
    |              | Name               | ManufacturingVnet     |
-   |              | Region             | (Europe) West Europe **Go to ip address tab**  |
+   |              | Region             | (Europe) West Europe  |
 
 
 1. **Go to Ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.   
@@ -135,14 +139,22 @@ These virtual networks and subnets are structured in a way that accommodates exi
     | **IP/Subnet**                | **Option**           | **Value**                 |
     | ------------------------- | -------------------- | ------------------------- |
     | IP Addresses              | IPv4 address space   | 10.30.0.0/16              |
-    | ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
-    |                           | Subnet address range | 10.30.10.0/24             |
-    | SensorSubnet1             | Subnet name          | SensorSubnet1             |
-    |                           | Subnet address range | 10.30.20.0/24             |
-    | SensorSubnet2             | Subnet name          | SensorSubnet2             |
-    |                           | Subnet address range | 10.30.21.0/24             |
-    | SensorSubnet3             | Subnet name          | SensorSubnet3             |
-    |                           | Subnet address range | 10.30.22.0/24             |
+    | ManufacturingSystemSubnet | Name                 | ManufacturingSystemSubnet |
+    |                           | Starting address     | 10.30.10.0                |
+    |                           | Size                 | /24                       |
+    | SensorSubnet1             | Name                 | SensorSubnet1             |
+    |                           | Starting address     | 10.30.20.0                |
+    |                           | Size                 | /24                       |
+    | SensorSubnet2             | Name                 | SensorSubnet2             |
+    |                           | Starting address     | 10.30.21.0                |
+    |                           | Size                 | /24                       |
+    | SensorSubnet3             | Name                 | SensorSubnet3             |
+    |                           | Starting address     | 10.30.22.0                |
+    |                           | Size                 | /24                       |
+
+ 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+
+ 1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
     
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -166,8 +178,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | **IP/Subnet**        | **Option**           | **Value**            |
    | -------------------- | -------------------- | -------------------- |
    | IP Addresses         | IPv4 address space   | 10.40.0.0/16         |
-   | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
-   |                      | Subnet address range | 10.40.0.0/24         |
+   | ResearchSystemSubnet | Name                 | ResearchSystemSubnet |
+   |                      | Starting address     | 10.40.0.0            |
+   |                      | Size                 | /24                  |
  
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
