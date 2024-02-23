@@ -83,8 +83,8 @@ In this section, you will create two instances of a web application deployed in 
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profile**, and then select **Traffic 
-   Manager profile** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic 
+   Manager profiles** under services.
 
 1. On **Load balancing | Traffic Manager** page, select **+ Create**.
 
@@ -109,11 +109,12 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, then select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic 
+   Manager profiles** under services.
 
-   **Note**: Kindly refresh the page to find **Traffic manger**.
+   **Note**: Kindly refresh the page to find and select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. Under **Settings**, select **Endpoints**, and then select **Add**.
+1. Under **Settings**, select **Endpoints**, and then select **+ Add**.
 
     ![Picture 21](../media/create-tmendpoints-1.png)
 
