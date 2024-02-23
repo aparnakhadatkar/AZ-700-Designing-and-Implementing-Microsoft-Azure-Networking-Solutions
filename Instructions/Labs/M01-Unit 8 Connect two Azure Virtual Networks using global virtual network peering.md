@@ -141,19 +141,13 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
    | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
    | This virtual network                 |                                               |                                       |
    |                                      | Peering link name                             | CoreServicesVnet-to-ManufacturingVnet |
-   |                                      | Traffic to remote virtual network             | Allow (default)                       |
-   |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
-   |                                      | Virtual network gateway or Route Server       | None (default)                        |
    | Remote virtual network               |                                               |                                       |
    |                                      | Peering link name                             | ManufacturingVnet-to-CoreServicesVnet |
    |                                      | Virtual network deployment model              | Resource manager                      |
    |                                      | I know my resource ID                         | Not selected                          |
    |                                      | Subscription                                  | Select the Subscription provided      |
    |                                      | Virtual network                               | ManufacturingVnet                     |
-   |                                      | Traffic to remote virtual network             | Allow (default)                       |
-   |                                      | Traffic forwarded from remote virtual network | Allow (default)                       |
-   |                                      | Virtual network gateway or Route Server       | None (default)                        |
-
+   
 1. Review your settings and select **Add**. 
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
