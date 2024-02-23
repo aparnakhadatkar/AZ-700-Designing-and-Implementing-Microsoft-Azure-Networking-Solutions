@@ -343,7 +343,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** box select **Download RDP file**. 
 
-   ![](../media/l7u4-(1).png)
+   ![](../media/imgai900.png)
    
 1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
 
