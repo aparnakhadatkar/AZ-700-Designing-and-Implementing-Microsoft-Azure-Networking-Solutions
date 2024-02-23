@@ -345,13 +345,17 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    ![](../media/imgai900.png)
    
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**
+
+   >**Note:** Ignore the warning and click on **Keep** to open the downloaded RDP file.
 
 1. Select **OK**.
 
 1. You may receive a certificate warning during the sign-in process. If you receive the warning, select Yes or Continue to proceed with the connection.
 
 1. On the **ContosoPrivate** VM, from the start menu open the **windows powershell**.
+
+   >**Note:** In the pop-up related to network visibility click **No**.
 
 1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task and **[storage-account-name]** (i.e. contosostoragexx)  with values you supplied and retrieved in the Create a storage account task.
 
