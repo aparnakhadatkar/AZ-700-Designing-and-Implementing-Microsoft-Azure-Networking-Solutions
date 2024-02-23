@@ -94,8 +94,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
-    | GatewaySubnet          | Subnet name          | GatewaySubnet          |
-    |                        | Subnet Template      | Select **Virtual Network Gateway** |
+    | GatewaySubnet          | Subnet purpose       | Select **Virtual Network Gateway** |
+    |                        | Name                 | GatewaySubnet          |
+  
     |                        | Subnet address range | 10.20.0.0/27            |
     | SharedServicesSubnet   | Subnet name          | SharedServicesSubnet   |
     |                        | Subnet address range | 10.20.10.0/24          |
