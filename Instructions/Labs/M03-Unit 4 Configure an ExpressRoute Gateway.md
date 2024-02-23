@@ -104,7 +104,7 @@ In this lab, you will complete the following tasks:
    | **Public IP address**     |                            |
    | Public IP address         | Create new                 |
    | Public IP address name    | CoreServicesVnetGateway-IP |
-   | Public IP address SKU     | Basic                      |
+   | Public IP address SKU     | Standard                   |
    | Assignment                | Not configurable           |
    
 1. Select **Review + Create**.
