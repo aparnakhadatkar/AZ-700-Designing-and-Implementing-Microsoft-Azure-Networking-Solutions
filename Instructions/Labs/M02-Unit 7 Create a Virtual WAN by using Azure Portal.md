@@ -44,7 +44,7 @@ In this lab, you will complete the following tasks:
 
      ![](../media/lab2-unit7-image2.png)
 
-1. Once validation passes, select **Create** to create the Virtual WAN.
+1. Once validation passes, select **Create** to create the Virtual WAN. Wait for the deployment to get completed.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -64,7 +64,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
    - **Region:** West US
    - **Name:** ContosoVirtualWANHub-WestUS
    - **Hub private address space:** 10.60.0.0/24
-   - **Virtual hub capacity:** 2 Routing infrastructure units
+   - **Virtual hub capacity:** 2 Routing Infrastructure Units
    - **Hub routing preference:** ExpressRoute
 
    ![](../media/lab2-unit7-image3.png)
@@ -75,12 +75,12 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
    - The **AS Number** field cannot be edited.
    - **Gateway scale units:** 1 scale unit - 500 Mbps x 2
    - **Routing preference:** leave the default 
-   - **Review + Create** to validate.
+   - **Review + create** to validate.
 
    ![](../media/lab2-unit7-image(4).png)
 
 1. Select **Create** to create the hub. 
-1. After 30 minutes, **Refresh** to view the hub on the Hubs page. 
+1. After 30 minutes, **Refresh** to view the hub on the Hubs page. Wait for the deployment to finish before proceeding to the next task.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -100,21 +100,23 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 1. In Add connection, use the following information to create the connection.
 
-   - **Connection name:** ContosoVirtualWAN-to-ResearchVNet
+   - **Connection name(1):** ContosoVirtualWAN-to-ResearchVNet
 
-   - **Hubs:** ContosoVirtualWANHub-WestUS
+   - **Hubs(2):** ContosoVirtualWANHub-WestUS
 
-   - **Subscription:** no changes
+   - **Subscription(3):** Leave it as default
 
-   - **Resource Group:** ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>
+   - **Resource Group(4):** ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>
 
-   - **Virtual network:** ResearchVNet
+   - **Virtual network(5):** ResearchVNet
 
-   - **Propagate to none:** Yes
+   - **Propagate to none(6):** Yes
 
-   - **Associate Route Table:** Default
+   - **Associate Route Table(7):** Default
 
-1. Select **Create**.
+   ![](../media/m2-U7-1.png)
+
+1. Select **Create(8)**.
 
 ## Review
 
