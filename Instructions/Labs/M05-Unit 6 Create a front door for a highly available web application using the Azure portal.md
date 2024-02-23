@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 This exercise requires two instances of a web application that run in different Azure regions. Both the web application instances run in Active/Active mode, so either one can take traffic. This configuration differs from an Active/Stand-By configuration, where one acts as a failover.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under 
    services.
 
    ![Web App](../media/l5u6-1.png)
@@ -49,7 +49,8 @@ This exercise requires two instances of a web application that run in different 
    ![Web App](../media/l5u6-3.png)
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
-   ‎It might take 2 minutes for the deployment to complete.
+
+   >**Note:** It might take 2 minutes for the deployment to complete.
 
 1. Create a second web app,  in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under 
    services.
@@ -75,7 +76,7 @@ This exercise requires two instances of a web application that run in different 
    
 1. Select **Review + create**, review the Summary, and then select **Create**.   
 
-   **Note**: ‎Wait for deployment to complete it might take several minutes.
+   **Note**: Wait for deployment to complete it might take several minutes.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -88,8 +89,8 @@ This exercise requires two instances of a web application that run in different 
 
 Configure Azure Front Door to direct user traffic based on lowest latency between the two web apps servers. To begin, add a frontend host for Azure Front Door.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, Search for Front Door and CDN profiles, and then select 
-   **Front Door and CDN profiles**.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, Search for **Front Door and CDN profiles (1)**, and then select 
+   **Front Door and CDN profiles (2)**.
 
    ![Web App](../media/l5u6-5.png)
    
@@ -103,35 +104,35 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
       | **Setting**             | **Value**                                    |
       | ----------------------- | -------------------------------------------- |
-      | Subscription            | Select your subscription.                    |
-      | Resource group          | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**                  |
-      | Resource group location | Accept default setting                       |
-      | Name                    | **FrontDoor<inject key="DeploymentID" enableCopy="false"/>**   |
-      | Tier                    | Standard   |
-      | Endpoint Name           | FDendpoint   |
-      | Origin Type             | App Service | 
-      | Origin host name        | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/>** |
+      | Subscription            | Select your subscription (1).                    |
+      | Resource group          | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**                  |
+      | Resource group location | Accept default setting (3)                      |
+      | Name                    | **FrontDoor<inject key="DeploymentID" enableCopy="false"/> (4)**   |
+      | Tier                    | Standard (5)  |
+      | Endpoint Name           | FDendpoint (6)  |
+      | Origin Type             | App Services (7) | 
+      | Origin host name        | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> (8)** |
       |||
 
-      ![Web App](../media/l5u6-7.png)
+1. Select **Review and Create (9)**, and then select **Create**.
 
-1. Select **Review and Create**, and then select **Create**.
+   ![Web App](../media/l5u6-7.png)
 
 1. Wait for the resource to deploy, and then select **Go to resource**.
 
-1. On the Front Door resource in the Overview blade, locate the **Origin Groups**, to update select the origin group **default-origin-group** from the list and click on **Add an origin**
+1. On the Front Door resource in the Overview blade, locate the **Origin Groups (1)**, to update select the origin group **default-origin-group (2)** from the list and click on **+ Add an origin (3)**
 
    ![Web App](../media/l5u6-8.png)
 
-1. On the **Add on Origin** window, add the following information and select **Add**.
+1. On the **Add on Origin** window, add the following information and select **Add (5)**.
 
    
    | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
-   | Name                    | **default-origin-group**                         |
-   | Origin type             | **App service**                                  |
-   | Host name               | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/>** |
-   | Origin host header      | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Name                    | **default-origin-group (1)**                         |
+   | Origin type             | **App services (2)**                                  |
+   | Host name               | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> (3)** |
+   | Origin host header      | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> (4)** |
    |||
    
    ![Web App](../media/l5u6-9.png)
