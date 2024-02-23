@@ -65,8 +65,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Verify that the virtual machine has been created.
 
-   ![](../media/AZ-700vmcreate.png)
-
+   ![](../media/virtualmachine1.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
