@@ -69,7 +69,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | ------------ | ------------------ | -------------------- |
    | Basics       | Subscription       | Leave default        |
    |              | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> |
-   |              | Name               | CoreServicesVnet     |
+   |              | Name               | CoreServicesVNet     |
    |              | Region             | (US) East US         |
  
 
