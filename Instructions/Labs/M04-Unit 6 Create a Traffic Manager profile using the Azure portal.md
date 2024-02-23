@@ -128,7 +128,7 @@ In this section, you will add the website in the East US as the primary endpoint
    | Target resource      | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/> (East US)** |
    | Priority             | **1**                             |
 
-1. Select **Add**.
+1. Click on **Add**.
 
 1. Repeat steps 2-4 above to create the failover endpoint. Use the same settings as before except for the information in the table below. 
 
@@ -138,9 +138,11 @@ In this section, you will add the website in the East US as the primary endpoint
    | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
    | Priority        | **2**                                     |
 
-1. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
+   >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
-1. Under **Settings**, select **Configuration**, and then update the Endpoint monitor settings **Protocol** to HTTPS and **Port** to 443 and select **Save**.
+1. Click on **Add**.
+
+1. Under **Settings**, select **Configuration**, and then update the **Endpoint monitor settings** protocol to **HTTPS** and **Port** to **443** and select **Save**.
 
 1. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
 
