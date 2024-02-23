@@ -275,7 +275,7 @@ In this section, you will create three VMs for the backend pool of the load bala
 
    >**Note:** If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
 
-     ![](../media/bastionaz700.png)
+     ![](../media/bastionaz7001.png)
 
 1. The **myVM1** window will open in another browser tab.
 
