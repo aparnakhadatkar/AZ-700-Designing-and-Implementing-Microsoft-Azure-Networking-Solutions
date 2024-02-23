@@ -139,14 +139,18 @@ These virtual networks and subnets are structured in a way that accommodates exi
     | **IP/Subnet**                | **Option**           | **Value**                 |
     | ------------------------- | -------------------- | ------------------------- |
     | IP Addresses              | IPv4 address space   | 10.30.0.0/16              |
-    | ManufacturingSystemSubnet | Subnet name          | ManufacturingSystemSubnet |
-    |                           | Subnet address range | 10.30.10.0/24             |
-    | SensorSubnet1             | Subnet name          | SensorSubnet1             |
-    |                           | Subnet address range | 10.30.20.0/24             |
-    | SensorSubnet2             | Subnet name          | SensorSubnet2             |
-    |                           | Subnet address range | 10.30.21.0/24             |
-    | SensorSubnet3             | Subnet name          | SensorSubnet3             |
-    |                           | Subnet address range | 10.30.22.0/24             |
+    | ManufacturingSystemSubnet | Name                 | ManufacturingSystemSubnet |
+    |                           | Starting address     | 10.30.10.0                |
+    |                           | Size                 | /24                       |
+    | SensorSubnet1             | Name                 | SensorSubnet1             |
+    |                           | Starting address     | 10.30.20.0                |
+    |                           | Size                 | /24                       |
+    | SensorSubnet2             | Name                 | SensorSubnet2             |
+    |                           | Starting address     | 10.30.21.0                |
+    |                           | Size                 | /24                       |
+    | SensorSubnet3             | Name                 | SensorSubnet3             |
+    |                           | Starting address     | 10.30.22.0                |
+    |                           | Size                 | /24                       |
 
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
@@ -174,8 +178,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | **IP/Subnet**        | **Option**           | **Value**            |
    | -------------------- | -------------------- | -------------------- |
    | IP Addresses         | IPv4 address space   | 10.40.0.0/16         |
-   | ResearchSystemSubnet | Subnet name          | ResearchSystemSubnet |
-   |                      | Subnet address range | 10.40.0.0/24         |
+   | ResearchSystemSubnet | Name                 | ResearchSystemSubnet |
+   |                      | Starting address     | 10.40.0.0            |
+   |                      | Size                 | /24                  |
  
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
