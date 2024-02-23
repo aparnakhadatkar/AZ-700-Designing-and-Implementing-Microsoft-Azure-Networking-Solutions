@@ -240,10 +240,12 @@ Create the virtual machine with the following commands:
 
   **Note**: You will be prompted to provide UserName enter **TestUser** and Admin password enter **Pa55w.rd!!**
 
+  **Note**: If you get a prompt related to NIC enter **Y**
+  
   **Note**: Azure provides an ephemeral IP for Azure Virtual Machines which aren't assigned a public IP address, or are in the backend pool of an internal Basic 
-  Azure Load Balancer. The ephemeral IP mechanism provides an outbound IP address that isn't configurable.
+  Azure Load Balancer. The ephemeral IP mechanism provides an outbound IP address that isn't configurable.  
 
-  **Note**: The ephemeral IP is disabled when a public IP address is assigned to the virtual machine or the virtual machine is placed in the backend pool of a 
+   **Note**: The ephemeral IP is disabled when a public IP address is assigned to the virtual machine or the virtual machine is placed in the backend pool of a 
   Standard Load Balancer with or without outbound rules. If a Azure Virtual Network NAT gateway resource is assigned to the subnet of the virtual machine, the 
   ephemeral IP is disabled.
 
@@ -409,9 +411,13 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. On the overview page for **myVM**, select **Connect**.
 
-1. Select the blue **Go to Bastion** button.
+1. From the dropdown select **Connect via Bastion** button.
 
-1. Enter the username **TestUser** and password **Pa55w.rd!!** that you entered during the virtual machine creation, If popup blocker is preventing the new window, select allow popup blocker and Connect again.
+1. Enter the username **TestUser** and password **Pa55w.rd!!** that you entered during the virtual machine creation. 
+
+   >**Note:** If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
+
+   ![](../media/bastionaz700.png)
 
 1. Within **myVM** open Windows PowerShell on the server after you connect.
 
@@ -434,14 +440,6 @@ In this section, you'll use the virtual machine you created in the previous step
      ![](../media/L7U7-1.png)
 
 1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
-
-1. In the bastion connection to **myVM**, open Internet Explorer.
-   
-1. Enter the url of your web app, **https://&lt;your-webapp-name&gt;.azurewebsites.net**
-   
-1. You'll receive the default web app page if your application hasn't been deployed:
- 
-   ![](../media/L7U7-2.png)
 
 1. Close the connection to **myVM**.
 
