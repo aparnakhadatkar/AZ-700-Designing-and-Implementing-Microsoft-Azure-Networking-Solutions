@@ -162,13 +162,13 @@ In this lab, you will complete the following tasks:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | Virtual network                             | CoreServicesVnet             |
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
    |                 |                   | Region                                      | East US                      |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
+   |                 |                   | Virtual network                             | CoreServicesVnet             |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | CoreServicesVnetGateway-ip   |
@@ -199,9 +199,9 @@ In this lab, you will complete the following tasks:
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | Region                                      | North Europe                 |
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
    |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
+   |                 |                   | Region                                      | North Europe                 |
    |                 |                   | Gateway type                                | VPN                          |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
