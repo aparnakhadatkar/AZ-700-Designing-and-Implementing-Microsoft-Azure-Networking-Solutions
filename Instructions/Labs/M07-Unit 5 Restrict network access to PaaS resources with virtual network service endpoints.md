@@ -44,7 +44,7 @@ In this lab, you will complete the following tasks:
    | Name           | CoreServicesVNet                              |
    | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
 
-1. Select **Next Security** tab, and specify the following values:
+1. Select **Next** and in the  **Security** tab, and specify the following values:
 
    | **Setting**             | **Value** |
    | ----------------------- | --------- |
@@ -52,7 +52,7 @@ In this lab, you will complete the following tasks:
    | DDoS Network Protection | Disabled  |
    | Firewall                | Disabled  |
 
-1. Select **Next IP Addresses** tab and select **default** to change the subnet name, specify the following values:
+1. Select **Next** in the **IP Addresses** tab and select **default** to change the subnet name, specify the following values:
 
    | **Setting**          | **Value**   |
    | -------------------- | ----------- |
