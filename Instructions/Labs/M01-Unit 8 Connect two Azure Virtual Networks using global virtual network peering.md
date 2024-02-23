@@ -96,13 +96,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Select **TestVM1**.
 
-1. On TestVM1, select **Connect** 
-
-   ![](../media/unit6-image4.png)
+1. On TestVM1, select **Connect** then from the drop-dwon click **Connect**. 
 
 1. On **TestVM1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
-
-   ![](../media/unit6-image(6).png)
 
 1. Save the RDP file to your desktop.
 
