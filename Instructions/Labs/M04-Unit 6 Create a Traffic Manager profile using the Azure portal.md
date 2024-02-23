@@ -27,11 +27,11 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create two instances of a web application deployed in the two different Azure regions.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under services.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
    ![Web App](../media/l5u6-1.png)
 
-1. Select **+ Create**  and then select **Web App** to create a Web App.
+1. Select **+ Create (1)**  and then select **+ Web App (2)** to create a Web App.
 
      ![Web App](../media/create.png)
 
