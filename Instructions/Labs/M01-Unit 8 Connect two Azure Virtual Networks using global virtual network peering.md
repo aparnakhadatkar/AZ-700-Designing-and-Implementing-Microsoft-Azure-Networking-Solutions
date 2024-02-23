@@ -80,13 +80,13 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Select **ManufacturingVM**.
 
-1. On ManufacturingVM, select **Connect** .
+1. On ManufacturingVM, select **Connect** from the drop-down click on **Connect**.
 
-   ![](../media/az-700u08.2.png)
+   ![](../media/connect1.png)
 
 1. On ManufacturingVM | Connect, select **Download RDP file**.
 
-   ![](../media/az-700u08.3.png)
+   ![](../media/download1.png)
 
 1. Save the RDP file to your desktop. If any warning pops-up in "edge downloads" select **keep**
 
