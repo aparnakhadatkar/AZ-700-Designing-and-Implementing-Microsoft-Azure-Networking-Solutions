@@ -131,7 +131,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | ------------ | ------------------ | --------------------- |
    | Basics       | Resource Group     | ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>  |
    |              | Name               | ManufacturingVnet     |
-   |              | Region             | (Europe) West Europe **Go to ip address tab**  |
+   |              | Region             | (Europe) West Europe  |
 
 
 1. **Go to Ip address tab** Delete the existing ip address in the IP adress Tab and add the below ip adress with the subnets as performed in the previous task.   
