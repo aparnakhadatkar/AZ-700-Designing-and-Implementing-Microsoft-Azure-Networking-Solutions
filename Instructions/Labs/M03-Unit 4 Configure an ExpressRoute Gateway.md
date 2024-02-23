@@ -49,8 +49,6 @@ In this lab, you will complete the following tasks:
    | Virtual Network Name | CoreServicesVNet                 |
    | Location             | East US                          |
 
-1. Select **Next : IP addresses**.
-
 1. On the **IP Addresses** tab, click on **Add IPv4 address space** in new address space box, enter 10.20.0.0  in address space field and enter /16 in size, then 
    select  **+ Add subnet** **(4)**. 
 
