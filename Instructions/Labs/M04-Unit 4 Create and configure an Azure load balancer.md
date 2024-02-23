@@ -90,6 +90,8 @@ In this section, you will create a virtual network and a subnet.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+<validation step="f3f7612a-945c-453b-87cc-9ac4592a00cc" />
+
 ## Task 2: Create backend servers
 
 In this section, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
