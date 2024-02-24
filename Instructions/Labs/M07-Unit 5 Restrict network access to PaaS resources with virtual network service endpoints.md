@@ -44,7 +44,7 @@ In this lab, you will complete the following tasks:
    | Name           | CoreServicesVNet                              |
    | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
 
-1. Select **Next Security** tab, and specify the following values:
+1. Select **Next** and in the  **Security** tab, and specify the following values:
 
    | **Setting**             | **Value** |
    | ----------------------- | --------- |
@@ -52,7 +52,7 @@ In this lab, you will complete the following tasks:
    | DDoS Network Protection | Disabled  |
    | Firewall                | Disabled  |
 
-1. Select **Next IP Addresses** tab and select **default** to change the subnet name, specify the following values:
+1. Select **Next** and in the **IP Addresses** tab and select **default** to change the subnet name, specify the following values:
 
    | **Setting**          | **Value**   |
    | -------------------- | ----------- |
@@ -74,7 +74,7 @@ In this lab, you will complete the following tasks:
 
 Service endpoints are enabled per service, per subnet. Create a subnet and enable a service endpoint for the subnet.
 
-1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select 
+1. In the **Search resources, services, and docs** box at the top of the portal, enter **CoreServicesVNet**. When CoreServicesVNet appears in the search results, select 
    it.
 
 1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture:
@@ -212,7 +212,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
 1. Select **+ Associate.**
 
-1. Under **Associate subnet**, select **Virtual network** and then select **CoreServicesVNet** under **Virtual Network**.
+1. Under **Associate subnet**, from the **Virtual network** dropdown select **CoreServicesVNet**.
 
 1. Under **Subnet**, select **Private**, and then select **OK**.
 
@@ -236,10 +236,10 @@ The steps necessary to restrict network access to resources created through Azur
     | -------------- | ------------------------------------------------------------ |
     | Subscription   | Select your subscription                                     |
     | Resource group | myResourceGroup                                              |
-    | Name           | Enter contosostorage<inject key="DeploymentID" enableCopy="false"/> |
-    | Performance    | Standard StorageV2 (general purpose v2)                      |
-    | Location       | **<inject key="Region" enableCopy="false"/>**                                               |
-    | Replication    | Locally-redundant storage (LRS)                              |
+    | Region         | **<inject key="Region" enableCopy="false"/>** 
+    | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/>** |
+    | Performance    | Standard StorageV2 (general purpose v2)                      |                                              |
+    | Redundancy    | Locally-redundant storage (LRS)                              |
 
 1. select **Review**, then select **Create**.
 
@@ -276,7 +276,7 @@ The steps necessary to restrict network access to resources created through Azur
 
 By default, storage accounts accept network connections from clients in any network, including the internet. Deny network access from the internet, and all other subnets in all virtual networks, except for the Private subnet in the CoreServicesVNet virtual network.
 
-1. On contosostorage<inject key="DeploymentID" enableCopy="false"/> storage account blade.
+1. On **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account blade.
 
 1. From the left navigation pane, under **Security + networking** section, select **Networking**.
 
@@ -329,7 +329,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
 
-1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines** to find the newly created virtual machines.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -339,19 +339,23 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 ## Task 10: Confirm access to storage account
 
-1. On the **Virtual Machine** blade, select **ContosoPrivate** VM and click on **Connect**.
+1. On the **Virtual Machine** blade, select **ContosoPrivate** VM and click on **Connect** and from the dropdown click on **Connect** again.
 
-1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** box select **Download RDP file**. 
 
-   ![](../media/l7u4-(1).png)
+   ![](../media/imgai900.png)
    
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**
+
+   >**Note:** Ignore the warning and click on **Keep** to open the downloaded RDP file.
 
 1. Select **OK**.
 
 1. You may receive a certificate warning during the sign-in process. If you receive the warning, select Yes or Continue to proceed with the connection.
 
 1. On the **ContosoPrivate** VM, from the start menu open the **windows powershell**.
+
+   >**Note:** In the pop-up related to network visibility click **No**.
 
 1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task and **[storage-account-name]** (i.e. contosostoragexx)  with values you supplied and retrieved in the Create a storage account task.
 
