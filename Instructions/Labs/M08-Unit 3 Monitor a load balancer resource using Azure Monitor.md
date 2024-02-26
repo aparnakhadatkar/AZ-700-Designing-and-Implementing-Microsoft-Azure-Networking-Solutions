@@ -202,7 +202,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
    | Backend port           | **80**                   |
-   | Health probe           | **myHealthProbe**        |
+   | Health probe           | select **myHealthProbe**        |
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
    | Enable Floating IP            | **Unchecked**             |
