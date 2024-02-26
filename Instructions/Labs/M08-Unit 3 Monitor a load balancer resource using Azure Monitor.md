@@ -197,7 +197,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | ---------------------- | ------------------------ |
    | Name                   | **myHTTPRule**           |
    | IP Version             | **IPv4**                 |
-   | Frontend IP address    | **LoadBalancerFrontEnd** |
+   | Frontend IP address    | select **LoadBalancerFrontEnd** |
    | Backend pool           | **myBackendPool**        |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
