@@ -68,7 +68,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. Delete the existing subnet and select **+ Add a subnet**.
 
-1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a **Starting address** of **10.1.0.0** then **Size** of **/24**.
 
 1. Select **Add**.
 
