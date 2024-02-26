@@ -57,15 +57,15 @@ In this lab, you will complete the following tasks:
 
     ![Azure portal - add gateway subnet](../media/image-01.png)
 
-1. In the **Add a subnet** pane, use the information in the following table to create the subnet and then click on **Add (5)**.
+1. In the **Add a subnet** pane, use the information in the following table to create the subnet and then click on **Add (6)**.
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
    | Subnet purpose               | Select **Virtual Network Gateway (1)** |
    | Name                         | **GatewaySubnet (2)**  |
-   | IPv4 address range           | Select **10.20.0.0/16 (2)**  |
-   | Starting address             | **10.20.0.0 (3)**     |
-   | Size                         | **/27 (4)**           |
+   | IPv4 address range           | Select **10.20.0.0/16 (3)**  |
+   | Starting address             | **10.20.0.0 (4)**     |
+   | Size                         | **/27 (5)**           |
 
     ![](../media/m3-u4-t1-s5.png)
 
