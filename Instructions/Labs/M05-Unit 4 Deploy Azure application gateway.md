@@ -26,8 +26,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create an application gateway
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Application gateway**, and then select **Application 
-   gateways** from the results.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Application gateways (1)**, and then select **Application 
+   gateways (2)** from the results.
 
     ![Azure Portal search for application gateway](../media/l5u4-1.png)    
 
@@ -37,28 +37,26 @@ In this lab, you will complete the following tasks:
 
    | **Setting**         | **Value**                                    |
    | ------------------- | -------------------------------------------- |
-   | Subscription        | Select your subscription.                    |
-   | Resource group      | Select ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>       |
-   | Application Gateway | ContosoAppGateway                            |
-   | Region              | **<inject key="Region" enableCopy="false"/>**                           |
-   | Virtual Network     | Select **Create new**                        |
+   | Subscription        | Select your subscription **(1)**.                    |
+   | Resource group      | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**       |
+   | Application gateway name | **ContosoAppGateway (3)**                            |
+   | Region              | **<inject key="Region" enableCopy="false"/> (4)**                           |
+   | Virtual Network     | Select **Create new (5)**                        |
    
    ![Azure Portal search for application gateway](../media/l5u4-2.png)
 
-1. On Create virtual network, enter, or select the following information:
+1. On Create virtual network, configure the following and then click on **OK (5)** to return to the Create application gateway Basics tab:
 
    | **Setting**       | **Value**                          |
    | ----------------- | ---------------------------------- |
-   | Name              | ContosoVNet                        |
+   | Name              | **ContosoVNet (1)**                        |
    | **ADDRESS SPACE** |                                    |
-   | Address range     | 10.0.0.0/16                        |
+   | Address range     | **10.0.0.0/16 (2)**                        |
    | **SUBNETS**       |                                    |
-   | Subnet name       | Change **default** to **AGSubnet** |
-   | Address range     | 10.0.0.0/24                        |
+   | Subnet name       | Change **default** to **AGSubnet (3)** |
+   | Address range     | **10.0.0.0/24 (4)**                        |
 
    ![Azure Portal search for application gateway](../media/l5u4-2-1.png)
-   
-1. Select **OK** to return to the Create application gateway Basics tab.
 
 1. Accept the default values for the other settings and then select **Next: Frontends**.
 
@@ -124,7 +122,7 @@ In this lab, you will complete the following tasks:
 
     | **Setting**          | **Value**   |
     | ------------------   | ----------- |
-    | Backend setting name | HTTPSetting |
+    | Backend settings name | HTTPSetting |
     | Backend port         | 80          |
 
     ![Azure Portal search for application gateway](../media/l5u4-2-7.png)  
@@ -146,7 +144,7 @@ In this lab, you will complete the following tasks:
 
 1. On the Virtual networks page select **ContosoVNet**. 
  
-1. On the ContosoVNet page from left side menu under Settings and click **Subnet**.
+1. On the ContosoVNet page from left side menu under the Settings section, click on **Subnets**.
 
 1. On the **ContosoVNet | Subnets** page select **+ Subnet**. 
 
@@ -215,11 +213,11 @@ In this lab, you will complete the following tasks:
 
 1. On the **Edit backend pool** page, under **Backend targets**, in **Target type**, select **Virtual machine**.
 
-1. Under **Target**, select **BackendVM1.nic.** 
+1. Under **Target**, select **BackendVM1-nic.** 
 
 1. On **Target type**, select **Virtual machine**.
 
-1. Under **Target**, select **BackendVM2.nic.**
+1. Under **Target**, select **BackendVM2-nic.**
    
 1. Select **Save**.
 

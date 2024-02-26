@@ -33,8 +33,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create the VNet and gateway subnet
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual 
-   networks** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks (1)**, and then select **Virtual 
+   networks (2)** under services.
 
     ![](../media/VN.png)
    
@@ -46,28 +46,28 @@ In this lab, you will complete the following tasks:
    | -------------------- | -------------------------------- |
    | Subscription         | Leave default                    |
    | Resource Group       | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**|
-   | Virtual Network Name | CoreServicesVNet                 |
-   | Location             | East US                          |
+   | Virtual network name | CoreServicesVNet                 |
+   | Region               | East US                          |
 
-1. Select **Next : IP addresses**.
-
-1. On the **IP Addresses** tab, click on **Add IPv4 address space** in new address space box, enter 10.20.0.0  in address space field and enter /16 in size, then 
-   select  **+ Add subnet** **(4)**. 
+1. To add IPv4 address space, on the **IP Addresses** tab, perform the following sub-steps:
+      - Click on **Add IPv4 address space (1)** in new address space box.
+      - Enter **10.20.0.0 (2)** in address space field.
+      - Enter **/16 (3)** in size filed.
+      - Then click on the **+ Add a subnet (4)** button.
 
     ![Azure portal - add gateway subnet](../media/image-01.png)
 
-1. In the Add subnet pane, use the information in the following table to create the subnet:
+1. In the **Add a subnet** pane, use the information in the following table to create the subnet and then click on **Add (6)**.
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
-   | Subnet template              | Select **Virtual Network Gateway** |
-   | Name                         |GatewaySubnet  |
-   | Starting address             | 10.20.0.0     |
-   | Subnet size                  | /27           |
+   | Subnet purpose               | Select **Virtual Network Gateway (1)** |
+   | Name                         | **GatewaySubnet (2)**  |
+   | IPv4 address range           | Select **10.20.0.0/16 (3)**  |
+   | Starting address             | **10.20.0.0 (4)**     |
+   | Size                         | **/27 (5)**           |
 
-1. And then select **Add**.
-
-   ![Azure portal - add gateway subnet](../media/image-02.png)
+    ![](../media/m3-u4-t1-s5.png)
 
 1. On the Create virtual network page, select **Review + Create**.
 
@@ -83,18 +83,18 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Create the virtual network gateway
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
 
 1. On the Virtual network gateways page, select **+ Create**.
 
 1. On the **Create virtual network gateway** page, use the information in the following table to create the gateway:
 
-   **Note**: First try to select **Region** to get virtual network option to choose.
+   **Note**: First try to select **Region** to get virtual network option to choose. It might take upto 15 minutes for the newly created virtual network option to show up. 
 
    | **Setting**               | **Value**                  |
    | ------------------------- | -------------------------- |
    | **Project details**       |                            |
-   | Resource Group            | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**       |
+   | Resource Group            | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** (Auto-selected)     |
    | **Instance details**      |                            |
    | Name                      | CoreServicesVnetGateway    |
    | Region                    | East US                    |
@@ -104,7 +104,7 @@ In this lab, you will complete the following tasks:
    | **Public IP address**     |                            |
    | Public IP address         | Create new                 |
    | Public IP address name    | CoreServicesVnetGateway-IP |
-   | Public IP address SKU     | Basic                      |
+   | Public IP address SKU     | Standard                   |
    | Assignment                | Not configurable           |
    
 1. Select **Review + Create**.

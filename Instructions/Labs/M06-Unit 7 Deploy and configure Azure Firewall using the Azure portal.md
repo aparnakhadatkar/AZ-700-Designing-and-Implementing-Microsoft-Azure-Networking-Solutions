@@ -43,34 +43,35 @@ In this task, you will create a single virtual network with two subnets.
      | Name             |  **Test-FW-VN**       |
      | Region           |  **<inject key="Region" enableCopy="false"/>**  |
 
-1. Select **Next: IP Addresses**. Enter IPv4 address space 10.0.0.0/16 if not already there by default. 
+1. Navigate to the **IP Addresses** tab and enter IPv4 address space **10.0.0.0/16** if not already there by default. 
 
 1. Under **Subnet name**, select the word **default**.
 
-1. In the **Edit subnet** dialog box, specify the following and  select **Save**.
+1. In the **Edit subnet** pane, specify the following and then click on **Save (6)**.
 
     |  **Setting**     | **Value**            |
     | ---------------- | ------------------   | 
-    | Subnet template  | Select **Azure Firewall**|
-    | Name             | **AzureFirewallSubnet**|
-    | Starting address | **10.0.1.0** |
-    | Subnet size      | **/26** |
-    |||
+    | Subnet purpose  | Select **Azure Firewall (1)**|
+    | Name             | (Pre-populated) **AzureFirewallSubnet (2)**|
+    | IPv4 address range | Select **10.0.0.0/16 (3)** |
+    | Starting address | **10.0.1.0 (4)** |
+    | Size      | **/26 (5)** |
 
-    ![](../media/lab6-1.png)
+    ![](../media/m6-u7-t1-s6.png)
 
 1. Select **+ Add a subnet**, to create another subnet, which will host the workload server that you will create shortly.
     
-1. In the **Edit subnet** dialog box, specify the following and select **Add**.
+1. In the **Add a subnet** page, specify the following and then select **Add (6)**.
 
-    | **Setting**      | **Value**            |
+    |  **Setting**     | **Value**            |
     | ---------------- | ------------------   | 
-    | Name             | **Workload-SN**      |
-    | Starting address | **10.0.2.0**         |
-    | Subnet size      | **/24**              |
-    |||
+    | Subnet purpose  | Select **Default (1)**|
+    | Name             | **Workload-SN (2)**|
+    | IPv4 address range | Select **10.0.0.0/16 (3)** |
+    | Starting address | **10.0.2.0 (4)** |
+    | Size      | **/24 (5)** |
 
-   ![](../media/l6u7-2.png)
+   ![](../media/m6-u7-t1-s8.png)
    
 1. Select **Review + create** and  **Create**.
 
@@ -119,40 +120,36 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. Select **Srv-Work** virtual machine.
 
-1. On the **Overview** page of **Srv-Work**, on the right of the page under **Settings** section, select **Networking**, make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
+1. On the **Overview** page of **Srv-Work**, within the left navigation pane, under the **Networking** section, select **Network settings** and make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
  
 ## Task 3: Deploy the firewall and firewall policy
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Firewall**, and then select **Firewall** under 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Firewalls (1)**, and then select **Firewalls (1)** under 
    services.
 
    ![](../media/l6u7-3.png)
   
 1. On the **Firewall** page, select **+ Create**.
 
-1. On the **Basics** tab, create a firewall using the information in the table below.
+1. On the **Basics** tab, create a firewall using the information in the table below and navigate to the **Review + create (11)** tab.
 
    | **Setting**              | **Value**                                                    |
    | --------------------     | ------------------------------------------------------------ |
-   | Subscription             | Select your subscription                                     |
-   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
-   | Firewall name            | **Test-FW01**                                                |
-   | Region                   | **<inject key="Region" enableCopy="false"/>**               |
-   | Firewall SKU             | **Standard**                                                 |
-   | Firewall management      | **Use a Firewall Policy to manage this firewall**            |
-   | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol**<br />         |
-   | Choose a virtual network | **Use existing**                                             |
-   | Virtual network          | **Test-FW-VN**                                               |
-   | Public IP address        | Select **Add new**<br /> Name: **fw-pip**                    |
+   | Subscription             | Select your subscription **(1)**                                    |
+   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**   |
+   | Firewall name            | **Test-FW01 (3**                                                |
+   | Region                   | **<inject key="Region" enableCopy="false"/> (4)**               |
+   | Firewall SKU             | **Standard (5)**                                                 |
+   | Firewall management      | **Use a Firewall Policy to manage this firewall (6)**            |
+   | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol (7)**<br />         |
+   | Choose a virtual network | **Use existing (8)**                                             |
+   | Virtual network          | **Test-FW-VN (9)**                                               |
+   | Public IP address        | Select **Add new**<br /> Name: **fw-pip (10)**                    |
    |||
 
    ![](../media/l6u7-4.png)
-
-1. Review all the settings to ensure they match the screenshot below.
-
-1. Select **Review + create**.
 
 1. Select **Create** and wait for the firewall deployment to complete.
 
@@ -176,7 +173,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
 In this task, on the Workload-SN subnet, you will configure the outbound default route to go through the firewall.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Route tables**, and then select **Route tables** 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Route tables (1)**, and then select **Route tables (2)** 
    under services.
 
      ![](../media/l6u7-6.png)
@@ -199,28 +196,27 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK**.
+1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK (3)**.
 
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
-   | Virtual Network          | select **Test-FW-VN**    |
-   | Subnet                   | **Workload-SN**          |
+   | Virtual Network          | select **Test-FW-VN (1)**    |
+   | Subnet                   | **Workload-SN (2)**          |
 
    **Note**:  Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.
 
     ![](../media/l6u7-7.png)
 
    
-1. Under **Settings**, select **Routes** and then select **Add**.
+1. Under **Settings**, select **Routes** and then select **+ Add (6)**.
 
    | **Setting**                              | **Value**                |
    | --------------------------------------   | ------------------------ |
-   | **Route name**                           | **fw-dg**                |
-   | **Destination type**                     | **IP address**           |
-   | **Destination IP addresses/CIDR ranges** |  **0.0.0.0/0**           |
-   | **Next hop type**                        | **Virtual appliance**    |
-   | **Next hop address**                     | enter the private IP address for the firewall that you noted previously (e.g., **10.0.1.4**) |
-   |||
+   | **Route name**                           | **fw-dg (1)**                |
+   | **Destination type**                     | **IP address (2)**           |
+   | **Destination IP addresses/CIDR ranges** |  **0.0.0.0/0 (3)**           |
+   | **Next hop type**                        | **Virtual appliance (4)**    |
+   | **Next hop address**                     | Enter the private IP address for the firewall that you noted previously **(5)** (e.g., **10.0.1.4**) |
    
     ![](../media/l6u7-8.png)
 
@@ -298,8 +294,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
    | Protocol               | **UDP**                                                      |
    | Destination Ports      | **53**                                                       |
    | Destination Type       | **IP Address**                                               |
-   | Destination            | **209.244.0.3, 209.244.0.4**<br />These are public DNS servers operated by Century Link |
-   |||
+   | Destination            | **209.244.0.3, 209.244.0.4** <br />These are public DNS servers operated by Century Link. |
 
    ​![Add a network rule collection](../media/l6u7-11.png)
 
@@ -334,7 +329,8 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Protocol              | **TCP**                                                      |
    | Destination Ports     | **3389**                                                     |
    | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
-   | Translated address    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
+   | Translated type       | **IP Address**                                                     |
+   | Translated address or    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
    | Translated port       | **3389**                                                     |
    |||
 
@@ -363,7 +359,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Under **DNS servers**, select **Custom**.
 
-1. enter **209.244.0.3** in the **Add DNS server** text box, and **209.244.0.4** in the next text box.
+1. Enter **209.244.0.3** in the **Add DNS server** text box, and **209.244.0.4** in the next text box.
 
 1. Select **Save**.
 
