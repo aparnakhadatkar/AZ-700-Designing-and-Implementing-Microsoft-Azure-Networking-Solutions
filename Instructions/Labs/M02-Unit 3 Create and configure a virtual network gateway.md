@@ -118,18 +118,34 @@ In this lab, you will complete the following tasks:
 
 1. On the Azure Portal home page, search and select **Virtual Machines**.
 1. Select **ManufacturingVM**.
-1. On **ManufacturingVM**, select **Connect**.
-1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
+1. On **ManufacturingVM**, click on the **Connect (1)** dropdown and then select **Connect (2)**.
 
-   ![](../media/MFVM.png)
-   
-1. Open the downloaded RDP file.
+   ![](../media/m2-u3-t4-s3.png)
+
+1. On **ManufacturingVM | Connect** page, click on **Download RDP file**. 
+
+   ![](../media/m2-u3-t4-s4.png)
+
+1. Click on the **Keep** button within the warning pop-up that shows up.
+
+   ![](../media/m2-u3-t4-s5.png)
+
+1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
+
+   ![](../media/m2-u3-t4-s6-a.png)
+
+   ![](../media/m2-u3-t4-s6-b.png)
+
 1. Connect to ManufacturingTestVM using the RDP file, and enter the username **TestUser** and Admin password **Pa55w.rd!!** provided during deployment. After connecting, minimize the RDP session.
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **CoreServicesVM**.
-1. On **CoreServicesVM**, select **Connect**.
-1. On **ManufacturingVM | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
-1. Open the downloaded RDP file.
+1. On **CoreServicesVM**, click on the **Connect (1)** dropdown and then select **Connect (2)**.
+
+   ![](../media/m2-u3-t4-s3.png)
+
+1. On **CoreServicesVM | Connect** page, click on **Download RDP file**. 
+1. Click on the **Keep** button within the warning pop-up that shows up.
+1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and Admin password, enter **Pa55w.rd!!**
 1. On both VMs, in **Networks**, select **Yes**.
 1. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
