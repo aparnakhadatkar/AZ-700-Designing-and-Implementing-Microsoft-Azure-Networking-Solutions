@@ -469,8 +469,6 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Hover over some of the data points in the charts, and you will see that the values change to show the exact value at that point in time.
 
-1. Select the **Flow Distribution** tab and scroll down the page to see the charts under the **VM Flow Creation and Network Traffic** section. 
-
 ### Task 13: View resource health
 
 1. To view the health of your Load Balancer resources, on the Azure home page, in **Search resources, services, and docs**, enter **Monitor** and select **Monitor**.
