@@ -64,7 +64,12 @@ In this section, you will create a virtual network and a subnet.
    
 1. Select **Next**.
 
-1. On the **IP addresses** tab, in the  **IPV4 address space**, enter IPv4 address space **10.1.0.0** and  **IPv4 address Size**  **/16**.
+1. On the **IP addresses** tab, in the  **IPV4 address space**, enter the following :
+
+    - IPv4 address space: **10.1.0.0**
+    - **IPv4 address Size**:  **/16**
+  
+      ![](../media/lab8-image4.png)
 
 1. Delete the existing subnet and select **+ Add a subnet**.
 
