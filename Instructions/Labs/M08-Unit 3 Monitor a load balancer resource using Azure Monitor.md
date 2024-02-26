@@ -258,8 +258,10 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 ### Task 7: Add VMs to the backend pool
 
-1. On the Azure portal home page, from top left corner of page click Show portal menu, select **All resources** and under **Resources**, select **myIntLoadBalancer** 
-   from the resources list.
+1. On the Azure portal home page, from top left corner of page **click Show portal** menu, select **All resources** under **resources** section, select 
+   **myIntLoadBalancer** from the resources list.
+
+     ![](../media/unit4-image5.png)
 
 1. On the **myIntLoadBalancer** Load balancer page, from the left-hand navigation pane, under **Settings**, select **Backend pools** and then select 
    **myBackendPool**.
