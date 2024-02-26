@@ -139,10 +139,7 @@ In this lab, you will complete the following tasks:
 1. Connect to ManufacturingTestVM using the RDP file, and enter the username **TestUser** and Admin password **Pa55w.rd!!** provided during deployment. After connecting, minimize the RDP session.
 1. On the Azure Portal home page, select **Virtual Machines**.
 1. Select **CoreServicesVM**.
-1. On **CoreServicesVM**, click on the **Connect (1)** dropdown and then select **Connect (2)**.
-
-   ![](../media/m2-u3-t4-s3.png)
-
+1. On **CoreServicesVM**, click on the **Connect** dropdown and then select **Connect**.
 1. On **CoreServicesVM | Connect** page, click on **Download RDP file**. 
 1. Click on the **Keep** button within the warning pop-up that shows up.
 1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
