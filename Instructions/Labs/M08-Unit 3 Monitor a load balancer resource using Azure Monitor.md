@@ -440,8 +440,6 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
-1. To download a .SVG file copy of the topology diagram, select **Download topology**, and save the file in your **Downloads** folder. 
-
 1. In the top right corner, select **View metrics** to reopen the metrics pane on the right-hand side of the screen.
 
 1. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts. 
