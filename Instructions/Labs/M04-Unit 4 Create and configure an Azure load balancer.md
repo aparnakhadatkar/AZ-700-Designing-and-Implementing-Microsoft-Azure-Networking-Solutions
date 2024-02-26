@@ -28,7 +28,7 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create a virtual network and a subnet.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual networks** under services.
 
     ![](../media/VN.png)
 
@@ -43,18 +43,18 @@ In this section, you will create a virtual network and a subnet.
    | Name           | **IntLB-VNet**                                                      |
    | Region         | **<inject key="Region" enableCopy="false"/>**                   |
 
-1. Select **Next** on the **Security** tab, under **BastionHost** select **Enable Azure Bastion**, then enter the information from the table below.
+1. Select **Next** on the **Security** tab, under **Azure Bastion** select **Enable Azure Bastion**, then enter the information from the table below.
 
     | **Setting**                       | **Value**                                     |
     | --------------------------------- | --------------------------------------------- |
-    | Bastion name                      | **myBastionHost**                             |
-    | Public IP address                 | Select **Create a public IP address**  Name: **myBastionIP** |
+    | Azure Bastion host name           | **myBastionHost**                             |
+    | Azure Bastion public IP address   | Select **Create a public IP address**  Name: **myBastionIP** |
 
 1. Select **ok**.
 
 1. Select **Next : IP Addresses**.
    
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add subnet**.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add a subnet** in the new IPv4 address space.
 
    ![](../media/L4U4-1.png)
 
@@ -64,21 +64,21 @@ In this section, you will create a virtual network and a subnet.
    | ---------------------------- | ------------- |
    | Name                         | **myBackendSubnet** |
    | Starting address             | **10.1.0.0**        |
-   | Subnet size                  | **/24**             |
+   | Size                         | **/24**             |
    |||
 
-    ![](../media/L4U4-2.png)
+    ![](../media/mod4-u4-2.png)
    
-1. On the Create virtual network of **IP address** tab select **+ Add subnet**, on **Add a subnet** blade specify the following and select **Add**.
+1. On the Create virtual network of **IP address** tab select **+ Add a subnet** in the new IPv4 address space. On **Add a subnet** blade specify the following and select **Add**.
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
    | Name                         | **myFrontEndSubnet** |
    | Starting address             | **10.1.2.0**        |
-   | Subnet size                  | **/24**             |
+   | Size                         | **/24**             |
    |||
 
-   ![](../media/L4U4-(3).png)
+   ![](../media/mod4-u4-3.png)
    
 1. Select **Review + create**.
 
@@ -89,6 +89,8 @@ In this section, you will create a virtual network and a subnet.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="f3f7612a-945c-453b-87cc-9ac4592a00cc" />
 
 ## Task 2: Create backend servers
 
@@ -122,7 +124,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
  1.  You will be prompted to provide an admin password, provide adminPassword: Pa55w.rd!!
 
-   **Note**: It may take 15-20 min to create these three VMs. Please wait until this job completes, and you will be prompted to provide password for three times for 
+   **Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
     each VM deployment.
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -150,8 +152,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | SKU                   | **Standard**             |
    | Type                  | **Internal**             |
 
-1. Select **Next: Frontend IP configurations>** and click on  **+ Add frontend IP configuration**.
-1. On the **Add frontend IP address** blade, enter the information from the table below and select **Add**.
+1. Select **Next: Frontend IP configuration>** and click on  **+ Add a frontend IP configuration**.
+1. On the **Add frontend IP configuration** blade, enter the information from the table below and select **Add**.
  
    | **Setting**     | **Value**                |
    | --------------- | ------------------------ |
@@ -191,7 +193,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
 
-1. Under **IP configuration**, select **Add**.
+1. Under **IP configurations**, select **Add**.
 
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
 
@@ -253,10 +255,10 @@ In this section, you will create a test VM, and then test the load balancer.
 
 ### Task 5.1: Create test VM
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machine**, and then select **Virtual 
-   machine** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machines**, and then select **Virtual 
+   machines** under services.
 
-1. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
+1. Select **+ Create** and choose **Azure virtual machine**. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
@@ -265,8 +267,8 @@ In this section, you will create a test VM, and then test the load balancer.
    | Virtual machine name | **myTestVM**                                 |
    | Region               |  **<inject key="Region" enableCopy="false"/>**                              |
    | Availability options | **No infrastructure redundancy required**    |
-   | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
-   | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory**   |
+   | Image                | **Windows Server 2019 Datacenter - x64 Gen 2**   |
+   | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory**   |
    | Username             | **TestUser**                                 |
    | Password             | **Provide a secure password**                |
    | Confirm password     | **Provide a secure password**                |
@@ -296,11 +298,11 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the **Overview** page, make a note in notepad of the **Private IP address**, or copy it to the clipboard.
 
-   **Note**: you may need to select **See more** in order to see the **Private IP address** field.
+   **Note**: You may need to select **See more** in order to see the **Private IP address** field.
 
-1. Select **Home**, then on the Azure portal home page, select **All resources**, then select on the **myTestVM** virtual machine that you just created.
+1. Select **Home**, then on the Azure portal home page, select **All resources**, then select the **myTestVM** virtual machine that you just created.
 
-1. On the **Overview** page, select **Connect**, under Configured connection section, select **Go to Bastion**.
+1. On the **Overview** page, select **Connect**. Under Configured connection section, select **Go to Bastion**.
 
 1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment in task: 5.1, then select **Connect**.
   
@@ -311,6 +313,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. If a **Networks** pane appears, select **Yes**.
 
+1. If you see **See text and images copied to the clipboard** then select **Allow** and minimize the server manager tab.
+
 1. Select the **Internet Explorer** icon in the task bar to open the web browser.
 
 1. Select **OK** on the **Set up Internet Explorer 11** dialog box.
@@ -319,13 +323,15 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Enter (or paste) the **Private IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
 
+1. Select **Yes** on the Security Alert that may pop-up.
+
 1. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
 
-    ![](../media/L4U4-(4).png)
+    ![](../media/mod4-u4-12.png)
    
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
-    ![](../media/L4U4-4.png)
+    ![](../media/mod4-u4-11.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.

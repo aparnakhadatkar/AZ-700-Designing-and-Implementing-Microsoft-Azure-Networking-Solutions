@@ -108,6 +108,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
     |                        | Starting address     | 10.20.30.0             |
     |                        | Size                 | /24                    |
 
+      ![](../media/m0d1-u4-1.png)
+
  1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
  1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.

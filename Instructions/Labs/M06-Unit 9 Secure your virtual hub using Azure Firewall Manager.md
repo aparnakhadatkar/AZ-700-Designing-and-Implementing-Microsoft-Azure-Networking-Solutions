@@ -32,8 +32,8 @@ In this part of the lab, you will create the spoke virtual networks and subnets 
 
 In this task, you will create the two spoke virtual networks each containing a subnet that will host your workload servers. 
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **virtual network**, and then select **virtual 
-   network** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual 
+   networks** under services.
 
 1. Select **+ Create**.
 
@@ -45,7 +45,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. Select **Next**.
 
-1. Keep the Security page as default, select **Next**.
+1. Keep the options as default in Security page, select **Next**.
 
 1. In **IPv4 address space**, replace the existing IPv4 address space with this **10.0.0.0/16**.
 
@@ -53,7 +53,7 @@ In this task, you will create the two spoke virtual networks each containing a s
 
     >**Note:** Delete any other address spaces listed here, such as 10.1.0.0/16.
 
-1. Under Subnet name, select the word default. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**. Change the **Starting address** to 
+1. Under Subnets name, select the word **default**. In the **Edit subnet** dialog box, change the name to **Workload-01-SN**. Change the **Starting address** to 
    **10.0.1.0**. Select Subnet size : **/24(256 addresses)**.
 
 1. Select **Save**.
@@ -88,9 +88,9 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. In the search box, type **firewall manager** and select **Firewall Manager** when it appears.
 
-1. On the **Firewall Manager** page, click **virtual hubs** on left pane in **Deployments** section.
+1. On the **Firewall Manager** page, click **Virtual Hubs** on left pane in **Deployments** section.
 
-1. On the **Virtual hubs** page, select **+ Create new secured virtual hub**.
+1. On the **Virtual Hubs** page, select **+ Create new secured virtual hub**.
 
     ![virtual hub](../media/AZ-700-virtualhubs.png)
 
@@ -110,7 +110,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
     
     ![Create new secured virtual hub - Basics tab](../media/AZ-700-firewall.png)
 
-1. On **Azure Firewall** tab enter 2 for **Specify number of the Public IP addresses**.
+1. On **Azure Firewall** tab enter **2** for **Specify number of the Public IP addresses**.
 
 1. Select **Next : Security Partner Provider >**.
 
@@ -124,7 +124,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. In the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
-1. On the **Firewall Manager** page, select **Virtual hubs**.
+1. On the **Firewall Manager** page, select **Virtual hubs** under Deployments.
 
 1. Select **Hub-01**.
 
@@ -193,9 +193,9 @@ In this task you will connect the hub and spoke virtual networks. This is common
    ```
 1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**
   
-1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
+1. Once the deployment has finished, navigate to the Azure portal home page, and proceed to select **Virtual Machines**.
 
-1. Select **Srv-workload-01** VM. On the **Overview** page of **Srv-workload-01**, in the left-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.0.1.4**), after this close it.
+1. Select **Srv-workload-01** VM. On the **Overview** page of **Srv-workload-01**, in the left-hand pane, select **Network Settings** under the **Networking** section, and note down the **NIC Private IP** (e.g., **10.0.1.4**), after this close it.
 
     ![](../media/AZ-700-VM-01.png)
 
@@ -253,7 +253,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 1. For **Protocol**, enter **http,https**.
 
-1. Ensure **Destination type** is **FQDN**.
+1. Ensure **Destination Type** is **FQDN**.
 
 1. For **Destination**, enter *.microsoft.com
 
@@ -386,7 +386,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 1. Select **Yes** on the certificate message.
 
-    >**Note:** if **Network** pop-up appears,select **Yes**. And minimize the **Server Manager** page.
+    >**Note:** If **Network** pop-up appears,select **Yes** and minimize the **Server Manager** page.
 
 1. Open Internet Explorer and select **OK** in the **Set up Internet Explorer 11** dialog box.
 
@@ -397,8 +397,6 @@ In this task you will test the application rule to confirm that it works as expe
 1. Select **Close** on the Internet Explorer security alerts that may pop-up.
 
 1. You should see the Microsoft home page.
-
-    ![RDP session browsing microsoft.com](../media/lab6-2.png)
 
 1. Browse to **https://www.google.com**.
 
@@ -417,7 +415,7 @@ In this task you will test the network rule to confirm that it works as expected
 1. While still logged in to the **Srv-workload-01** RDP session, from this **Srv-workload-01** remote session, from start menu search and open **Remote Desktop 
    Connection**.
 
-1. On the **Computer** box, enter the **private IP address** of **Srv-workload-02** (e.g., **10.1.1.4**).
+1. On the **Computer** box, enter the **private IP address** of **Srv-workload-02** (e.g., **10.1.1.4**). Click **Connect**.
 
 1. On the **Enter your credentials** dialog box, log in to the **Srv-workload-02** server by using the username **TestUser**, and the password **Pa55w.rd!!**
 
@@ -425,7 +423,7 @@ In this task you will test the network rule to confirm that it works as expected
 
 1. Select **Yes** on the certificate message.
 
-    >**Note:** if **Network** pop-up appears,select **Yes**. And minimize the **Server Manager** page.
+    >**Note:** If **Network** pop-up appears,select **Yes** and minimize the **Server Manager** page.
 
    ![RDP session from srv-workload-01 to another RDP session on srv-workload-02](../media/rdp-srv-workload-02-from-srv-workload-01.png)
 

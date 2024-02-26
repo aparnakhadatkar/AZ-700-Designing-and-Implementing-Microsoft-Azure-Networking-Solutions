@@ -27,11 +27,11 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create two instances of a web application deployed in the two different Azure regions.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under services.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
    ![Web App](../media/l5u6-1.png)
 
-1. Select **+ Create**  and then select **Web App** to create a Web App.
+1. Select **+ Create (1)**  and then select **+ Web App (2)** to create a Web App.
 
      ![Web App](../media/create.png)
 
@@ -83,8 +83,8 @@ In this section, you will create two instances of a web application deployed in 
 
 Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profile**, and then select **Traffic 
-   Manager profile** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic 
+   Manager profiles** under services.
 
 1. On **Load balancing | Traffic Manager** page, select **+ Create**.
 
@@ -109,11 +109,12 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, then select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic 
+   Manager profiles** under services.
 
-   **Note**: Kindly refresh the page to find **Traffic manger**.
+   **Note**: Kindly refresh the page to find and select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. Under **Settings**, select **Endpoints**, and then select **Add**.
+1. Under **Settings**, select **Endpoints**, and then select **+ Add**.
 
     ![Picture 21](../media/create-tmendpoints-1.png)
 
@@ -127,7 +128,7 @@ In this section, you will add the website in the East US as the primary endpoint
    | Target resource      | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/> (East US)** |
    | Priority             | **1**                             |
 
-1. Select **Add**.
+1. Click on **Add**.
 
 1. Repeat steps 2-4 above to create the failover endpoint. Use the same settings as before except for the information in the table below. 
 
@@ -137,9 +138,11 @@ In this section, you will add the website in the East US as the primary endpoint
    | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
    | Priority        | **2**                                     |
 
-1. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
+   >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
-1. Under **Settings**, select **Configuration**, and then update the Endpoint monitor settings **Protocol** to HTTPS and **Port** to 443 and select **Save**.
+1. Click on **Add**.
+
+1. Under **Settings**, select **Configuration**, and then update the **Endpoint monitor settings** protocol to **HTTPS** and **Port** to **443** and select **Save**.
 
 1. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
 

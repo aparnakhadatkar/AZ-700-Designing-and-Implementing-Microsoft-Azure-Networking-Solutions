@@ -38,7 +38,7 @@ In this lab, you will complete the following tasks:
 
 In this section, you will create a virtual network and a subnet.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
+1. In Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
 
 1. Select **+ Create**.
 
@@ -62,13 +62,17 @@ In this section, you will create a virtual network and a subnet.
    
 1. Select **Next**.
 
-1. On the **IP addresses** tab, click on  **Add IPv4 address space** box, and in new **IPV4 address space**, enter **10.1.0.0/16**.
+1. On the **IP addresses** tab, in the  **IPV4 address space**, enter **10.1.0.0/16**.
 
-1. Select **+ Add a subnet**.
+1. Delete the existing subnet and select **+ Add a subnet**.
 
 1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
 
 1. Select **Add**.
+
+1. In the error that appears click on **Add Azure Bastion Subnet** hyperlink.
+
+   ![](../media/bastionerror.png)
 
 1. Select **Review + create**.
 
@@ -265,11 +269,13 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. select **myVM1**.
 
-1. On the **Overview** page, select **Connect**, under **Configured connection** section, select **Go to Bastion**.
+1. On the **Overview** page, select **Connect**, and from the dropdown, select **Connect via Bastion**.
 
 1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you provided during deployment, then select **Connect**.
 
-   >**Note:** If an error appears, which says **A popup blocker is preventing new window from opening. Please allow popups and retry.** TOn the top of the page, select the box, which says **Always allows pop-ups and redirects from https://portal.azure.com**, and select **Done**. Repeat step-9.
+   >**Note:** If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
+
+     ![](../media/bastionaz7001.png)
 
 1. The **myVM1** window will open in another browser tab.
 
@@ -366,7 +372,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select **Home**, then on the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
 
-1. On the **Overview** page, select **Connect**, under **Configured connection** section, select **Go to Bastion**.
+1. On the **Overview** page, select **Connect**, and from the dropdown, select **Connect via Bastion**.
 
 1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment, then 
    select **Connect**.
