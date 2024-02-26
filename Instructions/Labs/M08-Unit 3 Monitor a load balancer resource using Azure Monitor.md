@@ -40,6 +40,8 @@ In this section, you will create a virtual network and a subnet.
 
 1. In Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
 
+    ![](../media/lab8-image3.png)
+
 1. Select **+ Create**.
 
 1. On the **Basics** tab, use the information in the table below to create the virtual network.
@@ -62,13 +64,20 @@ In this section, you will create a virtual network and a subnet.
    
 1. Select **Next**.
 
-1. On the **IP addresses** tab, in the  **IPV4 address space**, enter **10.1.0.0/16**.
+1. On the **IP addresses** tab, in the  **IPV4 address space**, enter the following :
+
+    - IPv4 address space: **10.1.0.0**
+    - **IPv4 address Size**:  **/16**
+  
+      ![](../media/lab8-image4.png)
 
 1. Delete the existing subnet and select **+ Add a subnet**.
 
-1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a **Starting address** of **10.1.0.0** then **Size** of **/24**.
 
 1. Select **Add**.
+
+   ![](../media/lab8-image2.png)
 
 1. In the error that appears click on **Add Azure Bastion Subnet** hyperlink.
 
@@ -90,10 +99,12 @@ In this section, you will create a virtual network and a subnet.
 
 In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancer**, and then select **Load Balancer** 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancers**, and then select **Load Balancers** 
    under services.
 
-1.  Select **+ Create** on the **Load Balancer** page.
+   ![](../media/lab8-image1.png)
+
+1.  Select **+ Create** on the **Load balancing | Load Balancer** page.
 
 1.  On the **Basics** tab, use the information in the table below to create the load balancer.
     
@@ -123,7 +134,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 1. Select **Review + create**.
    
 1. Select **Create**.
-
+   >**Note**: Wait for the deployment to get successfully.
+    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -188,7 +200,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. From the **Backend pools** page of your load balancer, from left-hand navigation pane, under **Settings**, select **Load balancing rules**, then select **+ Add**.
+1. From the **Health probes** page of your load balancer, from left-hand navigation pane, under **Settings**, select **Load balancing rules**, then select **+ Add**.
 
 1. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -196,12 +208,12 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | ---------------------- | ------------------------ |
    | Name                   | **myHTTPRule**           |
    | IP Version             | **IPv4**                 |
-   | Frontend IP address    | **LoadBalancerFrontEnd** |
-   | Backend pool           | **myBackendPool**        |
+   | Frontend IP address    | select **LoadBalancerFrontEnd** |
+   | Backend pool           | select **myBackendPool**        |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
    | Backend port           | **80**                   |
-   | Health probe           | **myHealthProbe**        |
+   | Health probe           | select **myHealthProbe**        |
    | Session persistence    | **None**                 |
    | Idle timeout (minutes) | **15**                   |
    | Enable Floating IP            | **Unchecked**             |
@@ -251,8 +263,10 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 ### Task 7: Add VMs to the backend pool
 
-1. On the Azure portal home page, from top left corner of page click Show portal menu, select **All resources** and under **Resources**, select **myIntLoadBalancer** 
-   from the resources list.
+1. On the Azure portal home page, from top left corner of page **click Show portal** menu, select **All resources** under **resources** section, select 
+   **myIntLoadBalancer** from the resources list.
+
+     ![](../media/unit4-image5.png)
 
 1. On the **myIntLoadBalancer** Load balancer page, from the left-hand navigation pane, under **Settings**, select **Backend pools** and then select 
    **myBackendPool**.
@@ -439,8 +453,6 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
-1. To download a .SVG file copy of the topology diagram, select **Download topology**, and save the file in your **Downloads** folder. 
-
 1. In the top right corner, select **View metrics** to reopen the metrics pane on the right-hand side of the screen.
 
 1. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts. 
@@ -457,8 +469,6 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Hover over some of the data points in the charts, and you will see that the values change to show the exact value at that point in time.
 
-1. Select the **Flow Distribution** tab and scroll down the page to see the charts under the **VM Flow Creation and Network Traffic** section. 
-
 ### Task 13: View resource health
 
 1. To view the health of your Load Balancer resources, on the Azure home page, in **Search resources, services, and docs**, enter **Monitor** and select **Monitor**.
@@ -473,6 +483,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. The **Resource health** page will identify any major availability issues with your load balancer resource. If there are any events under the **Health History** section, you can expand the health event to see more detail about the event. You can even save the detail about the event as a PDF file for later review and for reporting.
 
+    ![](../media/lab8-image5.png)
  
 ### Task 14: Configure diagnostic settings
 
