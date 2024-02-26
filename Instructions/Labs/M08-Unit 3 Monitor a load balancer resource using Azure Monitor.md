@@ -40,6 +40,8 @@ In this section, you will create a virtual network and a subnet.
 
 1. In Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
 
+    ![](../media/lab8-image3.png)
+
 1. Select **+ Create**.
 
 1. On the **Basics** tab, use the information in the table below to create the virtual network.
@@ -70,6 +72,8 @@ In this section, you will create a virtual network and a subnet.
 
 1. Select **Add**.
 
+   ![](../media/lab8-image2.png)
+
 1. In the error that appears click on **Add Azure Bastion Subnet** hyperlink.
 
    ![](../media/bastionerror.png)
@@ -92,6 +96,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancers**, and then select **Load Balancers** 
    under services.
+
+   ![](../media/lab8-image1.png)
 
 1.  Select **+ Create** on the **Load balancing | Load Balancer** page.
 
