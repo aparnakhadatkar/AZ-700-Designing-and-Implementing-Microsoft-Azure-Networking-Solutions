@@ -93,7 +93,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancers**, and then select **Load Balancers** 
    under services.
 
-1.  Select **+ Create** on the **Load Balancer** page.
+1.  Select **+ Create** on the **Load balancing | Load Balancer** page.
 
 1.  On the **Basics** tab, use the information in the table below to create the load balancer.
     
