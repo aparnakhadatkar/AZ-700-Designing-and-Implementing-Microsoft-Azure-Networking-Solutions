@@ -483,6 +483,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. The **Resource health** page will identify any major availability issues with your load balancer resource. If there are any events under the **Health History** section, you can expand the health event to see more detail about the event. You can even save the detail about the event as a PDF file for later review and for reporting.
 
+    ![](../media/lab8-image5.png)
  
 ### Task 14: Configure diagnostic settings
 
