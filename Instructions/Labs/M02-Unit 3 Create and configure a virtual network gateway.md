@@ -35,7 +35,7 @@ In this lab, you will complete the following tasks:
 
    ![](../media/unit6-image2.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share**, then click on **Create Storage**.
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
@@ -43,10 +43,8 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
@@ -65,15 +63,13 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
    
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-   
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
    ``` 
 
-   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -94,15 +90,13 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
-    **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -137,15 +131,25 @@ In this lab, you will complete the following tasks:
    ![](../media/m2-u3-t4-s6-b.png)
 
 1. Connect to ManufacturingTestVM using the RDP file, and enter the username **TestUser** and Admin password **Pa55w.rd!!** provided during deployment. After connecting, minimize the RDP session.
+
 1. On the Azure Portal home page, select **Virtual Machines**.
+
 1. Select **CoreServicesVM**.
+
 1. On **CoreServicesVM**, click on the **Connect** dropdown and then select **Connect**.
+
 1. On **CoreServicesVM | Connect** page, click on **Download RDP file**. 
+
 1. Click on the **Keep** button within the warning pop-up that shows up.
+
 1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
+
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and Admin password, enter **Pa55w.rd!!**
+
 1. On both VMs, in **Networks**, select **Yes**.
-1. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
+
+1. On CoreServicesVM, open PowerShell, and run the following command: **ipconfig**
+
 1. Note the IPv4 address. 
 
  ## Task 5: Test the connection between the VMs
@@ -189,9 +193,9 @@ In this lab, you will complete the following tasks:
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
 
-1.  Select **Review + Create** and **Create**.
+1.  Select **Review + create** and **Create**.
 
-    **Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
+    >**Note**: It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -201,13 +205,13 @@ In this lab, you will complete the following tasks:
 
 ## Task 7: Create ManufacturingVnet Gateway
 
-1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
+1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
 
 1. In Virtual network gateways, select **+ Create**.
 
 1. Use the information in the following table to create the virtual network gateway:
 
-   **Important**: First select **Region** on the basics tab and specify the following.
+   >**Important**: First select **Region** on the basics tab and specify the following.
 
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
@@ -227,9 +231,9 @@ In this lab, you will complete the following tasks:
    |                 |                   | Configure BGP                               | Disabled                     |
   
 
-1.  Select **Review + Create** and **Create**.
+1.  Select **Review + create** and **Create**.
 
-    **Note**: Please wait until deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
+    >**Note**: Please wait until deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -243,9 +247,9 @@ In this lab, you will complete the following tasks:
 
 1. In Virtual network gateways, select **CoreServicesVnetGateway**.
 
-1. On CoreServicesVnetGateway, under **Settings** section select **Connections**, and then select **+ Add**.
+1. On CoreServicesVnetGateway, from the left navigation menu, under **Settings** section select **Connections**, and then select **+ Add**.
 
-   **Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
+   >**Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
 1. On **Create connection** page of **Basics** tab, use the information in the following table to create the connection:
 
@@ -264,13 +268,12 @@ In this lab, you will complete the following tasks:
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
       | First virtual network gateway  | CoreServicesVnetGateway           |
-      | Second virtual network gateway | ManufacturingVnetGateway          |
-      | Shared key (PSK)               | abc123                            |
+      | Second virtual network gateway | ManufacturingVnetGateway          |          
       | IKE Protocol                   | IKEv2                             |
       | Use Azure Private IP Address   | Not selected                      |
       | Enable BGP                     | Not selected                      |
       
-1. To create the connection, select **Review + Create** and **Create**.
+1. To create the connection, select **Review + create** and **Create**.
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
@@ -278,7 +281,7 @@ In this lab, you will complete the following tasks:
 
 1. In Virtual network gateways, select **ManufacturingVnetGateway**.
 
-1. on ManufacturingVnetGateway, under **Settings** section select **Connections**, and then select **+ Add**.
+1. on ManufacturingVnetGateway, from the left navigation menu, under **Settings** section select **Connections**, and then select **+ Add**.
 
 1. Use the information in the following table to create the connection:
 
@@ -298,12 +301,15 @@ In this lab, you will complete the following tasks:
       | ------------------------------ | --------------------------------- |
       | First virtual network gateway  | ManufacturingVnetGateway          |
       | Second virtual network gateway | CoreServicesVnetGateway           |
-      | Shared key (PSK)               | abc123                            |
       | IKE Protocol                   | IKEv2                             |
       | Use Azure Private IP Address   | Not selected                      |
       | Enable BGP                     | Not selected                      |
   
-1. To create the connection, select **Review + Create** and **Create**.
+1. To create the connection, select **Review + create** and **Create**.
+
+1. Navigate to **Connections** page, select **CoreServicesGW-to-ManufacturingGW**, from the left navigation menu, under **Settings** select **Authentication**, replace the **Shared key (PSK)** valuw with **abc123**, and click on **Save**.
+
+1. Navigate to **Connections** page, select **ManufacturingGW-to-CoreServicesGW**, from the left navigation menu, under **Settings** select **Authentication**, replace the **Shared key (PSK)** valuw with **abc123**, and click on **Save**.
 
 ## Task 10: Verify that the connections connect 
 
@@ -317,7 +323,7 @@ In this lab, you will complete the following tasks:
    
     ![](../media/EM-1.png)
 
-  >**Note:** It may take upto 30 minutes for the status of the two connections that was just established/created.
+   >**Note:** It may take upto 30 minutes for the status of the two connections that was just established/created.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.

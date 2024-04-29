@@ -35,11 +35,11 @@ In this lab, you will complete the following tasks:
    | Basics          | Resource group                         | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
    |                 | Name                                   | **Contoso.com**          | 
 
-1. Select **Review + create** and **create**
+1. Select **Review create** and **create**
 
-   **Note**: Please Wait until the deployment is completed, and then select **Go to resource**.
+   >**Note**: Please Wait until the deployment is completed, and then select **Go to resource**.
 
-1. Verify that the zone has been created.
+1. Verify that the zone has been created by clicking on the **Go to resource**.
 
 ### Task 2: Link subnet for auto registration
 
@@ -58,7 +58,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select **OK**.
 
-   **Note**: Please Wait for 2 mins to successfully create virtual network link.
+   >**Note**: Please Wait for 2 mins to successfully create virtual network link.
    
 1. Select **Refresh**.
 
@@ -75,7 +75,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select OK.
 
-   **Note**: Please Wait for 2 mins to successfully create virtual network link.
+   >**Note**: Please Wait for 2 mins to successfully create virtual network link.
 
 1. Select **Refresh**.
 
@@ -92,7 +92,7 @@ In this lab, you will complete the following tasks:
 
 1. Review your settings and select OK.
   
-   **Note**: Please Wait for 2 mins to successfully create virtual network link.
+   >**Note**: Please Wait for 2 mins to successfully create virtual network link.
 
 1. Select **Refresh**.
 
@@ -132,15 +132,13 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   **Important**: Please replace ContosoResourceGroup-[DID] with the deployment **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "ContosoResourceGroup-[DID]"
+   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
-    **Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
+    >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
   
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -170,23 +168,23 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
-1. Select **TestVM1**.
+1. Select **testvm1**.
 
 1. On TestVM1, select **Connect** then select **Connect** from the drop-down. 
 
    ![](../media/connect.png)
 
-1. On **TestVM1 | Connect** page, under **Native RDP** window select and **Download RDP file**. 
+1. On **testvm1 | Connect** page, under **Native RDP** window select and **Download RDP file**. 
 
    ![](../media/download.png)
 
 1. Save the RDP file to your desktop. If any warning pops up in "edge downloads" select **Keep**.
 
-1. Follow the same steps for **TestVM2**
+1. Follow the same steps for **testvm2**
 
-1. Connect to TestVM1 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
+1. Connect to testvm1 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
 
-1. Connect to TestVM2 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
+1. Connect to testvm2 using the RDP file, and the username **TestUser** and the password you provided during deployment **Pa55w.rd!!**.
 
 1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
@@ -196,11 +194,11 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Verify that the IP address is the same as the one you noted in the DNS zone.
 
-1. Enter the command **ping TestVM2.contoso.com**.
+1. Enter the command **ping testvm2.contoso.com**.
 
 1. Verify that the FQDN resolves to the IP address that you noted in the Private DNS zone. The ping itself will timeout because of the Windows Firewall that is enabled on the VMs.
 
-1. Alternatively, you can enter the command nslookup TestVM2.contoso.com and verify that you receive a successful name resolution record for VM2
+1. Alternatively, you can enter the command nslookup testvm2.contoso.com and verify that you receive a successful name resolution record for VM2
  
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
