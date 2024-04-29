@@ -96,12 +96,12 @@ In this lab, you will complete the following tasks:
 
     ![Azure Portal search for application gateway](../media/l5u4-2-4.png)
 
-1. On the **Listener** tab, enter or select the following information:
+1. On the **Listener (1)** tab, enter or select the following information:
 
     | **Setting**   | **Value**         |
     | ------------- | ----------------- |
-    | Listener name | Listener          |
-    | Frontend IP   | Select **Public** |
+    | Listener name | Listener  **(2)**        |
+    | Frontend IP   | Select **Public IPv4 (3)** |
 
     ![Azure Portal search for application gateway](../media/l5u4-2-5.png)
 
