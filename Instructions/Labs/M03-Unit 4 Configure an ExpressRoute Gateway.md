@@ -55,7 +55,7 @@ In this lab, you will complete the following tasks:
       - Enter **/16 (3)** in size filed.
       - Then click on the **+ Add a subnet (4)** button.
 
-    ![Azure portal - add gateway subnet](../media/image-01.png)
+         ![Azure portal - add gateway subnet](../media/image-01.png)
 
 1. In the **Add a subnet** pane, use the information in the following table to create the subnet and then click on **Add (6)**.
 
@@ -69,11 +69,11 @@ In this lab, you will complete the following tasks:
 
     ![](../media/m3-u4-t1-s5.png)
 
-1. On the Create virtual network page, select **Review + Create**.
+1. On the Create virtual network page, select **Review + create**.
 
 1. Confirm that the VNet passes the validation and then select **Create**.
 
-   **Note**: If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
+   >**Note**: If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
@@ -105,15 +105,18 @@ In this lab, you will complete the following tasks:
    | Public IP address         | Create new                 |
    | Public IP address name    | CoreServicesVnetGateway-IP |
    | Public IP address SKU     | Standard                   |
+   | Availability Zone        | Zone-redundant |
    | Assignment                | Not configurable           |
+   | Enable active-active mode | Disabled |
+   | Configure BGP | Disabled | 
    
-1. Select **Review + Create**.
+1. Select **Review + create**.
 
 1. Confirm that the Gateway configuration passes validation and then select **Create**.
 
 1. When the deployment is complete, select **Go to Resource**.
 
-   **Note**: it can take up to 45 minutes to deploy a Gateway.
+   >**Note**: it can take up to 45 minutes to deploy a Gateway.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.

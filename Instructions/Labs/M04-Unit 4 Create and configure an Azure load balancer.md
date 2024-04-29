@@ -50,9 +50,9 @@ In this section, you will create a virtual network and a subnet.
     | Azure Bastion host name           | **myBastionHost**                             |
     | Azure Bastion public IP address   | Select **Create a public IP address**  Name: **myBastionIP** |
 
-1. Select **ok**.
+1. Select **OK**.
 
-1. Select **Next : IP Addresses**.
+1. Select **Next**.
    
 1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add a subnet** in the new IPv4 address space.
 
@@ -84,6 +84,8 @@ In this section, you will create a virtual network and a subnet.
 
 1. Select **Create**.
 
+   >**Note:** It will take 10-15 minutes to complete the deployment.
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -112,19 +114,17 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   >**Important**: Please replace IntLB-RG-DID with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "IntLB-RG-DID"
+   $RGName = "IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
 
- 1.  You will be prompted to provide an admin password, provide adminPassword: Pa55w.rd!!
+ 1.  You will be prompted to provide an admin password, provide adminPassword: **Pa55w.rd!!**.
 
-   **Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
+      >**Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
     each VM deployment.
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -153,7 +153,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Type                  | **Internal**             |
 
 1. Select **Next: Frontend IP configuration>** and click on  **+ Add a frontend IP configuration**.
-1. On the **Add frontend IP configuration** blade, enter the information from the table below and select **Add**.
+1. On the **Add frontend IP configuration** blade, enter the information from the table below and select **Save**.
  
    | **Setting**     | **Value**                |
    | --------------- | ------------------------ |
@@ -161,10 +161,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Virtual network | **IntLB-VNet**           |
    | Subnet          | **myFrontEndSubnet**     |
    | Assignment      | **Dynamic**              |
+   | Availbility Zone | **Zone-redundant**      |
 
 1. Select **Review + create** and  **Create**.
 
-   **Note**: Wait for deployment to complete successfully.
+      > **Note**: Wait for deployment to complete successfully.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -184,7 +185,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
     ![](../media/unit4-image5.png)
 
-1. On **myIntLoadBalancer** blade, under **Settings** section, select **Backend pools**, and then select **Add**.
+1. On **myIntLoadBalancer** blade, from the left navigation menu, under **Settings** section, select **Backend pools**, and then select **+ Add**.
 
 1. On the **Add backend pool** page, enter the information from the table below.
 
@@ -193,7 +194,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
 
-1. Under **IP configurations**, select **Add**.
+1. Under **IP configurations**, select **+ Add**.
 
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
 
@@ -205,7 +206,7 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 The load balancer monitors the status of your app with a health probe. The health probe adds or removes VMs from the load balancer based on their response to health checks. Here you will create a health probe to monitor the health of the VMs.
 
-1. From **myIntLoadBalancer | Backend pools** blade, under **Settings** section, select **Health probes**, then select **Add**.
+1. From **myIntLoadBalancer | Backend pools** blade, under **Settings** section, select **Health probes**, then select **+ Add**.
 
 1. On the **Add health probe** page, enter the information from the table below.
 
@@ -302,11 +303,11 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select the **myTestVM** virtual machine that you just created.
 
-1. On the **Overview** page, select **Connect**. Under Configured connection section, select **Go to Bastion**.
+1. On the **Overview** page, select **Connect**. Under Configured connection section, select **Connect via Bastion**.
 
 1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment in task: 5.1, then select **Connect**.
   
-   **Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
+   >**Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
    **Done**, repeat step-5.
 
 1. The **myTestVM** window will open in another browser tab.

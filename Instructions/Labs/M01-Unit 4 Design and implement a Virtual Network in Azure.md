@@ -90,7 +90,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
       ![](../media/unit4-image4.png)
 
-1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add subnet**. To finish creating each subnet, select **Add**.
+1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add a subnet**. To finish creating each subnet, select **Add**.
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
@@ -108,11 +108,13 @@ These virtual networks and subnets are structured in a way that accommodates exi
     |                        | Starting address     | 10.20.30.0             |
     |                        | Size                 | /24                    |
 
+1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**, and select **Create**.
+
       ![](../media/m0d1-u4-1.png)
 
- 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+1. Once, the creation of the **CoreServicesVnet** is completed, select **Go to resource**.
 
- 1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
+1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
 
     ![](../media/000001.png)
  
@@ -154,9 +156,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
     |                           | Starting address     | 10.30.22.0                |
     |                           | Size                 | /24                       |
 
- 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**, and select **Create**.
 
- 1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
+1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
     
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -183,6 +185,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
    | ResearchSystemSubnet | Name                 | ResearchSystemSubnet |
    |                      | Starting address     | 10.40.0.0            |
    |                      | Size                 | /24                  |
+
+1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**, and select **Create**.
  
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.

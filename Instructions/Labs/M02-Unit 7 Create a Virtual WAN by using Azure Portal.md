@@ -34,13 +34,13 @@ In this lab, you will complete the following tasks:
 
    - **Resource group:** **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   - **Resource group location:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create.
+   - **Region:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create.
 
    - **Name:** ContosoVirtualWAN
 
    - **Type:** Standard
 
-1. When you have finished filling out the fields, select **Review +Create**.
+1. When you have finished filling out the fields, select **Review + create**.
 
      ![](../media/lab2-unit7-image2.png)
 
@@ -57,29 +57,40 @@ In this lab, you will complete the following tasks:
 A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functionality. It takes 30 minutes to create the site-to-site VPN gateway in the virtual hub. You must create a Virtual WAN before you can create a hub.
 
 1. Locate the Virtual WAN that you created. 
-1. On the Virtual WAN page, under **Connectivity**, select **Hubs**.
-1. On the Hubs page, select **+New Hub** to open the Create virtual hub page.
+1. On the Virtual WAN page, from the left navigation menu, under **Connectivity**, select **Hubs**.
+
+1. On the Hubs page, select **+ New Hub** to open the Create virtual hub page.
   
 1. On the Create virtual hub page **Basics** tab, complete the following fields:
    - **Region:** West US
+   
    - **Name:** ContosoVirtualWANHub-WestUS
+   
    - **Hub private address space:** 10.60.0.0/24
-   - **Virtual hub capacity:** 2 Routing Infrastructure Units
+   - **Virtual hub capacity:** 2 Routing 
+   Infrastructure Units
+   
    - **Hub routing preference:** ExpressRoute
 
-   ![](../media/lab2-unit7-image3.png)
+      ![](../media/lab2-unit7-image3.png)
 
 1. Select **Next: Site-to-site**.
+
 1. On the **Site-to-site** tab, complete the following fields:
    - **Do you want to create a Site to site (VPN gateway)?:** Yes
+   
    - The **AS Number** field cannot be edited.
+   
    - **Gateway scale units:** 1 scale unit - 500 Mbps x 2
+   
    - **Routing preference:** leave the default 
+   
    - **Review + create** to validate.
 
-   ![](../media/lab2-unit7-image(4).png)
+      ![](../media/lab2-unit7-image(4).png)
 
 1. Select **Create** to create the hub. 
+
 1. After 30 minutes, **Refresh** to view the hub on the Hubs page. Wait for the deployment to finish before proceeding to the next task.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -92,7 +103,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 1. Locate the Virtual WAN that you created. 
 
-1. In ContosoVirtualWAN, under **Connectivity**, select **Virtual network connections**.
+1. In ContosoVirtualWAN, from the left navigation menu under **Connectivity**, select **Virtual network connections**.
 
    ![Virtual WAN configuration page with Virtual network connections highlighted.](../media/connect-vnet-to-virtual-hub1.png)
 
@@ -100,23 +111,23 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 1. In Add connection, use the following information to create the connection.
 
-   - **Connection name(1):** ContosoVirtualWAN-to-ResearchVNet
+   - **Connection name (1):** ContosoVirtualWAN-to-ResearchVNet
 
-   - **Hubs(2):** ContosoVirtualWANHub-WestUS
+   - **Hubs (2):** ContosoVirtualWANHub-WestUS
 
-   - **Subscription(3):** Leave it as default
+   - **Subscription (3):** Leave it as default
 
-   - **Resource Group(4):** ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>
+   - **Resource Group (4):** ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>
 
-   - **Virtual network(5):** ResearchVNet
+   - **Virtual network (5):** ResearchVNet
 
-   - **Propagate to none(6):** Yes
+   - **Propagate to none (6):** Yes
 
-   - **Associate Route Table(7):** Default
+   - **Associate Route Table (7):** Default
+
+   - Select **Create (8)**.
 
    ![](../media/m2-U7-1.png)
-
-1. Select **Create(8)**.
 
 ## Review
 
