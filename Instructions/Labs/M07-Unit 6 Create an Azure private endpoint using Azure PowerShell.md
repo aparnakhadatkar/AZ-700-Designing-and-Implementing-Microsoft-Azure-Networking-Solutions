@@ -420,11 +420,11 @@ In this section, you'll use the virtual machine you created in the previous step
      
      Non-authoritative answer:
      
-     Name: webapp<inject key="DeploymentID" enableCopy="false"/>.privatelink.azurewebsites.net
+     Name: mywebapp8675.privatelink.azurewebsites.net
      
      Address: 10.0.0.5
      
-     Aliases: webapp<inject key="DeploymentID" enableCopy="false"/>.azurewebsites.net 
+     Aliases: mywebapp8675.azurewebsites.net 
      ```  
 
      ![](../media/L7U7-1.png)
