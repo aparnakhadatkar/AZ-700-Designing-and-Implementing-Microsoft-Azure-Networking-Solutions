@@ -27,28 +27,28 @@ This exercise requires two instances of a web application that run in different 
 
    ![Web App](../media/l5u6-1.png)
 
-1. Select **+ Create**  and then select **Web App** to create a Web App.
+1. Select **+ Create (1)**  and then select **Web App (2)** to create a Web App.
 
      ![Web App](../media/create.png)
 
-1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
+1. On the Create Web App page, on the **Basics** tab, enter or select the following information, and select **Review + create (9)**.
 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**                |
-   | Name             | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/>** |
-   | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
-   | Operating System | Select **Windows**.                                          |
-   | Region           | Select **Central US**.                                       |
-   | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS** in the text box. |
-   | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+   | Subscription     | Select your subscription (1).                                    |
+   | Resource group   | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**                |
+   | Name             | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> (3)** |
+   | Publish          | Select **Code (4)**                                             |
+   | Runtime stack    | Select **.NET 6 (LTS) (5)**                                     |
+   | Operating System | Select **Windows**                                          |
+   | Region           | Select **Central US (6)**                                       |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS (7)** in the text box |
+   | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory (8)**        |
    |||
 
    ![Web App](../media/l5u6-3.png)
    
-1. Select **Review + create**, review the Summary, and then select **Create**.   
+1. Review the Summary, and then select **Create**.   
 
    >**Note:** It might take 2 minutes for the deployment to complete.
 
@@ -57,24 +57,24 @@ This exercise requires two instances of a web application that run in different 
 
 1. Select **+ Create**  and then select **Web App** to create a Web App.
 
-1. On the Create Web App page, on the **Basics** tab, enter or select the following information.
+1. On the Create Web App page, on the **Basics** tab, enter or select the following information, and select **Review + create (10)**.
 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**               |
-   | Name             | **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/>** |
-   | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET 6 (LTS)**.                                     |
-   | Operating System | Select **Windows**.                                          |
-   | Region           | Select **East US**.                                          |
-   | Windows Plan     | Select **Create new** and enter **myAppServicePlanEastUS** in the text box. |
-   | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory**.        |
+   | Subscription     | Select your subscription (1).                                    |
+   | Resource group   | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**               |
+   | Name             | **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> (3)** |
+   | Publish          | Select **Code (4)**                                             |
+   | Runtime stack    | Select **.NET 6 (LTS) (5)**                                     |
+   | Operating System | Select **Windows (6)**                                          |
+   | Region           | Select **East US (7)**                                          |
+   | Windows Plan     | Select **Create new** and enter **myAppServicePlanEastUS (8)** in the text box. |
+   | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory (9)**        |
    |||
 
    ![Web App](../media/l5u6-4.png)
    
-1. Select **Review + create**, review the Summary, and then select **Create**.   
+1. Review the Summary, and then select **Create**.   
 
    **Note**: Wait for deployment to complete it might take several minutes.
 
@@ -120,7 +120,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
 1. Wait for the resource to deploy, and then select **Go to resource**.
 
-1. On the Front Door resource in the Overview blade, locate the **Origin Groups (1)**, to update select the origin group **default-origin-group (2)** from the list and click on **+ Add an origin (3)**
+1. On the Front Door resource in the Overview blade, locate the **Origin groups (1)**, to update select the origin group **default-origin-group (2)** from the list and click on **+ Add an origin (3)**
 
    ![Web App](../media/l5u6-8.png)
 

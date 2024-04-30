@@ -94,7 +94,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
    ![](../media/unit6-image2.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files 
    **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and- 
@@ -104,15 +104,13 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
-   >**Important**: please replace "Test-FW-RG" with **"Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>"**
-
    ```powershell
-   $RGName = "Test-FW-RG"
+   $RGName = "Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
 
-   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
 
 1. When the deployment is complete, go to the Azure portal home page, then search and select **Virtual Machines**.
 
@@ -139,7 +137,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
    | --------------------     | ------------------------------------------------------------ |
    | Subscription             | Select your subscription **(1)**                                    |
    | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**   |
-   | Firewall name            | **Test-FW01 (3**                                                |
+   | Firewall name            | **Test-FW01 (3)**                                                |
    | Region                   | **<inject key="Region" enableCopy="false"/> (4)**               |
    | Firewall SKU             | **Standard (5)**                                                 |
    | Firewall management      | **Use a Firewall Policy to manage this firewall (6)**            |
@@ -196,7 +194,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. After deployment completes, select **Go to resource**.
 
-1. On the **Firewall-route** page, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK (3)**.
+1. On the **Firewall-route** page, from the left navigation menu, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK (3)**.
 
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
@@ -208,7 +206,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
     ![](../media/l6u7-7.png)
 
    
-1. Under **Settings**, select **Routes** and then select **+ Add (6)**.
+1. From the left navigation menu, under **Settings**, select **Routes** and then select **+ Add (6)**.
 
    | **Setting**                              | **Value**                |
    | --------------------------------------   | ------------------------ |
@@ -237,31 +235,29 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. In the list of resources, select your firewall policy, **fw-test-pol**.
 
-1. Under **Settings** section, select **Application Rules**.
+1. From the left navigation menu, under **Settings** section, select **Application Rules**.
 
 1. Select **+ Add a rule collection**.
 
-1. On the **Add a rule collection** page, create a new application rule using the information in the table below.
+1. On the **Add a rule collection** page, create a new application rule using the information in the table below, and select **Add (7)**.
 
    | **Setting**            | **Value**                                 |
    | ---------------------- | ----------------------------------------- |
-   | Name                   | **App-Coll01**                            |
-   | Rule collection type   | **Application**                           |
-   | Priority               | **200**                                   |
-   | Rule collection action | **Allow**                                 |
-   | Rule collection group  | **DefaultApplicationRuleCollectionGroup** |
+   | Name                   | **App-Coll01 (1)**                            |
+   | Rule collection type   | **Application (2)**                           |
+   | Priority               | **200 (3)**                                   |
+   | Rule collection action | **Allow (4)**                                 |
+   | Rule collection group  | **DefaultApplicationRuleCollectionGroup (5)** |
    | **Rules Section**      |                                           |
    | Name                   | **Allow-Google**                          |
    | Source type            | **IP Address**                            |
    | Source                 | **10.0.2.0/24**                           |
    | Protocol               | **http,https**                            |
    | Destination type       | **FQDN**                                  |
-   | Destination            | **www.google.com**                        |
+   | Destination            | **www.google.com (6)**                        |
    |||
    
    ![Add an application rule collection](../media/l6u7-(10).png)
-
-1. Select **Add**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -274,19 +270,19 @@ In this task, you will add an application rule that allows outbound access to ww
 
 In this task, you will add a network rule that allows outbound access to two IP addresses at port 53 (DNS).
 
-1. On the **fw-test-pol** page, under **Settings** section, select **Network Rules**.
+1. On the **fw-test-pol** page, from the left navigation menu, under **Settings** section, select **Network Rules**.
 
 1. Select **+ Add a rule collection**.
 
-1. On the **Add a rule collection** page, create a new network rule using the information in the table below.
+1. On the **Add a rule collection** page, create a new network rule using the information in the table below, and select **Add (7)**.
 
    | **Setting**            | **Value**                                                    |
    | ---------------------- | ------------------------------------------------------------ |
-   | Name                   | **Net-Coll01**                                               |
-   | Rule collection type   | **Network**                                                  |
-   | Priority               | **200**                                                      |
-   | Rule collection action | **Allow**                                                    |
-   | Rule collection group  | **DefaultNetworkRuleCollectionGroup**                        |
+   | Name                   | **Net-Coll01 (1)**                                               |
+   | Rule collection type   | **Network (2)**                                                  |
+   | Priority               | **200 (3)**                                                      |
+   | Rule collection action | **Allow (4)**                                                    |
+   | Rule collection group  | **DefaultNetworkRuleCollectionGroup (5)**                        |
    | **Rules Section**      |                                                              |
    | Name                   | **Allow-DNS**                                                |
    | Source type            | **IP Address**                                               |
@@ -294,11 +290,9 @@ In this task, you will add a network rule that allows outbound access to two IP 
    | Protocol               | **UDP**                                                      |
    | Destination Ports      | **53**                                                       |
    | Destination Type       | **IP Address**                                               |
-   | Destination            | **209.244.0.3, 209.244.0.4** <br />These are public DNS servers operated by Century Link. |
+   | Destination            | **209.244.0.3, 209.244.0.4 (6)** <br />These are public DNS servers operated by Century Link. |
 
    ​![Add a network rule collection](../media/l6u7-11.png)
-
-1. Select **Add**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -310,7 +304,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 In this task, you will add a DNAT rule that allows you to connect a remote desktop to the Srv-Work virtual machine through the firewall.
 
-1. On the **fw-test-pol** page, under **Settings** section, select **DNAT Rules**.
+1. On the **fw-test-pol** page, from the left navigation menu, under **Settings** section, select **DNAT Rules**.
 
 1. Select **+ Add a rule collection**.
 
@@ -318,10 +312,10 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
    | **Setting**           | **Value**                                                    |
    | --------------------- | ------------------------------------------------------------ |
-   | Name                  | **rdp**                                                      |
-   | Rule collection type  | **DNAT**                                                     |
-   | Priority              | **200**                                                      |
-   | Rule collection group | **DefaultDnatRuleCollectionGroup**                           |
+   | Name                  | **rdp (1)**                                                      |
+   | Rule collection type  | **DNAT (2)**                                                     |
+   | Priority              | **200 (3)**                                                      |
+   | Rule collection group | **DefaultDnatRuleCollectionGroup (5)**                           |
    | **Rules Section**     |                                                              |
    | Name                  | **rdp-nat**                                                  |
    | Source type           | **IP Address**                                               |
@@ -331,7 +325,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
    | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
    | Translated type       | **IP Address**                                                     |
    | Translated address or    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
-   | Translated port       | **3389**                                                     |
+   | Translated port       | **3389 (6)**                                                     |
    |||
 
    ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
@@ -355,7 +349,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. In the list of resources in this resource group, select the **Network interface** for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
 
-1. Under **Settings**, select **DNS servers**.
+1. From the left navigation menu, under **Settings**, select **DNS servers**.
 
 1. Under **DNS servers**, select **Custom**.
 
@@ -385,7 +379,7 @@ In this final task, you will test the firewall to verify that the rules are conf
     ![Add a network rule collection](../media/l6u7-12.png)
  
 1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, on the **Username** box, enter **TestUser** and Password  
-   **Pa55w.rd!!**
+   **Pa55w.rd!!**.
 
 1. Select **OK**.
 
