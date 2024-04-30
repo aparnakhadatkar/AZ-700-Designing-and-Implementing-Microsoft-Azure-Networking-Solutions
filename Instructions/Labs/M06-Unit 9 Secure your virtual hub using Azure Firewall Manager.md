@@ -90,23 +90,23 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. On the **Firewall Manager** page, click **Virtual Hubs** on left pane in **Deployments** section.
 
-1. On the **Virtual Hubs** page, select **+ Create new secured virtual hub**.
+1. On the **Virtual Hubs (1)** page, select **+ Create new secured virtual hub (2)**.
 
     ![virtual hub](../media/AZ-700-virtualhubs.png)
 
-1. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**.
+1. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-1. For **Region**, select **<inject key="Region" enableCopy="false"/>**.
+1. For **Region**, select **<inject key="Region" enableCopy="false"/> (2)**.
 
-1. For the **Secured virtual hub name**, enter **Hub-01**.
+1. For the **Secured virtual hub name**, enter **Hub-01 (3)**.
 
-1. For **Hub address space**, enter **10.2.0.0/16**.
+1. For **Hub address space**, enter **10.2.0.0/16 (4)**.
 
-1. Choose **New vWAN**.
+1. Choose **New vWAN (5)**.
 
-1. In **Virtual WAN Name**, enter **Vwan-01**.
+1. In **Virtual WAN Name**, enter **Vwan-01 (6)**.
 
-1. Select **Next : Azure Firewall >**.
+1. Select **Next : Azure Firewall > (7)**.
     
     ![Create new secured virtual hub - Basics tab](../media/AZ-700-firewall.png)
 
@@ -174,7 +174,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
    ![](../media/unit6-image2.png)
    
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (3)** for the  **File share** , then click on **Create storage (4)**.
 
     ![](../media/AZ-700-createstorageaccount.png)
 
@@ -184,14 +184,12 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 1. Deploy the following ARM templates to create the VM needed for this exercise:
 
-     >**Important**: Please replace fw-manager-rg-DID with **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "fw-manager-rg-DID"
+   $RGName = "fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
-1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**
+1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**.
   
 1. Once the deployment has finished, navigate to the Azure portal home page, and proceed to select **Virtual Machines**.
 
@@ -215,7 +213,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Firewall Manager**, and then select **Firewall 
    Manager** under services.
 
-   **Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
+   >**Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
 1. On **Firewall Manager** page, from the left-hand navigation pane, under security, select **Azure Firewall Policies**.
 
@@ -330,9 +328,9 @@ In this task you will associate the firewall policy with the virtual hub.
 
    **Note**: If the Firewall Manager icon does not appear on the homepage, then select **All services**. Then in the search box, enter **firewall manager** and select **Firewall Manager** when it appears.
 
-1. On **Firewall Manager**, under **Security**, select **Azure Firewall Policies**.
+1. On **Firewall Manager**, under **Security**, select **Azure Firewall Policies (1)**.
 
-1. Select the checkbox for **Policy-01** and  Select **Manage associations&gt;Associate hubs**.
+1. Select the checkbox for **Policy-01 (2)** and  Select **Manage associations&gt;Associate hubs (3)**.
 
    ![](../media/lab6-2.png)
 

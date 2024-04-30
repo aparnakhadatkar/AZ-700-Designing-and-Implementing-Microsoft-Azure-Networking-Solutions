@@ -50,7 +50,7 @@ In this section, you will create a virtual network and a subnet.
    | -------------- | --------------------------------------------------- |
    | Subscription   | Select your subscription                            |
    | Resource group | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**   |
-   | Name           | **IntLB-VNet**                                      |
+   | Virtual network name           | **IntLB-VNet**                                      |
    | Region         | **<inject key="Region" enableCopy="false"/>**                                   |
 
 1. Select **Next**.
@@ -71,7 +71,7 @@ In this section, you will create a virtual network and a subnet.
   
       ![](../media/lab8-image4.png)
 
-1. Delete the existing subnet and select **+ Add a subnet**.
+1. Delete the existing subnets and select **+ Add a subnet**.
 
 1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet**, and a **Starting address** of **10.1.0.0** then **Size** of **/24**.
 
@@ -112,7 +112,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
       | **Setting**           | **Value**                |
       | --------------------- | ------------------------ |
       | Subscription          | Select your subscription |
-      | Resource group        | Select IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>              |
+      | Resource group        | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**              |
       | Name                  | **myIntLoadBalancer**    |
       | Region                | **<inject key="Region" enableCopy="false"/>**         |
       | SKU                   | **Standard**             |
@@ -129,7 +129,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subnet                | **myBackendSubnet**      |
    | IP address assignment | **Dynamic**              |
 
-1. Select **Add**.
+1. Select **Save**.
 
 1. Select **Review + create**.
    
@@ -232,7 +232,7 @@ In this section, you will create three VMs for the backend pool of the load bala
 
    ![](../media/unit6-image2.png)
    
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create storage**.
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M08**.
 
@@ -240,17 +240,15 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
-    **Important**: Please replace IntLB-RG-DID with **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "IntLB-RG-DID"
+   $RGName = "IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
   
-1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa55w.rd!!**
+1. You will be prompted to provide an Admin password. Provide Admin password: **Pa55w.rd!!**.
      
    > **Note:** This will take several minutes to deploy and and you will be prompted to provide password for three times for 
     each VM deployment. When deployment completed, close the powershell.

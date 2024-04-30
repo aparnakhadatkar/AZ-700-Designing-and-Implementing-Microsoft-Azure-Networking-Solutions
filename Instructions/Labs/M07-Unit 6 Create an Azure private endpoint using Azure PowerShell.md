@@ -44,21 +44,19 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
    ![](../media/unit6-image2.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create storage**.
 
 1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **template.json** and **parameters.json** from **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07** into the Cloud Shell home directory one by one.
 
 1. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
 
-   **Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```powershell
-   $RGName = "CreatePrivateEndpointQS-rg"
+   $RGName = "CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
 
-   **Note**: If you receive an error (for example while looking into the Deployment status in the Portal) like "Website with given name GEN-UNIQUE already exists." please make sure to go to the step 1 mentioned above regarding editing the template.
+   >**Note**: If you receive an error (for example while looking into the Deployment status in the Portal) like "Website with given name GEN-UNIQUE already exists." please make sure to go to the step 1 mentioned above regarding editing the template.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -81,8 +79,6 @@ Create a virtual network and bastion host with:
 
 - New-AzBastion
 
-  **Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```PowerShell
    ## Create backend subnet config. ##
    
@@ -98,7 +94,7 @@ Create a virtual network and bastion host with:
    
     Name = 'MyVNet'
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     Location = 'eastus'
    
@@ -116,7 +112,7 @@ Create a virtual network and bastion host with:
    
     Name = 'myBastionIP'
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     Location = 'eastus'
    
@@ -132,7 +128,7 @@ Create a virtual network and bastion host with:
    
    $parameters3 = @{
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     Name = 'myBastion'
    
@@ -172,8 +168,6 @@ Create the virtual machine with the following commands:
 
 - Add-AzVMNetworkInterface
 
-  **Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```PowerShell
    ## Set credentials for server admin and password. ##
    
@@ -181,7 +175,7 @@ Create the virtual machine with the following commands:
    
    ## Command to get virtual network configuration. ##
    
-   $vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg
+   $vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>
    
    ## Command to create network interface for VM ##
    
@@ -189,7 +183,7 @@ Create the virtual machine with the following commands:
    
     Name = 'myNicVM'
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     Location = 'eastus'
    
@@ -233,23 +227,23 @@ Create the virtual machine with the following commands:
    
    ## Create the virtual machine ##
    
-   New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM $vmConfig 
+   New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>' -Location 'eastus' -VM $vmConfig 
    
    
    ```
 
-  **Note**: You will be prompted to provide UserName enter **TestUser** and Admin password enter **Pa55w.rd!!**
+  >**Note**: You will be prompted to provide UserName enter **TestUser** and Admin password enter **Pa55w.rd!!**.
 
-  **Note**: If you get a prompt related to NIC enter **Y**
+  >**Note**: If you get a prompt related to NIC enter **Y**
   
-  **Note**: Azure provides an ephemeral IP for Azure Virtual Machines which aren't assigned a public IP address, or are in the backend pool of an internal Basic 
+  >**Note**: Azure provides an ephemeral IP for Azure Virtual Machines which aren't assigned a public IP address, or are in the backend pool of an internal Basic 
   Azure Load Balancer. The ephemeral IP mechanism provides an outbound IP address that isn't configurable.  
 
-   **Note**: The ephemeral IP is disabled when a public IP address is assigned to the virtual machine or the virtual machine is placed in the backend pool of a 
+   >**Note**: The ephemeral IP is disabled when a public IP address is assigned to the virtual machine or the virtual machine is placed in the backend pool of a 
   Standard Load Balancer with or without outbound rules. If a Azure Virtual Network NAT gateway resource is assigned to the subnet of the virtual machine, the 
   ephemeral IP is disabled.
 
-  **Note**: For more information on outbound connections in Azure, see Using Source Network Address Translation (SNAT) for outbound connections.
+  >**Note**: For more information on outbound connections in Azure, see Using Source Network Address Translation (SNAT) for outbound connections.
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -266,12 +260,10 @@ In this section, you'll create the Private Endpoint and connection using:
 
 - New-AzPrivateEndpoint
 
-  **Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```PowerShell
    ## Place web app into variable. This assumes that only one web app exists in the resource group. ##
    
-   $webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg
+   $webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>
    
    ## Create Private Endpoint connection. ##
    
@@ -289,7 +281,7 @@ In this section, you'll create the Private Endpoint and connection using:
    
    ## Place virtual network into variable. ##
    
-   $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
+   $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>' -Name 'myVNet'
    
    ## Disable private endpoint network policy ##
    
@@ -301,7 +293,7 @@ In this section, you'll create the Private Endpoint and connection using:
    
    $parameters2 = @{
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     Name = 'myPrivateEndpoint'
    
@@ -328,18 +320,16 @@ In this section you'll create and configure the private DNS zone using:
 
 - New-AzPrivateDnsZoneGroup
 
-  **Important**: Please replace **CreatePrivateEndpointQS-rg**  with **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**
-
    ```PowerShell
    ## Place virtual network into variable. ##
    
-   $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
+   $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>' -Name 'myVNet'
    
    ## Create private dns zone. ##
    
    $parameters1 = @{
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     Name = 'privatelink.azurewebsites.net'
    
@@ -351,7 +341,7 @@ In this section you'll create and configure the private DNS zone using:
    
    $parameters2 = @{
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     ZoneName = 'privatelink.azurewebsites.net'
    
@@ -379,7 +369,7 @@ In this section you'll create and configure the private DNS zone using:
    
    $parameters4 = @{
    
-    ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+    ResourceGroupName = 'CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>'
    
     PrivateEndpointName = 'myPrivateEndpoint'
    
@@ -430,11 +420,11 @@ In this section, you'll use the virtual machine you created in the previous step
      
      Non-authoritative answer:
      
-     Name: mywebapp8675.privatelink.azurewebsites.net
+     Name: webapp<inject key="DeploymentID" enableCopy="false"/>.privatelink.azurewebsites.net
      
      Address: 10.0.0.5
      
-     Aliases: mywebapp8675.azurewebsites.net 
+     Aliases: webapp<inject key="DeploymentID" enableCopy="false"/>.azurewebsites.net 
      ```  
 
      ![](../media/L7U7-1.png)

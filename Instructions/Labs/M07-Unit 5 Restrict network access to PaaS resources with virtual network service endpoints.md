@@ -40,8 +40,8 @@ In this lab, you will complete the following tasks:
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
-   | Resource group | Select myResourceGroup                               |
-   | Name           | CoreServicesVNet                              |
+   | Resource group | Select **myResourceGroup**                               |
+   | Name           | **CoreServicesVNet**                              |
    | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
 
 1. Select **Next** and in the  **Security** tab, and specify the following values:
@@ -115,15 +115,15 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
     | Subscription   | Select your subscription                                     |
-    | Resource group | Select myResourceGroup                                              |
-    | Name           | ContosoPrivateNSG                                            |
+    | Resource group | Select **myResourceGroup**                                              |
+    | Name           | **ContosoPrivateNSG**                                            |
     | Location       | Select **<inject key="Region" enableCopy="false"/>**                                           |
 
-1. select **Review + create**, then select **Create**:
+1. Select **Review + create**, then select **Create**.
 
 1. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
 
-1. On the **ContosoPrivateNSG** page, under **Settings** section, select **Outbound security rules**.
+1. On the **ContosoPrivateNSG** page, from the left navigation menu, under **Settings** section, select **Outbound security rules**.
 
 1. Select **+ Add**.
 
@@ -185,7 +185,7 @@ Create another outbound security rule that denies communication to the internet.
 
 Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffic to the subnet from anywhere. The rule overrides a default security rule that denies all inbound traffic from the internet. Remote desktop connections are allowed to the subnet so that connectivity can be tested in a later step.
 
-1. On ContosoPrivateNSG | Outbound security rules, under **Settings**, select **Inbound security rules**.
+1. On ContosoPrivateNSG | Outbound security rules, from left navigation menu, under **Settings**, select **Inbound security rules**.
 
 1. Select **+ Add**.
 
@@ -208,7 +208,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
    > **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
-1. Under **Settings**, select **Subnets**.
+1. From the left navigation menu, under **Settings**, select **Subnets**.
 
 1. Select **+ Associate.**
 
@@ -238,10 +238,10 @@ The steps necessary to restrict network access to resources created through Azur
     | Resource group | myResourceGroup                                              |
     | Region         | **<inject key="Region" enableCopy="false"/>** 
     | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/>** |
-    | Performance    | Standard StorageV2 (general purpose v2)                      |                                              |
+    | Performance    | Standard                      |                                              |
     | Redundancy    | Locally-redundant storage (LRS)                              |
 
-1. select **Review**, then select **Create**.
+1. Select **Review + create**, then select **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -262,9 +262,9 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. Enter **marketing**, under **Name**.
 
-1. Select **Next: Backup>** and unselect the **Enable backup**.
+1. Select **Next: Backup >** and unselect the **Enable backup**.
    
-1. Select **Review + Create** and **Create**.
+1. Select **Review + create** and **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -278,26 +278,26 @@ By default, storage accounts accept network connections from clients in any netw
 
 1. On **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account blade.
 
-1. From the left navigation pane, under **Security + networking** section, select **Networking**.
+1. From the left navigation pane, under **Security + networking** section, select **Networking (1)**.
 
-1. Select **Enabled from selected virtual networks and IP addresses**.
+1. Select **Enabled from selected virtual networks and IP addresses (2)**.
 
-1. Select **+ Add existing virtual network**.
+1. Select **+ Add existing virtual network (3)**.
 
-1. Under **Add networks**, select the following values and select **Add**. 
+1. Under **Add networks**, select the following values and select **Add (7)**. 
    
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
-   | Subscription     | Select your subscription.    |
-   | Virtual networks | Select **CoreServicesVNet**  |
-   | Subnets          | Select **Private**.          |
+   | Subscription     | Select your subscription (4).    |
+   | Virtual networks | Select **CoreServicesVNet (5)**  |
+   | Subnets          | Select **Private (6)**.          |
    |||
    
    ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
 
 1. Select **Save**.
 
-1. Under **Security and Networking** for the storage account, select **Access keys**.
+1. Under **Security + networking** for the storage account, select **Access keys**.
 
 1. Select **Show Keys**. make a note the **Key** value, as you'll have to manually enter it in a later step when mapping the file share to a drive letter in a VM.
 
@@ -313,7 +313,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    ![](../media/unit6-image2.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **myResourceGroup** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **myResourceGroup** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create storage**.
 
 1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **VMs.json** and **VMs.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**.
 
@@ -345,36 +345,36 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    ![](../media/imgai900.png)
    
-1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**
+1. Open the downloaded rdp file. If prompted, select Connect. Enter the user name **TestUser** and password **Pa55w.rd!!**.
 
    >**Note:** Ignore the warning and click on **Keep** to open the downloaded RDP file.
 
 1. Select **OK**.
 
-1. You may receive a certificate warning during the sign-in process. If you receive the warning, select Yes or Continue to proceed with the connection.
+1. You may receive a certificate warning during the sign-in process. If you receive the warning, select **Yes** to proceed with the connection.
 
 1. On the **ContosoPrivate** VM, from the start menu open the **windows powershell**.
 
    >**Note:** In the pop-up related to network visibility click **No**.
 
-1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task and **[storage-account-name]** (i.e. contosostoragexx)  with values you supplied and retrieved in the Create a storage account task.
+1. On the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell. Before running the commands that follow, replace **[storage-account-key]** that you noted in eariler task.
 
      ```azurecli
      $acctKey = ConvertTo-SecureString -String "[storage-account-key]" -AsPlainText -Force
      
-     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\[storage-account-name]", $acctKey
+     $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\contosostorage<inject key="DeploymentID" enableCopy="false"/>", $acctKey
      
-     New-PSDrive -Name Z -PSProvider FileSystem -Root "\\[storage-account-name].file.core.windows.net\marketing" -Credential $credential
+     New-PSDrive -Name Z -PSProvider FileSystem -Root "\\contosostorage<inject key="DeploymentID" enableCopy="false"/>.file.core.windows.net\marketing" -Credential $credential
      
      ```
 
-   **Note**: The Azure file share successfully mapped to the Z drive.
+   >**Note**: The Azure file share successfully mapped to the Z drive.
 
 1. Confirm that the VM has no outbound connectivity to the internet from a command prompt:
 
-   ping bing.com
+   **ping bing.com**
 
-   **Note**: You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
+   >**Note**: You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
 
 1. Close the remote desktop session to the ContosoPrivate VM.
 
@@ -392,7 +392,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. Confirm that the public VM does have outbound connectivity to the internet from a command prompt:
 
-    ping bing.com    
+   **ping bing.com**   
 
 1. Close the remote desktop session to the ContosoPublic VM.
 
@@ -400,11 +400,13 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Storage account**, and then select **Storage account** under services.
 
+1. Select **contosostorage<inject key="DeploymentID" enableCopy="false"/>**.
+
 1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
 
 1. Select **File shares** then select the **marketing** file share.
 
-1. On the **marketing** blade, click on **Browse**
+1. On the **marketing** blade, from the left navigation menu, click on **Browse**
 
 1. You receive the error shown in the following screenshot:
 
