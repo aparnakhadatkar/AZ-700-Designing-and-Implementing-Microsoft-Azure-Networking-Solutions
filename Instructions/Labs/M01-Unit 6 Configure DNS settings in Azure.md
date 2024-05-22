@@ -114,7 +114,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
-     ![](../media/powershell1.png)
+     ![](../media/pwershell1.png)
 
 1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
    
