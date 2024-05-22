@@ -116,7 +116,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
    ![](../media/powershell1.png)
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**.
+1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+
+1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
 
 1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -124,9 +126,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the  **File share** , then click on **Create Storage**.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**.
 
-   ![](../media/unit6-image3.png)
+   ![](../media/pwershell5.png.png)
 
 1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
 
