@@ -45,7 +45,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. Select the **Region** from the dropdown.
+1. Select the Region **<inject key="Region" enableCopy="false"/>**.
    
 1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name**.
 
