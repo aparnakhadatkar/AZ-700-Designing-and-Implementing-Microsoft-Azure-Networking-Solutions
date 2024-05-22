@@ -126,6 +126,8 @@ In this section, you will create two test VMs to test the Private DNS zone confi
    
 1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
+1. Select the **Region** from the dropdown.
+
 1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** For the **Storage account name**.
 
 1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the  **File share** , then click on **Create**.
