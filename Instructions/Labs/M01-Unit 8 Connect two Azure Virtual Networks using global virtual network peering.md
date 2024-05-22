@@ -33,19 +33,29 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
-   ![](../media/unit6-image2.png)
+    ![](../media/pwershell1.png)
    
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**.
+1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+   
+     ![](../media/pwershell3.png)
+   
+1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
+
+     ![](../media/pwershell4.png)
 
 1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account**.
+1. Select the **Region** from the dropdown.
+   
+1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name**.
 
-1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create**.
 
-1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload**.
+    ![](../media/pwershell5.png)
 
-   ![](../media/unit6-image3.png)
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**.
+
+     ![](../media/pwershell2.png)
    
 1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
 
