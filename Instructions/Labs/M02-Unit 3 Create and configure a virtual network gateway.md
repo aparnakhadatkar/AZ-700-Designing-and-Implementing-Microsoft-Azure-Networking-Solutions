@@ -49,7 +49,7 @@ In this lab, you will complete the following tasks:
    
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
-   ![](../media/pwershell2.png)
+    ![](../media/pwershell2.png)
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
@@ -57,7 +57,6 @@ In this lab, you will complete the following tasks:
    $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
-
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
