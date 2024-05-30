@@ -351,7 +351,7 @@ In this section, you will create a test VM, and then test the load balancer.
    | Virtual machine name | **myTestVM**                                 |
    | Region               |  **<inject key="Region" enableCopy="false"/>**                            |
    | Availability options | **No infrastructure redundancy required**    |
-   | Image                | Select **configure VM generation**, select **Generation 1**, select **Apply**. Now, select **Windows Server 2019 Datacenter - Gen 1**   |
+   | Image                | Choose **configure VM generation**, then select **Generation 1** and click **Apply**. Next, select** Windows Server 2019 Datacenter - x64 Gen 1** from the list. If it's not visible, click on **See all images** to locate it.   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
    | Password             | **Provide a secure password**                |
