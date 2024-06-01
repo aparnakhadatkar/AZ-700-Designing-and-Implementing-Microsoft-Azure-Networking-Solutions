@@ -147,14 +147,14 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    | **Section**                          | **Option**                                    | **Value**                             |
    | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-   | This virtual network                 |                                               |                                       |
-   |                                      | Peering link name                             | CoreServicesVnet-to-ManufacturingVnet |
-   | Remote virtual network               |                                               |                                       |
+   | Remote virtual network summary       |                                               |                                       |
    |                                      | Peering link name                             | ManufacturingVnet-to-CoreServicesVnet |
    |                                      | Virtual network deployment model              | Resource manager                      |
    |                                      | I know my resource ID                         | Not selected                          |
    |                                      | Subscription                                  | Select the Subscription provided      |
    |                                      | Virtual network                               | ManufacturingVnet                     |
+   | Local virtual network summary        |                                               |                                       |
+   |                                      | Peering link name                             | CoreServicesVnet-to-ManufacturingVnet |
    
 1. Review your settings and select **Add**. 
 
