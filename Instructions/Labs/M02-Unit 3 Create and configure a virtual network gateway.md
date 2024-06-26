@@ -277,7 +277,8 @@ In this lab, you will complete the following tasks:
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
       | First virtual network gateway  | CoreServicesVnetGateway           |
-      | Second virtual network gateway | ManufacturingVnetGateway          |          
+      | Second virtual network gateway | ManufacturingVnetGateway          |
+      | Shared key (PSK)               | abc123                            |         
       | IKE Protocol                   | IKEv2                             |
       | Use Azure Private IP Address   | Not selected                      |
       | Enable BGP                     | Not selected                      |
@@ -310,6 +311,7 @@ In this lab, you will complete the following tasks:
       | ------------------------------ | --------------------------------- |
       | First virtual network gateway  | ManufacturingVnetGateway          |
       | Second virtual network gateway | CoreServicesVnetGateway           |
+      | Shared key (PSK)               | abc123                            |
       | IKE Protocol                   | IKEv2                             |
       | Use Azure Private IP Address   | Not selected                      |
       | Enable BGP                     | Not selected                      |
