@@ -318,10 +318,6 @@ In this lab, you will complete the following tasks:
   
 1. To create the connection, select **Review + create** and **Create**.
 
-1. Navigate to **Connections** page, select **CoreServicesGW-to-ManufacturingGW**, from the left navigation menu, under **Settings** select **Authentication**, replace the **Shared key (PSK)** valuw with **abc123**, and click on **Save**.
-
-1. Navigate to **Connections** page, select **ManufacturingGW-to-CoreServicesGW**, from the left navigation menu, under **Settings** select **Authentication**, replace the **Shared key (PSK)** valuw with **abc123**, and click on **Save**.
-
 ## Task 10: Verify that the connections connect 
 
 1. In **Search resources, services, and docs (G+/)**, enter **connections**, and then select **connections** from the results.
