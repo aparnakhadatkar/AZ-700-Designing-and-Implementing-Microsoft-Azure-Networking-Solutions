@@ -182,6 +182,8 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. On the **Resource** list, select **MyPublicIPAddress**, then select **Apply**.
 
+1. Click on **Next: Condition>**
+
 1. On the **Create alert rule** page, under **Condition**, select **Add condition**.
 
 1. Select **Under DDoS attack or not**.
