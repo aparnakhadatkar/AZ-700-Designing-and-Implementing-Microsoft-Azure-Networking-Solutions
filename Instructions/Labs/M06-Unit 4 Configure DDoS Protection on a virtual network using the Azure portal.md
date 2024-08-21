@@ -174,11 +174,13 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **+Create** and then **Alert Rule**.
 
-1. On the **Create alert rule** page, under **Scope**, select **Edit resource**.
+1. On the **Create alert rule** page, under **Scope**, select **+ Select Resource**.
+
+   >**Note**: If there is any scope pre added,feel free to remove it.
 
 1. On the **Select a resource** pane, in the **Filter by resource type** box, scroll down the list and select **Public IP addresses**.
 
-1. On the **Resource** list, select **MyPublicIPAddress**, then select **Done**.
+1. On the **Resource** list, select **MyPublicIPAddress**, then select **Apply**.
 
 1. On the **Create alert rule** page, under **Condition**, select **Add condition**.
 
