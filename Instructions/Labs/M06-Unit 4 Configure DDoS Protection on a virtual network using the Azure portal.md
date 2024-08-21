@@ -152,7 +152,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 ### Assign the Public IP address
 
-1. On the **Overview** page of the new virtual machine, under **Settings**, select **Networking**.
+1. On the **Overview** page of the new virtual machine, under **Networking**, select **Network Settings**.
 
 1. Next to **Network Interface**, select **myvirtualmachine-nic**. The name of the nic may differ.
 
@@ -160,7 +160,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Select **ipconfig1**.
 
-1. On the **Public IP address** list, select **MyPublicIPAddress**.
+1. Under the **Public IP address setting** list, select **MyPublicIPAddress** for **Public IP address**.
 
 1. Select **Save**.
 
