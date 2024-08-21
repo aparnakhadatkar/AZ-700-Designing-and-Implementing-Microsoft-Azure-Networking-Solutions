@@ -75,7 +75,7 @@ In this lab, you will complete the following tasks:
       New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
       ``` 
 
-   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
+      >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
