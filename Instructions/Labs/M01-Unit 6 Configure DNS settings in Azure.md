@@ -43,7 +43,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 2: Link subnet for auto registration
 
-1. In Contoso.com, under **Settings** section, select **Virtual network links** and on **Contoso.com | Virtual network links** page, select **+ Add**.
+1. In Contoso.com, under **DNS Management** section, select **Virtual network links** and on **Contoso.com | Virtual network links** page, select **+ Add**.
 
    ![](../media/unit6-links.png)
 
