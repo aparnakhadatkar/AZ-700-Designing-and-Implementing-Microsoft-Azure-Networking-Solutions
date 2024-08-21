@@ -103,7 +103,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-   ![](../media/unit6-image1.png)
+      ![](../media/unit6-image1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
@@ -125,21 +125,21 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the  **File share** , then click on **Create**.
 
-   ![](../media/pwershell5.png)
+      ![](../media/pwershell5.png)
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**.
 
-   ![](../media/pwershell2.png)
+      ![](../media/pwershell2.png)
 
 1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-   ```powershell
-   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
-   
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
-   ```
+      ```powershell
+      $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
+      
+      New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
+      ```
 
     >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd!!**.
   
@@ -175,11 +175,11 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On TestVM1, select **Connect** then select **Connect** from the drop-down. 
 
-   ![](../media/connect.png)
+      ![](../media/connect.png)
 
 1. On **testvm1 | Connect** page, under **Native RDP** window select and **Download RDP file**. 
 
-   ![](../media/download.png)
+      ![](../media/download.png)
 
 1. Save the RDP file to your desktop. If any warning pops up in "edge downloads" select **Keep**.
 
