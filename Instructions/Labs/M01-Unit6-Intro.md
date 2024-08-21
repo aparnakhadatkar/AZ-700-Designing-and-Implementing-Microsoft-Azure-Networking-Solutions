@@ -29,8 +29,23 @@ In this hands-on lab, participants will configure DNS settings in Azure by follo
 
 ## Architecture
 
-Welcome to your AZ-700: Designing and Implementing Microsoft Azure Networking Solutions workshop! We've prepared a seamless environment for you to explore and learn about planning, implementing, and managing Azure networking solutions. Let's begin by making the most of this experience:
- 
+In this hands-on lab, the architecture diagram illustrates a DNS configuration within a virtual network in Azure. The setup is part of the ContosoResourceGroup located in the East US region. It includes a Private DNS Zone named contoso.com, which is linked to a virtual network (CoreServicesVnet) using a VNetLink. This virtual network has a CIDR block of 10.20.0.0/16 and contains a subnet called DatabaseSubnet with a CIDR block of 10.20.20.0/24. Within this subnet, two virtual machines, TestVM1 and TestVM2, are deployed, with IP addresses 10.20.20.4 and 10.20.20.5, respectively. The DNS zone enables internal name resolution, allowing these VMs to automatically register their hostnames (TestVM1.contoso.com and TestVM2.contoso.com) within the DNS zone, ensuring seamless name resolution across the network.
+
+## Architecture Diagram
+
+   ‎![](../media/az700-m1-unit6.png)
+
+## Explanation of Components
+
+1. **Azure Resource Group** : The Resource Group is a logical container in Azure that holds related resources for an Azure solution. It helps organize and manage resources like virtual networks, DNS zones, and virtual machines in a single, manageable group.
+
+1. **Azure Private DNS Zone** : The Private DNS Zone (contoso.com) is a service that enables you to manage and resolve domain names within a virtual network without exposing them to the public internet. It allows resources like virtual machines to automatically register their hostnames, providing seamless internal name resolution.
+
+1. **Azure Virtual Network (VNet)** : The Virtual Network (CoreServicesVnet) is a fundamental building block in Azure, enabling secure communication between different Azure resources. It provides an isolated environment where resources like virtual machines can interact securely within the specified address range (10.20.0.0/16).
+
+1. **Azure Subnet** : The Subnet (DatabaseSubnet) is a subdivision of the virtual network, defined by a smaller CIDR block (10.20.20.0/24). Subnets allow for more granular control of network settings and segmentation within the VNet, enabling better management and security of resources.
+
+1. **Azure Virtual Machines (VMs)** : Virtual Machines (TestVM1 and TestVM2) are scalable compute resources in Azure. These VMs are deployed within the DatabaseSubnet and are automatically configured to register their internal IP addresses with the Private DNS Zone, allowing for internal name resolution within the virtual network.
 
 ## Accessing Your Lab Environment
  
