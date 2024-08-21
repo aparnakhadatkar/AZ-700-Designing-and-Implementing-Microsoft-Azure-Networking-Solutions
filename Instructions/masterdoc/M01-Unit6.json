@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Module 01: Unit 6 - Configure DNS settings in Azure",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/LabIntro-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%206%20Configure%20DNS%20settings%20in%20Azure.md",
+        "Order": 2
+      }
+    ]
+  }
+]
