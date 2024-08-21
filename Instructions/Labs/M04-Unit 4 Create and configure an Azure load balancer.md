@@ -1,4 +1,4 @@
-# Module 04-Unit 4 Create and configure an Azure load balancer
+# M04-Unit 4 Create and configure an Azure load balancer
 
 ## Lab scenario 
 In this lab, you will create an internal load balancer for the fictional Contoso Ltd organization.
@@ -166,10 +166,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | **Setting**     | **Value**                |
    | --------------- | ------------------------ |
    | Name            | **LoadBalancerFrontEnd** |
+   | IP version      | **IPv4**                 |
    | Virtual network | **IntLB-VNet**           |
    | Subnet          | **myFrontEndSubnet**     |
    | Assignment      | **Dynamic**              |
-   | Availbility Zone | **Zone-redundant**      |
+   
 
 1. Select **Review + create** and  **Create**.
 
