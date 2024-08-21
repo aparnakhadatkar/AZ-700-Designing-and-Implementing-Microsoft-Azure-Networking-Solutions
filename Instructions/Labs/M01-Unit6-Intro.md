@@ -23,7 +23,7 @@ In this hands-on lab, you’ll configure DNS settings in Azure. You’ll learn t
 
 ## Architecture
 
-In this hands-on lab, the architecture diagram illustrates a DNS configuration within a virtual network in Azure. The setup is part of the ContosoResourceGroup located in the East US region. It includes a Private DNS Zone named contoso.com, which is linked to a virtual network (CoreServicesVnet) using a VNetLink. This virtual network has a CIDR block of 10.20.0.0/16 and contains a subnet called DatabaseSubnet with a CIDR block of 10.20.20.0/24. Within this subnet, two virtual machines, TestVM1 and TestVM2, are deployed, with IP addresses 10.20.20.4 and 10.20.20.5, respectively. The DNS zone enables internal name resolution, allowing these VMs to automatically register their hostnames (TestVM1.contoso.com and TestVM2.contoso.com) within the DNS zone, ensuring seamless name resolution across the network.
+In this hands-on lab, the architecture flow includes several key components. You’ll start by setting up the ContosoResourceGroup in the East US region. Central to the architecture is a Private DNS Zone named contoso.com, linked to a virtual network (CoreServicesVnet) via a VNetLink. This virtual network, with a CIDR block of 10.20.0.0/16, contains a subnet called DatabaseSubnet (CIDR block 10.20.20.0/24). Within this subnet, two virtual machines, TestVM1 and TestVM2, are deployed with IP addresses 10.20.20.4 and 10.20.20.5, respectively. The DNS zone facilitates internal name resolution, allowing these VMs to automatically register their hostnames (TestVM1.contoso.com and TestVM2.contoso.com), ensuring seamless name resolution across the network.
 
 ## Architecture Diagram
 
