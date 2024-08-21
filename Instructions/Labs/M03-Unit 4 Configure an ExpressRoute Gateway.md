@@ -102,11 +102,8 @@ In this lab, you will complete the following tasks:
    | Public IP address         | Create new                 |
    | Public IP address name    | CoreServicesVnetGateway-IP |
    | Public IP address SKU     | Standard                   |
-   | Availability Zone        | Zone-redundant |
    | Assignment                | Not configurable           |
-   | Enable active-active mode | Disabled |
-   | Configure BGP | Disabled | 
-   
+
 1. Select **Review + create**.
 
 1. Confirm that the Gateway configuration passes validation and then select **Create**.
