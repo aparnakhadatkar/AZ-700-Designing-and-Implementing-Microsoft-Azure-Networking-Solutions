@@ -205,7 +205,11 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 1. Under **IP configurations**, select **+ Add**.
 
+    ![](../media/az7001.png)
+
 1. Select the checkboxes for all 3 VMs (**myVM1**, **myVM2**, and **myVM3**), then select **Add**.
+
+    ![](../media/az7002.png)
 
 1. Select **Save**.
 
