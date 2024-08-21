@@ -70,7 +70,7 @@ In this lab, you will complete the following tasks:
    | ----------------------------------- | ---------------------------------------- |
    | Link name                           | **ManufacturingVnetLink**                |
    | Subscription                        | **No changes required**                  |
-   | Virtual Network                     | **select ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
+   | Virtual Network                     | Select **ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
    | Enable auto registration            | **Selected**                             |
 
 1. Review your settings and select OK.
