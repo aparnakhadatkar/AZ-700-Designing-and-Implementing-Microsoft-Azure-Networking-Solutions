@@ -1,10 +1,10 @@
 # Getting Started with Your AZ-700: Designing and Implementing Microsoft Azure Networking Solutions Workshop
 
-## Overall Estimated Duration: 25 Minutes
+## Overall Estimated Duration: 40 Minutes
 
 ## Overview
 
-In this hands-on lab, participants will configure DNS settings in Azure by following a structured process. First, you'll create a private DNS zone, which allows for internal domain name resolution within a virtual network. Next, you'll link this DNS zone to a subnet, enabling virtual machines (VMs) within the subnet to automatically register their hostnames with the DNS zone. Afterward, you'll create VMs to test the DNS configuration and ensure that the auto-registration is functioning correctly. Finally, you'll verify that the DNS records for the VMs are present in the private DNS zone, confirming that the configuration is working as expected. This lab provides practical experience in managing private DNS zones in Azure, essential for secure and efficient network operations in a cloud environment.
+In this hands-on lab, you’ll configure DNS settings in Azure. You’ll learn to create a private DNS zone for internal domain name resolution, link it to a subnet, and enable virtual machines (VMs) to auto-register their hostnames. By the end of the lab, you’ll have practical experience in managing private DNS zones, essential for secure and efficient network operations in Azure.
 
 ## Objective
 
