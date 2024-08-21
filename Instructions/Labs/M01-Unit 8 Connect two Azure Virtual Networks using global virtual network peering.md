@@ -186,6 +186,20 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![Powershell window with Test-NetConnection 10.20.20.4 -port 3389 showing TCP test succeeded: true](../media/test-connection-succeeded.png)
 
+## Task 6: Clean up resources
+
+   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+
+1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane. (Create Cloud Shell storage if needed, using default settings.)
+
+1. Delete all resource groups you created throughout the labs of this module by running the following command:
+
+   ```powershell
+   Remove-AzResourceGroup -Name 'ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>' -Force -AsJob
+   ```
+
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
 ## Review
 
 In this lab, you have completed:
