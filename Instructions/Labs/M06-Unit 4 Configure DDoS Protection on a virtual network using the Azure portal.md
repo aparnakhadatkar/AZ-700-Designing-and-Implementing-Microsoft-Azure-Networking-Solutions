@@ -74,7 +74,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
 1. Select your resource group from the list.
 
-1. Select **Create**.
+1. Select **Review + Create**, and click on **Create** again.
 
 1. On the Azure home page, select **All resources**.
 
