@@ -16,10 +16,6 @@ In this lab, you will complete the following tasks:
 
 ## Estimated time: 25 minutes
 
-## Architecture diagram
-
-  ‎![](../media/az700-m1-unit6.png)
-
 ### Task 1: Create a private DNS Zone
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Private DNS zones**, and then select **Private DNS zones** under services.
