@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "Module 01: Unit 4 - Design and implement a Virtual Network in Azure",
+        "Language": "English",
+        "BaseURL": "https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions",
+        "Files": [
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit4-intro.md",
+                "Order": 1
+            },
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%204%20Design%20and%20implement%20a%20Virtual%20Network%20in%20Azure.md",
+                "Order": 2
+            }
+        ]
+    }
+]
