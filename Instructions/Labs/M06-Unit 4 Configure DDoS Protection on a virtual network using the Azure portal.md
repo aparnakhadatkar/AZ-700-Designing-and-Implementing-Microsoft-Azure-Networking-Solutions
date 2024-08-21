@@ -172,7 +172,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
 1. Under **Monitoring**, select **Alerts**.
 
-1. Select **New alert rule**.
+1. Select **+Create** and then **Alert Rule**.
 
 1. On the **Create alert rule** page, under **Scope**, select **Edit resource**.
 
