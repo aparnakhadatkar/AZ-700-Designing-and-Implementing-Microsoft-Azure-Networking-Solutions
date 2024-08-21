@@ -73,7 +73,7 @@ In this lab, you will complete the following tasks:
    | Virtual Network                     | Select **ManufacturingVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
    | Enable auto registration            | **Selected**                             |
 
-1. Review your settings and select OK.
+1. Review your settings and select **Create**.
 
    >**Note**: Please Wait for 2 mins to successfully create virtual network link.
 
@@ -90,7 +90,7 @@ In this lab, you will complete the following tasks:
    | Virtual Network                     | Select **ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
    | Enable auto registration            | **Selected**                        |
 
-1. Review your settings and select OK.
+1. Review your settings and select **Create**.
   
    >**Note**: Please Wait for 2 mins to successfully create virtual network link.
 
