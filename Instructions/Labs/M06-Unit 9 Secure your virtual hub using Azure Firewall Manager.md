@@ -72,11 +72,8 @@ In this task, you will create the two spoke virtual networks each containing a s
     - **Select Subnet size** : **/24(256 addresses)**.
 
 
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="d7de9d5e-72fb-4916-b248-82f5131bc47b" />
 
 ### Task 2: Create the secured virtual hub
 
@@ -132,11 +129,8 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="b3265fb0-eed5-4968-b37e-9bac99e6f9d5" />
 
 ### Task 3: Connect the hub and spoke virtual networks
 
@@ -205,12 +199,8 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
 1. Now, select **Srv-workload-02** VM. On the **Overview** page of **Srv-workload-02**, in the left-hand pane, select **Networking** under the **Settings** section, and note down the **NIC Private IP** (e.g., **10.1.1.4**).
 
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="8042eab8-4cb2-4924-8695-473059d3d064" />
 
 ### Task 5: Create a firewall policy and secure your hub
 
