@@ -168,7 +168,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On Private DNS zones, select **contoso.com**.
 
-1. Verify that host (A) records are listed for both VMs, as shown:
+1. Click on **Recordsets** under **DNS Management** and Verify that host (A) records are listed for both VMs, as shown:
 
    ![](../media/unit6-image-5.png)
 
