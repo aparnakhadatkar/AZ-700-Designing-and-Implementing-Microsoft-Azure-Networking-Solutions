@@ -96,8 +96,12 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
      ![Enter Your Password](../media/sc900-image-2.png)
  
 4. If prompted to stay signed in, you can click "No."
+
+5. If **Action required** pop-up window appears, click on **Ask later**.
+   
+      ![Action Required](../media/action-required.png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
+6. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
  
 In this hands-on lab, you’ll create and manage virtual networks on Azure, learning to design and implement networking solutions.
  
