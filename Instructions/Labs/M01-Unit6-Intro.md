@@ -1,6 +1,6 @@
 # Getting Started with Your AZ-700: Designing and Implementing Microsoft Azure Networking Solutions Workshop
 
-## Overall Estimated Duration: 4 Hours
+## Overall Estimated Duration: 25 Minutes
 
 ## Overview
 
