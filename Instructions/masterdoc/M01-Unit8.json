@@ -1,0 +1,16 @@
+[ {
+  "Name": "Module 01: - Unit 8 Connect two Azure Virtual Networks using global virtual network peering",
+  "Language": "English",
+  "BaseURL": "https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions",
+  "Files": [
+     {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/LabIntro-V2.md",
+       "Order": 1
+     },
+    {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%208%20Connect%20two%20Azure%20Virtual%20Networks%20using%20global%20virtual%20network%20peering.md",
+       "Order": 2
+     }
+  ]
+   }
+ ]
