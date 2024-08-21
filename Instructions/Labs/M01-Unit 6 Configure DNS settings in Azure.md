@@ -87,7 +87,7 @@ In this lab, you will complete the following tasks:
    | ----------------------------------- | ----------------------------------- |
    | Link name                           | **ResearchVnetLink**                |
    | Subscription                        | **No changes required**             |
-   | Virtual Network                     | **select ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
+   | Virtual Network                     | Select **ResearchVnet (ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>)** |
    | Enable auto registration            | **Selected**                        |
 
 1. Review your settings and select OK.
