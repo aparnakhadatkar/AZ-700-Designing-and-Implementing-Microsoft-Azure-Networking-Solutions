@@ -77,9 +77,10 @@ In this lab, you will complete the following tasks:
     | Name                             | BackendPool |
     | Add backend pool without targets | Yes         |
     
-    ![Azure Portal search for application gateway](../media/l5u4-2-3.png)
 
-1. On the **Add a backend pool** window, enter **BackendPool** for **Name** and select **Add** to save the backend pool configuration and return to the **Backends** tab.
+1. On the **Add a backend pool** window, select **Add** to save the backend pool configuration and return to the **Backends** tab.
+
+      ![Azure Portal search for application gateway](../media/l5u4-2-3.png)
 
 1. On the **Backends** tab, select **Next: Configuration**.
 
