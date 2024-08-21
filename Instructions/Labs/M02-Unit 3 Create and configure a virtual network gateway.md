@@ -69,11 +69,11 @@ In this lab, you will complete the following tasks:
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
    
-   ```powershell
-   $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
-   
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
-   ``` 
+      ```powershell
+      $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
+      
+      New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
+      ``` 
 
    >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
    
