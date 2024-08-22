@@ -40,11 +40,11 @@ In this lab, you will complete the following tasks:
    |SKU|**Standard**|
    |Billing model|**Metered**|
 
-   ![Azure portal - create ExpressRoute circuit menu](../media/task3.png)
+   ![Azure portal - create ExpressRoute circuit menu](../media/ExpressRoute.png)
 
 1. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
 
-   ![Azure portal - Create ExpressRoute configuration tab](../media/task4.png)
+   ![Azure portal - Create ExpressRoute configuration tab](../media/ExpressRoute1.png)
 
    - Port type determines if you are connecting to a service provider or directly into Microsoft's global network at a peering location.
    - Create new or import from classic determines if a new circuit is being created or if you are migrating a classic circuit to Azure Resource Manager.
