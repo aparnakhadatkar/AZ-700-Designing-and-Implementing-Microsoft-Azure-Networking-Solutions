@@ -151,7 +151,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
-    ![Picture 23](../media/check-dnsname-1.png)
+      ![Picture 23](../media/check-dnsname-1.png)
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
@@ -159,10 +159,10 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
      ![Picture 24](../media/M0406.7.png)
 
-1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from
-    **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page and **Enable profile**. Then refresh the webpage.
+1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager 
+   profile overview page and **Enable profile**. Then refresh the webpage.
 
-    ![Picture 24](../media/M0406.5.png)
+      ![Picture 24](../media/M0406.5.png)
    
 1. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
