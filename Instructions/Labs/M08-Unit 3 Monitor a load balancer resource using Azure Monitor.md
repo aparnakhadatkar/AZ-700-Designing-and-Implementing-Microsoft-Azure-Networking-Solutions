@@ -89,11 +89,8 @@ In this section, you will create a virtual network and a subnet.
 
    >**Note:** The deployment will take time.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="eada944f-dd58-41ed-9734-c412d8ba0c77" />
 
 ### Task 2: Create the load balancer
 
@@ -136,11 +133,8 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 1. Select **Create**.
    >**Note**: Wait for the deployment to get successfully.
     
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="e15fb2ec-144b-4b80-b12b-d9bdd707e9b3" />
 
 ### Task 3: Create a backend pool
 
