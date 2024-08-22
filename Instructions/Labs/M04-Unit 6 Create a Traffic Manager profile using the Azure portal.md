@@ -63,13 +63,13 @@ In this section, you will create two instances of a web application deployed in 
 
    ![Picture 19](../media/M0406.1.png)
 
-   <validation step="4d5ecc40-776d-459c-867f-50db4b49ce0c" />
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="4d5ecc40-776d-459c-867f-50db4b49ce0c" />
 
 ## Task 2: Create a Traffic Manager profile
 
@@ -91,14 +91,14 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 1. Select **Create**.
 
-   <validation step="333aadc8-666f-456e-888e-52ca345debb7" />
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+   <validation step="333aadc8-666f-456e-888e-52ca345debb7" />
+   
 ## Task 3: Add Traffic Manager endpoints
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
