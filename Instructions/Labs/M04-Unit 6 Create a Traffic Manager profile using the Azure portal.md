@@ -141,7 +141,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
     ![Picture 22](../media/M04u06.4.png)
 
-   <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
+    <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
       
 ## Task 4: Test the Traffic Manager profile
 
