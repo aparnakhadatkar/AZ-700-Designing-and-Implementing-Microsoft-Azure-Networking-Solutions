@@ -86,6 +86,8 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 ## Task 2: Connect to the Test VMs using RDP
 
+In this task, your connecting to the Test VM using RDP.
+
 1. On the Azure Portal home page, select **Virtual Machines**.
 
 1. Select **ManufacturingVM**.
