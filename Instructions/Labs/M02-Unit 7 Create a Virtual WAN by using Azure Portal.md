@@ -1,9 +1,5 @@
 # Module 02-Unit 7 Create a Virtual WAN by using Azure Portal
 
-## Overall Estimated Duration: 65 minutes
-
-## Overview
-
 In this hands-on lab, you will set up a Virtual WAN in Azure, create a hub using the Azure Portal, and connect a VNet to the Virtual Hub. Azure Virtual WAN simplifies large-scale branch connectivity and offers centralized network management. You will configure the Virtual WAN resource, create a hub as a central connection point, and connect a VNet to the hub, ensuring seamless communication and optimized routing. This lab will provide you with the skills to efficiently manage complex network environments using Azure Virtual WAN.
 
 ## Objective
