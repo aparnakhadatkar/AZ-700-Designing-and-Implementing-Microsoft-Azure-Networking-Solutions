@@ -33,16 +33,20 @@ In this lab, you will complete the following tasks:
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network**, and then select **Virtual 
    network** under services.
 
+    ![](../media/VN.png)
+
 1. Select **+ Create**.
 
 1. On the **Create virtual network** blade specify the following information:
  
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
-   | Subscription   | Select your subscription                      |
-   | Resource group | Select **myResourceGroup**                               |
-   | Name           | **CoreServicesVNet**                              |
-   | Location       | Select **<inject key="Region" enableCopy="false"/>**                     |
+   | Subscription   | Select your subscription **(1)**                     |
+   | Resource group | Select **myResourceGroup(2)**                               |
+   | Name           | **CoreServicesVNet(3)**                              |
+   | Region         | Select **<inject key="Region" enableCopy="false"/> (4)**                     |
+
+    ![](../media/unit51.png)
 
 1. Select **Next** and in the  **Security** tab, and specify the following values:
 
@@ -54,11 +58,15 @@ In this lab, you will complete the following tasks:
 
 1. Select **Next** and in the **IP Addresses** tab and select **default** to change the subnet name, specify the following values:
 
+    ![](../media/unit52.png)
+
    | **Setting**          | **Value**   |
    | -------------------- | ----------- |
-   | Subnet Name          | Public      |
-   | Starting address     | 10.0.0.0    |
-   | Subnet size          | /24 |
+   | Subnet Name          | Public **(1)** |
+   | Starting address     | 10.0.0.0 **(2)** |
+   | Subnet size          | /24 **(3)**  |
+
+    ![](../media/unit53.png)
 
 1. Select **Save**.
    
@@ -79,18 +87,22 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 1. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture:
    
-    ![](../media/L7U5-1.png)
+    ![](../media/L7U5-1.png)   
 
-1. Under **Add subnet**, select or enter the following information:
+
+1. Under **Add subnet**, select or enter the following information and select **Add**.
 
    | **Setting**                 | **Value**                    |
    | --------------------------- | ---------------------------- |
-   | Name                        | Private                      |
-   | Subnet address range        | 10.0.1.0/24                  |
+   | Name                        | **Private(1)**               |
+   | Subnet address range        | **10.0.1.0/24(2)**           |
    | Service endpoints: Services | Select **Microsoft.Storage** |
 
-1. Select **Save**.
+    ![](../media/unit54.png)
 
+    ![](../media/unit55.png)
+
+  
 1. You should now have two subnets configured:
 
    ![](../media/L7U5-2.png)
@@ -108,22 +120,28 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **security group**. When **Network Security groups** 
    appears in the search results, select it.
 
+    ![](../media/unit56.png)
+
 1. In Network security groups, select **+ Create**. 
 
 1. Enter or select, the following information: 
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
-    | Subscription   | Select your subscription                                     |
-    | Resource group | Select **myResourceGroup**                                              |
-    | Name           | **ContosoPrivateNSG**                                            |
-    | Location       | Select **<inject key="Region" enableCopy="false"/>**                                           |
+    | Subscription   | Select your subscription **(1)**                                   |
+    | Resource group | Select **myResourceGroup(2)**                                              |
+    | Name           | **ContosoPrivateNSG(3)**                                            |
+    | Region         | Select **<inject key="Region" enableCopy="false"/> (4)**                                           |
 
-1. Select **Review + create**, then select **Create**.
+    ![](../media/unit57.png)
+
+1. Select **Review + create(5)**, then select **Create**.
 
 1. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
 
 1. On the **ContosoPrivateNSG** page, from the left navigation menu, under **Settings** section, select **Outbound security rules**.
+
+    ![](../media/unit58.png)
 
 1. Select **+ Add**.
 
@@ -131,17 +149,21 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
   
     | **Setting**             | **Value**                 |
     | ----------------------- | ------------------------- |
-    | Source                  | Select **Service Tag**    |
-    | Source service tag      | Select **VirtualNetwork** |
-    | Source port ranges      | *                         |
-    | Destination             | Select **Service Tag**    |
-    | Destination service tag | Select **Storage**        |
-    | Service                 | Custom                    |
-    | Destination port ranges | *                         |
-    | Protocol                | Any                       |
-    | Action                  | Allow                     |
-    | Priority                | 100                       |
-    | Name                    | Allow-Storage-All         |
+    | Source                  | Select **Service Tag(1)**    |
+    | Source service tag      | Select **VirtualNetwork(2)** |
+    | Source port ranges      | * **(3)**                      |
+    | Destination             | Select **Service Tag(4)**    |
+    | Destination service tag | Select **Storage(5)**        |
+    | Service                 | Custom **(6)**                   |
+    | Destination port ranges | *  **(7)**                     |
+    | Protocol                | Any **(8)**                   |
+    | Action                  | Allow **(9)**                 |
+    | Priority                | 100 **(10)**               |
+    | Name                    | Allow-Storage-All **11**     |
+
+    ![](../media/unit59.png)
+
+    ![](../media/unit60.png)
 
 1. Select **Add**.
 
@@ -193,28 +215,34 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
-   | Source                  | Any                       |
-   | Source port ranges      | *                         |
-   | Destination             | Select **Service Tag**    |
-   | Destination service tag | Select **VirtualNetwork** |
-   | Service                 | Custom                    |
-   | Destination port ranges | 3389                      |
-   | Protocol                | Any                       |
-   | Action                  | Allow                     |
-   | Priority                | 120                       |
-   | Name                    | Allow-RDP-All             |
+   | Source                  | Any **(1)**                      |
+   | Source port ranges      | * **(2)**                        |
+   | Destination             | Select **Service Tag(3)**    |
+   | Destination service tag | Select **VirtualNetwork(4)** |
+   | Service                 | Custom **(5)**                  |
+   | Destination port ranges | 3389 **(6)**                    |
+   | Protocol                | Any **(7)**                   |
+   | Action                  | Allow **(8)**                   |
+   | Priority                | 120  **(9)**                    |
+   | Name                    | Allow-RDP-All **(10)**           |
 
+    ![](../media/unit61.png)
+
+    ![](../media/unit62.png)
+   
 1. Select **Add**.
 
    > **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
-1. From the left navigation menu, under **Settings**, select **Subnets**.
+1. From the left navigation menu, under **Settings**, select **Subnets(1)**.
 
-1. Select **+ Associate.**
+1. Select **+ Associate(2)**
 
-1. Under **Associate subnet**, from the **Virtual network** dropdown select **CoreServicesVNet**.
+1. Under **Associate subnet**, from the **Virtual network** dropdown select **CoreServicesVNet(3)**.
 
-1. Under **Subnet**, select **Private**, and then select **OK**.
+1. Under **Subnet**, select **Private(4)**, and then select **OK**.
+
+    ![](../media/unit63.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -228,18 +256,22 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account**, and then select **Storage Account** under services.
 
+    ![](../media/storage.png)
+
 1. Select **+ Create**.
 
 1. Enter, or select, the following information and accept the remaining defaults:
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
-    | Subscription   | Select your subscription                                     |
-    | Resource group | myResourceGroup                                              |
-    | Region         | **<inject key="Region" enableCopy="false"/>** 
-    | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/>** |
-    | Performance    | Standard                      |                                              |
-    | Redundancy    | Locally-redundant storage (LRS)                              |
+    | Subscription   | **Select your subscription (1)**                                    |
+    | Resource group | **myResourceGroup(2)**                                              |
+    | Region         | **<inject key="Region" enableCopy="false"/> (3)** 
+    | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/> (4)** |
+    | Performance    | **Standard (5)**                     |                                              |
+    | Redundancy    | **Locally-redundant storage (LRS)(6)**                              |
+
+    ![](../media/unit65.png)
 
 1. Select **Review + create**, then select **Create**.
 
@@ -254,11 +286,19 @@ The steps necessary to restrict network access to resources created through Azur
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account**, and then select **Storage 
    Account** under services.
 
+    ![](../media/storage.png)
+
 1. From the list select **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account.
+
+
+    ![](../media/unit66.png)
 
 1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
    
 1. Select **+ File share**.
+
+
+    ![](../media/unit67.png)
 
 1. Enter **marketing**, under **Name**.
 
@@ -295,7 +335,7 @@ By default, storage accounts accept network connections from clients in any netw
    
    ![Graphical user interface, application Description automatically generated](../media/L7U5-3.png)
 
-1. Select **Save**.
+1. Select **Save** on top of the page below Networking.
 
 1. Under **Security + networking** for the storage account, select **Access keys**.
 
