@@ -33,19 +33,25 @@ In this task, you will create a single virtual network with two subnets.
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network**, and then select **Virtual 
    network** under services.
 
+    ![](../media/VN.png)
+
 1. Select **+ Create**.
 
 1. On the Create virtual network of **Basic** tab specify the following information to create Virtual Network.
 
      |  **Setting**     | **Value**            |
      | ---------------- | ------------------   |
-     | Resource group   |  **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** |
-     | Name             |  **Test-FW-VN**       |
-     | Region           |  **<inject key="Region" enableCopy="false"/>**  |
+     | Resource group   |  **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/> (1)** |
+     | Name             |  **Test-FW-VN (2)**       |
+     | Region           |  **<inject key="Region" enableCopy="false"/> (3)**  |
+
+    ![](../media/unit72.png)
 
 1. Navigate to the **IP Addresses** tab and enter IPv4 address space **10.0.0.0/16** if not already there by default. 
 
-1. Under **Subnet name**, select the word **default**.
+1. Under **Subnet name**, select the word **default(1)**.
+
+    ![](../media/unit73.png)
 
 1. In the **Edit subnet** pane, specify the following and then click on **Save (6)**.
 
@@ -127,7 +133,11 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. Select **Srv-Work** virtual machine.
 
+    ![](../media/unit74.png)
+
 1. On the **Overview** page of **Srv-Work**, within the left navigation pane, under the **Networking** section, select **Network settings** and make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
+
+    ![](../media/unit75.png)
  
 ## Task 3: Deploy the firewall and firewall policy
 
@@ -192,11 +202,13 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
-   | Subscription             | Select your subscription |
-   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**  |
-   | Region                   | **<inject key="Region" enableCopy="false"/>** |
-   | Name                     | **Firewall-route**       |
-   | Propagate gateway routes | **Yes**                  |
+   | Subscription             | Select your subscription **(1)** |
+   | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**  |
+   | Region                   | **<inject key="Region" enableCopy="false"/> (3)** |
+   | Name                     | **Firewall-route (4)**       |
+   | Propagate gateway routes | **Yes (5)**                  |
+
+    ![](../media/unit76.png)
 
 1. Select **Review + create**.
 
@@ -205,6 +217,8 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 1. After deployment completes, select **Go to resource**.
 
 1. On the **Firewall-route** page, from the left navigation menu, under **Settings**, select **Subnets** and then select **+ Associate**, specify the following and **OK (3)**.
+
+    ![](../media/unit77.png)
 
    | **Setting**              | **Value**                |
    | ------------------------ | ------------------------ |
@@ -250,6 +264,8 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. Select **+ Add a rule collection**.
 
+    ![](../media/unit78.png)
+
 1. On the **Add a rule collection** page, create a new application rule using the information in the table below, and select **Add (7)**.
 
    | **Setting**            | **Value**                                 |
@@ -285,6 +301,8 @@ In this task, you will add a network rule that allows outbound access to two IP 
 1. On the **fw-test-pol** page, from the left navigation menu, under **Settings** section, select **Network Rules**.
 
 1. Select **+ Add a rule collection**.
+
+    ![](../media/unit82.png)
 
 1. On the **Add a rule collection** page, create a new network rule using the information in the table below, and select **Add (7)**.
 
@@ -359,9 +377,13 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
    groups** under services.
 
+    ![](../media/unit80.png)
+
 1. In the list of resource groups, select your resource group, **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. In the list of resources in this resource group, select the **Network interface** for the **Srv-Work** virtual machine (e.g., **srv-work-nic**).
+
+    ![](../media/unit81.png)
 
 1. From the left navigation menu, under **Settings**, select **DNS servers**.
 
