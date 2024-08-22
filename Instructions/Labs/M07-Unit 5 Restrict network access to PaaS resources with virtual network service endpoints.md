@@ -395,9 +395,12 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 ## Task 10: Confirm access to storage account
 
-1. On the **Virtual Machine** blade, select **ContosoPrivate** VM and click on **Connect** and from the dropdown click on **Connect** again.
+1. On the **Virtual Machine** blade, select **ContosoPrivate** VM.
 
-1. On **ContosoPrivate | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** box select **Download RDP file**. 
+   ![](../media/unit68.png)
+
+1. On **ContosoPrivate | Connect** page, click on **Connect** and from the dropdown click on **Connect** again.
+under **Native RDP** click on **Select** and on **Native RDP** box select **Download RDP file**. 
 
    ![](../media/imgai900.png)
    
@@ -426,9 +429,13 @@ To test network access to a storage account, deploy a VM to each subnet.
 
    >**Note**: The Azure file share successfully mapped to the Z drive.
 
+   ![](../media/unit69.png)
+
 1. Confirm that the VM has no outbound connectivity to the internet from a command prompt:
 
    **ping bing.com**
+
+      ![](../media/unit691.png)
 
    >**Note**: You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
 
