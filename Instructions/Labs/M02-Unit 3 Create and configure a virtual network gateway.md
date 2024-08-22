@@ -319,6 +319,7 @@ In this lab, you will complete the following tasks:
 
 > **Congratulations** on completing the task! Now, it's time to validate it.
    <validation step="638b26e2-d9a3-4d7a-ba0c-cf391847ec0b" />
+
 ## Task 11: Test the connection between the VMs
 
 1. On the **ManufacturingVM**, open PowerShell.
