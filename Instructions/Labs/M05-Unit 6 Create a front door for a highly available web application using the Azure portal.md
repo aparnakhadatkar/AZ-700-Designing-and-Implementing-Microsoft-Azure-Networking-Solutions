@@ -1,7 +1,6 @@
 # Module 05: Unit 6 Create a Front Door for a highly available web application using the Azure portal
 
-## Lab scenario
-In this lab, you will set up an Azure Front Door configuration that pools two instances of a web application that runs in different Azure regions. This configuration directs traffic to the nearest site that runs the application. Azure Front Door continuously monitors the web application. You will demonstrate automatic failover to the next available site when the nearest site is unavailable. The network configuration is shown in the following diagram:
+In this lab, you will create two instances of a web app to ensure redundancy and load balancing. Next, you will set up Azure Front Door for your application to provide high availability and performance by routing traffic to the nearest available instance. Finally, you will view Azure Front Door in action, observing how it efficiently manages and distributes incoming traffic to your web app instances. This setup helps ensure your application is resilient and responsive to user demands.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -12,11 +11,6 @@ In this lab, you will complete the following tasks:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Estimated time: 30 minutes
-
-## Architecture diagram
-
-![Network configuration for Azure Front Door.](../media/front-door-environment-diagram.png)
 
 ## Task 1: Create two instances of a web app
 
@@ -181,12 +175,9 @@ Once you create a Front Door, it takes a few minutes for the configuration to be
 
    Congratulations! You have configured and tested an Azure Front Door.
 
-### Review
-In this lab, you have completed:
+### Summary
 
-- Create two instances of a web app
-- Create a Front Door for your application
-- View Azure Front Door in action
+In this hands-on lab, you have created two instances of a web app, set up Azure Front Door for your application, and viewed Azure Front Door in action.
   
 ## You have successfully completed the lab.
 
