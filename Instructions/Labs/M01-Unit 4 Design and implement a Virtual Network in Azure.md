@@ -1,12 +1,6 @@
 # Module 01-Unit 4 Design and implement a Virtual Network in Azure
 
-## Lab scenario 
-
-Now you're ready to deploy virtual networks in the Azure portal.
-
-Consider the fictional organization Contoso Ltd, which is in the process of migrating infrastructure and applications to Azure. In your role as network engineer, you must plan and implement three virtual networks and subnets to support resources in those virtual networks.
-
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+In this hands-on lab, you will create and configure multiple virtual networks (VNets) and subnets in Azure. You will start by setting up the CoreServicesVnet, followed by the ManufacturingVnet, and finally the ResearchVnet, each with their respective subnets. This lab will guide you through the process of verifying the creation and configuration of these VNets and subnets, enhancing your skills in network architecture and management within Azure.
 
 ## Lab Objectives
 
@@ -17,22 +11,8 @@ In this lab, you will complete the following tasks:
 + Task 3: Create the ResearchVnet virtual network and subnets
 + Task 4: Verify the creation of VNets and Subnets
 
-## Estimated time: 20 minutes
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Architecture diagram
-
-![Network layout for Contoso. 
-On-premises 10.10.0.0/16
-ResearchVNet Southeast Asia 10.40.40.0/24
-CoreServicesVNet East US 10.20.0.0/16
-ManufacturingVNet West Europe 10.30.0.0/16
-](../media/design-implement-vnet-peering01.png)
-
-The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network will have the largest number of resources. It will have connectivity to on-premises networks through a VPN connection. This network will have web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS also will be located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
-
-The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network will contain systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and will need an IP address space that it can expand into.
-
-The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
 
 You will create the following resources:
  
@@ -212,13 +192,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. Repeat steps 3 - 5 and select **ManufacturingVnet**, and **ResearchVnet** Virtual Network to verify the subnets.
 
-## Review
+## Summary
 
-In this lab, you have completed:
-
-+ Creating the CoreServicesVnet virtual network and subnets
-+ Creating the ManufacturingVnet virtual network and subnets
-+ Creating the ResearchVnet virtual network and subnets
-+ Verifying the creation of VNets and Subnets
+In this hands-on lab, you have created the CoreServicesVnet, ManufacturingVnet, and ResearchVnet virtual networks with their subnets, and verified their creation and configuration.
 
 ## You have successfully completed the lab.
