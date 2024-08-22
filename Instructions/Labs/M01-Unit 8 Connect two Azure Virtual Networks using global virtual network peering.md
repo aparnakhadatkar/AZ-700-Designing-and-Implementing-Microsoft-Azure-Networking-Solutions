@@ -76,6 +76,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![](../media/virtualmachine.png)
 
+
    <validation step="53f858e3-8ea3-46e1-9e46-27d87801bd28" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
