@@ -291,6 +291,8 @@ The steps necessary to restrict network access to resources created through Azur
 
 ## Task 7: Create a file share in the storage account
 
+In this task, your creating a file share in the storage account
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account**, and then select **Storage 
    Account** under services.
 
