@@ -1,4 +1,4 @@
-# M04-Unit 4 Create and configure an Azure load balancer
+# Module 04-Unit 4 Create and configure an Azure load balancer
 
 ## Lab scenario 
 In this lab, you will create an internal load balancer for the fictional Contoso Ltd organization.
