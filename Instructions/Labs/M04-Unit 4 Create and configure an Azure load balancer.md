@@ -135,9 +135,10 @@ In this section, you will create three VMs, that will be in the same availabilit
 
       >**Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
     each VM deployment.
+
+   <validation step="3107853e-92fb-4898-a59b-a7cb10f5051a" />
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -177,8 +178,9 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
       > **Note**: Wait for deployment to complete successfully.
 
+   <validation step="0aa25baa-7ec4-49ad-a99e-43e629157f51" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -265,9 +267,10 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    ![Picture 7](../media/az7006.png)
 
 1. Select **Save(12)**.
+
+   <validation step="725af5b8-9a2d-4aeb-9adb-da47aa36d4aa" />
  
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -367,8 +370,9 @@ In this section, you will create a test VM, and then test the load balancer.
    
     ![](../media/mod4-u4-11.png)
 
+   <validation step="d643606f-8c58-498a-a834-5c18e2d7072a" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
