@@ -1,8 +1,7 @@
 # Module 07-Unit 6 Create an Azure private endpoint using Azure PowerShell
 
-## Lab scenario 
+In this lab, you will deploy a prerequisite web app to serve as the foundation for your tasks. Next, you will create a virtual network and a bastion host to securely manage your resources. You will then create a test virtual machine within this network. Following that, you will create a Private Endpoint to securely connect to your web app. You will configure the private DNS zone to ensure proper name resolution for the Private Endpoint. Finally, you will test the connectivity to the Private Endpoint to verify that everything is set up correctly. This setup ensures secure and efficient access to your web app within a private network environment.
 
-Get started with Azure Private Link by using a Private Endpoint to connect securely to an Azure web app. There are many ways to create Endpoints including Portal, CLI, PowerShell etc. 
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -18,12 +17,6 @@ In this lab, you will complete the following tasks:
 + Task 5: Configure the private DNS zone
 + Task 6: Test connectivity to the Private Endpoint
 
-
-## Estimated time: 45 minutes
-
-## Architecture diagram
-   
-   ‎![](../media/az700-m7-unit6.png)
 
 ## Task 1: Deploy the web app
 
@@ -442,14 +435,8 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. Close the connection to **myVM**.
 
-## Review
+## Summary
 
-In this lab, you have completed:
-+ Deploy the prerequisite web app
-+ Create a virtual network and bastion host
-+ Create a test virtual machine
-+ Create a Private Endpoint
-+ Configure the private DNS zone
-+ Test connectivity to the Private Endpoint
+In this hands-on lab, you have deployed a prerequisite web app, created a virtual network and bastion host, set up a test virtual machine, created a Private Endpoint, configured the private DNS zone, and tested connectivity to the Private Endpoint.
 
 ## You have successfully completed the lab.
