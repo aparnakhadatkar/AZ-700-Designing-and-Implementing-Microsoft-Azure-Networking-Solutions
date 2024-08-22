@@ -225,11 +225,13 @@ The load balancer monitors the status of your app with a health probe. The healt
 
    | **Setting**         | **Value**         |
    | ------------------- | ----------------- |
-   | Name                | **myHealthProbe** |
-   | Protocol            | **HTTP**          |
-   | Port                | **80**            |
-   | Path                | **/**             |
-   | Interval            | **15**            |
+   | Name                | **myHealthProbe(1)** |
+   | Protocol            | **HTTP(2)**          |
+   | Port                | **80(3)**            |
+   | Path                | **/(4)**             |
+   | Interval            | **15(5)**            |
+
+   ![Picture 7](../media/az70012.png)
    
 1. Select **Save**.
  
@@ -239,23 +241,29 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 
 1. From the **myIntLoadBalancer | Health probes** page of your load balancer, under **Settings** section, select **Load balancing rules**, then click on **+ Add**.
 
+   ![Picture 7](../media/az7004.png)
+
 1. On the **Add load balancing rule** page, enter the information from the table below.
 
    | **Setting**            | **Value**                |
    | ---------------------- | ------------------------ |
-   | Name                   | **myHTTPRule**           |
-   | IP Version             | **IPv4**                 |
-   | Frontend IP address    | **LoadBalancerFrontEnd** |
-   | Backend pool           | **myBackendPool**       |
-   | Protocol               | **TCP**                  |
-   | Port                   | **80**                   |
-   | Backend port           | **80**                   |
-   | Health probe           | **myHealthProbe**        |
-   | Session persistence    | **None**                 |
-   | Idle timeout (minutes) | **15**                   |
-   | Enable Floating IP     | **Disabled**             |
+   | Name                   | **myHTTPRule(1)**           |
+   | IP Version             | **IPv4(2)**                 |
+   | Frontend IP address    | **LoadBalancerFrontEnd(3)** |
+   | Backend pool           | **myBackendPool(4)**       |
+   | Protocol               | **TCP(5)**                  |
+   | Port                   | **80(6)**                   |
+   | Backend port           | **80(7)**                   |
+   | Health probe           | **myHealthProbe(8)**        |
+   | Session persistence    | **None(9)**                 |
+   | Idle timeout (minutes) | **15(10)**                   |
+   | Enable Floating IP     | **Disabled(11)**             |
 
-1. Select **Save**.
+   ![Picture 7](../media/az7005.png)
+
+   ![Picture 7](../media/az7006.png)
+
+1. Select **Save(12)**.
  
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -276,18 +284,23 @@ In this section, you will create a test VM, and then test the load balancer.
 
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
-   | Subscription         | Select your subscription                     |
-   | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**        |
-   | Virtual machine name | **myTestVM**                                 |
-   | Region               |  **<inject key="Region" enableCopy="false"/>**                              |
-   | Availability options | **No infrastructure redundancy required**    |
-   | Image                | **Windows Server 2019 Datacenter - x64 Gen 2**   |
-   | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory**   |
-   | Username             | **TestUser**                                 |
-   | Password             | **Provide a secure password**                |
-   | Confirm password     | **Provide a secure password**                |
+   | Subscription         | Select your subscription **(1)**                     |
+   | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**        |
+   | Virtual machine name | **myTestVM(3)**                                 |
+   | Region               |  **<inject key="Region" enableCopy="false"/> (4)**                              |
+   | Availability options | **No infrastructure redundancy required(5)**    |
+   | Security type        | **Standard**                                    |
+   | Image                | **Windows Server 2019 Datacenter - x64 Gen 2(6)**   |
+   | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory(7)**   |
+   | Username             | **TestUser(8)**                                 |
+   | Password             | **Provide a secure password(9)**                |
+   | Confirm password     | **Provide a secure password(10)**                |
 
-1. Select **Next : Disks**, then select **Next : Networking**. 
+   ![Picture 7](../media/az7007.png)
+
+   ![Picture 7](../media/az7008.png)
+
+1. Select **Next : Disks(11)**, then select **Next : Networking**. 
 
 1. On the **Networking** tab, use the information in the table below to configure networking settings.
 
@@ -314,14 +327,20 @@ In this section, you will create a test VM, and then test the load balancer.
 
    **Note**: You may need to select **See more** in order to see the **Private IP address** field.
 
+   ![Picture 7](../media/az7009.png)
+
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select the **myTestVM** virtual machine that you just created.
 
 1. On the **Overview** page, select **Connect**. Under Configured connection section, select **Connect via Bastion**.
 
 1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment in task: 5.1, then select **Connect**.
+
+   ![Picture 7](../media/az70010.png)
   
    >**Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
    **Done**, repeat step-5.
+
+   ![Picture 7](../media/az70011.png)
 
 1. The **myTestVM** window will open in another browser tab.
 
