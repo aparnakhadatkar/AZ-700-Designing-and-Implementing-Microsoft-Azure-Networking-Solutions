@@ -106,7 +106,7 @@ In this section, you will add the website in the East US as the primary endpoint
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic 
    Manager profiles** under services.
 
-    **Note**: Kindly refresh the page to find and select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**.
+   >**Note**: Kindly refresh the page to find and select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Under **Settings**, select **Endpoints**, and then select **+ Add**.
 
@@ -132,7 +132,7 @@ In this section, you will add the website in the East US as the primary endpoint
       | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
       | Priority        | **2**                                     |
 
-   >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
+    >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
 1. Click on **Add**.
 
