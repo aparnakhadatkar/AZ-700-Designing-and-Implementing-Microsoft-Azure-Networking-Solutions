@@ -157,11 +157,8 @@ The backend address pool contains the IP addresses of the virtual NICs connected
 
 1. Select **Save**.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="1d015344-09c7-4807-a209-4f600847ccd6" />
 
 ### Task 4: Create a health probe
 
@@ -183,11 +180,8 @@ The load balancer monitors the status of your app with a health probe. The healt
 
    ![Show health probe created in load balancer](../media/create-healthprobe.png)
  
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="2fd84d4b-1e07-4652-9970-59852fcf7237" />
 
 
 ### Task 5: Create a load balancer rule
@@ -256,11 +250,8 @@ In this section, you will create three VMs for the backend pool of the load bala
    > **Note:** This will take several minutes to deploy and and you will be prompted to provide password for three times for 
     each VM deployment. When deployment completed, close the powershell.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="2318826d-31a4-408e-a07d-24b1c4430ae4" />
 
 ### Task 7: Add VMs to the backend pool
 
@@ -370,11 +361,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Wait for this last VM to be deployed before moving forward with the next task.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="2eb3f37d-1cc8-4d69-a712-76d3913e96b0" />
 
 #### Task 9.2: Connect to the test VM to test the load balancer
 
@@ -433,11 +421,8 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select **Review + Create**, then select **Create**.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it.
+   <validation step="db11b2f8-63c5-4798-ab4e-a9a6b8748992" />.
 
 ### Task 11: Use Functional Dependency View
 
