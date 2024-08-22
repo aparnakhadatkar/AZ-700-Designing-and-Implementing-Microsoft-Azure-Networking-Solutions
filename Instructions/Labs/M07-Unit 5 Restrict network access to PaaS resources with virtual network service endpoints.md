@@ -386,7 +386,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines** to find the newly created virtual machines.
 
-   <validation step="52806dfa-dd22-4a6f-8fb7-935bf4e6c23" />
+   <validation step="52806dfa-dd22-4a6f-8fb7-935bf4e6c237" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
