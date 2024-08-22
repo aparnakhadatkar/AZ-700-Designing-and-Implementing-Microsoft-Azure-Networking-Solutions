@@ -436,16 +436,18 @@ under **Native RDP** click on **Select** and on **Native RDP** box select **Down
    **ping bing.com**
 
    ![](../media/unit691.png)
-
+   
    >**Note**: You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
 
 1. Close the remote desktop session to the ContosoPrivate VM.
 
 ## Task 11: Confirm access is denied to storage account
 
-1. Enter ContosoPublic in **Search resources, services and docs (G+/)**, box at the top of the portal.
+1. Enter **ContosoPublic** in **Search resources, services and docs (G+/)**, box at the top of the portal.
 
 1. When **ContosoPublic** appears in the search results, select it.
+
+   ![](../media/unit692.png)
 
 1. Complete steps 1-7 of previous task to get Confirm access to storage account task for the ContosoPublic VM.  
      
@@ -455,7 +457,9 @@ under **Native RDP** click on **Select** and on **Native RDP** box select **Down
 
 1. Confirm that the public VM does have outbound connectivity to the internet from a command prompt:
 
-   **ping bing.com**   
+   **ping bing.com**
+
+   ![](../media/unit693.png)
 
 1. Close the remote desktop session to the ContosoPublic VM.
 
@@ -463,11 +467,15 @@ under **Native RDP** click on **Select** and on **Native RDP** box select **Down
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Storage account**, and then select **Storage account** under services.
 
+   ![](../media/storage.png)
+
 1. Select **contosostorage<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. From left navigation pane of storage account under **Data storage**, select **File shares**, 
 
 1. Select **File shares** then select the **marketing** file share.
+
+   ![](../media/unit694.png)
 
 1. On the **marketing** blade, from the left navigation menu, click on **Browse**
 
