@@ -228,8 +228,9 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    
     ![](../media/l6u7-8.png)
 
+   <validation step="6f72e424-9c22-483a-b2ff-d23e76f16156" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -269,8 +270,9 @@ In this task, you will add an application rule that allows outbound access to ww
    
    ![Add an application rule collection](../media/l6u7-(10).png)
 
+   <validation step="9888c186-d2ae-48de-8856-e29a597e6fab" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -304,8 +306,9 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
    ​![Add a network rule collection](../media/l6u7-11.png)
 
+   <validation step="9879c295-9be5-4eec-b280-5597936582ba" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -342,8 +345,9 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. Select **Add**.
 
+   <validation step="b427e7bd-b2fb-46ce-93e9-8d17c0499133" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -371,8 +375,9 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 1. Restart the **Srv-Work** virtual machine.
 
+   <validation step="d9ca7dd9-969d-43af-a063-949cf3294bf8" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
