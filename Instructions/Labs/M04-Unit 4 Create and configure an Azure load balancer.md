@@ -131,9 +131,9 @@ In this section, you will create three VMs, that will be in the same availabilit
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
 
- 1.  You will be prompted to provide an admin password, provide adminPassword: **Pa55w.rd!!**.
+ 1. You will be prompted to provide an admin password, provide adminPassword: **Pa55w.rd!!**.
 
-      >**Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
+   >**Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
     each VM deployment.
 
    <validation step="3107853e-92fb-4898-a59b-a7cb10f5051a" />
