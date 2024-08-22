@@ -72,11 +72,13 @@ This exercise requires two instances of a web application that run in different 
 
    **Note**: Wait for deployment to complete it might take several minutes.
 
+  <validation step="f59939fe-eba5-483e-8067-81aa03a7bc70" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+      > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+      > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ## Task 2: Create a Front Door for your application
@@ -136,11 +138,14 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
    ![Web App](../media/l5u6-(10).png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="f5cf3eee-49ad-4985-88ca-5bc0c80e8ddc" />
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+      > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
  ## Task 3: View Azure Front Door in action
