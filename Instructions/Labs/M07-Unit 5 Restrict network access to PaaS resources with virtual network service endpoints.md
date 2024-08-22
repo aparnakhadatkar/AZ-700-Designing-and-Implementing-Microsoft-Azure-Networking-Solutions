@@ -30,7 +30,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create a virtual network
 
-In this Task, you will create a virtual network and a subnet.
+In this task, you will create a virtual network and a subnet.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network(1)**, and then select **Virtual 
    network(2)** under services.
@@ -291,7 +291,7 @@ The steps necessary to restrict network access to resources created through Azur
 
 ## Task 7: Create a file share in the storage account
 
-In this task, your creating a file share in the storage account
+In this task, your creating a file share in the storage account.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account**, and then select **Storage 
    Account** under services.
