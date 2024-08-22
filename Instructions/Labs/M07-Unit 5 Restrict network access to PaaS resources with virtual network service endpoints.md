@@ -435,7 +435,7 @@ under **Native RDP** click on **Select** and on **Native RDP** box select **Down
 
    **ping bing.com**
 
-      ![](../media/unit691.png)
+   ![](../media/unit691.png)
 
    >**Note**: You receive no replies because the network security group associated to the Private subnet does not allow outbound access to the internet.
 
