@@ -126,6 +126,6 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 ## Summary
 
-In this hands-on lab, you will create a Virtual WAN, set up a hub using the Azure Portal, and connect a VNet to the Virtual Hub.
+In this hands-on lab, you have created a Virtual WAN, set up a hub using the Azure Portal, and connected a VNet to the Virtual Hub.
 
 ## You have successfully completed the lab.
