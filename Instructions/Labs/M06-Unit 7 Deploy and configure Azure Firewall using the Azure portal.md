@@ -75,10 +75,13 @@ In this task, you will create a single virtual network with two subnets.
    
 1. Select **Review + create** and  **Create**.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it.
    <validation step="08881c22-489b-4f9d-b164-9dd736b25031" />
 
-
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
 
 ## Task 2: Create a virtual machine
 
