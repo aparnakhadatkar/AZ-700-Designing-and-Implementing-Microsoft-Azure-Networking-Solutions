@@ -1,24 +1,22 @@
 # Module 02-Unit 7 Create a Virtual WAN by using Azure Portal
 
-## Lab Scenario
+## Overall Estimated Duration: 65 minutes
 
-In this lab, you will create a Virtual WAN for Contoso.
+## Overview
 
-## Lab Objectives
+In this hands-on lab, you will set up a Virtual WAN in Azure, create a hub using the Azure Portal, and connect a VNet to the Virtual Hub. Azure Virtual WAN simplifies large-scale branch connectivity and offers centralized network management. You will configure the Virtual WAN resource, create a hub as a central connection point, and connect a VNet to the hub, ensuring seamless communication and optimized routing. This lab will provide you with the skills to efficiently manage complex network environments using Azure Virtual WAN.
+
+## Objective
 
 In this lab, you will complete the following tasks:
 
-+ Task 1: Create a Virtual WAN
-+ Task 2: Create a hub by using Azure Portal
-+ Task 3: Connect a VNet to the Virtual Hub
++ Task 1 : Create a Virtual WAN.
++ Task 2:  Create a Hub by Using Azure Portal.
++ Task 3: Connect a VNet to the Virtual Hub.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Estimated time: 65 minutes
-
-## Architecture diagram
-
-   ‎![](../media/az700-m2-unit7.png)
+## Instructions
 
 ### Task 1: Create a Virtual WAN
 
@@ -129,12 +127,8 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
    ![](../media/m2-U7-1.png)
 
-## Review
+## Summary
 
-In this lab, you have completed:
-
-+ Creating a Virtual WAN
-+ Creating a hub by using Azure Portal
-+ Connecting a VNet to the Virtual Hub
+In this hands-on lab, you will create a Virtual WAN, set up a hub using the Azure Portal, and connect a VNet to the Virtual Hub.
 
 ## You have successfully completed the lab.
