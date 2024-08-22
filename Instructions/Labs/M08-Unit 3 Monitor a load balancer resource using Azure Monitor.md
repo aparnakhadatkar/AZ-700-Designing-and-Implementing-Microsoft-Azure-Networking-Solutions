@@ -291,7 +291,7 @@ In this section, you will create three VMs for the backend pool of the load bala
 
 1. Select the **Windows Start icon** in the bottom left corner of the window, then select the **Windows PowerShell** tile.
 
-    **Note** : Kindly use **>>** icon clipboard within bastion session to copy and paste the commands into poweeshell.
+    **Note** : Kindly use **>>** icon clipboard within bastion session to copy and paste the commands into powershell.
 
 1. To install IIS, run the following command in PowerShell: 
 
