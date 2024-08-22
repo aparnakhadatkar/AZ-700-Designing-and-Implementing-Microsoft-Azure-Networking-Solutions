@@ -170,8 +170,9 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
     ![](../media/l6u7-5.png)
 
+   <validation step="bbcd151e-4daf-4277-a102-9c908ccce3a7" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
