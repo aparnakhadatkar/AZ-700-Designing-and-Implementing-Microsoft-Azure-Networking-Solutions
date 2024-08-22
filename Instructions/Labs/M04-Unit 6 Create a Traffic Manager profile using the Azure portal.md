@@ -126,11 +126,11 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. Repeat steps 2-4 above to create the failover endpoint. Use the same settings as before except for the information in the table below. 
 
-      | **Setting**     | **Value**                                 |
-      | --------------- | ----------------------------------------- |
-      | Name            | **myFailoverEndpoint**                    |
-      | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
-      | Priority        | **2**                                     |
+    | **Setting**     | **Value**                                 |
+    | --------------- | ----------------------------------------- |
+    | Name            | **myFailoverEndpoint**                    |
+    | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
+    | Priority        | **2**                                     |
 
     >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
