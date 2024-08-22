@@ -76,8 +76,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
    ![](../media/virtualmachine.png)
 
+   <validation step="53f858e3-8ea3-46e1-9e46-27d87801bd28" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
@@ -167,8 +168,9 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 1. Verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed.
 
+   <validation step="430adf7c-4c27-47f2-b079-292ae528c898" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
