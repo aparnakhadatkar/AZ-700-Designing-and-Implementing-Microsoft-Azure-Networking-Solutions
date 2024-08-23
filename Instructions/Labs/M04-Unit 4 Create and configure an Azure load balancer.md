@@ -84,7 +84,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. Select **Create**.
 
-   >**Note:** It will take 10-15 minutes to complete the deployment.
+1. It will take 10-15 minutes to complete the deployment.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
