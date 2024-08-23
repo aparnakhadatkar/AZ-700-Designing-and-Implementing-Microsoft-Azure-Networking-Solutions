@@ -13,7 +13,8 @@ In this lab, you will complete the following tasks:
 + Task 3: Create the ResearchVnet virtual network and subnets
 + Task 4: Verify the creation of VNets and Subnets
 
-
+## Architecture diagram
+![](../media/design-implement-vnet-peering01.png)
 
 You will create the following resources:
  
@@ -199,8 +200,15 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. Repeat steps 3 - 5 and select **ManufacturingVnet**, and **ResearchVnet** Virtual Network to verify the subnets.
 
-## Summary
 
-In this hands-on lab, you have created the CoreServicesVnet, ManufacturingVnet, and ResearchVnet virtual networks with their subnets, and verified their creation and configuration.
+## Review
+
+In this lab, you have completed:
+
++ Creating the CoreServicesVnet virtual network and subnets
++ Creating the ManufacturingVnet virtual network and subnets
++ Creating the ResearchVnet virtual network and subnets
++ Verifying the creation of VNets and Subnets
+
 
 ## You have successfully completed the lab.
