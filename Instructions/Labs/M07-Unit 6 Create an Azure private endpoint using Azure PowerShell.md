@@ -392,6 +392,8 @@ In this section you'll create and configure the private DNS zone using:
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
 
+- You'll use the virtual machine you created in the previous step.
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
    groups** under services.
 
@@ -406,8 +408,6 @@ In this section, you'll use the virtual machine you created in the previous step
 1. Enter the username **TestUser** and password **Pa55w.rd!!** that you entered during the virtual machine creation. 
 
 1. If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
-
-   - Refer the below image:
 
      ![](../media/bastionaz7001.png)
 
