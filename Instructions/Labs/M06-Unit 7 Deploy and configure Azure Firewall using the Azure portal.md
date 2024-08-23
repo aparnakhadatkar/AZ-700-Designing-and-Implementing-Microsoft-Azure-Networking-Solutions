@@ -334,25 +334,25 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. On the **Add a rule collection** page, create a new DNAT rule using the information in the table below.
 
-     | **Setting**           | **Value**                                                    |
-     | --------------------- | ------------------------------------------------------------ |
-     | Name                  | **rdp (1)**                                                      |
-     | Rule collection type  | **DNAT (2)**                                                     |
-     | Priority              | **200 (3)**                                                      |
-     | Rule collection group | **DefaultDnatRuleCollectionGroup (5)**                           |
-     | **Rules Section**     |                                                              |
-     | Name                  | **rdp-nat**                                                  |
-     | Source type           | **IP Address**                                               |
-     | Source                | *                                                            |
-     | Protocol              | **TCP**                                                      |
-     | Destination Ports     | **3389**                                                     |
-     | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
-     | Translated type       | **IP Address**                                                     |
-     | Translated address or    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
-     | Translated port       | **3389 (6)**                                                     |
-     |||
- 
-     ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
+      | **Setting**           | **Value**                                                    |
+      | --------------------- | ------------------------------------------------------------ |
+      | Name                  | **rdp (1)**                                                      |
+      | Rule collection type  | **DNAT (2)**                                                     |
+      | Priority              | **200 (3)**                                                      |
+      | Rule collection group | **DefaultDnatRuleCollectionGroup (5)**                           |
+      | **Rules Section**     |                                                              |
+      | Name                  | **rdp-nat**                                                  |
+      | Source type           | **IP Address**                                               |
+      | Source                | *                                                            |
+      | Protocol              | **TCP**                                                      |
+      | Destination Ports     | **3389**                                                     |
+      | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />**e.g. - 20.90.136.51** |
+      | Translated type       | **IP Address**                                                     |
+      | Translated address or    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />**e.g. - 10.0.2.4** |
+      | Translated port       | **3389 (6)**                                                     |
+      |||
+  
+      ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
 
 1. Select **Add**.
 
