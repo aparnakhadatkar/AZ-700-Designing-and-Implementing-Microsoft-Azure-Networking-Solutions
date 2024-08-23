@@ -204,13 +204,13 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 1. The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it 
    will take a few minutes before the resource groups are actually removed.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+> - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-   <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
+<validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
    
 ## Review
 In this lab, you have completed:
