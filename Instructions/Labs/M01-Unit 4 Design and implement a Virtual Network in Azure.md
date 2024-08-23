@@ -116,7 +116,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
       <validation step="d51cb8e1-a452-4f19-86d3-a6bb63c41bb1" />
-------  
+-----------------------------------------------------------------------------------------  
+
 ### Task 2: Create the ManufacturingVnet virtual network and subnets
 
 1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ManufacturingVnet** virtual network and select **IP 
