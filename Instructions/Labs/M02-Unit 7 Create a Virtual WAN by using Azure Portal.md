@@ -100,6 +100,8 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="57e2db2a-f095-49a3-9a12-0f902763015b" />
+
 
 ### Task 3: Connect a VNet to the Virtual Hub
 
