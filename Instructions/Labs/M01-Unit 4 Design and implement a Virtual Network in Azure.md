@@ -190,7 +190,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**.
 
-   ![](../media/unit4-image5.png)
+     ![](../media/unit4-image5.png)
 
 1. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
 
@@ -200,7 +200,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. In CoreServicesVnet | Subnets, verify that the subnets you created are listed, and that the IP address ranges are correct.
 
-   ![](../media/unit4-image6.png)
+     ![](../media/unit4-image6.png)
 
 1. Repeat steps 3 - 5 and select **ManufacturingVnet**, and **ResearchVnet** Virtual Network to verify the subnets.
 
