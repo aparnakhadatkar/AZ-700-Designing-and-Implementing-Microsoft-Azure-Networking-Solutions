@@ -210,8 +210,11 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
    
-## Summary
-
-In this hands-on lab, you have created web apps, set up a Traffic Manager profile, added Traffic Manager endpoints, and tested the Traffic Manager profile.
+## Review
+In this lab, you have completed:
++ Create the web apps
++ Create a Traffic Manager profile
++ Add Traffic Manager endpoints
++ Test the Traffic Manager profile
  
 ## You have successfully completed the lab.
