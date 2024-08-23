@@ -175,7 +175,6 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    > **Note**: Wait for deployment to complete successfully.
 
    <validation step="0aa25baa-7ec4-49ad-a99e-43e629157f51" />
-   
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
