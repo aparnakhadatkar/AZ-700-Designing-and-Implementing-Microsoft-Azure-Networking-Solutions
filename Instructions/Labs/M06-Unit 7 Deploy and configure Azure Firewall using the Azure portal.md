@@ -85,7 +85,8 @@ In this task, you will create a single virtual network with two subnets.
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   <validation step="08881c22-489b-4f9d-b164-9dd736b25031" />
+
+    <validation step="08881c22-489b-4f9d-b164-9dd736b25031" />
 
 ## Task 2: Create a virtual machine
 
@@ -93,7 +94,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-     ![](../media/unit6-image1.png)
+      ![](../media/unit6-image1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
@@ -107,7 +108,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
       ![](../media/pwershell4.png)
    
-1.  Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and then select **Region** **<inject key="Region" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create**.
+1. Please make sure you have selected your resource group **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/>** and then select **Region** **<inject key="Region" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create**.
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files 
    **firewall.json** and **firewall.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and- 
@@ -123,7 +124,7 @@ In this task, you will create the workload virtual machine and place it in the W
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
 
-   >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
+    >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
 
 1. When the deployment is complete, go to the Azure portal home page, then search and select **Virtual Machines**.
 
@@ -135,7 +136,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the **Overview** page of **Srv-Work**, within the left navigation pane, under the **Networking** section, select **Network settings** and make a note of the **Private IP address** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
 
-    ![](../media/unit75.png)
+     ![](../media/unit75.png)
  
 ## Task 3: Deploy the firewall and firewall policy
 
