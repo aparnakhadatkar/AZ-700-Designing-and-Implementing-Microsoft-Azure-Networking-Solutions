@@ -117,7 +117,8 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic Manager profiles** under services.
-      **Note**: Kindly refresh the page to find and select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**.
+
+1. Kindly refresh the page to find and select **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Under **Settings**, select **Endpoints**, and then select **+ Add**.
 
@@ -153,13 +154,12 @@ In this section, you will add the website in the East US as the primary endpoint
 
       ![Picture 22](../media/M04u06.4.png)
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-    <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
       
 ## Task 4: Test the Traffic Manager profile
 
@@ -200,7 +200,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. Verify that the web app is still responding. As the primary endpoint was not available, the traffic was instead routed to the failover endpoint to allow the web site to still function.
 
-     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it 
+1. The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it 
    will take a few minutes before the resource groups are actually removed.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -208,8 +208,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
     > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
+    <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
    
 ## Summary
 
