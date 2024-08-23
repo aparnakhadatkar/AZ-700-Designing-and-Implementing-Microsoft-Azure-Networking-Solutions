@@ -130,8 +130,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
  1. You will be prompted to provide an admin password, provide adminPassword: **Pa55w.rd!!**.
 
-    >**Note**: It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for 
-    each VM deployment.
+ 1. It may take 20-25 mins to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for each VM deployment.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -170,9 +169,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Assignment      | **Dynamic**              |
    
 
-1. Select **Review + create** and  **Create**.
-
-   > **Note**: Wait for deployment to complete successfully.
+1. Select **Review + create** and  **Create**. Wait for deployment to complete successfully.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
