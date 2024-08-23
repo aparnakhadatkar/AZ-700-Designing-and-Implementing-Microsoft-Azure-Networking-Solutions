@@ -122,29 +122,29 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. Under **Settings**, select **Endpoints**, and then select **+ Add**.
 
-   ![Picture 21](../media/create-tmendpoints-1.png)
+      ![Picture 21](../media/create-tmendpoints-1.png)
 
 1. On the **Add endpoint** page, enter the information from the table below.
 
-   | **Setting**          | **Value**                         |
-   | -------------------- | --------------------------------- |
-   | Type                 | **Azure endpoint**                |
-   | Name                 | **myPrimaryEndpoint**             |
-   | Target resource type | **App Service**                   |
-   | Target resource      | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/> (East US)** |
-   | Priority             | **1**                             |
+      | **Setting**          | **Value**                         |
+      | -------------------- | --------------------------------- |
+      | Type                 | **Azure endpoint**                |
+      | Name                 | **myPrimaryEndpoint**             |
+      | Target resource type | **App Service**                   |
+      | Target resource      | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/> (East US)** |
+      | Priority             | **1**                             |
 
 1. Click on **Add**.
 
 1. Repeat steps 2-4 above to create the failover endpoint. Use the same settings as before except for the information in the table below. 
 
-   | **Setting**     | **Value**                                 |
-   | --------------- | ----------------------------------------- |
-   | Name            | **myFailoverEndpoint**                    |
-   | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
-   | Priority        | **2**                                     |
-   
-   >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
+      | **Setting**     | **Value**                                 |
+      | --------------- | ----------------------------------------- |
+      | Name            | **myFailoverEndpoint**                    |
+      | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
+      | Priority        | **2**                                     |
+      
+      >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
 1. Click on **Add**.
 
@@ -152,15 +152,15 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
 
-   ![Picture 22](../media/M04u06.4.png)
+      ![Picture 22](../media/M04u06.4.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+> - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-   <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
+<validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
       
 ## Task 4: Test the Traffic Manager profile
 
@@ -170,7 +170,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
-      ![Picture 23](../media/check-dnsname-1.png)
+   ![Picture 23](../media/check-dnsname-1.png)
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
