@@ -148,26 +148,26 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 1. On the **Basics** tab, use the information in the table below to create the load balancer.
 
-   | **Setting**           | **Value**                |
-   | --------------------- | ------------------------ |
-   | Subscription          | Select your subscription |
-   | Resource group        | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**             |
-   | Name                  | **myIntLoadBalancer**    |
-   | Region                | **<inject key="Region" enableCopy="false"/>**         |
-   | SKU                   | **Standard**             |
-   | Type                  | **Internal**             |
+    | **Setting**           | **Value**                |
+    | --------------------- | ------------------------ |
+    | Subscription          | Select your subscription |
+    | Resource group        | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**             |
+    | Name                  | **myIntLoadBalancer**    |
+    | Region                | **<inject key="Region" enableCopy="false"/>**         |
+    | SKU                   | **Standard**             |
+    | Type                  | **Internal**             |
 
 1. Select **Next: Frontend IP configuration>** and click on  **+ Add a frontend IP configuration**.
 
 1. On the **Add frontend IP configuration** blade, enter the information from the table below and select **Save**.
  
-   | **Setting**     | **Value**                |
-   | --------------- | ------------------------ |
-   | Name            | **LoadBalancerFrontEnd** |
-   | IP version      | **IPv4**                 |
-   | Virtual network | **IntLB-VNet**           |
-   | Subnet          | **myFrontEndSubnet**     |
-   | Assignment      | **Dynamic**              |
+    | **Setting**     | **Value**                |
+    | --------------- | ------------------------ |
+    | Name            | **LoadBalancerFrontEnd** |
+    | IP version      | **IPv4**                 |
+    | Virtual network | **IntLB-VNet**           |
+    | Subnet          | **myFrontEndSubnet**     |
+    | Assignment      | **Dynamic**              |
    
 1. Select **Review + create** and  **Create**. Wait for deployment to complete successfully.
 
