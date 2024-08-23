@@ -122,29 +122,29 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. Under **Settings**, select **Endpoints**, and then select **+ Add**.
 
-      ![Picture 21](../media/create-tmendpoints-1.png)
+   ![Picture 21](../media/create-tmendpoints-1.png)
 
 1. On the **Add endpoint** page, enter the information from the table below.
 
-      | **Setting**          | **Value**                         |
-      | -------------------- | --------------------------------- |
-      | Type                 | **Azure endpoint**                |
-      | Name                 | **myPrimaryEndpoint**             |
-      | Target resource type | **App Service**                   |
-      | Target resource      | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/> (East US)** |
-      | Priority             | **1**                             |
+   | **Setting**          | **Value**                         |
+   | -------------------- | --------------------------------- |
+   | Type                 | **Azure endpoint**                |
+   | Name                 | **myPrimaryEndpoint**             |
+   | Target resource type | **App Service**                   |
+   | Target resource      | **ContosoWebAppEastUS<inject key="DeploymentID" enableCopy="false"/> (East US)** |
+   | Priority             | **1**                             |
 
 1. Click on **Add**.
 
 1. Repeat steps 2-4 above to create the failover endpoint. Use the same settings as before except for the information in the table below. 
 
-      | **Setting**     | **Value**                                 |
-      | --------------- | ----------------------------------------- |
-      | Name            | **myFailoverEndpoint**                    |
-      | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
-      | Priority        | **2**                                     |
+   | **Setting**     | **Value**                                 |
+   | --------------- | ----------------------------------------- |
+   | Name            | **myFailoverEndpoint**                    |
+   | Target resource | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
+   | Priority        | **2**                                     |
    
-      >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
+   >**Note:** Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
 1. Click on **Add**.
 
@@ -152,7 +152,7 @@ In this section, you will add the website in the East US as the primary endpoint
 
 1. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
 
-      ![Picture 22](../media/M04u06.4.png)
+   ![Picture 22](../media/M04u06.4.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
