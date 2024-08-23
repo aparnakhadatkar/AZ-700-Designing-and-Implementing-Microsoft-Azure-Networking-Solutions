@@ -170,7 +170,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
-   ![Picture 23](../media/check-dnsname-1.png)
+     ![Picture 23](../media/check-dnsname-1.png)
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
