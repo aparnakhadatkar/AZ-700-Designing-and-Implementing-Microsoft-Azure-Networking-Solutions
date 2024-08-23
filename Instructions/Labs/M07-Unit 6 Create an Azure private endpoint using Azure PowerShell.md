@@ -405,13 +405,14 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. Enter the username **TestUser** and password **Pa55w.rd!!** that you entered during the virtual machine creation. 
 
-     >**Note:** If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
+1. If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
 
      ![](../media/bastionaz7001.png)
 
 1. Within **myVM** open Windows PowerShell on the server after you connect.
 
-1. Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
+1. Enter nslookup &lt;your- webapp-name&gt;.azurewebsites.net. Replace &lt;your-webapp-name&gt; with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed 
+   below:
 
       ```
        Server: UnKnown
