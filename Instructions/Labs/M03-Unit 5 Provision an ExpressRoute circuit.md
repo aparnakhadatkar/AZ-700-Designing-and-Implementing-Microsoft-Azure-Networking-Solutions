@@ -1,5 +1,7 @@
 # Module 03: Unit 5 Provision an ExpressRoute circuit
 
+## Lab scenario
+
 In this lab, you will create and provision an ExpressRoute circuit to establish a private connection between your on-premises network and Microsoft cloud services. You'll configure the circuit, select a service provider, and establish the connection. Next, you'll retrieve your Service key, a unique identifier for managing your circuit, by accessing the Azure portal. Finally, you'll deprovision the ExpressRoute circuit when it's no longer needed, ensuring all dependencies are properly handled. 
 
  > **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
@@ -12,6 +14,12 @@ In this lab, you will complete the following tasks:
 + Task 1: Create and provision an ExpressRoute circuit
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
+
+## Estimated time: 15 minutes
+
+## Architecture diagram
+
+  ‎![](../media/az700-m3-unit5.png)
 
 ## Task 1: Create and provision an ExpressRoute circuit
 
@@ -108,8 +116,12 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Summary
+## Review
 
-In this hands-on lab, you have connected a VNet to the Virtual Hub, created a hub using the Azure Portal, and created a Virtual WAN.
+In this lab, you have completed:
+
++ Creating and provision an ExpressRoute circuit
++ Retrieving your Service key
++ Deprovisioning an ExpressRoute circuit
 
 ## You have successfully completed the lab.
