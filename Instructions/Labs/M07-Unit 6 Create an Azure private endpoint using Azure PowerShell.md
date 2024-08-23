@@ -385,9 +385,9 @@ In this section you'll create and configure the private DNS zone using:
    New-AzPrivateDnsZoneGroup @parameters4 
    ```
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   <validation step="a70480ef-c326-4973-959d-2245397125ef" />
+<validation step="a70480ef-c326-4973-959d-2245397125ef" />
    
 ## Task 6: Test connectivity to the Private Endpoint
 
