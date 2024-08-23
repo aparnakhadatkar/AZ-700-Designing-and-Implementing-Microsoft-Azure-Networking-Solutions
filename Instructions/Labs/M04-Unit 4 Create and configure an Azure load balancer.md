@@ -158,6 +158,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Type                  | **Internal**             |
 
 1. Select **Next: Frontend IP configuration>** and click on  **+ Add a frontend IP configuration**.
+
 1. On the **Add frontend IP configuration** blade, enter the information from the table below and select **Save**.
  
    | **Setting**     | **Value**                |
@@ -168,14 +169,13 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Subnet          | **myFrontEndSubnet**     |
    | Assignment      | **Dynamic**              |
    
-
 1. Select **Review + create** and  **Create**. Wait for deployment to complete successfully.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   <validation step="0aa25baa-7ec4-49ad-a99e-43e629157f51" />
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    <validation step="0aa25baa-7ec4-49ad-a99e-43e629157f51" />
 
 ## Task 4: Create load balancer resources
 
@@ -266,7 +266,6 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    <validation step="725af5b8-9a2d-4aeb-9adb-da47aa36d4aa" /> 
  
- 
 ## Task 5: Test the load balancer
 
 In this section, you will create a test VM, and then test the load balancer.
@@ -278,36 +277,36 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. Select **+ Create** and choose **Azure virtual machine**. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
-   | **Setting**          | **Value**                                    |
-   | -------------------- | -------------------------------------------- |
-   | Subscription         | Select your subscription **(1)**                     |
-   | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**        |
-   | Virtual machine name | **myTestVM(3)**                                 |
-   | Region               |  **<inject key="Region" enableCopy="false"/> (4)**                              |
-   | Availability options | **No infrastructure redundancy required(5)**    |
-   | Security type        | **Standard**                                    |
-   | Image                | **Windows Server 2019 Datacenter - x64 Gen 2(6)**   |
-   | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory(7)**   |
-   | Username             | **TestUser(8)**                                 |
-   | Password             | **Provide a secure password(9)**                |
-   | Confirm password     | **Provide a secure password(10)**                |
+    | **Setting**          | **Value**                                    |
+    | -------------------- | -------------------------------------------- |
+    | Subscription         | Select your subscription **(1)**                     |
+    | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**        |
+    | Virtual machine name | **myTestVM(3)**                                 |
+    | Region               |  **<inject key="Region" enableCopy="false"/> (4)**                              |
+    | Availability options | **No infrastructure redundancy required(5)**    |
+    | Security type        | **Standard**                                    |
+    | Image                | **Windows Server 2019 Datacenter - x64 Gen 2(6)**   |
+    | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory(7)**   |
+    | Username             | **TestUser(8)**                                 |
+    | Password             | **Provide a secure password(9)**                |
+    | Confirm password     | **Provide a secure password(10)**                |
 
-   ![Picture 7](../media/az7007.png)
+     ![Picture 7](../media/az7007.png)
 
-   ![Picture 7](../media/az7008.png)
+     ![Picture 7](../media/az7008.png)
 
 1. Select **Next : Disks(11)**, then select **Next : Networking**. 
 
 1. On the **Networking** tab, use the information in the table below to configure networking settings.
 
-   | **Setting**                                                  | **Value**                     |
-   | ------------------------------------------------------------ | ----------------------------- |
-   | Virtual network                                              | **IntLB-VNet**                |
-   | Subnet                                                       | **myBackendSubnet**           |
-   | Public IP                                                    | Change to **None**            |
-   | NIC network security group                                   | **Advanced**                  |
-   | Configure network security group                             | Select the existing **myNSG** |
-   | Load balancing options                                       | **None**                      |
+    | **Setting**                                                  | **Value**                     |
+    | ------------------------------------------------------------ | ----------------------------- |
+    | Virtual network                                              | **IntLB-VNet**                |
+    | Subnet                                                       | **myBackendSubnet**           |
+    | Public IP                                                    | Change to **None**            |
+    | NIC network security group                                   | **Advanced**                  |
+    | Configure network security group                             | Select the existing **myNSG** |
+    | Load balancing options                                       | **None**                      |
 
 1. Select **Review + create**.
 
@@ -323,7 +322,7 @@ In this section, you will create a test VM, and then test the load balancer.
 
    **Note**: You may need to select **See more** in order to see the **Private IP address** field.
 
-   ![Picture 7](../media/az7009.png)
+    ![Picture 7](../media/az7009.png)
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select the **myTestVM** virtual machine that you just created.
 
@@ -331,12 +330,12 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you created during **myTestVM** virtual machine deployment in task: 5.1, then select **Connect**.
 
-   ![Picture 7](../media/az70010.png)
+    ![Picture 7](../media/az70010.png)
   
-   >**Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
-   **Done**, repeat step-5.
+    **Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
+    **Done**, repeat step-5.
 
-   ![Picture 7](../media/az70011.png)
+    ![Picture 7](../media/az70011.png)
 
 1. The **myTestVM** window will open in another browser tab.
 
