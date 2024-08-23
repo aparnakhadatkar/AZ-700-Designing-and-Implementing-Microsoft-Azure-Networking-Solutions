@@ -318,11 +318,9 @@ In this section, you will create a test VM, and then test the load balancer.
 
 1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
-1. On the **Overview** page, make a note in notepad of the **Private IP address**, or copy it to the clipboard.
+1. On the **Overview** page, make a note in notepad of the **Private IP address**, or copy it to the clipboard. You may need to select **See more** in order to see the **Private IP address** field.
 
-   **Note**: You may need to select **See more** in order to see the **Private IP address** field.
-
-    ![Picture 7](../media/az7009.png)
+     ![Picture 7](../media/az7009.png)
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select the **myTestVM** virtual machine that you just created.
 
