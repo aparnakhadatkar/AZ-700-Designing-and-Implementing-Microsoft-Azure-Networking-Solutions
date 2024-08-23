@@ -407,7 +407,9 @@ In this section, you'll use the virtual machine you created in the previous step
 
 1. If the popup blocker prevents the new window, select the allow popup blocker and click on Done and Connect again.
 
-      ![](../media/bastionaz7001.png)
+   - Refer the below image:
+
+     ![](../media/bastionaz7001.png)
 
 1. Within **myVM** open Windows PowerShell on the server after you connect.
 
