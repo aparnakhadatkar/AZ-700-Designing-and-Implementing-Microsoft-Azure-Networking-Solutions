@@ -169,18 +169,18 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **Overview** screen, copy the **DNS name** entry to the clipboard (or take note of it somewhere).
 
-     ![Picture 23](../media/check-dnsname-1.png)
+      ![Picture 23](../media/check-dnsname-1.png)
 
 1. Open a web browser tab, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 
 1. If you encounter **your coneection isn't private**. click on **advanced** and then click on link provide.
 
-     ![Picture 24](../media/M0406.7.png)
+      ![Picture 24](../media/M0406.7.png)
 
 1. The web app's default web site should be displayed. If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager 
    profile overview page and **Enable profile**. Then refresh the webpage.
 
-     ![Picture 24](../media/M0406.5.png)
+      ![Picture 24](../media/M0406.5.png)
    
 1. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
@@ -190,7 +190,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled**, and then select **Save**.
 
-     ![Picture 25](../media/M0406.8.png)
+      ![Picture 25](../media/M0406.8.png)
 
 1. Close the **myPrimaryEndpoint** page (select the **X** in the top right corner of the page).
 
@@ -203,12 +203,12 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 1. The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it 
    will take a few minutes before the resource groups are actually removed.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-    <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
    
 ## Summary
 
