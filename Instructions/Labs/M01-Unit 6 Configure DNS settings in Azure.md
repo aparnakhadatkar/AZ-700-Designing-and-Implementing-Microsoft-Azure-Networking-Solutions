@@ -98,8 +98,12 @@ In this lab, you will complete the following tasks:
 
 1. Verify that the **ResearchVnetLink** has been created, and that auto-registration is enabled.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it.
-   <validation step="0403a166-bc46-43a3-bb84-8f28acc59cc9" />
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+     <validation step="0403a166-bc46-43a3-bb84-8f28acc59cc9" />
  
 ###  Task 3: Create Virtual Machines to test the configuration
 
@@ -153,8 +157,12 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
       ![](../media/lab2-image1.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it.
-   <validation step="05b159b3-b8a6-4fb9-b554-eb1cc0ff7960" />
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+     <validation step="05b159b3-b8a6-4fb9-b554-eb1cc0ff7960" />
 
 ### Task 4: Verify records are present in the DNS zone
 
@@ -168,8 +176,12 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Make a note of the names and IP addresses of the VMs.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it.
-   <validation step="f9b42843-78fa-4885-b912-c7be860ce3f5" />
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+     <validation step="f9b42843-78fa-4885-b912-c7be860ce3f5" />
 
  ### Task 05: Connect to the Test VMs using RDP
 
