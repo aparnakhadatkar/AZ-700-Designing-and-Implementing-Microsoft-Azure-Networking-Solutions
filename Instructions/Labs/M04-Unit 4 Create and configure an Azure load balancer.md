@@ -7,12 +7,6 @@ In this lab, you will create an internal load balancer for the fictional Contoso
 
 The steps to create an internal load balancer, are very similar to those you have already learned about in this module, to create a public load balancer. The key difference is that with a public load balancer the front end is accessed via a public IP address, and you test connectivity from a host which is located outside your virtual network; whereas, with an internal load balancer, the front end is a private IP address inside your virtual network, and you test connectivity from a host inside the same network.
 
-## Estimated time: 60 minutes
-
-## Architecture diagram
-
-![internal standard loadbalancer diagram](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
-
  
 ## Lab Objectives
 
@@ -23,6 +17,12 @@ In this lab, you will complete the following tasks:
 + Task 3: Create the load balancer
 + Task 4: Create load balancer resources
 + Task 5: Test the load balancer
+
+## Estimated time: 60 minutes
+
+## Architecture diagram
+
+![internal standard loadbalancer diagram](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
 
 ## Task 1: Create the virtual network
 
