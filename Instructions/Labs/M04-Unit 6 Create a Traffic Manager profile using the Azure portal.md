@@ -1,6 +1,11 @@
 # Module 04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
-In this lab, you will create web apps to host your applications, set up a Traffic Manager profile to distribute traffic across multiple endpoints, and add these endpoints to the Traffic Manager profile. Finally, you will test the Traffic Manager profile to ensure it correctly routes traffic based on your configuration. This setup helps ensure high availability and responsiveness for your applications.
+## Lab scenario 
+
+In this lab, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application.
+You will create two instances of a web application deployed in two different regions (East US and West Europe). The East US region will act as a primary endpoint for Traffic Manager, and the West Europe region will act as a failover endpoint.
+
+You will then create a Traffic Manager profile based on endpoint priority. This profile will direct user traffic to the primary site running the web application. Traffic Manager will continuously monitor the web application, and if the primary site in East US is unavailable, it will provide automatic failover to the backup site in West Europe.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -11,6 +16,12 @@ In this lab, you will complete the following tasks:
 + Task 2: Create a Traffic Manager profile
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
+
+## Estimated time: 35 minutes
+
+## Architecture diagram
+
+![Picture 14](../media/exercise-traffic-manager-environment-diagram.png)
 
 ## Task 1: Create the web apps
 
