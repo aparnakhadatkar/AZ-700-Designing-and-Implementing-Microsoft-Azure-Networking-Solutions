@@ -76,10 +76,10 @@ In this lab, you will complete the following tasks:
    >**Note**: If you are using a dual stack virtual network and plan to use IPv6-based private peering over ExpressRoute, select Add IP6 address space and input IPv6 address range values.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+ > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+ > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    <validation step="4b8c0911-f548-4fa0-ad62-298ff78aa0e5" />
 
 ## Task 2: Create the virtual network gateway
@@ -117,10 +117,10 @@ In this lab, you will complete the following tasks:
    >**Note**: it can take up to 45 minutes to deploy a Gateway.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+ > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+ > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
    <validation step="15a76eb7-8705-4ab0-8c7d-c006a7ba304f" />
 
 ### Review
