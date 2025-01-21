@@ -275,12 +275,12 @@ In this task, you will add an application rule that allows outbound access to ww
     | **Rules Section**      |                                           |
     | Name                   | **Allow-Google**                          |
     | Source type            | **IP Address**                            |
-    | Source                 | **10.0.2.0/24**                           |
+    | Source                 | **10.0.3.0/24**                           |
     | Protocol               | **http,https**                            |
     | Destination type       | **FQDN**                                  |
     | Destination            | **www.google.com (6)**                    |
 
-    ![Add an application rule collection](../media/l6u7-(10).png)
+    ![Add an application rule collection](../media/add-app-rule-2101.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
