@@ -1,6 +1,6 @@
 # Module 04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
-## Lab scenario 
+## Lab Overview
 
 In this lab, you will create a Traffic Manager profile to deliver high availability for the fictional Contoso Ltd organization's web application.
 You will create two instances of a web application deployed in two different regions (**<inject key="Region" enableCopy="false"/>** and West Europe). The **<inject key="Region" enableCopy="false"/>** region will act as a primary endpoint for Traffic Manager, and the West Europe region will act as a failover endpoint.
