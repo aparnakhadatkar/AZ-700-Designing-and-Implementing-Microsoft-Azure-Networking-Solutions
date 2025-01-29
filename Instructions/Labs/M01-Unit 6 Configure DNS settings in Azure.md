@@ -1,6 +1,6 @@
 # Module 01 - Unit 6 Configure DNS settings in Azure
 
-## Lab scenario 
+## Lab Overview 
 In this lab, you will configure DNS name resolution for Contoso Ltd. You will create a private DNS zone named contoso.com, link the VNets for registration and resolution, and then create two virtual machines and test the configuration.
 
 ## Lab Objectives
