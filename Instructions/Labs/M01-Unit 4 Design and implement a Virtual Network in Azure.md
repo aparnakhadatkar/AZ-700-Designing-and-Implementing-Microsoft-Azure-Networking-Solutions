@@ -2,7 +2,7 @@
 
 In this hands-on lab, you will create and configure multiple virtual networks (VNets) and subnets in Azure. You will start by setting up the CoreServicesVnet, followed by the ManufacturingVnet, and finally the ResearchVnet, each with their respective subnets. This lab will guide you through the process of verifying the creation and configuration of these VNets and subnets, enhancing your skills in network architecture and management within Azure.
 
-## Lab scenario 
+## Lab Overview
 
 Now you're ready to deploy virtual networks in the Azure portal.
 
