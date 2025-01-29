@@ -2,7 +2,7 @@
 
 ## Deploy ExpressRoute gateways
 
-## Lab scenario 
+## Lab Overview
 
 To connect your Azure virtual network and your on-premises network via ExpressRoute, you must create a virtual network gateway first. A virtual network gateway serves two purposes: to exchange IP routes between the networks and to route network traffic. 
 
@@ -16,7 +16,6 @@ When you create a virtual network gateway, you need to specify several settings.
 - **ExpressRoute** - To send network traffic on a private connection, you use the gateway type 'ExpressRoute'. This is also referred to as an ExpressRoute gateway and is the type of gateway used when configuring ExpressRoute.
 
 Each virtual network can have only one virtual network gateway per gateway type. For example, you can have one virtual network gateway that uses -GatewayType VPN, and one that uses -GatewayType ExpressRoute.
-
 
 ## Lab Objectives
 
