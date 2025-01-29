@@ -1,6 +1,6 @@
 # Module 02-Unit 3 Create and configure a virtual network gateway
 
-## Lab scenario 
+## Lab Overview
 In this lab you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
 
 ## Lab Objectives
