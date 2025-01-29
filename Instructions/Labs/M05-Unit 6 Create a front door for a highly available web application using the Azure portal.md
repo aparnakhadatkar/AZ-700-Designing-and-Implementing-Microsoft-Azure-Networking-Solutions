@@ -1,11 +1,11 @@
 # Module 05: Unit 6 Create a Front Door for a highly available web application using the Azure portal
 
-## Lab scenario
+## Lab Overview
 In this lab, you will set up an Azure Front Door configuration that pools two instances of a web application that runs in different Azure regions. This configuration directs traffic to the nearest site that runs the application. Azure Front Door continuously monitors the web application. You will demonstrate automatic failover to the next available site when the nearest site is unavailable.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Lab objectives
+## Lab Objectives
 In this lab, you will complete the following tasks:
 
 + Task 1: Create two instances of a web app
