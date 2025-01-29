@@ -2,7 +2,7 @@
 
   **Note**: This lab we provided as Read only because  **DDoS Protection plan** monthly fix cost is $2,944.
   
-## Lab scenario 
+## Lab Overview
 
 Being responsible for Contoso's Network Security team, you are going to run a mock DDoS attack on the virtual network. The following steps walk you through creating a virtual network, configuring DDoS Protection, and creating an attack which you can observe and monitor with the help of telemetry and metrics.
 
