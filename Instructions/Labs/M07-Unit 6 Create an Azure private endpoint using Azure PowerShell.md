@@ -1,6 +1,6 @@
 # Module 07-Unit 6 Create an Azure private endpoint using Azure PowerShell
 
-## Lab scenario
+## Lab Overview
 
 In this lab, you will deploy a prerequisite web app to serve as the foundation for your tasks. Next, you will create a virtual network and a bastion host to securely manage your resources. You will then create a test virtual machine within this network. Following that, you will create a Private Endpoint to securely connect to your web app. You will configure the private DNS zone to ensure proper name resolution for the Private Endpoint. Finally, you will test the connectivity to the Private Endpoint to verify that everything is set up correctly. This setup ensures secure and efficient access to your web app within a private network environment.
 
