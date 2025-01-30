@@ -14,8 +14,6 @@ In this lab, you will complete the following tasks:
 + Task 5: Test the connection between the VMs
 + Task 6: Clean up resources
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 ## Estimated time: 20 minutes
 
 ## Architecture diagram
@@ -24,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create a Virtual Machine to test the configuration
 
-In this section, you will create a test VM on the Manufacturing VNet to test if you can access resources inside another Azure virtual network from your ManufacturingVnet.
+In this task, you will create a test VM on the Manufacturing VNet to test if you can access resources inside another Azure virtual network from your ManufacturingVnet.
 
 #### Create ManufacturingVM
 
@@ -125,6 +123,8 @@ In this task, your connecting to the Test VM using RDP.
 
 ## Task 3: Test the connection between the VMs
 
+In this task, you'll be testing the connection between the ManufacturingVM (in the ManufacturingVnet) and testvm1 (in the CoreServicesVnet). The goal is to verify that there's no connection to testvm1 using the Test-NetConnection cmdlet. 
+
 1. On the ManufacturingVM, Right click on start and select windows PowerShell.
 
 1. Use the following command to verify that there is no connection to testvm1 on CoreServicesVnet. Be sure to use the IPv4 address for testvm1.
@@ -138,6 +138,8 @@ In this task, your connecting to the Test VM using RDP.
    ![PowerShell window with Test-NetConnection 10.20.20.4 -port 3389 showing failed ](../media/test-netconnection-fail.png)
 
 ## Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
+
+In this task, you'll be creating VNet peering between CoreServicesVnet and ManufacturingVnet.
 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
@@ -179,6 +181,8 @@ In this task, your connecting to the Test VM using RDP.
 
 ## Task 5: Test the connection between the VMs
 
+In this task, you'll be testing the connectivity between the ManufacturingVM and TestVM1 after setting up the VNet peering between CoreServicesVnet and ManufacturingVnet. 
+
 1. On the ManufacturingVM, open a PowerShell prompt.
 
 1. Use the following command to verify that there is now a connection to TestVM1 on CoreServicesVnet. 
@@ -193,6 +197,8 @@ In this task, your connecting to the Test VM using RDP.
 
 ## Task 6: Clean up resources
 
+In this task, you'll be cleaning up the Azure resources you've created during this module to avoid unnecessary charges.
+  
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane. (Create Cloud Shell storage if needed, using default settings.)
@@ -205,18 +211,6 @@ In this task, your connecting to the Test VM using RDP.
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What the most common errors when configuring Azure virtual network peering?
-+ In Azure, if I peer Vnet1 with Vnet2 and then I peer Vnet2 with Vnet3, is Vnet1 peered with Vnet3?
-+ Can firewalls and gateways affect Azure virtual network peering?
-
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure Virtual Networks](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/). In this module, you learn how to design and implement Azure networking services. You learn about virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
-+ [Distribute your services across Azure virtual networks and integrate them by using virtual network peering](https://learn.microsoft.com/training/modules/integrate-vnets-with-vnet-peering/). In this module, you will learn how to configure virtual network peering.
 
 ## Key takeaways
 
