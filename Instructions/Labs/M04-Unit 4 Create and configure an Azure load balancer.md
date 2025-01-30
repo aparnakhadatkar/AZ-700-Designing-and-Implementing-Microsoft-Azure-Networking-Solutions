@@ -50,7 +50,7 @@ In this task, you will create a virtual network (VNet) in Azure with two subnets
 
 1. Select **Next**.
    
-1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space**, in new **IPV4 address space**, enter **10.1.0.0** in address space and **/16** in size field and select **+ Add a subnet** in the new IPv4 address space.
+1. On the **IP Addresses** tab, in the **IPv4 address space** box, don't remove the default, click on **Add IPV4 address space (1)**, in new **IPV4 address space**, enter **10.1.0.0 (2)** in address space and **/16 (3)** in size field and select **+ Add a subnet (4)** in the new IPv4 address space.
 
    ![](../media/L4U4-1.png)
 
