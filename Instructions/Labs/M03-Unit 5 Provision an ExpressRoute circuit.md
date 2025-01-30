@@ -4,8 +4,6 @@
 
 In this lab, you will create and provision an ExpressRoute circuit to establish a private connection between your on-premises network and Microsoft cloud services. You'll configure the circuit, select a service provider, and establish the connection. Next, you'll retrieve your Service key, a unique identifier for managing your circuit, by accessing the Azure portal. Finally, you'll deprovision the ExpressRoute circuit when it's no longer needed, ensuring all dependencies are properly handled. 
 
- > **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 ## Lab Objectives
 
 In this lab, you will complete the following tasks:
@@ -21,6 +19,8 @@ In this lab, you will complete the following tasks:
   ‎![](../media/az700-m3-unit5.png)
 
 ## Task 1: Create and provision an ExpressRoute circuit
+
+In this task, you will create and provision an ExpressRoute circuit, you're setting up an ExpressRoute connection in Azure. ExpressRoute is a service that provides a private, dedicated, and high-speed connection between your on-premises network and Azure, bypassing the public internet. 
 
 1. On the Azure portal, select **+ Create a resource**, from left navigation pane select **Networking**, search for **ExpressRoute** and on the **Marketplace** page in **ExpressRoute** pane select **Create** and **ExpressRoute**, as shown in the following image. If ExpressRoute does not appear in the list, use **Search the marketplace** to search for it:
 
@@ -66,7 +66,9 @@ In this lab, you will complete the following tasks:
    - **Allow classic operation** will allow classic virtual networks to be link to the circuit.
 
 ## Task 2: Retrieve your Service key
- 
+
+In this task, you will retrieve your Service Key, the main objective is to retrieve the unique Service Key associated with your ExpressRoute circuit. This key is an essential piece of information that your service provider will require in order to complete the provisioning process and finalize the connection between your on-premises network and Azure. 
+
 1. You can view all the circuits that you created by selecting **More services &gt; Networking &gt; ExpressRoute circuits**.
 
    ![Azure portal - Create ExpressRoute resource menu](../media/task5.png)
@@ -95,6 +97,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 3: Deprovisioning an ExpressRoute circuit
 
+In this task, you will deprovisioning an ExpressRoute circuit, the goal is to deprovision an existing ExpressRoute circuit that is no longer needed or that you want to remove from your Azure environment
+
 If the ExpressRoute circuit service provider provisioning state is **Provisioning** or **Provisioned,** you must work with your service provider to deprovision the circuit on their side. Microsoft can continue to reserve resources and bill you until the service provider completes deprovisioning the circuit and notifies us.
 
 > **Note**: You must unlink all virtual networks from the ExpressRoute circuit before deprovisioning. If this operation fails, check whether any virtual networks are linked to the circuit.
@@ -106,17 +110,6 @@ If the ExpressRoute circuit service provider provisioning state is **Provisionin
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="d6ba71c7-11b3-4d31-97c6-fa7f26cea24e" />
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What service providers are available for Azure ExpressRoute?
-+ What are the most common configuration issues with Azure ExpressRoute? What should I do if I have that issue?
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure ExpressRoute](https://learn.microsoft.com/training/modules/intro-to-azure-expressroute/). In this module, you learn what Azure ExpressRoute is and the functionality it provides.
-+ [Design and implement ExpressRoute](https://learn.microsoft.com/training/modules/design-implement-azure-expressroute/). In this module, you learn how to design and implement Azure ExpressRoute, ExpressRoute Global Reach, ExpressRoute FastPath.
 
 ## Key takeaways
 
