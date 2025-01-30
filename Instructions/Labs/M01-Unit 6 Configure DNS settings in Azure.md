@@ -1,7 +1,7 @@
 # Module 01 - Unit 6 Configure DNS settings in Azure
 
 ## Lab Overview 
-In this lab, you will configure DNS name resolution for Contoso Ltd. You will create a private DNS zone named contoso.com, link the VNets for registration and resolution, and then create two virtual machines and test the configuration.
+This lab will guide you through configuring DNS name resolution in Azure for Contoso Ltd. The objective is to set up a Private DNS Zone, link it to multiple virtual networks (VNets), and test the configuration by creating virtual machines (VMs). You will ensure that your Azure resources can correctly resolve DNS names within a private network using the created DNS zone.
 
 ## Lab Objectives
 
@@ -22,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create a Private DNS Zone in Azure. This involves setting up a DNS zone that will be used to manage and resolve DNS records for resources within a private virtual network.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Private DNS zones**, and then select **Private DNS zones** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Private DNS zones (1)**, and then select **Private DNS zones (2)** under services.
 
     ‎![](../media/unit6-image(1).png)
 
@@ -119,11 +119,11 @@ In this task, you'll be creating two test virtual machines (VMs) to test the Pri
 
      ![](../media/pwershell1.png)
 
-1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+1. On **Getting started** window choose **Mount storage account (1)** then under **Storage account subscription (2)** select your available subscription from the dropdown and click on **Apply (3)**.
    
      ![](../media/pwershell3.png)
    
-1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
+1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
      ![](../media/pwershell4.png)
    
@@ -137,7 +137,7 @@ In this task, you'll be creating two test virtual machines (VMs) to test the Pri
 
       ![](../media/pwershell5.png)
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**.
 
       ![](../media/pwershell2.png)
 
@@ -195,7 +195,7 @@ In this task, you'll be testing the connectivity to the virtual machines (VMs) y
 
 1. Select **testvm1**.
 
-1. On TestVM1, select **Connect** then select **Connect** from the drop-down. 
+1. On TestVM1, select **Connect (1)** then select **Connect (2)** from the drop-down. 
 
       ![](../media/connect.png)
 
