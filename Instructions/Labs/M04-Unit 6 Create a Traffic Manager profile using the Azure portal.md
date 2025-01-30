@@ -7,8 +7,6 @@ You will create two instances of a web application deployed in two different reg
 
 You will then create a Traffic Manager profile based on endpoint priority. This profile will direct user traffic to the primary site running the web application. Traffic Manager will continuously monitor the web application, and if the primary site in **<inject key="Region" enableCopy="false"/>** is unavailable, it will provide automatic failover to the backup site in West Europe.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
@@ -25,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create the web apps
 
-In this section, you will create two instances of a web application deployed in the two different Azure regions.
+In this task, you will create two instances of a web application deployed in the two different Azure regions.
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
@@ -87,7 +85,7 @@ In this section, you will create two instances of a web application deployed in 
 
 ## Task 2: Create a Traffic Manager profile
 
-Now you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
+In this task you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic 
    Manager profiles** under services.
@@ -114,7 +112,7 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 ## Task 3: Add Traffic Manager endpoints
 
-In this section, you will add the website in the **<inject key="Region" enableCopy="false"/>** as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
+In this task, you will add the website in the **<inject key="Region" enableCopy="false"/>** as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles**, and then select **Traffic Manager profiles** under services.
 
@@ -163,7 +161,7 @@ In this section, you will add the website in the **<inject key="Region" enableCo
 
 ## Task 4: Test the Traffic Manager profile
 
-In this section, you will check the DNS name of your Traffic Manager profile, and then you will configure the primary endpoint so that it is unavailable. You will then verify that the web app is still available, to test that the Traffic Manager profile is successfully sending traffic to the failover endpoint.
+In this task, you will check the DNS name of your Traffic Manager profile, and then you will configure the primary endpoint so that it is unavailable. You will then verify that the web app is still available, to test that the Traffic Manager profile is successfully sending traffic to the failover endpoint.
 
 1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, select **Overview**.
 
@@ -186,7 +184,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 1. On the **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** page, on the overview screen, select **myPrimaryEndpoint**.
 
-1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled**, and then select **Save**.
+1. On the **myPrimaryEndpoint** page, under **Status**, select **Disabled (1)**, and then select **Save (2)**.
 
       ![Picture 25](../media/M0406.8.png)
 
@@ -207,18 +205,6 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What are the high level steps for configuring Azure Traffic Manager?
-+ Compare and contrast when to use Azure Load Balancer and Azure Traffic Manager.
-+ Explain the Traffic Manager routing profiles and when they should be used.
-
-## Learn more with self-paced training
-
-+ [Enhance your service availability and data locality by using Azure Traffic Manager](https://learn.microsoft.com/training/modules/distribute-load-with-traffic-manager/). In this module, you learn how to use Traffic Manager to dynamically distribute network traffic.
-+ [Load balance non-HTTP(S) traffic in Azure](https://learn.microsoft.com/training/modules/load-balancing-non-https-traffic-azure/). In this module, you learn about Azure Traffic Manager and implementing routing methods. 
 
 ## Key takeaways
 
