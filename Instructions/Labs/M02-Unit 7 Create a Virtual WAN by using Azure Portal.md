@@ -2,9 +2,7 @@
 
 ## Lab Overview
 
-In this hands-on lab, you will set up a Virtual WAN in Azure, create a hub using the Azure Portal, and connect a VNet to the Virtual Hub. Azure Virtual WAN simplifies large-scale branch connectivity and offers centralized network management. You will configure the Virtual WAN resource, create a hub as a central connection point, and connect a VNet to the hub, ensuring seamless communication and optimized routing. This lab will provide you with the skills to efficiently manage complex network environments using Azure Virtual WAN.
-
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+In this lab, you will set up a Virtual WAN in Azure, create a hub using the Azure Portal, and connect a VNet to the Virtual Hub. Azure Virtual WAN simplifies large-scale branch connectivity and offers centralized network management. You will configure the Virtual WAN resource, create a hub as a central connection point, and connect a VNet to the hub, ensuring seamless communication and optimized routing. This lab will provide you with the skills to efficiently manage complex network environments using Azure Virtual WAN.
 
 ## Lab Objectives
 
@@ -22,7 +20,9 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create a Virtual WAN
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual WANs**, and then select **Virtual WANs** under services.
+In this task you will create a Virtual WAN (Wide Area Network) in Azure, which is used to manage and connect multiple virtual networks across different regions. Virtual WANs offer a centralized management approach for connectivity and routing, allowing you to easily set up VPNs, ExpressRoute connections, 
+
+1. On Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual WANs (1)**, and then select **Virtual WANs (2)** under services.
 
    ![](../media/lab2-unit7-image1.png)
 
@@ -54,6 +54,8 @@ In this lab, you will complete the following tasks:
    <validation step="c7427a0d-37bd-4ddd-9888-2b7c903f071a" />
 
 ### Task 2: Create a hub by using Azure Portal
+
+In this task, you will create a hub by using Azure Portal, you'll create a Virtual Hub within your Virtual WAN.
 
 A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functionality. It takes 30 minutes to create the site-to-site VPN gateway in the virtual hub. You must create a Virtual WAN before you can create a hub.
 
@@ -103,6 +105,8 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 ### Task 3: Connect a VNet to the Virtual Hub
 
+In this task, you will connect a VNet to the Virtual Hub, you will connect a Virtual Network (VNet) to the Virtual Hub within your Virtual WAN. 
+
 1. Locate the Virtual WAN that you created. 
 
 1. In ContosoVirtualWAN, follow the below step:
@@ -132,19 +136,6 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
    - Select **Create (8)**.
 
      ![](../media/m2-U7-1.png)
-
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What type of network architecture does Azure VWAN use?
-+ What are the differences between Azure VWAN basic and standard? Provide examples.
-+ Can an Azure VWAN be created with scripting tools?
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure Virtual WAN](https://learn.microsoft.com/training/modules/introduction-azure-virtual-wan/). In this module, you learn about Azure Virtual WAN functionality and features. 
-+ [Design and implement hybrid networking](https://learn.microsoft.com/training/modules/design-implement-hybrid-networking/). In this module, you learn how to design and implement Azure Virtual WAN.
 
 ## Key takeaways
 
