@@ -1,7 +1,7 @@
 # Module 02-Unit 3 Create and configure a virtual network gateway
 
 ## Lab Overview
-In this lab you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
+In this lab, you will configure a Virtual Network Gateway to establish connectivity between Contoso Core Services VNet and Manufacturing VNet. This is essential for enabling cross-network communication through a secure and reliable connection.
 
 ## Lab Objectives
 In this lab, you will complete the following tasks:
@@ -18,14 +18,14 @@ In this lab, you will complete the following tasks:
 + Task 10: Verify that the connections connect 
 + Task 11: Test the connection between the VMs
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 ## Estimated time: 70 minutes
 
 ## Architecture diagram
  ![](../media/az700-m2-unit3.png)
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
+
+In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up the basic Azure resources to create two virtual networks: CoreServicesVnet and ManufacturingVnet. The task involves using Azure Cloud Shell to deploy ARM templates and configure the necessary infrastructure for the upcoming tasks.
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
@@ -35,11 +35,11 @@ In this lab, you will complete the following tasks:
 
      ![](../media/pwershell1.png)
 
-1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+1. On **Getting started** window choose **Mount storage account (1)** then under **Storage account subscription (2)** select your available subscription from the dropdown and click on **Apply (3)**.
    
      ![](../media/pwershell3.png)
    
-1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
+1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
      ![](../media/pwershell4.png)
    
@@ -47,7 +47,7 @@ In this lab, you will complete the following tasks:
 
     ![](../media/pwershell5.png)
    
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
     ![](../media/pwershell2.png)
 
@@ -66,6 +66,8 @@ In this lab, you will complete the following tasks:
    <validation step="847c0c62-8090-4d24-a8f1-cb650792ef71" /> 
 
 ## Task 2: Create CoreServicesVM
+
+In this task, you'll create CoreServicesVM, you will create the CoreServicesVM virtual machine by deploying ARM templates.
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
@@ -94,6 +96,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 3: Create ManufacturingVM
 
+In this task, you'll create ManufacturingVM, you will create the ManufacturingVM virtual machine by deploying ARM templates. 
+
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
@@ -121,8 +125,12 @@ In this lab, you will complete the following tasks:
 
 ## Task 4: Connect to the Test VMs using RDP
 
+In this task, you'll connect to the Test VMs using RDP, you'll connect to both ManufacturingVM and CoreServicesVM using Remote Desktop Protocol (RDP). 
+
 1. On the Azure Portal home page, search and select **Virtual Machines**.
+
 1. Select **ManufacturingVM**.
+
 1. On **ManufacturingVM**, click on the **Connect (1)** dropdown and then select **Connect (2)**.
 
    ![](../media/m2-u3-t4-s3.png)
@@ -179,7 +187,9 @@ In this lab, you will complete the following tasks:
    
 ##  Task 6: Create CoreServicesVnet Gateway
 
-1. In **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
+In this task you'll create CoreServicesVnet Gateway, you will create the CoreServicesVnet Gateway to enable secure connections between the virtual networks. 
+
+1. In **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Virtual network gateway (1)**, and then select **Virtual network gateways (2)** from the results.
 
     ![](../media/mod2-unit3-image1.png)
 
@@ -217,6 +227,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 7: Create ManufacturingVnet Gateway
 
+In this task, you'll create ManufacturingVnet Gateway, you will create a ManufacturingVnet Gateway.
+
 1. In order to create a virtual network gateway, we will need a Gateway Subnet. The template created the GatewaySubnet for the CoreServicesVnet. Here you create the subnet manually. 
 
 1. Go the Virtual networks and open the **ManufacturingVnet**.
@@ -225,7 +237,7 @@ In this lab, you will complete the following tasks:
 
     ![](../media/create-gatewaysubnet1.png)
 
-1. Select the following configurations in the Add a Subnet page. 
+1. Select the following configurations in the Add a Subnet page. Then select **Add (3)**. 
 
     | Parameter | Value |
     | --------------- | ----------------- | 
@@ -233,8 +245,6 @@ In this lab, you will complete the following tasks:
     | Size | **/27 (32 addresses) (2)** |
 
     ![](../media/create-gatewaysubnet2.png)
-
-1. Select **Add**. 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
 
@@ -275,6 +285,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
+In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set up a VNet-to-VNet connection between CoreServicesVnet and ManufacturingVnet.
+
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
 1. In Virtual network gateways, select **CoreServicesVnetGateway**.
@@ -310,6 +322,8 @@ In this lab, you will complete the following tasks:
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
+In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll establish the reverse VNet-to-VNet connection between ManufacturingVnet and CoreServicesVnet.  
+
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
 1. In Virtual network gateways, select **ManufacturingVnetGateway**.
@@ -343,6 +357,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 10: Verify that the connections connect 
 
+In this task, you'll verify that the connections connect and you'll confirm the status of the connections between CoreServicesVnet and ManufacturingVnet. 
+
 1. In **Search resources, services, and docs (G+/)**, enter **connections**, and then select **connections** from the results.
 
 1. Select each connection and check the status. 
@@ -364,6 +380,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 11: Test the connection between the VMs
 
+In this task, you'll test the connection between the VMs, you will verify the VNet-to-VNet connection between ManufacturingVM and CoreServicesVM. 
+
 1. On the **ManufacturingVM**, open PowerShell.
 
 1. Use the following command to verify that there is now a connection to CoreServicesVM on CoreServicesVnet. Be sure to use the IPv4 address for CoreServicesVM.
@@ -379,19 +397,6 @@ In this lab, you will complete the following tasks:
 1. Close the Remote Desktop connection windows.
 
    Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
-
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What are the main types of Azure VPN gateways and why would you use each type?
-+ What factors should I consider when selecting the Azure VPN gateway sku? Give examples.
-+ Are there costs associated with Azure VPN gateways?
-
-## Learn more with self-paced training
-
-+ [Connect your on-premises network to Azure with VPN Gateway](https://learn.microsoft.com/training/modules/connect-on-premises-network-with-vpn-gateway/). In this module, you will how to use CLI to provision VPN gateways.
-+ [Troubleshoot VPN gateways in Microsoft Azure](https://learn.microsoft.com/training/modules/troubleshoot-vpn-gateways/). In this module, you learn how to monitor and troubleshoot site-to-site and point-to-site VPNs.
 
 ## Key takeaways
 
