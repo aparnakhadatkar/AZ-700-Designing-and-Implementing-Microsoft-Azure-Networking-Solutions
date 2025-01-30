@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-In this lab, you will learn how to configure connectivity between two Azure Virtual Networks (VNets) by using VNet Peering. Specifically, you will establish peering between CoreServicesVnet and ManufacturingVnet, enabling traffic flow between the networks.
+In this lab, you will learn how to configure connectivity between two Azure Virtual Networks (VNets) by using VNet Peering. Specifically, the lab will focus on connecting CoreServicesVnet and ManufacturingVnet to allow seamless traffic flow between them. This capability enables communication between resources in different VNets without requiring a VPN gateway or public IP addresses, and it also ensures high availability and scalability for network resources.
 
 ## Lab Objective
 
@@ -35,11 +35,11 @@ In this task, you will create a test VM on the Manufacturing VNet to test if you
 
     ![](../media/pwershell1.png)
    
-1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+1. On **Getting started** window choose **Mount storage account (1)** then under **Storage account subscription (2)** select your available subscription from the dropdown and click on **Apply (3)**.
    
      ![](../media/pwershell3.png)
    
-1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
+1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
      ![](../media/pwershell4.png)
 
@@ -53,7 +53,7 @@ In this task, you will create a test VM on the Manufacturing VNet to test if you
 
     ![](../media/pwershell5.png)
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**.
 
      ![](../media/pwershell2.png)
    
@@ -90,7 +90,7 @@ In this task, your connecting to the Test VM using RDP.
 
 1. Select **ManufacturingVM**.
 
-1. On ManufacturingVM, select **Connect** from the drop-down click on **Connect**.
+1. On ManufacturingVM, select **Connect (1)** from the drop-down click on **Connect (2)**.
 
    ![](../media/connect1.png)
 
