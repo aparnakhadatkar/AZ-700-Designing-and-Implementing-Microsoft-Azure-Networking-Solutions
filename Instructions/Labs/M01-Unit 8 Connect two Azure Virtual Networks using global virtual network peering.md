@@ -107,7 +107,7 @@ In this task, your connecting to the Test VM using RDP.
 
 1. Select **testvm1**.
 
-1. On testvm1, select **Connect** then from the drop-dwon click **Connect**. 
+1. On testvm1, select **Connect** then from the drop-down click **Connect**. 
 
 1. On **testvm1 | Connect** page, under **Native RDP** click on **Select** and on **Native RDP** window select and **Download RDP file**. 
 
