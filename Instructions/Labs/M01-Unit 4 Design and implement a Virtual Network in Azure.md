@@ -46,6 +46,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 1: Create the CoreServicesVnet virtual network and subnets
 
+In this task, you'll be setting up a virtual network (VNet) called CoreServicesVnet and its associated subnets in Azure.
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
    
    ![](../media/VN.png)
@@ -118,6 +120,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 2: Create the ManufacturingVnet virtual network and subnets
 
+In this task, you'll be setting up the ManufacturingVnet virtual network and its associated subnets, similar to what you did in previous task. 
+
 1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ManufacturingVnet** virtual network and select **IP 
    Address** tab.
 
@@ -158,6 +162,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 3: Create the ResearchVnet virtual network and subnets
 
+In this task, you'll create the ResearchVnet virtual network and its subnet.
+
 1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ResearchVnet** virtual network and select **IP 
    Address** tab.
 
@@ -187,6 +193,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ### Task 4: Verify the creation of VNets and Subnets
 
+In this task, you'll be verifying the creation of the virtual networks (VNets) and subnets. 
+
 1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**.
 
       ![](../media/unit4-image5.png)
@@ -203,16 +211,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. Repeat steps 3 - 5 and select **ManufacturingVnet**, and **ResearchVnet** Virtual Network to verify the subnets.
 
-
-## Learn more with self-paced training
-+ [Design an IP addressing schema for your Azure deployment](https://learn.microsoft.com/en-us/training/modules/design-ip-addressing-for-azure/). In this module, identify the public and private IP addressing capabilities of Azure virtual networks.
-+ [Introduction to Azure Virtual Networks](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/). In this module, you learn how to design and implement Azure networking services. You learn about virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
-
 ## Key takeaways
 + Azure Virtual Network is a service that provides the fundamental building block for your private network in Azure. An instance of the service (a virtual network) enables many types of Azure resources to securely communicate with each other, the internet, and on-premises networks. Ensure nonoverlapping address spaces. Make sure your virtual network address space (CIDR block) doesn't overlap with your organization's other network ranges.
 + All Azure resources in a virtual network are deployed into subnets within the virtual network. Subnets enable you to segment the virtual network into one or more subnetworks and allocate a portion of the virtual network's address space to each subnet. Your subnets shouldn't cover the entire address space of the virtual network. Plan ahead and reserve some address space for the future.
-
-
 
 ## Review
 
@@ -222,6 +223,5 @@ In this lab, you have completed:
 + Creating the ManufacturingVnet virtual network and subnets
 + Creating the ResearchVnet virtual network and subnets
 + Verifying the creation of VNets and Subnets
-
 
 ## You have successfully completed the lab.
