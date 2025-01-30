@@ -6,8 +6,6 @@
 
 To connect your Azure virtual network and your on-premises network via ExpressRoute, you must create a virtual network gateway first. A virtual network gateway serves two purposes: to exchange IP routes between the networks and to route network traffic. 
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20an%20ExpressRoute%20gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 **Gateway types**
 
 When you create a virtual network gateway, you need to specify several settings. One of the required settings, '-GatewayType', specifies whether the gateway is used for ExpressRoute, or VPN traffic. The two gateway types are:
@@ -31,6 +29,8 @@ In this lab, you will complete the following tasks:
    ‎![](../media/az700-m3-unit4.png)
 
 ## Task 1: Create the VNet and gateway subnet
+
+In this task, you will create the VNet and gateway subnet, you are setting up a Virtual Network (VNet) and configuring the necessary gateway subnet to support Azure VPN Gateway functionality. 
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks (1)**, and then select **Virtual 
    networks (2)** under services.
@@ -121,18 +121,6 @@ In this lab, you will complete the following tasks:
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="15a76eb7-8705-4ab0-8c7d-c006a7ba304f" />
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ How is Azure ExpressRoute different from Virtual WAN? Could you use the technologies together? Provide examples.
-+ What should I consider when choosing between an ExpressRoute provider model and ExpressRoute Direct?
-+ Create a table that summarizes the Azure ExpressRoute SKU and their features.
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure ExpressRoute](https://learn.microsoft.com/training/modules/intro-to-azure-expressroute/). In this module, you learn what Azure ExpressRoute is and the functionality it provides.
-+ [Design and implement ExpressRoute](https://learn.microsoft.com/training/modules/design-implement-azure-expressroute/). In this module, you learn how to design and implement Azure ExpressRoute, ExpressRoute Global Reach, ExpressRoute FastPath.
 
 ## Key takeaways
 
