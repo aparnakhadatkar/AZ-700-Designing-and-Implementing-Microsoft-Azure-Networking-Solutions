@@ -34,11 +34,11 @@ In this task you will create a Virtual WAN (Wide Area Network) in Azure, which i
 
    - **Resource group:** **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   - **Region:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create.
+   - **Region:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create (1).
 
-   - **Name:** ContosoVirtualWAN
+   - **Name:** ContosoVirtualWAN (2)
 
-   - **Type:** Standard
+   - **Type:** Standard (3)
 
 1. When you have finished filling out the fields, select **Review + create**.
 
@@ -65,30 +65,30 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 1. On the Hubs page, select **+ New Hub** to open the Create virtual hub page.
   
 1. On the Create virtual hub page **Basics** tab, complete the following fields:
-   - **Region:** West US
+   - **Region:** West US (1)
    
-   - **Name:** ContosoVirtualWANHub-WestUS
+   - **Name:** ContosoVirtualWANHub-WestUS (2)
    
-   - **Hub private address space:** 10.60.0.0/24
-   - **Virtual hub capacity:** 2 Routing 
+   - **Hub private address space:** 10.60.0.0/24 (3)
+   - **Virtual hub capacity:** 2 Routing (4)
    Infrastructure Units
    
-   - **Hub routing preference:** ExpressRoute
+   - **Hub routing preference:** ExpressRoute (5)
 
       ![](../media/lab2-unit7-image3.png)
 
 1. Select **Next: Site-to-site**.
 
 1. On the **Site-to-site** tab, complete the following fields:
-   - **Do you want to create a Site to site (VPN gateway)?:** Yes
+   - **Do you want to create a Site to site (VPN gateway)?:** Yes (1)
    
-   - The **AS Number** field cannot be edited.
+   - The **AS Number** field cannot be edited (2)
    
-   - **Gateway scale units:** 1 scale unit - 500 Mbps x 2
+   - **Gateway scale units:** 1 scale unit - 500 Mbps x 2 (3)
    
    - **Routing preference:** leave the default 
    
-   - **Review + create** to validate.
+   - **Review + create** to validate (4)
 
       ![](../media/lab2-unit7-image(4).png)
 
