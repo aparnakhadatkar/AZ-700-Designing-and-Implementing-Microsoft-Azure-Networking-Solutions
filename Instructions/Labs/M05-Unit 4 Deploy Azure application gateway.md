@@ -4,8 +4,6 @@
 
 In this lab, you use the Azure portal to create an application gateway. Then you test it to make sure it works correctly.
 
->**Note**: An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 The application gateway directs application web traffic to specific resources in a backend pool. You assign listeners to ports, create rules, and add resources to a backend pool. For the sake of simplicity, this article uses a simple setup with a public front-end IP, a basic listener to host a single site on the application gateway, a basic request routing rule, and two virtual machines in the backend pool.
 
 For Azure to communicate between the resources that you create, it needs a virtual network. You can either create a new virtual network or use an existing one. In this example, you'll create a new virtual network while you create the application gateway. Application Gateway instances are created in separate subnets. You create two subnets in this example: one for the application gateway, and another for the backend servers.
@@ -263,20 +261,6 @@ Although IIS isn't required to create the application gateway, you installed it 
 1. Refresh the browser multiple times and you should see connections to both BackendVM1 and BackendVM2.
 
    Congratulations! You have configured and tested an Azure Application Gateway.
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ How does the Azure Application Gateway route requests?
-+ What security features does Azure Application Gateway include?
-+ Compare the Azure Application Gateway with the Azure Load Balancer. Give examples of when to use each product.
-
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure Application Gateway](https://learn.microsoft.com/training/modules/intro-to-azure-application-gateway/). This module explains what Azure Application Gateway does, how it works, and when you should choose to use Application Gateway as a solution to meet your organization's needs.
-+ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balancing-https-traffic-azure/). In this module, you learn how to create and configure and Application Gateway with URL path-based routing.
-+ [Load balance HTTP(S) traffic in Azure](https://learn.microsoft.com/training/modules/load-balancing-https-traffic-azure/). In this module, you learn how to design and implement Azure Application Gateway.
 
 ## Key takeaways
 
