@@ -125,7 +125,7 @@ In this lab, you will complete the following tasks:
 ## Extend your learning with Copilot
 
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ How is Azure ExpressRoute different from Virtual WAN? Could you use the technolgies together? Provide examples.
++ How is Azure ExpressRoute different from Virtual WAN? Could you use the technologies together? Provide examples.
 + What should I consider when choosing between an ExpressRoute provider model and ExpressRoute Direct?
 + Create a table that summarizes the Azure ExpressRoute SKU and their features.
 
