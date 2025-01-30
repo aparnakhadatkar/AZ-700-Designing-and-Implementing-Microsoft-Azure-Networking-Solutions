@@ -2,11 +2,7 @@
 
 ## Lab Overview
 
-In this lab, you will create an internal load balancer for the fictional Contoso Ltd organization.
-
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
-The steps to create an internal load balancer, are very similar to those you have already learned about in this module, to create a public load balancer. The key difference is that with a public load balancer the front end is accessed via a public IP address, and you test connectivity from a host which is located outside your virtual network; whereas, with an internal load balancer, the front end is a private IP address inside your virtual network, and you test connectivity from a host inside the same network.
+In this lab, you will explore Privileged Identity Management (PIM) in Microsoft Entra ID, configure a user with administrative roles, and manage user access and permissions. you will also experience activating roles, setting up multi-factor authentication, and making changes to user groups.
 
 ## Lab Objectives
 
@@ -26,7 +22,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create the virtual network
 
-In this section, you will create a virtual network and a subnet.
+In this task, you will create a virtual network (VNet) in Azure with two subnets. The process includes configuring settings for the network, enabling Azure Bastion, defining an IPv4 address space, and setting up subnets for backend and frontend services. 
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks(1)**, and then select **Virtual networks(2)** under services.
 
@@ -95,7 +91,7 @@ In this section, you will create a virtual network and a subnet.
 
 ## Task 2: Create backend servers
 
-In this section, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
+In this task, you will create three VMs, that will be in the same availability set, for the backend pool of the load balancer, add the VMs to the backend pool, and then install IIS on the three VMs to test the load balancer.
 
 1. On the Azure portal select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
@@ -142,7 +138,7 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 ## Task 3: Create the load balancer
 
-In this section, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
+In this task, you will create an internal Standard SKU load balancer. The reason we are creating a Standard SKU load balancer here in the exercise, instead of a Basic SKU load balance, is for later exercises that require a Standard SKU version of the load balancer.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancer**, and then select **Load Balancer** under services.
 
@@ -182,7 +178,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
 
 ## Task 4: Create load balancer resources
 
-In this section, you will configure load balancer settings for a backend address pool, then create a health probe and a load balancer rule.
+In this task, you will configure load balancer settings for a backend address pool, then create a health probe and a load balancer rule.
 
 ### Task 4.1: Create a backend pool and add VMs to the backend pool
 
@@ -235,6 +231,8 @@ The load balancer monitors the status of your app with a health probe. The healt
  
 ### Task 4.3: Create a load balancer rule
 
+In this task, you will create a load balancer rule to manage traffic distribution to virtual machines. The rule specifies the frontend IP address, backend pool, protocol, port settings, and health probe,
+
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
 1. From the **myIntLoadBalancer | Health probes** page of your load balancer, under **Settings** section, select **Load balancing rules**, then click on **+ Add**.
@@ -272,7 +270,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
  
 ## Task 5: Test the load balancer
 
-In this section, you will create a test VM, and then test the load balancer.
+In this task, you will create a test VM, and then test the load balancer.
 
 ### Task 5.1: Create test VM
 
@@ -319,6 +317,8 @@ In this section, you will create a test VM, and then test the load balancer.
 1. Wait for this last VM to be deployed before moving forward with the next task.
 
 ### Task 5.2: Connect to the test VM to test the load balancer
+
+In this task, you will connect to the myTestVM and test the internal load balancer by accessing its IIS web server. First, retrieve the Private IP address of your internal load balancer and use it to connect to the VM via Bastion. 
 
 1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, then select on **myIntLoadBalancer** from the resources list.
 
@@ -370,17 +370,6 @@ In this section, you will create a test VM, and then test the load balancer.
 
     <validation step="d643606f-8c58-498a-a834-5c18e2d7072a" />
 
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ How are the Azure public and private load balancers different? Provide example scenarios for each type.
-+ Provide a table that compares the Azure load balancer basic and standard SKUs.
-+ How does the Azure load balancer decide to process incoming requests?
-
-
-## Learn more with self-paced training
-+ [Introduction to Azure Load Balancer](https://learn.microsoft.com/training/modules/intro-to-azure-load-balancer/). This module explains what Azure Load Balancer does, how it works, and when you should choose to use Load Balancer as a solution to meet your organization's needs.
-+ [Troubleshoot inbound network connectivity for Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/troubleshoot-inbound-connectivity-azure-load-balancer/). In this module, you identify and troubleshoot common Azure Load Balancer inbound connectivity issues.
 
 ## Key takeaways
 
