@@ -1,7 +1,8 @@
 #  Module 01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
 
 ## Lab Overview
-In this lab, you will configure connectivity between the CoreServicesVnet and the ManufacturingVnet by adding peerings to allow traffic flow. 
+
+In this lab, you will learn how to configure connectivity between two Azure Virtual Networks (VNets) by using VNet Peering. Specifically, you will establish peering between CoreServicesVnet and ManufacturingVnet, enabling traffic flow between the networks.
 
 ## Lab Objective
 
