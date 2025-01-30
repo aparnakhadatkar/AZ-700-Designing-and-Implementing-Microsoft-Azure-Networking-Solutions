@@ -214,16 +214,16 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
    |                 |                   | Enable active-active mode                   | Disabled                     |
    |                 |                   | Configure BGP                               | Disabled                     |
 
-1.  Select **Review + create** and **Create**.
+1. Select **Review + create** and **Create**.
 
-1.  It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
+1. It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="07197cc4-bdd3-415f-871c-4f6e1b00dea7" />
+   <validation step="07197cc4-bdd3-415f-871c-4f6e1b00dea7" />
 
 ## Task 7: Create ManufacturingVnet Gateway
 
