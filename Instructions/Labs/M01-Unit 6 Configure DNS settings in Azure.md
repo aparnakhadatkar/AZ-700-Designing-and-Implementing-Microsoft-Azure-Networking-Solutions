@@ -22,6 +22,8 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Create a private DNS Zone
 
+In this task, you'll create a Private DNS Zone in Azure. This involves setting up a DNS zone that will be used to manage and resolve DNS records for resources within a private virtual network.
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Private DNS zones**, and then select **Private DNS zones** under services.
 
     ‎![](../media/unit6-image(1).png)
@@ -42,6 +44,8 @@ In this lab, you will complete the following tasks:
 1. Verify that the zone has been created by clicking on the **Go to resource**.
 
 ### Task 2: Link subnet for auto registration
+
+In this task, you're linking multiple virtual networks (VNets) to the Contoso.com Private DNS Zone. This allows the virtual networks to use the DNS zone for name resolution.
 
 1. In Contoso.com, under **DNS Management** section, select **Virtual network links (1)** and on **Contoso.com | Virtual network links** page, select **+ Add (2)**.
 
@@ -107,7 +111,7 @@ In this lab, you will complete the following tasks:
 
 ###  Task 3: Create Virtual Machines to test the configuration
 
-In this section, you will create two test VMs to test the Private DNS zone configuration.
+In this task, you'll be creating two test virtual machines (VMs) to test the Private DNS zone configuration that you've set up in previous tasks. These VMs will be used to ensure that your DNS zone and network links are correctly configured for name resolution within the virtual networks. 
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
@@ -166,6 +170,8 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 ### Task 4: Verify records are present in the DNS zone
 
+In this task, you'll verify that the DNS records for the virtual machines (VMs) are present and correctly configured in the Private DNS Zone you created earlier.  
+
 1. On the Azure Portal home page, select **Private DNS zones**.
 
 1. On Private DNS zones, select **contoso.com**.
@@ -183,7 +189,9 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
    <validation step="f9b42843-78fa-4885-b912-c7be860ce3f5" />
 
- ### Task 05: Connect to the Test VMs using RDP
+### Task 05: Connect to the Test VMs using RDP
+
+In this task, you'll be testing the connectivity to the virtual machines (VMs) you created earlier, ensuring that DNS name resolution and Remote Desktop Protocol (RDP) are working as expected.
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
@@ -219,17 +227,6 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. Alternatively, you can enter the command nslookup testvm2.contoso.com and verify that you receive a successful name resolution record for VM2.
 
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What is the difference between Azure DNS and Azure Private DNS? Provide examples of when to use Azure private DNS.
-+ What is the purpose of auto registration when creating an Azure DNS zone?
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure DNS](https://learn.microsoft.com/training/modules/intro-to-azure-dns/). This module explains what Azure DNS does, how it works, and when you should choose to use Azure DNS as a solution to meet your organization’s needs.
-+ [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). In this module, you create a DNS zone and DNS records to map the domain to an IP address. You also test to ensure the domain name resolves to your web server.
-
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -238,7 +235,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure DNS public zones host domain name zone data for records that you intend to be resolved by any host on the internet.
 + Azure Private DNS zones allow you to configure a private DNS zone namespace for private Azure resources.
 + A DNS zone is a collection of DNS records. DNS records provide information about the domain.
-
 
 ## Review
 
