@@ -83,6 +83,8 @@ In this task, you will create the VNet and gateway subnet, you are setting up a 
 
 ## Task 2: Create the virtual network gateway
 
+In this task, you will create the virtual network gateway, you're setting up an Azure Virtual Network Gateway to enable connectivity for your virtual network. 
+
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
 
 1. On the Virtual network gateways page, select **+ Create**.
