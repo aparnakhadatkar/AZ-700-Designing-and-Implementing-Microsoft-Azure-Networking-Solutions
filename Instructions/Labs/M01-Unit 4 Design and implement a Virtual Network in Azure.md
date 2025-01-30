@@ -41,7 +41,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 In this task, you'll be setting up a virtual network (VNet) called CoreServicesVnet and its associated subnets in Azure.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks**, and then select **Virtual Networks** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks (1)**, and then select **Virtual Networks (2)** under services.
    
    ![](../media/VN.png)
 
@@ -69,8 +69,8 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
       |    **Tab**      | **Option**         | **Value**            |
       | --------------  | -------------------- | -------------------|
-      | IP Addresses    | IPv4 address space | 10.20.0.0            |
-      |                 | IPv4 address Size  | /16                  |
+      | IP Addresses    | IPv4 address space | 10.20.0.0   (1)         |
+      |                 | IPv4 address Size  | /16         (2)         |
 
       ![](../media/unit4-image4.png)
 
@@ -98,7 +98,7 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
 1. Once, the creation of the **CoreServicesVnet** is completed, select **Go to resource**.
 
-1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
+1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create (1)**.
 
     ![](../media/000001.png)
  
