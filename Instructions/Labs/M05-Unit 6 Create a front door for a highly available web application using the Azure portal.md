@@ -3,8 +3,6 @@
 ## Lab Overview
 In this lab, you will set up an Azure Front Door configuration that pools two instances of a web application that runs in different Azure regions. This configuration directs traffic to the nearest site that runs the application. Azure Front Door continuously monitors the web application. You will demonstrate automatic failover to the next available site when the nearest site is unavailable.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 ## Lab Objectives
 In this lab, you will complete the following tasks:
 
@@ -20,7 +18,9 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create two instances of a web app
 
-This exercise requires two instances of a web application that run in different Azure regions. Both the web application instances run in Active/Active mode, so either one can take traffic. This configuration differs from an Active/Stand-By configuration, where one acts as a failover.
+In this task, you'll create two instances of a web application hosted in two different Azure regions, both running in Active/Active mode. These web apps will be able to handle traffic independently, ensuring high availability.
+
+This task requires two instances of a web application that run in different Azure regions. Both the web application instances run in Active/Active mode, so either one can take traffic. This configuration differs from an Active/Stand-By configuration, where one acts as a failover.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under services.
 
@@ -85,7 +85,7 @@ This exercise requires two instances of a web application that run in different 
 
 ## Task 2: Create a Front Door for your application
 
-Configure Azure Front Door to direct user traffic based on lowest latency between the two web apps servers. To begin, add a frontend host for Azure Front Door.
+In this task, you will configure Azure Front Door to direct user traffic to the two web applications you created earlier based on the lowest latency. Front Door is a global service that provides high availability and low latency for applications by routing traffic to the closest available endpoint.
 
 1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, Search for **Front Door and CDN profiles (1)**, and then select **Front Door and CDN profiles (2)**.
 
@@ -146,7 +146,7 @@ Configure Azure Front Door to direct user traffic based on lowest latency betwee
 
 ## Task 3: View Azure Front Door in action
 
-Once you create a Front Door, it takes a few minutes for the configuration to be deployed globally. Once complete, access the frontend host you created.
+In this task, you will verify that Azure Front Door is working as expected by testing the global failover capabilities. After you create the Front Door, it will take a few minutes for the configuration to propagate across all regions. Once that's done, you'll test the Front Door's ability to direct traffic to the available web app instance.
 
 1. Navigate back to **Front Door and CDN profiles** page, on the Front Door resource in the Overview blade, locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN.
       ![Web App](../media/l5u6-11.png)
