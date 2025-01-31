@@ -4,8 +4,6 @@
 
 In this lab, you will deploy a prerequisite web app to serve as the foundation for your tasks. Next, you will create a virtual network and a bastion host to securely manage your resources. You will then create a test virtual machine within this network. Following that, you will create a Private Endpoint to securely connect to your web app. You will configure the private DNS zone to ensure proper name resolution for the Private Endpoint. Finally, you will test the connectivity to the Private Endpoint to verify that everything is set up correctly. This setup ensures secure and efficient access to your web app within a private network environment.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 ## Lab Objectives
 
 In this lab, you will complete the following tasks:
@@ -25,12 +23,9 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Deploy the web app
 
-You'll create a Private Endpoint for an Azure web app and deploy a virtual machine to test the private connection.
-
-Private Endpoints can be created for different kinds of Azure services, such as Azure SQL and Azure Storage.
+In this task, you'll create a Private Endpoint for an Azure Web App and deploy a virtual machine to test the private connection. You’ll use ARM templates to create the resources and a storage account for the web app deployment.
 
 - An Azure Web App with a PremiumV2-tier or higher app service plan deployed in your Azure subscription.
-
 
 1. Find and open **parameters.json** from File explorer in **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07** in Visual Studio, find `"value": "GEN-UNIQUE"`, replace it with a unique web app name **webapp<inject key="DeploymentID" enableCopy="false"/>** and save the file.
 
@@ -74,9 +69,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 ## Task 2: Create a virtual network and bastion host
 
-You'll create a virtual network, subnet, and bastion host.
-
-The bastion host will be used to connect securely to the virtual machine for testing the Private Endpoint.
+In this task, you'll create a virtual network (VNet), a bastion host, and the required configurations to securely connect to a virtual machine for testing the Private Endpoint. You’ll use PowerShell to accomplish this.
 
 Create a virtual network and bastion host with:
 
@@ -157,7 +150,7 @@ Create a virtual network and bastion host with:
 
 ## Task 3: Create a test virtual machine
 
-In this section, you'll create a virtual machine that will be used to test the Private Endpoint.
+In this task, you will create a virtual machine (VM) to test the Private Endpoint by setting up the necessary configuration for networking, credentials, operating system, and image. You will use PowerShell commands to deploy the VM and configure its network interface.
 
 Create the virtual machine with the following commands:
 
@@ -262,6 +255,8 @@ Create the virtual machine with the following commands:
 
 ## Task 4: Create a Private Endpoint
 
+In this task, you will create a Private Endpoint to securely connect to the Azure Web App using Azure Private Link. You'll also configure the private endpoint connection to the web app and adjust the necessary network policies for the virtual network.
+
 In this section, you'll create the Private Endpoint and connection using:
 
 - New-AzPrivateLinkServiceConnection
@@ -317,6 +312,8 @@ In this section, you'll create the Private Endpoint and connection using:
    ```
 
 ## Task 5: Configure the private DNS zone
+
+In this task, you'll configure the Private DNS Zone to enable DNS resolution for the Private Endpoint you created in the previous task. This will allow resources within your virtual network to resolve the private IP address associated with your Azure Web App.
 
 In this section you'll create and configure the private DNS zone using:
 
@@ -399,7 +396,7 @@ In this section you'll create and configure the private DNS zone using:
 
 ## Task 6: Test connectivity to the Private Endpoint
 
-In this section, you'll use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
+In this task, you will use the virtual machine you created in the previous step to connect to the web app across the Private Endpoint.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
    groups** under services.
@@ -442,17 +439,6 @@ In this section, you'll use the virtual machine you created in the previous step
 1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
 
 1. Close the connection to **myVM**.
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ Provide an example of when to use a private endpoint instead of a service endpoint.
-+ How can I troubleshoot private endpoint connectivity issues?
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure Private Link](https://learn.microsoft.com/training/modules/introduction-azure-private-link/). In this module, you learn how Azure Private Link enables private connectivity to Azure services, including its features, how it works, and its use cases.
-+ [Design and implement private access to Azure Services](https://learn.microsoft.com/en-us/training/modules/design-implement-private-access-to-azure-services/). In this module, you learn to design and implement private access to Azure Services with Azure Private Link, and virtual network service endpoints.
 
 ## Key takeaways
 
