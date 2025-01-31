@@ -1,9 +1,7 @@
 # Module 07-Unit 5 Restrict network access to PaaS resources with virtual network service endpoints
 
 ## Lab Overview 
-Virtual network service endpoints enable you to limit network access to some Azure service resources to a virtual network subnet. You can also remove internet access to the resources. Service endpoints provide direct connection from your virtual network to supported Azure services, allowing you to use your virtual network's private address space to access the Azure services. Traffic destined to Azure resources through service endpoints always stays on the Microsoft Azure backbone network.
-
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+In this lab, you will learn how to restrict network access to Azure PaaS resources using virtual network service endpoints. Service endpoints allow you to secure access to Azure services like Azure Storage, making sure that traffic to these services stays within your private network and does not go over the public internet. You will configure network security groups (NSGs) to control inbound and outbound traffic, and you’ll test connectivity by deploying virtual machines (VMs) and verifying access to the resources.
 
 ## Lab Objectives
   
@@ -82,7 +80,7 @@ In this task, you will create a virtual network and a subnet.
 
 ## Task 2: Enable a service endpoint
 
-Service endpoints are enabled per service, per subnet. Create a subnet and enable a service endpoint for the subnet.
+In this task, you will add a subnet to the CoreServicesVNet and enable a service endpoint for Microsoft.Storage.
 
 1. In the **Search resources, services, and docs** box at the top of the portal, enter **CoreServicesVNet**. When CoreServicesVNet appears in the search results, select 
    it.
@@ -116,7 +114,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 ## Task 3: Restrict network access for a subnet
 
-By default, all VMs in a subnet can communicate with all resources. You can limit communication to and from all resources in a subnet by creating a network security group and associating it to the subnet.
+In this task, you will create a Network Security Group (NSG) to restrict network access for a subnet by allowing only specific communication, such as outbound traffic to Azure Storage.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **security group**. When **Network Security groups** 
    appears in the search results, select it.
@@ -177,7 +175,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 
 ## Task 4: Add additional outbound rules 
 
-Create another outbound security rule that denies communication to the internet. This rule overrides a default rule in all network security groups that allows outbound internet communication. 
+In this task, you will add an outbound rule to deny communication to the internet for the subnet, overriding the default rule that allows outbound internet communication. 
 
 1. Select **+ Add** under **Outbound security rules**.
 
@@ -208,7 +206,7 @@ Create another outbound security rule that denies communication to the internet.
 
 ## Task 5: Allow access for RDP connections
 
-Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffic to the subnet from anywhere. The rule overrides a default security rule that denies all inbound traffic from the internet. Remote desktop connections are allowed to the subnet so that connectivity can be tested in a later step.
+In this task, you will create an inbound security rule to allow Remote Desktop Protocol (RDP) traffic (port 3389) to the subnet from anywhere, allowing remote management of resources.
 
 1. On ContosoPrivateNSG | Outbound security rules, from left navigation menu, under **Settings**, select **Inbound security rules**.
 
@@ -255,6 +253,8 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
    <validation step="86eeda16-df94-42ca-b4e3-ff17ba6aae26" />
 
 ## Task 6: Restrict network access to a resource
+
+In this task, you will create an Azure Storage account and restrict network access to it by configuring network rules and service endpoints.
 
 The steps necessary to restrict network access to resources created through Azure services enabled for service endpoints varies across services. See the documentation for individual services for specific steps for each service. The remainder of this exercise includes steps to restrict network access for an Azure Storage account, as an example.
 
@@ -320,7 +320,7 @@ In this task, your creating a file share in the storage account.
 
 ## Task 8: Restrict network access to a subnet
 
-By default, storage accounts accept network connections from clients in any network, including the internet. Deny network access from the internet, and all other subnets in all virtual networks, except for the Private subnet in the CoreServicesVNet virtual network.
+In this task, you will configure the storage account to restrict network access by allowing connections only from the Private subnet in the CoreServicesVNet virtual network.
 
 1. On **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account blade.
 
@@ -349,7 +349,7 @@ By default, storage accounts accept network connections from clients in any netw
 
 ## Task 9: Create virtual machines
 
-To test network access to a storage account, deploy a VM to each subnet.
+In this task, you'll create two virtual machines (VMs) to test network access to a storage account, and deploy them to different subnets.
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
@@ -393,6 +393,8 @@ To test network access to a storage account, deploy a VM to each subnet.
    <validation step="52806dfa-dd22-4a6f-8fb7-935bf4e6c237" />
 
 ## Task 10: Confirm access to storage account
+
+In this task, you'll connect to the ContosoPrivate VM, map the Azure file share to drive Z using PowerShell, and confirm there is no outbound connectivity to the internet.
 
 1. On the **Virtual Machine** blade, select **ContosoPrivate** VM.
 
@@ -442,6 +444,8 @@ under **Native RDP** click on **Select** and on **Native RDP** box select **Down
 
 ## Task 11: Confirm access is denied to storage account
 
+In this task, you'll confirm that the ContosoPublic VM doesn't have access to the storage account because it's deployed in the Public subnet, which doesn't have the required service endpoint enabled.
+
 1. Enter **ContosoPublic** in **Search resources, services and docs (G+/)**, box at the top of the portal.
 
 1. When **ContosoPublic** appears in the search results, select it.
@@ -485,17 +489,6 @@ under **Native RDP** click on **Select** and on **Native RDP** box select **Down
    **Note**:  Access is denied, because your computer is not in the Private subnet of the CoreServicesVNet virtual network.
 
    **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ What is the difference between azure service endpoints and private endpoints?
-+ Which Azure services can use service endpoints?
-+ What are the steps to restricting access to Azure Storage by using service endpoints?
-
-## Learn more with self-paced training
-
-+ [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). In this module, you learn how to use virtual network service endpoints to control network traffic to and from Azure services.
 
 ## Key takeaways
 + Virtual network service endpoints extend your private address space in Azure by providing a direct connection to your Azure services.
