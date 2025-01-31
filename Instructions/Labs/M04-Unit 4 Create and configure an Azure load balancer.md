@@ -134,7 +134,7 @@ In this task, you will create three VMs, that will be in the same availability s
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
-    <validation step="3107853e-92fb-4898-a59b-a7cb10f5051a" />  
+   <validation step="3107853e-92fb-4898-a59b-a7cb10f5051a" />  
 
 ## Task 3: Create the load balancer
 
