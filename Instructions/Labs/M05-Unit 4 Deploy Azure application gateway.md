@@ -24,6 +24,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Create an application gateway
 
+In this task, you'll create an Application Gateway in Azure, which is a fully managed load balancing solution for web applications. An Application Gateway operates at the application layer (OSI Layer 7), providing features like URL-based routing, SSL termination, and cookie-based session affinity. 
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Application gateways (1)**, and then select **Application 
    gateways (2)** from the results.
 
@@ -164,6 +166,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Create virtual machines
 
+In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) using ARM templates. You will configure the necessary settings for the VMs by uploading configuration files and deploying them using PowerShell commands.
+
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
    ![](../media/unit6-image1.png)
@@ -213,6 +217,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 3: Add backend servers to backend pool
 
+In this task, you will add two virtual machines to the backend pool of your Application Gateway, enabling the gateway to distribute traffic between the backend servers.
+
 1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**, then select **ContosoAppGateway**.
 
    ![](../media/unit4-image5.png)
@@ -243,6 +249,8 @@ In this lab, you will complete the following tasks:
    <validation step="2c0059d3-d02b-4c7a-9937-c06f943ec1ef" />
 
 ## Task 4: Test the application gateway
+
+In this task, you will test the functionality of the Application Gateway by accessing the public IP address assigned to it. This will allow you to verify that the gateway is working correctly by routing requests to the backend virtual machines.
 
 Although IIS isn't required to create the application gateway, you installed it in this exercise to verify if Azure successfully created the application gateway.
 
