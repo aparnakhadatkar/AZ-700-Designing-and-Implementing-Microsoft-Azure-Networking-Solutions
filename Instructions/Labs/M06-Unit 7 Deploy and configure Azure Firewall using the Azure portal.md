@@ -2,8 +2,7 @@
 
 ## Lab Overview
 
-Being part of the Network Security team at Contoso, your next task is to create firewall rules to allow/deny access to certain websites. The following steps walk you through creating a resource group, a virtual network and subnets, and a virtual machine as environment preparation tasks, and then deploying a firewall and firewall policy, configuring default routes and application, network and DNAT rules, and finally testing the firewall.
-
+In this lab, as a member of the Network Security team at Contoso, you will focus on configuring Azure Firewall to control access to various websites by creating rules that either allow or deny specific connections. The lab will guide you through setting up network infrastructure and deploying firewall rules. You'll also configure routes, application rules, network rules, DNAT rules, and test the firewall to ensure it's operating correctly.
 
 ## Lab Objectives
 
