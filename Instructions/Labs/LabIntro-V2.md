@@ -52,7 +52,7 @@ Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed 
 
 ## Pasting Commands in the PowerShell/CloudShell Environment
 
-Please make sure to use the CTRL+SHIFT+V or CTRL+V keys when pasting commands inside the PowerShell/CloudShell environment instead of right-clicking
+Please make sure to use the CTRL+SHIFT+V or CTRL+V keys when pasting commands inside the PowerShell/CloudShell environment instead of right-clicking.
 
 ## Let's Get Started with Azure Portal
  
