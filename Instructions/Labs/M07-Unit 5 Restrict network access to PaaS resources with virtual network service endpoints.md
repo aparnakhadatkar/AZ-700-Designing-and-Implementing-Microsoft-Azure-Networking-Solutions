@@ -359,11 +359,11 @@ In this task, you'll create two virtual machines (VMs) to test network access to
 
    ![](../media/pwershell1.png)
 
-1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+1. On **Getting started** window choose **Mount storage account (1)** then under **Storage account subscription (2)** select your available subscription from the dropdown and click on **Apply (1)**.
    
      ![](../media/pwershell3.png)
    
-1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
+1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
      ![](../media/pwershell4.png)
 
