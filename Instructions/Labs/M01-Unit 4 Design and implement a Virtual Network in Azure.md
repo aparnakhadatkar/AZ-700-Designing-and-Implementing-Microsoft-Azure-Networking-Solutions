@@ -13,6 +13,8 @@ In this lab, you will complete the following tasks:
 + Task 3: Create the ResearchVnet virtual network and subnets
 + Task 4: Verify the creation of VNets and Subnets
 
+## Estimated Duration: 25 minutes
+
 ## Architecture diagram
 ![](../media/design-implement-vnet-peering01.png)
 
