@@ -28,7 +28,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/up3.png)
+![Use the Split Window Feature](../media/up(3).png)
  
 ## Managing Your Virtual Machine
  
