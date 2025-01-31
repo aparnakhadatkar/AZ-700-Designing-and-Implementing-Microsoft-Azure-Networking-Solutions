@@ -4,7 +4,6 @@
 
 Being part of the Network Security team at Contoso, your next task is to create firewall rules to allow/deny access to certain websites. The following steps walk you through creating a resource group, a virtual network and subnets, and a virtual machine as environment preparation tasks, and then deploying a firewall and firewall policy, configuring default routes and application, network and DNAT rules, and finally testing the firewall.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 ## Lab Objectives
 
@@ -28,7 +27,7 @@ In this lab, you will complete the following tasks:
    
 ## Task 1: Create a virtual network and subnets
 
-In this task, you will create a single virtual network with two subnets.
+In this task, you will create a virtual network in Azure and configure two subnets: one for the Azure Firewall and another for the workload server.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network(1)**, and then select **Virtual 
    network(2)** under services.
@@ -364,9 +363,9 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
    <validation step="b427e7bd-b2fb-46ce-93e9-8d17c0499133" />
 
- ## Task 8: Change the primary and secondary DNS address for the server's network interface
+## Task 8: Change the primary and secondary DNS address for the server's network interface
 
-For testing purposes in this exercise, in this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
+In this task, you will configure the Srv-Work server's primary and secondary DNS addresses. However, this is not a general Azure Firewall requirement.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups**, and then select **Resource 
    groups** under services.
@@ -400,7 +399,7 @@ For testing purposes in this exercise, in this task, you will configure the Srv-
 
 ## Task 9: Test the firewall
 
-In this final task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
+In this task, you will test the firewall to verify that the rules are configured correctly and working as expected. This configuration will enable you to connect a remote desktop connection to the Srv-Work virtual machine through the firewall, via the firewall's public IP address.
 
 1. Within Labvm from start menu, open **Remote Desktop Connection**.
 
@@ -429,18 +428,6 @@ In this final task, you will test the firewall to verify that the rules are conf
 1. You should be blocked by the firewall.
 
      ![RDP session on Srv-work server - browser blocked on microsoft.com](../media/L6U7-3.png)
-
-## Extend your learning with Copilot
-
-Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
-+ Provide three common usage scenarios for firewalls. 
-+ Provide a table comparing the features of the Azure Firewall SKUs.
-+ Describe the three types of rules you can create for an Azure Firewall.
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure Firewall](https://learn.microsoft.com/training/modules/introduction-azure-firewall/). In this module, you learn how Azure Firewall protects Azure virtual network resources including features, rules, and deployment options.
-+ [Introduction to Azure Firewall Manager](https://learn.microsoft.com/training/modules/intro-to-azure-firewall-manager/). In this module, you learn how Azure Firewall Manager provides central security policy and route management for cloud-based security perimeters.
 
 ## Key takeaways
 
