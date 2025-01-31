@@ -69,10 +69,9 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
     | **Setting**                      | **Value**   |
     | -------------------------------- | ----------- |
-    | Name                             | BackendPool (2) |
-    | Add backend pool without targets | Yes (3)     |
+    | Name                             | **BackendPool (2)** |
+    | Add backend pool without targets | **Yes (3)**     |
     
-
 1. On the **Add a backend pool** window, select **Add** to save the backend pool configuration and return to the **Backends** tab.
 
       ![Azure Portal search for application gateway](../media/l5u4-2-3.png)
@@ -140,12 +139,12 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
  
 1. On the ContosoVNet page from left side menu under the Settings section, click on **Subnets**.
 
-1. On the **ContosoVNet | Subnets** page select **+ Subnet (1)**. On Add subnet page fill the follwing details(leave other field as default) and click on **Save (4)**.
+1. On the **ContosoVNet | Subnets** page select **+ Subnet (2)**. On Add subnet page fill the follwing details(leave other field as default) and click on **Save (5)**.
 
     | **Setting**           | **Value**   |
     | --------------------- | ----------- |
-    | Name                  | **BackendSubnet (2)** |
-    | Subnet address range  | **10.0.1.0/24  (3)**|
+    | Name                  | **BackendSubnet (3)** |
+    | Subnet address range  | **10.0.1.0/24  (4)**|
 
     ![Azure Portal search for application gateway](../media/l5u4-3.png)
 
