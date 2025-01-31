@@ -22,7 +22,7 @@ In this task, you'll create two instances of a web application hosted in two dif
 
 This task requires two instances of a web application that run in different Azure regions. Both the web application instances run in Active/Active mode, so either one can take traffic. This configuration differs from an Active/Stand-By configuration, where one acts as a failover.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp**, and then select **App Services** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
    ![Web App](../media/l5u6-1.png)
 
