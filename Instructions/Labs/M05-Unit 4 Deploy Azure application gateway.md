@@ -59,22 +59,18 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
 1. Accept the default values for the other settings and then select **Next: Frontends**.
 
-1. On the **Frontends** tab, verify **Frontend IP address type** is set to **Public**.
-
-1. Select **Add new** for the **Public IP address** and enter **AGPublicIPAddress** for the public IP address name, and then select **OK**.
+1. On the **Frontends** tab, verify **Frontend IP address type** is set to **Public (1)**. Select **Add new (2)** for the **Public IP address** and enter **AGPublicIPAddress (3)** for the public IP address name, and then select **OK (4)**.
 
    ![Azure Portal search for application gateway](../media/l5u4-2-2.png)
 
 1. Select **Next: Backends**.
 
-1. On the **Backends** tab, select **Add a backend pool**.
-
-1. On the **Add a backend pool** window that opens, enter the following values to create an empty backend pool:
+1. On the **Backends** tab, select **Add a backend pool (1)**. Then on the **Add a backend pool** window that opens, enter the following values to create an empty backend pool:
 
     | **Setting**                      | **Value**   |
     | -------------------------------- | ----------- |
-    | Name                             | BackendPool |
-    | Add backend pool without targets | Yes         |
+    | Name                             | BackendPool (2) |
+    | Add backend pool without targets | Yes (3)     |
     
 
 1. On the **Add a backend pool** window, select **Add** to save the backend pool configuration and return to the **Backends** tab.
@@ -91,8 +87,8 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
     | **Setting**   | **Value**         |
     | ------------- | ----------------- |
-    | **Rule name** | **RoutingRule**   |
-    | **Priority**  | **100**           |
+    | **Rule name** | **RoutingRule (1)**   |
+    | **Priority**  | **100 (2)**           |
 
     ![Azure Portal search for application gateway](../media/l5u4-2-4.png)
 
@@ -100,21 +96,19 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
     | **Setting**   | **Value**         |
     | ------------- | ----------------- |
-    | Listener name | Listener  **(2)**        |
+    | Listener name | **Listener**  **(2)**        |
     | Frontend IP   | Select **Public IPv4 (3)** |
 
     ![Azure Portal search for application gateway](../media/l5u4-2-5.png)
 
 1. Accept the default values for the other settings on the **Listener** tab.
 
-1. Select the **Backend targets** tab to configure the rest of the routing rule.
-
-1. On the **Backend targets** tab, enter or select the following information:
+1. Select the **Backend targets (1)** tab to configure the rest of the routing rule. Then enter or select the following information:
 
     | **Setting**      | **Value**      |
     | -------------    | -------------- |
-    | Target type      | Select Backendpool in drop down  |
-    | Backend Settings | **Add new** |
+    | Target type      | **Select Backendpool in drop down (2)**  |
+    | Backend Settings | **Add new (3)** |
 
     ![Azure Portal search for application gateway](../media/lab5-1.png)  
 
@@ -122,8 +116,8 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
     | **Setting**          | **Value**   |
     | ------------------   | ----------- |
-    | Backend settings name | HTTPSetting |
-    | Backend port         | 80          |
+    | Backend settings name | **HTTPSetting  (1)**|
+    | Backend port         | **80 (2)**         |
 
     ![Azure Portal search for application gateway](../media/l5u4-2-7.png)  
 
@@ -146,14 +140,12 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
  
 1. On the ContosoVNet page from left side menu under the Settings section, click on **Subnets**.
 
-1. On the **ContosoVNet | Subnets** page select **+ Subnet**. 
-
-1. On Add subnet page fill the follwing details(leave other field as default) and click on **save**.
+1. On the **ContosoVNet | Subnets** page select **+ Subnet (1)**. On Add subnet page fill the follwing details(leave other field as default) and click on **Save (4)**.
 
     | **Setting**           | **Value**   |
     | --------------------- | ----------- |
-    | Name                  | BackendSubnet |
-    | Subnet address range  | 10.0.1.0/24 |
+    | Name                  | **BackendSubnet (2)** |
+    | Subnet address range  | **10.0.1.0/24  (3)**|
 
     ![Azure Portal search for application gateway](../media/l5u4-3.png)
 
@@ -176,11 +168,11 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
    ![](../media/pwershell1.png)
 
-1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+1. On **Getting started** window choose **Mount storage account (1)** then under **Storage account subscription (2)** select your available subscription from the dropdown and click on **Apply (3)**.
    
      ![](../media/pwershell3.png)
    
-1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**.
+1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (3)**.
 
      ![](../media/pwershell4.png)
    
@@ -188,7 +180,7 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
    ![](../media/pwershell5.png)
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **backend.json** and **backend.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M05**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)** and upload the following files **backend.json** and **backend.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M05**.
 
       ![](../media/pwershell2.png)
 
