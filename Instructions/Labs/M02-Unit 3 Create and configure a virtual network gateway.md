@@ -281,7 +281,7 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="c5a08b41-af13-48c5-8abc-8a4e540ae643" />
+   <validation step="c5a08b41-af13-48c5-8abc-8a4e540ae643" />
 
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
