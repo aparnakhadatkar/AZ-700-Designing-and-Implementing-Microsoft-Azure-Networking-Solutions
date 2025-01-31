@@ -32,7 +32,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/up4.png)
 
@@ -49,6 +49,10 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    ![Manage Your Virtual Machine](../media/gext2.png)
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
+
+## Pasting Commands in the PowerShell/CloudShell Environment
+
+Please make sure to use the CTRL+SHIFT+V or CTRL+V keys when pasting commands inside the PowerShell/CloudShell environment instead of right-clicking
 
 ## Let's Get Started with Azure Portal
  
