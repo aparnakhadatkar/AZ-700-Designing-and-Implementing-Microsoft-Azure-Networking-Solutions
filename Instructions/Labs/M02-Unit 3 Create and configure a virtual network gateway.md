@@ -143,9 +143,9 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
    ![](../media/m2-u3-t4-s5.png)
 
-1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
+     ![](../media/m2-u3-t4-s6-a.png)
 
-   ![](../media/m2-u3-t4-s6-a.png)
+1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 
    ![](../media/m2-u3-t4-s6-b.png)
 
@@ -191,28 +191,34 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
 
 1. In **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Virtual network gateway (1)**, and then select **Virtual network gateways (2)** from the results.
 
-    ![](../media/mod2-unit3-image1.png)
+   ![](../media/8.png)
 
 1. In Virtual network gateways, select **+ Create**.
+
+    ![](../media/7.png)
 
 1. Use the information in the following table to create the virtual network gateway:
 
    | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
-   | Basics          | Project Details   | Subscription                                | No changes required          |
-   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
-   |                 | Instance Details  | Name                                        | CoreServicesVnetGateway      |
-   |                 |                   | Region                                      | East US                      |
-   |                 |                   | Gateway type                                | VPN                          |
-   |                 |                   | SKU                                         | VpnGw1                       |
-   |                 |                   | Generation                                  | Generation1                  |
-   |                 |                   | Virtual network                             | CoreServicesVnet             |
-   |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
-   |                 | Public IP address | Public IP address                           | Create new                   |
-   |                 |                   | Public IP address name                      | CoreServicesVnetGateway-ip   |
-   |                 |                   | Public IP address type                      | Standard                     |
-   |                 |                   | Enable active-active mode                   | Disabled                     |
-   |                 |                   | Configure BGP                               | Disabled                     |
+   | Basics          | Project Details   | Subscription                                |**No changes required (1)**        |
+   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**    |
+   |                 | Instance Details  | Name                                        | **CoreServicesVnetGateway (3)**     |
+   |                 |                   | Region                                      | **East US (4)**                      |
+   |                 |                   | Gateway type                                | **VPN (5)**                          |
+   |                 |                   | SKU                                         | **VpnGw1 (6)**                       |
+   |                 |                   | Generation                                  | **Generation1 (7)**                 |
+   |                 |                   | Virtual network                             | **CoreServicesVnet (8)**            |
+   |                 |                   | Subnet                                      | **GatewaySubnet (10.20.0.0/27) (9)** |
+   |                 | Public IP address | Public IP address                           | **Create new (10)**                  |
+   |                 |                   | Public IP address name                      | **CoreServicesVnetGateway-ip (11)**   |
+   |                 |                   | Public IP address type                      | **Standard (12)**                    |
+   |                 |                   | Enable active-active mode                   | **Disabled (13)**                     |
+   |                 |                   | Configure BGP                               | **Disabled (14)**                    |                   |
+   |                 |                   | Enable Key Vault Access                        | **Disabled (15)**                    |
+
+   ![](../media/9.png)
+   ![](../media/10.png)
 
 1. Select **Review + create** and **Create**.
 
@@ -235,7 +241,7 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
 
 1. In the **Settings** blade, select **Subnets (1)**, and then **+ Subnet (2)**.
 
-    ![](../media/create-gatewaysubnet1.png)
+    ![](../media/11.png)
 
 1. Select the following configurations in the Add a Subnet page. Then select **Add (3)**. 
 
@@ -244,7 +250,7 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
     | Subnet purpose | **Virtual Network Gateway (1)** |
     | Size | **/27 (32 addresses) (2)** |
 
-    ![](../media/create-gatewaysubnet2.png)
+    ![](../media/12.png)
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
 
@@ -293,30 +299,36 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
 1. On CoreServicesVnetGateway, from the left navigation menu, under **Settings** section select **Connections**, and then select **+ Add**.
 
+     ![](../media/6.png)
+
    >**Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
 1. On **Create connection** page of **Basics** tab, use the information in the following table to create the connection:
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
-      | Subscription                   | Leave default                     |
-      | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
-      | Connection type                | VNet-to-VNet                      |
-      | Name                           | CoreServicesGW-to-ManufacturingGW |
-      | Location                       | East US                           |
+      | Subscription                   | **Leave default (1)**                    |
+      | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)** |
+      | Connection type                | **VNet-to-VNet (3)**                     |
+      | Name                           | **CoreServicesGW-to-ManufacturingGW (4)** |
+      | Location                       | **East US (5)**                           |
 
 1. Select **Next: Settings >**
+
+     ![](../media/5.png)
    
 1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
-      | First virtual network gateway  | CoreServicesVnetGateway           |
-      | Second virtual network gateway | ManufacturingVnetGateway          |
-      | Shared key (PSK)               | abc123                            |         
-      | IKE Protocol                   | IKEv2                             |
-      | Use Azure Private IP Address   | Not selected                      |
-      | Enable BGP                     | Not selected                      |
+      | First virtual network gateway  | **CoreServicesVnetGateway (1)**         |
+      | Second virtual network gateway | **ManufacturingVnetGateway (2)**         |
+      | Shared key (PSK)               | **abc123 (3)**                        |         
+      | IKE Protocol                   | **IKEv2 (4)**                            |
+      | Use Azure Private IP Address   | **Not selected (5)**                      |
+      | Enable BGP                     | **Not selected (6)**                      |
+
+      ![](../media/1.png)
       
 1. To create the connection, select **Review + create** and **Create**.
    
@@ -330,30 +342,38 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
 
 1. on ManufacturingVnetGateway, from the left navigation menu, under **Settings** section select **Connections**, and then select **+ Add**.
 
+    ![](../media/6.png)
+
 1. Use the information in the following table to create the connection:
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
-      | Subscription                   | Leave default                     |
-      | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** |
-      | Connection type                | VNet-to-VNet                      |
-      | Name                           | ManufacturingGW-to-CoreServicesGW |
-      | Location                       | North Europe                      |
+      | Subscription                   | **Leave default (1)**                    |
+      | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)** |
+      | Connection type                | **VNet-to-VNet (3)**                    |
+      | Name                           | **ManufacturingGW-to-CoreServicesGW (4)** |
+      | Location                       | **North Europe (5)**                      |
 
-1. Select **Next: Settings >**
+1. Select **Next: Settings > (6)**
+
+   ![](../media/4.png)
    
 1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection:
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
-      | First virtual network gateway  | ManufacturingVnetGateway          |
-      | Second virtual network gateway | CoreServicesVnetGateway           |
-      | Shared key (PSK)               | abc123                            |
-      | IKE Protocol                   | IKEv2                             |
-      | Use Azure Private IP Address   | Not selected                      |
-      | Enable BGP                     | Not selected                      |
-  
+      | First virtual network gateway  | **ManufacturingVnetGateway (1)**         |
+      | Second virtual network gateway | **CoreServicesVnetGateway (2)**          |
+      | Shared key (PSK)               | **abc123 (3)**                           |
+      | IKE Protocol                   | **IKEv2 (4)**                             |
+      | Use Azure Private IP Address   | **Not selected (5)**                    |
+      | Enable BGP                     | **Not selected (6)**                     |
+
+      ![](../media/2.png)
+      
 1. To create the connection, select **Review + create** and **Create**.
+
+    ![](../media/3.png)
 
 ## Task 10: Verify that the connections connect 
 
